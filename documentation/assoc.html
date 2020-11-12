@@ -1,0 +1,532 @@
+
+<meta charset="UTF-8">
+<html>
+<head><title>Class: Assoc</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../syntax.css" type="text/css">
+<link rel="stylesheet" href="builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td  align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody></table>
+
+<div id="document">
+	
+<div class="sidebar_container">
+		
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink curPage">Assoc</div>
+				<div class="packagelink"><a href="boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="builder.html">Builder</a></div>
+				<div class="packagelink"><a href="bytes.html">Bytes</a></div>
+				<div class="packagelink"><a href="capi.html">CAPI</a></div>
+				<div class="packagelink"><a href="capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink"><a href="cachetree.html">CacheTree</a></div>
+				<div class="packagelink"><a href="compiler.html">Compiler</a></div>
+				<div class="packagelink"><a href="core.html">Core</a></div>
+				<div class="packagelink"><a href="dapi.html">DAPI</a></div>
+				<div class="packagelink"><a href="dapinode.html">DAPINODE</a></div>
+				<div class="packagelink"><a href="dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink"><a href="dapiversion.html">DAPIVERSION</a></div>
+				<div class="packagelink"><a href="domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="domcomment.html">DOMComment</a></div>
+				<div class="packagelink"><a href="domdocument.html">DOMDocument</a></div>
+				<div class="packagelink"><a href="domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink"><a href="domelement.html">DOMElement</a></div>
+				<div class="packagelink"><a href="domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink"><a href="domnamednodemap.html">DOMNamedNodeMap</a></div>
+				<div class="packagelink"><a href="domnode.html">DOMNode</a></div>
+				<div class="packagelink"><a href="domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="domtext.html">DOMText</a></div>
+				<div class="packagelink"><a href="date.html">Date</a></div>
+				<div class="packagelink"><a href="dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="env.html">Env</a></div>
+				<div class="packagelink"><a href="error.html">Error</a></div>
+				<div class="packagelink"><a href="file.html">File</a></div>
+				<div class="packagelink"><a href="filecopy.html">FileCopy</a></div>
+				<div class="packagelink"><a href="fileprefs.html">Fileprefs</a></div>
+				<div class="packagelink"><a href="frame.html">Frame</a></div>
+				<div class="packagelink"><a href="global.html">Global</a></div>
+				<div class="packagelink"><a href="integer.html">Integer</a></div>
+				<div class="packagelink"><a href="javaobject.html">JavaObject</a></div>
+				<div class="packagelink"><a href="language.html">Language</a></div>
+				<div class="packagelink"><a href="license.html">License</a></div>
+				<div class="packagelink"><a href="list.html">List</a></div>
+				<div class="packagelink"><a href="logging.html">Logging</a></div>
+				<div class="packagelink"><a href="long.html">Long</a></div>
+				<div class="packagelink"><a href="mailmessage.html">MailMessage</a></div>
+				<div class="packagelink"><a href="math.html">Math</a></div>
+				<div class="packagelink"><a href="memcached.html">Memcached</a></div>
+				<div class="packagelink"><a href="notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="object.html">Object</a></div>
+				<div class="packagelink"><a href="pop3session.html">POP3Session</a></div>
+				<div class="packagelink"><a href="patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="patfind.html">PatFind</a></div>
+				<div class="packagelink"><a href="pattern.html">Pattern</a></div>
+				<div class="packagelink"><a href="point.html">Point</a></div>
+				<div class="packagelink"><a href="profiler.html">Profiler</a></div>
+				<div class="packagelink"><a href="real.html">Real</a></div>
+				<div class="packagelink"><a href="recarray.html">RecArray</a></div>
+				<div class="packagelink"><a href="record.html">Record</a></div>
+				<div class="packagelink"><a href="regex.html">Regex</a></div>
+				<div class="packagelink"><a href="restclient.html">RestClient</a></div>
+				<div class="packagelink"><a href="saxparser.html">SAXParser</a></div>
+				<div class="packagelink"><a href="smtpsession.html">SMTPSession</a></div>
+				<div class="packagelink"><a href="ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="script.html">Script</a></div>
+				<div class="packagelink"><a href="security.html">Security</a></div>
+				<div class="packagelink"><a href="set.html">Set</a></div>
+				<div class="packagelink"><a href="socket.html">Socket</a></div>
+				<div class="packagelink"><a href="sql.html">Sql</a></div>
+				<div class="packagelink"><a href="sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink"><a href="str.html">Str</a></div>
+				<div class="packagelink"><a href="string.html">String</a></div>
+				<div class="packagelink"><a href="system.html">System</a></div>
+				<div class="packagelink"><a href="uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="void.html">Void</a></div>
+				<div class="packagelink"><a href="wapi.html">WAPI</a></div>
+				<div class="packagelink"><a href="wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink"><a href="web.html">Web</a></div>
+				<div class="packagelink"><a href="xslprocessor.html">XSLProcessor</a></div>
+				<div class="packagelink"><a href="zip.html">Zip</a></div>
+		</div>
+</div>
+
+	<div class="content_container">
+		<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+		<h1>Class: Assoc</h1><div class="ClassDescription"><p>The built-in functions in the Assoc package allow   you to manipulate the Assoc (Associative) data type. An Assoc is a map for associating   arbitrary key/value pairs. An Assoc differs from a <a class="interdoc" href="record.html">Record</a>   in that the keys are less expensive to add and remove, the keys can be data   types other than Strings, and the keys are sorted by key comparison rather than   by some fixed order.</p>
+<p>Each Assoc has an "undefined value" that   is returned when a nonexistent key is referenced. This "undefined value"   is usually Undefined by default, but <a class="interdoc" href="#cm_assoc_notsetvalue">Assoc.NotSetValue()</a>   or any other value may be used.</p>
+<p>An Assoc is formally created with <a class="interdoc" href="#cm_assoc_createassoc">Assoc.CreateAssoc()</a>,   however OScript has a convenience feature in that this is automatically invoked   when an Assoc is declared so that it can be used right away. This does not happen   with a <a class="interdoc" href="record.html">Record</a>   since, while Assoc is meant to be a tool for relating data in an OScript program,   Record is meant to be a tool for accessing database table data.</p></div>
+			<h2>Class Attributes</h2>
+			<div class="ClassAttributesShort">
+				
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_assoc_assoctype">AssocType</a></div>
+					<div class="Description"><p>The constant type identifier for
+    the Assoc data type.</p></div>
+				</div>
+				
+			</div>
+
+
+			<h2>Class Methods</h2>
+			<div class="ClassMethodsShort">
+				<div class="Method">
+					<div class="Name"><a href="#cm_assoc_copy" class="IndexMethodName">Copy</a>(
+					 Assoc src )
+					</div>
+					<div class="Description"><p>Returns a duplicate Assoc.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_assoc_createassoc" class="IndexMethodName">CreateAssoc</a>(
+					 [Dynamic value] )
+					</div>
+					<div class="Description"><p>Returns a new Assoc.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_assoc_createfrompairs" class="IndexMethodName">CreateFromPairs</a>(
+					 Dynamic key1, Dynamic value1, Dynamic key2, Dynamic value2 )
+					</div>
+					<div class="Description"><p>Returns a new Assoc.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_assoc_delete" class="IndexMethodName">Delete</a>(
+					 Assoc a, Dynamic key )
+					</div>
+					<div class="Description"><p>Removes a key/value pair from an Assoc.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_assoc_fromrecord" class="IndexMethodName">FromRecord</a>(
+					 Record rec )
+					</div>
+					<div class="Description"><p>Converts a Record to an Assoc.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_assoc_iscyclic" class="IndexMethodName">IsCyclic</a>(
+					 Assoc a )
+					</div>
+					<div class="Description"><p>Returns an assoc containing key/value pairs from the argument list
+    <em>key</em>.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_assoc_iskey" class="IndexMethodName">IsKey</a>(
+					 Assoc a, Dynamic key )
+					</div>
+					<div class="Description"><p>Returns true if the Assoc contains
+    <em>key</em>.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_assoc_items" class="IndexMethodName">Items</a>(
+					 Assoc a )
+					</div>
+					<div class="Description"><p>Returns a List of all the values in
+    an Assoc.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_assoc_keys" class="IndexMethodName">Keys</a>(
+					 Assoc a )
+					</div>
+					<div class="Description"><p>Returns a List of all the keys in
+    an Assoc</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_assoc_merge" class="IndexMethodName">Merge</a>(
+					 Assoc assoc1, Assoc assoc2 )
+					</div>
+					<div class="Description"><p>Merges <em>assoc2</em>
+    into <em>assoc1</em>. </p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_assoc_notsetvalue" class="IndexMethodName">NotSetValue</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns a unique data type constant which
+    can be used as the "undefined value".</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_assoc_torecord" class="IndexMethodName">ToRecord</a>(
+					 Assoc a )
+					</div>
+					<div class="Description"><p>Converts an Assoc into a Record.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_assoc_undefinedvalue" class="IndexMethodName">UndefinedValue</a>(
+					 Assoc a, [Dynamic value] )
+					</div>
+					<div class="Description"><p>Returns and optionally sets the "undefined
+    value" of an Assoc.</p></div>
+				</div>
+			</div>
+
+
+				<h2>Class Attributes</h2>
+				<div class="ClassAttributes">
+					
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_assoc_assoctype">AssocType</a></div>
+						<div class="Description"><p>The type number for the Assoc data type.</p></div>
+					</div>
+				
+				</div>
+
+		
+				<h2>Class Methods</h2>
+				<div class="ClassMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_assoc_copy">Copy</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Assoc</span> 
+						<span class="PrototypeselfName">Copy</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Assoc</span> <span class="PrototypeArgumentName">src</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Creates and returns a shallow copy of the specified
+    source Assoc. This is necessary since Assocs are passed by reference, meaning
+    that simple assignment does not copy an Assoc as it does with an Integer.
+    The copying process follows the same conventions used in function parameter
+    passing. Thus the contents of the copy will contain copies of those values
+    in the source which are passed by value, and and references to those values
+    in the source which are passed by reference. The following example illustrates
+    this:</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">src</span><span class="description"><p>The Assoc to copy.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The new Assoc copy.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_assoc_createassoc">CreateAssoc</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Assoc</span> 
+						<span class="PrototypeselfName">CreateAssoc</span><span class="PrototypePunctuation">(</span> <span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">value</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a new, empty Assoc whose "undefined
+    value" will be Undefined or <em>value</em>
+    if <em>value</em> is specified. The "undefined
+    value" is the value returned by an Assoc when referenced by a key it
+    does not contain. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>The "undefined value" of
+            the returned Assoc, which will be Undefined if this argument is not
+            specified.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A new, empty Assoc.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_assoc_createfrompairs">CreateFromPairs</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Assoc</span> 
+						<span class="PrototypeselfName">CreateFromPairs</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">key1</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">value1</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">key2</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">value2</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a new Assoc with values as specified in the input arg list. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">key1</span><span class="description"><p>First key</p></span></div>
+											<div class="Parameter"><span class="name">value1</span><span class="description"><p>First value</p></span></div>
+											<div class="Parameter"><span class="name">key2</span><span class="description"><p>Second key</p></span></div>
+											<div class="Parameter"><span class="name">value2</span><span class="description"><p>Second value</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A new Assoc.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_assoc_delete">Delete</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Dynamic</span> 
+						<span class="PrototypeselfName">Delete</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Assoc</span> <span class="PrototypeArgumentName">a</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">key</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Removes the specified key from the Assoc if that
+    Assoc contains the key.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">a</span><span class="description"><p>The Assoc to remove a key/value pair
+            from.</p></span></div>
+											<div class="Parameter"><span class="name">key</span><span class="description"><p>The key for the key/value pair to remove.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The value removed, or the "undefined
+      value" if the key was not found.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_assoc_fromrecord">FromRecord</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Assoc</span> 
+						<span class="PrototypeselfName">FromRecord</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Record</span> <span class="PrototypeArgumentName">rec</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Creates and returns a new Assoc containing the
+    field names and corresponding columns of the specified Record as its String
+    keys and associated values. As with <a class="interdoc" href="#cm_assoc_copy">Assoc.Copy()</a>, the
+    new Assoc returned will be a shallow copy of the Record.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">rec</span><span class="description"><p>The Record from which an Assoc will
+            be created.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A new Assoc, copied from the Record.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_assoc_iscyclic">IsCyclic</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">IsCyclic</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Assoc</span> <span class="PrototypeArgumentName">a</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns true if this assoc contains any self-referencing cycles.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">a</span><span class="description"><p>The Assoc to be checked.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>True if the Assoc contains any self-referencing cycles.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_assoc_iskey">IsKey</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">IsKey</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Assoc</span> <span class="PrototypeArgumentName">a</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">key</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns true if the specified Assoc contains the
+    specified key.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">a</span><span class="description"><p>The Assoc whose key set is tested.</p></span></div>
+											<div class="Parameter"><span class="name">key</span><span class="description"><p>The key to test.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>True if the Assoc contains the key.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_assoc_items">Items</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">List</span> 
+						<span class="PrototypeselfName">Items</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Assoc</span> <span class="PrototypeArgumentName">a</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a List of the keyed values in <em>a</em>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">a</span><span class="description"><p>The Assoc whose values are returned
+            in a List.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A List of the keyed values in the
+      Assoc.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_assoc_keys">Keys</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">List</span> 
+						<span class="PrototypeselfName">Keys</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Assoc</span> <span class="PrototypeArgumentName">a</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a List of the keys in <em>a</em>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">a</span><span class="description"><p>The Assoc whose keys are returned in
+            a List.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A List of keys in the Assoc.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_assoc_merge">Merge</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Assoc</span> 
+						<span class="PrototypeselfName">Merge</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Assoc</span> <span class="PrototypeArgumentName">assoc1</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Assoc</span> <span class="PrototypeArgumentName">assoc2</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>The two Assocs are merged by copying the contents
+    of <em>assoc2</em> into <em>assoc1</em>.
+    The copy process is the same as used for <a class="interdoc" href="#cm_assoc_copy">Assoc.Copy()</a>.
+    If a key is common to both Assocs, then the associated value in <em>assoc1</em>
+    will be replaced by that in <em>assoc2</em>,
+    as shown by the following example:</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">assoc1</span><span class="description"><p>Destination Assoc for merge.</p></span></div>
+											<div class="Parameter"><span class="name">assoc2</span><span class="description"><p>Assoc whose contents are copied into
+            <em>assoc1</em>. </p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A reference to the first assoc passed in.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_assoc_notsetvalue">NotSetValue</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">NotSet</span> 
+						<span class="PrototypeselfName">NotSetValue</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a unique data type constant useful as
+    the "undefined value" for an Assoc when Undefined or other values
+    will not work since they might be keys within the Assoc. Use with <a class="interdoc" href="#cm_assoc_createassoc">Assoc.CreateAssoc()</a>
+    or <a class="interdoc" href="#cm_assoc_undefinedvalue">Assoc.UndefinedValue()</a>.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A unique data type constant useful
+      as the "undefined value" for an Assoc.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_assoc_torecord">ToRecord</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Record</span> 
+						<span class="PrototypeselfName">ToRecord</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Assoc</span> <span class="PrototypeArgumentName">a</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Creates a new Record and returns it after copying
+    the values of the given Assoc into it, translating String keys and values
+    into field names and column entries. The Assoc should only contain String
+    keys. As with <a class="interdoc" href="#cm_assoc_copy">Assoc.Copy()</a>, the new Assoc returned will
+    be a shallow copy of the Record.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">a</span><span class="description"><p>The Assoc to convert into a new Record.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A new Record copied from the Assoc.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_assoc_undefinedvalue">UndefinedValue</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Dynamic</span> 
+						<span class="PrototypeselfName">UndefinedValue</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Assoc</span> <span class="PrototypeArgumentName">a</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">value</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the "undefined value" for the
+    specified Assoc. If <em>value</em> is specified
+    than the "undefined value" for the Assoc will be changed to <em>value</em> (meaning <em>value</em> will be returned).</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">a</span><span class="description"><p>The Assoc whose "undefined value"
+            is queried and optionally set.</p></span></div>
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>If specified, then the "undefined
+            value" of _a _will be set
+            to this.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The "undefined value"
+      for the Assoc.</p></div>
+							</div>
+						</div>
+				</div>
+		
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2018 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+
+
+
+</div>
+	</div>						
+						
+
+</div>
+
+</body></html>

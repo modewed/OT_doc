@@ -1,0 +1,63 @@
+<HTML>
+<HEAD>
+<TITLE>cust_sql()</TITLE>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<script language="JavaScript">updateParentHeader( 'Code' );</script>
+<script language="JavaScript">includeContentContainer( 'wfbuilder', true );</script>
+
+<p class="body">
+
+<p class="title">cust_sql()</p>
+
+<p class="body">This code sample can be used as a prototype for the 
+script that creates the tables in your database when you install your custom module.</p>
+
+<pre class="code">
+#ifdef COMPILEME
+create table %Prefix%Cust_Project
+(
+WorkflowID %type_int% %not_null%,
+Project_Name %type_char_64% %null%,
+Priority %type_int% %null%,
+ID_Code %type_char_32% %null%,
+DueDate %type_date% %null%
+)
+/
+create index Cust_Project_Primary
+on %Prefix%Cust_Project ( WorkflowID )
+/
+create table %Prefix%Cust_Customers
+(
+WorkflowID %type_int% %not_null%,
+Name %type_char_64% %null%,
+Addr1 %type_char_32% %null%,
+Addr2 %type_char_32% %null%,
+City %type_char_32% %null%,
+State %type_char_32% %null%,
+Zip %type_char_32% %null%,
+Phone %type_char_32% %null%,
+Fax %type_char_32% %null%
+)
+/
+create index Cust_Customers_Primary
+on %Prefix%Cust_Customers ( WorkflowID )
+/
+insert into %Prefix%KIni
+values(
+'%IniSection%',
+'%IniKeyword%',
+'{8,0,1}' )
+/
+%commit_command%
+/
+#endif</pre>
+
+<script language="JavaScript">IncludeFooter();</script>
+
+</body>
+</html>

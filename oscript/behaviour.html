@@ -1,0 +1,375 @@
+<!doctype html>
+<html>
+<head>
+<title>OScript Language Reference : Parsing</title>
+<link rel="stylesheet" type="text/css" href="../ot_common_ui.css">
+<link rel="stylesheet" type="text/css" href="languageref.css">
+<style>
+.rotate {
+     -moz-transform: rotate(-90deg);  /* FF3.5+ */
+       -o-transform: rotate(-90deg);  /* Opera 10.5 */
+  -webkit-transform: rotate(-90deg);  /* Saf3.1+, Chrome */
+             filter:  progid:DXImageTransform.Microsoft.BasicImage(rotation=-1.5707);  /* IE6,IE7 */
+         -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=-1.5707)"; /* IE8 */
+}
+
+.optable td { text-align: center;}
+
+</style>
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+
+<script language="JavaScript" src="../documentation.js"></script>
+
+</head>
+<body>
+<SCRIPT language=JavaScript>
+IncludeHeader( 'olang2', 'Behaviour' )
+</SCRIPT>
+
+<h1>Behaviour/Semantics</h1>
+<h2>Operators</h2>
+<a name="operators"></a>
+<h3>Precedence</h3>
+Operators listed from highest to lowest precedence.
+<table class="precedence">
+	<tr class="precgroupstart"><td class="op">$</td><td>Global access</td></tr>
+ 	<tr class="precgroupend"><td class="op">$$</td><td>Script global access</td></tr>
+ 	
+ 	<tr class="precgroupstart precgroupend"><td class="op">.</td><td>Dot</td></tr>
+ 	
+ 	<tr class="precgroupstart precgroupend"><td class="op">~</td><td>Bitwise complement</td></tr>
+
+ 	<tr class="precgroupstart"><td class="op">-</td><td>Unary minus</td></tr>
+ 	<tr class="precgroupend"><td class="op">!, not</td><td>Logical not</td></tr>
+
+ 	<tr class="precgroupstart"><td class="op">*</td><td>Multiplication</td></tr>
+ 	<tr><td class="op">/</td><td>Division</td></tr>
+ 	<tr class="precgroupend"><td class="op">%</td><td>Modular division</td></tr>
+
+ 	<tr class="precgroupstart"><td class="op">+</td><td>Addition</td></tr>
+ 	<tr class="precgroupend"><td class="op">-</td><td>Subtraction</td></tr>
+
+ 	<tr class="precgroupstart"><td class="op">&lt;&lt;</td><td>Bitwise shift left</td></tr>
+ 	<tr class="precgroupend"><td class="op">&gt;&gt;</td><td>Bitwise shift right</td></tr>
+ 
+	<tr class="precgroupstart precgroupend"><td class="op">in</td><td><code>if <i>x</i> in <i>y</i></code>, <code>for <i>x</i> in <i>y</i></code></td></tr>
+
+	<tr class="precgroupstart"><td class="op">&lt;, lt</td><td>Less than</td></tr>
+	<tr><td class="op">&gt;, gt</td><td>Greater than</td></tr>
+	<tr><td class="op">&lt;=, le</td><td>Less than or equal to</td></tr>
+	<tr class="precgroupend"><td class="op">&gt;=, ge</td><td>Greater than or equal to</td></tr>
+
+	<tr class="precgroupstart"><td class="op">==, eq</td><td>Equality</td></tr>
+	<tr class="precgroupend"><td class="op">!=, ne</td><td>Inequality</td></tr>
+
+	<tr class="precgroupstart precgroupend"><td class="op">&amp;</td><td>Bitwise and</td></tr>
+
+	<tr class="precgroupstart precgroupend"><td class="op">^</td><td>Bitwise xor</td></tr>
+
+	<tr class="precgroupstart precgroupend"><td class="op">|</td><td>Bitwise or</td></tr>
+
+	<tr class="precgroupstart precgroupend"><td class="op">&amp;&amp;, and</td><td>Logical and</td></tr>
+	<tr class="precgroupstart precgroupend"><td class="op">xor</td><td>Logical xor</td></tr>
+	<tr class="precgroupstart precgroupend"><td class="op">||, or</td><td>Logical or</td></tr>
+
+	<tr class="precgroupstart precgroupend"><td class="op">&bull; ? &bull; : &bull; </td><td>Ternary conditional</td></tr>
+
+	<tr class="precgroupstart precgroupend"><td class="op">=</td><td>Assignment (right associative)</td></tr>
+	<tr class="precgroupstart precgroupend"><td class="op"><i>op</i>=</td><td><i>op</i>-assignment, e.g. <code>+=</code>, <code>*=</code>, etc. (Right associative)</td></tr>
+ </table>
+ 
+
+<h3>Arithmetical operators</h3>
+<a name="operators-arithmetical"></a>
+<p>OScript defines a standard set of arithmetical operators: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, and <code>%</code>. All five operations are defined on Integers and Longs, while modular division is not defined on Reals. </p>
+
+<p>In addition to the numerical types, some non-numerical types also support addition and/or subtraction.</p>
+
+<p>Addition and subtraction are also defined on Strings: addition concatenates two strings, while <code>a - b</code> removes the first instance of the value of <code>b</code> from <code>a</code>, e.g. <code>"One fish, two fish" - "fish" == "One , two fish"</code>.</p>
+
+<p>Lists can be added together using <code>+</code>.</p>
+
+<p>Adding an Integer to a Date returns a new Date that many seconds forwards, while subtracting an Integer returns a new Date that many seconds back. In both cases, the Integer must be the right operand and the Date the left. One Date can also be subtracted from another to give the number of intervening seconds.</p>
+<table><tr><td>
+<table class="optable">
+	<tr><th colspan="7">Second operand</th></tr>
+	<tr><th rowspan="6" class="rotate">First operand</th>
+	          <th>+</th><th>Integer</th><th>Long</th><th>Real</th><th>String</th><th>Date</th></tr>
+	<tr><th>Integer</th><td>Integer</td><td>Long</td><td>Real</td><td> -- </td>  <td> -- </td></tr>
+	<tr><th>Long</th>   <td>Long</td>   <td>Long</td><td>Real</td><td> -- </td>  <td> -- </td></tr>
+	<tr><th>Real</th>   <td>Real</td>   <td>Real</td><td>Real</td><td> -- </td>  <td> -- </td></tr>
+	<tr><th>String</th> <td> -- </td>   <td> -- </td><td> -- </td><td>String</td><td> -- </td></tr>
+	<tr><th>Date</th>   <td>Date</td>   <td> -- </td><td> -- </td><td> -- </td>  <td> -- </td></tr>
+</table>
+</td>
+<td>
+<table class="optable">
+	<tr><th colspan="7">Second operand</th></tr>
+	<tr><th rowspan="6" class="rotate">First operand</th>
+	          <th>-</th><th>Integer</th><th>Long</th><th>Real</th><th>String</th><th>Date</th></tr>
+	<tr><th>Integer</th><td>Integer</td><td>Long</td><td>Real</td><td> -- </td>  <td> -- </td></tr>
+	<tr><th>Long</th>   <td>Long</td>   <td>Long</td><td>Real</td><td> -- </td>  <td> -- </td></tr>
+	<tr><th>Real</th>   <td>Real</td>   <td>Real</td><td>Real</td><td> -- </td>  <td> -- </td></tr>
+	<tr><th>String</th> <td> -- </td>   <td> -- </td><td> -- </td><td>String</td><td> -- </td></tr>
+	<tr><th>Date</th>   <td>Date</td>   <td> -- </td><td> -- </td><td> -- </td>  <td>Integer</td></tr>
+</table>
+</td>
+</tr>
+<tr><td>
+<table class="optable">
+	<tr><th colspan="7">Second operand</th></tr>
+	<tr><th rowspan="6" class="rotate">First operand</th>
+	          <th>*, /</th><th>Integer</th><th>Long</th><th>Real</th><th>String</th><th>Date</th></tr>
+	<tr><th>Integer</th><td>Integer</td><td>Long</td><td>Real</td><td> -- </td>  <td> -- </td></tr>
+	<tr><th>Long</th>   <td>Long</td>   <td>Long</td><td>Real</td><td> -- </td>  <td> -- </td></tr>
+	<tr><th>Real</th>   <td>Real</td>   <td>Real</td><td>Real</td><td> -- </td>  <td> -- </td></tr>
+	<tr><th>String</th> <td> -- </td>   <td> -- </td><td> -- </td><td> -- </td>  <td> -- </td></tr>
+	<tr><th>Date</th>   <td> -- </td>   <td> -- </td><td> -- </td><td> -- </td>  <td> -- </td></tr>
+</table>
+</td><td>
+<table class="optable">
+	<tr><th colspan="7">Second operand</th></tr>
+	<tr><th rowspan="6" class="rotate">First operand</th>
+	          <th>%, &lt;&lt;, &gt;&gt;, &amp;, |</th><th>Integer</th><th>Long</th><th>Real</th><th>String</th><th>Date</th></tr>
+	<tr><th>Integer</th><td>Integer</td><td>Long</td><td> -- </td><td> -- </td>  <td> -- </td></tr>
+	<tr><th>Long</th>   <td>Long</td>   <td>Long</td><td> -- </td><td> -- </td>  <td> -- </td></tr>
+	<tr><th>Real</th>   <td> -- </td>   <td> -- </td><td> -- </td><td> -- </td>  <td> -- </td></tr>
+	<tr><th>String</th> <td> -- </td>   <td> -- </td><td> -- </td><td> -- </td>  <td> -- </td></tr>
+	<tr><th>Date</th>   <td> -- </td>   <td> -- </td><td> -- </td><td> -- </td>  <td> -- </td></tr>
+</table>
+</td></tr></table>
+
+<h4>Adding and Subtracting strings</h4>
+In addition to numerical values, strings can also be added and subtracted from each other. Adding two strings merely concatenates them:
+<div class="example"><code><pre>
+String myString = 'This is a test.'
+Echo( myString + ' Really.' ) //displays 'This is a test. Really.'
+</pre></code></div>
+
+Subtraction, on the other hand, removes the first instance of the right operand from the left. If the right string is not a substring of the left, the left string is returned unchanged.
+<div class="example"><code><pre>
+String myString = "This is a test."
+Echo( myString - "is" )//displays "Th is a test."
+Echo( myString - "is" - "is" )//displays "Th a test."
+</pre></code></div>
+<h3>Binary operators</h3>
+<a name="operators-binary"></a>
+<p>OScript has a standard set of operators for manipulating binary values:</p>
+
+<table>
+ 	<tr><td class="op">&lt;&lt;</td><td>Bitwise shift left</td></tr>
+ 	<tr><td class="op">&gt;&gt;</td><td>Bitwise shift right</td></tr>
+	<tr><td class="op">&amp;</td><td>Bitwise and</td></tr>
+	<tr><td class="op">^</td><td>Bitwise xor</td></tr>
+	<tr><td class="op">|</td><td>Bitwise or</td></tr>
+	<tr><td class="op">~</td><td>Bitwise complement (unary)</td></tr>
+</table>
+
+<p>All of these operators are defined only on Integers and Longs.</p>
+
+<p>Left and right bitwise shift will truncate digits that are pushed beyond the scope of the data type. However, if the shift amount exceeds the number of bits that the type can store, the shift amount will be considered modulo that number of bits. I.e. if <code>i</code> is an integer, <code>i &lt;&lt; 66 == i &lt;&lt; 2</code>.</p>
+
+
+<h3>Boolean operators</h3>
+<a name="operators-boolean"></a>
+<p>OScript's Boolean <code>and</code> and <code>or</code> operators are short circuiting. Rather than returning Boolean values, most of them return the last value evaluated. Since almost all types can be coerced into Boolean values, this can lead to situations where <code>pie = "steak" and "kidney"</code> leaves <code>pie</code> with a value of <code>"kidney"</code>, and <code>"cake" or "death"</code> evaluates to <code>"cake"</code> (fortunately for all those involved.) Alternatively, Boolean operators that must evaluate all arguments, such as <code>xor</code> or <code>!</code>, return Boolean values.</p>
+
+<h3>Indexes and slices</h3>
+<a name="behaviour-indexing"></a>
+<p>OScript 1-indexes sequential storage types, such as lists and strings. <code>a[1]</code> refers to the first element of <code>a</code>, <code>a[2]</code> the second, and so on. Negative indices refer to locations starting from the end of the sequence: <code>a[-1]</code> is the final element, <code>a[-2]</code> the second last, and so on. <code>a[0]</code> is always invalid.</p>
+
+<p>One can obtain a subsequence of values by using slice notation: <code>a[n:m]</code> will return the subsequence <code>a[n]</code>, <code>a[n+1]</code>, <code>a[n+2]</code>, &hellip;, <code>a[m]</code>. One can use negative indices in a slice, e.g. <code>"Hello world"[2:-2]</code> will evaluate to <code>"ello worl"</code>. Omitting one end of the slice will extend the slice to either the beginning or end of the sequence: <code>a[:n]</code> returns the first $n$ elements of <code>a</code>, while <code>a[n:]</code> returns the <i>n</i><sup>th</sup> element onward.</p>
+
+<p>In some circumstances, slices can be assigned to. This will remove the destination slice from the sequence, and replace it with the value(s) being assigned.</p>
+
+<h3>The <code>in</code> operator</h3>
+<p>The <code>in</code> operator searches a list of a given value, and returns its index, if present, and 0 otherwise. Because 0 coerces to false, this can be used in a Boolean context to search for list membership.</p>
+
+<p>The <code>in</code> operator performs no automatic coercions in its search&mdash;the expression <code>1.0 in { 1 }</code> will evaluate to 0.</p>
+
+<h3>Comparison and Equality</h3>
+<p>Equality and inequality comparisons between most types are straight-forward: numeric types compare numerically, strings and other container types compare recursively by value. Even Undefined values behave unexpectedly. The exception is object pointer types, like DAPINode or CAPIConnect, which compare by pointer value.</p>
+
+<p>Comparison operators (e.g. less than, greater than) behave as expected on numerical types. For strings, they perform a case-sensitive lexical ordering, while lists will compare each element in turn until they find one that compares greater or less than the other. </p>
+
+<p>While comparing values of two different types, the result is undefined.</p>
+
+<div class="legacy">
+If you compare values of two different types, and a coercion is not possible it just compares the class numbers of the two types (as returned by the <code>Type()</code> function) instead.
+</div>
+
+<h3>Dot</h3>
+<a name="operator-dot"></a>
+<p>The dot operator is used to look up fields on Assocs, Records, Frames and miscellaneous objects. If used without an initial operand, an implicit <code>this</code> is added in front.</p>
+
+<p>The dot operator merely evaluates the value on its right, and looks up the corresponding field on the value on its left. If the value on the right is a valid identifier, it's treated as a string, i.e. <code>a.key</code> is equivalent to <code>a."key"</code>. If you want to look up a key stored in a variable, one must wrap the expression in parentheses (<code>a.(key)</code>). Due to its high precedence, the same applies to using complex expressions as keys: <code>a.("hello" + "world")</code>.</p>
+
+<p>If one is using an integer or real value as a key, one must place a space after the dot, or wrap the number in parentheses. This is because a dot followed by one or more digits is tokenized as a real, rather than the dot operator followed by a number. Inserting the space, or wrapping the number in parentheses, removes this ambiguity.</p>
+
+<p>Because of the implicit <code>this</code>, one can write unexpected commands. For instance, the code</p>
+
+<div class="example">
+<code>. . . .a</code>
+</div>
+
+<p>is equivalent to</p>
+
+<div class="example">
+<code>this.(this.(this.(this.a)))</code>
+</div>
+
+<p>&mdash;the value of <code>this.a</code> is evaluated, and used as a key to look up another value on <code>this</code>. This is repeated three times.</p>
+
+<p>For information on how the value of <code>this</code> is defined, see the section below on <a href="#this">this</a>.</p>
+
+<h3>Globals</h3>
+
+<p>The <code>$</code> and <code>$$</code> operators are used to set or access global variables. <code>$</code> is used to access globals that are visible to the entire application, while <code>$$</code> globals are visible only to the current thread. Similar to the dot operator, the global access operators can be followed by either an identifier, which is interpreted as a string, or an arbitrary expression. The expression must, however, evaluate to a string. Due to its high precedence, wrapping the expression with parentheses is recommended.</p>
+
+<p>Again like the dot operator, <code>$</code> and <code>$$</code> can be chained&mdash;<code>$ $a</code> will look up the global &ldquo;a&rdquo;, and if its value is a string, proceed to look up the global with that name.</p>
+
+<h3>Assignment</h3>
+<p>Assignment binds a value of its right-hand side to the identifier or expression on its left-hand side. The expression itself evaluates to the value assigned. </p>
+
+<p>The operator-assignment operators (i.e. <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>|=</code>, <code>&amp;=</code> and <code>\^\,=</code>&mdash;note that <code>/=</code> is invalid) work in the following manner. Where &loz; is one of <code>+</code>, <code>-</code>, <code>*</code>, <code>|</code>, <code>&amp;</code> or <code>^</code>:</p>
+
+<div class="example"><code>
+a &loz;= b
+</code></div>
+
+<p>is equivalent to</p>
+
+<div class="example">
+<code>a = a &loz; b</code>
+</div>
+
+<p>Again, the value of the expression is the value of the assignment.</p>
+
+<h3>Ternary conditional</h3>
+<p>The ternary condition operator acts as it does in other languages, such as C: if the first operand evaluates to a true value, the second operand is evaluated and returned; otherwise, the third operand is evaluated and returned.</p>
+
+<h2><a name="this"></a><a name="super"></a><code>this</code> and <code>super</code></h2>
+<p>In addition to the keywords mentioned in the section on <a href="#keywords">keywords</a>, there are also two special identifiers: <code>this</code> and <code>super</code>. <code>this</code> refers to the current context that the script is running under. It can be any object&mdash;in addition to the obvious Objects, it could also be an Assoc, Frame or Record. If the script is invoked as <code>a.b()</code>, then while running <code>b()</code>, <code>this</code> will equal <code>a</code>. If a script value is evaluated as an expression before being invoked (either in the context of <code>b()</code>, or <code>(a.b)()</code>), then <code>this</code> will retain its current value.</p>
+
+<p>The behaviour of <code>super</code> is somewhat more complicated. When <code>a.b()</code> is invoked, <code>super</code> is set to the parent of the Object on which <code>b</code> is actually defined (rather than just inherited). If Object has no parents then <code>super</code> will be undefined. Similarly, if a script value is returned as an expression and then invoked, <code>super</code> will be undefined.</p>
+
+<p>If a call is to another function inside of the same script, the value of <code>this</code> and <code>super</code> are unchanged.</p>
+
+<p>Example: Assume we have objects <code>a</code>, <code>b</code> and <code>c</code>, with <code>a</code> being the parent of <code>b</code>, and <code>b</code> the parent of <code>c</code>. A method, <code>invoke</code> is defined on <code>b</code>. The following table describes the values of <code>this</code> and <code>super</code> under different calling methods. Assume that all methods are being called from an independent object, <code>d</code>.</p>
+
+<table>
+<tr><th>Call</th><th><code>this</code></th><th><code>super</code></th></tr>
+<tr><td><code>b.invoke()</code></td><td>b</td><td>a</td></tr>
+<tr><td><code>c.invoke()</code></td><td>c</td><td>a</td></tr>
+<tr><td><code>(b.invoke)()</code></td><td>d</td><td>Undefined</td></tr>
+</table>
+
+<div class="legacy">
+This doesn't apply when the script is being called as <code>(super.b)()</code> - it ignores the parentheses. If you must do this, assign to an intermediate value first before calling.
+</div>
+
+<div class="legacy">
+<code>super</code>'s behaviour is a great source of confusion. It's only used a few places in the CS code base, and its documentation in the Builder help is limited to a mention of it as a keyword. 
+
+Currently <code>super</code> behaves like any other object reference (indeed, the <code>super</code> keyword just returns an object reference), and so sets the value of <code>this</code> correspondingly in the invoked method. This has the following consequences:
+<ul>
+<li>Any data features that are set by  <code>super.<i>method</i></code> will be set on <code>super</code>.</li>
+<li>If <code>super.<i>method</i></code> invokes any methods, they will be <code>super</code>'s versions of the methods. If you expect methods to be non-virtual, this is the correct behaviour.</li>
+<li><code>super</code> will be set correctly in case it needs to call a method on its <code>super</code>.</li>
+</ul>
+
+By doing something like assigning <code>super.<i>method</i></code> to an intermediate variable before invoking it, we get the following behaviour:
+<ul>
+<li><code>this</code> will still be the calling object, so any data features modified by <code>super.<i>method</i></code> will be modified on the calling object.</li>
+<li>If <code>super.<i>method</i></code> invokes any methods, they will be the calling object's versions of the methods. If you expect all methods to be virtual, this is the correct behaviour.</li>
+<li><code>super</code> will be undefined.</li>
+</ul>
+
+This behaviour is counterintuitive to people used to class-based languages, but is consistent with the general behaviour of the dot operator in OScript.
+
+</div>
+
+
+
+<h2>Function calls</h2>
+<p>A function call is identified by a open parenthesis ('<code>(</code>') at the end of an expression, followed by an optional parameter list, and a close parenthesis ('<code>)</code>'). A callable object can be a script, built-in, or another function defined within the same script. </p>
+
+<p>OScript does not support tail recursion, and has a documented stack frame limit of 127.</p>
+
+<h2>Identifiers</h2>
+
+<p>An identifier can refer to a built-in, variable, function or constant.</p>
+
+<p>The following flowchart shows how an identifier (either <code><i>Basename</i></code> or <code><i>Basename</i>.<i>Feature</i></code>) is resolved to one of the above.</p>
+
+<a href="nameresolve.png"><img src="nameresolve_thumb.png" alt="Name resolution chart" /></a>
+
+<h1>Compiler Errors and Warnings</h1>
+<p>Both the old and new compilers issue various warnings. One goal for the new compiler is to issue a broader set of errors and warnings, guarding against risky behaviour, and code that is guaranteed to cause a run-time error if executed.</p>
+
+<h2>Syntax errors</h2>
+<p>Syntax errors are generated by the parser, and describe syntactic errors with the source code, such as missing close parenthesis, or an invalidly formed expression.</p>
+
+
+<h2>Unknown variable errors</h2>
+<p>The old compiler would automatically create an implicit Dynamic definitions for variables used as l-values without having been previously defined. The new compiler grants no such leniency, and requires that all variables be declared.</p>
+
+<h2>Type errors</h2>
+<p>The old compiler attempted to deduce the type of expressions, and detect potential run-time type exceptions at compile time. Unfortunately, it wasn't as efficient as it could be. </p>
+
+<p>First, it only examined types on a handful of operators, allowing one to use an integer value as though it were an object (i.e. using it with the dot operator). </p>
+
+<p>Second, for what operators it did examine, it neglected to consider various cases&mdash;if the left-hand operand was Dynamic (or indeterminate), it wouldn't check the right-hand operand's type to see if it was one that was ever compatible with the operator. </p>
+
+<p>Third, it lacked the advantage that the new compiler had of being able to dictate that child objects may not change the type of features, or the interface of functions. With this change, it became possible to assign types to expressions where it was previously impossible.</p>
+
+<p>Most type errors fall into two categories:</p>
+<ol>
+	<li> Using a value in a situation where it would have to be coerced to an incompatible type. Examples of this situation include <ul>
+		<li>Assignment to a variable of a differing type</li>
+		<li>Using a non-Integer value in the subscript or range in an index expression</li>
+		<li>Passing a value of a wrong type as a parameter to a function</li>
+		<li>Returning a value of the wrong type from a function</li>
+		</ul></li>
+	<li> Using a value in an invalid context. Examples of this include <ul>
+		<li>Using an operator with operands of the wrong type, e.g. adding Assocs, indexing a Date, or using an Integer with the dot operator.</li>
+		<li>Accessing non-existent features or functions on an Object</li>
+		<li>Accessing non-existent methods or attributes on a built-in</li>
+		</ul></li>
+</ol>
+
+<h2>Function return errors</h2>
+<p>The new compiler will issue an error if a \texttt{return} statement without a value is present in a function with a non-Void return type, or if a value is present in a function with a Void return type.</p>
+
+<p>It does not (yet) check to make sure that all code paths terminate with an appropriate <code>return</code> statement if the function is non-Void.</p>
+
+<h2>Variable use errors</h2>
+<p>The old compilers will detect unused variables, and issue warnings about them.</p>
+
+<p>The new compiler does not yet support that functionality, but when implemented, should also warn about variables that are only written to, or read before having been written to.</p>
+
+<h2>Unreachable code</h2>
+<p>Neither compiler currently supports this, but warnings or errors should be issued for code that cannot be reached due to <code>continue</code>, <code>break</code> or <code>return</code> statements.</p>
+
+
+<h2>List comprehensions</h2>
+<p>List comprehensions are quick and easy ways to build a new list from an existing list, transforming and filtering it in the process. The list comprehension</p> <pre>userRecords = { UAPI.GetById( uapictx, userId ) for userId in userIds if userId > 0 }</pre> <p>is equivalent to</p>
+<pre>
+List tempList
+for userId in userIds
+	if userId > 0
+		tempList = { @tempList, UAPI.GetById( uapictx, userId ) }
+	end
+end
+userRecords = tempList
+</pre>
+<p>with the advantage of being an expression, rather than a statement, and being more efficient.</p>
+<p>The <i>condition</i> of the list comprehension is optional; the rest of the parts are mandatory.</p>
+</pre>
+
+<script language="JavaScript">
+IncludeFooter( '' )
+</script>
+
+</body>
+</html>

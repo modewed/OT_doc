@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+
+<head>
+<title>OScript Language Reference : WebLingo</title>
+<link rel="stylesheet" type="text/css" href="../ot_common_ui.css">
+<link rel="stylesheet" type="text/css" href="languageref.css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+</head>
+
+<body>
+<script language=JavaScript>IncludeHeader( 'olang2', 'WebLingo' )
+</script>
+
+<h1>WebLingo</h1>
+<p>WebLingo provides a technique for embedding OScript language code into HTML files and, in effect, creates an OScript-enhanced version of HTML. WebLingo is embedded into HTML via three mechanisms: directives, statements, and expressions.</P>
+
+<h2>Directives</h2>
+<p>Directives are the meta symbols used by WebLingo to control how the statements and expressions are interpreted. Directives are always indicated by the presence of two semicolons at the beginning of a line. WebLingo includes the following directives:</P>
+
+<h3>The webscript and end directives</h3>
+<p>The <code>webscript</code> directive declares a WebLingo function, called a webscript, to which formal parameters can be passed. Whenever an <code>webscript</code> directive is used, a 
+matching <code>end</code> directive must be used to indicate the end of the webscript. For example:</P>
+
+<div class="example">
+<pre>
+		;;webscript FuncPopup( Record args, Dynamic node, List cmds )
+				.... additional WebLingo code here ...
+		;;end</pre>
+</pre>
+</div>
+
+<p>If no <code>webscript</code> directive is found within a WebLingo source file prior to the first non-blank, non-comment line, then the following 
+implied <code>webscript</code> directive is used (with an implied <code>end</code> directive):</p>
+
+<div class="example">
+<pre>
+		;;webscript MyWebscript</pre>
+</div>
+
+<h3>The call directive</h3>
+<p>The <code>call</code> directive invokes a webscript (a WebLingo function) contained within the same or another HTML template. Parameters can 
+be passed to the called webscript. There is no return value, however, because a webscript is designed for output generation, not necessarily computation.</p>
+
+<p>The following examples call a webscript within the same HTML template:</p>
+
+<div class="example">
+<pre>
+		;;call UpdateUserTasks( userInfo, taskList )
+		;;call DisplayUserTasks
+</div>
+
+<p>The following examples call a webscript in a different HTML template:</p>
+
+<div class="example">
+<pre>
+		;;call &lt;htmlPrefix + &quot;navpopup.html&quot;&gt;( &quot;Head&quot; )
+		;;call &lt;htmlPrefix + &quot;menufoot.html&quot;&gt;()
+</div>
+
+<h3>The oscript and html directives</h3>
+<p>The <code>oscript</code> and <code>html</code> directives change the current default language. The <code>oscript</code> directive changes it to OScript; the 
+<code>html</code> directive changes it back to HTML (the default language). The <code>oscript</code> directive is particularly useful when including a long stretch 
+of OScript code since escaping each line with a prefixing semicolon would become tedious. The <code>oscript</code> directive is specified as follows:</p>
+
+
+<div class="example">
+<pre>
+		;;oscript{
+		...oscript lines go here, without prefixing semicolons...
+		%HTML lines must be prefixed by percent symbols
+		;;}
+</div>
+
+<p>When OScript is the default language, HTML lines must be specified with a prefixing percent ( <code>%</code> ) symbol. Note that HTML is the default mode and that 
+the <code>html</code>diretive is only necessary if an <code>oscript</code> directive is currently in effect. The <code>html</code> directive is particularly useful when 
+including a long stretch of HTML within a long stretch of OScript code. The <code>html</code> directive is specified as follows:</p>
+
+<div class="example">
+<pre>
+		;;html{
+		...html lines go here, without prefixing percent symbols...
+		;OScript lines will require prefixing semicolons.
+		;;}
+</div>
+
+<p>When the <code>html</code> directive is in effect, OScript lines must be specified with a prefixing semicolon ( <code>;</code> ).</p>
+
+<h2>Statements</h2>
+<p>Since WebLingo is built upon OScript, the full power of OScript is available to a WebLingo author. In general, any OScript statement can be included into a WebLingo source 
+file by prefixing it with a semicolon (<code> ; </code>). For example, the OScript <code>if</code> and <code>for</code> constructs can be used as follows:</p>
+
+<div class="example">
+<pre>
+		;if Length( .TaskList ) == 0
+			
+			You have no tasks assigned at this time
+		;else
+
+			Your tasks are:
+
+					;for task in .TaskList
+						Task: 'task.TaskName'
+					;end
+		;end
+</div>
+
+<p>The above WebLingo fragment examines the TaskList and generates either a message (You have no tasks assigned at this time) or a simple list of task names.</p>
+
+<h3>Expressions</h3>
+<p>WebLingo expressions are HTML source lines that have OScript expressions embedded within them. During execution of an HTML template, these embedded expressions are 
+evaluated, and their resultant values substituted at the corresponding positions in the resulting HTML page.</p>
+
+<p>WebLingo expressions are preceded and followed by a back quote character ( <code>'</code> ) and can reference any OScript object or feature to which the HTML template 
+has access. For example:</p>
+
+<div class="example">
+<pre>
+		Project Info for `.Project.ProjectName`
+		INPUT TYPE=&quot;RESET&quot; VALUE=&quot;`[WebDsp_HTMLLabel.ResetButtonLabel]`&quot;
+</div>
+
+<h3>Expression Escaping</h3>
+<p>By default, when an OScript expression is evaluated and expanded within WebLingo, the result is converted into a String and HTML Escaping is applied. HTML Escaping 
+converts any HTML metacharacters found in the String into the corresponding HTML code. For example, the metacharacter <codevar>&gt;</code> becomes <code>&amp;gt;</code> 
+and <code>&lt;</code> becomes <code>&amp;lt;</code>. This allows you to use HTML expressions within Strings that will have no effect on the generated HTML.</p>
+
+<p>In some cases, you may want to inhibit this type of escaping to allow your code to generate more precise HTML. In this case, the WebLingo expression can include 
+<em>escape codes</em>. Escaping in OScript is accomplished by prefixing one of the following five codes: <code>%L</code>, <code>%D</code>, <code>%S</code>, 
+<code>%U</code>, or <code>%H</code>. These codes are defined as follows:</p>
+
+<table border rules=rows>
+<tr>
+	<td class="thead">Escape Code</td>
+	<td class="thead">Definition</td>
+	<td class="thead">Example</td>
+</tr>
+<tr scope="row">
+	<td class="body" valign="top">%L</td>
+	<td class="body" valign="top"><span class="emph">Literal Escaping</span> indicates that characters should be interpreted literally. </td>
+	<td class="body" valign="top">If you declare the following string: 
+	<code>;string x = &lt;b&gt;Hello&lt;/b&gt;</code><br><br>
+	The default output would be:<code>&lt;b&gt;Hello&lt;/b&gt;</code><br><br>
+	But if you escape the value of x as <code>"'%Lx'"</code>, the output becomes: <b>Hello</b></td>
+</tr>
+<tr scope="row">
+	<td class="body" valign="top">%D</td>
+	<td class="body" valign="top"><span class="emph">Double-quote Escaping</span> indicates that a double quote (<span class="codevar">&quot;</span> ) should be escaped.</td>
+	<td class="body" valign="top">If you declare the following string: 
+	<code>;string x = 'xxx"yyy'</code><br><br>
+	The default output would be: <code>xxx"yyy</code><br><br>
+	But if you escape the value of x as <code>"'%Dx'"</code>, the output becomes: 
+	<code>xxx\"yyy</code><br><br></td>
+</tr>
+<tr scope="row">
+	<td class="body" valign="top">%S</td>
+	<td class="body" valign="top"><span class="emph">Single-quote Escaping</span> indicates  that a single quote (<span class="codevar">&quot;</span> ) should be escaped.</td>
+	<td class="body" valign="top">If you declare the following string: 
+	<code>;string x = "C'est"</code><br><br>
+	The default output would be: <code>C'est</code><br><br>
+	But if you escape the value of x as <code>"'%Sx'"</code>, the output becomes: 
+	<code>C\'est</code><br><br></td>
+</tr>
+<tr scope="row">
+	<td class="body" valign="top">%U</td>
+	<td class="body" valign="top"><span class="emph">URL Escaping</span> indicates  that a character should be escaped to URL format.
+	Nonalphanumeric characters are converted into URL hexadecimal sequences, spaces into the plus ("+") character.</td>
+	<td class="body" valign="top">If you declare the following string: 
+	<code>;string x = "http://www.opentext.com/livelink?func=admin.index"</code><br><br>
+	The default output would be: <code>http://www.opentext.com/otcs?func=admin.index</code><br><br>
+	But if you escape the value of x as <code>"'%Ux'"</code>, the output becomes: 
+	<code>http%3A%2F%2Fwww%2Eopentext%2Ecom%2Fotcs%3Ffunc%3Dadmin%2Eindex</code><br><br></td>
+</tr>
+<tr scope="row">
+	<td class="body" valign="top">%H</td>
+	<td class="body" valign="top"><span class="emph">HTML Escaping</span> indicates  that a character should be escaped to HTML format.
+	Special characters, such as greater-than, less-than, and ampersand, are converted into their HTML equivalent.</td>
+	<td class="body" valign="top">If you declare the following string: 
+	<code>;string x = "&lt;Hello&gt;"</code><br><br>
+	The default output would be: <code>&lt;Hello&gt;</code><br><br>
+	But if you escape the value of x as <code>"'%Hx'"</code>, the output becomes: &amp;lt;Hello&amp;gt;</td>
+</tr>
+</table>
+
+<script language="JavaScript">IncludeFooter( '' )</script>
+</body>
+</html>

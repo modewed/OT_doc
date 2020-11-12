@@ -1,0 +1,246 @@
+<HTML>
+<HEAD>
+<TITLE>Functions</TITLE>
+
+<link rel="stylesheet" href="../llhelp2000.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<SCRIPT language=JavaScript>
+IncludeHeader( 'olang2', 'Functions' )
+</SCRIPT>
+
+
+<p class="title">Functions</p>
+
+<p class="body">Functions are used to break complex scripting tasks into smaller components. 
+Using functions can enhance the reusability of your scripts by allowing you to build upon a library 
+of routines you have already created, instead of starting over from scratch.</P>
+
+<p class="body">An OScript function takes the following form:</P>
+
+<pre>
+		function [<span class="emph">functionType</span>] <span class="emph">functionName </span>( [<span class="emph">parameterList</span>] )
+      			<span class="emph">...block of code...</span>
+		end</pre>
+
+<p class="body">A function is created by specifying a function declaration, the function body, and 
+an end statement. The function body (the statements within the function) is executed whenever the function 
+is called.</P>
+
+
+<P class="subh2">Declaring a Function</P>
+<p class="body">A function declaration establishes the name, return type, and parameters 
+passed to the function. An OScript function declaration takes the following form:</P>
+
+<pre>
+		function [<span class="emph">functionType</span>] <span class="emph">functionName </span>( [<span class="emph">parameterList</span>] )</pre>
+
+
+<p class="body">The <span class="code">functionType</span> is optional and specifies the type 
+of value returned by the function. If <span class="code">functionType</span> is not included, 
+the OScript compiler assumes a Dynamic return value. If the function does not return a value, the 
+<span class="code">void</span> keyword can be used to indicate this.</P>
+
+<pre>
+		function void myFunction()
+			<span class="emph">... block of code ...</span>
+		end</pre>
+
+<p class="body">The <span class="code">functionName</span>
+is required and specifies the name by which the function will be called. It can 
+include letters, numbers, and underscore characters, but the first character must be a letter. It cannot 
+include spaces and must be less than 256 characters long. (If the script is executed as an Object method, the 
+function name is ignored and the object's feature name is used instead.)</P>
+
+<p class="body">The <span class="code">parameterList</span> is optional 
+and specifies the names that will be used, locally, to reference the parameters. Note that the parentheses 
+surrounding the parameter list are <span class="emph">not </span>optional. If included, parameter names are separated by commas, 
+can optionally be preceded by a data type specification, and can optionally be followed by a default value 
+assignment.</P>
+
+<pre>
+		function Integer myFn( name, Integer height, Integer age = 32 )</pre>
+
+<p class="body">If a data type is not specified for a parameter (as in the above example), 
+the compiler assumes the parameter is Dynamic. If a parameter is assigned a default value, all subsequent 
+parameters must also be assigned a default value. If a value is passed in for a defaulted parameter, the 
+passed-in value overrides the default value. Any parameter that does not have a default value is required; 
+any parameter that has a default value is optional. For more information, see the <a href="#convent"><span class="emph">Calling Conventions</span></a> section.</P>
+
+<p class="body">All parameters passed to a function are passed by value; the function can operate 
+upon the passed-in value, but does not change the value in the calling code. When you pass a reference 
+data type, even though the reference itself is passed by value, modifying it <span class="emph">does </span>change the shared contents of the value in the calling code.</P>
+
+<p class="subh2">Return Value</P>
+
+<p class="body">The <span class="code">return</span> statement can be used to return a value 
+from a function if the function is not declared to return <span class="code">void</span>. The 
+<span class="code">return</span> statement must be placed within the function body (after the declaration but before the <span class="code">end</span> statement) and takes the following form:</P>
+
+<pre>
+		return <span class="emph">value</span></pre>
+
+<p class="body">The <span class="code">return</span> statement not only returns a value, 
+but causes the function to return (in other words, stop execution) at the point the 
+<span class="code">return</span> statement is encountered.</P>
+
+<pre>
+		function Integer addThreeNumbers( Integer a, Integer b, Integer c )
+				Integer sum
+				Integer product
+				sum = a + b + c
+				return( sum )
+				product = a * b * c// function will never execute this line
+		end</pre>
+
+<p class="body">If no <span class="code">return</span> statement is included, control returns to the calling function when the <span class="code">end</span> statement is encountered. A 
+<span class="code">return</span> statement can return only a single 
+value, however, that value can be of a complex data type, such as an Assoc, List, or Record, which 
+contains many values.</P>
+
+<pre>
+		function List MathOperations( Integer a, Integer b, Integer c )
+				ListlistOfValues
+				listOfValues[ 1 ] = a + b + c
+				listOfValues[ 2 ] = a - b - c
+				listOfValues[ 3 ] = a * b * c
+				listOfValues[ 4 ] = a / b / c
+				return( listOfValues )
+		end</pre>
+
+
+<p class="subh2"><a name="convent">Calling Conventions</a></P>
+
+<p class="body">A function call passes execution control from the calling function to the 
+called function. The parameters, if any, are passed by value to the called function. Execution of a 
+<span class="code">return</span> statement or encountering the 
+<span class="code">end</span> statement in the called function returns 
+control and possibly a value to the calling function. </P>
+<p class="body">To call a function, call it by name and pass it the appropriate parameters. 
+If you pass a function more parameters or fewer parameters than it accepts, an Error will occur.</P>
+
+<pre>
+		List mathList = MathOperations( 10, 34, 16 )</pre>
+
+<p class="body">Any parameter that does not have a default value assigned is required; 
+any parameter that has been assigned a default value is optional. You can override the default value assigned 
+to a function parameter by passing it a value. However, to override a defaulted parameter, values must be 
+specified for <span class="emph">all </span>parameters preceding it, as well. The <span class="code">call 
+Fn( 1, 2, , 4 )</span> syntax used in some programming languages is not valid in 
+OScript. For example:</P>
+
+<pre>
+		function Integer myFn(String require1,\
+		Integer require2,\
+		Integer option1 = 3, \
+		String who = 'Joe' )</pre>
+
+<p class="body">In the above example, the <span class="code">myFn</span> 
+function accepts four parameters, two that are required and two that are optional. 
+You must pass values for <span class="code">require1</span> and 
+<span class="code">require2</span>, but you do not need to pass 
+a value for <span class="code">option1</span> or 
+<span class="code">who</span>. However, if you want to pass a value 
+for <span class="code">who</span>, you must also pass a value 
+for <span class="code">option1</span>.</P>
+
+
+<P class="subh2">Recursion</P>
+<p class="body">OScript functions can be recursive. OScript maintains a limit of 127 
+levels of recursion.</P>
+
+<pre>
+		function Integer calcFactorial( Integer n )
+				if n == 1
+					return 1
+				else
+					return n * calcFactorial( n - 1 )
+				end
+		end</pre>
+
+<p class="body">In the above example, the OScript <span class="code">calcFactorial</span>
+ function calls itself until it is complete.</P>
+
+<P class="subh2">Main Function</P>
+<p class="body">Every script contains one main function and zero or more additional 
+local functions. The compiler considers the first function in your script to be the main function and all 
+other functions to be local functions. The contents of the main function are determined in one of two 
+ways:</P>
+
+<ul class="body">
+<li>If the first statement in your script is a function declaration, all lines of that function 
+constitute the explicit main function, regardless of the name of that function.<br><br></li>
+<li>If the first statement is <span class="emph">not </span>a function declaration (excluding comments), all lines up to, but not including, the first function declaration constitute the implicit main function.</li></ul>
+
+<p class="body">Local OScript functions can only be called by the main function in the same script. 
+You cannot call a local function from another script.</P>
+
+<p class="body">The following examples illustrate explicit and implicit main functions.</P>
+
+<pre>
+		// This file contains an explicit main function that
+		// calls a local function
+		function void MyMainFunc()
+			Echo( &quot;Here I am in main&quot; )
+			MyLocalFunc()
+		end
+		Function void MyLocalFunc()
+			Echo( &quot;here I am in a local function&quot; )
+		end</pre>
+
+<p class="body">In the above example, the explicit main function <span class="code">MyMainFunc</span> calls the local function <span class="code">MyLocalFunc</span>.</P>
+
+<pre>
+		// This file contains an implicit main function
+		// that calls a local function
+		Echo( &quot;Here I am in main&quot; )
+		MyLocalFunc()
+		function void MyLocalFunc()
+			Echo( &quot;here I am in a local function&quot; )
+		end</pre>
+
+<p class="body">In the above example, the implicit main function calls the local 
+function <span class="code">MyLocalFunc</span>.</P>
+
+<pre>
+		// This file contains an implicit main function with no local 
+		// functions
+		Echo( &quot;Here I am in main&quot; )</pre>
+
+<p class="body">In the above example, the implicit main function calls no local 
+functions.</P>
+<p class="body">The main function is the only function within the script that can be called from another script, however, it is not called by function name, but rather by the name of the method containing it. </P>
+<p class="body">For example, in the <span class="code">MyObject</span>
+object there are two methods: <span class="code">myMethod</span> 
+and <span class="code">yourMethod</span>. For <span class="code">yourMethod </span> 
+to properly call the main function of <span class="code">myMethod</span>, the two 
+methods should be structured as follows:</P>
+<p class="body">Contents of <span class="code">myMethod</span>:</P>
+
+<pre>
+		function void mainOfMyMethod()
+			IntegertheValue
+			<span class="emph">... block of code ...</span>
+		end</pre>
+
+
+<p class="body">Contents of <span class="code">yourMethod</span>:</P>
+
+<pre>
+		function void mainOfYourMethod( Integer numberOfTimes)
+			Integer n
+			for n = numberOfTimes downTo 1
+				this.myMethod()
+			end
+		end</pre>
+
+
+<script language="JavaScript">
+IncludeFooter( 'olang' )
+</script>
+
+</BODY>
+</HTML>
+

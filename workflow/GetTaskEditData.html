@@ -1,0 +1,211 @@
+<HTML>
+<HEAD>
+<TITLE>GetTaskEditData()</TITLE>
+
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<script language="JavaScript">updateParentHeader( 'Code' );</script>
+<script language="JavaScript">includeContentContainer( 'wfbuilder', true );</script>
+<p>
+
+
+<p class="title">GetTaskEditData()</p>
+<p class="body">
+This code sample describes how to retrieve the information that is displayed
+when a workflow participant clicks the step name on the Tasks page in their Personal
+Workspace.</p>
+<pre class="code">
+	function Assoc GetTaskEditData( \
+		Object prgCtx, \
+		Record taskInfo, \
+		Record r )
+
+		Assoc a
+		Assoc data
+		Assoc paneData
+		Assoc retVal
+		Assoc tabPaneInfo
+		Assoc tmp
+		Dynamic status
+		Integer whichTab
+		List tabList
+		Object obj
+		RecArray packages
+		Record p
+		WAPIWORK work
+	
+		Boolean ok = true
+		Boolean groupStep = False
+		Integer flags = WAPI.STARTTASK_FLAG_REEXECUTE
+		Integer i = 1
+
+		tmp = GetCustomData( taskinfo.subworktask_customdata )
+		
+		if ( IsDefined( tmp ) && IsDefined( tmp.CustTaskTemplate ) )
+			data.HTMLFile = 'redirect.html'
+			data.CustTaskTemplate = tmp.CustTaskTemplate
+			data.ModuleName = 'custmod'
+		else
+			whichTab = ( RecArray.IsColumn( r, 'PaneIndex' ) ) ? \
+			Str.StringToInteger( r.PaneIndex ) : Undefined
+
+		//If a workflow participant has accessed the step but is just
+		//viewing the tabs and not actually entering data, do not add
+		//rows to the audit trail for these operations.
+		
+		if ( IsDefined( whichTab ) )
+			if ( whichTab > 0 )
+				flags = flags | WAPI.STARTTASK_FLAG_NOAUDIT
+			end
+
+			data.HTMLFile = 'tgeneric.html'
+			data.ModuleName = 'webwork'
+			data.TaskInfo = taskInfo
+
+			//Set the masthead information.
+
+			data.HeaderArgs = $WebWork.WFPkg.GetHeaderTypeArgs( \
+			'WORK', taskInfo.SUBWORK_TITLE )
+
+			//Determine whether the step has been assigned to a Livelink
+			//user or a group.
+
+			if !( $WFMain.WAPIPkg.CheckTaskAssignedToUser( prgCtx, \
+			taskInfo ) )
+				groupStep = True
+			end
+
+			//Set up the information required to draw the first tab
+			//(General).
+
+			tmp = Assoc.CreateAssoc()
+			tmp.Label = [WebWork_HTMLLabel.General]
+			tmp.URL = $WebWork.WFPkg.SetPaneIndexArg( \
+			$WebDSP.HTMLPkg.ArgsToURL( r ), i )
+			tmp.Active = FALSE
+
+			tabPaneInfo.TabList = { tmp }
+			
+			a.TaskInfo = taskInfo
+			a.GroupStep = groupStep
+
+			//Use the standard General tab that lets a group member
+			//accept the step and add it to their step list. This is the
+			//same General tab that is used for a User step type.
+
+			tmp = Assoc.CreateAssoc()
+			tmp.ModuleName = 'webwork'
+			tmp.HTMLFile = 'taskgeneralpane.html'
+			tmp.Data = a
+			
+			tabPaneInfo.PaneList = { tmp }
+
+			if ( !groupStep )
+
+				//Get a work handle.
+
+				work = prgCtx.WSession().AllocWork()
+				if ( !IsError( work ) )
+					//Use the StartTask() script to verify that the
+					//performer of this step can access the data associated
+					//with the step. This script sets up the work object so
+					//that it can be used to access the work package. You
+					//can also use the StartTask() script to make sure that
+					//this step is ready to be complete (and was not
+					//completed already).
+
+			status = WAPI.StartTask( \
+							work, \
+							r.WorkID, \
+							r.SubWorkID, \
+							r.TaskID, \
+							flags )
+			if ( !IsError( status ) )
+
+				//Retrieve the current work package.
+
+				packages = $WFMain.WAPIPkg.GetWorkPackages( \
+				prgCtx, work, taskInfo )
+				if ( !IsError( packages ) )
+					i += 1
+					for p in packages
+						obj = \
+						$WebWork.WFPackageSubsystem.GetItem( \
+						{ p.TYPE, p.SUBTYPE } )
+						if ( IsDefined( obj ) && IsDefined( \
+						p.USERDATA ) )
+							a = obj.GetTabInfo( prgCtx, r, \
+							p.USERDATA, i )
+							a.Active = FALSE
+							paneData = obj.GetData( \
+							prgCtx, taskInfo, p.USERDATA, \
+							r )
+							if ( IsDefined( paneData ) )
+								i += 1
+								paneData.IsEditable = \
+								True
+								tabPaneInfo.TabList = { \
+								@tabPaneInfo.TabList, a }
+								tabPaneInfo.PaneList = \
+								{@tabPaneInfo.PaneList, \
+								paneData }
+							end
+						end
+					end
+			//If the data was not retrieved correctly
+			//(OK=FALSE), return an error message.
+
+			else
+					ok = False
+					retVal.ApiError = work
+					retVal.ErrMsg = \
+					[Web_ErrMsg2.CouldNotAccessWorkpackage]
+			end
+			//If the data was not retrieved correctly
+			//(OK=FALSE), return an error message.
+		else
+			ok = False
+			retVal.ApiError = work
+			retVal.ErrMsg = [Web_ErrMsg2.CouldNotAccessWork]
+			end
+			WAPI.FreeWork( work )
+		else
+			ok = False
+			retVal.ApiError = work
+			retVal.ErrMsg = [Web_ErrMsg2.CouldNotAllocwork]
+			end
+		end
+		if ( ok )
+			if ( ( whichTab &lt; 2 ) || ( whichTab &gt; Length( \
+			tabPaneInfo.TabList ) ) )
+				whichTab = 1
+			end
+			tabPaneInfo.TabList[ whichTab ].Active = True
+		end
+		data.TabInfo = tabPaneInfo
+		data.Tab = whichTab
+	else
+		ok = False
+		retVal.ErrMsg = \
+		[WebWork_ErrMsg.TheArgumentPaneIndexIsRequired]
+		end
+	end
+	retVal.OK = ok
+	retVal.Data = data
+	return( retVal )
+end
+Function Dynamic GetCustomData( Dynamic val )
+	Dynamic retVal = val
+	while ( Type( retVal ) == StringType )
+		retVal = Str.StringToValue( retVal )
+	end
+	return( retVal )
+end</pre>
+
+<script language="JavaScript">IncludeFooter();</script>
+</body>
+</html>

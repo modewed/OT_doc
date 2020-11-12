@@ -1,0 +1,81 @@
+<HTML>
+<HEAD>
+<TITLE>PutReviewData()</TITLE>
+
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<script language="JavaScript">updateParentHeader( 'Code' );</script>
+<script language="JavaScript">includeContentContainer( 'wfbuilder', true );</script>
+<p>
+
+
+<p class="title">PutReviewData()</p>
+<p class="body">
+This code sample describes how to create a script that saves the instructions you
+provide to the reviewers of a step when you submit it for review. These instructions can
+also include the duration and some group options.</p>
+<pre class="code">
+	function assoc PutReviewData( \
+		Object prgCtx, \
+		Record mapRec, \
+		Record taskInfo, \
+		Record r )
+		Assoc retVal
+		Real time
+		retVal.OK = TRUE
+
+		//Save the step name.
+		
+		if ( RecArray.IsColumn( r, 'Title' ) )
+			taskInfo.Title = $LLIAPI.FormatPkg.ValToString( r.title )
+		end
+
+		//Save the instructions.
+
+		if ( RecArray.IsColumn( r, 'Instructions' ) )
+			taskInfo.Instructions = $LLIAPI.FormatPkg.ValToString(
+	r.Instructions )
+		end
+
+		//Save the duration.
+
+		if ( RecArray.IsColumn( r, 'Duration' ) )
+			if IsDefined( r.Duration ) && Length( r.Duration )
+				Boolean inDays = ( r.DurationUnits == &quot;Days&quot; )
+				time = $LLIAPI.FormatPkg.StringToVal( r.Duration, RealType )
+
+		if ( Type( time ) != RealType )
+			retVal.OK = FALSE
+
+			if inDays
+				retVal.ErrMsg = \
+				[WebWork_ErrMsg.DurationMustBeANumberOfDays]
+			else
+				retVal.ErrMsg = \
+				[WebWork_ErrMsg.DurationMustBeANumberOfHours]
+			end
+		else
+			taskInfo.DueDuration = \
+			$LLIAPI.FormatPkg.ConvertToSeconds( inDays, time )
+		end
+	else
+		taskInfo.DueDuration = Undefined
+		end
+	end
+	//Save the group options.
+
+	if RecArray.IsColumn( r, &quot;GroupFlags&quot; )
+		taskInfo.EXATTS.GroupFlags = Str.StringToInteger( \
+		r.GROUPFLAGS )
+	end
+	return retVal
+end</pre>
+
+
+<script language="JavaScript">IncludeFooter();</script>
+</body>
+</html>

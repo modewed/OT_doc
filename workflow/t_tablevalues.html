@@ -1,0 +1,88 @@
+<HTML>
+<HEAD>
+<TITLE>t_tablevalues.html</TITLE>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<script language="JavaScript">updateParentHeader( 'Code' );</script>
+<script language="JavaScript">includeContentContainer( 'wfbuilder', true );</script>
+
+<p class="body">
+<p class="title">t_tablevalues.html</p>
+<p class="body">This HTML file is displayed to the 
+creator of a workflow map when they define tasks in a workflow 
+map that contains the Table Values data type. This HTML page lets
+the creator of a workflow map specify whether each field on the Table Values page
+(accessed from the Step Definition page) is editable, required, or read-only.</p>
+
+<pre class="code">
+;;webscript t_tablevalues( Dynamic data )
+&lt;!-- File: custmod/t_tablevalues.html -->
+;;oscript{
+String a
+String selected
+Integer i = 1
+Record theTask = data.taskInfo
+Assoc theForm = theTask.Form
+if ( !IsDefined( theForm ) )
+theForm = Assoc.CreateAssoc()
+end
+;;}
+&lt;TABLE BORDER=&quot;0&quot; CELLPADDING=&quot;2&quot; CELLSPACING=&quot;1&quot;>
+;for a in Assoc.Keys( data.data.Fields )
+&lt;TR>
+&lt;TD bgcolor=&quot;#CCCCCC&quot; NOWRAP VALIGN=&quot;CENTER&quot;>&lt;FONT
+FACE=&quot;`[WebDsp_Font.SansSerif]`&quot;
+size=&quot;2&quot;>&nbsp;`a`:&nbsp;&lt;/FONT>&lt;/TD>
+&lt;TD>
+&lt;SELECT NAME=&quot;TV_`a`&quot;
+ONCHANGE=&quot;markTaskEditDirty();&quot;>
+//Add the Editable option to the popup menu that is displayed for
+//each workflow attribute on the Table Values page when the creator
+//of a workflow map defines the task.
+;selected = ( !( a in
+theForm.REQUIRED_TABLE_VALUES ) && !( a in
+theForm.NONEDITABLE_TABLE_VALUES ) ) ? &quot; SELECTED&quot; : &quot;&quot;
+&lt;OPTION
+VALUE=&quot;Editable&quot;`selected`>`[WebWFP_HTMLLabel.Editable]`
+//Add the Entry Required option to the popup menu that is displayed
+//for each workflow attribute on the Table Values page when the
+//creator of a workflow map defines the task.
+;selected = ( ( selected == &quot;&quot; ) && ( a in
+theForm.REQUIRED_TABLE_VALUES ) ) ? &quot; SELECTED&quot; : &quot;&quot;
+&lt;OPTION
+VALUE=&quot;Required&quot;`selected`>`[WebWFP_HTMLLabel.EntryRequired]`
+//Add the Read-Only option to the popup menu that is displayed for
+//each workflow attribute on the Table Values page when the creator
+//of a workflow map defines the task.
+;selected = ( ( selected == &quot;&quot; ) && ( a in
+theForm.NONEDITABLE_TABLE_VALUES ) ) ? &quot; SELECTED&quot; : &quot;&quot;
+&lt;OPTION
+VALUE=&quot;ReadOnly&quot;`selected`>`[WebWFP_HTMLLabel.ReadOnly]`
+&lt;/SELECT>
+&nbsp;
+&lt;/TD>
+&lt;/TR>
+;i += 1
+;end
+//Set up the Action row, which contains the Add to Workflow
+//Definition button.
+&lt;TR>
+&lt;TD bgcolor=&quot;#CCCCCC&quot; NOWRAP>&lt;FONT
+FACE=&quot;`[WebDsp_Font.SansSerif]`&quot;
+size=&quot;2&quot;>&nbsp;`[WebDoc_HTMLLabel.Action_]`&nbsp;&lt;/FONT>&lt;/TD>
+&lt;TD>
+&lt;INPUT TYPE=&quot;Submit&quot;
+VALUE=&quot;`[WebWFP_HTMLLabel.AddToWorkflowDefinitionButtonLabel]`&quot;>
+&lt;/TD>&lt;/TR>
+&lt;/TABLE>
+;;end</pre>
+
+
+<script language="JavaScript">IncludeFooter();</script>
+
+</BODY>
+</html>

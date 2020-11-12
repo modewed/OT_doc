@@ -1,0 +1,286 @@
+
+<meta charset="UTF-8">
+<html>
+<head><title>Class: Profiler</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../syntax.css" type="text/css">
+<link rel="stylesheet" href="builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td  align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody></table>
+
+<div id="document">
+	
+<div class="sidebar_container">
+		
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink"><a href="assoc.html">Assoc</a></div>
+				<div class="packagelink"><a href="boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="builder.html">Builder</a></div>
+				<div class="packagelink"><a href="bytes.html">Bytes</a></div>
+				<div class="packagelink"><a href="capi.html">CAPI</a></div>
+				<div class="packagelink"><a href="capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink"><a href="cachetree.html">CacheTree</a></div>
+				<div class="packagelink"><a href="compiler.html">Compiler</a></div>
+				<div class="packagelink"><a href="core.html">Core</a></div>
+				<div class="packagelink"><a href="dapi.html">DAPI</a></div>
+				<div class="packagelink"><a href="dapinode.html">DAPINODE</a></div>
+				<div class="packagelink"><a href="dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink"><a href="dapiversion.html">DAPIVERSION</a></div>
+				<div class="packagelink"><a href="domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="domcomment.html">DOMComment</a></div>
+				<div class="packagelink"><a href="domdocument.html">DOMDocument</a></div>
+				<div class="packagelink"><a href="domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink"><a href="domelement.html">DOMElement</a></div>
+				<div class="packagelink"><a href="domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink"><a href="domnamednodemap.html">DOMNamedNodeMap</a></div>
+				<div class="packagelink"><a href="domnode.html">DOMNode</a></div>
+				<div class="packagelink"><a href="domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="domtext.html">DOMText</a></div>
+				<div class="packagelink"><a href="date.html">Date</a></div>
+				<div class="packagelink"><a href="dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="env.html">Env</a></div>
+				<div class="packagelink"><a href="error.html">Error</a></div>
+				<div class="packagelink"><a href="file.html">File</a></div>
+				<div class="packagelink"><a href="filecopy.html">FileCopy</a></div>
+				<div class="packagelink"><a href="fileprefs.html">Fileprefs</a></div>
+				<div class="packagelink"><a href="frame.html">Frame</a></div>
+				<div class="packagelink"><a href="global.html">Global</a></div>
+				<div class="packagelink"><a href="integer.html">Integer</a></div>
+				<div class="packagelink"><a href="javaobject.html">JavaObject</a></div>
+				<div class="packagelink"><a href="language.html">Language</a></div>
+				<div class="packagelink"><a href="license.html">License</a></div>
+				<div class="packagelink"><a href="list.html">List</a></div>
+				<div class="packagelink"><a href="logging.html">Logging</a></div>
+				<div class="packagelink"><a href="long.html">Long</a></div>
+				<div class="packagelink"><a href="mailmessage.html">MailMessage</a></div>
+				<div class="packagelink"><a href="math.html">Math</a></div>
+				<div class="packagelink"><a href="memcached.html">Memcached</a></div>
+				<div class="packagelink"><a href="notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="object.html">Object</a></div>
+				<div class="packagelink"><a href="pop3session.html">POP3Session</a></div>
+				<div class="packagelink"><a href="patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="patfind.html">PatFind</a></div>
+				<div class="packagelink"><a href="pattern.html">Pattern</a></div>
+				<div class="packagelink"><a href="point.html">Point</a></div>
+				<div class="packagelink curPage">Profiler</div>
+				<div class="packagelink"><a href="real.html">Real</a></div>
+				<div class="packagelink"><a href="recarray.html">RecArray</a></div>
+				<div class="packagelink"><a href="record.html">Record</a></div>
+				<div class="packagelink"><a href="regex.html">Regex</a></div>
+				<div class="packagelink"><a href="restclient.html">RestClient</a></div>
+				<div class="packagelink"><a href="saxparser.html">SAXParser</a></div>
+				<div class="packagelink"><a href="smtpsession.html">SMTPSession</a></div>
+				<div class="packagelink"><a href="ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="script.html">Script</a></div>
+				<div class="packagelink"><a href="security.html">Security</a></div>
+				<div class="packagelink"><a href="set.html">Set</a></div>
+				<div class="packagelink"><a href="socket.html">Socket</a></div>
+				<div class="packagelink"><a href="sql.html">Sql</a></div>
+				<div class="packagelink"><a href="sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink"><a href="str.html">Str</a></div>
+				<div class="packagelink"><a href="string.html">String</a></div>
+				<div class="packagelink"><a href="system.html">System</a></div>
+				<div class="packagelink"><a href="uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="void.html">Void</a></div>
+				<div class="packagelink"><a href="wapi.html">WAPI</a></div>
+				<div class="packagelink"><a href="wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink"><a href="web.html">Web</a></div>
+				<div class="packagelink"><a href="xslprocessor.html">XSLProcessor</a></div>
+				<div class="packagelink"><a href="zip.html">Zip</a></div>
+		</div>
+</div>
+
+	<div class="content_container">
+		<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+		<h1>Class: Profiler</h1><div class="ClassDescription"><p>The Profiler package provides a small set of functions for enabling and controlling OScript profiler output.</p>
+<p>OScript profilers collect timing information during OScript code execution and save this data to profiler output files.  Profilers run on a per-thread basis, so profile data files represent the data collected from a single thread.</p>
+<p>The profile data may be output in two formats.  By default, output is written in <a href="http://valgrind.org/docs/manual/cl-format.html">Callgrind format</a>, and can be open by a variety of utility programs, including <a href="http://kcachegrind.sourceforge.net">KCachegrind</a>.  KCachegrind allows visualization and analysis of profiling data, and can view multiple profile data files at the same time.</p>
+<p>Profile data may also be output in raw comma separated values format (CSV), by specifying a profile file name with a .csv extension.</p>
+<p>For either of the above formats, the profiler also supports GZIP compression of the data file as it is written by specifying a .zip extension (e.g. profiledata.out.zip).</p></div>
+			<h2>Class Attributes</h2>
+			<div class="ClassAttributesShort">
+				
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_profiler_level_builtins">LEVEL_BUILTINS</a></div>
+					<div class="Description"><p>Profiler output will include calls to OScript functions and OScript builtins.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_profiler_level_calls">LEVEL_CALLS</a></div>
+					<div class="Description"><p>Profiler output will only include calls to OScript functions.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_profiler_level_off">LEVEL_OFF</a></div>
+					<div class="Description"><p>Profiler output is disabled.</p></div>
+				</div>
+				
+			</div>
+
+
+			<h2>Class Methods</h2>
+			<div class="ClassMethodsShort">
+				<div class="Method">
+					<div class="Name"><a href="#cm_profiler_getlevel" class="IndexMethodName">GetLevel</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns the current Profiler output level.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_profiler_setlevel" class="IndexMethodName">SetLevel</a>(
+					 Integer level )
+					</div>
+					<div class="Description"><p>Sets the current Profiler output level.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_profiler_start" class="IndexMethodName">Start</a>(
+					 String fileName, Integer level, Boolean justThisRequest )
+					</div>
+					<div class="Description"><p>Create a new OScript profiler.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_profiler_stop" class="IndexMethodName">Stop</a>(
+					 Boolean justThisRequest )
+					</div>
+					<div class="Description"><p>Stops the current OScript profiler.</p></div>
+				</div>
+			</div>
+
+
+				<h2>Class Attributes</h2>
+				<div class="ClassAttributes">
+					
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_profiler_level_builtins">LEVEL_BUILTINS</a></div>
+						<div class="Description"><p>Profiler output will include calls to OScript functions and OScript builtins.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_profiler_level_calls">LEVEL_CALLS</a></div>
+						<div class="Description"><p>Profiler output will only include calls to OScript functions.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_profiler_level_off">LEVEL_OFF</a></div>
+						<div class="Description"><p>Profiler output is disabled.</p></div>
+					</div>
+				
+				</div>
+
+		
+				<h2>Class Methods</h2>
+				<div class="ClassMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_profiler_getlevel">GetLevel</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">GetLevel</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the current Profiler output level.  </p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The current Profiler output level.  Profiler.LEVEL_OFF if there is no active profiler.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_profiler_setlevel">SetLevel</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">SetLevel</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">level</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sets the current profiler output level.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">level</span><span class="description"><p>The profiler output level to set.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>True if successful, false if not.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_profiler_start">Start</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">Start</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">fileName</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">level</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Boolean</span> <span class="PrototypeArgumentName">justThisRequest</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Create a new OScript profiler for the calling thread.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">fileName</span><span class="description"><p>The profiler output file name.</p></span></div>
+											<div class="Parameter"><span class="name">level</span><span class="description"><p>The profiler output level to set (default is Profiler.LEVEL_BUILTINS).</p></span></div>
+											<div class="Parameter"><span class="name">justThisRequest</span><span class="description"><p>True if the profiler should stop after the current request completes, false if the profiler should run until stopped (default is false).</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Boolean indicating success in creating the new profiler.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_profiler_stop">Stop</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">Stop</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Boolean</span> <span class="PrototypeArgumentName">justThisRequest</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Stops the current OScript profiler for the calling thread.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">justThisRequest</span><span class="description"><p>True if the profiler should stop profiling only until the current request completes, false if the profiler should completely stop profiling (default is false).</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>True if an active profiler was stopped, false if there was no profiler running.</p></div>
+							</div>
+						</div>
+				</div>
+		
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2018 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+
+
+
+</div>
+	</div>						
+						
+
+</div>
+
+</body></html>

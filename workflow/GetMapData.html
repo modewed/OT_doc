@@ -1,0 +1,256 @@
+<HTML>
+<HEAD>
+<TITLE>GetMapData()</TITLE>
+
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<script language="JavaScript">updateParentHeader( 'Code' );</script>
+<script language="JavaScript">includeContentContainer( 'wfbuilder', true );</script>
+<p>
+
+
+<p class="title">GetMapData()</p>
+<p class="body">
+This code sample describes how to display the Step Definition page for this step
+type when the creator of a workflow map edits the step in the Workflow Designer.</p>
+<pre class="code">
+	function Assoc GetMapData( \
+		Object prgCtx, \
+		Integer mapID, \
+		Integer taskID, \
+		Record mapRec, \
+		Record request )
+		Assoc a
+		Assoc paneData
+		Assoc performerInfo
+		Assoc retVal
+		Assoc tabPaneInfo
+		Dynamic tmp
+		Integer whichTab
+		List tabList
+		Object obj
+		Record p
+		String label
+
+		Boolean knownUser = False
+		Integer i = 1
+		Record taskInfo = mapRec.TASKS[ taskID ]
+		String gif = 'guy.gif'
+		String name = [WebWFP_HTMLLabel.User]
+		String objName = .OSName
+
+		whichTab = ( RecArray.IsColumn( request, 'PaneIndex' ) ) ? \
+		Str.StringToInteger( request.PaneIndex ) : 1
+		
+		//Specify the commonedittask.html file as the HTML file to
+		//display when the creator of a workflow map edits a custom
+		//display step in the Workflow Designer. Specify the location of
+		//the commonedittask.html file (that is, the webwfp module).
+
+		retVal.HTMLFile = &quot;commonedittask.html&quot;
+		retVal.ModuleName = 'webwfp'
+
+		//Create an Assoc named retVal.Data and populate it with the step
+		//and map information, including the ID of the workflow map, the
+		//ID of the step, the URL of the next page to display, and the
+		//header information for the step.
+
+		retVal.Data = Assoc.CreateAssoc()
+		retVal.Data.MapID = mapID
+		retVal.Data.TaskID = taskID
+		retVal.Data.NextURL = request.NextURL
+		retVal.Data.HeaderArgs = $WebWork.WFPkg.GetHeaderTypeArgs( \
+		'PAINT', $WebWork.WFPkg.GetMapName( prgCtx, mapID, \
+		mapRec ) )
+
+		retVal.Data.HeaderLabel = [WebWFP_HTMLLabel.StartStepDefinition]
+		
+		//Create an Assoc named tmp that stores all of the data required
+		//to paint the first tab that appears when the creator of a
+		//workflow map edits the custom display step in the Workflow
+		//Painter (that is, the General tab).
+
+		tmp = Assoc.CreateAssoc()
+		tmp.Label = [WebWork_HTMLLabel.General]
+		tmp.URL = $WebWork.WFPkg.SetPaneIndexArg( \
+		$WebDSP.HTMLPkg.ArgsToURL( request ), i )
+		tmp.HelpKey = objName
+		tmp.Active = FALSE
+
+		//This step type uses the commonedittask.html file. This HTML
+		//file expects to be passed a list of tab names, along with a
+		//list of the data to be displayed on each tab. TabList is a list
+		//of Assocs that identifies each tab to be displayed. There is
+		//another list of Assocs that lists the panes to be displayed
+		//with each tab. This second list of Assocs contains the HTML
+		//information and all other information that the pane needs to
+		//draw itself.
+
+		tabPaneInfo.TabList = { tmp }
+		
+		a = Assoc.CreateAssoc()
+		a.TaskInfo = taskInfo
+		a.MapID = mapID
+		a.TaskID = taskID - 1
+		a.NextURL = request.NextURL
+
+		//Retrieves the name of the performer of the step and a .gif file
+		//that represents the performer type (that is, a user or a
+		//group). If the step is assigned to the initiator of the
+		//workflow, then &gt;Initiator&lt; is returned as the performer's name.
+
+		if ( IsDefined( taskInfo.PERFORMERID ) )
+			if ( taskInfo.PERFORMERID == 0 )
+				name = [WebWFP_Label.LtInitiatorGt]
+			else
+				tmp = UAPI.GetByID( prgCtx.USession().fSession, \
+				taskInfo.PERFORMERID )
+				if ( !IsError( tmp ) )
+					knownUser = True
+					name = tmp[ 1 ].NAME
+					if ( tmp[ 1 ].TYPE != UAPI.USER )
+						gif = '2-guys.gif'
+					end
+				end
+			end
+		end
+		if ( gif == '2-guys.gif' )
+			a.Gif = '16group.gif'
+		else
+			a.Gif = '16user.gif'
+		end
+
+		performerInfo.Name = name
+		performerInfo.Gif = gif
+		performerInfo.KnownUser = knownUser
+		performerInfo.ID = taskInfo.PERFORMERID
+
+		a.PerformerInfo = performerInfo
+
+		//Create an Assoc named tmp that stores the name of your custom
+		//module, the HTML file to display, and the data that appears on
+		//the General tab.
+
+		tmp = Assoc.CreateAssoc()
+		tmp.ModuleName = 'custmod'
+		tmp.HTMLFile = 't_user.html'
+		tmp.Data = a
+
+		//Set the name of the Step Definition page for this step type.
+		//This page is displayed when the creator of a workflow map edits
+		//a custom display step in the Workflow Designer.
+
+		retVal.Data.HeaderLabel = 'Custom Display Step Definition'
+
+		tabPaneInfo.PaneList = { tmp }
+		i += 1
+
+		//Create the Permissions tab that appears on the Custom Display
+		//Step Definition page for this step type.
+
+		tmp = Assoc.CreateAssoc()
+		tmp.Label = [WebWFP_Label.Permissions]
+		tmp.URL = $WebWork.WFPkg.SetPaneIndexArg( \
+		$WebDSP.HTMLPkg.ArgsToURL( request ), i )
+		tmp.HelpKey = objName + &quot;.&quot; + 'Permissions' // do not XLATE
+		tmp.Active = FALSE
+
+		tabPaneInfo.TabList = { @tabPaneInfo.TabList, tmp }
+
+		a = Assoc.CreateAssoc()
+		a.Permissions = taskInfo.USERFLAGS
+
+		//Create an Assoc named tmp that stores the name of your custom
+		//module, the HTML file to display, and the data that appears on
+		//the Permissions tab.
+
+		tmp = Assoc.CreateAssoc()
+		tmp.ModuleName = 'webwfp'
+		tmp.HTMLFile = 't_perms.html'
+		tmp.Data = a
+	
+		tabPaneInfo.PaneList = { @tabPaneInfo.PaneList, tmp }
+		i += 1
+
+		//Set up any data type information that is required for this type
+		//of step.
+
+		for p in mapRec.WORK_PACKAGES
+			obj = $WebWFP.WFPackageSubsystem.GetItem( { p.TYPE, \
+			p.SUBTYPE } )
+
+		if ( IsDefined( obj ) && IsDefined( p.USERDATA ) )
+			a = obj.GetTabInfo( prgCtx, request, p.USERDATA, i )
+			a.Active = FALSE
+			if IsDefined( a.HelpKey )
+				a.HelpKey = objName + &quot;.&quot; + a.HelpKey
+			else
+				a.HelpKey = objName
+			end
+
+			paneData = obj.GetMapData( prgCtx, taskInfo, p.USERDATA )
+			
+			if ( IsDefined( paneData ) )
+				i += 1
+
+				tabPaneInfo.TabList = { @tabPaneInfo.TabList, a }
+				tabPaneInfo.PaneList = { @tabPaneInfo.PaneList, paneData }
+			end
+		end
+	end
+	i = Length( tabPaneInfo.TabList ) + 1
+
+	//List the callback scripts that fire, if applicable.
+	
+	AssoceventInfo
+	List fields = { 'PERFORMERCB', 'READYCB', 'DONECB', 'KILLCB', \
+	'RESURRECTCB' }
+	List events = { [WebWFP_HTMLLabel.AssignStepPerformer], \
+				[WebWFP_HTMLLabel.StepBecomesReady], \
+				[WebWFP_HTMLLabel.StepIsDone], \
+				[WebWFP_HTMLLabel.StepIsKilled], \
+				[WebWFP_HTMLLabel.StepIsResurrected] }
+	eventInfo.Events = events
+	eventInfo.FieldNames = fields
+	eventInfo = $WFMain.WFMapPkg.GetValidEvents( prgCtx, eventInfo )
+
+	if ( eventInfo.NumberOfEvents > 0 )
+		tmp = Assoc.CreateAssoc()
+		tmp.Label = [WebWFP_HTMLLabel.EventScripts]
+		tmp.URL = $WebWork.WFPkg.SetPaneIndexArg( \
+		$WebDSP.HTMLPkg.ArgsToURL( request ), i )
+		tmp.HelpKey = objName + &quot;.&quot; + 'EventScripts'
+		tmp.Active = FALSE
+		tabPaneInfo.TabList = { @tabPaneInfo.TabList, tmp }
+		a = Assoc.CreateAssoc()
+		a.EventInfo = eventInfo
+		a.DataRec = taskInfo
+		tmp = Assoc.CreateAssoc()
+		tmp.ModuleName = 'webwfp'
+		tmp.HTMLFile = 't_events.html'
+		tmp.Data = a
+		tabPaneInfo.PaneList = { @tabPaneInfo.PaneList, tmp }
+	end
+
+	//Store the pane information for the tabs in the data Assoc. Then
+	//set the active tab. By default, the active tab is 1 (or
+	//whichever tab was originally passed into the script).
+
+	if ( ( whichTab &gt; 2 ) || ( whichTab > Length( \
+	tabPaneInfo.TabList ) ) )
+		whichTab = 1
+	end
+
+	tabPaneInfo.TabList[ whichTab ].Active = True
+	retVal.Data.TabInfo = tabPaneInfo
+	retVal.Data.Tab = whichTab
+	return( retVal )
+end</pre>
+
+<script language="JavaScript">IncludeFooter();</script>
+</body>
+</html>

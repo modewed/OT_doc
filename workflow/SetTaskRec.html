@@ -1,0 +1,120 @@
+<HTML>
+<HEAD>
+<TITLE>SetTaskRecFromMapTask()</TITLE>
+
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<script language="JavaScript">updateParentHeader( 'Code' );</script>
+<script language="JavaScript">includeContentContainer( 'wfbuilder', true );</script>
+<p>
+
+
+<p class="title">SetTaskRecFromMapTask()</p>
+<p class="body">This code sample describes how to convert a custom display step that has been
+prepared for initiation to a workflow map definition.</p>
+<pre class="code">
+	Function Void SetTaskRecFromMapTask( \
+		WAPIMAPTASK step, \
+		Record r, \
+		Record taskData )
+
+		List cbInfo
+
+		Dynamic data = step.pUserData
+		Object const = $WFMain.WFConst
+		Integer groupFlag = const.kWFGroupStandard
+
+		//Convert the values stored in the WAPIMAPTASK to the
+		//corresponding fields in the map definition step.
+		
+		r.TYPE = data.TYPE
+		r.SUBTYPE = data.SUBTYPE
+		r.USERFLAGS = data.PERMFLAGS
+		r.SUBMAPID = step.pSubMapID
+		r.PERFORMERID = taskData.WORK.SUBWORKTASK_PERFORMERID
+		r.READYCB = step.pReadyCB
+
+		//Remove the Done callback script.
+		
+		r.DONECB = step.pDoneCB
+		r.DONECB = $WFMain.WFMapPkg.RemoveCBInfoType( r.DONECB, \
+		const.kCBSetTaskDoneData )
+		r.KILLCB = step.pKillCB
+
+		//Remove the Performer callback script.
+		
+		r.PERFORMERCB = step.pPerformerCB
+		r.PERFORMERCB = $WFMain.WFMapPkg.RemoveCBInfoType( \
+		r.PERFORMERCB, const.kCBSetGrpStepPerformer )
+
+		//If present, remove the callback script that assigns the
+		//custom display step to the initiator of the workflow.
+
+		r.PERFORMERCB = $WFMain.WFMapPkg.RemoveCBInfoType( \
+		r.PERFORMERCB, const.kCBGetInitiator )
+		r.CONDITIONCB = step.pConditionCB
+
+		r.FORM = step.pForm
+		r.PAINTER = step.pPainter
+		r.STARTDATE = step.pStartDate
+		r.DUEDURATION = step.pDueDuration
+		r.DUEDATE = step.pDueDate
+		r.DUETIME = step.pDueTime
+		r.FLAGS = step.pFlags
+		r.TITLE = taskData.WORK.SUBWORKTASK_TITLE
+		r.DESCRIPTION = step.pDescription
+		r.INSTRUCTIONS = step.pInstructions
+		r.PRIORITY = step.pPriority
+
+		//Walk through the Submap callback scripts and search for a
+		//callback script that expands group members. If this type of
+		//callback script is found, determine whether the callback script
+		//expands the group and its subgroups or whether the callback
+		//script expands only the first level of group members.
+
+		r.SUBMAPIDCB = step.pSubMapIdCB
+		for cbInfo in r.SUBMAPIDCB
+			if ( cbInfo[ 1 ] == const.kCBExpandGroup )
+				groupFlag = cbInfo[ 2 ].Flag
+				break
+			end
+		end
+
+		//Remove the callback script that expands group members and store
+		//the expand group flag value in the appropriate field of the
+		//r. EXATTS Assoc.
+
+		r.SUBMAPIDCB = $WFMain.WFMapPkg.RemoveCBInfoType( \
+		r.SUBMAPIDCB, const.kCBExpandGroup )
+		r.EXATTS = Assoc.CreateAssoc( Assoc.NotSetValue() )
+		r.EXATTS.GroupFlags = groupFlag
+
+		//Remove the callback scripts that were added to the Step Becomes
+		//Ready or Step Is Done workflow events.
+
+		for cbInfo in r.DONECB
+			if ( cbInfo[ 1 ] == 500 )
+				r.EXATTS.CustTaskScript = cbInfo[ 2 ]
+				r.DONECB = $WFMain.WFMapPkg.RemoveCBInfoType( r.DONECB, \
+				500 )
+				break
+			end	
+		end
+		
+		for cbInfo in r.READYCB
+			if ( cbInfo[ 1 ] == 500 )
+				r.EXATTS.CustTaskScript = cbInfo[ 2 ]
+				r.READYCB = $WFMain.WFMapPkg.RemoveCBInfoType( \
+				r.READYCB, 500 )
+				break
+			end
+		end
+	end</pre>
+
+<script language="JavaScript">IncludeFooter();</script>
+</body>
+</html>

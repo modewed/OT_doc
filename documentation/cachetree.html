@@ -1,0 +1,382 @@
+
+<meta charset="UTF-8">
+<html>
+<head><title>Class: CacheTree</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../syntax.css" type="text/css">
+<link rel="stylesheet" href="builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td  align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody></table>
+
+<div id="document">
+	
+<div class="sidebar_container">
+		
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink"><a href="assoc.html">Assoc</a></div>
+				<div class="packagelink"><a href="boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="builder.html">Builder</a></div>
+				<div class="packagelink"><a href="bytes.html">Bytes</a></div>
+				<div class="packagelink"><a href="capi.html">CAPI</a></div>
+				<div class="packagelink"><a href="capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink curPage">CacheTree</div>
+				<div class="packagelink"><a href="compiler.html">Compiler</a></div>
+				<div class="packagelink"><a href="core.html">Core</a></div>
+				<div class="packagelink"><a href="dapi.html">DAPI</a></div>
+				<div class="packagelink"><a href="dapinode.html">DAPINODE</a></div>
+				<div class="packagelink"><a href="dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink"><a href="dapiversion.html">DAPIVERSION</a></div>
+				<div class="packagelink"><a href="domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="domcomment.html">DOMComment</a></div>
+				<div class="packagelink"><a href="domdocument.html">DOMDocument</a></div>
+				<div class="packagelink"><a href="domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink"><a href="domelement.html">DOMElement</a></div>
+				<div class="packagelink"><a href="domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink"><a href="domnamednodemap.html">DOMNamedNodeMap</a></div>
+				<div class="packagelink"><a href="domnode.html">DOMNode</a></div>
+				<div class="packagelink"><a href="domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="domtext.html">DOMText</a></div>
+				<div class="packagelink"><a href="date.html">Date</a></div>
+				<div class="packagelink"><a href="dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="env.html">Env</a></div>
+				<div class="packagelink"><a href="error.html">Error</a></div>
+				<div class="packagelink"><a href="file.html">File</a></div>
+				<div class="packagelink"><a href="filecopy.html">FileCopy</a></div>
+				<div class="packagelink"><a href="fileprefs.html">Fileprefs</a></div>
+				<div class="packagelink"><a href="frame.html">Frame</a></div>
+				<div class="packagelink"><a href="global.html">Global</a></div>
+				<div class="packagelink"><a href="integer.html">Integer</a></div>
+				<div class="packagelink"><a href="javaobject.html">JavaObject</a></div>
+				<div class="packagelink"><a href="language.html">Language</a></div>
+				<div class="packagelink"><a href="license.html">License</a></div>
+				<div class="packagelink"><a href="list.html">List</a></div>
+				<div class="packagelink"><a href="logging.html">Logging</a></div>
+				<div class="packagelink"><a href="long.html">Long</a></div>
+				<div class="packagelink"><a href="mailmessage.html">MailMessage</a></div>
+				<div class="packagelink"><a href="math.html">Math</a></div>
+				<div class="packagelink"><a href="memcached.html">Memcached</a></div>
+				<div class="packagelink"><a href="notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="object.html">Object</a></div>
+				<div class="packagelink"><a href="pop3session.html">POP3Session</a></div>
+				<div class="packagelink"><a href="patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="patfind.html">PatFind</a></div>
+				<div class="packagelink"><a href="pattern.html">Pattern</a></div>
+				<div class="packagelink"><a href="point.html">Point</a></div>
+				<div class="packagelink"><a href="profiler.html">Profiler</a></div>
+				<div class="packagelink"><a href="real.html">Real</a></div>
+				<div class="packagelink"><a href="recarray.html">RecArray</a></div>
+				<div class="packagelink"><a href="record.html">Record</a></div>
+				<div class="packagelink"><a href="regex.html">Regex</a></div>
+				<div class="packagelink"><a href="restclient.html">RestClient</a></div>
+				<div class="packagelink"><a href="saxparser.html">SAXParser</a></div>
+				<div class="packagelink"><a href="smtpsession.html">SMTPSession</a></div>
+				<div class="packagelink"><a href="ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="script.html">Script</a></div>
+				<div class="packagelink"><a href="security.html">Security</a></div>
+				<div class="packagelink"><a href="set.html">Set</a></div>
+				<div class="packagelink"><a href="socket.html">Socket</a></div>
+				<div class="packagelink"><a href="sql.html">Sql</a></div>
+				<div class="packagelink"><a href="sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink"><a href="str.html">Str</a></div>
+				<div class="packagelink"><a href="string.html">String</a></div>
+				<div class="packagelink"><a href="system.html">System</a></div>
+				<div class="packagelink"><a href="uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="void.html">Void</a></div>
+				<div class="packagelink"><a href="wapi.html">WAPI</a></div>
+				<div class="packagelink"><a href="wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink"><a href="web.html">Web</a></div>
+				<div class="packagelink"><a href="xslprocessor.html">XSLProcessor</a></div>
+				<div class="packagelink"><a href="zip.html">Zip</a></div>
+		</div>
+</div>
+
+	<div class="content_container">
+		<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+		<h1>Class: CacheTree</h1><div class="ClassDescription"><p>The CacheTree class is used to maintain a tree of    parent-child relationships with a data value attached to each relationship.    The keys for the parent and child objects are Integer values. A single data    value, of any type, can be associated with each key. The CacheTree can be queried    regarding parent-child relations, such as whether a given key is a descendant or    ancestor of some specified key.</p></div>
+			<h2>Class Attributes</h2>
+			<div class="ClassAttributesShort">
+				
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_cachetree_cachetreetype">CacheTreeType</a></div>
+					<div class="Description"><p>Used to test the type of a Dynamic 
+    value.</p></div>
+				</div>
+				
+			</div>
+
+
+			<h2>Class Methods</h2>
+			<div class="ClassMethodsShort">
+				<div class="Method">
+					<div class="Name"><a href="#cm_cachetree_add" class="IndexMethodName">Add</a>(
+					 CacheTree tree, Integer childKey, Integer parentKey, Dynamic childData )
+					</div>
+					<div class="Description"><p>Creates a new parent-child relationship.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_cachetree_create" class="IndexMethodName">Create</a>(
+					)
+					</div>
+					<div class="Description"><p>Creates an empty CacheTree object.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_cachetree_get" class="IndexMethodName">Get</a>(
+					 CacheTree tree, Integer key )
+					</div>
+					<div class="Description"><p>Returns the data value associated 
+    with the specified key.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_cachetree_isancestor" class="IndexMethodName">IsAncestor</a>(
+					 Dynamic tree, Integer key, Integer testParentKey, Integer testChildKey )
+					</div>
+					<div class="Description"><p>Returns TRUE if the test child key 
+    is an ancestor of the specified key.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_cachetree_isdescendant" class="IndexMethodName">IsDescendant</a>(
+					 Dynamic tree, Integer key, Integer testParentKey, Integer testChildKey )
+					</div>
+					<div class="Description"><p>Returns TRUE if the test child key 
+    is a descendant of the specified key.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_cachetree_parent" class="IndexMethodName">Parent</a>(
+					 CacheTree tree, Integer key )
+					</div>
+					<div class="Description"><p>Returns the parent key for the specified 
+    key.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_cachetree_set" class="IndexMethodName">Set</a>(
+					 CacheTree tree, Integer key, Dynamic data )
+					</div>
+					<div class="Description"><p>Resets the data value maintained for 
+    the specified key.</p></div>
+				</div>
+			</div>
+
+
+				<h2>Class Attributes</h2>
+				<div class="ClassAttributes">
+					
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_cachetree_cachetreetype">CacheTreeType</a></div>
+						<div class="Description"><p>Used to test the type of a Dynamic value.</p></div>
+					</div>
+				
+				</div>
+
+		
+				<h2>Class Methods</h2>
+				<div class="ClassMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_cachetree_add">Add</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">Add</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CacheTree</span> <span class="PrototypeArgumentName">tree</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">childKey</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">parentKey</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">childData</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Creates a new parent-child relationship. Adds 
+    the parent key, <em>parentKey</em>, to the CacheTree 
+    if it is not already present,
+    adds the child Key, <em>childKey</em>, to 
+    the CacheTree if is not already present,
+    and makes sure the child key references the specified parent key. The specified 
+    child data value, <em>childData</em>, is saved along with the child key.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">tree</span><span class="description"><p>The CacheTree to manipulate.</p></span></div>
+											<div class="Parameter"><span class="name">childKey</span><span class="description"><p>The Integer key of the child.</p></span></div>
+											<div class="Parameter"><span class="name">parentKey</span><span class="description"><p>The Integer key of the parent.</p></span></div>
+											<div class="Parameter"><span class="name">childData</span><span class="description"><p>A value of any type to be attached 
+            to the child.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns FALSE.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_cachetree_create">Create</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">CacheTree</span> 
+						<span class="PrototypeselfName">Create</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Creates an empty CacheTree object. </p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An empty CacheTree object.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_cachetree_get">Get</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Dynamic</span> 
+						<span class="PrototypeselfName">Get</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CacheTree</span> <span class="PrototypeArgumentName">tree</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">key</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the data value associated with the specified 
+    key. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">tree</span><span class="description"><p>The CacheTree to manipulate.</p></span></div>
+											<div class="Parameter"><span class="name">key</span><span class="description"><p>The key of the entry whose associated 
+            data value will be returned.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The data value associated with the 
+      specified key, if the specified key is not in the CacheTree Undefined will 
+      be returned.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_cachetree_isancestor">IsAncestor</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">IsAncestor</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">tree</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">key</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">testParentKey</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">testChildKey</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns TRUE if the test child key is an ancestor 
+    of the specified key. The parent key of the child key, <em>testChildKey</em>, must 
+    be specified as <em>testParentKey</em>. </p>
+<p>Returns TRUE if the test child key is an ancestor 
+        of the specified key. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">tree</span><span class="description"><p>The CacheTree.</p></span></div>
+											<div class="Parameter"><span class="name">key</span><span class="description"><p>The Key for which the <em>testChildKey</em>'s
+            ancestry is tested.</p></span></div>
+											<div class="Parameter"><span class="name">testParentKey</span><span class="description"><p>The Parent Key for <em>testChildKey</em>.</p></span></div>
+											<div class="Parameter"><span class="name">testChildKey</span><span class="description"><p>The child key that is tested to determine
+            if it is an ancestor of the specified Key.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p class="MethodDescription">Returns TRUE if the test child key is an ancestor 
+        of the specified key. </p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_cachetree_isdescendant">IsDescendant</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">IsDescendant</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">tree</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">key</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">testParentKey</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">testChildKey</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns TRUE if the test child key is a descendant 
+    of the specified key. The parent key of the child key, testChildKey, must 
+    be specified as testParentKey. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">tree</span><span class="description"><p>The CacheTree.</p></span></div>
+											<div class="Parameter"><span class="name">key</span><span class="description"><p>The key for which 
+            <em>testChildKey</em> may
+            be a descendant.</p></span></div>
+											<div class="Parameter"><span class="name">testParentKey</span><span class="description"><p>The parent key of <em>testChildKey</em>.</p></span></div>
+											<div class="Parameter"><span class="name">testChildKey</span><span class="description"><p>The key which may be a descendant
+            of <em>key</em>.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns TRUE if the test child key 
+      is a descendant of the specified key.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_cachetree_parent">Parent</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Parent</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CacheTree</span> <span class="PrototypeArgumentName">tree</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">key</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the Parent Key for the specified entry. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">tree</span><span class="description"><p>The CacheTree.</p></span></div>
+											<div class="Parameter"><span class="name">key</span><span class="description"><p>The child key whose parent key will 
+            be returned.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The parent key of the specified 
+      key.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_cachetree_set">Set</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">Set</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CacheTree</span> <span class="PrototypeArgumentName">tree</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">key</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">data</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Reset the data value maintained for the specified 
+    key. No action is performed if the specified key does not exist.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">tree</span><span class="description"><p>The CacheTree to manipulate.</p></span></div>
+											<div class="Parameter"><span class="name">key</span><span class="description"><p>The key to which the data value
+            is associated.</p></span></div>
+											<div class="Parameter"><span class="name">data</span><span class="description"><p>The new data value to be associated
+            with the specified key.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>TRUE if the specified key was in 
+      the CacheTree, otherwise FALSE.</p></div>
+							</div>
+						</div>
+				</div>
+		
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2018 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+
+
+
+</div>
+	</div>						
+						
+
+</div>
+
+</body></html>

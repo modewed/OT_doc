@@ -1,0 +1,558 @@
+
+<meta charset="UTF-8">
+<html>
+<head><title>Class: Language</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../syntax.css" type="text/css">
+<link rel="stylesheet" href="builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td  align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody></table>
+
+<div id="document">
+	
+<div class="sidebar_container">
+		
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink"><a href="assoc.html">Assoc</a></div>
+				<div class="packagelink"><a href="boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="builder.html">Builder</a></div>
+				<div class="packagelink"><a href="bytes.html">Bytes</a></div>
+				<div class="packagelink"><a href="capi.html">CAPI</a></div>
+				<div class="packagelink"><a href="capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink"><a href="cachetree.html">CacheTree</a></div>
+				<div class="packagelink"><a href="compiler.html">Compiler</a></div>
+				<div class="packagelink"><a href="core.html">Core</a></div>
+				<div class="packagelink"><a href="dapi.html">DAPI</a></div>
+				<div class="packagelink"><a href="dapinode.html">DAPINODE</a></div>
+				<div class="packagelink"><a href="dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink"><a href="dapiversion.html">DAPIVERSION</a></div>
+				<div class="packagelink"><a href="domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="domcomment.html">DOMComment</a></div>
+				<div class="packagelink"><a href="domdocument.html">DOMDocument</a></div>
+				<div class="packagelink"><a href="domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink"><a href="domelement.html">DOMElement</a></div>
+				<div class="packagelink"><a href="domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink"><a href="domnamednodemap.html">DOMNamedNodeMap</a></div>
+				<div class="packagelink"><a href="domnode.html">DOMNode</a></div>
+				<div class="packagelink"><a href="domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="domtext.html">DOMText</a></div>
+				<div class="packagelink"><a href="date.html">Date</a></div>
+				<div class="packagelink"><a href="dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="env.html">Env</a></div>
+				<div class="packagelink"><a href="error.html">Error</a></div>
+				<div class="packagelink"><a href="file.html">File</a></div>
+				<div class="packagelink"><a href="filecopy.html">FileCopy</a></div>
+				<div class="packagelink"><a href="fileprefs.html">Fileprefs</a></div>
+				<div class="packagelink"><a href="frame.html">Frame</a></div>
+				<div class="packagelink"><a href="global.html">Global</a></div>
+				<div class="packagelink"><a href="integer.html">Integer</a></div>
+				<div class="packagelink"><a href="javaobject.html">JavaObject</a></div>
+				<div class="packagelink curPage">Language</div>
+				<div class="packagelink"><a href="license.html">License</a></div>
+				<div class="packagelink"><a href="list.html">List</a></div>
+				<div class="packagelink"><a href="logging.html">Logging</a></div>
+				<div class="packagelink"><a href="long.html">Long</a></div>
+				<div class="packagelink"><a href="mailmessage.html">MailMessage</a></div>
+				<div class="packagelink"><a href="math.html">Math</a></div>
+				<div class="packagelink"><a href="memcached.html">Memcached</a></div>
+				<div class="packagelink"><a href="notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="object.html">Object</a></div>
+				<div class="packagelink"><a href="pop3session.html">POP3Session</a></div>
+				<div class="packagelink"><a href="patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="patfind.html">PatFind</a></div>
+				<div class="packagelink"><a href="pattern.html">Pattern</a></div>
+				<div class="packagelink"><a href="point.html">Point</a></div>
+				<div class="packagelink"><a href="profiler.html">Profiler</a></div>
+				<div class="packagelink"><a href="real.html">Real</a></div>
+				<div class="packagelink"><a href="recarray.html">RecArray</a></div>
+				<div class="packagelink"><a href="record.html">Record</a></div>
+				<div class="packagelink"><a href="regex.html">Regex</a></div>
+				<div class="packagelink"><a href="restclient.html">RestClient</a></div>
+				<div class="packagelink"><a href="saxparser.html">SAXParser</a></div>
+				<div class="packagelink"><a href="smtpsession.html">SMTPSession</a></div>
+				<div class="packagelink"><a href="ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="script.html">Script</a></div>
+				<div class="packagelink"><a href="security.html">Security</a></div>
+				<div class="packagelink"><a href="set.html">Set</a></div>
+				<div class="packagelink"><a href="socket.html">Socket</a></div>
+				<div class="packagelink"><a href="sql.html">Sql</a></div>
+				<div class="packagelink"><a href="sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink"><a href="str.html">Str</a></div>
+				<div class="packagelink"><a href="string.html">String</a></div>
+				<div class="packagelink"><a href="system.html">System</a></div>
+				<div class="packagelink"><a href="uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="void.html">Void</a></div>
+				<div class="packagelink"><a href="wapi.html">WAPI</a></div>
+				<div class="packagelink"><a href="wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink"><a href="web.html">Web</a></div>
+				<div class="packagelink"><a href="xslprocessor.html">XSLProcessor</a></div>
+				<div class="packagelink"><a href="zip.html">Zip</a></div>
+		</div>
+</div>
+
+	<div class="content_container">
+		<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+		<h1>Class: Language</h1><div class="ClassDescription"><p>This API will allow a developer to get/set language information for Content Server.</p></div>
+			<h2>Class Attributes</h2>
+			<div class="ClassAttributesShort">
+				
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_language_bad_table_format">BAD_TABLE_FORMAT</a></div>
+					<div class="Description"><p>The pMultilingual table attribute is not in the expected format.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_language_disabled">DISABLED</a></div>
+					<div class="Description"><p>The language is disabled.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_language_empty">EMPTY</a></div>
+					<div class="Description"><p>The language name cannot be empty.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_language_empty_local">EMPTY_LOCAL</a></div>
+					<div class="Description"><p>The local language name cannot be empty.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_language_empty_value">EMPTY_VALUE</a></div>
+					<div class="Description"><p>The value cannot be empty.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_language_error">ERROR</a></div>
+					<div class="Description"><p>Unknown error constant .</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_language_invalid">INVALID</a></div>
+					<div class="Description"><p>The language is invalid.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_language_invalid_assoc">INVALID_ASSOC</a></div>
+					<div class="Description"><p>The name/language assoc is invalid.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_language_ok">OK</a></div>
+					<div class="Description"><p>Success return constant.</p></div>
+				</div>
+				
+			</div>
+
+
+			<h2>Class Methods</h2>
+			<div class="ClassMethodsShort">
+				<div class="Method">
+					<div class="Name"><a href="#cm_language_deletelanguage" class="IndexMethodName">DeleteLanguage</a>(
+					 CAPILOGIN login, String languageCode )
+					</div>
+					<div class="Description"><p>Removes a language from the pool of available metadata languages.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_language_determinecorelanguagecode" class="IndexMethodName">DetermineCoreLanguageCode</a>(
+					 CAPILOGIN login, Assoc values )
+					</div>
+					<div class="Description"><p>Determine the language code for the core value (based on current language configuration) from the data given.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_language_determinecorevalue" class="IndexMethodName">DetermineCoreValue</a>(
+					 CAPILOGIN login, Assoc values )
+					</div>
+					<div class="Description"><p>Determine the core value (based on current language configuration) from the data given.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_language_disablelanguage" class="IndexMethodName">DisableLanguage</a>(
+					 CAPILOGIN login, String languageCode )
+					</div>
+					<div class="Description"><p>Mark the given metadata language as disabled.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_language_enablelanguage" class="IndexMethodName">EnableLanguage</a>(
+					 CAPILOGIN login, String languageCode )
+					</div>
+					<div class="Description"><p>Mark the given metadata language as enabled.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_language_getdefaultlanguage" class="IndexMethodName">GetDefaultLanguage</a>(
+					 CAPILOGIN login )
+					</div>
+					<div class="Description"><p>Gets the default metadata language code.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_language_getenabledlanguages" class="IndexMethodName">GetEnabledLanguages</a>(
+					 CAPICONNECT connection )
+					</div>
+					<div class="Description"><p>Gets the list of enabled metadata languages.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_language_getsystemlanguages" class="IndexMethodName">GetSystemLanguages</a>(
+					 CAPICONNECT connection )
+					</div>
+					<div class="Description"><p>Gets the master list of languages defined in Content Server.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_language_insertlanguage" class="IndexMethodName">InsertLanguage</a>(
+					 CAPILOGIN login, String languageCode, Boolean enabled )
+					</div>
+					<div class="Description"><p>Adds a language to the pool of available metadata languages.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_language_islanguageenabled" class="IndexMethodName">IsLanguageEnabled</a>(
+					 CAPICONNECT connection, String languageCode )
+					</div>
+					<div class="Description"><p>Checks if the given language code is currently enabled.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_language_renamelanguage" class="IndexMethodName">RenameLanguage</a>(
+					 CAPICONNECT connect, String languageCode )
+					</div>
+					<div class="Description"><p>Update the display labels for the given metadata language code.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_language_setdefaultlanguage" class="IndexMethodName">SetDefaultLanguage</a>(
+					 CAPILOGIN login, String languageCode )
+					</div>
+					<div class="Description"><p>Sets the default metadata language code.</p></div>
+				</div>
+			</div>
+
+
+				<h2>Class Attributes</h2>
+				<div class="ClassAttributes">
+					
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_language_bad_table_format">BAD_TABLE_FORMAT</a></div>
+						<div class="Description"><p>The pMultilingual table attribute is not in the expected format.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_language_disabled">DISABLED</a></div>
+						<div class="Description"><p>The language is disabled.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_language_empty">EMPTY</a></div>
+						<div class="Description"><p>The language name cannot be empty.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_language_empty_local">EMPTY_LOCAL</a></div>
+						<div class="Description"><p>The local language name cannot be empty.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_language_empty_value">EMPTY_VALUE</a></div>
+						<div class="Description"><p>The value cannot be empty.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_language_error">ERROR</a></div>
+						<div class="Description"><p>Unknown error constant.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_language_invalid">INVALID</a></div>
+						<div class="Description"><p>The language is invalid.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_language_invalid_assoc">INVALID_ASSOC</a></div>
+						<div class="Description"><p>The name/language assoc is invalid.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_language_ok">OK</a></div>
+						<div class="Description"><p>Success return constant.</p></div>
+					</div>
+				
+				</div>
+
+		
+				<h2>Class Methods</h2>
+				<div class="ClassMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_language_deletelanguage">DeleteLanguage</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">DeleteLanguage</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPILOGIN</span> <span class="PrototypeArgumentName">login</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">languageCode</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Removes a language from the pool of available metadata languages. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">login</span><span class="description"><p>The login to use to set the data.</p></span></div>
+											<div class="Parameter"><span class="name">languageCode</span><span class="description"><p>The language code to remove.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Language.OK (Integer zero) if successful; <a class="interdoc" href="#ca_language_error">Error</a> otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_language_determinecorelanguagecode">DetermineCoreLanguageCode</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">DetermineCoreLanguageCode</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPILOGIN</span> <span class="PrototypeArgumentName">login</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Assoc</span> <span class="PrototypeArgumentName">values</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Determine the language code for the core value from the data given, based on the current language configuration. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">login</span><span class="description"><p>The login to use to retrieve the data.</p></span></div>
+											<div class="Parameter"><span class="name">values</span><span class="description"><p>A set of values, keyed by their respective language codes.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The core language code as a string if successful; <a class="interdoc" href="#ca_language_error">Error</a> otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_language_determinecorevalue">DetermineCoreValue</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">DetermineCoreValue</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPILOGIN</span> <span class="PrototypeArgumentName">login</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Assoc</span> <span class="PrototypeArgumentName">values</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Determine the core value from the data given, based on the current language configuration. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">login</span><span class="description"><p>The login to use to retrieve the data.</p></span></div>
+											<div class="Parameter"><span class="name">values</span><span class="description"><p>A set of values, keyed by their respective language codes.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The core value as a string if successful; <a class="interdoc" href="#ca_language_error">Error</a> otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_language_disablelanguage">DisableLanguage</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">DisableLanguage</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPILOGIN</span> <span class="PrototypeArgumentName">login</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">languageCode</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Mark the given metadata language as disabled. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">login</span><span class="description"><p>The login to use to set the data.</p></span></div>
+											<div class="Parameter"><span class="name">languageCode</span><span class="description"><p>The language code to disable.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Language.OK (Integer zero) if successful; <a class="interdoc" href="#ca_language_error">Error</a> otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_language_enablelanguage">EnableLanguage</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">EnableLanguage</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPILOGIN</span> <span class="PrototypeArgumentName">login</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">languageCode</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Mark the given metadata language as enabled. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">login</span><span class="description"><p>The login to use to set the data.</p></span></div>
+											<div class="Parameter"><span class="name">languageCode</span><span class="description"><p>The language code to enable.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Language.OK (Integer zero) if successful; <a class="interdoc" href="#ca_language_error">Error</a> otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_language_getdefaultlanguage">GetDefaultLanguage</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">GetDefaultLanguage</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPILOGIN</span> <span class="PrototypeArgumentName">login</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Gets the default metadata language code.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">login</span><span class="description"><p>The login to use to fetch the data.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A <a class="interdoc" href="string.html">String</a> representing the default language code; <a class="interdoc" href="#ca_language_error">Error</a> otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_language_getenabledlanguages">GetEnabledLanguages</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">RecArray</span> 
+						<span class="PrototypeselfName">GetEnabledLanguages</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPICONNECT</span> <span class="PrototypeArgumentName">connection</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Gets the list of enabled metadata languages.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">connection</span><span class="description"><p>The connection to use for the query.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A <a class="interdoc" href="recarray.html">RecArray</a> containing the languages if successful; <a class="interdoc" href="#ca_language_error">Error</a> otherwise.</p>
+<div class="codehilite"><pre>    The format <span class="k">for</span> the <span class="kt">RecArray</span> is as follows<span class="o">:</span>
+</pre></div>
+
+
+<table border="0" cellpadding="2" cellspacing="0" width="40%">
+<tr class="MethodReturnValueDescription">
+<td>LanguageCode</td>
+<td>the language code in the format xx_YYY (for example: en, en_US)</td>
+</tr>
+<tr class="MethodReturnValueDescription">
+<td>LanguageName </td>
+<td>the name of the language that the admin user will see</td>
+</tr>
+<tr class="MethodReturnValueDescription">
+<td>LanguageNameLocal</td>
+<td>the localized name of the language that non-admin users will see</td>
+</tr>
+</table></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_language_getsystemlanguages">GetSystemLanguages</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">RecArray</span> 
+						<span class="PrototypeselfName">GetSystemLanguages</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPICONNECT</span> <span class="PrototypeArgumentName">connection</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Gets the master list of languages defined in Content Server.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">connection</span><span class="description"><p>The connection to use for the query.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A <a class="interdoc" href="recarray.html">RecArray</a> containing the languages if successful.  If the function fails, an error code will be returned.  The format of the RecArray is as follows: </p>
+<table border="0" cellpadding="2" cellspacing="0" width="40%">
+<tr class="MethodReturnValueDescription">
+<td>LanguageCode</td>
+<td>the language code in the format xx_YYY (for example: en, en_US)</td>
+</tr>
+<tr class="MethodReturnValueDescription">
+<td>LanguageName </td>
+<td>the name of the language that the admin user will see</td>
+</tr>
+<tr class="MethodReturnValueDescription">
+<td>LanguageNameLocal</td>
+<td>the localized name of the language that non-admin users will see</td>
+</tr>
+</table></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_language_insertlanguage">InsertLanguage</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">InsertLanguage</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPILOGIN</span> <span class="PrototypeArgumentName">login</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">languageCode</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Boolean</span> <span class="PrototypeArgumentName">enabled</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Adds a language to the pool of available metadata languages. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">login</span><span class="description"><p>The login to use to set the data.</p></span></div>
+											<div class="Parameter"><span class="name">languageCode</span><span class="description"><p>The language code to add.</p></span></div>
+											<div class="Parameter"><span class="name">enabled</span><span class="description"><p>Optional: true if the language should be enabled (default is false).</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Language.OK (Integer zero) if successful; <a class="interdoc" href="#ca_language_error">Error</a> otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_language_islanguageenabled">IsLanguageEnabled</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">IsLanguageEnabled</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPICONNECT</span> <span class="PrototypeArgumentName">connection</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">languageCode</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Checks if the given metadata language is currently enabled. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">connection</span><span class="description"><p>The connection to use to retrieve the data.</p></span></div>
+											<div class="Parameter"><span class="name">languageCode</span><span class="description"><p>The language code to check.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>True if the given language is currently enabled; false if not.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_language_renamelanguage">RenameLanguage</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">RenameLanguage</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPICONNECT</span> <span class="PrototypeArgumentName">connect</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">languageCode</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Adds a language to the pool of available metadata languages. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">connect</span><span class="description"><p>The connection to use to set the data.</p></span></div>
+											<div class="Parameter"><span class="name">languageCode</span><span class="description"><p>The language code to add.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>language.ok (integer zero) if successful; <a class="interdoc" href="#ca_language_error">Error</a> otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_language_setdefaultlanguage">SetDefaultLanguage</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">SetDefaultLanguage</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPILOGIN</span> <span class="PrototypeArgumentName">login</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">languageCode</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sets the default metadata language code.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">login</span><span class="description"><p>The login to use to set the data.</p></span></div>
+											<div class="Parameter"><span class="name">languageCode</span><span class="description"><p>The language code to make default.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Language.OK (Integer zero) if successful; <a class="interdoc" href="#ca_language_error">Error</a> otherwise.</p></div>
+							</div>
+						</div>
+				</div>
+		
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2018 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+
+
+
+</div>
+	</div>						
+						
+
+</div>
+
+</body></html>

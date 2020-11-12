@@ -1,0 +1,1330 @@
+
+<meta charset="UTF-8">
+<html>
+<head><title>Class: Sql</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../syntax.css" type="text/css">
+<link rel="stylesheet" href="builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td  align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody></table>
+
+<div id="document">
+	
+<div class="sidebar_container">
+		
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink"><a href="assoc.html">Assoc</a></div>
+				<div class="packagelink"><a href="boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="builder.html">Builder</a></div>
+				<div class="packagelink"><a href="bytes.html">Bytes</a></div>
+				<div class="packagelink"><a href="capi.html">CAPI</a></div>
+				<div class="packagelink"><a href="capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink"><a href="cachetree.html">CacheTree</a></div>
+				<div class="packagelink"><a href="compiler.html">Compiler</a></div>
+				<div class="packagelink"><a href="core.html">Core</a></div>
+				<div class="packagelink"><a href="dapi.html">DAPI</a></div>
+				<div class="packagelink"><a href="dapinode.html">DAPINODE</a></div>
+				<div class="packagelink"><a href="dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink"><a href="dapiversion.html">DAPIVERSION</a></div>
+				<div class="packagelink"><a href="domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="domcomment.html">DOMComment</a></div>
+				<div class="packagelink"><a href="domdocument.html">DOMDocument</a></div>
+				<div class="packagelink"><a href="domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink"><a href="domelement.html">DOMElement</a></div>
+				<div class="packagelink"><a href="domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink"><a href="domnamednodemap.html">DOMNamedNodeMap</a></div>
+				<div class="packagelink"><a href="domnode.html">DOMNode</a></div>
+				<div class="packagelink"><a href="domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="domtext.html">DOMText</a></div>
+				<div class="packagelink"><a href="date.html">Date</a></div>
+				<div class="packagelink"><a href="dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="env.html">Env</a></div>
+				<div class="packagelink"><a href="error.html">Error</a></div>
+				<div class="packagelink"><a href="file.html">File</a></div>
+				<div class="packagelink"><a href="filecopy.html">FileCopy</a></div>
+				<div class="packagelink"><a href="fileprefs.html">Fileprefs</a></div>
+				<div class="packagelink"><a href="frame.html">Frame</a></div>
+				<div class="packagelink"><a href="global.html">Global</a></div>
+				<div class="packagelink"><a href="integer.html">Integer</a></div>
+				<div class="packagelink"><a href="javaobject.html">JavaObject</a></div>
+				<div class="packagelink"><a href="language.html">Language</a></div>
+				<div class="packagelink"><a href="license.html">License</a></div>
+				<div class="packagelink"><a href="list.html">List</a></div>
+				<div class="packagelink"><a href="logging.html">Logging</a></div>
+				<div class="packagelink"><a href="long.html">Long</a></div>
+				<div class="packagelink"><a href="mailmessage.html">MailMessage</a></div>
+				<div class="packagelink"><a href="math.html">Math</a></div>
+				<div class="packagelink"><a href="memcached.html">Memcached</a></div>
+				<div class="packagelink"><a href="notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="object.html">Object</a></div>
+				<div class="packagelink"><a href="pop3session.html">POP3Session</a></div>
+				<div class="packagelink"><a href="patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="patfind.html">PatFind</a></div>
+				<div class="packagelink"><a href="pattern.html">Pattern</a></div>
+				<div class="packagelink"><a href="point.html">Point</a></div>
+				<div class="packagelink"><a href="profiler.html">Profiler</a></div>
+				<div class="packagelink"><a href="real.html">Real</a></div>
+				<div class="packagelink"><a href="recarray.html">RecArray</a></div>
+				<div class="packagelink"><a href="record.html">Record</a></div>
+				<div class="packagelink"><a href="regex.html">Regex</a></div>
+				<div class="packagelink"><a href="restclient.html">RestClient</a></div>
+				<div class="packagelink"><a href="saxparser.html">SAXParser</a></div>
+				<div class="packagelink"><a href="smtpsession.html">SMTPSession</a></div>
+				<div class="packagelink"><a href="ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="script.html">Script</a></div>
+				<div class="packagelink"><a href="security.html">Security</a></div>
+				<div class="packagelink"><a href="set.html">Set</a></div>
+				<div class="packagelink"><a href="socket.html">Socket</a></div>
+				<div class="packagelink curPage">Sql</div>
+				<div class="packagelink"><a href="sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink"><a href="str.html">Str</a></div>
+				<div class="packagelink"><a href="string.html">String</a></div>
+				<div class="packagelink"><a href="system.html">System</a></div>
+				<div class="packagelink"><a href="uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="void.html">Void</a></div>
+				<div class="packagelink"><a href="wapi.html">WAPI</a></div>
+				<div class="packagelink"><a href="wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink"><a href="web.html">Web</a></div>
+				<div class="packagelink"><a href="xslprocessor.html">XSLProcessor</a></div>
+				<div class="packagelink"><a href="zip.html">Zip</a></div>
+		</div>
+</div>
+
+	<div class="content_container">
+		<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+		<h1>Class: Sql</h1><div class="ClassDescription"><p>The builtin-in functions in the SQL package perform   connection and transaction operations, cursor allocation and management, and   SQL statement operations with generic SQL databases.</p>
+<p>The major functionalities offered by the SQL Package are   the following:</p>
+<ul>
+<li><a class="interdoc" href="#cm_sql_alloc">Alloc()</a> and
+    <a class="interdoc" href="#cm_sql_allocfromconnect">AllocFromConnect()</a> to allocate
+    an SqlConnection, <a class="interdoc" href="#cm_sql_connect">Connect()</a> to connect one,
+    and <a class="interdoc" href="#cm_sql_disconnect">Disconnect()</a> to terminate one.</li>
+<li><a class="interdoc" href="#cm_sql_starttransaction">StartTransaction()</a>
+    and <a class="interdoc" href="#cm_sql_endtransaction">EndTransaction()</a> to designate transactions.</li>
+<li><a class="interdoc" href="#cm_sql_declare">Declare()</a> to declare an
+    SqlCursor, <a class="interdoc" href="#cm_sql_open">Open()</a> to open it,
+    <a class="interdoc" href="#cm_sql_prepare">Prepare()</a> to prepare it after opening, <a class="interdoc" href="#cm_sql_bind">Bind()</a> to bind values to it,
+    <a class="interdoc" href="#cm_sql_fetch">Fetch()</a> to retrieve data from it, <a class="interdoc" href="#cm_sql_cols">Cols()</a> to
+    return the data, and <a class="interdoc" href="#cm_sql_close">Close()</a> to close it. </li>
+<li><a class="interdoc" href="#cm_sql_colnames">ColNames()</a> to return
+    the column names referenced by a cursor and <a class="interdoc" href="#cm_sql_rowcount">RowCount()</a> to return
+    the number of rows affected by an SQL statement in a cursor. </li>
+<li><a class="interdoc" href="#cm_sql_exec">Exec()</a> executes an SQL
+    statement, or <a class="interdoc" href="#cm_sql_execn">ExecN()</a> to execute a parameterized statement. </li>
+<li><a class="interdoc" href="#cm_sql_isselect">IsSelect()</a> to determine
+    if an SQL statement is a select statement, and <a class="interdoc" href="#cm_sql_ncols">NCols()</a> to
+    determine the number of rows it will return. </li>
+<li><a class="interdoc" href="#cm_sql_now">Now()</a> to return the current
+    time and date as defined by the database server.</li>
+<li><a class="interdoc" href="#cm_sql_gettimedata">GetTimeData()</a> and
+    <a class="interdoc" href="#cm_sql_resettimedata">ResetTimeData()</a> to get/reset timing data used for SQL transaction statistics
+Since much of the functionality of the SQL package   is interdependent, a single code sample showing correct usage and sequence of   fundamental package calls is provided below. In the example below, and arbitrary   error handling routine from the DBWizAPI OSpace is being used. Error handling   will, of course, vary depending on implementation and usage.</li>
+</ul>
+<p>Example:</p>
+<div class="codehilite"><pre><span class="c">// Retrieve values from DTree using a &quot;fetching&quot; cursor, and insert values into DTree</span>
+<span class="c">// using a second &quot;inserting&quot; cursor.</span>
+
+<span class="kt">Integer</span>     status
+List        colData
+
+<span class="kt">string</span>      ok <span class="o">=</span> undefined
+SqlCursor   fetchCursor <span class="o">=</span> undefined
+SqlCursor   insertCursor <span class="o">=</span> undefined
+Boolean     done <span class="o">=</span> FALSE
+SqlConnection   sqlCnct <span class="o">=</span> SQL<span class="o">.</span>AllocFromConnect<span class="p">(</span> <span class="o">$</span>Connect <span class="p">)</span>
+
+
+<span class="c">// Start a transaction</span>
+
+status <span class="o">=</span> SQL<span class="o">.</span>StartTransaction<span class="p">(</span> sqlCnct <span class="p">)</span>
+
+<span class="c">//Declare the fetching cursor</span>
+
+fetchCursor <span class="o">=</span> SQL<span class="o">.</span>Declare<span class="p">(</span>\
+        sqlCnct<span class="p">,</span>\
+        <span class="s">&quot;Select OwnerID,DataID,DComment from &quot;</span> <span class="o">+</span>\
+            <span class="s">&quot;DTree &quot;</span> <span class="o">+</span>\
+            <span class="s">&quot;where &quot;</span> <span class="o">+</span>\
+            <span class="s">&quot;( DataType = 0 ) and ( SubType in (130,134) )&quot;</span> <span class="p">)</span>
+
+ok <span class="o">=</span> <span class="o">$</span>DBWizAPI<span class="o">.</span>ConnectPkg<span class="o">.</span>Check<span class="p">(</span> fetchCursor<span class="p">,</span> &quot;<span class="kt">Error</span> Declaring FetchCursor<span class="p">]</span> <span class="p">)</span>
+
+<span class="k">if</span> IsDefined<span class="p">(</span> ok <span class="p">)</span>
+    fetchCursor <span class="o">=</span> undefined
+<span class="k">end</span>
+
+<span class="k">if</span> IsUndefined<span class="p">(</span> ok <span class="p">)</span>
+
+    <span class="c">// Open the fetching cursor</span>
+
+    status <span class="o">=</span> SQL<span class="o">.</span>Open<span class="p">(</span> fetchCursor <span class="p">)</span>
+
+    ok <span class="o">=</span> <span class="o">$</span>DBWizAPI<span class="o">.</span>ConnectPkg<span class="o">.</span>Check<span class="p">(</span> status<span class="p">,</span> <span class="s">&quot;Error Opening Fetch Cursor&quot;</span> <span class="p">)</span>
+<span class="k">end</span>
+
+<span class="k">if</span> IsUndefined<span class="p">(</span> ok <span class="p">)</span>
+
+    <span class="c">// Prepare the fetching cursor</span>
+
+    status <span class="o">=</span> SQL<span class="o">.</span>Prepare<span class="p">(</span> fetchCursor <span class="p">)</span>
+
+    ok <span class="o">=</span> <span class="o">$</span>DBWizAPI<span class="o">.</span>ConnectPkg<span class="o">.</span>Check<span class="p">(</span> status<span class="p">,</span> <span class="s">&quot;Error Preparing Fetch Cursor&quot;</span> <span class="p">)</span>
+<span class="k">end</span>
+
+<span class="k">if</span> IsUndefined<span class="p">(</span> ok <span class="p">)</span>
+
+    <span class="c">// Execute the fetching cursor</span>
+
+    status <span class="o">=</span> SQL<span class="o">.</span>Execute<span class="p">(</span> fetchCursor <span class="p">)</span>
+
+    ok <span class="o">=</span> <span class="o">$</span>DBWizAPI<span class="o">.</span>ConnectPkg<span class="o">.</span>Check<span class="p">(</span> status<span class="p">,</span> <span class="s">&quot;Error Executing Fetch Cursor&quot;</span> <span class="p">)</span>
+<span class="k">end</span>
+
+<span class="k">if</span> IsUndefined<span class="p">(</span> ok <span class="p">)</span>
+
+    <span class="c">// Declare the insert cursor (note the value to be bound at a future point)</span>
+
+    insertCursor <span class="o">=</span> SQL<span class="o">.</span>Declare<span class="p">(</span> sqlCnct<span class="p">,</span> <span class="s">&quot;Insert into DiscussionText values ( :A1, :A2, :A3 )&quot;</span> <span class="p">)</span>
+
+    ok <span class="o">=</span> <span class="o">$</span>DBWizAPI<span class="o">.</span>ConnectPkg<span class="o">.</span>Check<span class="p">(</span> insertCursor<span class="p">,</span> <span class="s">&quot;Error Declaring Insert Cursor&quot;</span> <span class="p">)</span>
+
+    <span class="k">if</span> IsDefined<span class="p">(</span> ok <span class="p">)</span>
+        insertCursor <span class="o">=</span> undefined
+    <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="k">if</span> IsUndefined<span class="p">(</span> ok <span class="p">)</span>
+
+    <span class="c">// Open the insert cursor</span>
+
+    status <span class="o">=</span> SQL<span class="o">.</span>Open<span class="p">(</span> insertCursor <span class="p">)</span>
+
+    ok <span class="o">=</span> <span class="o">$</span>DBWizAPI<span class="o">.</span>ConnectPkg<span class="o">.</span>Check<span class="p">(</span> status<span class="p">,</span> <span class="s">&quot;Error Opening Insert Cursor&quot;</span> <span class="p">)</span>
+<span class="k">end</span>
+
+<span class="k">if</span> IsUndefined<span class="p">(</span> ok <span class="p">)</span>
+
+    <span class="c">// Prepare the insert cursor</span>
+
+    status <span class="o">=</span> SQL<span class="o">.</span>Prepare<span class="p">(</span> insertCursor <span class="p">)</span>
+
+    ok <span class="o">=</span> <span class="o">$</span>DBWizAPI<span class="o">.</span>ConnectPkg<span class="o">.</span>Check<span class="p">(</span> status<span class="p">,</span> <span class="s">&quot;Error Preparing Insert Cursor&quot;</span> <span class="p">)</span>
+<span class="k">end</span>
+
+<span class="k">while</span> ok <span class="o">&amp;&amp;</span> <span class="o">!</span>done
+
+    <span class="c">// Fetch results using the fetch cursor</span>
+
+    status <span class="o">=</span> SQL<span class="o">.</span>Fetch<span class="p">(</span> fetchCursor <span class="p">)</span>
+
+    <span class="k">if</span> IsError<span class="p">(</span> status <span class="p">)</span>
+        done <span class="o">=</span> TRUE
+    <span class="k">else</span>
+
+        <span class="c">// Retrieve column data from the fetching cursor</span>
+
+        colData <span class="o">=</span> SQL<span class="o">.</span>Cols<span class="p">(</span> fetchCursor <span class="p">)</span>
+
+        <span class="k">if</span> IsDefined<span class="p">(</span> coldata<span class="p">[</span> <span class="m">3</span> <span class="p">]</span> <span class="p">)</span>
+
+            <span class="c">// Bind the values retrieved by the fetching cursor into the</span>
+            <span class="c">// inserting cursor</span>
+
+            status <span class="o">=</span> SQL<span class="o">.</span>Bind<span class="p">(</span> insertCursor<span class="p">,</span> colData <span class="p">)</span>
+
+            ok <span class="o">=</span> <span class="o">$</span>DBWizAPI<span class="o">.</span>ConnectPkg<span class="o">.</span>Check<span class="p">(</span> status<span class="p">,</span> <span class="s">&quot;Error Binding Values&quot;</span><span class="p">]</span> <span class="p">)</span>
+
+            <span class="k">if</span> IsUndefined<span class="p">(</span> ok <span class="p">)</span>
+
+                <span class="c">// Execute the inserting cursor (whose statement has been bound with values from the</span>
+                <span class="c">// fetching cursor</span>
+
+                status <span class="o">=</span> SQL<span class="o">.</span>Execute<span class="p">(</span> insertCursor <span class="p">)</span>
+                ok <span class="o">=</span> <span class="o">$</span>DBWizAPI<span class="o">.</span>ConnectPkg<span class="o">.</span>Check<span class="p">(</span> status<span class="p">,</span> <span class="s">&quot;Error Executing Insert Cursor&quot;</span> <span class="p">)</span>
+            <span class="k">end</span>
+        <span class="k">end</span>
+    <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="c">// Close the cursors</span>
+
+<span class="k">if</span> IsDefined<span class="p">(</span> fetchCursor <span class="p">)</span>
+    SQL<span class="o">.</span>Close<span class="p">(</span> fetchCursor <span class="p">)</span>
+<span class="k">end</span>
+
+<span class="k">if</span> IsDefined<span class="p">(</span> insertCursor <span class="p">)</span>
+    SQL<span class="o">.</span>Close<span class="p">(</span> insertCursor <span class="p">)</span>
+<span class="k">end</span>
+
+<span class="c">// End the transaction</span>
+
+status <span class="o">=</span> SQL<span class="o">.</span>EndTransaction<span class="p">(</span> sqlCnct<span class="p">,</span> <span class="o">!</span>IsDefined<span class="p">(</span> ok <span class="p">)</span> <span class="p">)</span>
+</pre></div></div>
+			<h2>Class Attributes</h2>
+			<div class="ClassAttributesShort">
+				
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_sql_autocommit">AUTOCOMMIT</a></div>
+					<div class="Description"><p>A commit flag for ODBC.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_sql_cache">CACHE</a></div>
+					<div class="Description"><p>Cache the cursor.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_sql_cachedynamic">CACHEDYNAMIC</a></div>
+					<div class="Description"></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_sql_commit">COMMIT</a></div>
+					<div class="Description"><p>Commit a transaction.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_sql_expect_100s">EXPECT_100S</a></div>
+					<div class="Description"><p>Expect hundreds of rows result from the select.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_sql_expect_10s">EXPECT_10S</a></div>
+					<div class="Description"><p>Expect tens of rows result from the select.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_sql_expect_1s">EXPECT_1S</a></div>
+					<div class="Description"><p>Expect on the order of a single result from the select.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_sql_max_inclause_num">MAX_INCLAUSE_NUM</a></div>
+					<div class="Description"><p>Maximum number of IN clause for a sql statement.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_sql_maxbigint">MAXBIGINT</a></div>
+					<div class="Description"><p>The maximum value of BIGINT.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_sql_maxdataidint">MAXDATAIDINT</a></div>
+					<div class="Description"><p>The maximum value for DataID.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_sql_maxdbigint">MAXDBIGINT</a></div>
+					<div class="Description"></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_sql_maxint">MAXINT</a></div>
+					<div class="Description"><p>The maximum value of INT ( or INTEGER).</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_sql_maxshortint">MAXSHORTINT</a></div>
+					<div class="Description"><p>The maximum value of SMALLINT.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_sql_maxtinyint">MAXTINYINT</a></div>
+					<div class="Description"><p>The maximum value of TINYINT.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_sql_minbigint">MINBIGINT</a></div>
+					<div class="Description"><p>The minimum value of BIGINT.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_sql_mindataidint">MINDATAIDINT</a></div>
+					<div class="Description"><p>The minimum value for DataID.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_sql_mindbigint">MINDBIGINT</a></div>
+					<div class="Description"></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_sql_minint">MININT</a></div>
+					<div class="Description"><p>The minimum value of INT ( or INTEGER).</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_sql_minshortint">MINSHORTINT</a></div>
+					<div class="Description"><p>The minimum value of SMALLINT.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_sql_mintinyint">MINTINYINT</a></div>
+					<div class="Description"><p>The minimum value of TINYINT.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_sql_multiexec">MULTIEXEC</a></div>
+					<div class="Description"></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_sql_nocache">NOCACHE</a></div>
+					<div class="Description"><p>Don't cache the cursor.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_sql_nolog">NOLOG</a></div>
+					<div class="Description"><p>Statement shouldn't be logged.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_sql_notranswarn">NOTRANSWARN</a></div>
+					<div class="Description"><p>Turn off warnings if statement is
+    not in the context of a transaction.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_sql_rollback">ROLLBACK</a></div>
+					<div class="Description"><p>An error returned by SQL.Fetch() to
+    indicate completion and/or passed to SQL.EndTransaction() to rollback a transaction.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_sql_slowmode">SLOWMODE</a></div>
+					<div class="Description"></div>
+				</div>
+				
+			</div>
+
+
+			<h2>Class Methods</h2>
+			<div class="ClassMethodsShort">
+				<div class="Method">
+					<div class="Name"><a href="#cm_sql_alloc" class="IndexMethodName">Alloc</a>(
+					 Integer conType, CAPILOG logObj, CAPIERR errObj, Integer num )
+					</div>
+					<div class="Description"><p>Allocates a connection object.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_sql_allocfromconnect" class="IndexMethodName">AllocFromConnect</a>(
+					 CAPICONNECT connect )
+					</div>
+					<div class="Description"><p>Allocates a connection object from
+    a CAPIConnect</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_sql_bind" class="IndexMethodName">Bind</a>(
+					 SqlCursor cursor, List values )
+					</div>
+					<div class="Description"><p>Binds a list of values to an SqlCursor.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_sql_close" class="IndexMethodName">Close</a>(
+					 SqlCursor cursor )
+					</div>
+					<div class="Description"><p>Closes an SqlCursor.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_sql_colnames" class="IndexMethodName">ColNames</a>(
+					 SqlCursor cursor )
+					</div>
+					<div class="Description"><p>Returns the names of the columns referenced
+    by a cursor.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_sql_cols" class="IndexMethodName">Cols</a>(
+					 SqlCursor cursor )
+					</div>
+					<div class="Description"><p>Returns the data from the last SQL.Fetch()
+    execution.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_sql_connect" class="IndexMethodName">Connect</a>(
+					 SqlConnection connect, String srvName, String dbName, String usrName, String pword )
+					</div>
+					<div class="Description"><p>Connects an allocated connection object
+    to the database.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_sql_databaseversion" class="IndexMethodName">DatabaseVersion</a>(
+					 Dynamic connect )
+					</div>
+					<div class="Description"><p>Returns the database version.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_sql_declare" class="IndexMethodName">Declare</a>(
+					 SqlConnection connect, String stmt, [Integer flags] )
+					</div>
+					<div class="Description"><p>Declares an SqlCursor.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_sql_disconnect" class="IndexMethodName">Disconnect</a>(
+					 SqlConnection connect )
+					</div>
+					<div class="Description"><p>Drops the database connection.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_sql_endtransaction" class="IndexMethodName">EndTransaction</a>(
+					 SqlConnection connect, Dynamic value )
+					</div>
+					<div class="Description"><p>Ends a database transaction, allowing
+    commitment or rollback.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_sql_exec" class="IndexMethodName">Exec</a>(
+					 SqlConnection connect, String stmt, [Dynamic sub<n>] )
+					</div>
+					<div class="Description"><p>Executes an SQL statement.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_sql_execn" class="IndexMethodName">ExecN</a>(
+					 SqlConnection connect, String stmt, RecArray params )
+					</div>
+					<div class="Description"><p>Executes an SQL statement multipled times
+    for a RecArray of parameterized values.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_sql_execute" class="IndexMethodName">Execute</a>(
+					 SqlCursor cursor )
+					</div>
+					<div class="Description"><p>Executes an SqlCursor.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_sql_fetch" class="IndexMethodName">Fetch</a>(
+					 SqlCursor cursor )
+					</div>
+					<div class="Description"><p>Fetches a row of data specified by
+    the cursor.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_sql_getblob" class="IndexMethodName">GetBlob</a>(
+					 SqlConnection connect           , String arg2, Integer arg3, Integer arg4 )
+					</div>
+					<div class="Description"></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_sql_gettimedata" class="IndexMethodName">GetTimeData</a>(
+					 String prefix )
+					</div>
+					<div class="Description"><p>Returns an assoc containing SQL transaction statistics or an error.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_sql_isselect" class="IndexMethodName">IsSelect</a>(
+					 SqlCursor cursor )
+					</div>
+					<div class="Description"><p>Determines whether the cursor contains
+    a select statement.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_sql_ncols" class="IndexMethodName">NCols</a>(
+					 SqlCursor cursor )
+					</div>
+					<div class="Description"><p>Determines the number of columns the
+    SQL statement will return.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_sql_now" class="IndexMethodName">Now</a>(
+					 SqlConnection connect )
+					</div>
+					<div class="Description"><p>Returns the current date and time
+    as defined by the database.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_sql_open" class="IndexMethodName">Open</a>(
+					 SqlCursor cursor )
+					</div>
+					<div class="Description"><p>Opens an SqlCursor.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_sql_prepare" class="IndexMethodName">Prepare</a>(
+					 SqlCursor cursor )
+					</div>
+					<div class="Description"><p>Prepares an SqlCursor.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_sql_putblob" class="IndexMethodName">PutBlob</a>(
+					 SqlConnection connect, String arg2, Integer arg3, Integer arg4 )
+					</div>
+					<div class="Description"></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_sql_resettimedata" class="IndexMethodName">ResetTimeData</a>(
+					)
+					</div>
+					<div class="Description"><p>Resets all timing data used for SQL transaction statistics.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_sql_rowcount" class="IndexMethodName">RowCount</a>(
+					 SqlCursor cursor )
+					</div>
+					<div class="Description"><p>Returns the number of rows affected
+    by the execution of an SQL statement contained in an SqlCursor.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_sql_starttransaction" class="IndexMethodName">StartTransaction</a>(
+					 SqlConnection connect )
+					</div>
+					<div class="Description"><p>Starts a database transaction.</p></div>
+				</div>
+			</div>
+
+
+				<h2>Class Attributes</h2>
+				<div class="ClassAttributes">
+					
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_sql_autocommit">AUTOCOMMIT</a></div>
+						<div class="Description"><p>A commit flag for ODBC.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_sql_cache">CACHE</a></div>
+						<div class="Description"><p>This attribute directs
+  <a class="interdoc" href="#cm_sql_declare">SQL.Declare()</a> to cache the cursor, allowing for
+  rows to be fetched from the database more efficiently.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_sql_cachedynamic">CACHEDYNAMIC</a></div>
+						<div class="Description"><p><span class="Deprecated">Not used</span>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_sql_commit">COMMIT</a></div>
+						<div class="Description"><p>A constant passed to <a class="interdoc" href="#cm_sql_endtransaction">Sql.EndTransaction()</a>
+  indicating a transaction should be committed.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_sql_expect_100s">EXPECT_100S</a></div>
+						<div class="Description"><p>Expect hundreds of rows result from the select.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_sql_expect_10s">EXPECT_10S</a></div>
+						<div class="Description"><p>Expect tens of rows result from the select.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_sql_expect_1s">EXPECT_1S</a></div>
+						<div class="Description"><p>Expect on the order of a single result from the select.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_sql_max_inclause_num">MAX_INCLAUSE_NUM</a></div>
+						<div class="Description"><p>Maximum number of IN clause for a sql statement.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_sql_maxbigint">MAXBIGINT</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_sql_maxdataidint">MAXDATAIDINT</a></div>
+						<div class="Description"><p>The maximum value for DataID:223,372,036,854,775,807.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_sql_maxdbigint">MAXDBIGINT</a></div>
+						<div class="Description"><p>The maximum value of BIGINT:223,372,036,854,775,807.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_sql_maxint">MAXINT</a></div>
+						<div class="Description"><p>The maximum value of INT:223,372,036,854,775,807.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_sql_maxshortint">MAXSHORTINT</a></div>
+						<div class="Description"><p>The maximum value of SMALLINT:2,147,483,647.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_sql_maxtinyint">MAXTINYINT</a></div>
+						<div class="Description"><p>The maximum value of SMALLINT:255.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_sql_minbigint">MINBIGINT</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_sql_mindataidint">MINDATAIDINT</a></div>
+						<div class="Description"><p>The minimum value for DataID:-223,372,036,854,775,808.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_sql_mindbigint">MINDBIGINT</a></div>
+						<div class="Description"><p>The minimum value of BIGINT:-223,372,036,854,775,808.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_sql_minint">MININT</a></div>
+						<div class="Description"><p>The minimum value of INT:-223,372,036,854,775,808.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_sql_minshortint">MINSHORTINT</a></div>
+						<div class="Description"><p>The minimum value of SMALLINT:-2,147,483,648.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_sql_mintinyint">MINTINYINT</a></div>
+						<div class="Description"><p>The minimum value of SMALLINT:0.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_sql_multiexec">MULTIEXEC</a></div>
+						<div class="Description"><p><span class="Deprecated">Not used</span>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_sql_nocache">NOCACHE</a></div>
+						<div class="Description"><p>Directs <a class="interdoc" href="#cm_sql_declare">SQL.Declare()</a> to
+  not cache the cursor.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_sql_nolog">NOLOG</a></div>
+						<div class="Description"><p>Directs <a class="interdoc" href="#cm_sql_declare">SQL.Declare()</a> to turn off
+  statement logging within the cursor. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_sql_notranswarn">NOTRANSWARN</a></div>
+						<div class="Description"><p>Directs <a class="interdoc" href="#cm_sql_declare">SQL.Declare()</a> to turn
+  off warnings if the cursor is being used outside the context of a transaction.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_sql_rollback">ROLLBACK</a></div>
+						<div class="Description"><p>An error passed to <a class="interdoc" href="#cm_sql_endtransaction">Sql.EndTransaction()</a>
+  indicating a transaction should be rolled back. <a class="interdoc" href="#cm_sql_fetch">SQL.Fetch()</a>
+  also returns <a class="interdoc" href="#ca_sql_rollback">SQL.ROLLBACK</a> to indicated no further data
+  can be fetched.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_sql_slowmode">SLOWMODE</a></div>
+						<div class="Description"><p><span class="Deprecated">Not used</span>.</p></div>
+					</div>
+				
+				</div>
+
+		
+				<h2>Class Methods</h2>
+				<div class="ClassMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_sql_alloc">Alloc</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">SqlConnection</span> 
+						<span class="PrototypeselfName">Alloc</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">conType</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">CAPILOG</span> <span class="PrototypeArgumentName">logObj</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">CAPIERR</span> <span class="PrototypeArgumentName">errObj</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">num</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Allocates an SqlConnection object. This data structure
+    is used to hold information about the database connection.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">conType</span><span class="description"><p>An Integer specifying the connection type. <a class="interdoc" href="capi.html#ca_capi_ct_oracle">CAPI.CT_ORACLE</a> indicates
+              Oracle and <a class="unknown" href="capi.html#_capi_ct_msdblib">CAPI.CT_MSDBLIB</a> indicates
+              MSSQL Server.</p></span></div>
+											<div class="Parameter"><span class="name">logObj</span><span class="description"><p>A CAPILog object for logging transactions.</p></span></div>
+											<div class="Parameter"><span class="name">errObj</span><span class="description"><p>A CAPIErr object for logging errors.</p></span></div>
+											<div class="Parameter"><span class="name">num</span><span class="description"><p>This parameter must be zero.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An allocated <a class="interdoc" href="sqlconnection.html">SqlConnection</a>, otherwise an
+      error.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Remember that Alloc() merely allocates the
+    connection, and that <a class="interdoc" href="#cm_sql_connect">Connect()</a> must be called
+    afterwards to actually connect to the database.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_sql_allocfromconnect">AllocFromConnect</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">SqlConnection</span> 
+						<span class="PrototypeselfName">AllocFromConnect</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPICONNECT</span> <span class="PrototypeArgumentName">connect</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Allocates an SqlConnection object from a
+    CAPICONNECT. This SqlConnection is used to hold information about the
+    database connection and is required for most SQL functions in this
+    package.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">connect</span><span class="description"><p>A CAPIConnect, used to allocate an
+            SqlConnection.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An allocated SqlConnection, or an
+      error.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_sql_bind">Bind</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Bind</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">SqlCursor</span> <span class="PrototypeArgumentName">cursor</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">List</span> <span class="PrototypeArgumentName">values</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Binds a list of Strings, Integers, and/or Dates
+    to parameters in the SQL statement contained in the cursor. This function
+    must be called before the execution and fetching of the cursor, but after
+    <a class="interdoc" href="#cm_sql_prepare">SQL.Prepare()</a> is called. If there are no parameters in
+    the SQL statement, pass an empty list.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">cursor</span><span class="description"><p>The SqlCursor to be bound.</p></span></div>
+											<div class="Parameter"><span class="name">values</span><span class="description"><p>A list of values to bind to the parameters
+            in the SQL statement within the cursor, or an empty list. These values
+            can be Strings, Integers, or Dates.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>0 if successful, Error otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_sql_close">Close</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Close</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">SqlCursor</span> <span class="PrototypeArgumentName">cursor</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Closes the specified SqlCursor after processing
+    is complete.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">cursor</span><span class="description"><p>The SqlCursor to be closed.<img height="0" src="../images/spacer.gif" width="0"><span class="PrototypePunctuation"></span></img></p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>0 if successful, Error otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_sql_colnames">ColNames</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">List</span> 
+						<span class="PrototypeselfName">ColNames</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">SqlCursor</span> <span class="PrototypeArgumentName">cursor</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a List of column names
+  referenced by the SQL statement within the cursor. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">cursor</span><span class="description"><p>The SqlCursor from which
+            column information will be extracted.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A List of column names
+      referenced by the SQL statement within the cursor.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_sql_cols">Cols</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">List</span> 
+						<span class="PrototypeselfName">Cols</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">SqlCursor</span> <span class="PrototypeArgumentName">cursor</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a List of the data from the last cursor fetch.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">cursor</span><span class="description"><p>An SqlCursor.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A List containing the data from
+      the last fetch of the cursor. The list contains one element for each row
+      of data, and the values can be Strings, Integers, and/or Dates.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_sql_connect">Connect</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Connect</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">SqlConnection</span> <span class="PrototypeArgumentName">connect</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">srvName</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">dbName</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">usrName</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">pword</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Connects an allocated SqlConnection to the database.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">connect</span><span class="description"><p>The SqlConnection to be connected.</p></span></div>
+											<div class="Parameter"><span class="name">srvName</span><span class="description"><p>The String name of the server to which
+            the connection is made.</p></span></div>
+											<div class="Parameter"><span class="name">dbName</span><span class="description"><p>The String name of the database to
+            which the connection is made. For an Oracle databases, a NULL string
+            must be used.</p></span></div>
+											<div class="Parameter"><span class="name">usrName</span><span class="description"><p>The String name of the person user
+            being connected.</p></span></div>
+											<div class="Parameter"><span class="name">pword</span><span class="description"><p>The password of the user being connected.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>0 if successful, Error otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_sql_databaseversion">DatabaseVersion</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">DatabaseVersion</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">connect</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the version of the database serer being connected.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">connect</span><span class="description"><p>A valid <a class="interdoc" href="sqlconnection.html">SqlConnection</a> or <a class="interdoc" href="capiconnect.html">CAPIConnect</a> object.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The database version; Error otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_sql_declare">Declare</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">SqlCursor</span> 
+						<span class="PrototypeselfName">Declare</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">SqlConnection</span> <span class="PrototypeArgumentName">connect</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">stmt</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Declares an <a class="interdoc" href="sqlcursor.html">SqlCursor</a> for later use. The statement
+    may contain parameters for binding in the form of ":A1", ":A2",
+    etc. Repeated values must be expressed as separate parameters, so that ":A1"
+    cannot be reused later in the SQL statement even if the bound value
+    is identical in both instances.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">connect</span><span class="description"><p>An SqlConnection.</p></span></div>
+											<div class="Parameter"><span class="name">stmt</span><span class="description"><p>An SQL statement.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>Flag(s) to indicate how the statement
+            and cursor will be handled. <a class="interdoc" href="#ca_sql_cache">SQL.CACHE</a>,
+            <a class="interdoc" href="#ca_sql_nocache">SQL.NOCACHE</a>, <a class="interdoc" href="#ca_sql_nolog">SQL.NOLOG</a>, and
+            <a class="interdoc" href="#ca_sql_notranswarn">SQL.NOTRANSWARN</a> are all valid flags
+            (See Attributes section above for more information on these flags) .</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The declared cursor if successful,
+      Error otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_sql_disconnect">Disconnect</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Disconnect</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">SqlConnection</span> <span class="PrototypeArgumentName">connect</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Drops or disconnects a database connection.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">connect</span><span class="description"><p>An SqlConnection to be dropped.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>0 if successful, Error otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_sql_endtransaction">EndTransaction</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">EndTransaction</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">SqlConnection</span> <span class="PrototypeArgumentName">connect</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">value</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Ends a database transaction, allowing commitment
+    or rollback of the transaction. See also <a class="interdoc" href="#cm_sql_endtransaction">SQL.EndTransaction()</a>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">connect</span><span class="description"><p>An SqlConnection.</p></span></div>
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>A value indicating a commitment or
+            a rollback of the transaction. <a class="interdoc" href="#ca_sql_commit">SQL.COMMIT</a> and
+            <a class="interdoc" href="#ca_sql_rollback">SQL.ROLLBACK</a> are commonly
+            passed. If the value is of type Error, rollback will occur.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>0 if successful, Error otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_sql_exec">Exec</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">RecArray</span> 
+						<span class="PrototypeselfName">Exec</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">SqlConnection</span> <span class="PrototypeArgumentName">connect</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">stmt</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">sub<n></span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Executes an SQL statement.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">connect</span><span class="description"><p>An SqlConnection.</p></span></div>
+											<div class="Parameter"><span class="name">stmt</span><span class="description"><p>An SQL statement. Parameterized values
+            can be included in this statement, with the parameter syntax consisting
+            of a colon followed by alphanumeric characters (":A1", ":A2",
+            etc.). Up to 30 parameters can be passed.</p></span></div>
+											<div class="Parameter"><span class="name">sub<n></span><span class="description"><p>the values of the optional parameters
+            included in the SQL statement. Either all the parameters can be
+            passed in a List for this argument, or they may be passed
+            as arguments, since this is a variable-argument function (like
+            <a class="interdoc" href="str.html#cm_str_format">Str.Format()</a>).<br>
+            Each sub&lt;n&gt; parameter specifies
+            a value to be substituted in the SQL statement for the respective
+            parameter. Values are substituted from left to right, regardless of
+            variable name or parameter characters.</br></p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>For SELECT statements: A RecArray
+      containing the data from the executed SQL statement is returned. For INSERT,
+      UPDATE, or DELETE statements: An Integer indicating the number of rows affected
+      by the executed statement is returned. If the execution of the SQL statement
+      fails, Error is returned.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>If a parameterized statement is executed
+    multiple times for various data, <a class="interdoc" href="#cm_sql_execn">ExecN()</a> should
+    be used instead since it is optimized for such cases.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_sql_execn">ExecN</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">RecArray</span> 
+						<span class="PrototypeselfName">ExecN</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">SqlConnection</span> <span class="PrototypeArgumentName">connect</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">stmt</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">RecArray</span> <span class="PrototypeArgumentName">params</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Executes a parameterized SQL statement multiple times; once for
+  each row in <em>parms</em>, a
+  RecArray of parameter values.  ExecN() may be optimized in some
+  databases to perform better than calling <a class="interdoc" href="#cm_sql_exec">Exec()</a>
+  for each iteration.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">connect</span><span class="description"><p>An SqlConnection.</p></span></div>
+											<div class="Parameter"><span class="name">stmt</span><span class="description"><p>An SQL statement. Parameterized values
+            can be included in this statement, with the parameter syntax consisting
+            of a colon followed by alphanumeric characters (":A1", ":A2",
+            etc.). Up to 30 parameters can be passed.</p></span></div>
+											<div class="Parameter"><span class="name">params</span><span class="description"><p>A RecArray of parameters.
+            The parameterized SQL statement is executed using parameters
+            from each row in the RecArray, in left-to-right column order
+            in a given row.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>For SELECT statements: A RecArray
+      containing the data from the executed SQL statement is returned. For INSERT,
+      UPDATE, or DELETE statements: An Integer indicating the number of rows affected
+      by the executed statement is returned. If the execution of the SQL statement
+      fails, Error is returned.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_sql_execute">Execute</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Execute</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">SqlCursor</span> <span class="PrototypeArgumentName">cursor</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Executes an SqlCursor. This function differs from
+    <a class="interdoc" href="#cm_sql_fetch">SQL.Fetch()</a> in that it is performed once, after the
+    declaration, preparation, and binding of the cursor. All the data that will be
+    obtained from the database by the SQL statement contained in the cursor is retrieved
+    during SQL.Execute(). See also <a class="interdoc" href="#cm_sql_prepare">SQL.Prepare()</a>,
+    <a class="interdoc" href="#cm_sql_bind">SQL.Bind()</a>, and <a class="interdoc" href="#cm_sql_fetch">SQL.Fetch()</a>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">cursor</span><span class="description"><p>An SqlCursor to execute.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>0 if successful, Error otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_sql_fetch">Fetch</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Fetch</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">SqlCursor</span> <span class="PrototypeArgumentName">cursor</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Fetches a row of data based on the specified SqlCursor.
+    After an <a class="interdoc" href="#cm_sql_execute">SQL.Execute()</a> has been performed on a cursor,
+    SQL.Fetch() is used to retrieve the data incrementally. In the case of a cached
+    cursor, rows of data are retrieved in blocks for greater efficiency.
+    See also <a class="interdoc" href="#cm_sql_prepare">SQL.Prepare()</a>, <a class="interdoc" href="#cm_sql_bind">SQL.Bind()</a>,
+    and <a class="interdoc" href="#cm_sql_execute">SQL.Execute()</a>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">cursor</span><span class="description"><p>An SqlCursor upon which the fetch is
+            to be performed.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>0 if successful, Error otherwise.
+      When the <a class="interdoc" href="#ca_sql_rollback">SQL.ROLLBACK</a> is returned, the fetch is complete.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_sql_getblob">GetBlob</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">GetBlob</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">SqlConnection</span> <span class="PrototypeArgumentName">connect           </span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">arg2</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">arg3</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">arg4</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p><span class="InternalUseOnly">Internal use only</span>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">connect           </span><span class="description"><p>An SqlConnection.</p></span></div>
+											<div class="Parameter"><span class="name">arg2</span><span class="description"><p>Internal use only</p></span></div>
+											<div class="Parameter"><span class="name">arg3</span><span class="description"><p>Internal use only</p></span></div>
+											<div class="Parameter"><span class="name">arg4</span><span class="description"><p>Internal use only</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p><span class="InternalUseOnly">Internal use only</span>. </p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_sql_gettimedata">GetTimeData</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Assoc</span> 
+						<span class="PrototypeselfName">GetTimeData</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">prefix</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns an assoc containing SQL transaction statistics or an error. If a prefixString is defined then the assoc keys will have the prefix string prepended.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">prefix</span><span class="description"><p>The string preappended to the Assoc keys.<img height="0" src="../images/spacer.gif" width="0"/></p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p> An assoc containing SQL transaction statistics or an error. If returned, the assoc has the following structure:</p>
+
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="ParameterName" nowrap="" valign="top">Total_SQL_Time_Logged</td>
+<td class="ParameterDescription">Integer</td>
+</tr>
+<tr>
+<td class="ParameterName" nowrap="" valign="top">Total_SQL_Time</td>
+<td class="ParameterDescription">Integer</td>
+</tr>
+<tr>
+<td class="ParameterName" nowrap="" valign="top">Total_Fetch_Time</td>
+<td class="ParameterDescription">Integer</td>
+</tr>
+<tr>
+<td class="ParameterName" nowrap="" valign="top">Total_Execute_Time</td>
+<td class="ParameterDescription">Integer</td>
+</tr>
+<tr>
+<td class="ParameterName" nowrap="" valign="top">Number_of_Select_Statements</td>
+</tr>
+<tr>
+<td class="ParameterName" nowrap="" valign="top">Number_of_Update_Statements</td>
+<td class="ParameterDescription">Integer</td>
+</tr>
+<tr>
+<td class="ParameterName" nowrap="" valign="top">Number_of_Insert_Statements</td>
+<td class="ParameterDescription">Integer</td>
+</tr>
+<tr>
+<td class="ParameterName" nowrap="" valign="top">Number_of_Delete_Statements</td>
+<td class="ParameterDescription">Integer</td>
+</tr>
+<tr>
+<td class="ParameterName" nowrap="" valign="top">Number_of_Other_Statements</td>
+<td class="ParameterDescription">Integer</td>
+</tr>
+<tr>
+<td class="ParameterName" nowrap="" valign="top">Total_SQL_Statements</td>
+<td class="ParameterDescription">Integer</td>
+</tr>
+<tr>
+<td class="ParameterName" nowrap="" valign="top">Number_of_Rows_Fetched</td>
+<td class="ParameterDescription">Integer</td>
+</tr>
+</table></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_sql_isselect">IsSelect</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">IsSelect</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">SqlCursor</span> <span class="PrototypeArgumentName">cursor</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Indicates whether the SQL statement within an
+    SqlCursor is a SELECT statement. The SQL statement must have been parsed with
+    <a class="interdoc" href="#cm_sql_prepare">SQL.Prepare()</a> before this method is called.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">cursor</span><span class="description"><p>The SqlCursor in question.<img height="0" src="../images/spacer.gif" width="0"/></p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>TRUE if the statement is a SELECT,
+      FALSE otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_sql_ncols">NCols</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">NCols</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">SqlCursor</span> <span class="PrototypeArgumentName">cursor</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Determines the number of columns that the SQL
+    statement in the cursor will return.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">cursor</span><span class="description"><p>The SqlCursor in question.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An Integer specifying the number
+      of columns that the SQL statement will return.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_sql_now">Now</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Date</span> 
+						<span class="PrototypeselfName">Now</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">SqlConnection</span> <span class="PrototypeArgumentName">connect</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the current date and time as defined by
+    the database server.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">connect</span><span class="description"><p>An SqlConnection.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The current date and time as
+      defined by the database server.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_sql_open">Open</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Open</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">SqlCursor</span> <span class="PrototypeArgumentName">cursor</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Opens the SqlCursor after it has been declared.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">cursor</span><span class="description"><p>The SqlCursor to be opened.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>0 if successful, Error otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_sql_prepare">Prepare</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Prepare</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">SqlCursor</span> <span class="PrototypeArgumentName">cursor</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Triggers the server to parse the SQL statement
+    within the cursor. The SqlCursor must be parsed before most other methods
+    can be performed with it.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">cursor</span><span class="description"><p>The SqlCursor to be parsed/prepared.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>0 if successful, Error otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_sql_putblob">PutBlob</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Dynamic</span> 
+						<span class="PrototypeselfName">PutBlob</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">SqlConnection</span> <span class="PrototypeArgumentName">connect</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">arg2</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">arg3</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">arg4</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p><span class="InternalUseOnly">Internal use only</span>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">connect</span><span class="description"><p>The SqlConnection.</p></span></div>
+											<div class="Parameter"><span class="name">arg2</span><span class="description"><p><span class="InternalUseOnly">Internal use only</span>.</p></span></div>
+											<div class="Parameter"><span class="name">arg3</span><span class="description"><p><span class="InternalUseOnly">Internal use only</span>.</p></span></div>
+											<div class="Parameter"><span class="name">arg4</span><span class="description"><p><span class="InternalUseOnly">Internal use only</span>.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p><span class="InternalUseOnly">Internal use only</span>.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_sql_resettimedata">ResetTimeData</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Dynamic</span> 
+						<span class="PrototypeselfName">ResetTimeData</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Resets all timing data used for SQL transaction statistics.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>0(zero) if successful; Error otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_sql_rowcount">RowCount</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">RowCount</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">SqlCursor</span> <span class="PrototypeArgumentName">cursor</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Determines the number of rows affected by the
+    execution of an SQL statement defined within an SqlCursor. <a class="interdoc" href="#cm_sql_prepare">SQL.Prepare()</a> must
+    have been called before this method can be used.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">cursor</span><span class="description"><p>The SqlCursor whose affected rows are
+            to be counted.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An Integer specifying the number
+      of rows affected by the SQL statement.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_sql_starttransaction">StartTransaction</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">StartTransaction</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">SqlConnection</span> <span class="PrototypeArgumentName">connect</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Starts a database transaction, allowing multiple
+    SQL statements to be grouped together. Should an error occur during the execution
+    of any statement after the beginning of the transaction and before the
+    <a class="interdoc" href="#cm_sql_endtransaction">SQL.EndTransaction()</a>,
+    all of the intervening statements can be rolled back or canceled.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">connect</span><span class="description"><p>An SqlConnection.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>0 if successful, Error otherwise.</p></div>
+							</div>
+						</div>
+				</div>
+		
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2018 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+
+
+
+</div>
+	</div>						
+						
+
+</div>
+
+</body></html>

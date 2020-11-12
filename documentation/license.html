@@ -1,0 +1,856 @@
+
+<meta charset="UTF-8">
+<html>
+<head><title>Class: License</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../syntax.css" type="text/css">
+<link rel="stylesheet" href="builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td  align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody></table>
+
+<div id="document">
+	
+<div class="sidebar_container">
+		
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink"><a href="assoc.html">Assoc</a></div>
+				<div class="packagelink"><a href="boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="builder.html">Builder</a></div>
+				<div class="packagelink"><a href="bytes.html">Bytes</a></div>
+				<div class="packagelink"><a href="capi.html">CAPI</a></div>
+				<div class="packagelink"><a href="capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink"><a href="cachetree.html">CacheTree</a></div>
+				<div class="packagelink"><a href="compiler.html">Compiler</a></div>
+				<div class="packagelink"><a href="core.html">Core</a></div>
+				<div class="packagelink"><a href="dapi.html">DAPI</a></div>
+				<div class="packagelink"><a href="dapinode.html">DAPINODE</a></div>
+				<div class="packagelink"><a href="dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink"><a href="dapiversion.html">DAPIVERSION</a></div>
+				<div class="packagelink"><a href="domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="domcomment.html">DOMComment</a></div>
+				<div class="packagelink"><a href="domdocument.html">DOMDocument</a></div>
+				<div class="packagelink"><a href="domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink"><a href="domelement.html">DOMElement</a></div>
+				<div class="packagelink"><a href="domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink"><a href="domnamednodemap.html">DOMNamedNodeMap</a></div>
+				<div class="packagelink"><a href="domnode.html">DOMNode</a></div>
+				<div class="packagelink"><a href="domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="domtext.html">DOMText</a></div>
+				<div class="packagelink"><a href="date.html">Date</a></div>
+				<div class="packagelink"><a href="dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="env.html">Env</a></div>
+				<div class="packagelink"><a href="error.html">Error</a></div>
+				<div class="packagelink"><a href="file.html">File</a></div>
+				<div class="packagelink"><a href="filecopy.html">FileCopy</a></div>
+				<div class="packagelink"><a href="fileprefs.html">Fileprefs</a></div>
+				<div class="packagelink"><a href="frame.html">Frame</a></div>
+				<div class="packagelink"><a href="global.html">Global</a></div>
+				<div class="packagelink"><a href="integer.html">Integer</a></div>
+				<div class="packagelink"><a href="javaobject.html">JavaObject</a></div>
+				<div class="packagelink"><a href="language.html">Language</a></div>
+				<div class="packagelink curPage">License</div>
+				<div class="packagelink"><a href="list.html">List</a></div>
+				<div class="packagelink"><a href="logging.html">Logging</a></div>
+				<div class="packagelink"><a href="long.html">Long</a></div>
+				<div class="packagelink"><a href="mailmessage.html">MailMessage</a></div>
+				<div class="packagelink"><a href="math.html">Math</a></div>
+				<div class="packagelink"><a href="memcached.html">Memcached</a></div>
+				<div class="packagelink"><a href="notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="object.html">Object</a></div>
+				<div class="packagelink"><a href="pop3session.html">POP3Session</a></div>
+				<div class="packagelink"><a href="patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="patfind.html">PatFind</a></div>
+				<div class="packagelink"><a href="pattern.html">Pattern</a></div>
+				<div class="packagelink"><a href="point.html">Point</a></div>
+				<div class="packagelink"><a href="profiler.html">Profiler</a></div>
+				<div class="packagelink"><a href="real.html">Real</a></div>
+				<div class="packagelink"><a href="recarray.html">RecArray</a></div>
+				<div class="packagelink"><a href="record.html">Record</a></div>
+				<div class="packagelink"><a href="regex.html">Regex</a></div>
+				<div class="packagelink"><a href="restclient.html">RestClient</a></div>
+				<div class="packagelink"><a href="saxparser.html">SAXParser</a></div>
+				<div class="packagelink"><a href="smtpsession.html">SMTPSession</a></div>
+				<div class="packagelink"><a href="ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="script.html">Script</a></div>
+				<div class="packagelink"><a href="security.html">Security</a></div>
+				<div class="packagelink"><a href="set.html">Set</a></div>
+				<div class="packagelink"><a href="socket.html">Socket</a></div>
+				<div class="packagelink"><a href="sql.html">Sql</a></div>
+				<div class="packagelink"><a href="sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink"><a href="str.html">Str</a></div>
+				<div class="packagelink"><a href="string.html">String</a></div>
+				<div class="packagelink"><a href="system.html">System</a></div>
+				<div class="packagelink"><a href="uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="void.html">Void</a></div>
+				<div class="packagelink"><a href="wapi.html">WAPI</a></div>
+				<div class="packagelink"><a href="wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink"><a href="web.html">Web</a></div>
+				<div class="packagelink"><a href="xslprocessor.html">XSLProcessor</a></div>
+				<div class="packagelink"><a href="zip.html">Zip</a></div>
+		</div>
+</div>
+
+	<div class="content_container">
+		<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+		<h1>Class: License</h1><div class="ClassDescription"><p><strong> Important Note: The License built-ins are supposed to be used internally only, that is, by the License Subsystem in the Kernel module which 
+ provides hooks for modules requiring licenses. They are not meant to be used by 3rd party developers. At present the licensing functionality 
+ depends on SafeNet. However, that may change in the future.</strong></p>
+<p>The License package provides services for retrieving and managing licenses for the Content Server and modules that require separate licenses.
+ The major functionalities offered in the License Package are the following:</p>
+<ul>
+<li><a class="interdoc" href="#cm_license_applycorelicense">ApplyCoreLicense()</a> Loads and validate a license file and sets it as the Content Server core license.</li>
+<li><a class="interdoc" href="#cm_license_applymodulelicense">ApplyModuleLicense()</a> Loads and validates a module license file and sets it as a module license.    </li>
+<li><a class="interdoc" href="#cm_license_generatefingerprint">GenerateFingerprint()</a> Generates a fingerprint string for the installed system.</li>
+<li><a class="interdoc" href="#cm_license_generatereporthash">GenerateReportHash()</a> Returns a hash generated from the license data.</li>
+<li><a class="interdoc" href="#cm_license_getcorelicenseinfo">GetCoreLicenseInfo()</a> Gets information from the Content Server core license.</li>
+<li><a class="interdoc" href="#cm_license_getlicensedapplications">GetLicensedApplications()</a> Returns a list of licensed applications.</li>
+<li><a class="interdoc" href="#cm_license_getlicensefeaturename">GetLicenseFeatureName()</a> Returns the feature name for the license.  </li>
+<li><a class="interdoc" href="#cm_license_getlicenseinfo">GetLicenseInfo()</a> Gets the information from a license content string or a license file path.</li>
+<li><a class="interdoc" href="#cm_license_getlicenselogstring">GetLicenseLogString()</a> Returns a string containing the license info for each license.</li>
+<li><a class="interdoc" href="#cm_license_getmodulelicenseinfo">GetModuleLicenseInfo()</a> Gets information from a Content Server module license.</li>
+<li><a class="interdoc" href="#cm_license_getnumactiveusers">GetNumActiveUsers()</a> Returns the number of active users in the system.</li>
+<li><a class="interdoc" href="#cm_license_validatecorelicense">ValidateCoreLicense()</a> Validates the Content Server core license.</li>
+<li><a class="interdoc" href="#cm_license_validatemodulelicense">ValidateModuleLicense()</a> Validates a Content Server module license.</li>
+</ul></div>
+			<h2>Class Attributes</h2>
+			<div class="ClassAttributesShort">
+				
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_license_applist_error">APPLIST_ERROR</a></div>
+					<div class="Description"><p>License Error: Error getting application list.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_license_bad_fingerprint">BAD_FINGERPRINT</a></div>
+					<div class="Description"><p>License Error: Invalid application fingerprint.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_license_bad_licenseformat">BAD_LICENSEFORMAT</a></div>
+					<div class="Description"><p>License Error: Bad license format.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_license_bad_version">BAD_VERSION</a></div>
+					<div class="Description"><p>License Error: Invalid application version.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_license_cannot_read_file">CANNOT_READ_FILE</a></div>
+					<div class="Description"><p>License Error: Cannot read license file.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_license_expired">EXPIRED</a></div>
+					<div class="Description"><p>License Error: Expired License.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_license_fingerprint_error">FINGERPRINT_ERROR</a></div>
+					<div class="Description"><p>License Error: Error generating fingerprint.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_license_info_error">INFO_ERROR</a></div>
+					<div class="Description"><p>License Error: Failed to get license information.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_license_invalid">INVALID</a></div>
+					<div class="Description"><p>License Error: Invalid license.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_license_login_error">LOGIN_ERROR</a></div>
+					<div class="Description"><p>License Error: Error getting database login.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_license_nonproduction_license">NONPRODUCTION_LICENSE</a></div>
+					<div class="Description"><p>Nonproduction License Type: 1</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_license_not_found">NOT_FOUND</a></div>
+					<div class="Description"><p>License Error: No license found.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_license_numuser_error">NUMUSER_ERROR</a></div>
+					<div class="Description"><p>License Error: Error getting number of active users.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_license_production_license">PRODUCTION_LICENSE</a></div>
+					<div class="Description"><p>License Error: Error getting number of active users.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_license_save_error">SAVE_ERROR</a></div>
+					<div class="Description"><p>Production License Type: 2.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_license_sql_error">SQL_ERROR</a></div>
+					<div class="Description"><p>License Error: Error getting SQL object.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_license_temporary_license">TEMPORARY_LICENSE</a></div>
+					<div class="Description"><p>Temporary License Type: 0.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_license_threadlock_error">THREADLOCK_ERROR</a></div>
+					<div class="Description"><p>License Error: System is busy and cannot read license. Please try again.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_license_too_many_users">TOO_MANY_USERS</a></div>
+					<div class="Description"><p>License Error: Maximum number of users exceeded.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_license_unknown_error">UNKNOWN_ERROR</a></div>
+					<div class="Description"><p>License Error:  Unknown error.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_license_validation_error">VALIDATION_ERROR</a></div>
+					<div class="Description"><p>License Error:  Error validating license.</p></div>
+				</div>
+				
+			</div>
+
+
+			<h2>Class Methods</h2>
+			<div class="ClassMethodsShort">
+				<div class="Method">
+					<div class="Name"><a href="#cm_license_applycorelicense" class="IndexMethodName">ApplyCoreLicense</a>(
+					 String license, Boolean isFilePath )
+					</div>
+					<div class="Description"><p>Loads and a validate license file and sets it as the Content Server core license</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_license_applymodulelicense" class="IndexMethodName">ApplyModuleLicense</a>(
+					 String licenseFile, String applicationKey, String version, Integer numActiveUsers )
+					</div>
+					<div class="Description"><p>Loads and validates a module license file and sets it as a module license.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_license_generatefingerprint" class="IndexMethodName">GenerateFingerprint</a>(
+					)
+					</div>
+					<div class="Description"><p>Generates a fingerprint string for the installed system.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_license_generatereporthash" class="IndexMethodName">GenerateReportHash</a>(
+					 String licenseContent )
+					</div>
+					<div class="Description"><p>Returns a hash generated from the license data.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_license_getcorelicenseinfo" class="IndexMethodName">GetCoreLicenseInfo</a>(
+					)
+					</div>
+					<div class="Description"><p>Gets information from the Content Server core license.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_license_getlicensedapplications" class="IndexMethodName">GetLicensedApplications</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns a list of licensed applications.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_license_getlicensefeaturename" class="IndexMethodName">GetLicenseFeatureName</a>(
+					 String licenseContent )
+					</div>
+					<div class="Description"><p>Returns the feature name for the license.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_license_getlicenseinfo" class="IndexMethodName">GetLicenseInfo</a>(
+					 String license, String version, Integer numActiveUsers )
+					</div>
+					<div class="Description"><p>Gets the information from a license content string or a license file path.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_license_getlicenselogstring" class="IndexMethodName">GetLicenseLogString</a>(
+					 Assoc moduleInfo )
+					</div>
+					<div class="Description"><p>Returns a string containing the license info for each license.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_license_getmodulelicenseinfo" class="IndexMethodName">GetModuleLicenseInfo</a>(
+					 String applicationKey )
+					</div>
+					<div class="Description"><p>Gets information from a Content Server module license.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_license_getnumactiveusers" class="IndexMethodName">GetNumActiveUsers</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns the number of active users in the system.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_license_validatecorelicense" class="IndexMethodName">ValidateCoreLicense</a>(
+					)
+					</div>
+					<div class="Description"><p>Validates the Content Server core license</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_license_validatemodulelicense" class="IndexMethodName">ValidateModuleLicense</a>(
+					 String applicationKey, String version, Integer numActiveUsers )
+					</div>
+					<div class="Description"><p>Validates a Content Server module license.</p></div>
+				</div>
+			</div>
+
+
+				<h2>Class Attributes</h2>
+				<div class="ClassAttributes">
+					
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_license_applist_error">APPLIST_ERROR</a></div>
+						<div class="Description"><p>License Error: Error getting application list.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_license_bad_fingerprint">BAD_FINGERPRINT</a></div>
+						<div class="Description"><p>License Error: Invalid application fingerprint.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_license_bad_licenseformat">BAD_LICENSEFORMAT</a></div>
+						<div class="Description"><p>License Error: Bad license format.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_license_bad_version">BAD_VERSION</a></div>
+						<div class="Description"><p>License Error: Invalid application version.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_license_cannot_read_file">CANNOT_READ_FILE</a></div>
+						<div class="Description"><p>License Error: Cannot read license file.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_license_expired">EXPIRED</a></div>
+						<div class="Description"><p>License Error: Expired License.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_license_fingerprint_error">FINGERPRINT_ERROR</a></div>
+						<div class="Description"><p>License Error: Error generating fingerprint.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_license_info_error">INFO_ERROR</a></div>
+						<div class="Description"><p>License Error: Failed to get license information.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_license_invalid">INVALID</a></div>
+						<div class="Description"><p>License Error: Invalid license.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_license_login_error">LOGIN_ERROR</a></div>
+						<div class="Description"><p>License Error: Error getting database login.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_license_nonproduction_license">NONPRODUCTION_LICENSE</a></div>
+						<div class="Description"><p>Nonproduction License Type: 1</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_license_not_found">NOT_FOUND</a></div>
+						<div class="Description"><p>License Error: No license found.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_license_numuser_error">NUMUSER_ERROR</a></div>
+						<div class="Description"><p>License Error: Error getting number of active users.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_license_production_license">PRODUCTION_LICENSE</a></div>
+						<div class="Description"><p>License Error: Error getting number of active users.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_license_save_error">SAVE_ERROR</a></div>
+						<div class="Description"><p>Production License Type: 2.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_license_sql_error">SQL_ERROR</a></div>
+						<div class="Description"><p>License Error: Error getting SQL object.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_license_temporary_license">TEMPORARY_LICENSE</a></div>
+						<div class="Description"><p>Temporary License Type: 0.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_license_threadlock_error">THREADLOCK_ERROR</a></div>
+						<div class="Description"><p>License Error: System is busy and cannot read license. Please try again.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_license_too_many_users">TOO_MANY_USERS</a></div>
+						<div class="Description"><p>License Error: Maximum number of users exceeded.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_license_unknown_error">UNKNOWN_ERROR</a></div>
+						<div class="Description"><p>License Error:  Unknown error.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_license_validation_error">VALIDATION_ERROR</a></div>
+						<div class="Description"><p>License Error:  Error validating license.</p></div>
+					</div>
+				
+				</div>
+
+		
+				<h2>Class Methods</h2>
+				<div class="ClassMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_license_applycorelicense">ApplyCoreLicense</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">ApplyCoreLicense</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">license</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Boolean</span> <span class="PrototypeArgumentName">isFilePath</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Loads and validate a license file and sets it as the Content Server core license.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">license</span><span class="description"><p>the license content or the full path and name of the license file.</p></span></div>
+											<div class="Parameter"><span class="name">isFilePath</span><span class="description"><p>TRUE - file path, FALSE - license content.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Zero if successful; Error otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_license_applymodulelicense">ApplyModuleLicense</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">ApplyModuleLicense</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">licenseFile</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">applicationKey</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">version</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">numActiveUsers</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Loads and validates a module license file and sets it as a module license.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">licenseFile</span><span class="description"><p>Full path and name of the license file. </p></span></div>
+											<div class="Parameter"><span class="name">applicationKey</span><span class="description"><p>string identifier for the module.</p></span></div>
+											<div class="Parameter"><span class="name">version</span><span class="description"><p>module version.</p></span></div>
+											<div class="Parameter"><span class="name">numActiveUsers</span><span class="description"><p>the number of active users for the module.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Zero if successful; Error otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_license_generatefingerprint">GenerateFingerprint</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">GenerateFingerprint</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Generates a fingerprint string for the installed system.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A string containng the generated fingerprint if successful; Error otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_license_generatereporthash">GenerateReportHash</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">GenerateReportHash</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">licenseContent</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a hash generated from the license data.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">licenseContent</span><span class="description"><div class="codehilite"><pre>                Contents of a license file<span class="o">.</span>
+</pre></div></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>a string containing the report hash if successful; Error otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_license_getcorelicenseinfo">GetCoreLicenseInfo</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Assoc</span> 
+						<span class="PrototypeselfName">GetCoreLicenseInfo</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Gets information from the Content Server core license.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Error if error occurred; otherwise an assoc with the following structure:
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">ActiveFingerprint</td>
+                <td class="ParameterDescription">String</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">ActiveVersion</td>
+                <td class="ParameterDescription">String</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">CustomerName</td>
+                <td class="ParameterDescription">String</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">EndUserCode</td>
+                <td class="ParameterDescription">String</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">ExpirationDate</td>
+                <td class="ParameterDescription">Date</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">LicensedFingerprint</td>
+                <td class="ParameterDescription">String</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">LicensedVersion</td>
+                <td class="ParameterDescription">String</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">LicensedType</td>
+                <td class="ParameterDescription">String</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">NumActiveUsers</td>
+                <td class="ParameterDescription">Integer</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">NumLicenedUsers</td>
+                <td class="ParameterDescription">Integer</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">ProductName</td>
+                <td class="ParameterDescription">String</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">SalesKitInfo</td>
+                <td class="ParameterDescription">String</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">Status</td>
+                <td class="ParameterDescription">Integer</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">SUID</td>
+                <td class="ParameterDescription">String</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">TypeName</td>
+                <td class="ParameterDescription">String</td>
+                </tr>
+            </table></p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_license_getlicensedapplications">GetLicensedApplications</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">List</span> 
+						<span class="PrototypeselfName">GetLicensedApplications</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a list of licensed applications.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A list of licensed applications.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><div class="codehilite"><pre>    Calling the <span class="k">function</span> on a CS with its WebReports licensed will return a list<span class="o">:</span> 
+    <span class="p">{</span><span class="s">&#39;Content_Server&#39;</span><span class="p">,</span><span class="s">&#39;CSAOTPERSPECTIVEMGR&#39;</span><span class="p">,</span><span class="s">&#39;WebReports&#39;</span><span class="p">}</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_license_getlicensefeaturename">GetLicenseFeatureName</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">GetLicenseFeatureName</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">licenseContent</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the feature name for the license.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">licenseContent</span><span class="description"><p>Contents of a license file.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A string containing the feature name if no errors; Error otherwise.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><div class="codehilite"><pre>    Calling the <span class="k">function</span> with a WebReport license content will return <span class="s">&#39;WebReports&#39;</span><span class="o">.</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_license_getlicenseinfo">GetLicenseInfo</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Assoc</span> 
+						<span class="PrototypeselfName">GetLicenseInfo</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">license</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">version</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">numActiveUsers</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Gets the information from a license content string or a license file path.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">license</span><span class="description"><p>Contents of a license file.</p></span></div>
+											<div class="Parameter"><span class="name">version</span><span class="description"><p>The version of the running system.</p></span></div>
+											<div class="Parameter"><span class="name">numActiveUsers</span><span class="description"><p>optional - The number of active users of the running system.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Error if error occurred; otherwise an assoc with the following structure:
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">ActiveFingerprint</td>
+                <td class="ParameterDescription">String</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">ActiveVersion</td>
+                <td class="ParameterDescription">String</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">CustomerName</td>
+                <td class="ParameterDescription">String</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">EndUserCode</td>
+                <td class="ParameterDescription">String</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">ExpirationDate</td>
+                <td class="ParameterDescription">Date</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">LicensedFingerprint</td>
+                <td class="ParameterDescription">String</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">LicensedVersion</td>
+                <td class="ParameterDescription">String</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">LicensedType</td>
+                <td class="ParameterDescription">String</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">NumActiveUsers</td>
+                <td class="ParameterDescription">Integer</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">NumLicenedUsers</td>
+                <td class="ParameterDescription">Integer</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">ProductName</td>
+                <td class="ParameterDescription">String</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">SalesKitInfo</td>
+                <td class="ParameterDescription">String</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">Status</td>
+                <td class="ParameterDescription">Integer</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">SUID</td>
+                <td class="ParameterDescription">String</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">TypeName</td>
+                <td class="ParameterDescription">String</td>
+                </tr>
+            </table></p></div>
+									<h4>Example</h4>
+									<div class="Example"><div class="codehilite"><pre>        A sample valid result is given below<span class="o">:</span>
+
+         A<span class="o">&lt;</span><span class="m">1</span><span class="p">,</span><span class="o">?</span><span class="p">,</span>
+            <span class="s">&#39;ActiveFingerprint&#39;</span><span class="o">=</span><span class="s">&#39;47723CB3&#39;</span><span class="p">,</span>
+            <span class="s">&#39;ActiveVersion&#39;</span><span class="o">=</span><span class="s">&#39;16.0.0&#39;</span><span class="p">,</span>
+            <span class="s">&#39;CustomerName&#39;</span><span class="o">=</span><span class="s">&#39;OpenText Internal Use Only &#39;</span><span class="p">,</span>
+            <span class="s">&#39;EndUserCode&#39;</span><span class="o">=</span><span class="s">&#39;EU0025397&#39;</span><span class="p">,</span>
+            <span class="s">&#39;ExpirationDate&#39;</span><span class="o">=</span>D<span class="o">/</span><span class="m">1900</span><span class="o">/</span><span class="m">1</span><span class="o">/</span><span class="m">0</span><span class="o">:</span><span class="m">0</span><span class="o">:</span><span class="m">0</span><span class="o">:</span><span class="m">0</span><span class="p">,</span>
+            <span class="s">&#39;LicensedFingerprint&#39;</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span>
+            <span class="s">&#39;LicensedVersion&#39;</span><span class="o">=</span><span class="s">&#39;16.0.0&#39;</span><span class="p">,</span>
+            <span class="s">&#39;LicenseType&#39;</span><span class="o">=</span><span class="m">1</span><span class="p">,</span>
+            <span class="s">&#39;NumActiveUsers&#39;</span><span class="o">=</span><span class="m">7</span><span class="p">,</span>
+            <span class="s">&#39;NumLicensedUsers&#39;</span><span class="o">=</span><span class="m">100000</span><span class="p">,</span>
+            <span class="s">&#39;ProductName&#39;</span><span class="o">=</span><span class="s">&#39;OpenText Content Server&#39;</span><span class="p">,</span>
+            <span class="s">&#39;SalesKitInfo&#39;</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span>
+            <span class="s">&#39;Status&#39;</span><span class="o">=</span><span class="m">0</span><span class="p">,</span>
+            <span class="s">&#39;SUID&#39;</span><span class="o">=</span><span class="s">&#39;48382-38294&#39;</span><span class="p">,</span>
+            <span class="s">&#39;TypeName&#39;</span><span class="o">=</span><span class="s">&#39;Non-production&#39;</span><span class="o">&gt;</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_license_getlicenselogstring">GetLicenseLogString</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">GetLicenseLogString</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Assoc</span> <span class="PrototypeArgumentName">moduleInfo</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a string containing the license info for each license.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">moduleInfo</span><span class="description"><p>An Assoc containing applications.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A string containing the license info for each license.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_license_getmodulelicenseinfo">GetModuleLicenseInfo</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Assoc</span> 
+						<span class="PrototypeselfName">GetModuleLicenseInfo</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">applicationKey</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Gets information from a Content Server module license.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">applicationKey</span><span class="description"><p>string identifier for a module.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Error if error occurred; otherwise an assoc with the following structure:
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">ActiveFingerprint</td>
+                <td class="ParameterDescription">String</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">ActiveVersion</td>
+                <td class="ParameterDescription">String</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">CustomerName</td>
+                <td class="ParameterDescription">String</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">EndUserCode</td>
+                <td class="ParameterDescription">String</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">ExpirationDate</td>
+                <td class="ParameterDescription">Date</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">LicensedFingerprint</td>
+                <td class="ParameterDescription">String</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">LicensedVersion</td>
+                <td class="ParameterDescription">String</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">LicensedType</td>
+                <td class="ParameterDescription">String</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">NumActiveUsers</td>
+                <td class="ParameterDescription">Integer</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">NumLicenedUsers</td>
+                <td class="ParameterDescription">Integer</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">ProductName</td>
+                <td class="ParameterDescription">String</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">SalesKitInfo</td>
+                <td class="ParameterDescription">String</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">Status</td>
+                <td class="ParameterDescription">Integer</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">SUID</td>
+                <td class="ParameterDescription">String</td>
+                </tr>
+                <tr>
+                <td class="ParameterName" nowrap="" valign="top">TypeName</td>
+                <td class="ParameterDescription">String</td>
+                </tr>
+            </table></p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_license_getnumactiveusers">GetNumActiveUsers</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">GetNumActiveUsers</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the number of active users in the system.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An integer representing the number of active users or Error if error occurred.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_license_validatecorelicense">ValidateCoreLicense</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">ValidateCoreLicense</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Validates the Content Server core license.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Zero if success; Error otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_license_validatemodulelicense">ValidateModuleLicense</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">ValidateModuleLicense</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">applicationKey</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">version</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">numActiveUsers</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Validates a Content Server module license.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">applicationKey</span><span class="description"><p>A string identifier for the module.</p></span></div>
+											<div class="Parameter"><span class="name">version</span><span class="description"><p>module version.</p></span></div>
+											<div class="Parameter"><span class="name">numActiveUsers</span><span class="description"><p>number of active useres for the module.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Zero if success; Error otherwise.</p></div>
+							</div>
+						</div>
+				</div>
+		
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2018 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+
+
+
+</div>
+	</div>						
+						
+
+</div>
+
+</body></html>

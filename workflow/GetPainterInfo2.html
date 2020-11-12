@@ -1,0 +1,115 @@
+<HTML>
+<HEAD>
+<TITLE>GetPainterInfo()</TITLE>
+
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<script language="JavaScript">updateParentHeader( 'Code' );</script>
+<script language="JavaScript">includeContentContainer( 'wfbuilder', true );</script>
+<p>
+
+<p class="title">GetPainterInfo()</p>
+<p class="body">
+This code sample describes how to define the information that the Workflow
+Painter needs to know about the custom display step type.</p>
+<pre class="code">
+	Function Assoc GetPainterInfo( \
+		Object prgCtx, \
+		Record step = Undefined )
+
+		Assoc info
+		Assoc linkData
+		Assoc retVal
+
+		String gif = .fTaskGif
+        String smallGif = .fSmallGif
+		String name = .GetTaskName()
+
+		//Retrieve the title and image used to represent the custom
+		//display step type in the Workflow Designer.
+
+		if ( IsDefined( step ) )
+			info = .GetDisplayInfo( prgCtx, step )
+			name = info.Title
+			gif = info.Gif
+		end
+
+		retVal.ID = Str.String( .fType ) + '_' + Str.String( .fSubType )
+
+		//Specify a name for the step in the Workflow Designer.
+		
+		retVal.Name = name
+
+		//Specify the name of the image that is displayed in the
+		//Workflow Designer to represent the custom display step.
+
+		retVal.Gif = gif
+        retVall.SmallGif = smallGif
+
+		//Specify whether this step should be added to the Step Icon
+		//Palette in the Workflow Designer.
+		
+		retVal.PaletteTask = .fPaletteTask
+
+		//Specify whether this step can be duplicated.
+		
+		retVal.Duplicatable = .fDuplicatable
+
+		//Specify the name of the Edit request handler for the custom
+		//display step type. This request handler displays the custom
+		//display step when you click the step name in your Tasks list.
+
+		retVal.RHandler = 'wfp.TaskEdit'
+		//Specify the name of the View request handler for the custom
+		//display step type. This request handler displays the detailed
+		//status for the custom display step when you click a step name
+		//on the Step List page.
+
+		retVal.RHandlerWorkView = 'work.TaskDetail'
+		
+		//Specify the name of the Choose User request handler for the
+		//custom display step type. This request handler is called when
+		//you right-click the custom display step icon in the Workflow
+		//Painter, and then click Choose Performer to specify the
+		//performer of the step.
+
+		retVal.RHandlerChoose = 'wfp.TaskUserSet'
+		
+		//Specify the background color of the step when it is displayed
+		//in the Zoom View in the Workflow Designer.
+
+		retVal.Background = 'flesh'
+		
+		//Retrieve the link information associated with the step type.
+		//This includes the maximum number of link types that can come
+		//from the step type and the maximum number of link types that
+		//can go to this step type.
+
+		linkData = .GetTaskTypeObj().GetLinkInfo()
+		
+		//Specify the maximum number of link types that can come from
+		//this step type. Most step types can only have a single link
+		//type coming from them (either a standard link or a loopback
+		//link); however, a conditional step can have two link types
+		//coming from it.
+
+		retVal.MaxLinkTypes = linkData.MaxLinkTypes
+		
+		//Specify the type of links that can go to this step type.
+	
+		retVal.LinkTypesTo = linkData.LinkTypesTo
+		
+		//Specify the type of links that can come from this step type.
+		
+		retVal.LinkTypesFrom = linkData.LinkTypesFrom
+		
+		return( retVal )
+	end</pre>
+
+<script language="JavaScript">IncludeFooter();</script>
+</body>
+</html>

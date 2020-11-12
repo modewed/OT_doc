@@ -1,0 +1,629 @@
+
+<meta charset="UTF-8">
+<html>
+<head><title>Class: Fileprefs</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../syntax.css" type="text/css">
+<link rel="stylesheet" href="builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td  align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody></table>
+
+<div id="document">
+	
+<div class="sidebar_container">
+		
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink"><a href="assoc.html">Assoc</a></div>
+				<div class="packagelink"><a href="boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="builder.html">Builder</a></div>
+				<div class="packagelink"><a href="bytes.html">Bytes</a></div>
+				<div class="packagelink"><a href="capi.html">CAPI</a></div>
+				<div class="packagelink"><a href="capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink"><a href="cachetree.html">CacheTree</a></div>
+				<div class="packagelink"><a href="compiler.html">Compiler</a></div>
+				<div class="packagelink"><a href="core.html">Core</a></div>
+				<div class="packagelink"><a href="dapi.html">DAPI</a></div>
+				<div class="packagelink"><a href="dapinode.html">DAPINODE</a></div>
+				<div class="packagelink"><a href="dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink"><a href="dapiversion.html">DAPIVERSION</a></div>
+				<div class="packagelink"><a href="domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="domcomment.html">DOMComment</a></div>
+				<div class="packagelink"><a href="domdocument.html">DOMDocument</a></div>
+				<div class="packagelink"><a href="domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink"><a href="domelement.html">DOMElement</a></div>
+				<div class="packagelink"><a href="domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink"><a href="domnamednodemap.html">DOMNamedNodeMap</a></div>
+				<div class="packagelink"><a href="domnode.html">DOMNode</a></div>
+				<div class="packagelink"><a href="domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="domtext.html">DOMText</a></div>
+				<div class="packagelink"><a href="date.html">Date</a></div>
+				<div class="packagelink"><a href="dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="env.html">Env</a></div>
+				<div class="packagelink"><a href="error.html">Error</a></div>
+				<div class="packagelink"><a href="file.html">File</a></div>
+				<div class="packagelink"><a href="filecopy.html">FileCopy</a></div>
+				<div class="packagelink curPage">Fileprefs</div>
+				<div class="packagelink"><a href="frame.html">Frame</a></div>
+				<div class="packagelink"><a href="global.html">Global</a></div>
+				<div class="packagelink"><a href="integer.html">Integer</a></div>
+				<div class="packagelink"><a href="javaobject.html">JavaObject</a></div>
+				<div class="packagelink"><a href="language.html">Language</a></div>
+				<div class="packagelink"><a href="license.html">License</a></div>
+				<div class="packagelink"><a href="list.html">List</a></div>
+				<div class="packagelink"><a href="logging.html">Logging</a></div>
+				<div class="packagelink"><a href="long.html">Long</a></div>
+				<div class="packagelink"><a href="mailmessage.html">MailMessage</a></div>
+				<div class="packagelink"><a href="math.html">Math</a></div>
+				<div class="packagelink"><a href="memcached.html">Memcached</a></div>
+				<div class="packagelink"><a href="notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="object.html">Object</a></div>
+				<div class="packagelink"><a href="pop3session.html">POP3Session</a></div>
+				<div class="packagelink"><a href="patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="patfind.html">PatFind</a></div>
+				<div class="packagelink"><a href="pattern.html">Pattern</a></div>
+				<div class="packagelink"><a href="point.html">Point</a></div>
+				<div class="packagelink"><a href="profiler.html">Profiler</a></div>
+				<div class="packagelink"><a href="real.html">Real</a></div>
+				<div class="packagelink"><a href="recarray.html">RecArray</a></div>
+				<div class="packagelink"><a href="record.html">Record</a></div>
+				<div class="packagelink"><a href="regex.html">Regex</a></div>
+				<div class="packagelink"><a href="restclient.html">RestClient</a></div>
+				<div class="packagelink"><a href="saxparser.html">SAXParser</a></div>
+				<div class="packagelink"><a href="smtpsession.html">SMTPSession</a></div>
+				<div class="packagelink"><a href="ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="script.html">Script</a></div>
+				<div class="packagelink"><a href="security.html">Security</a></div>
+				<div class="packagelink"><a href="set.html">Set</a></div>
+				<div class="packagelink"><a href="socket.html">Socket</a></div>
+				<div class="packagelink"><a href="sql.html">Sql</a></div>
+				<div class="packagelink"><a href="sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink"><a href="str.html">Str</a></div>
+				<div class="packagelink"><a href="string.html">String</a></div>
+				<div class="packagelink"><a href="system.html">System</a></div>
+				<div class="packagelink"><a href="uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="void.html">Void</a></div>
+				<div class="packagelink"><a href="wapi.html">WAPI</a></div>
+				<div class="packagelink"><a href="wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink"><a href="web.html">Web</a></div>
+				<div class="packagelink"><a href="xslprocessor.html">XSLProcessor</a></div>
+				<div class="packagelink"><a href="zip.html">Zip</a></div>
+		</div>
+</div>
+
+	<div class="content_container">
+		<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+		<h1>Class: Fileprefs</h1><div class="ClassDescription"><p>The built-in functions in the Fileprefs Package allow    the creation and manipulation of Fileprefs values. The Fileprefs type encapsulates    a preferences file with unique named sections each having name value pairs.    The format of a Fileprefs file is similar to a windows INI file. The functions    described below are used to manipulate the values in the preferences file. In    a multithreaded server environment the preferences in any individual file are    managed so that all threads using the same file always have access to the same    consistent preferences. All of the Fileprefs built-in functions are thread-safe.    Values are currently limited to being no longer than 254 characters in length.   For additional information please see the <a href="../oscript/oscript.html">OScript    Language Reference</a>.</p>
+<p>The major    functionalities offered in the Fileprefs Package are the following:</p>
+<ul>
+<li><a class="interdoc" href="#cm_fileprefs_create">Create()</a> 
+      to create a preferences file.</li>
+<li><a class="interdoc" href="#cm_fileprefs_open">Open()</a> to open a preference
+      file and <a class="interdoc" href="#cm_fileprefs_close">Close()</a> to close one.</li>
+<li><a class="interdoc" href="#cm_fileprefs_addpref">AddPref()</a> to
+      add a preference and <a class="interdoc" href="#cm_fileprefs_delpref">DelPref()</a> to remove one.</li>
+<li><a class="interdoc" href="#cm_fileprefs_getpref">GetPref()</a> to retrieve
+      the value of a preference, or <a class="interdoc" href="#cm_fileprefs_getpath">GetPath()</a> to retrieve
+      the value of a file path preference.</li>
+<li><a class="interdoc" href="#cm_fileprefs_listsections">ListSections()</a> to list
+      the sections within a preferences file and <a class="interdoc" href="#cm_fileprefs_listvalues">ListValues()</a>
+      to return an Assoc containing all the preferences in a section.</li>
+<li><a class="interdoc" href="#cm_fileprefs_refresh">Refresh()</a> to reload
+      a Fileprefs object from file if needed.</li>
+</ul>
+<p>Here is an example which demonstrates how easily Fileprefs are created and used:</p>
+<div class="codehilite"><pre><span class="kt">String</span>      fname <span class="o">=</span> <span class="s">&quot;c:\tmp\s.prefs&quot;</span>
+List        names <span class="o">=</span> <span class="p">{</span> <span class="s">&quot;color&quot;</span><span class="p">,</span> <span class="s">&quot;name&quot;</span><span class="p">,</span> <span class="s">&quot;date&quot;</span><span class="p">,</span> <span class="s">&quot;count&quot;</span><span class="p">,</span> <span class="s">&quot;somepath&quot;</span> <span class="p">}</span>
+List        values <span class="o">=</span> <span class="p">{</span> <span class="s">&quot;blue&quot;</span><span class="p">,</span> <span class="s">&quot;Joe&quot;</span><span class="p">,</span> Date<span class="o">.</span>Now<span class="p">(),</span> <span class="m">4</span><span class="p">,</span> <span class="s">&quot;c:\tmp\s.txt&quot;</span> <span class="p">}</span>
+List        sections <span class="o">=</span> <span class="p">{</span> <span class="s">&quot;colors&quot;</span><span class="p">,</span> <span class="s">&quot;misc&quot;</span><span class="p">,</span> <span class="s">&quot;agents&quot;</span><span class="p">,</span> <span class="s">&quot;misc&quot;</span><span class="p">,</span> <span class="s">&quot;misc&quot;</span> <span class="p">}</span>
+<span class="kt">Integer</span>     i
+Fileprefs   f
+<span class="kt">String</span>      name
+<span class="kt">String</span>      section
+<span class="kt">Dynamic</span>     value
+<span class="kt">Assoc</span>       readvals
+
+<span class="k">if</span> <span class="p">(</span> <span class="o">!</span>IsError<span class="p">(</span> Fileprefs<span class="o">.</span>Create<span class="p">(</span> fname <span class="p">)</span> <span class="p">)</span> <span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span>IsError<span class="p">(</span> f <span class="o">=</span> Fileprefs<span class="o">.</span>Open<span class="p">(</span> fname <span class="p">)</span> <span class="p">)</span> <span class="p">)</span>
+        <span class="k">for</span> <span class="p">(</span> i <span class="o">=</span> <span class="m">1</span><span class="p">;</span> i <span class="o">&lt;=</span> Length<span class="p">(</span> names <span class="p">);</span> i <span class="o">+=</span> <span class="m">1</span> <span class="p">)</span>
+            value <span class="o">=</span> values<span class="p">[</span> i <span class="p">]</span>
+
+            <span class="k">if</span> <span class="p">(</span> Type<span class="p">(</span> value <span class="p">)</span> <span class="o">!=</span> StringType <span class="p">)</span>
+                value <span class="o">=</span> Str<span class="o">.</span>ValueToString<span class="p">(</span> value <span class="p">)</span>
+            <span class="k">end</span>
+
+            Fileprefs<span class="o">.</span>AddPref<span class="p">(</span> f<span class="p">,</span> sections<span class="p">[</span> i <span class="p">],</span> names<span class="p">[</span> i <span class="p">],</span> value <span class="p">)</span>
+        <span class="k">end</span>
+
+        Fileprefs<span class="o">.</span>Close<span class="p">(</span> f <span class="p">)</span>
+        f <span class="o">=</span> Fileprefs<span class="o">.</span>Open<span class="p">(</span> fname <span class="p">)</span>
+        sections <span class="o">=</span> Fileprefs<span class="o">.</span>ListSections<span class="p">(</span> f <span class="p">)</span>
+
+        <span class="k">for</span> section <span class="o">in</span> sections
+            readvals <span class="o">=</span> Fileprefs<span class="o">.</span>ListValues<span class="p">(</span> f<span class="p">,</span> section <span class="p">)</span>
+
+            <span class="k">for</span> name <span class="o">in</span> <span class="kt">Assoc</span><span class="o">.</span>Keys<span class="p">(</span> readvals <span class="p">)</span>
+                value <span class="o">=</span> Str<span class="o">.</span>StringToValue<span class="p">(</span> readvals<span class="o">.</span><span class="p">(</span> name <span class="p">)</span> <span class="p">)</span>
+
+                <span class="k">if</span> <span class="p">(</span> IsUndefined<span class="p">(</span> value <span class="p">)</span> <span class="p">)</span>
+                   value <span class="o">=</span> readvals<span class="o">.</span><span class="p">(</span> name <span class="p">)</span>
+                <span class="k">end</span>
+
+                Echo<span class="p">(</span> <span class="s">&quot;[&quot;</span><span class="p">,</span> section<span class="p">,</span> <span class="s">&quot;] &quot;</span><span class="p">,</span> name<span class="p">,</span> <span class="s">&#39;=&#39;</span><span class="p">,</span> Str<span class="o">.</span><span class="kt">String</span><span class="p">(</span> value <span class="p">)</span> <span class="p">)</span>
+            <span class="k">end</span>
+        <span class="k">end</span>
+
+        Fileprefs<span class="o">.</span>Close<span class="p">(</span> f <span class="p">)</span>
+
+    <span class="k">else</span>
+        Echo<span class="p">(</span> <span class="s">&quot;Could not open &quot;</span> <span class="o">+</span> fname <span class="p">)</span>
+    <span class="k">end</span>
+<span class="k">else</span>
+    Echo<span class="p">(</span> <span class="s">&quot;Could not create &quot;</span> <span class="o">+</span> fname <span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre><span class="p">[</span>colors<span class="p">]</span> color<span class="o">=</span>blue
+<span class="p">[</span>misc<span class="p">]</span> count<span class="o">=</span><span class="m">4</span>
+<span class="p">[</span>misc<span class="p">]</span> name<span class="o">=</span>Joe
+<span class="p">[</span>misc<span class="p">]</span> somepath<span class="o">=</span>c<span class="o">:</span>\tmp\s<span class="o">.</span>txt
+<span class="p">[</span>agents<span class="p">]</span> date<span class="o">=</span>Fri Sep <span class="m">11</span> <span class="m">16</span><span class="o">:</span><span class="m">42</span><span class="o">:</span><span class="m">15</span> <span class="m">1998</span>
+</pre></div>
+
+
+<p>The contents of the preferences file is (note that this should not be absolutely relied upon as it may be subject to change in the future,  however it is included here for purposes of demonstration and clarification):</p>
+<div class="codehilite"><pre><span class="k">[colors]</span>
+<span class="na">color</span><span class="o">=</span><span class="s">blue</span>
+
+<span class="k">[misc]</span>
+<span class="na">somepath</span><span class="o">=</span><span class="s">c:\tmp\s.txt</span>
+<span class="na">count</span><span class="o">=</span><span class="s">4</span>
+<span class="na">name</span><span class="o">=</span><span class="s">Joe</span>
+
+<span class="k">[agents]</span>
+<span class="na">date</span><span class="o">=</span><span class="s">D/1998/9/11:16:53:31</span>
+</pre></div></div>
+			<h2>Class Attributes</h2>
+			<div class="ClassAttributesShort">
+				
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_fileprefs_no_file">NO_FILE</a></div>
+					<div class="Description"><p>Error return value indicating that 
+    the Fileprefs parameter passed was not open or did not have an associated 
+    preferences file.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_fileprefs_no_section">NO_SECTION</a></div>
+					<div class="Description"><p>Error return value indicating that 
+    no section was found for the given section name.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_fileprefs_no_value">NO_VALUE</a></div>
+					<div class="Description"><p>Error return value indicating that 
+    no value was found for the given name.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_fileprefs_no_write">NO_WRITE</a></div>
+					<div class="Description"><p>Error return value indicating that 
+    the write to the preferences file failed.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_fileprefs_ok">OK</a></div>
+					<div class="Description"><p>Return value indicating that function 
+    was performed successfully.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_fileprefs_value_truncated">VALUE_TRUNCATED</a></div>
+					<div class="Description"><p>Error return value indicating that 
+    buffer used to get a preference was too small.</p></div>
+				</div>
+				
+			</div>
+
+
+			<h2>Class Methods</h2>
+			<div class="ClassMethodsShort">
+				<div class="Method">
+					<div class="Name"><a href="#cm_fileprefs_addpref" class="IndexMethodName">AddPref</a>(
+					 Fileprefs theFileprefs, String sectionName, String prefName, String prefValue )
+					</div>
+					<div class="Description"><p>Adds a preference of the form 
+    <em>prefName</em>=<em>prefValue</em> 
+    to the section <em>sectionName</em>.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_fileprefs_close" class="IndexMethodName">Close</a>(
+					 Fileprefs theFileprefs )
+					</div>
+					<div class="Description"><p>Closes the associated 
+    preference object.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_fileprefs_create" class="IndexMethodName">Create</a>(
+					 String prefFilePath )
+					</div>
+					<div class="Description"><p>Creates a new preferences file if one 
+    does not already exist as specified by the given path.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_fileprefs_delpref" class="IndexMethodName">DelPref</a>(
+					 Fileprefs theFileprefs, String sectionName, String prefName )
+					</div>
+					<div class="Description"><p>Removes the preference of the given name and its 
+    associated value from the given section.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_fileprefs_getpath" class="IndexMethodName">GetPath</a>(
+					 Fileprefs theFileprefs, String sectionName, String prefName )
+					</div>
+					<div class="Description"><p>Returns a string of the value associated 
+    with a given named preference as a file 
+    path specification, meaning that all file separators are translated properly 
+    based on the current platform.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_fileprefs_getpref" class="IndexMethodName">GetPref</a>(
+					 Fileprefs theFileprefs, String sectionName, String prefName )
+					</div>
+					<div class="Description"><p>Returns the String value associated 
+    with the given preference in the given section.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_fileprefs_listsections" class="IndexMethodName">ListSections</a>(
+					 Fileprefs theFileprefs )
+					</div>
+					<div class="Description"><p>Returns a List of all the section 
+    names in the given preference file.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_fileprefs_listvalues" class="IndexMethodName">ListValues</a>(
+					 Fileprefs theFileprefs, String sectionName )
+					</div>
+					<div class="Description"><p>Returns an Assoc of all the preference name/value pairs in 
+    a given named section of the preference file.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_fileprefs_open" class="IndexMethodName">Open</a>(
+					 String prefFilePath, Boolean cache )
+					</div>
+					<div class="Description"><p>Returns a Fileprefs object associated 
+    with the given file path.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_fileprefs_refresh" class="IndexMethodName">Refresh</a>(
+					 Fileprefs theFileprefs )
+					</div>
+					<div class="Description"><p>Forces a reread of the preference 
+    file.</p></div>
+				</div>
+			</div>
+
+
+				<h2>Class Attributes</h2>
+				<div class="ClassAttributes">
+					
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_fileprefs_no_file">NO_FILE</a></div>
+						<div class="Description"><p>Error return value indicating that the Fileprefs 
+  parameter passed was not open or did not have an associated preference file.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_fileprefs_no_section">NO_SECTION</a></div>
+						<div class="Description"><p>Error return value indicating that no section 
+  was found for the given section name.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_fileprefs_no_value">NO_VALUE</a></div>
+						<div class="Description"><p>Error return value indicating that no value 
+  was found for the given preference name.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_fileprefs_no_write">NO_WRITE</a></div>
+						<div class="Description"><p>Error return value indicating that the file
+  could not be written.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_fileprefs_ok">OK</a></div>
+						<div class="Description"><p>Return value (defined as zero) indicating that a fileprefs function was 
+  performed successfully.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_fileprefs_value_truncated">VALUE_TRUNCATED</a></div>
+						<div class="Description"><p>Error return value indicating that the buffer
+  used to get the preference was too small to hold the full value.</p></div>
+					</div>
+				
+				</div>
+
+		
+				<h2>Class Methods</h2>
+				<div class="ClassMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_fileprefs_addpref">AddPref</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">AddPref</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Fileprefs</span> <span class="PrototypeArgumentName">theFileprefs</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">sectionName</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">prefName</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">prefValue</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Adds a preference of the form <em>prefName</em>=<em>prefValue</em> 
+    in the section <em>sectionName</em>. If the section does not yet exist then a new section 
+    with the proper sectionName will be created. If a preference already exists
+    in the given section as <i><em>prefName</em>=someOtherValue</i>
+    then it will be replaced with the new value. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theFileprefs</span><span class="description"><p>The Fileprefs object.</p></span></div>
+											<div class="Parameter"><span class="name">sectionName</span><span class="description"><p>The preference 
+            file section name.</p></span></div>
+											<div class="Parameter"><span class="name">prefName</span><span class="description"><p>The name of the preference 
+            to add.</p></span></div>
+											<div class="Parameter"><span class="name">prefValue</span><span class="description"><p>The value to
+            associate with the named preference.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Error with value <a class="interdoc" href="#ca_fileprefs_no_file">NO_FILE</a>
+      if the provided Fileprefs object is not valid, or Integer <a class="interdoc" href="#ca_fileprefs_ok">OK</a></a>
+      if the operation was successful. </p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_fileprefs_close">Close</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Close</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Fileprefs</span> <span class="PrototypeArgumentName">theFileprefs</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Closes the associated preference 
+    object. In a multithreaded application this call may have no direct relationship 
+    to the "openness" of the actual preference file, since multiple
+    threads may be accessing the Fileprefs object at once. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theFileprefs</span><span class="description"><p>The Fileprefs object.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Integer <a class="interdoc" href="#ca_fileprefs_ok">OK</a></a> 
+      if the operation was successful. </p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_fileprefs_create">Create</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Create</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">prefFilePath</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Creates a new preference file if one does not 
+    already exist with the given <em>prefFilePath</em>. 
+    Open must be called with the same path to open the new Fileprefs object
+    and perform other operations on it. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">prefFilePath</span><span class="description"><p>The 
+            file path specification of the preference file, including path
+            and file name.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Error with value <a class="interdoc" href="#ca_fileprefs_no_file">NO_FILE</a>
+      if the specified file could not be created, otherwise Integer <a class="interdoc" href="#ca_fileprefs_ok">OK</a>
+      if the operation was successful.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_fileprefs_delpref">DelPref</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">DelPref</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Fileprefs</span> <span class="PrototypeArgumentName">theFileprefs</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">sectionName</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">prefName</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Removes the preference named 
+     <em>prefName</em> and its associated 
+    value from section <em>sectionName</em>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theFileprefs</span><span class="description"><p>The Fileprefs object.</p></span></div>
+											<div class="Parameter"><span class="name">sectionName</span><span class="description"><p>The preference 
+            file section name.</p></span></div>
+											<div class="Parameter"><span class="name">prefName</span><span class="description"><p>The name of the preference 
+            to delete.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Error with value <a class="interdoc" href="#ca_fileprefs_no_file">NO_FILE</a> 
+      if the provided Fileprefs object is not valid, otherwise Integer <a class="interdoc" href="#ca_fileprefs_ok">OK</a>
+      if successful. </p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_fileprefs_getpath">GetPath</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">GetPath</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Fileprefs</span> <span class="PrototypeArgumentName">theFileprefs</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">sectionName</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">prefName</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the string value associated with 
+    preference <em>prefName</em> in section 
+    <em>sectionName</em>, except, unlike
+    <a class="interdoc" href="#cm_fileprefs_getpref">Fileprefs.GetPref()</a>, the
+    string is returned as a file path specification, meaning that all file separators 
+    are translated properly for the current platform.
+    Only the first 254 characters of the value will be returned. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theFileprefs</span><span class="description"><p>The Fileprefs object.</p></span></div>
+											<div class="Parameter"><span class="name">sectionName</span><span class="description"><p>The preference 
+            file section name.</p></span></div>
+											<div class="Parameter"><span class="name">prefName</span><span class="description"><p>The name of the preference 
+            to retrieve.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>String result or Error if unsuccessful.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_fileprefs_getpref">GetPref</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">GetPref</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Fileprefs</span> <span class="PrototypeArgumentName">theFileprefs</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">sectionName</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">prefName</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the string value associated with 
+    the preference <em>prefName</em> in 
+    section <em>sectionName</em>. 
+    Only the first 254 characters of the value will be returned. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theFileprefs</span><span class="description"><p>The Fileprefs object.</p></span></div>
+											<div class="Parameter"><span class="name">sectionName</span><span class="description"><p>The file preference 
+            section name.</p></span></div>
+											<div class="Parameter"><span class="name">prefName</span><span class="description"><p>The name of the preference 
+            name to retrieve.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>String result if successful; Error otherwise.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Use <a class="interdoc" href="#cm_fileprefs_getpath">Fileprefs.GetPath()</a> to
+    retrieve values which are file paths, and <a class="interdoc" href="#cm_fileprefs_addpref">Fileprefs.AddPref()</a>
+    to add a preference.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_fileprefs_listsections">ListSections</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">List</span> 
+						<span class="PrototypeselfName">ListSections</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Fileprefs</span> <span class="PrototypeArgumentName">theFileprefs</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a List of all the section names in the 
+    given preference file. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theFileprefs</span><span class="description"><p>The Fileprefs object.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>List if successful; Error otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_fileprefs_listvalues">ListValues</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Assoc</span> 
+						<span class="PrototypeselfName">ListValues</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Fileprefs</span> <span class="PrototypeArgumentName">theFileprefs</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">sectionName</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns an Assoc containing a map of all
+    preference name/value pairs in a given
+    section of the preference file. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theFileprefs</span><span class="description"><p>The Fileprefs object.</p></span></div>
+											<div class="Parameter"><span class="name">sectionName</span><span class="description"><p>The name of the preference 
+            section for which all preferences are returned..</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An Assoc containing all the preferences
+      in the given section, mapping each String preference name to its String value.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_fileprefs_open">Open</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Fileprefs</span> 
+						<span class="PrototypeselfName">Open</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">prefFilePath</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Boolean</span> <span class="PrototypeArgumentName">cache</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a Fileprefs object associated with the 
+    file specified by the <em>prefFilePath</em>. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">prefFilePath</span><span class="description"><p>The file 
+            path specification of the preference file to open.</p></span></div>
+											<div class="Parameter"><span class="name">cache</span><span class="description"><p>True if the file prefs data should be cached by the system, false if not.  Default is TRUE.</p>
+<p>If FALSE, the prefs data will be released from memory when the FilePrefs object goes out of scope.</br></p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Valid Fileprefs object if
+      successful; otherwise Error.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_fileprefs_refresh">Refresh</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Refresh</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Fileprefs</span> <span class="PrototypeArgumentName">theFileprefs</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Forces a reread of the preference file. 
+    It is expensive and should be avoided. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theFileprefs</span><span class="description"><p>The Fileprefs object.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Error with value <a class="interdoc" href="#ca_fileprefs_no_file">NO_FILE</a> 
+      if the preference file is not valid or does not exist, or Integer <a class="interdoc" href="#ca_fileprefs_ok">OK</a>
+      if the operation was successful.</p></div>
+							</div>
+						</div>
+				</div>
+		
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2018 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+
+
+
+</div>
+	</div>						
+						
+
+</div>
+
+</body></html>

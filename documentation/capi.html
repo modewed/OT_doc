@@ -1,0 +1,2040 @@
+
+<meta charset="UTF-8">
+<html>
+<head><title>Class: CAPI</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../syntax.css" type="text/css">
+<link rel="stylesheet" href="builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td  align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody></table>
+
+<div id="document">
+	
+<div class="sidebar_container">
+		
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink"><a href="assoc.html">Assoc</a></div>
+				<div class="packagelink"><a href="boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="builder.html">Builder</a></div>
+				<div class="packagelink"><a href="bytes.html">Bytes</a></div>
+				<div class="packagelink curPage">CAPI</div>
+				<div class="packagelink"><a href="capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink"><a href="cachetree.html">CacheTree</a></div>
+				<div class="packagelink"><a href="compiler.html">Compiler</a></div>
+				<div class="packagelink"><a href="core.html">Core</a></div>
+				<div class="packagelink"><a href="dapi.html">DAPI</a></div>
+				<div class="packagelink"><a href="dapinode.html">DAPINODE</a></div>
+				<div class="packagelink"><a href="dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink"><a href="dapiversion.html">DAPIVERSION</a></div>
+				<div class="packagelink"><a href="domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="domcomment.html">DOMComment</a></div>
+				<div class="packagelink"><a href="domdocument.html">DOMDocument</a></div>
+				<div class="packagelink"><a href="domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink"><a href="domelement.html">DOMElement</a></div>
+				<div class="packagelink"><a href="domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink"><a href="domnamednodemap.html">DOMNamedNodeMap</a></div>
+				<div class="packagelink"><a href="domnode.html">DOMNode</a></div>
+				<div class="packagelink"><a href="domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="domtext.html">DOMText</a></div>
+				<div class="packagelink"><a href="date.html">Date</a></div>
+				<div class="packagelink"><a href="dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="env.html">Env</a></div>
+				<div class="packagelink"><a href="error.html">Error</a></div>
+				<div class="packagelink"><a href="file.html">File</a></div>
+				<div class="packagelink"><a href="filecopy.html">FileCopy</a></div>
+				<div class="packagelink"><a href="fileprefs.html">Fileprefs</a></div>
+				<div class="packagelink"><a href="frame.html">Frame</a></div>
+				<div class="packagelink"><a href="global.html">Global</a></div>
+				<div class="packagelink"><a href="integer.html">Integer</a></div>
+				<div class="packagelink"><a href="javaobject.html">JavaObject</a></div>
+				<div class="packagelink"><a href="language.html">Language</a></div>
+				<div class="packagelink"><a href="license.html">License</a></div>
+				<div class="packagelink"><a href="list.html">List</a></div>
+				<div class="packagelink"><a href="logging.html">Logging</a></div>
+				<div class="packagelink"><a href="long.html">Long</a></div>
+				<div class="packagelink"><a href="mailmessage.html">MailMessage</a></div>
+				<div class="packagelink"><a href="math.html">Math</a></div>
+				<div class="packagelink"><a href="memcached.html">Memcached</a></div>
+				<div class="packagelink"><a href="notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="object.html">Object</a></div>
+				<div class="packagelink"><a href="pop3session.html">POP3Session</a></div>
+				<div class="packagelink"><a href="patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="patfind.html">PatFind</a></div>
+				<div class="packagelink"><a href="pattern.html">Pattern</a></div>
+				<div class="packagelink"><a href="point.html">Point</a></div>
+				<div class="packagelink"><a href="profiler.html">Profiler</a></div>
+				<div class="packagelink"><a href="real.html">Real</a></div>
+				<div class="packagelink"><a href="recarray.html">RecArray</a></div>
+				<div class="packagelink"><a href="record.html">Record</a></div>
+				<div class="packagelink"><a href="regex.html">Regex</a></div>
+				<div class="packagelink"><a href="restclient.html">RestClient</a></div>
+				<div class="packagelink"><a href="saxparser.html">SAXParser</a></div>
+				<div class="packagelink"><a href="smtpsession.html">SMTPSession</a></div>
+				<div class="packagelink"><a href="ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="script.html">Script</a></div>
+				<div class="packagelink"><a href="security.html">Security</a></div>
+				<div class="packagelink"><a href="set.html">Set</a></div>
+				<div class="packagelink"><a href="socket.html">Socket</a></div>
+				<div class="packagelink"><a href="sql.html">Sql</a></div>
+				<div class="packagelink"><a href="sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink"><a href="str.html">Str</a></div>
+				<div class="packagelink"><a href="string.html">String</a></div>
+				<div class="packagelink"><a href="system.html">System</a></div>
+				<div class="packagelink"><a href="uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="void.html">Void</a></div>
+				<div class="packagelink"><a href="wapi.html">WAPI</a></div>
+				<div class="packagelink"><a href="wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink"><a href="web.html">Web</a></div>
+				<div class="packagelink"><a href="xslprocessor.html">XSLProcessor</a></div>
+				<div class="packagelink"><a href="zip.html">Zip</a></div>
+		</div>
+</div>
+
+	<div class="content_container">
+		<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+		<h1>Class: CAPI</h1><div class="ClassDescription"><p>The built-in functions in the CAPI package allow    you to connect to generic SQL databases and perform general SQL statement operations.    The CAPI package also manages the allocation of Livelink login objects and provides    a number of convenience functions for use with any Livelink database. </p>
+<p>The major  functionalities offered in the CAPI    Package are the following:</p>
+<ul>
+<li><a class="interdoc" href="#cm_capi_allocconnect">AllocConnect()</a>, <a class="interdoc" href="#cm_capi_disconnect">Disconnect()</a>, 
+    <a class="interdoc" href="#cm_capi_connectionattr">ConnectionAttr()</a>, <a class="interdoc" href="#cm_capi_connectioninfo">ConnectionInfo()</a>, 
+    and <a class="interdoc" href="#cm_capi_isvalid">IsValid()</a> to create or disconnect a connection 
+    to the database, or query information from or the the validity of an active 
+    connection. </li>
+<li><a class="interdoc" href="#cm_capi_starttransaction">StartTransaction()</a>, 
+    <a class="interdoc" href="#cm_capi_restarttransaction">RestartTransaction()</a>, <a class="interdoc" href="#cm_capi_endtransaction">EndTransaction()</a>, 
+    and <a class="interdoc" href="#cm_capi_transactiondepth">TransactionDepth()</a> to start, restart, 
+    end, and check the depth level of a transaction.</li>
+<li><a class="interdoc" href="#cm_capi_exec">Exec()</a> 
+    and <a class="interdoc" href="#cm_capi_execn">ExecN()</a> to execute a single, possibly 
+    parameterized SQL statement, and <a class="interdoc" href="#cm_capi_execsp">ExecSP()</a> to execute 
+    a stored procedure in MSSQL.</li>
+<li><a class="interdoc" href="#cm_capi_alloclog">AllocLog()</a>, <a class="interdoc" href="#cm_capi_alloclogin">AllocLogin()</a>, 
+    and <a class="interdoc" href="#cm_capi_allocerr">AllocErr()</a> to allocate a new <a class="interdoc" href="capilog.html">CAPILOG</a>, <a class="interdoc" href="capilogin.html">CAPILOGIN</a>, 
+    or <a class="interdoc" href="capierr.html">CAPIERR</a>.</li>
+<li><a class="interdoc" href="#cm_capi_attachlog">AttachLog()</a> to attach to a CAPILOG object, with optional file output.</li>
+<li><a class="interdoc" href="#cm_capi_geterrat">GetErrAt()</a>, <a class="interdoc" href="#cm_capi_getdetailat">GetDetailAt()</a>, 
+    <a class="interdoc" href="#cm_capi_numerrs">NumErrs()</a> , <a class="interdoc" href="#cm_capi_erroption">ErrOption()</a>, 
+    and <a class="interdoc" href="#cm_capi_clearerr">ClearErr()</a> to retrieve errors, detail information, 
+    error count, set clear behavior, or clear errors in a <a class="interdoc" href="capierr.html">CAPIERR</a> error stack.</li>
+<li><a class="interdoc" href="#cm_capi_rightslist">RightsList()</a>, <a class="interdoc" href="#cm_capi_rightsset">RightsSet()</a>, 
+    <a class="interdoc" href="#cm_capi_rightsstring">RightsString()</a>, <a class="interdoc" href="#cm_capi_updaterights">UpdateRights()</a> 
+    and <a class="interdoc" href="#cm_capi_checkright">CheckRight()</a> to list, format, update, and 
+    check privilege rights.</li>
+<li><a class="interdoc" href="#cm_capi_userightsstring">UseRightsString()</a> 
+    to check whether rights string query with multiple in clauses can be used.</li>
+<li><a class="interdoc" href="#cm_capi_iniget">IniGet()</a>, <a class="interdoc" href="#cm_capi_inilist">IniList()</a>, 
+    <a class="interdoc" href="#cm_capi_iniput">IniPut()</a>, and <a class="interdoc" href="#cm_capi_inidelete">IniDelete()</a>, 
+    to get, list, add, or delete kIni information.</li>
+<li><a class="interdoc" href="#cm_capi_userid">UserID()</a>, <a class="interdoc" href="#cm_capi_userinfo">UserInfo()</a>, 
+    <a class="interdoc" href="#cm_capi_uniqueid">UniqueID()</a>, and <a class="interdoc" href="#cm_capi_logininfo">LoginInfo()</a> 
+    to query the user information, new unique ID's, or information from a <a class="interdoc" href="capilogin.html">CAPILOGIN</a>.</li>
+<li><a class="interdoc" href="#cm_capi_log">Log()</a> (<a class="interdoc" href="#cm_capi_loginfo">LogInfo()</a>),
+    <a class="interdoc" href="#cm_capi_logerror">LogError()</a>, <a class="interdoc" href="#cm_capi_logwarn">LogWarn()</a> to log an INFO, 
+    ERROR or WARN message to the log file for a given login.</li>
+<li><a class="interdoc" href="#cm_capi_now">Now()</a> to query the current 
+    time from the database.</li>
+<li><a class="interdoc" href="#cm_capi_parent">Parent()</a> to return the 
+    parent of various Livelink objects.</li>
+<li><a class="interdoc" href="#cm_capi_contextdata">ContextData()</a> sets 
+    or retrieves user-specific data associated with a CAPI-related object.</li>
+</ul>
+<p>Example:</p>
+<div class="codehilite"><pre>CAPILOG     logFile
+CAPIERR     errHandler
+CAPICONNECT connection
+<span class="kt">Dynamic</span>     execResult
+<span class="kt">RecArray</span>    records
+<span class="kt">Record</span>      rec
+<span class="kt">Dynamic</span>     transResult
+
+<span class="c">// Allocate a log and error object</span>
+logFile <span class="o">=</span> CAPI<span class="o">.</span>AllocLog<span class="p">(</span> <span class="s">&#39;c:\capi.log&#39;</span> <span class="p">)</span>
+errHandler <span class="o">=</span> CAPI<span class="o">.</span>AllocErr<span class="p">()</span>
+
+<span class="c">// connect to the database</span>
+connection <span class="o">=</span> CAPI<span class="o">.</span>AllocConnect<span class="p">(</span> 
+                    CAPI<span class="o">.</span>CT_ORACLE<span class="p">,</span>
+                    <span class="s">&#39;ORAHOST&#39;</span><span class="p">,</span>
+                    <span class="s">&#39;&#39;</span><span class="p">,</span>
+                    <span class="s">&#39;orauser&#39;</span><span class="p">,</span>
+                    <span class="s">&#39;orauserpwd&#39;</span><span class="p">,</span>
+                    logFile<span class="p">,</span> 
+                    errHandler<span class="p">,</span> 
+                    <span class="m">0</span> <span class="p">)</span>
+
+
+<span class="k">if</span> <span class="p">(</span> IsError<span class="p">(</span> connection <span class="p">)</span> <span class="p">)</span>
+    echo<span class="p">(</span> <span class="s">&#39;There was an error connecting&#39;</span> <span class="p">)</span>
+    DumpErrorStack<span class="p">(</span> errHandler <span class="p">)</span>
+<span class="k">else</span>
+    <span class="c">// Fetch all the records from myTable</span>
+    execResult <span class="o">=</span> CAPI<span class="o">.</span>Exec<span class="p">(</span> connection<span class="p">,</span> <span class="s">&#39;select * from myTable&#39;</span> <span class="p">)</span>
+
+    <span class="k">if</span> <span class="p">(</span> IsError<span class="p">(</span> execResult <span class="p">)</span> <span class="p">)</span>
+        echo<span class="p">(</span> <span class="s">&#39;The select statement failed&#39;</span> <span class="p">)</span>
+        DumpErrorStack<span class="p">(</span> errHandler <span class="p">)</span>
+    <span class="k">else</span>
+        <span class="k">if</span> <span class="p">(</span> IsError<span class="p">(</span> CAPI<span class="o">.</span>StartTransaction<span class="p">(</span> connection <span class="p">)</span> <span class="p">)</span> <span class="p">)</span>
+            echo<span class="p">(</span> <span class="s">&#39;The transaction could not be started&#39;</span> <span class="p">)</span>
+            DumpErrorStack<span class="p">(</span> errHandler <span class="p">)</span>
+        <span class="k">else</span>
+            <span class="c">// Initialize the transaction result to COMMIT</span>
+            transResult <span class="o">=</span> CAPI<span class="o">.</span>COMMIT
+
+            records <span class="o">=</span> execResult
+
+            <span class="c">// Loop through all the records, updating each one  </span>
+            <span class="k">for</span> rec <span class="o">in</span> records
+                echo<span class="p">(</span> rec<span class="o">.</span>myField <span class="p">)</span>
+
+                <span class="c">// Update a record, using a parameterized statement</span>
+                execResult <span class="o">=</span> CAPI<span class="o">.</span>Exec<span class="p">(</span>
+                                 connection<span class="p">,</span>
+                                 <span class="s">&quot;update myTable set myField=myField+1 where myField=:A1&quot;</span><span class="p">,</span>
+                                 rec<span class="o">.</span>myField <span class="p">)</span>
+
+                <span class="k">if</span> <span class="p">(</span> IsError<span class="p">(</span> execResult <span class="p">)</span> <span class="p">)</span>
+                    echo<span class="p">(</span> <span class="s">&#39;An error occurred while updating the records&#39;</span> <span class="p">)</span>
+                    DumpErrorStack<span class="p">(</span> errHandler <span class="p">)</span>
+                    transResult <span class="o">=</span> CAPI<span class="o">.</span>ROLLBACK
+                    <span class="k">break</span>
+                <span class="k">end</span>
+            <span class="k">end</span>
+
+            CAPI<span class="o">.</span>EndTransaction<span class="p">(</span> connection<span class="p">,</span> transResult <span class="p">)</span>
+        <span class="k">end</span>
+    <span class="k">end</span>
+<span class="k">end</span>
+
+
+<span class="k">function</span> <span class="kt">void</span> DumpErrorStack<span class="p">(</span> CAPIERR errLog <span class="p">)</span>
+
+    <span class="kt">Integer</span>     i
+    <span class="kt">Error</span>       code
+    <span class="kt">String</span>      errMsg
+    <span class="kt">String</span>      detail
+    <span class="kt">String</span>      msg
+
+    <span class="kt">Integer</span>     numErrors <span class="o">=</span> CAPI<span class="o">.</span>NumErrs<span class="p">(</span> errLog <span class="p">)</span>
+
+    <span class="k">if</span> numErrors <span class="o">&gt;</span> <span class="m">0</span>
+        echo<span class="p">(</span> <span class="s">&quot;     ----&gt; Error stack&quot;</span> <span class="p">)</span>
+
+        <span class="k">for</span> i <span class="o">=</span> <span class="m">1</span> to numErrors
+            code <span class="o">=</span> CAPI<span class="o">.</span>GetErrAt<span class="p">(</span> errLog<span class="p">,</span> i <span class="p">)</span>
+            errMsg <span class="o">=</span> <span class="kt">Error</span><span class="o">.</span>ErrorToString<span class="p">(</span> code <span class="p">)</span>
+            detail <span class="o">=</span> CAPI<span class="o">.</span>GetDetailAt<span class="p">(</span> errLog<span class="p">,</span> i <span class="p">)</span>
+            msg <span class="o">=</span> Str<span class="o">.</span>ValueToString<span class="p">(</span> code <span class="p">)</span>
+            echo<span class="p">(</span> <span class="s">&quot;     ----&gt; &quot;</span><span class="p">,</span> i<span class="p">,</span> <span class="s">&quot;)&quot;</span><span class="p">,</span> <span class="s">&quot;  &quot;</span><span class="p">,</span> msg<span class="p">,</span> <span class="s">&quot;:&quot;</span><span class="p">,</span> code<span class="p">,</span> <span class="s">&quot;:&quot;</span><span class="p">,</span> detail <span class="p">)</span>
+        <span class="k">end</span>
+    <span class="k">end</span>
+
+    CAPI<span class="o">.</span>ClearErr<span class="p">(</span> errLog <span class="p">)</span>
+<span class="k">end</span>
+</pre></div></div>
+			<h2>Class Attributes</h2>
+			<div class="ClassAttributesShort">
+				
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_capi_commit">COMMIT</a></div>
+					<div class="Description"><p>Commits database changes when passed 
+    to <a class="interdoc" href="#cm_capi_endtransaction">CAPI.EndTransaction</a> function.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_capi_ct_dblib">CT_DBLIB</a></div>
+					<div class="Description"><p>Specifies MSSQL as the database 
+    type when calling the <a class="interdoc" href="#cm_capi_allocconnect">CAPI.AllocConnect</a> function to create a CAPI connection.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_capi_ct_odbc">CT_ODBC</a></div>
+					<div class="Description"><p>Specifies ODBC as the database type 
+    when calling the <a class="interdoc" href="#cm_capi_allocconnect">CAPI.AllocConnect</a> function to create a CAPI connection.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_capi_ct_oracle">CT_ORACLE</a></div>
+					<div class="Description"><p>Specifies Oracle as the database 
+    type when calling the <a class="interdoc" href="#cm_capi_allocconnect">CAPI.AllocConnect</a> function to create a CAPI connection.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_capi_err_clear">ERR_CLEAR</a></div>
+					<div class="Description"><p>A flag used by <a class="interdoc" href="#cm_capi_erroption">CAPI.ErrOption()</a> 
+    to set a given <a class="interdoc" href="capierr.html">CAPIERR</a> such that it retains accumulated errors when <a class="interdoc" href="#cm_capi_clearerr">CAPI.ClearErr()</a> 
+    is called on it.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_capi_err_keep">ERR_KEEP</a></div>
+					<div class="Description"><p>A flag used by <a class="interdoc" href="#cm_capi_erroption">CAPI.ErrOption()</a> 
+    to set a given <a class="interdoc" href="capierr.html">CAPIERR</a> such that it discards accumulated errors when <a class="interdoc" href="#cm_capi_clearerr">CAPI.ClearErr()</a> 
+    is called on it.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_capi_log_append">LOG_APPEND</a></div>
+					<div class="Description"><p>A flag used by <a class="interdoc" href="#cm_capi_alloclog">CAPI.AllocLog()</a> to 
+    set the log file open mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_capi_log_truncate">LOG_TRUNCATE</a></div>
+					<div class="Description"><p>A flag used by <a class="interdoc" href="#cm_capi_alloclog">CAPI.AllocLog()</a> to 
+    set the log file open mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_capi_proxy_none">PROXY_NONE</a></div>
+					<div class="Description"><p>A flag used in <a class="interdoc" href="#cm_capi_rightslist">CAPI.RightsList()</a> to 
+    retrieve the regular rights of the current user.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_capi_proxy_wapi">PROXY_WAPI</a></div>
+					<div class="Description"><p>A flag used in <a class="interdoc" href="#cm_capi_rightslist">CAPI.RightsList()</a> to 
+    retrieve the proxy rights for WAPI of the current user.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_capi_rollback">ROLLBACK</a></div>
+					<div class="Description"><p>Rolls back a database transaction 
+    when passed to the <a class="interdoc" href="#cm_capi_endtransaction">CAPI.EndTransaction</a> function</p></div>
+				</div>
+				
+			</div>
+
+
+			<h2>Class Methods</h2>
+			<div class="ClassMethodsShort">
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_allocconnect" class="IndexMethodName">AllocConnect</a>(
+					 Integer type, String server, String database, String user, String password, Integer log,  err,  ctflags )
+					</div>
+					<div class="Description"><p>Allocates a CAPI connection to the 
+    specified server and database.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_allocerr" class="IndexMethodName">AllocErr</a>(
+					)
+					</div>
+					<div class="Description"><p>Allocates a <a class="interdoc" href="capierr.html">CAPIERR</a> object.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_alloclog" class="IndexMethodName">AllocLog</a>(
+					 String logFilePath, Integer openModeFlag )
+					</div>
+					<div class="Description"></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_alloclogin" class="IndexMethodName">AllocLogin</a>(
+					 CAPICONNECT connection, String username, String password, [String spaceName] )
+					</div>
+					<div class="Description"><p>Allocates a Livelink login object.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_attachlog" class="IndexMethodName">AttachLog</a>(
+					 String loggerName, String logFilePath, Integer openModeFlag )
+					</div>
+					<div class="Description"></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_checkright" class="IndexMethodName">CheckRight</a>(
+					 CAPILOGIN login, Integer rightID )
+					</div>
+					<div class="Description"><p>Determines if the user for the specified 
+    login has a specific right.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_clearerr" class="IndexMethodName">ClearErr</a>(
+					 CAPIERR err )
+					</div>
+					<div class="Description"><p>Clears the error stack in the <a class="interdoc" href="capierr.html">CAPIERR</a> 
+    object.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_connectionattr" class="IndexMethodName">ConnectionAttr</a>(
+					 CAPICONNECT connection )
+					</div>
+					<div class="Description"><p>Returns attribute information about 
+    one or more <a class="interdoc" href="capiconnect.html">CAPICONNECT</a> objects.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_connectioninfo" class="IndexMethodName">ConnectionInfo</a>(
+					 [CAPICONNECT connect] )
+					</div>
+					<div class="Description"><p>Returns basic information about one 
+    or more <a class="interdoc" href="capiconnect.html">CAPICONNECT</a> objects.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_contextdata" class="IndexMethodName">ContextData</a>(
+					 Dynamic value, [Dynamic valueIn] )
+					</div>
+					<div class="Description"><p>Allows user specific data to be stored 
+    and retrieved from a given CAPI related object.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_disconnect" class="IndexMethodName">Disconnect</a>(
+					 CAPICONNECT connection )
+					</div>
+					<div class="Description"><p>Disconnects the specified <a class="interdoc" href="capiconnect.html">CAPICONNECT</a> 
+    object from the database.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_endtransaction" class="IndexMethodName">EndTransaction</a>(
+					 Dynamic connectionOrLogin, Dynamic commitOrRollback )
+					</div>
+					<div class="Description"><p>Ends the current database transaction.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_erroption" class="IndexMethodName">ErrOption</a>(
+					 CAPIERR err, Integer flag )
+					</div>
+					<div class="Description"><p>Allows accumulated errors to be cleared 
+    in a <a class="interdoc" href="capierr.html">CAPIErr</a>.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_exec" class="IndexMethodName">Exec</a>(
+					 CAPICONNECT connection, String statement, [Dynamic arg3-n] )
+					</div>
+					<div class="Description"><p>Executes a single SQL statement.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_execn" class="IndexMethodName">ExecN</a>(
+					 CAPICONNECT connection, String statement, RecArray values )
+					</div>
+					<div class="Description"><p>Executes a single, parameterized statement, 
+    multiple times, once for each set of parameter values in the paramValues array.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_execsp" class="IndexMethodName">ExecSP</a>(
+					 CAPICONNECT connection, String statement, [Dynamic arg3-n] )
+					</div>
+					<div class="Description"><p>Executes a single, optionally parameterized 
+    statement which will execute a stored procedure.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_getdetailat" class="IndexMethodName">GetDetailAt</a>(
+					 CAPIERR err, Integer index )
+					</div>
+					<div class="Description"><p>Gets the detailed error string from 
+    the error stack at the specified index.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_geterrat" class="IndexMethodName">GetErrAt</a>(
+					 CAPIERR err, Integer index )
+					</div>
+					<div class="Description"><p>Returns the error code from the error 
+    stack at the specified index.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_inidelete" class="IndexMethodName">IniDelete</a>(
+					 CAPILOGIN login, [String section], [String keyword] )
+					</div>
+					<div class="Description"><p>Deletes one or more items from the 
+    INI table in the SQL database.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_iniget" class="IndexMethodName">IniGet</a>(
+					 CAPILOGIN login, String section, String keyword, [Dynamic dftValue] )
+					</div>
+					<div class="Description"><p>Retrieves an item from the INI table 
+    in the SQL database.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_inilist" class="IndexMethodName">IniList</a>(
+					 CAPILOGIN login, [String section], [String keyword] )
+					</div>
+					<div class="Description"><p>Lists items from the INI table in 
+    the SQL database.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_iniput" class="IndexMethodName">IniPut</a>(
+					 CAPILOGIN login, String section, String keyword, [Dynamic value] )
+					</div>
+					<div class="Description"><p>Saves a value to the INI table in 
+    the SQL database.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_isvalid" class="IndexMethodName">IsValid</a>(
+					 CAPICONNECT connection )
+					</div>
+					<div class="Description"><p>Checks the IsValid flag for the specified 
+    connection.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_log" class="IndexMethodName">Log</a>(
+					 CAPILOG log, String message )
+					</div>
+					<div class="Description"><p>Writes a message to the log file associated 
+    with the specified login.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_logerror" class="IndexMethodName">LogError</a>(
+					 CAPILOG log, String message )
+					</div>
+					<div class="Description"></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_loginfo" class="IndexMethodName">LogInfo</a>(
+					 CAPILOG log, String message )
+					</div>
+					<div class="Description"></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_logininfo" class="IndexMethodName">LoginInfo</a>(
+					 [CAPILOGIN login] )
+					</div>
+					<div class="Description"><p>Returns basic information about one 
+    or more <a class="interdoc" href="capilogin.html">CAPILOGIN</a> objects.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_logwarn" class="IndexMethodName">LogWarn</a>(
+					 CAPILOG log, String message )
+					</div>
+					<div class="Description"></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_now" class="IndexMethodName">Now</a>(
+					 CAPICONNECT connect )
+					</div>
+					<div class="Description"><p>Returns the current time from the 
+    database.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_numerrs" class="IndexMethodName">NumErrs</a>(
+					 CAPIERR error )
+					</div>
+					<div class="Description"><p>Returns the number of errors currently 
+    on the error stack.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_parent" class="IndexMethodName">Parent</a>(
+					 Dynamic value )
+					</div>
+					<div class="Description"><p>Returns the parent object for the 
+    specified object.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_restarttransaction" class="IndexMethodName">RestartTransaction</a>(
+					 Dynamic connectOrLogin, Dynamic status )
+					</div>
+					<div class="Description"><p>Restarts the current transaction.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_rightslist" class="IndexMethodName">RightsList</a>(
+					 CAPILOGIN login, Integer proxyType )
+					</div>
+					<div class="Description"><p>Returns the rights for the specified 
+    login.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_rightsset" class="IndexMethodName">RightsSet</a>(
+					 CAPILOGIN login )
+					</div>
+					<div class="Description"><p>Returns an assoc with keys of right 
+    ids.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_rightsstring" class="IndexMethodName">RightsString</a>(
+					 CAPILOGIN login, String columnName )
+					</div>
+					<div class="Description"><p>Returns a string containing the rights 
+    for the specified login, formatted for use in an SQL statement.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_starttransaction" class="IndexMethodName">StartTransaction</a>(
+					 Dynamic connectOrLogin, [Integer numberOfIds] )
+					</div>
+					<div class="Description"><p>Starts a new transaction.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_transactiondepth" class="IndexMethodName">TransactionDepth</a>(
+					 Dynamic connectOrLogin )
+					</div>
+					<div class="Description"><p>Returns the current transaction depth 
+    for the database connection.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_uniqueid" class="IndexMethodName">UniqueID</a>(
+					 Dynamic connectOrLogin, Integer unused, [Integer numIds] )
+					</div>
+					<div class="Description"><p>Returns a new, unique id from the 
+    database.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_updaterights" class="IndexMethodName">UpdateRights</a>(
+					 CAPILOGIN login )
+					</div>
+					<div class="Description"><p>Refreshes the local cached list of 
+    rights for the specified login object.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_userid" class="IndexMethodName">UserID</a>(
+					 CAPILOGIN login, [Integer userId] )
+					</div>
+					<div class="Description"><p>Returns the userid for the specified 
+    login object.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_userightsstring" class="IndexMethodName">UseRightsString</a>(
+					 CAPILOGIN login )
+					</div>
+					<div class="Description"><p>Returns TRUE if rights string query 
+    with multiple in clauses can be used.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_capi_userinfo" class="IndexMethodName">UserInfo</a>(
+					 CAPILOGIN login )
+					</div>
+					<div class="Description"><p>Returns the information about the 
+    current user for the specified login object.</p></div>
+				</div>
+			</div>
+
+
+				<h2>Class Attributes</h2>
+				<div class="ClassAttributes">
+					
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_capi_commit">COMMIT</a></div>
+						<div class="Description"><p>Commits database changes when passed to 
+  <a class="interdoc" href="#cm_capi_endtransaction">CAPI.EndTransaction()</a>. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_capi_ct_dblib">CT_DBLIB</a></div>
+						<div class="Description"><p>Specifies MSSQL as the database 
+  type when calling <a class="interdoc" href="#cm_capi_allocconnect">CAPI.AllocConnect()</a> to create a CAPI connection. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_capi_ct_odbc">CT_ODBC</a></div>
+						<div class="Description"><p>Specifies ODBC as the database type when 
+  calling <a class="interdoc" href="#cm_capi_allocconnect">CAPI.AllocConnect()</a> to create a CAPI connection. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_capi_ct_oracle">CT_ORACLE</a></div>
+						<div class="Description"><p>Specifies Oracle as the database type when 
+  calling <a class="interdoc" href="#cm_capi_allocconnect">CAPI.AllocConnect()</a> to create a CAPI connection. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_capi_err_clear">ERR_CLEAR</a></div>
+						<div class="Description"><p>A flag used by <a class="interdoc" href="#cm_capi_erroption">CAPI.ErrOption()</a> to
+    set a given <a class="interdoc" href="capierr.html">CAPIERR</a> such that it discards accumulated
+    errors when <a class="interdoc" href="#cm_capi_clearerr">CAPI.ClearErr()</a> is called on it. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_capi_err_keep">ERR_KEEP</a></div>
+						<div class="Description"><p>A flag used by <a class="interdoc" href="#cm_capi_erroption">CAPI.ErrOption()</a> to
+    set a given <a class="interdoc" href="capierr.html">CAPIERR</a> such that it retains accumulated
+    errors when <a class="interdoc" href="#cm_capi_clearerr">CAPI.ClearErr()</a> is called on it. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_capi_log_append">LOG_APPEND</a></div>
+						<div class="Description"><p>A flag used by <a class="interdoc" href="#cm_capi_alloclog">CAPI.AllocLog()</a> 
+  to set the open mode for the log file. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_capi_log_truncate">LOG_TRUNCATE</a></div>
+						<div class="Description"><p>A flag used by <a class="interdoc" href="#cm_capi_alloclog">CAPI.AllocLog()</a> 
+  to set the open mode for the log file. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_capi_proxy_none">PROXY_NONE</a></div>
+						<div class="Description"><p>A flag used in <a class="interdoc" href="#cm_capi_rightslist">CAPI.RightsList()</a> 
+  to retrieve the regular rights of the current user. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_capi_proxy_wapi">PROXY_WAPI</a></div>
+						<div class="Description"><p>A flag used in <a class="interdoc" href="#cm_capi_rightslist">CAPI.RightsList()</a> 
+  to retrieve the proxy rights for WAPI of the current user. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_capi_rollback">ROLLBACK</a></div>
+						<div class="Description"><p>Rolls back a database transaction when passed 
+  to <a class="interdoc" href="#cm_capi_endtransaction">CAPI.EndTransaction()</a>. </p></div>
+					</div>
+				
+				</div>
+
+		
+				<h2>Class Methods</h2>
+				<div class="ClassMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_allocconnect">AllocConnect</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">CAPICONNECT</span> 
+						<span class="PrototypeselfName">AllocConnect</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">type</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">server</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">database</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">user</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">password</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">log</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType"></span> <span class="PrototypeArgumentName">err</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType"></span> <span class="PrototypeArgumentName">ctflags</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Allocates a <a class="interdoc" href="capiconnect.html">CAPICONNECT</a> object to the specified 
+    server and database. The type parameter must contain either <a class="unknown" href="#_capi_ct_ctlib">CAPI.CT_CTLIB</a>, 
+    <a class="unknown" href="#_capi_ct_msdblib">CAPI.CT_MSDBLIB</a> or <a class="interdoc" href="#ca_capi_ct_oracle">CAPI.CT_ORACLE</a>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">type</span><span class="description"><p>The type of connection to be established.</p></span></div>
+											<div class="Parameter"><span class="name">server</span><span class="description"><p>The name of the server to connect to.</p></span></div>
+											<div class="Parameter"><span class="name">database</span><span class="description"><p>The name of the database to be used. 
+            This parameter is left blank for Oracle.</p></span></div>
+											<div class="Parameter"><span class="name">user</span><span class="description"><p>The database user name.</p></span></div>
+											<div class="Parameter"><span class="name">password</span><span class="description"><p>The database user password.</p></span></div>
+											<div class="Parameter"><span class="name">log</span><span class="description"><p>An optional log object, returned by 
+            <a class="interdoc" href="#cm_capi_alloclog">CAPI.AllocLog()</a>, that will associate a log file with the 
+            connection.</p></span></div>
+											<div class="Parameter"><span class="name">err</span><span class="description"><p>An optional error object, returned 
+            by <a class="interdoc" href="#cm_capi_allocerr">CAPI.AllocErr()</a>, that will associate an error object 
+            with the connection.</p></span></div>
+											<div class="Parameter"><span class="name">ctflags</span><span class="description"><p>Connection flags for internal use, set to zero.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A connection object to the specified 
+      database, Error otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_allocerr">AllocErr</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">CAPIERR</span> 
+						<span class="PrototypeselfName">AllocErr</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Allocates a <a class="interdoc" href="capierr.html">CAPIERR</a> object for use when allocating 
+    a database connection with <a class="interdoc" href="#cm_capi_allocconnect">CAPI.AllocConnect()</a>.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A <a class="interdoc" href="capierr.html">CAPIERR</a> object.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_alloclog">AllocLog</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">CAPILOG</span> 
+						<span class="PrototypeselfName">AllocLog</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">logFilePath</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">openModeFlag</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Allocates a <a class="interdoc" href="capilog.html">CAPILOG</a> object for use when allocating 
+    a database connection with <a class="interdoc" href="#cm_capi_allocconnect">CAPI.AllocConnect()</a>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">logFilePath</span><span class="description"><p>The path to the log file created for 
+            this log object.</p></span></div>
+											<div class="Parameter"><span class="name">openModeFlag</span><span class="description"><p>Optional param either <a class="interdoc" href="#ca_capi_log_append">CAPI.LOG_APPEND</a> 
+            or default <a class="interdoc" href="#ca_capi_log_truncate">CAPI.LOG_TRUNCATE</a>.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A CAPILOG object.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_alloclogin">AllocLogin</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">CAPILOGIN</span> 
+						<span class="PrototypeselfName">AllocLogin</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPICONNECT</span> <span class="PrototypeArgumentName">connection</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">username</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">password</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">spaceName</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Allocates a <a class="interdoc" href="capilogin.html">CAPILOGIN</a> object for the specified 
+    username and password.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">connection</span><span class="description"><p>The database connection, returned by 
+            <a class="interdoc" href="#cm_capi_allocconnect">CAPI.AllocConnect()</a>, which points to 
+            the Livelink database.</p></span></div>
+											<div class="Parameter"><span class="name">username</span><span class="description"><p>The username of the Livelink user to 
+            be logged in.</p></span></div>
+											<div class="Parameter"><span class="name">password</span><span class="description"><p>The password for the specified Livelink 
+            user.</p></span></div>
+											<div class="Parameter"><span class="name">spaceName</span><span class="description"><p>The space or domain which the user 
+            belongs to. The default is an empty string for standard space or domain.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A <a class="interdoc" href="capilogin.html">CAPILOGIN</a> object for the Livelink 
+      user that was logged in, Error otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_attachlog">AttachLog</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">CAPILOG</span> 
+						<span class="PrototypeselfName">AttachLog</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">loggerName</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">logFilePath</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">openModeFlag</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Attaches to or Allocates a <a class="interdoc" href="capilog.html">CAPILOG</a> object for use when allocating 
+    a database connection with CAPI, or for general logging functionality.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">loggerName</span><span class="description"><p>The name of this logger (will be prefixed with <a class="interdoc" href="logging.html#ca_logging_cs_logger_name_prefix">Logging.CS_LOGGER_NAME_PREFIX</a>, which is <code>"com.opentext.contentserver.capi"</code>)</p></span></div>
+											<div class="Parameter"><span class="name">logFilePath</span><span class="description"><p>Optionally, the path to the log file created for 
+            this log object if direct file output is desired.</p></span></div>
+											<div class="Parameter"><span class="name">openModeFlag</span><span class="description"><p>Optional param either <a class="interdoc" href="#ca_capi_log_append">CAPI.LOG_APPEND</a> 
+            or default <a class="interdoc" href="#ca_capi_log_truncate">CAPI.LOG_TRUNCATE</a>.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A CAPILOG object.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_checkright">CheckRight</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">CheckRight</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPILOGIN</span> <span class="PrototypeArgumentName">login</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">rightID</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Determines if a user has a certain right 
+    in their rights list.  An ID in a rights list corresponds to a particular group. 
+    For example, a group named "Collaborative Computing" may have the ID 3892. 
+    If the user is a member of this group or has been granted rights by this group, 
+    the ID 3892 will be found on the user's rights list.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">login</span><span class="description"><p>The <a class="interdoc" href="capilogin.html">CAPILOGIN</a> object for the user whose 
+            rights are being checked.</p></span></div>
+											<div class="Parameter"><span class="name">rightID</span><span class="description"><p>The ID of the right that is being tested 
+            against the users rights list.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Integer 0 if the specified right is 
+      in the user's rights list, an error otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_clearerr">ClearErr</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">ClearErr</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPIERR</span> <span class="PrototypeArgumentName">err</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Clears the current error stack for the specified 
+    <a class="interdoc" href="capierr.html">CAPIERR</a> object, unless the <a class="interdoc" href="#ca_capi_err_keep">CAPI.ERR_KEEP</a>
+    flag has been set on the <a class="interdoc" href="capierr.html">CAPIERR</a> with <a class="interdoc" href="#cm_capi_erroption">CAPI.ErrOption()</a>,
+    in which case errors will be retained despite the clear call (default behavior may be
+    restored by calling <a class="interdoc" href="#cm_capi_erroption">CAPI.ErrOption()</a> with the <a class="interdoc" href="#ca_capi_err_clear">CAPI.ERR_CLEAR</a>
+    flag). When an error occurs for a given database connection, the error is 
+    placed on the error stack.  This function allows all accumulated errors to
+    be removed from that stack.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">err</span><span class="description"><p>The <a class="interdoc" href="capierr.html">CAPIERR</a> object</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Integer 0 for success; error otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_connectionattr">ConnectionAttr</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Assoc</span> 
+						<span class="PrototypeselfName">ConnectionAttr</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPICONNECT</span> <span class="PrototypeArgumentName">connection</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns attribute information for the specified 
+    database connection.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">connection</span><span class="description"><p>The connection for 
+            which information should be returned.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An assoc containing all the attribute 
+      information for the specified database connection. This assoc will contain 
+      the following information:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Contains</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ConnectionType</td>
+<td>The type of connection (<a class="interdoc" href="#ca_capi_ct_oracle">CT_ORACLE</a>, <a class="unknown" href="#__ct_ctlib">CT_CTLIB</a>, <a class="unknown" href="#__ct_msdblib">CT_MSDBLIB</a>)</td>
+</tr>
+<tr>
+<td>DatabaseType</td>
+<td>An internal constant identifying type of database</td>
+</tr>
+<tr>
+<td>DatabaseServer</td>
+<td>The name of the server for this connection</td>
+</tr>
+<tr>
+<td>DatabaseName</td>
+<td>The name of the database for this connection</td>
+</tr>
+<tr>
+<td>DatabaseUser</td>
+<td>The database user for this connection</td>
+</tr>
+<tr>
+<td>DatabasePWD</td>
+<td>The password for the database connection</td>
+</tr>
+<tr>
+<td>DatabaseAppl</td>
+<td>The internal application name this connection is using</td>
+</tr>
+<tr>
+<td>DatabaseHost</td>
+<td>The host name for the client connection</td>
+</tr>
+<tr>
+<td>Flags</td>
+<td>Internal flags</td>
+</tr>
+<tr>
+<td>Depth</td>
+<td>The current transaction depth (0-n)</td>
+</tr>
+<tr>
+<td>MaxLength</td>
+<td>The maximum length of a character field for the database</td>
+</tr>
+<tr>
+<td>MaxLongLength</td>
+<td>The maximum length of a long data type for the database</td>
+</tr>
+<tr>
+<td>SubQueriesCanAccessBlobs</td>
+<td>TRUE if this database supports sub queries that access blob in a table, otherwise FALSE</td>
+</tr>
+<tr>
+<td>CanInsertSelectWithSameTable</td>
+<td>TRUE if this database supports  inserts statements that use a select on the same table, otherwise FALSE</td>
+</tr>
+<tr>
+<td>CanProcessTree</td>
+<td>TRUE if this database can perform  hierarchical joins in a select statement, otherwise FALSE</td>
+</tr>
+<tr>
+<td>CanExecuteN</td>
+<td>TRUE if this database can execute  a statement multiple times with different parameters, otherwise FALSE</td>
+</tr>
+<tr>
+<td>IsCaseSensitive</td>
+<td>TRUE if this database is case  sensitive, otherwise FALSE</td>
+</tr>
+<tr>
+<td>SupportIdentity</td>
+<td>TRUE if this database supports  identity columns, otherwise FALSE</td>
+</tr>
+<tr>
+<td>IsValid</td>
+<td>TRUE if the connection is still  valid, otherwise FALSE.</td>
+</tr>
+</tbody>
+</table></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_connectioninfo">ConnectionInfo</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">RecArray</span> 
+						<span class="PrototypeselfName">ConnectionInfo</span><span class="PrototypePunctuation">(</span> <span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">CAPICONNECT</span> <span class="PrototypeArgumentName">connect</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns information about one or all of the currently 
+    active connections. If no connection is specified, information about all open 
+    connections is returned.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">connect</span><span class="description"><p>An optional parameter specifying the 
+            connection for which information is desired.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A RecArray containing information 
+      about one or all of the active connections. If an optional connection is 
+      specified, the RecArray will contain only a single row. The columns in the 
+      RecArray are as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Contains</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CONNECT</td>
+<td>The <a class="interdoc" href="capiconnect.html">CAPICONNECT</a> object itself</td>
+</tr>
+<tr>
+<td>SQL</td>
+<td>A reference to the internal SQL object</td>
+</tr>
+<tr>
+<td>CTYPE</td>
+<td>The connection type</td>
+</tr>
+<tr>
+<td>CFLAGS</td>
+<td>Internal flags</td>
+</tr>
+<tr>
+<td>SERVER</td>
+<td>The server name for this connection</td>
+</tr>
+<tr>
+<td>DBNAME</td>
+<td>The database name for this connection</td>
+</tr>
+<tr>
+<td>USER</td>
+<td>The database user for this connection</td>
+</tr>
+<tr>
+<td>PASSWORD</td>
+<td>The password for the database connection</td>
+</tr>
+<tr>
+<td>REFCNT</td>
+<td>The current refcount for this <a class="interdoc" href="capiconnect.html">CAPICONNECT</a> object</td>
+</tr>
+</tbody>
+</table></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_contextdata">ContextData</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Dynamic</span> 
+						<span class="PrototypeselfName">ContextData</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">value</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">valueIn</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Gets or sets application specific information 
+    from a <a class="interdoc" href="capiconnect.html">CAPICONNECT</a> or one of its children. All objects which are derived from 
+    a <a class="interdoc" href="capiconnect.html">CAPICONNECT</a> object (<a class="interdoc" href="capilogin.html">CAPILOGIN</a>, <a class="interdoc" href="dapisession.html">DAPISESSION</a>, <a class="interdoc" href="uapisession.html">UAPISESSION</a>, etc) can hold application 
+    specific information. If the optional second parameter is passed, the context 
+    data for the specified object will be set.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>The Object which is having its context 
+            data either set or fetched.</p></span></div>
+											<div class="Parameter"><span class="name">valueIn</span><span class="description"><p>An optional parameter which,
+            when present, sets the value of the context data besides
+            returning it.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The current value that is stored 
+      as context for the specified object.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_disconnect">Disconnect</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Disconnect</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPICONNECT</span> <span class="PrototypeArgumentName">connection</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Disconnects the <a class="interdoc" href="capiconnect.html">CAPICONNECT</a> from its database. 
+    Note, this does not deallocate the <a class="interdoc" href="capiconnect.html">CAPICONNECT</a>, the <a class="interdoc" href="capiconnect.html">CAPICONNECT</a> will only 
+    be deallocated when it goes out of scope. When a <a class="interdoc" href="capiconnect.html">CAPICONNECT</a> goes out of scope, 
+    it is automatically disconnected from its database.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">connection</span><span class="description"><p>The connection object that is being 
+            disconnected from its database.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Integer 0 if successful; error 
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_endtransaction">EndTransaction</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">EndTransaction</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">connectionOrLogin</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">commitOrRollback</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Ends the current database transaction on the specified 
+    database connection.</p>
+<p>Note that CAPI keeps a running tally of the number 
+    of times that <a class="interdoc" href="#cm_capi_starttransaction">CAPI.StartTransaction()</a> has been called since the last <a class="interdoc" href="#cm_capi_endtransaction">CAPI.EndTransaction()</a>. 
+    In order for a commit to actually take place, the number of StartTransactions 
+    for a given operation must be balanced by an equal number of EndTransactions 
+    and all EndTransactions must pass <a class="interdoc" href="#ca_capi_commit">CAPI.COMMIT</a>. This structure allows multiple 
+    levels of an application to all call StartTransaction and EndTransaction while 
+    still allowing the highest level of the code to maintain ultimate controls 
+    over the transaction. If, at any level, <a class="interdoc" href="#ca_capi_rollback">CAPI.ROLLBACK</a> is passed, the entire 
+    transaction will be rolled back at that point.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">connectionOrLogin</span><span class="description"><p>A <a class="interdoc" href="capiconnect.html">CAPICONNECT</a> or <a class="interdoc" href="capilogin.html">CAPILOGIN</a> object</p></span></div>
+											<div class="Parameter"><span class="name">commitOrRollback</span><span class="description"><p><a class="interdoc" href="#ca_capi_commit">CAPI.COMMIT</a> for a commit, <a class="interdoc" href="#ca_capi_rollback">CAPI.ROLLBACK</a> 
+            to rollback a transaction.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Integer 0 if successful; error 
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_erroption">ErrOption</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">ErrOption</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPIERR</span> <span class="PrototypeArgumentName">err</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flag</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sets the flag controlling clear behavior within a <a class="interdoc" href="capierr.html">CAPIERR</a> 
+    given either the flag <a class="interdoc" href="#ca_capi_err_clear">CAPI.ERR_CLEAR</a>, to clear errors, 
+    or <a class="interdoc" href="#ca_capi_err_keep">CAPI.ERR_KEEP</a> to keep errors when 
+    <a class="interdoc" href="#cm_capi_clearerr">CAPI.ClearErr()</a> is called upon the <a class="interdoc" href="capierr.html">CAPIERR</a>. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">err</span><span class="description"><p>A <a class="interdoc" href="capierr.html">CAPIERR</a>.</p></span></div>
+											<div class="Parameter"><span class="name">flag</span><span class="description"><p>Specifies what to do with the
+            errors within the <a class="interdoc" href="capierr.html">CAPIERR</a>, either <a class="interdoc" href="#ca_capi_err_clear">CAPI.ERR_CLEAR</a> 
+            to clear them or <a class="interdoc" href="#ca_capi_err_keep">CAPI.ERR_KEEP</a> to retain
+            them upon clear.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The current clear flag.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_exec">Exec</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Dynamic</span> 
+						<span class="PrototypeselfName">Exec</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPICONNECT</span> <span class="PrototypeArgumentName">connection</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">statement</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">arg3-n</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Executes a given SQL statement.</p>
+<p>Parameterized statements where each parameter is 
+    denoted by :A<n> may be used for increased performance. When a parameterized 
+    statement is used, the values for the SQL statement parameters are passed as optional 
+    arguments to the builtin function. Alternatively, a single 
+    List may be passed as the third argument, in which case the elements of the list
+    are used as the values for the parameters in the statement. Any number of parameters may
+     be specified in the statement. If specifying a List as 
+    the third argument, no more than three arguments should be passed to the Exec builtin function.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">connection</span><span class="description"><p>The <a class="interdoc" href="capiconnect.html">CAPICONNECT</a> object.</p></span></div>
+											<div class="Parameter"><span class="name">statement</span><span class="description"><p>The SQL statement to be executed.</p></span></div>
+											<div class="Parameter"><span class="name">arg3-n</span><span class="description"><p>Any parameter values required by the 
+            statement.  The values to be used for SQL statment parameters may be passed as 
+            either a single List argument, or as a variable number of arguments, as with 
+            <a class="interdoc" href="str.html#cm_str_format">Str.Format()</a>.  If passing a List of parameter 
+            values, no more than three arguments should be passed to the Exec builtin function.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A <a class="interdoc" href="recarray.html">RecArray</a> if the executed statement is a select 
+      statement, containing rows and columns for all the returned data.</p>
+<p>An Integer value if the executed 
+      statement was a data modification statement, counting the number of
+      rows affected.</p>
+<p>An error otherwise.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here are two short examples:</p>
+<div class="codehilite"><pre><span class="c">// Return all values in myTable</span>
+<span class="kt">Dynamic</span> result <span class="o">=</span> CAPI<span class="o">.</span>Exec<span class="p">(</span> connect<span class="p">,</span> <span class="s">&quot;select * from myTable&quot;</span> <span class="p">)</span>
+
+<span class="c">// Insert the value 1 into myTable</span>
+<span class="kt">Dynamic</span> result <span class="o">=</span> CAPI<span class="o">.</span>Exec<span class="p">(</span> connect<span class="p">,</span> <span class="s">&quot;insert into myTable values ( :A1 )&quot;</span><span class="p">,</span> <span class="m">1</span> <span class="p">)</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_execn">ExecN</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Dynamic</span> 
+						<span class="PrototypeselfName">ExecN</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPICONNECT</span> <span class="PrototypeArgumentName">connection</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">statement</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">RecArray</span> <span class="PrototypeArgumentName">values</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Executes a given SQL statement once for each row in the 
+    RecArray.</p>
+<p>This function is most useful for efficiently executing 
+    the same parameterized statement multiple times with different values. For 
+    example, a parameterized insert or update statement may be executed 20 times 
+    with different values for its parameters based on the 20 rows in the passed 
+    in RecArray.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">connection</span><span class="description"><p>The <a class="interdoc" href="capiconnect.html">CAPICONNECT</a> object.</p></span></div>
+											<div class="Parameter"><span class="name">statement</span><span class="description"><p>The SQL statement to be executed.</p></span></div>
+											<div class="Parameter"><span class="name">values</span><span class="description"><p>A RecArray for containing the substitution 
+            values for the parameters in the statement.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>On success, an integer representing 
+      the number of rows effected by the SQL statement, otherwise an error.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_execsp">ExecSP</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Dynamic</span> 
+						<span class="PrototypeselfName">ExecSP</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPICONNECT</span> <span class="PrototypeArgumentName">connection</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">statement</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">arg3-n</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Executes a given SQL statement which will execute 
+    a stored procedure.</p>
+<p>Parameterized statements where each parameter is 
+    denoted by :A<n> may be used for increased performance. When a parameterized 
+    statement is used, the value for the parameters are passed as optional parameters.  Any number of parameters may be specified in the statement.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">connection</span><span class="description"><p>The <a class="interdoc" href="capiconnect.html">CAPICONNECT</a> 
+            object.</p></span></div>
+											<div class="Parameter"><span class="name">statement</span><span class="description"><p>The SQL statement to be executed.</p></span></div>
+											<div class="Parameter"><span class="name">arg3-n</span><span class="description"><p>Any parameter values required by the 
+            statement.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A RecArray if the executed stored 
+      procedure returns tabular data, containing rows and columns for all the 
+      returned data.</p>
+<p>An Integer value if the executed 
+      statement was a data modification statement, counting the number of rows 
+      affected.</p>
+<p>An error otherwise.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is a short examples:</p>
+<div class="codehilite"><pre><span class="c">// Who is logged onto the DBMS</span>
+<span class="kt">Dynamic</span> result <span class="o">=</span> CAPI<span class="o">.</span>ExecSP<span class="p">(</span> connect<span class="p">,</span> <span class="s">&quot;sp_who&quot;</span> <span class="p">)</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_getdetailat">GetDetailAt</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">GetDetailAt</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPIERR</span> <span class="PrototypeArgumentName">err</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">index</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Retrieves the detail information associated with 
+    a specified error. </p>
+<p>This function is often used in looping constructs 
+    to examine all errors currently stored in a specified error object. Use 
+    <a class="interdoc" href="#cm_capi_numerrs">CAPI.NumErrs()</a> to retrieve the total number of errors stored in the 
+    error object.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">err</span><span class="description"><p>The <a class="interdoc" href="capierr.html">CAPIERR</a> object.</p></span></div>
+											<div class="Parameter"><span class="name">index</span><span class="description"><p>The index location of the desired error 
+            in the error stack.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A string containing the detail information 
+      for the specified error, undefined if no detail exists.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_geterrat">GetErrAt</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Error</span> 
+						<span class="PrototypeselfName">GetErrAt</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPIERR</span> <span class="PrototypeArgumentName">err</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">index</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Retrieves the identified error from the specified 
+    error object. </p>
+<p>This is often used in looping constructs 
+    to examine all errors currently stored in a specified error object. Use 
+    <a class="interdoc" href="#cm_capi_numerrs">CAPI.NumErrs()</a> to retrieve the total number 
+    of errors stored in the error object.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">err</span><span class="description"><p>The <a class="interdoc" href="capierr.html">CAPIERR</a> object.</p></span></div>
+											<div class="Parameter"><span class="name">index</span><span class="description"><p>The index location of the desired error 
+            in the error stack.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The specified error, if successful; 
+      Undefined otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_inidelete">IniDelete</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">IniDelete</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPILOGIN</span> <span class="PrototypeArgumentName">login</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">section</span><span class="PrototypePunctuation">]</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">keyword</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Does nothing if no optional parameters are provided. If the optional keyword parameter 
+    is not passed, all values in the specified section will be deleted.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">login</span><span class="description"><p>The <a class="interdoc" href="capilogin.html">CAPILOGIN</a> object.</p></span></div>
+											<div class="Parameter"><span class="name">section</span><span class="description"><p>An optional string specifying the section 
+            to affect in the KIni table.</p></span></div>
+											<div class="Parameter"><span class="name">keyword</span><span class="description"><p>An optional string specifying the keyword 
+            to delete from the specified section.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An Integer 0 if successful, an error 
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_iniget">IniGet</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Dynamic</span> 
+						<span class="PrototypeselfName">IniGet</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPILOGIN</span> <span class="PrototypeArgumentName">login</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">section</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">keyword</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">dftValue</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Retrieves the value associated with the specified 
+    section and keyword from the KIni table. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">login</span><span class="description"><p>The <a class="interdoc" href="capilogin.html">CAPILOGIN</a> object.</p></span></div>
+											<div class="Parameter"><span class="name">section</span><span class="description"><p>The section in the KIni table where 
+            the keyword is located.</p></span></div>
+											<div class="Parameter"><span class="name">keyword</span><span class="description"><p>The keyword for the value to be returned</p></span></div>
+											<div class="Parameter"><span class="name">dftValue</span><span class="description"><p>A default value to be returned if the 
+            specified section and keyword pair cannot be found.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The value associated with the specified 
+      keyword, if successful; Error otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_inilist">IniList</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">RecArray</span> 
+						<span class="PrototypeselfName">IniList</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPILOGIN</span> <span class="PrototypeArgumentName">login</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">section</span><span class="PrototypePunctuation">]</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">keyword</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns all keyword values in the specified section 
+    of the KIni table.</p>
+<p>If the optional section parameter is not passed, 
+    all the data from the KIni table will be returned.</p>
+<p>If the optional keyword parameter is not passed, 
+    all the data from the section in the KIni table will be returned.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">login</span><span class="description"><p>The <a class="interdoc" href="capilogin.html">CAPILOGIN</a> object.</p></span></div>
+											<div class="Parameter"><span class="name">section</span><span class="description"><p>An optional parameter specifying the 
+            section to be listed from the KIni table.</p></span></div>
+											<div class="Parameter"><span class="name">keyword</span><span class="description"><p>An optional parameter specifying the 
+            keyword to be listed in the section from the KIni table.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A RecArray containing the information 
+      requested if successful; Error otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_iniput">IniPut</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">IniPut</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPILOGIN</span> <span class="PrototypeArgumentName">login</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">section</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">keyword</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">value</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Allows values to be added into the KIni table 
+    or to overwrite existing information. </p>
+<p>If the value parameter is not passed, the section/keyword 
+    value will be set to NULL in the database.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">login</span><span class="description"><p>The <a class="interdoc" href="capilogin.html">CAPILOGIN</a> object.</p></span></div>
+											<div class="Parameter"><span class="name">section</span><span class="description"><p>The section where the value will be 
+            inserted.</p></span></div>
+											<div class="Parameter"><span class="name">keyword</span><span class="description"><p>The keyword for the value.</p></span></div>
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>An optional value to be inserted for 
+            the section and keyword.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The Integer 0 if successful; Error 
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_isvalid">IsValid</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">IsValid</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPICONNECT</span> <span class="PrototypeArgumentName">connection</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Checks to ensure a previously established database 
+    connection is still valid. </p>
+<p>This  is very useful for determining cases 
+    where the database connection has unexpectedly dropped due to network or database 
+    server problems.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">connection</span><span class="description"><p>The <a class="interdoc" href="capiconnect.html">CAPICONNECT</a> object.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>TRUE if the connection is still 
+      valid, False otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_log">Log</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Dynamic</span> 
+						<span class="PrototypeselfName">Log</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPILOG</span> <span class="PrototypeArgumentName">log</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">message</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Writes the specified INFO message to the connection 
+    log file. This is an alias of LogInfo</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">log</span><span class="description"><p>The <a class="interdoc" href="capilog.html">CAPILOG</a> object.</p></span></div>
+											<div class="Parameter"><span class="name">message</span><span class="description"><p>The message to be written to the log 
+            file.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The Integer 0 if successful; Error 
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_logerror">LogError</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Dynamic</span> 
+						<span class="PrototypeselfName">LogError</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPILOG</span> <span class="PrototypeArgumentName">log</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">message</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Writes the specified ERROR message to the connection 
+    log file. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">log</span><span class="description"><p>The <a class="interdoc" href="capilog.html">CAPILOG</a> object.</p></span></div>
+											<div class="Parameter"><span class="name">message</span><span class="description"><p>The error message to be written to the log 
+            file.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The Integer 0 if successful; Error 
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_loginfo">LogInfo</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Dynamic</span> 
+						<span class="PrototypeselfName">LogInfo</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPILOG</span> <span class="PrototypeArgumentName">log</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">message</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Writes the specified INFO message to the connection 
+    log file. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">log</span><span class="description"><p>The <a class="interdoc" href="capilog.html">CAPILOG</a> object.</p></span></div>
+											<div class="Parameter"><span class="name">message</span><span class="description"><p>The info message to be written to the log 
+            file.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The Integer 0 if successful; Error 
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_logininfo">LoginInfo</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">RecArray</span> 
+						<span class="PrototypeselfName">LoginInfo</span><span class="PrototypePunctuation">(</span> <span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">CAPILOGIN</span> <span class="PrototypeArgumentName">login</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns information about one or all of the currently 
+    active logins. If no login is specified, information about all current logins 
+    is returned</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">login</span><span class="description"><p>An optional parameter specifying the 
+            login for which information is desired.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A RecArray containing information 
+      about one or all of the active logins. If an optional login is specified, 
+      the RecArray will contain only a single row. The columns in the RecArray 
+      are as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LOGIN</td>
+<td>The <a class="interdoc" href="capilogin.html">CAPILOGIN</a> object itself</td>
+</tr>
+<tr>
+<td>CONNECT</td>
+<td>The <a class="interdoc" href="capiconnect.html">CAPICONNECT</a> that this login was allocated from.</td>
+</tr>
+<tr>
+<td>USERNAME</td>
+<td>The Livelink user</td>
+</tr>
+<tr>
+<td>USERPWD</td>
+<td>The password for the Livelink user</td>
+</tr>
+<tr>
+<td>USERID</td>
+<td>The unique ID for this user</td>
+</tr>
+<tr>
+<td>GROUPID</td>
+<td>The default group for this user</td>
+</tr>
+<tr>
+<td>PRIVS</td>
+<td>The privileges for this user</td>
+</tr>
+<tr>
+<td>REFCNT</td>
+<td>The current refcount for this <a class="interdoc" href="capilogin.html">CAPILOGIN</a> object</td>
+</tr>
+</tbody>
+</table></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_logwarn">LogWarn</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Dynamic</span> 
+						<span class="PrototypeselfName">LogWarn</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPILOG</span> <span class="PrototypeArgumentName">log</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">message</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Writes the specified WARN message to the connection 
+    log file. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">log</span><span class="description"><p>The <a class="interdoc" href="capilog.html">CAPILOG</a> object.</p></span></div>
+											<div class="Parameter"><span class="name">message</span><span class="description"><p>The warning message to be written to the log 
+            file.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The Integer 0 if successful; Error 
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_now">Now</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Date</span> 
+						<span class="PrototypeselfName">Now</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPICONNECT</span> <span class="PrototypeArgumentName">connect</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the current date and time for the database 
+    server specified by the <a class="interdoc" href="capiconnect.html">CAPICONNECT</a>. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">connect</span><span class="description"><p>The <a class="interdoc" href="capiconnect.html">CAPICONNECT</a> object indicating the 
+            database server for which the current date and time is returned.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The current date and time of the 
+      database server, if successful; Error otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_numerrs">NumErrs</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">NumErrs</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPIERR</span> <span class="PrototypeArgumentName">error</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Determines the number of errors stored in the 
+    specified error object. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">error</span><span class="description"><p>The <a class="interdoc" href="capierr.html">CAPIERR</a> object for which the number 
+            of errors is returned.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An Integer indicating the number 
+      of errors currently stored in the specified error object, if successful; 
+      Undefined otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_parent">Parent</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Dynamic</span> 
+						<span class="PrototypeselfName">Parent</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">value</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Retrieves the parent object for the specified 
+    object. For example, <a class="interdoc" href="capilogin.html">CAPILOGIN</a> objects will return their associated <a class="interdoc" href="capiconnect.html">CAPICONNECT</a> 
+    object. <a class="interdoc" href="dapisession.html">DAPISESSION</a> objects, <a class="interdoc" href="uapisession.html">UAPISESSION</a> objects and <a class="interdoc" href="wapisession.html">WAPISESSION</a> objects will 
+    return their associated <a class="interdoc" href="capilogin.html">CAPILOGIN</a> object.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>The object for which the parent object 
+            is desired.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The parent connection of the specified 
+      object, if successful; Error otherwise. The connection type of the parent 
+      is determined by the object specified in the following way:</p>
+<table>
+<thead>
+<tr>
+<th>Object</th>
+<th>Parent type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="interdoc" href="capilogin.html">CAPILOGIN</a></td>
+<td>A <a class="interdoc" href="capiconnect.html">CAPICONNECT</a> object</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="dapisession.html">DAPISESSION</a></td>
+<td>A <a class="interdoc" href="capilogin.html">CAPILOGIN</a> object</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="uapisession.html">UAPISESSION</a></td>
+<td>A <a class="interdoc" href="capilogin.html">CAPILOGIN</a> object</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="wapisession.html">WAPISESSION</a></td>
+<td>A <a class="interdoc" href="capilogin.html">CAPILOGIN</a> object</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="dapinode.html">DAPINODE</a></td>
+<td>A <a class="interdoc" href="dapisession.html">DAPISESSION</a> object</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="dapiversion.html">DAPIVERSION</a></td>
+<td>A <a class="interdoc" href="dapinode.html">DAPINODE</a> object</td>
+</tr>
+</tbody>
+</table></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_restarttransaction">RestartTransaction</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">RestartTransaction</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">connectOrLogin</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">status</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Restarts a database transaction that was previously 
+    started by <a class="interdoc" href="#cm_capi_starttransaction">CAPI.StartTransaction()</a>, 
+    preserving the current transaction depth. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">connectOrLogin</span><span class="description"><p>The <a class="interdoc" href="capiconnect.html">CAPICONNECT</a> or <a class="interdoc" href="capilogin.html">CAPILOGIN</a> owning 
+            the transaction.</p></span></div>
+											<div class="Parameter"><span class="name">status</span><span class="description"><p>A constant indicating what action to 
+            perform on the specified transaction. Acceptable values are 
+            <a class="interdoc" href="#ca_capi_commit">CAPI.COMMIT</a> and <a class="interdoc" href="#ca_capi_rollback">CAPI.ROLLBACK</a>.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The Integer 0 if successful; Error 
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_rightslist">RightsList</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">RecArray</span> 
+						<span class="PrototypeselfName">RightsList</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPILOGIN</span> <span class="PrototypeArgumentName">login</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">proxyType</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a RecArray containing the ID numbers of 
+    all groups and projects of which the specified user is a member. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">login</span><span class="description"><p>The <a class="interdoc" href="capilogin.html">CAPILOGIN</a> 
+            object for the user.</p></span></div>
+											<div class="Parameter"><span class="name">proxyType</span><span class="description"><p>The proxy type. The default is <a class="interdoc" href="#ca_capi_proxy_none">CAPI.PROXY_NONE</a>.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A RecArray containing the ID numbers 
+      of those projects and groups of which the specified user is a member. The 
+      fields returned are as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Contains</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>The name of the right.</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>The type of the right.</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>A description of the right.</td>
+</tr>
+</tbody>
+</table></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_rightsset">RightsSet</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Assoc</span> 
+						<span class="PrototypeselfName">RightsSet</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPILOGIN</span> <span class="PrototypeArgumentName">login</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns an assoc with keys containing the rights 
+    ID of the current user.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">login</span><span class="description"><p>The <a class="interdoc" href="capilogin.html">CAPILOGIN</a> 
+            object for the user.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An assoc with keys of right IDs.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_rightsstring">RightsString</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">RightsString</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPILOGIN</span> <span class="PrototypeArgumentName">login</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">columnName</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a string containing all the right ids 
+    for the specified user formatted for use in an SQL statement's "where" clause. 
+    The column name in the second parameter will be used to format the "where" clause.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">login</span><span class="description"><p>The <a class="interdoc" href="capilogin.html">CAPILOGIN</a>
+            object for the specified user. </p></span></div>
+											<div class="Parameter"><span class="name">columnName</span><span class="description"><p>The column name to use when formatting 
+            the string.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A string containing all the right 
+      ids for the specified user formatted for use in an SQL statement's "where" 
+      clause.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_starttransaction">StartTransaction</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">StartTransaction</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">connectOrLogin</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">numberOfIds</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Begins a new database transaction on the specified 
+    <a class="interdoc" href="capiconnect.html">CAPICONNECT</a> or <a class="interdoc" href="capilogin.html">CAPILOGIN</a>. 
+    If a <a class="interdoc" href="capilogin.html">CAPILOGIN</a> is specified, the connection used 
+    to allocate the login will be used in the transaction. The optional second 
+    parameter is useful for specifying the number of unique database ids this 
+    transaction will use. If the number of unique ids in a given user's cache 
+    is exhausted during the transaction, locking problems on the KID table may 
+    result.</p>
+<p>Transactions created via the CAPI interface are 
+    reference counted. This means that the initial call to StartTransaction will 
+    actually begin the transaction and subsequent calls to StartTransaction, made 
+    before an EndTransaction, will simply increment a count. This way, multiple 
+    levels of an application can implement transaction control without having 
+    to be aware of the controlling code.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">connectOrLogin</span><span class="description"><p>The <a class="interdoc" href="capiconnect.html">CAPICONNECT</a> or <a class="interdoc" href="capilogin.html">CAPILOGIN</a> to be 
+            used for the transaction.</p></span></div>
+											<div class="Parameter"><span class="name">numberOfIds</span><span class="description"><p>The number of unique ids to reserve 
+            for this transaction.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The Integer 0 if successful; Error 
+      otherwise.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is an example:</p>
+<div class="codehilite"><pre><span class="kt">Integer</span>     status
+
+status <span class="o">=</span> CAPI<span class="o">.</span>StartTransaction<span class="p">(</span> myConnect <span class="p">)</span> <span class="c">// A transaction starts.  Refcount=1</span>
+<span class="o">...</span>
+MyFunction<span class="p">(</span> myConnect <span class="p">)</span>             <span class="c">// Call a subroutine</span>
+<span class="o">...</span>
+CAPI<span class="o">.</span>EndTransaction<span class="p">(</span> myConnect<span class="p">,</span> CAPI<span class="o">.</span>COMMIT <span class="p">)</span>   <span class="c">// The transaction is actually committed</span>
+
+<span class="k">Function</span> MyFunction<span class="p">(</span> CAPICONNECT connect <span class="p">)</span>
+    <span class="kt">Integer</span> status
+
+    status <span class="o">=</span> CAPI<span class="o">.</span>StartTransaction<span class="p">(</span> connect <span class="p">)</span>   <span class="c">// Transaction refcount goes to 2</span>
+    <span class="o">...</span>
+    CAPI<span class="o">.</span>EndTransaction<span class="p">(</span> myConnect<span class="p">,</span> CAPI<span class="o">.</span>COMMIT <span class="p">)</span>   <span class="c">// The refcount drops back to 1</span>
+<span class="k">end</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_transactiondepth">TransactionDepth</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">TransactionDepth</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">connectOrLogin</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Determines the current transaction depth or the 
+    current refCount for the specified connection or login. If a login is specified, 
+    the connection that is associated with the login will be used.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">connectOrLogin</span><span class="description"><p>The <a class="interdoc" href="capiconnect.html">CAPICONNECT</a>
+            or <a class="interdoc" href="capilogin.html">CAPILOGIN</a> to be used for the transaction</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An Integer representing the current 
+      transaction depth; Error otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_uniqueid">UniqueID</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">UniqueID</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">connectOrLogin</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">unused</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">numIds</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Generates a new, unique ID from the internal Livelink 
+    ID cache. Each unique ID that is generated will be unique across the entire 
+    Livelink database. If the optional numIds parameter is used, the first id 
+    that was allocated will be returned but, the next <i>n</i> ids will be in consecutive 
+    order.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">connectOrLogin</span><span class="description"><p>The <a class="interdoc" href="capiconnect.html">CAPICONNECT</a> 
+            or <a class="interdoc" href="capilogin.html">CAPILOGIN</a> to be used for the transaction.</p></span></div>
+											<div class="Parameter"><span class="name">unused</span><span class="description"><p>This parameter is no longer used. 
+            It should be 0.</p></span></div>
+											<div class="Parameter"><span class="name">numIds</span><span class="description"><p>The number of unique ids to be allocated.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The ID that was generated; Error 
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_updaterights">UpdateRights</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">UpdateRights</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPILOGIN</span> <span class="PrototypeArgumentName">login</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Updates the rights list that is cached by the 
+    specified login. This call is useful for making sure that the rights list 
+    inside of a specified login remains in sync with the actual data in the Livelink 
+    database.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">login</span><span class="description"><p>The <a class="interdoc" href="capilogin.html">CAPILOGIN</a> which is to be refreshed.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The Integer 0 if successful; Error 
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_userid">UserID</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">UserID</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPILOGIN</span> <span class="PrototypeArgumentName">login</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">userId</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the specified user's ID or allows an administrator 
+    to log-in as a particular user. If the optional userId is specified and the 
+    login is the Administrator's login, the Administrator login will be changed 
+    to represent a login for the specified user Id.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">login</span><span class="description"><p>The <a class="interdoc" href="capilogin.html">CAPILOGIN</a> for the user to be examined.</p></span></div>
+											<div class="Parameter"><span class="name">userId</span><span class="description"><p>The user ID that the Administrator 
+            requests to login as.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An Integer indicating the user ID, 
+      if successful; Error otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_userightsstring">UseRightsString</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">UseRightsString</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPILOGIN</span> <span class="PrototypeArgumentName">login</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns TRUE if the rights string query with multiple 
+    in clauses can be used for this current user.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">login</span><span class="description"><p>The <a class="interdoc" href="capilogin.html">CAPILOGIN</a> 
+            for the user to be examined.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A boolean indicating if the rights 
+      string query with multiple in clauses can be used.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_capi_userinfo">UserInfo</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">RecArray</span> 
+						<span class="PrototypeselfName">UserInfo</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPILOGIN</span> <span class="PrototypeArgumentName">login</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns information about the current user for 
+    the specified <a class="interdoc" href="capilogin.html">CAPILOGIN</a> object.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">login</span><span class="description"><p>The <a class="interdoc" href="capilogin.html">CAPILOGIN</a> for the user to be examined.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A RecArray containing a single record 
+      which will have the following fields: </p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td><a class="interdoc" href="integer.html">Integer</a></td>
+</tr>
+<tr>
+<td>OWNERID</td>
+<td><a class="interdoc" href="integer.html">Integer</a></td>
+</tr>
+<tr>
+<td>TYPE</td>
+<td><a class="interdoc" href="integer.html">Integer</a></td>
+</tr>
+<tr>
+<td>NAME</td>
+<td><a class="interdoc" href="string.html">String</a></td>
+</tr>
+<tr>
+<td>USERDATA</td>
+<td><a class="interdoc" href="dynamic.html">Dynamic</a></td>
+</tr>
+<tr>
+<td>USERPWD</td>
+<td><a class="interdoc" href="dynamic.html">Dynamic</a></td>
+</tr>
+<tr>
+<td>GROUPID</td>
+<td><a class="interdoc" href="integer.html">Integer</a></td>
+</tr>
+<tr>
+<td>USERPRIVILEGES</td>
+<td><a class="interdoc" href="integer.html">Integer</a></td>
+</tr>
+<tr>
+<td>LASTNAME</td>
+<td><a class="interdoc" href="string.html">String</a></td>
+</tr>
+<tr>
+<td>MIDDLENAME</td>
+<td><a class="interdoc" href="string.html">String</a></td>
+</tr>
+<tr>
+<td>FIRSTNAME</td>
+<td><a class="interdoc" href="string.html">String</a></td>
+</tr>
+<tr>
+<td>MAILADDRESS</td>
+<td><a class="interdoc" href="string.html">String</a></td>
+</tr>
+<tr>
+<td>GROUPOWNERID</td>
+<td><a class="interdoc" href="integer.html">Integer</a></td>
+</tr>
+<tr>
+<td>GROUPTYPE</td>
+<td><a class="interdoc" href="integer.html">Integer</a></td>
+</tr>
+<tr>
+<td>GROUPNAME</td>
+<td><a class="interdoc" href="string.html">String</a></td>
+</tr>
+<tr>
+<td>GROUPUSERDATA</td>
+<td><a class="interdoc" href="dynamic.html">Dynamic</a></td>
+</tr>
+</tbody>
+</table></div>
+							</div>
+						</div>
+				</div>
+		
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2018 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+
+
+
+</div>
+	</div>						
+						
+
+</div>
+
+</body></html>

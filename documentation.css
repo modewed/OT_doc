@@ -1,0 +1,81 @@
+.Whatever {}
+.BodyStyle { background-color: white; color: black }
+.ClassLabel { font-family: arial, helvetica, sans-serif }
+.ClassName { font-family: arial, helvetica, sans-serif }
+.ClassDescription {}
+.ClassHierarchy {}
+.ClassHierarchyHeader { font-family: arial, helvetica, sans-serif; font-weight: bold; font-size: small }
+.IndexClassAttributeName { font-family: arial, helvetica, sans-serif; font-weight: bold; color: maroon }
+.IndexClassAttributeDescription {}
+.IndexClassMethodsName { font-family: arial, helvetica, sans-serif; font-weight: bold; font-size: 10pt }
+.IndexClassMethodsDescription {}
+.IndexClassMethodProto { font-style: italic; color: purple }
+.IndexInstanceMethodsName { font-family: arial, helvetica, sans-serif; font-weight: bold }
+.IndexInstanceMethodsDescription { font-family: "Bookman Old Style", cursive; color: purple }
+.IndexInstanceMethodProto { font-family: arial, helvetica, sans-serif; color: purple }
+.IndexInstanceAttributeName{ font-family: arial, helvetica, sans-serif; font-weight: bold; font-size : 10pt }
+.IndexInstanceAttributeDescription {}
+.Modifier { color: #C0C }
+.ClassAttribute {}
+.ClassAttributeName { font-family: arial, helvetica, sans-serif; font-weight: bold; font-size: 10pt }
+.ClassAttributeType { color: green }
+.ClassAttributeDescription { padding-left: 40px }
+.InstanceAttribute { color: #630 }
+.InstanceAttributeName { font-family: arial, helvetica, sans-serif; font-weight: bold; color: #630 }
+.InstanceAttributeType { color: green; color: #630 }
+.InstanceAttributeDescription { padding-left: 40px; font-family: "Bookman Old Style", cursive; color: #630 }
+.MethodBlock { padding-left: 40px }
+.MethodName { font-family: arial, helvetica, sans-serif; font-weight: bold; font-size: 10pt }
+.MethodDescription {}
+.MethodRemarks { font-family: "Bookman Old Style", cursive }
+.MethodReturnValueDescription {}
+.ParameterName { color: teal }
+.ParameterType { color: green }
+.ParameterInOut { color: red }
+.ParameterDescription {}
+.ParameterReference { color: #069 }
+.PrototypeMethodName { font-family: arial, helvetica, sans-serif }
+.PrototypeReturnValueType { font-style: italic; color: green }
+.PrototypeArgumentName { font-style: italic; color: teal }
+.PrototypeArgumentType { font-style: italic; color: green }
+.PrototypeArgumentInOut { font-style: italic; color: red }
+.PrototypePunctuation { color: red }
+.SeeAlso {}
+.Copyright { font-family: arial, helvetica, sans-serif; font-size: 8pt }
+.CopyrightTable { width: 100% }
+.CopyrightCell { white-space: nowrap; vertical-align: middle; background-color: #CCC; font-family: arial, helvetica, sans-serif; color: #666; font-size: 9pt }
+.MastheadTable { width: 100%; background-color: #039; font-family: arial, helvetica, sans-serif }
+.MastheadTitle { font-family: arial, helvetica, sans-serif; font-size: 12pt; color: white }
+.MastheadTitle1 { font-family: arial, helvetica, sans-serif; font-size: 10pt; color: white }
+.MastheadTitle2 { font-family: arial, helvetica, sans-serif; font-size: 12pt; font-weight: bold; color: white }
+.ExampleCode { font-size: 10pt; font-family: monospace; color: maroon }
+.ExampleOutput { font-size: 10pt; font-family: monospace; font-style: italic; color: purple }
+.ReturnsLabel { font-weight: bold; color: black }
+.ParametersLabel { font-weight: bold; color: black }
+.PackageClassList {}
+.PackagesList {}
+.PackageListHeader { font-family: arial, helvetica, sans-serif; font-size: 10pt; background-color: #CCC; white-space: nowrap; vertical-align: bottom; text-align: left}
+.PackageListName { white-space: nowrap; vertical-align: top; text-align: left }
+.PackageListDescr { vertical-align: top; text-align: left }
+.LAPIList {}
+.Deprecated { font-variant: small-caps; color: red }
+.InternalUseOnly { font-variant: small-caps; color: red }
+DIV.LocationLink { font-family: Verdana, arial, helvetica, sans-serif; font-weight : bold; font-size: 10pt }
+A.LocationLink { font-family: Verdana, arial, helvetica, sans-serif; font-weight : bold; font-size: 10pt }
+.DocNote { font-size: 12pt; font-family: arial, helvetica, sans-serif; font-weight: bold }
+.DocHeading1 { background-color: white; color: black; font-family: arial, helvetica, sans-serif; font-weight: bold; font-size: 16pt }
+.DocHeading2 { background-color: white; color: black; font-family: arial, helvetica, sans-serif; padding-left: 15pt; font-weight: bold; font-size: 14pt; }
+.DocHeading3 { background-color: white; color: black; font-family: arial, helvetica, sans-serif; padding-left: 30pt; font-weight: bold; font-size: 12pt; }
+.DocMono { font-family: monospace; font-size: 11pt }
+.DocBody1 { background-color: white; color: black; font-size: 12pt } 
+.DocBody2 { background-color: white; color: black; font-size: 12pt; padding-left: 15pt; } 
+.DocBody3 { background-color: white; color: black; font-size: 12pt; padding-left: 30pt; } 
+.DocBold { font-size: 12pt; font-weight: bold }
+.DocItalic { font-size: 12pt; font-style: italic }
+.DocCaption { background-color: white; color: black; font-size: 12pt; font-weight: bold; font-style: italic }
+.DocInf { background-color: white; color: black; font-size: 12pt; font-weight: bold }
+.DocMonoItalic { font-family: monospace; font-size: 11pt; font-style: italic }
+.DocMonoBold { font-family: monospace; font-size: 11pt; font-weight: bold }
+.LAPIHeading5 { font-family: arial, helvetica, san-serif; font-weight: bold; font-size: 14pt }
+.LAPIHeading6 { font-family: arial, helvetica, san-serif; font-weight: bold; font-size: 10pt }
+

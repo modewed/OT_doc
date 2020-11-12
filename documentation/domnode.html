@@ -1,0 +1,879 @@
+
+<meta charset="UTF-8">
+<html>
+<head><title>Class: DOMNode</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../syntax.css" type="text/css">
+<link rel="stylesheet" href="builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td  align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody></table>
+
+<div id="document">
+	
+<div class="sidebar_container">
+		
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink"><a href="assoc.html">Assoc</a></div>
+				<div class="packagelink"><a href="boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="builder.html">Builder</a></div>
+				<div class="packagelink"><a href="bytes.html">Bytes</a></div>
+				<div class="packagelink"><a href="capi.html">CAPI</a></div>
+				<div class="packagelink"><a href="capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink"><a href="cachetree.html">CacheTree</a></div>
+				<div class="packagelink"><a href="compiler.html">Compiler</a></div>
+				<div class="packagelink"><a href="core.html">Core</a></div>
+				<div class="packagelink"><a href="dapi.html">DAPI</a></div>
+				<div class="packagelink"><a href="dapinode.html">DAPINODE</a></div>
+				<div class="packagelink"><a href="dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink"><a href="dapiversion.html">DAPIVERSION</a></div>
+				<div class="packagelink"><a href="domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="domcomment.html">DOMComment</a></div>
+				<div class="packagelink"><a href="domdocument.html">DOMDocument</a></div>
+				<div class="packagelink"><a href="domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink"><a href="domelement.html">DOMElement</a></div>
+				<div class="packagelink"><a href="domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink"><a href="domnamednodemap.html">DOMNamedNodeMap</a></div>
+				<div class="packagelink curPage">DOMNode</div>
+				<div class="packagelink"><a href="domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="domtext.html">DOMText</a></div>
+				<div class="packagelink"><a href="date.html">Date</a></div>
+				<div class="packagelink"><a href="dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="env.html">Env</a></div>
+				<div class="packagelink"><a href="error.html">Error</a></div>
+				<div class="packagelink"><a href="file.html">File</a></div>
+				<div class="packagelink"><a href="filecopy.html">FileCopy</a></div>
+				<div class="packagelink"><a href="fileprefs.html">Fileprefs</a></div>
+				<div class="packagelink"><a href="frame.html">Frame</a></div>
+				<div class="packagelink"><a href="global.html">Global</a></div>
+				<div class="packagelink"><a href="integer.html">Integer</a></div>
+				<div class="packagelink"><a href="javaobject.html">JavaObject</a></div>
+				<div class="packagelink"><a href="language.html">Language</a></div>
+				<div class="packagelink"><a href="license.html">License</a></div>
+				<div class="packagelink"><a href="list.html">List</a></div>
+				<div class="packagelink"><a href="logging.html">Logging</a></div>
+				<div class="packagelink"><a href="long.html">Long</a></div>
+				<div class="packagelink"><a href="mailmessage.html">MailMessage</a></div>
+				<div class="packagelink"><a href="math.html">Math</a></div>
+				<div class="packagelink"><a href="memcached.html">Memcached</a></div>
+				<div class="packagelink"><a href="notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="object.html">Object</a></div>
+				<div class="packagelink"><a href="pop3session.html">POP3Session</a></div>
+				<div class="packagelink"><a href="patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="patfind.html">PatFind</a></div>
+				<div class="packagelink"><a href="pattern.html">Pattern</a></div>
+				<div class="packagelink"><a href="point.html">Point</a></div>
+				<div class="packagelink"><a href="profiler.html">Profiler</a></div>
+				<div class="packagelink"><a href="real.html">Real</a></div>
+				<div class="packagelink"><a href="recarray.html">RecArray</a></div>
+				<div class="packagelink"><a href="record.html">Record</a></div>
+				<div class="packagelink"><a href="regex.html">Regex</a></div>
+				<div class="packagelink"><a href="restclient.html">RestClient</a></div>
+				<div class="packagelink"><a href="saxparser.html">SAXParser</a></div>
+				<div class="packagelink"><a href="smtpsession.html">SMTPSession</a></div>
+				<div class="packagelink"><a href="ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="script.html">Script</a></div>
+				<div class="packagelink"><a href="security.html">Security</a></div>
+				<div class="packagelink"><a href="set.html">Set</a></div>
+				<div class="packagelink"><a href="socket.html">Socket</a></div>
+				<div class="packagelink"><a href="sql.html">Sql</a></div>
+				<div class="packagelink"><a href="sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink"><a href="str.html">Str</a></div>
+				<div class="packagelink"><a href="string.html">String</a></div>
+				<div class="packagelink"><a href="system.html">System</a></div>
+				<div class="packagelink"><a href="uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="void.html">Void</a></div>
+				<div class="packagelink"><a href="wapi.html">WAPI</a></div>
+				<div class="packagelink"><a href="wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink"><a href="web.html">Web</a></div>
+				<div class="packagelink"><a href="xslprocessor.html">XSLProcessor</a></div>
+				<div class="packagelink"><a href="zip.html">Zip</a></div>
+		</div>
+</div>
+
+	<div class="content_container">
+		<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+		<h1>Class: DOMNode</h1><div class="ClassDescription"><p>The DOMNode interface is the primary datatype for    the entire Document Object Model. It represents a single node in the document    tree. While all objects implementing the Node interface expose methods for dealing    with children, not all objects implementing the Node interface may have children.    For example, Text nodes may not have children, and adding children to such nodes    results in a DOMException being raised. The attributes nodeName, nodeValue and    attributes are included as a mechanism to get at node information without casting    down to the specific derived interface. In cases where there is no obvious mapping    of these attributes for a specific nodeType (e.g., nodeValue for an Element    or attributes for a Comment), this returns null. Note that the specialized interfaces    may contain additional and more convenient mechanisms to get and set the relevant    information. </p></div>
+			<h2>Class Attributes</h2>
+			<div class="ClassAttributesShort">
+				
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_domnode_attribute_node">ATTRIBUTE_NODE</a></div>
+					<div class="Description"><p>The node is a DOMAttr.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_domnode_cdata_section_node">CDATA_SECTION_NODE</a></div>
+					<div class="Description"><p>The node is a DOMCDATASection.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_domnode_comment_node">COMMENT_NODE</a></div>
+					<div class="Description"><p>The node is a DOMComment.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_domnode_document_fragment_node">DOCUMENT_FRAGMENT_NODE</a></div>
+					<div class="Description"><p>The node is a DOMDocumentFragment.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_domnode_document_node">DOCUMENT_NODE</a></div>
+					<div class="Description"><p>The node is a DOMDocument.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_domnode_document_type_node">DOCUMENT_TYPE_NODE</a></div>
+					<div class="Description"><p>The node is a DOMDocumentType.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_domnode_element_node">ELEMENT_NODE</a></div>
+					<div class="Description"><p>The node is an DOMElement.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_domnode_entity_node">ENTITY_NODE</a></div>
+					<div class="Description"><p>The node is a DOMNode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_domnode_entity_reference_node">ENTITY_REFERENCE_NODE</a></div>
+					<div class="Description"><p>The node is a DOMEntityReference.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_domnode_notation_node">NOTATION_NODE</a></div>
+					<div class="Description"><p>The node is a DOMNotation.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_domnode_processing_instruction_node">PROCESSING_INSTRUCTION_NODE</a></div>
+					<div class="Description"><p>The node is a DOMProcessingInstruction.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_domnode_text_node">TEXT_NODE</a></div>
+					<div class="Description"><p>The node is a DOMText.</p></div>
+				</div>
+				
+			</div>
+
+
+
+			<h2>Instance Methods</h2>
+			<div class="InstanceMethodsShort">
+				<div class="Method">					
+					<div class="Name"><a href="#im_domnode_appendchild" class="IndexMethodName">AppendChild</a>(
+					 DOMNode newChild )
+					</div>
+					<div class="Description"><p>Append the newChild node.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domnode_cast" class="IndexMethodName">Cast</a>(
+					)
+					</div>
+					<div class="Description"><p>Cast the node to the appropriate type.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domnode_clonenode" class="IndexMethodName">CloneNode</a>(
+					 Boolean deep )
+					</div>
+					<div class="Description"><p>Duplicate the node.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domnode_getattributes" class="IndexMethodName">GetAttributes</a>(
+					)
+					</div>
+					<div class="Description"><p>The attributes of this node.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domnode_getchildnodes" class="IndexMethodName">GetChildNodes</a>(
+					)
+					</div>
+					<div class="Description"><p>A list of child nodes.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domnode_getfirstchild" class="IndexMethodName">GetFirstChild</a>(
+					)
+					</div>
+					<div class="Description"><p>The first child of this node.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domnode_getlastchild" class="IndexMethodName">GetLastChild</a>(
+					)
+					</div>
+					<div class="Description"><p>The last child of this node.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domnode_getlocalname" class="IndexMethodName">GetLocalName</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns the local part of the qualified name of this node.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domnode_getnamespaceuri" class="IndexMethodName">GetNamespaceURI</a>(
+					)
+					</div>
+					<div class="Description"><p>Get the namespace URI of this node, or undefined if it is not specified.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domnode_getnextsibling" class="IndexMethodName">GetNextSibling</a>(
+					)
+					</div>
+					<div class="Description"><p>The next sibling of this node.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domnode_getnodename" class="IndexMethodName">GetNodeName</a>(
+					)
+					</div>
+					<div class="Description"><p>The name of this node.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domnode_getnodetype" class="IndexMethodName">GetNodeType</a>(
+					)
+					</div>
+					<div class="Description"><p>The type of node.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domnode_getnodevalue" class="IndexMethodName">GetNodeValue</a>(
+					)
+					</div>
+					<div class="Description"><p>The value of this node.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domnode_getownerdocument" class="IndexMethodName">GetOwnerDocument</a>(
+					)
+					</div>
+					<div class="Description"><p>The DOMDocument object that this 
+    node belongs to.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domnode_getparentnode" class="IndexMethodName">GetParentNode</a>(
+					)
+					</div>
+					<div class="Description"><p>The parent of this node.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domnode_getprefix" class="IndexMethodName">GetPrefix</a>(
+					)
+					</div>
+					<div class="Description"><p>Get the namespace prefix of this node, or undefined.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domnode_getprevioussibling" class="IndexMethodName">GetPreviousSibling</a>(
+					)
+					</div>
+					<div class="Description"><p>The previous sibling of this node.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domnode_hasattributes" class="IndexMethodName">HasAttributes</a>(
+					)
+					</div>
+					<div class="Description"><p>Determine if a node has attributes.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domnode_haschildnodes" class="IndexMethodName">HasChildNodes</a>(
+					)
+					</div>
+					<div class="Description"><p>Determine if a node has children.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domnode_insertbefore" class="IndexMethodName">InsertBefore</a>(
+					 DOMNode newChild, DOMNode refChild )
+					</div>
+					<div class="Description"><p>Insert the newChild node before 
+    the refChild node.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domnode_issupported" class="IndexMethodName">IsSupported</a>(
+					 String feature, String version )
+					</div>
+					<div class="Description"><p>Returns true if the specified feature is supported on this node, false otherwise.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domnode_mustrelease" class="IndexMethodName">MustRelease</a>(
+					  mustRelease )
+					</div>
+					<div class="Description"><p>Sets the mustRelease flag if optional parameter is specified, else returns the current value.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domnode_normalize" class="IndexMethodName">Normalize</a>(
+					)
+					</div>
+					<div class="Description"><p>Puts all DOMText nodes in the full depth of the sub-tree underneath this DOMNode
+    into a "normal" form where only markup separates DOMText nodes.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domnode_removechild" class="IndexMethodName">RemoveChild</a>(
+					 DOMNode oldChild )
+					</div>
+					<div class="Description"><p>Remove the oldChild node.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domnode_replacechild" class="IndexMethodName">ReplaceChild</a>(
+					 DOMNode newChild, DOMNode oldChild )
+					</div>
+					<div class="Description"><p>Replace the oldChild node with 
+    the newChild node.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domnode_setnodevalue" class="IndexMethodName">SetNodeValue</a>(
+					 String nodeValue )
+					</div>
+					<div class="Description"><p>Sets the value of the this node.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domnode_setprefix" class="IndexMethodName">SetPrefix</a>(
+					 String prefix )
+					</div>
+					<div class="Description"><p>Set the namespace prefix of this node.</p></div>
+				</div>
+			</div>
+
+				<h2>Class Attributes</h2>
+				<div class="ClassAttributes">
+					
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_domnode_attribute_node">ATTRIBUTE_NODE</a></div>
+						<div class="Description"><p>The node is an DOMAttr.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_domnode_cdata_section_node">CDATA_SECTION_NODE</a></div>
+						<div class="Description"><p>The node is an DOMCDATASection.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_domnode_comment_node">COMMENT_NODE</a></div>
+						<div class="Description"><p>The node is an DOMComment.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_domnode_document_fragment_node">DOCUMENT_FRAGMENT_NODE</a></div>
+						<div class="Description"><p>The node is an DOMDocumentFragment.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_domnode_document_node">DOCUMENT_NODE</a></div>
+						<div class="Description"><p>The node is an DOMDocument.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_domnode_document_type_node">DOCUMENT_TYPE_NODE</a></div>
+						<div class="Description"><p>The node is an DOMDocumentType.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_domnode_element_node">ELEMENT_NODE</a></div>
+						<div class="Description"><p>The node is an DOMElement.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_domnode_entity_node">ENTITY_NODE</a></div>
+						<div class="Description"><p>The node is an DOMEntity.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_domnode_entity_reference_node">ENTITY_REFERENCE_NODE</a></div>
+						<div class="Description"><p>The node is an DOMEntityReference.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_domnode_notation_node">NOTATION_NODE</a></div>
+						<div class="Description"><p>The node is an DOMNotation.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_domnode_processing_instruction_node">PROCESSING_INSTRUCTION_NODE</a></div>
+						<div class="Description"><p>The node is an DOMProcessingInstruction.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_domnode_text_node">TEXT_NODE</a></div>
+						<div class="Description"><p>The node is an DOMText.</p></div>
+					</div>
+				
+				</div>
+
+		
+				<h2>Instance Methods</h2>
+				<div class="InstanceMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domnode_appendchild">AppendChild</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMNode</span> 
+						<span class="PrototypeselfName">AppendChild</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">DOMNode</span> <span class="PrototypeArgumentName">newChild</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Adds the node newChild to the end of the list 
+    of children of this node. If the newChild is already in the tree, it is first 
+    removed. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">newChild</span><span class="description"><p>The node to add.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The node added.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domnode_cast">Cast</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Dynamic</span> 
+						<span class="PrototypeselfName">Cast</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Cast the DOMNode to the appropriate type. </p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The actual type of this node (e.g. DOMElement, DOMText, etc.).</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domnode_clonenode">CloneNode</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMNode</span> 
+						<span class="PrototypeselfName">CloneNode</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Boolean</span> <span class="PrototypeArgumentName">deep</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a duplicate of this node, i.e., serves 
+    as a generic copy constructor for nodes. The duplicate node has no parent 
+    (parentNode returns null.). Cloning an Element copies all attributes and their 
+    values, including those generated by the XML processor to represent defaulted 
+    attributes, but this method does not copy any text it contains unless it is 
+    a deep clone, since the text is contained in a child Text node. Cloning any 
+    other type of node simply returns a copy of this node. Note that cloning an 
+    immutable subtree results in a mutable copy, but the children of an EntityReference 
+    clone are readonly. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">deep</span><span class="description"><p>If true, recursively clone the subtree 
+            under the specified node; if false, clone only the node itself (and 
+            its attributes, if it is an Element).</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The duplicate node.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domnode_getattributes">GetAttributes</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMNamedNodeMap</span> 
+						<span class="PrototypeselfName">GetAttributes</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>A NamedNodeMap containing the attributes of this 
+    node (if it is an Element) or null otherwise. </p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A NamedNodeMap containing the attributes 
+      of this node (if it is an Element) or null otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domnode_getchildnodes">GetChildNodes</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMNodeList</span> 
+						<span class="PrototypeselfName">GetChildNodes</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>A NodeList that contains all children of this 
+    node. If there are no children, this is a NodeList containing no nodes. The 
+    content of the returned NodeList is "live" in the sense that, for instance, 
+    changes to the children of the node object that it was created from are immediately 
+    reflected in the nodes returned by the NodeList accessors; it is not a static 
+    snapshot of the content of the node. This is true for every NodeList, including 
+    the ones returned by the getElementsByTagName method. </p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A DOMNodeList of the children.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domnode_getfirstchild">GetFirstChild</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMNode</span> 
+						<span class="PrototypeselfName">GetFirstChild</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>The first child of this node. If there is no such 
+    node, this returns null. </p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A DOMNode representing the first 
+      child.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domnode_getlastchild">GetLastChild</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMNode</span> 
+						<span class="PrototypeselfName">GetLastChild</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>The last child of this node. If there is no such 
+    node, this returns null. </p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A DOMNode representing the last 
+      child.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domnode_getlocalname">GetLocalName</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">GetLocalName</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the local part of the qualified name of this node. </p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The local part of the qualified name.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domnode_getnamespaceuri">GetNamespaceURI</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">GetNamespaceURI</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Get the namespace URI of this node, or undefined if it is not specified. </p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Namespace URI or undefined.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domnode_getnextsibling">GetNextSibling</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMNode</span> 
+						<span class="PrototypeselfName">GetNextSibling</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>The node immediately following this node. If there 
+    is no such node, this returns null. </p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The node immediately following this 
+      node.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domnode_getnodename">GetNodeName</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">GetNodeName</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>The name of this node.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The name of this node.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domnode_getnodetype">GetNodeType</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">GetNodeType</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>A code representing the type of the underlying 
+    object, as defined above. </p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A code representing the type of 
+      the underlying object.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domnode_getnodevalue">GetNodeValue</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">GetNodeValue</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>The value of this node, depending on its type; 
+    see the table above. When it is defined to be null, setting it has no effect. </p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The value of this node.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domnode_getownerdocument">GetOwnerDocument</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMDocument</span> 
+						<span class="PrototypeselfName">GetOwnerDocument</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>The Document object associated with this node. 
+    This is also the Document object used to create new nodes. When this node 
+    is a Document or a DocumentType which is not used with any Document yet, this 
+    is null. </p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The Document object associated with 
+      this node.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domnode_getparentnode">GetParentNode</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMNode</span> 
+						<span class="PrototypeselfName">GetParentNode</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>The parent of this node. All nodes, except Attr, 
+    Document, DocumentFragment, Entity, and Notation may have a parent. However, 
+    if a node has just been created and not yet added to the tree, or if it has 
+    been removed from the tree, this is null. </p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A DOMNode that represents the parent.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domnode_getprefix">GetPrefix</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">GetPrefix</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Get the namespace prefix of this node, or undefined. </p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The namespace prefix or undefined.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domnode_getprevioussibling">GetPreviousSibling</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMNode</span> 
+						<span class="PrototypeselfName">GetPreviousSibling</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>The node immediately preceding this node. If there 
+    is no such node, this returns null. </p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The node immediately preceding this 
+      node.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domnode_hasattributes">HasAttributes</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">HasAttributes</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Determine if a node has attributes. </p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>TRUE if this node has any attributes, FALSE otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domnode_haschildnodes">HasChildNodes</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">HasChildNodes</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>This is a convenience method to allow easy determination 
+    of whether a node has any children. </p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>True if the node has any children, 
+      false if the node has no children.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domnode_insertbefore">InsertBefore</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMNode</span> 
+						<span class="PrototypeselfName">InsertBefore</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">DOMNode</span> <span class="PrototypeArgumentName">newChild</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">DOMNode</span> <span class="PrototypeArgumentName">refChild</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Inserts the node newChild before the existing 
+    child node refChild. If refChild is null, insert newChild at the end of the 
+    list of children. If newChild is a DocumentFragment object, all of its children 
+    are inserted, in the same order, before refChild. If the newChild is already 
+    in the tree, it is first removed. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">newChild</span><span class="description"><p>The node to insert.</p></span></div>
+											<div class="Parameter"><span class="name">refChild</span><span class="description"><p>The reference node, i.e., the node 
+            before which the new node must be inserted.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The node being inserted</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domnode_issupported">IsSupported</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">IsSupported</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">feature</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">version</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Tests whether the DOM implementation implements a specific 
+  feature and that feature is supported by this node. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">feature</span><span class="description"><p>The feature name to tested.</p></span></div>
+											<div class="Parameter"><span class="name">version</span><span class="description"><p>This is the version number of the feature to test.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>TRUE if the specified feature is supported on this node, FALSE otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domnode_mustrelease">MustRelease</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">MustRelease</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType"></span> <span class="PrototypeArgumentName">mustRelease</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sets the mustRelease flag if the optional parameter is specified, else returns the current value. 
+        If mustRelease is set to TRUE then the DOMNode is released when the object goes out of scope. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">mustRelease</span><span class="description"><p>Value to set.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The current value.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domnode_normalize">Normalize</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Void</span> 
+						<span class="PrototypeselfName">Normalize</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Puts all DOMText nodes in the full depth of the sub-tree underneath this DOMNode,
+        including attribute nodes, into a "normal" form where only markup (e.g., tags, comments, processing 
+    instructions, CDATA sections, and entity references) separates DOMText nodes, i.e., there are neither 
+    adjacent DOMText nodes nor empty DOMText nodes. This can be used to ensure that the DOM view of a 
+    document is the same as if it were saved and re-loaded, and is useful when operations (such as XPointer 
+    lookups) that depend on a particular document tree structure are to be used. </p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domnode_removechild">RemoveChild</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMNode</span> 
+						<span class="PrototypeselfName">RemoveChild</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">DOMNode</span> <span class="PrototypeArgumentName">oldChild</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Removes the child node indicated by oldChild from 
+    the list of children, and returns it. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">oldChild</span><span class="description"><p>The node being removed.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The node removed.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domnode_replacechild">ReplaceChild</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMNode</span> 
+						<span class="PrototypeselfName">ReplaceChild</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">DOMNode</span> <span class="PrototypeArgumentName">newChild</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">DOMNode</span> <span class="PrototypeArgumentName">oldChild</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Replaces the child node oldChild with newChild 
+    in the list of children, and returns the oldChild node. If newChild is a DocumentFragment 
+    object, refChild is replaced by all of the DocumentFragment children, which 
+    are inserted in the same order. If the newChild is already in the tree, it 
+    is first removed. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">newChild</span><span class="description"><p>The new node to put in 
+            the child list.</p></span></div>
+											<div class="Parameter"><span class="name">oldChild</span><span class="description"><p>The node being replaced 
+            in the list.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The node replaced.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domnode_setnodevalue">SetNodeValue</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Void</span> 
+						<span class="PrototypeselfName">SetNodeValue</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">nodeValue</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sets the value of the node.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">nodeValue</span><span class="description"><p>The value to set the node</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domnode_setprefix">SetPrefix</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Void</span> 
+						<span class="PrototypeselfName">SetPrefix</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">prefix</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Set the namespace prefix of this node.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">prefix</span><span class="description"><p>The prefix value</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"></div>
+							</div>
+						</div>
+				</div>
+		
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2018 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+
+
+
+</div>
+	</div>						
+						
+
+</div>
+
+</body></html>

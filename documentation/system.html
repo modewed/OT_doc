@@ -1,0 +1,1160 @@
+
+<meta charset="UTF-8">
+<html>
+<head><title>Class: System</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../syntax.css" type="text/css">
+<link rel="stylesheet" href="builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td  align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody></table>
+
+<div id="document">
+	
+<div class="sidebar_container">
+		
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink"><a href="assoc.html">Assoc</a></div>
+				<div class="packagelink"><a href="boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="builder.html">Builder</a></div>
+				<div class="packagelink"><a href="bytes.html">Bytes</a></div>
+				<div class="packagelink"><a href="capi.html">CAPI</a></div>
+				<div class="packagelink"><a href="capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink"><a href="cachetree.html">CacheTree</a></div>
+				<div class="packagelink"><a href="compiler.html">Compiler</a></div>
+				<div class="packagelink"><a href="core.html">Core</a></div>
+				<div class="packagelink"><a href="dapi.html">DAPI</a></div>
+				<div class="packagelink"><a href="dapinode.html">DAPINODE</a></div>
+				<div class="packagelink"><a href="dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink"><a href="dapiversion.html">DAPIVERSION</a></div>
+				<div class="packagelink"><a href="domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="domcomment.html">DOMComment</a></div>
+				<div class="packagelink"><a href="domdocument.html">DOMDocument</a></div>
+				<div class="packagelink"><a href="domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink"><a href="domelement.html">DOMElement</a></div>
+				<div class="packagelink"><a href="domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink"><a href="domnamednodemap.html">DOMNamedNodeMap</a></div>
+				<div class="packagelink"><a href="domnode.html">DOMNode</a></div>
+				<div class="packagelink"><a href="domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="domtext.html">DOMText</a></div>
+				<div class="packagelink"><a href="date.html">Date</a></div>
+				<div class="packagelink"><a href="dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="env.html">Env</a></div>
+				<div class="packagelink"><a href="error.html">Error</a></div>
+				<div class="packagelink"><a href="file.html">File</a></div>
+				<div class="packagelink"><a href="filecopy.html">FileCopy</a></div>
+				<div class="packagelink"><a href="fileprefs.html">Fileprefs</a></div>
+				<div class="packagelink"><a href="frame.html">Frame</a></div>
+				<div class="packagelink"><a href="global.html">Global</a></div>
+				<div class="packagelink"><a href="integer.html">Integer</a></div>
+				<div class="packagelink"><a href="javaobject.html">JavaObject</a></div>
+				<div class="packagelink"><a href="language.html">Language</a></div>
+				<div class="packagelink"><a href="license.html">License</a></div>
+				<div class="packagelink"><a href="list.html">List</a></div>
+				<div class="packagelink"><a href="logging.html">Logging</a></div>
+				<div class="packagelink"><a href="long.html">Long</a></div>
+				<div class="packagelink"><a href="mailmessage.html">MailMessage</a></div>
+				<div class="packagelink"><a href="math.html">Math</a></div>
+				<div class="packagelink"><a href="memcached.html">Memcached</a></div>
+				<div class="packagelink"><a href="notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="object.html">Object</a></div>
+				<div class="packagelink"><a href="pop3session.html">POP3Session</a></div>
+				<div class="packagelink"><a href="patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="patfind.html">PatFind</a></div>
+				<div class="packagelink"><a href="pattern.html">Pattern</a></div>
+				<div class="packagelink"><a href="point.html">Point</a></div>
+				<div class="packagelink"><a href="profiler.html">Profiler</a></div>
+				<div class="packagelink"><a href="real.html">Real</a></div>
+				<div class="packagelink"><a href="recarray.html">RecArray</a></div>
+				<div class="packagelink"><a href="record.html">Record</a></div>
+				<div class="packagelink"><a href="regex.html">Regex</a></div>
+				<div class="packagelink"><a href="restclient.html">RestClient</a></div>
+				<div class="packagelink"><a href="saxparser.html">SAXParser</a></div>
+				<div class="packagelink"><a href="smtpsession.html">SMTPSession</a></div>
+				<div class="packagelink"><a href="ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="script.html">Script</a></div>
+				<div class="packagelink"><a href="security.html">Security</a></div>
+				<div class="packagelink"><a href="set.html">Set</a></div>
+				<div class="packagelink"><a href="socket.html">Socket</a></div>
+				<div class="packagelink"><a href="sql.html">Sql</a></div>
+				<div class="packagelink"><a href="sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink"><a href="str.html">Str</a></div>
+				<div class="packagelink"><a href="string.html">String</a></div>
+				<div class="packagelink curPage">System</div>
+				<div class="packagelink"><a href="uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="void.html">Void</a></div>
+				<div class="packagelink"><a href="wapi.html">WAPI</a></div>
+				<div class="packagelink"><a href="wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink"><a href="web.html">Web</a></div>
+				<div class="packagelink"><a href="xslprocessor.html">XSLProcessor</a></div>
+				<div class="packagelink"><a href="zip.html">Zip</a></div>
+		</div>
+</div>
+
+	<div class="content_container">
+		<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+		<h1>Class: System</h1><div class="ClassDescription"><p>The System built-in functions are a collection of methods and   attributes designed to aid the programmer in obtaining information about Livelink   itself, and the environment in which Liveink is running. This information   ranges from the version number of the operating system, to thread identifiers,   to the file extensions used for shared libraries. Almost none of these methods   have the ability to change the environment in any way - they exist simply to   return setup, configuration, and environment data.</p></div>
+			<h2>Class Attributes</h2>
+			<div class="ClassAttributesShort">
+				
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_system_dos">DOS</a></div>
+					<div class="Description"><p>The String "DOS".</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_system_english">English</a></div>
+					<div class="Description"><p>The Integer constant for the English language.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_system_japanese">Japanese</a></div>
+					<div class="Description"><p>The Integer constant for the Japanese language.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_system_korean">Korean</a></div>
+					<div class="Description"><p>The Integer constant for the Korean language.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_system_mac">Mac</a></div>
+					<div class="Description"><p>The String "Mac".</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_system_motif">Motif</a></div>
+					<div class="Description"><p>The String "Motif".</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_system_notencoded">NotEncoded</a></div>
+					<div class="Description"><p>The Integer constant for the character encoding of Not Encoded.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_system_unix">Unix</a></div>
+					<div class="Description"><p>The String "Unix".</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_system_utf8">UTF8</a></div>
+					<div class="Description"><p>The Integer constant for the character encoding of UTF-8.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_system_windows">Windows</a></div>
+					<div class="Description"><p>The String "Windows".</p></div>
+				</div>
+				
+			</div>
+
+
+			<h2>Class Methods</h2>
+			<div class="ClassMethodsShort">
+				<div class="Method">
+					<div class="Name"><a href="#cm_system_appbuildno" class="IndexMethodName">AppBuildNo</a>(
+					)
+					</div>
+					<div class="Description"><p>Gets the Livelink application build number as a String.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_system_apppatchlevel" class="IndexMethodName">AppPatchLevel</a>(
+					)
+						<span class="Deprecated">Deprecated</span>
+					</div>
+					<div class="Description"><p>Gets the Livelink application patch level as a String.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_system_appversion" class="IndexMethodName">AppVersion</a>(
+					)
+					</div>
+					<div class="Description"><p>Gets the Livelink version as a String.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_system_appversionlist" class="IndexMethodName">AppVersionList</a>(
+					)
+					</div>
+					<div class="Description"><p>Gets the Livelink version as a List.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_system_baselinerefcounts" class="IndexMethodName">BaselineRefCounts</a>(
+					)
+					</div>
+					<div class="Description"><p>Resets the baseline values for object reference counts output by 
+    <a class="interdoc" href="#cm_system_refcounts">System.RefCounts()</a></p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_system_charencoding" class="IndexMethodName">CharEncoding</a>(
+					 [Integer encodingType] )
+					</div>
+					<div class="Description"><p>Returns or sets the system
+    character encoding.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_system_currentlocalesuffix" class="IndexMethodName">CurrentLocaleSuffix</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns the thread current
+    Locale suffix.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_system_defaultlocalesuffix" class="IndexMethodName">DefaultLocaleSuffix</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns the system default
+    Locale suffix.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_system_eol" class="IndexMethodName">EOL</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns the OS specific line terminator string.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_system_fallbacklocalesuffix" class="IndexMethodName">FallbackLocaleSuffix</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns the fallback locale suffix.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_system_fileprefspath" class="IndexMethodName">FilePrefsPath</a>(
+					 [String path] )
+					</div>
+					<div class="Description"><p>Returns or sets the default path of
+    the configuration file.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_system_getcontentserverversioninfo" class="IndexMethodName">GetContentServerVersionInfo</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns the Content Server version.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_system_getlocaledateformats" class="IndexMethodName">GetLocaleDateFormats</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns an Assoc containing the date/time formats for all locales.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_system_getmemoryinfo" class="IndexMethodName">GetMemoryInfo</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns information on the memory of the system..</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_system_hostname" class="IndexMethodName">HostName</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns the host name of the machine</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_system_intllanguage" class="IndexMethodName">IntlLanguage</a>(
+					 [Integer languageConstant] )
+					</div>
+					<div class="Description"><p>Returns or sets the system default
+    language.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_system_intlstrings" class="IndexMethodName">IntlStrings</a>(
+					 [Boolean flag] )
+					</div>
+					<div class="Description"><p>Returns or sets if the system will
+    use advanced string handling routines compatible with most languages.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_system_is64bit" class="IndexMethodName">Is64Bit</a>(
+					)
+					</div>
+					<div class="Description"><p>Return TRUE if 64 bit system else FALSE.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_system_is64bitapp" class="IndexMethodName">Is64BitApp</a>(
+					)
+					</div>
+					<div class="Description"><p>Return TRUE if 64 bit Content Server, else FALSE.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_system_iscurrentlocalertl" class="IndexMethodName">IsCurrentLocaleRTL</a>(
+					)
+					</div>
+					<div class="Description"><p>Return TRUE if the current locale is displayed right to left, else FALSE.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_system_languagecode" class="IndexMethodName">LanguageCode</a>(
+					)
+					</div>
+					<div class="Description"><p>Determines the language used for the
+    system.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_system_libsuffix" class="IndexMethodName">LibSuffix</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns the file extension (including
+    dot) of a shared library in the environment on which Livelink is running.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_system_mac" class="IndexMethodName">Mac</a>(
+					)
+					</div>
+					<div class="Description"><p>Indicates whether Livelink is running
+    in a Macintosh environment.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_system_motif" class="IndexMethodName">Motif</a>(
+					)
+					</div>
+					<div class="Description"><p>Not used.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_system_multibyte" class="IndexMethodName">MultiByte</a>(
+					 [Boolean flag] )
+					</div>
+					<div class="Description"><p>Returns or sets if the system processes
+    strings using multibyte character compatible routines.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_system_name" class="IndexMethodName">Name</a>(
+					)
+					</div>
+					<div class="Description"><p>Determines the name of the operating
+    system on which Livelink is running.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_system_profileoff" class="IndexMethodName">ProfileOff</a>(
+					)
+					</div>
+					<div class="Description"><p>Not used.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_system_profileon" class="IndexMethodName">ProfileOn</a>(
+					)
+					</div>
+					<div class="Description"><p>Not used.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_system_refcounts" class="IndexMethodName">RefCounts</a>(
+					)
+					</div>
+					<div class="Description"><p>Outputs the number of refcounted OScript objects of 
+    most types and the difference in number of refounted objects since the last time 
+    <a class="interdoc" href="#cm_system_baselinerefcounts">System.BaselineRefCounts()</a> was called</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_system_setcurrentlocalesuffix" class="IndexMethodName">SetCurrentLocaleSuffix</a>(
+					 [String suffix] )
+					</div>
+					<div class="Description"><p>Sets the thread current
+    Locale suffix.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_system_sleep" class="IndexMethodName">Sleep</a>(
+					 [String suffix] )
+					</div>
+					<div class="Description"><p>Puts the current thread to sleep for arg1 milliseconds</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_system_threadid" class="IndexMethodName">ThreadID</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns a unique Integer indicating
+    the current thread identification.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_system_threadindex" class="IndexMethodName">ThreadIndex</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns a unique Integer indicating
+    the current thread index.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_system_threadstackcrawl" class="IndexMethodName">ThreadStackCrawl</a>(
+					 [Boolean verbose] )
+					</div>
+					<div class="Description"><p>Gets a string representation of the backtrace/stackcrawl for the current thread.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_system_unix" class="IndexMethodName">Unix</a>(
+					)
+					</div>
+					<div class="Description"><p>True if Content Server is running
+    on a Unix operating system.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_system_version" class="IndexMethodName">Version</a>(
+					)
+					</div>
+					<div class="Description"><p>Determines the version number of the
+    operating system.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_system_win32" class="IndexMethodName">Win32</a>(
+					)
+					</div>
+					<div class="Description"><p>True if Content Server is running
+    in a 32-bit Windows environment.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_system_windows" class="IndexMethodName">Windows</a>(
+					)
+					</div>
+					<div class="Description"><p>True if Livelink is running
+    in a Windows environment.</p></div>
+				</div>
+			</div>
+
+
+				<h2>Class Attributes</h2>
+				<div class="ClassAttributes">
+					
+					<div class="Attribute">
+						<div class="Name">String <a name="ca_system_dos">DOS</a></div>
+						<div class="Description"><p>The String "DOS".</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_system_english">English</a></div>
+						<div class="Description"><p>The Integer constant that represents the English language.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_system_japanese">Japanese</a></div>
+						<div class="Description"><p>The Integer constant that represents the Japanese language.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_system_korean">Korean</a></div>
+						<div class="Description"><p>The Integer constant that represents the Korean language.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ca_system_mac">Mac</a></div>
+						<div class="Description"><p>The String "Mac".</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ca_system_motif">Motif</a></div>
+						<div class="Description"><p>The String "Motif"</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_system_notencoded">NotEncoded</a></div>
+						<div class="Description"><p>The Integer constant for a character encoding of Not Encoded.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ca_system_unix">Unix</a></div>
+						<div class="Description"><p>The String "Unix"</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_system_utf8">UTF8</a></div>
+						<div class="Description"><p>The Integer constant for a character encoding of UTF-8.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ca_system_windows">Windows</a></div>
+						<div class="Description"><p>The String "Windows"</p></div>
+					</div>
+				
+				</div>
+
+		
+				<h2>Class Methods</h2>
+				<div class="ClassMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_system_appbuildno">AppBuildNo</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">AppBuildNo</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Gets the Livelink application build number as a String.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String representing the build number.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_system_apppatchlevel">AppPatchLevel</a></h3>
+
+								<span class="Deprecated">Deprecated</span>
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">AppPatchLevel</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Gets the Livelink application patch level as a String.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String representing the patch level.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_system_appversion">AppVersion</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">AppVersion</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Gets the Livelink version as a String. The major,
+    minor, and incremental release number will appear separated by dots. For example:
+    "8.0.1" would indicate Livelink Version 8.0.1.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String representing the major,
+      minor, and incremental release numbers of Livelink.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_system_appversionlist">AppVersionList</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">List</span> 
+						<span class="PrototypeselfName">AppVersionList</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Gets the Livelink version as a List. The major,
+    minor, and incremental release numbers will each appear as elements in the
+    list. For example: {'8','0','1'} would indicate Livelink Version 8.0.1. Development
+    builds will contain a character element 'd' followed by the development build
+    number.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A List containing the major, minor,
+      and incremental release number of Livelink.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_system_baselinerefcounts">BaselineRefCounts</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">BaselineRefCounts</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Resets the baseline for OScript object refcounts output by <a class="interdoc" href="#cm_system_refcounts">System.RefCounts()</a>.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>True</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_system_charencoding">CharEncoding</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">CharEncoding</span><span class="PrototypePunctuation">(</span> <span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">encodingType</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Gets or sets system character encoding.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">encodingType</span><span class="description"><p>If specified, valid constants are either
+            <a class="interdoc" href="#ca_system_notencoded">System.NotEncoded</a> or <a class="interdoc" href="#ca_system_utf8">System.UTF8</a>. This argument should only be used at startup
+            and only in a single threaded (Builder) environment. The multi-threaded
+            server will have this set at startup based on configuration ini settings.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The current value. If new value is passed
+      as parameter then the old value is returned.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_system_currentlocalesuffix">CurrentLocaleSuffix</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">CurrentLocaleSuffix</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Gets the thread current Locale suffix.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The current Locale suffix value.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_system_defaultlocalesuffix">DefaultLocaleSuffix</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">DefaultLocaleSuffix</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Gets the system default Locale suffix.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The system default Locale suffix value.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_system_eol">EOL</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">EOL</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Gets the OS specific line terminator string.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The OS specific line terminator string.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_system_fallbacklocalesuffix">FallbackLocaleSuffix</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">FallbackLocaleSuffix</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the fall back locale suffix.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The fall back locale suffix.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_system_fileprefspath">FilePrefsPath</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">FilePrefsPath</span><span class="PrototypePunctuation">(</span> <span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">path</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Gets or sets the fully qualified path of the default
+    configuration file.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">path</span><span class="description"><p>If specified, this string sets the default path to
+            the configuration file. This argument should only be used at startup
+            and only in a single threaded (Builder) environment, since a cached
+            and shared version of the configuration file is used in multi-threaded
+            environments.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The fully qualified String path
+      of the default configuration file.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_system_getcontentserverversioninfo">GetContentServerVersionInfo</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">GetContentServerVersionInfo</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the Content Server version in the format: 
+                "MajorReleaseNumber.EnhancementPackNumber.UpdateNumber".        </p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String containing the Content Server version in the format: 
+                "MajorReleaseNumber.EnhancementPackNumber.UpdateNumber".</p></div>
+									<h4>Example</h4>
+									<div class="Example"><div class="codehilite"><pre>        When called on the initial release of Content Server <span class="m">16</span><span class="p">,</span> it returns <span class="s">&quot;16.0.0&quot;</span><span class="o">.</span>
+        When called on the first update Content Server <span class="m">16</span> <span class="o">and</span> it returns <span class="s">&quot;16.0.1&quot;</span><span class="o">.</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_system_getlocaledateformats">GetLocaleDateFormats</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Assoc</span> 
+						<span class="PrototypeselfName">GetLocaleDateFormats</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns an Assoc containing the date/time formats for all locales.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An Assoc containing the date/time formats for all locales.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_system_getmemoryinfo">GetMemoryInfo</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">GetMemoryInfo</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns information on the memory of the system. Values returned depends on the OS and hardware.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A string containing information on the memory of the system.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_system_hostname">HostName</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">HostName</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Retrieves the standard host name of the local machine.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A string representing the host name of the local machine.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_system_intllanguage">IntlLanguage</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">IntlLanguage</span><span class="PrototypePunctuation">(</span> <span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">languageConstant</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Gets or sets system language.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">languageConstant</span><span class="description"><p>If specified, valid constants are
+            <a class="interdoc" href="#ca_system_english">System.English</a>, <a class="interdoc" href="#ca_system_japanese">System.Japanese</a>, or <a class="interdoc" href="#ca_system_korean">System.Korean</a>. This is deprecated
+            and has been replaced with the Locale support.
+            This argument should only be used at startup
+            and only in a single threaded (Builder) environment. The multi-threaded
+            server will have this set at startup based on configuration ini settings.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The current value. If new value is passed
+      as parameter then the old value is returned.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_system_intlstrings">IntlStrings</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">IntlStrings</span><span class="PrototypePunctuation">(</span> <span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Boolean</span> <span class="PrototypeArgumentName">flag</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Gets or sets the system international strings flag.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">flag</span><span class="description"><p>If specified, TRUE directs the
+            system to use string handling routines that support international
+            languages, FALSE indicates the system can use 7-bit ASCII only routines.
+            This argument should only be used at startup
+            and only in a single threaded (Builder) environment. The multi-threaded
+            server will have this set at startup based on configuration ini settings.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The current value. If new value is passed
+      as parameter then the old value is returned.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_system_is64bit">Is64Bit</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">Is64Bit</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Return TRUE if 64 bit system else FALSE.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>TRUE if 64 bit system else FALSE.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_system_is64bitapp">Is64BitApp</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">Is64BitApp</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Return TRUE if 64 bit Content Server, else FALSE.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>TRUE if 64 bit Content Server, else FALSE.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_system_iscurrentlocalertl">IsCurrentLocaleRTL</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">IsCurrentLocaleRTL</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Return TRUE if the current locale is displayed right to left, else FALSE.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>TRUE if the current locale is displayed right to left, else FALSE.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_system_languagecode">LanguageCode</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">LanguageCode</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a three character country code indicating
+    the language in which the string resources were compiled, and the language
+    in which the Livelink .XDBs were compiled. For example: "USA" for
+    American English or "GER" for German.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A three character string indicating
+      the language used by the Livelink installation.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_system_libsuffix">LibSuffix</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">LibSuffix</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the dotted file extension for a shared
+    library in the environment on which Livelink is running, such as ".DLL".</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String containing the dotted file
+      extension.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_system_mac">Mac</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">Mac</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>True if Livelink is running in a Macintosh
+    environment.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>True if Livelink is running in a
+      Macintosh environment; False otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_system_motif">Motif</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">Motif</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Not used. </p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>False.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_system_multibyte">MultiByte</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">MultiByte</span><span class="PrototypePunctuation">(</span> <span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Boolean</span> <span class="PrototypeArgumentName">flag</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Gets or sets the system multibyte strings flag.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">flag</span><span class="description"><p>If specified, TRUE directs the
+            system to use multibyte string handling routines that support multibyte
+            character sets, FALSE indicates the system will use fixed width character string routines.
+            This argument should only be used at startup
+            and only in a single threaded (Builder) environment. The multi-threaded
+            server will have this set at startup based on configuration ini settings.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The current value. If new value is passed
+      as parameter then the old value is returned.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_system_name">Name</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">Name</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Determines the name of the operating system on
+    which Livelink is running.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The String name of the operating
+      system on which Livelink is running.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_system_profileoff">ProfileOff</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">ProfileOff</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Not used.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Meaningless.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_system_profileon">ProfileOn</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">ProfileOn</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Not used.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Meaningless.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_system_refcounts">RefCounts</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">RefCounts</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a formatted string containing information about the current number of 
+    referenced OScript objects. </p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A formatted string containing information about the current number of 
+    referenced OScript objects.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>The string returned by this method contains 1 line for each
+    refcounted object type. Each line contains 6 fields, separated by 1 or more spaces.</p>
+<p>Field 1 is a 4-character Integer, the object type number, i.e. -1 for Strings</p>
+<p>Field 2 is a 13-character String, the object type name, i.e. String</p>
+<p>Field 3 is a 7-character Integer, the total number of objects 
+      of this type allocated on the server</p>
+<p>Field 4 is a 7-character Integer, the total number of references to objects 
+      of this type allocated on the server</p>
+<p>Field 5 is a 7-character Integer, the difference between the 
+                current total number of objects of this type 
+                allocated on the server and either the total number of objects of this type 
+                allocated on the server since the last time <a class="interdoc" href="#cm_system_baselinerefcounts">System.BaselineRefCounts()</a>
+                was called, or 0 if <a class="interdoc" href="#cm_system_baselinerefcounts">System.BaselineRefCounts()</a> has never been called.</p>
+<p>Field 6 is a 7-character Integer, the difference between the 
+                current total number of references to objects of this type 
+                allocated on the server and either the total number of references to objects of this type 
+                allocated on the server since the last time <a class="interdoc" href="#cm_system_baselinerefcounts">System.BaselineRefCounts()</a>
+                was called, or 0 if <a class="interdoc" href="#cm_system_baselinerefcounts">System.BaselineRefCounts()</a> has never been called.</p>
+<p>For example, executing this script:</p>
+<div class="codehilite"><pre>System<span class="o">.</span>BaselineRefCounts<span class="p">()</span>
+File        test<span class="m">1</span> <span class="o">=</span> File<span class="o">.</span>StringToFile<span class="p">(</span> <span class="s">&quot;test1.txt&quot;</span> <span class="p">)</span>
+File        test<span class="m">2</span> <span class="o">=</span> File<span class="o">.</span>StringToFile<span class="p">(</span> <span class="s">&quot;test2.txt&quot;</span> <span class="p">)</span>
+List        test<span class="m">3</span> <span class="o">=</span> <span class="p">{</span> test<span class="m">1</span><span class="p">,</span> test<span class="m">2</span> <span class="p">}</span>
+
+
+echo<span class="p">(</span> System<span class="o">.</span>RefCounts<span class="p">()</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>Would produce output similar to:</p>
+<div class="codehilite"><pre>    <span class="o">-</span><span class="m">108</span> ListExpand          <span class="m">0</span>       <span class="m">0</span>       <span class="m">0</span>       <span class="m">0</span>
+    <span class="o">-</span><span class="m">107</span> File                <span class="m">2</span>       <span class="m">4</span>       <span class="m">2</span>       <span class="m">4</span>
+    <span class="o">-</span><span class="m">102</span> Socket              <span class="m">1</span>       <span class="m">1</span>       <span class="m">0</span>       <span class="m">0</span>
+     <span class="o">-</span><span class="m">86</span> Vis                <span class="m">59</span>      <span class="m">99</span>       <span class="m">0</span>       <span class="m">0</span>
+     <span class="o">-</span><span class="m">85</span> VisTag              <span class="m">0</span>       <span class="m">0</span>       <span class="m">0</span>       <span class="m">0</span>
+     <span class="o">-</span><span class="m">66</span> CAPILog             <span class="m">1</span>       <span class="m">1</span>       <span class="m">0</span>       <span class="m">0</span>
+     <span class="o">-</span><span class="m">63</span> PrefSection         <span class="m">0</span>       <span class="m">0</span>       <span class="m">0</span>       <span class="m">0</span>
+     <span class="o">-</span><span class="m">62</span> DOMParser           <span class="m">0</span>       <span class="m">0</span>       <span class="m">0</span>       <span class="m">0</span>
+     <span class="o">-</span><span class="m">43</span> SAXParser           <span class="m">4</span>       <span class="m">4</span>       <span class="m">0</span>       <span class="m">0</span>
+     <span class="o">-</span><span class="m">18</span> <span class="kt">Assoc</span>             <span class="m">766</span>     <span class="m">770</span>       <span class="m">0</span>       <span class="m">0</span>
+      <span class="o">-</span><span class="m">9</span> Fileprefs           <span class="m">3</span>       <span class="m">3</span>       <span class="m">0</span>       <span class="m">0</span>
+      <span class="o">-</span><span class="m">8</span> Long                <span class="m">0</span>       <span class="m">0</span>       <span class="m">0</span>       <span class="m">0</span>
+      <span class="o">-</span><span class="m">7</span> Date               <span class="m">61</span>      <span class="m">61</span>       <span class="m">0</span>       <span class="m">0</span>
+      <span class="o">-</span><span class="m">4</span> <span class="kt">Real</span>                <span class="m">0</span>       <span class="m">0</span>       <span class="m">0</span>       <span class="m">0</span>
+      <span class="o">-</span><span class="m">3</span> Script          <span class="m">14149</span>   <span class="m">14182</span>       <span class="m">0</span>       <span class="m">0</span>
+      <span class="o">-</span><span class="m">2</span> List            <span class="m">10415</span>   <span class="m">10599</span>       <span class="m">1</span>       <span class="m">1</span>
+      <span class="o">-</span><span class="m">1</span> <span class="kt">String</span>          <span class="m">30709</span>   <span class="m">40246</span>       <span class="m">2</span>       <span class="m">2</span>
+</pre></div>
+
+
+<p>Examining the output indicates, for instance, that 
+   for objects of type -1, String, there were 
+   30709 String objects allocated on the server at that time and that there 
+   were 40246 in-memory references to those 30709 Strings. Furthermore, 2 new String
+   objects had been allocated since the last time <a class="interdoc" href="#cm_system_baselinerefcounts">System.BaselineRefCounts()</a> was called,
+    and each of those new Strings had only 1 reference to them. </p>
+<p>Examining the output for objects of type -107, File, shows that 
+   there were 2 File objects allocated on the server at that time and that there 
+   were 4 in-memory references to those 2 Files. Furthermore, both of those File
+   objects had been allocated since the last time <a class="interdoc" href="#cm_system_baselinerefcounts">System.BaselineRefCounts()</a> was called. </p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_system_setcurrentlocalesuffix">SetCurrentLocaleSuffix</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">SetCurrentLocaleSuffix</span><span class="PrototypePunctuation">(</span> <span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">suffix</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sets the thread current Locale suffix.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">suffix</span><span class="description"><p>The string should be of
+            the form underscore and 2 char language code, optional underscore and 2 char
+            uppercase country code, optional underscore and variant string. For example:
+            _en_US.
+            This argument can be used on a per request basis in order to set the
+            current Locale for that request.  The Locale suffix will be used to
+            load the proper localized string property resources.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The old Locale suffix value is returned.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_system_sleep">Sleep</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">Sleep</span><span class="PrototypePunctuation">(</span> <span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">suffix</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Puts the current thread to sleep for a period of time.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">suffix</span><span class="description"><p>The time duration to sleep in milliseconds.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>True if Sleep times out normally, False if Sleep returns because of a server shutdown notification.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_system_threadid">ThreadID</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">ThreadID</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the unique Integer indicating the current
+    thread identification. </p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A unique identifying integer assigned
+      to the current thread by the operating system.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_system_threadindex">ThreadIndex</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">ThreadIndex</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the unique Integer indicating the current
+    thread's index. For more coherent logging and reference, the Livelink server
+    assigns an ordered integer from 1 to n to all threads. In the "single-threaded"
+    Builder environment, the current thread index will always be 0.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An integer indicating the current
+      thread index.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_system_threadstackcrawl">ThreadStackCrawl</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">ThreadStackCrawl</span><span class="PrototypePunctuation">(</span> <span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Boolean</span> <span class="PrototypeArgumentName">verbose</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Gets a string representation of the backtrace/stackcrawl for the current thread.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">verbose</span><span class="description"><p>True for a verbose stackcrawl, false for a terse one (default is true).</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String representation of the thread's backtrace/stackcrawl.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_system_unix">Unix</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">Unix</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>True if Livelink is running in a Unix
+    environment. </p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>True if Livelink is running in a
+      Unix environment; False otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_system_version">Version</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">Version</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Determines the version number of the operating
+    system. </p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String containing the version
+      number of the operating system.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_system_win32">Win32</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">Win32</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>True if Livelink is running in a 32-bit
+    Windows environment. </p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>True if Livelink is running in a
+      32-bit Windows environment; False otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_system_windows">Windows</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">Windows</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>True if Livelink is running in a Windows
+    environment. </p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>True if Livelink is running in a
+      Windows environment; False otherwise.</p></div>
+							</div>
+						</div>
+				</div>
+		
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2018 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+
+
+
+</div>
+	</div>						
+						
+
+</div>
+
+</body></html>

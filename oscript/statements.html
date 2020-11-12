@@ -1,0 +1,473 @@
+<HTML>
+<HEAD>
+<TITLE>Control Statements</TITLE>
+
+<link rel="stylesheet" href="../llhelp2000.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<SCRIPT language=JavaScript>IncludeHeader( 'olang2', 'Statements' )</SCRIPT>
+
+
+<p class="title">Control Statements</p>
+
+<p class="body">Control statements create decision-making and looping constructs in 
+a script. OScript language contains the basic control statements found in most programming languages:</P>
+<ul class="body">
+<li><a href="#if">if</a></li></p>
+<li><a href="#switch">switch</a></li></p>
+<li><a href="#while">while</a></li></p>
+<li><a href="#for">for</a></li></p>
+<li><a href="#repeat">repeat</a></li></p>
+<li><a href="#break">break and breakIf</a></li></p>
+<li><a href="#continue">continue and continueIf</a></li></p>
+<li><a href="#goto">goto</a></li></ul>
+
+<P class="subh2"><a name="if">if</a></P>
+<p class="body">The <span class="code">if</span> statement is used to decide 
+whether a group of statements should be executed. The basic form of the <span class="code">if</span> 
+statement is:</P>
+
+<PRE>
+		if <span class="emph">expression 1</span>
+		    <span class="emph">...block of code 1...</span>
+		[ elseif <span class="emph">expression 2</span>
+		    <span class="emph">...block of code 2...</span> ]
+		[ elseif <span class="emph">expression n</span>
+		    <span class="emph">...block of code n...</span> ]
+		[ else
+		    <span class="emph">...block of code-else...</span> ]
+		end</pre>
+
+<p class="body">In an <span class="code">if</span> statement, 
+<span class="code">expression 1</span> is evaluated. 
+If TRUE,<span class="code">...block of code 1...</span>
+is executed and execution resumes after the end. If FALSE, execution continues with the 
+<span class="code">elseif </span>clause, if included. 
+The <span class="code">elseif</span> clause is evaluated, and 
+if TRUE, the associated block of code is executed; if FALSE, the next 
+<span class="code">elseif</span> clause 
+is evaluated, and so on. If every <span class="code">elseif expression</span>
+ clause is FALSE, the <span class="code">...block of code-else...</span>is executed.</P>
+
+<p class="body">The <span class="code">elseif</span> and 
+<span class="code">else</span> clauses are optional. 
+If used, as many <span class="code">elseif </span>clauses 
+as needed can be included.</P>
+
+<p class="body">The following is an example of an OScript <span class="code">if</span>
+ statement:</P>
+
+<pre>
+		ListbugList = { 'ant', 'bee', 'ladybug', 'cricket', 'beetle' }
+		Stringbug
+		if ( Length( bugList ) == 0 )
+			Echo ( 'The bugList is empty.' )
+		elseif ( Length( bugList ) &gt; 30 )
+			Echo ( 'The bugList is has too many entries.' )
+		else
+			for bug in buglist
+			Echo ( 'The bug ' + bug + 'is in the list' )
+			end
+		end</pre>
+
+<P class="subh2"><a name="switch">switch</a></P>
+<p class="body">The <span class="code">switch</span> statement provides a branching mechanism. The 
+<span class="code">switch</span> statement tests whether an expression matches any of a number of <span class="emph">constant</span> values, and branches execution accordingly. The basic form of the <span class="code">switch</span> statement is:</P>
+
+<pre> 
+		switch <span class="emph">expression</span>
+				case <span class="emph">value 1</span>
+					<span class="emph">...block of code 1...</span>
+				end
+				case <span class="emph">value 2</span>
+					<span class="emph">...block of code 2...</span>
+				end
+				[ case <span class="emph">value 3</span>, <span class="emph">value n</span>
+					<span class="emph">...block of code n...</span> 
+				end ]
+				[ default
+					<span class="emph">...block of code-default...</span>
+				end ]
+		end</pre>
+
+<p class="body">In a <span class="code">switch</span>
+ statement, the <span class="code">expression</span>
+ is first evaluated. The resulting value is then compared to the case values. If the 
+ <span class="code">expression</span> value 
+ matches a <span class="code">case</span> value, the 
+ <span class="code">...block&nbsp;of&nbsp;code...
+ </span>following 
+ that <span class="code">case</span> value is executed. 
+ If the <span class="code">expression</span> value 
+ matches none of the <span class="code">case</span> values, 
+ the <span class="code">...block of code-default... </span>
+ following the <span class="code">default</span> clause, if 
+ included, is executed.</P>
+
+<p class="body">The <span class="code">expression</span> value 
+must exactly match the <span class="code">case</span> value for 
+the <span class="code">...block&nbsp;of&nbsp;code...</span>to 
+be executed-no type coercion is performed.</P>
+<p class="body">If there are several possible <span class="code">case</span>
+ values for which the resulting action is the same, all of these values can be 
+placed on the same line (as in <span class="code">value 3</span>
+ and <span class="code">value n</span>
+ in the syntax above). A <span class="code">default</span>
+ clause is optional. If not included and no 
+<span class="code">case</span> values are matched, no action is taken. 
+The <span class="code">case</span> clauses and the 
+<span class="code">default</span> clause can be listed 
+in any order; by convention <span class="code">default</span> is 
+often last. The values specified for each <span class="code">case</span>
+ <span class="emph">must</span> be different.</P>
+
+<p class="body">The following is an example of an OScript <span class="code">switch</span>
+ statement:</P>
+
+<pre>
+		File myFile = File.Open( &quot;C:\DATAFILE&quot;, File.ReadMode )
+		String thing = File.Read( myFile )
+		switch thing
+			case &quot;orange&quot;, &quot;apple&quot;, &quot;pear&quot;
+				Echo( thing + &quot; is a fruit.&quot; )
+			end
+				case &quot;celery&quot;, &quot;potato&quot;, &quot;turnip&quot;
+				Echo( thing + &quot; is a vegetable.&quot; )
+			end
+				default
+				Echo( &quot;Cannot tell if &quot; + thing + &quot; is a vegetable or fruit.&quot; )
+			end
+		end</pre>
+
+
+<P class="subh2"><a name="while">while</a></P>
+<p class="body">The <span class="code">while</span> statement provides a looping construct 
+that repeatedly executes the statements within the loop while the specified expression evaluates to TRUE. The basic form of the <span class="code">while</span> loop is:</P>
+
+<pre>
+		while <span class="emph">expression</span>
+			<span class="emph">...block of code</span>...
+		end</pre>
+
+<p class="body">In a <span class="code">while</span>
+ loop, the <span class="code">expression</span>
+ is evaluated at the top of the loop. If it is TRUE, the
+<span class="code">...block&nbsp;of&nbsp;code...</span> inside the 
+loop is then executed. This is repeated until the 
+<span class="code">expression</span>
+ evaluates to FALSE. It is important to either define an 
+<span class="code">expression</span> that will 
+eventually become FALSE or to include a <span class="code">break</span>
+ statement within the loop to avoid the creation of an infinite loop.</P>
+
+<p class="body">The following is an example of an OScript <span class="code">while</span>
+ loop:</P>
+
+<pre>
+		String oneLine
+		String allLines
+		File myFile = File.Open( &quot;C:\DATAFILE&quot;, File.ReadMode )
+		while !File.EOF( myFile )
+			oneLine = File.Read( myFile )
+			allLines += oneLine
+		end</pre>
+
+
+<p class="subh2"><a name="for">for</a></P>
+<p class="body">In OScript, there are three types of <span class="code">for</span> loops: counted, indexed, and C-style.</P>
+
+<p class="gui">Counted for</P>
+<p class="body">The counted <span class="code">for</span>
+ statement provides a looping construct that repeatedly executes the 
+statements within the loop a specified number of times. This &quot;number of times&quot; need not 
+be an Integer literal; it can be specified by any expression that evaluates to an Integer.</P>
+
+<pre>
+		for <span class="emph">variable</span> = <span class="emph">initialValue</span> [down]to <span class="emph">finalValue</span> [by <span class="emph">increment</span>]
+				<span class="emph">...block of code</span>...
+		end</pre>
+
+<p class="body">In this <span class="code">for</span> 
+loop, the <span class="code">variable</span> is 
+assigned an initial Integer value and tested for equivalence against the 
+<span class="code">finalValue</span>. 
+If <span class="code">initialValue</span> is 
+less than or equal to <span class="code">finalValue</span>, 
+the statements within the loop are executed. 
+The <span class="code">initialValue</span> is then 
+incremented (if <span class="code">to</span> is specified) 
+or decremented (if <span class="code">downto</span> is 
+specified) by the specified <span class="code">increment</span> 
+value (if not included, 1 is assumed). The <span class="code">variable</span>
+ is tested again, and if not out of range, the statements within the loop 
+are executed again. Execution continues in this manner until the 
+<span class="code">variable</span> is out of range.</P>
+
+<p class="body">Note that <span class="code">initialValue</span>, 
+<span class="code">finalValue</span>, and 
+<span class="code">increment</span> are 
+evaluated once before the loop. These values are used for the duration of the loop.</P>
+
+<p class="body">The following is an example of this type of OScript <span class="code">for</span>
+ loop:</P>
+
+<pre>
+		for i = 1 to 10
+			Echo( &quot;Counting up: &quot;, i )&lt; &gt; end
+		for i = 10 downto 1
+			Echo( &quot;Counting down:&quot;, i )
+		end</pre>
+
+<p class="gui">Indexed for</P>
+<p class="body">The indexed <span class="code">for</span> loop is used with Lists, RecArrays, and Assocs to cycle through all elements in the structure.</P>
+
+<pre>
+		for <span class="emph">variable</span> in <span class="emph">structure</span> 
+			<span class="emph">...block of code</span>...
+		end</pre>
+
+<p class="body">In this <span class="code">for</span>
+ loop, the <span class="code">variable</span> is 
+ assigned the value of the first element in the specified 
+<span class="code">structure</span>. The statements 
+ in the loop are then executed. This is repeated until all of the elements of the 
+ ><span class="code">structure</span> have 
+ been referenced.</P>
+
+<p class="body">If the values in the specified <span class="code">structure</span>
+ are not all of the same data type, you must either not declare the 
+<span class="code">variable</span> (which 
+is <span class="emph">not</span> good programming practice) or declare it to be of type Dynamic.</P>
+
+<p class="body">The following is an example of this type of OScript <span class="code">for</span> 
+loop: </P>
+
+<pre>
+		Integer i
+		List numList = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }
+		for i in numList
+			Echo( &quot;i = &quot;, i )
+		end</pre>
+
+<P class="gui">C-style for Loop</P>
+<p class="body">The C-style <span class="code">for</span> loop is similar to 
+the <span class="code">for</span> loop used in the C programming language:</P>
+
+<pre>
+		for ( <span class="emph">initializer</span>; <span class="emph">condition</span>; <span class="emph">increment</span> )
+			<span class="emph">...block of code</span>...
+		end</pre>
+
+<p class="body">In this <span class="code">for</span> loop, the <span class="code">initializer</span> is evaluated before the loop is entered. At the end of the loop, the <span class="code">increment</span> and 
+the <span class="code">condition</span> are evaluated. 
+If the value of the <span class="code">condition</span> is TRUE, the 
+loop continues; if FALSE, the loop terminates. The <span class="code">initializer</span>, <span class="code">condition</span>, and <span class="code">increment</span>
+ must be expressions.</P>
+
+<p class="body">The following is an example of this type of OScript <span class="code">for</span> loop:</P>
+
+<pre>
+	//This example will count from 1 to 10
+	Integer i
+	for( i = 1; i &lt;= 10; i += 1 )
+			Echo( &quot;i=&quot;, i )
+	end</pre>
+
+
+<p class="subh2"><a name="repeat">repeat</a></P>
+<p class="body">The <span class="code">repeat</span> statement provides a looping construct 
+that repeatedly executes the statements within the loop while the specified expression evaluates to 
+FALSE. The basic form of the <span class="code">repeat</span> statement is:</P>
+
+<pre>
+		repeat
+			<span class="emph">...block of code</span>...
+		until <span class="emph">expression</span><br></pre>
+
+<p class="body">The <span class="code">repeat</span>
+ loop differs from the <span class="code">while</span>
+ loop in an important way: structuring a loop as a 
+<span class="code">repeat</span> loop guarantees that the 
+<span class="code">...block of code...</span> within 
+the loop will execute <span class="emph">at least once</span> since the expression is evaluated at the bottom of the loop.</P>
+
+<p class="body">In a <span class="code">repeat</span> loop, the
+ <span class="code">...block&nbsp;of&nbsp;code...
+ </span>inside 
+the loop is executed and then the <span class="code">expression</span>
+ is evaluated. If the <span class="code">expression</span>
+ is FALSE, the <span class="code">...block&nbsp;of&nbsp;code...</span>
+is executed again. Once the <span class="code">expression</span> evaluates to 
+ TRUE, the loop is exited. It is important to either define an expression that will eventually evaluate 
+ to TRUE or to include a <span class="code">break</span> statement within the loop 
+ to avoid the creation of an infinite loop.</P>
+
+<p class="body">The following is an example of an OScript <span class="code">repeat</span>
+ loop:</P>
+
+<pre>
+		String fileContents
+		File inputFile = File.Open( 'temp.dat', File.ReadMode )
+		if ( IsDefined( inputFile ) )
+				repeat
+					fileContents += File.Read( inputFile )
+				until File.EOF( inputFile )
+		end</pre>
+
+<p class="subh2"><a name="break">break and breakIf</a></p>
+<p class="body">The <span class="code">break</span>
+ and <span class="code">breakIf</span> statements are used to 
+leave a loop. While <span class="code">break</span> unconditionally exits 
+the loop, <span class="code">breakIf</span> exits the loop 
+if its condition is TRUE.</P>
+<p class="body">The following is an example of a <span class="code">while</span> loop containing 
+an OScript <span class="code">break</span> statement:</P>
+
+<pre>
+		// script to display first five lines of a file
+		File theFile = File.Open( 'MYDATA', File.ReadMode )
+		String line
+		Integer count = 1
+		Integer linesFound
+		while count &lt;= 5
+			if File.EOF()
+			linesFound = count
+			break
+			end
+			line = File.Read( theFile )
+			echo( 'Line ' + Str.String( count ) + ' is: ' + line )
+			count += 1
+		end
+		File.Close( theFile )</pre>
+
+<p class="body">The following is an example of a <span class="code">while</span> loop 
+containing an OScript <span class="code">breakIf</span> statement:
+</P>
+
+<pre>
+		// script to display first five lines of a file
+		File theFile = File.Open( 'MYDATA', File.ReadMode )
+		String line
+		Integer count = 1
+		while count &lt;= 5
+			breakif File.EOF()
+			line = File.Read( theFile )
+			echo( 'Line ' + Str.String( count ) + ' is: ' + line )
+			count += 1
+		end
+		File.Close( theFile )</pre>
+
+<p class="body">In both examples, the first five lines of a File are read, but if 
+the file has less than five lines (the end of the file is reached), the 
+<span class="code">break</span> statements cause the loop to be 
+exited.</P>
+
+<p class="body">The main difference between the <span class="code">break</span> and 
+the <span class="code">breakIf</span> statements 
+is that <span class="code">break</span> is commonly used if 
+you want to perform additional steps <span class="emph">before</span> exiting the loop. In the previous examples, 
+<span class="code">break</span> and 
+<span class="code">breakIf</span> are used to exit the 
+loop if the end of the file is reached before five lines are read. However, in the first example, 
+using <span class="code">break</span> instead of 
+<span class="code">breakIf</span> allows the line 
+counter to be updated before breaking out of the loop.</P>
+
+
+<p class="subh2"><a name="continue">continue and continueIf</a></P>
+<p class="body">The <span class="code">continue</span>
+ and <span class="code">continueIf</span> 
+statements can be used to skip to the end of the loop and start the next iteration of the loop. 
+While <span class="code">continue</span> unconditionally 
+skips to the end of the loop, <span class="code">continueIf</span> skips to the 
+end of the loop if its condition is TRUE.</P>
+<p class="body">The following is an example of a <span class="code">while</span> loop 
+containing an OScript <span class="code">continue</span> 
+statement: </P>
+
+<pre>
+		List things = ( &quot;apple&quot;, &quot;pear&quot;, &quot;&quot;, &quot;rock&quot; )
+		String item
+		for item in things
+			if Length( item ) == 0
+			Echo( &quot;Found an item of length zero&quot; )
+			continue
+		end
+		Echo ( &quot;Non-blank item: &quot;, item )
+		end</pre>
+
+<p class="body">The following is an example of a <span class="code">while</span> loop 
+containing an OScript <span class="code">continueIf</span> statement: </P>
+
+<pre>
+		List things = ( &quot;apple&quot;, &quot;pear&quot;, &quot;&quot;, &quot;rock&quot; )
+		String item
+		for item in things
+			continueIf Length( item ) == 0
+			Echo ( &quot;Non-blank item: &quot;, item )
+		end</pre>
+
+<p class="body">In both examples, all items are read from the List, but if the length of 
+<span class="code">item</span> is zero, the 
+<span class="code">continue</span> statement causes execution to 
+skip back up to the top of the loop to read the next item.</P>
+
+<p class="body">The main difference in usage of the <span class="code">continue</span> 
+and the <span class="code">continueIf</span> statements 
+is that <span class="code">continue</span> is more commonly 
+used if you want to perform additional steps <span class="emph">before</span> restarting the loop. In the above 
+examples, <span class="code">continue</span> and 
+<span class="code">continueIf</span> are used to 
+skip to the top of the loop if the length of <span class="code">item</span> is 
+zero. However, in the first example, using <span class="code">continue</span> instead 
+of <span class="code">continueIf</span> allows the message 
+indicating that a Record has been skipped to be displayed.</P>
+
+<p class="subh2"><a name="goto">goto</a></P>
+<p class="body">The <span class="code">goto</span> statement causes 
+script execution to branch to the specified label. The basic form of a 
+<span class="code">goto</span> statement is:</P>
+
+<pre>
+		goto <span class="emph">label
+			...block of code 1...
+		label</span>:
+			<span class="emph">...block of code 2...</span></pre>
+
+<p class="body">When the <span class="code">goto</span>
+ statement is encountered, execution skips over <span class="code">...block of code 1...</span>and 
+ resumes at the <span class="code">label:</span>, 
+executing <span class="code">...block of code 2...</span>.</P>
+<p class="body">The following is an example of an OScript <span class="code">goto</span>
+ statement:</P>
+
+<pre>
+		List inputList = { &quot;One&quot;, &quot;Two&quot;, 3333, &quot;Four&quot; }
+		Dynamic element
+		for element in inputList
+			if Type( element ) != StringType
+			goto badElementType
+			end
+			Echo( &quot;Element: &quot;, element )
+		end
+		Echo( &quot;inputList contains only Strings&quot; )
+		return
+		//
+		// Control will pass to this label if a non-string is found
+		// in inputList.
+		//
+		badElementType:
+			Echo( &quot;There was a non-string element: &quot;, element )
+		return</pre>
+
+<p class="body">A<span class="code">goto</span> statement can be used to escape from several nested operations if a condition makes continuation impossible. The liberal use of <span class="code">goto</span> statements may be a sign of poor programming practice. Only rarely can a script not be rewritten in a more structured manner, making the use of <span class="code">goto</span> statements unnecessary.</P>
+
+
+<script language="JavaScript">
+IncludeFooter( '' )
+</script>
+
+</BODY>
+</HTML>

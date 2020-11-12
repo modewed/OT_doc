@@ -1,0 +1,901 @@
+
+<meta charset="UTF-8">
+<html>
+<head><title>Class: Web</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../syntax.css" type="text/css">
+<link rel="stylesheet" href="builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td  align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody></table>
+
+<div id="document">
+	
+<div class="sidebar_container">
+		
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink"><a href="assoc.html">Assoc</a></div>
+				<div class="packagelink"><a href="boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="builder.html">Builder</a></div>
+				<div class="packagelink"><a href="bytes.html">Bytes</a></div>
+				<div class="packagelink"><a href="capi.html">CAPI</a></div>
+				<div class="packagelink"><a href="capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink"><a href="cachetree.html">CacheTree</a></div>
+				<div class="packagelink"><a href="compiler.html">Compiler</a></div>
+				<div class="packagelink"><a href="core.html">Core</a></div>
+				<div class="packagelink"><a href="dapi.html">DAPI</a></div>
+				<div class="packagelink"><a href="dapinode.html">DAPINODE</a></div>
+				<div class="packagelink"><a href="dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink"><a href="dapiversion.html">DAPIVERSION</a></div>
+				<div class="packagelink"><a href="domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="domcomment.html">DOMComment</a></div>
+				<div class="packagelink"><a href="domdocument.html">DOMDocument</a></div>
+				<div class="packagelink"><a href="domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink"><a href="domelement.html">DOMElement</a></div>
+				<div class="packagelink"><a href="domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink"><a href="domnamednodemap.html">DOMNamedNodeMap</a></div>
+				<div class="packagelink"><a href="domnode.html">DOMNode</a></div>
+				<div class="packagelink"><a href="domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="domtext.html">DOMText</a></div>
+				<div class="packagelink"><a href="date.html">Date</a></div>
+				<div class="packagelink"><a href="dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="env.html">Env</a></div>
+				<div class="packagelink"><a href="error.html">Error</a></div>
+				<div class="packagelink"><a href="file.html">File</a></div>
+				<div class="packagelink"><a href="filecopy.html">FileCopy</a></div>
+				<div class="packagelink"><a href="fileprefs.html">Fileprefs</a></div>
+				<div class="packagelink"><a href="frame.html">Frame</a></div>
+				<div class="packagelink"><a href="global.html">Global</a></div>
+				<div class="packagelink"><a href="integer.html">Integer</a></div>
+				<div class="packagelink"><a href="javaobject.html">JavaObject</a></div>
+				<div class="packagelink"><a href="language.html">Language</a></div>
+				<div class="packagelink"><a href="license.html">License</a></div>
+				<div class="packagelink"><a href="list.html">List</a></div>
+				<div class="packagelink"><a href="logging.html">Logging</a></div>
+				<div class="packagelink"><a href="long.html">Long</a></div>
+				<div class="packagelink"><a href="mailmessage.html">MailMessage</a></div>
+				<div class="packagelink"><a href="math.html">Math</a></div>
+				<div class="packagelink"><a href="memcached.html">Memcached</a></div>
+				<div class="packagelink"><a href="notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="object.html">Object</a></div>
+				<div class="packagelink"><a href="pop3session.html">POP3Session</a></div>
+				<div class="packagelink"><a href="patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="patfind.html">PatFind</a></div>
+				<div class="packagelink"><a href="pattern.html">Pattern</a></div>
+				<div class="packagelink"><a href="point.html">Point</a></div>
+				<div class="packagelink"><a href="profiler.html">Profiler</a></div>
+				<div class="packagelink"><a href="real.html">Real</a></div>
+				<div class="packagelink"><a href="recarray.html">RecArray</a></div>
+				<div class="packagelink"><a href="record.html">Record</a></div>
+				<div class="packagelink"><a href="regex.html">Regex</a></div>
+				<div class="packagelink"><a href="restclient.html">RestClient</a></div>
+				<div class="packagelink"><a href="saxparser.html">SAXParser</a></div>
+				<div class="packagelink"><a href="smtpsession.html">SMTPSession</a></div>
+				<div class="packagelink"><a href="ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="script.html">Script</a></div>
+				<div class="packagelink"><a href="security.html">Security</a></div>
+				<div class="packagelink"><a href="set.html">Set</a></div>
+				<div class="packagelink"><a href="socket.html">Socket</a></div>
+				<div class="packagelink"><a href="sql.html">Sql</a></div>
+				<div class="packagelink"><a href="sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink"><a href="str.html">Str</a></div>
+				<div class="packagelink"><a href="string.html">String</a></div>
+				<div class="packagelink"><a href="system.html">System</a></div>
+				<div class="packagelink"><a href="uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="void.html">Void</a></div>
+				<div class="packagelink"><a href="wapi.html">WAPI</a></div>
+				<div class="packagelink"><a href="wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink curPage">Web</div>
+				<div class="packagelink"><a href="xslprocessor.html">XSLProcessor</a></div>
+				<div class="packagelink"><a href="zip.html">Zip</a></div>
+		</div>
+</div>
+
+	<div class="content_container">
+		<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+		<h1>Class: Web</h1><div class="ClassDescription"><p>The built-in functions in the Web package offers   a set of Web-related format translation and file services.  The major functionalities    offered in the Web Package are the following:</p>
+<ul>
+<li><a class="interdoc" href="#cm_web_file">File()</a>, <a class="interdoc" href="#cm_web_write">Write()</a>,
+    and <a class="interdoc" href="#cm_web_writeheaders">WriteHeaders()</a> to write web content to a file
+    or socket.</li>
+<li><a class="interdoc" href="#cm_web_escape">Escape()</a> and 
+    <a class="interdoc" href="#cm_web_unescape">Unescape()</a> to convert a String to and from
+    URL-encoded format.</li>
+<li><a class="interdoc" href="#cm_web_escapejson">EscapeJSON()</a> and 
+    <a class="interdoc" href="#cm_web_unescapejson">UnescapeJSON()</a> to convert a String to and from
+    JSON-encoded format.</li>
+<li><a class="interdoc" href="#cm_web_tojson">ToJSON()</a> and 
+    <a class="interdoc" href="#cm_web_fromjson">FromJSON()</a> to convert a value to and from
+    JSON-encoded string.</li>
+<li><a class="interdoc" href="#cm_web_escapeforjs">EscapeForJS()</a> to convert
+    a string to the format that is compatible with the JavaScript escape functions.</li>
+<li><a class="interdoc" href="#cm_web_encodeforurl">EncodeForURL()</a> and
+    <a class="interdoc" href="#cm_web_decodeforurl">DecodeForURL()</a> to convert a String to and from
+    new URL-encoded format.</li>
+<li><a class="interdoc" href="#cm_web_escapehtml">EscapeHTML()</a> to convert a string to HTML format.</li>
+<li><a class="interdoc" href="#cm_web_escapexml">EscapeXML()</a> to convert a string to XML compatible format.</li>
+<li><a class="interdoc" href="#cm_web_escapexmlnocc">EscapeXMLNoCC()</a> to convert a string to XML compatible format
+    and replace nonspace control characters with 0xfffd.</li>
+<li><a class="interdoc" href="#cm_web_format">Format()</a> to substitute 
+    parameters into a format string with various escaping options.</li>
+<li><a class="interdoc" href="#cm_web_cookieencode">CookieEncode()</a> (deprecated) and
+    <a class="interdoc" href="#cm_web_cookiedecode">CookieDecode()</a> (deprecated) to encode or decode a cookie.</li>
+</ul></div>
+			<h2>Class Attributes</h2>
+			<div class="ClassAttributesShort">
+				
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_web_crlf">CRLF</a></div>
+					<div class="Description"><p>A String consisting of carriage 
+    return (ASCII 13) and line feed (ASCII 10).</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_web_js_encodeuri">JS_ENCODEURI</a></div>
+					<div class="Description"><p>An integer that is used for selecting the JavaScript encodeURI() function.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_web_js_encodeuricomponent">JS_ENCODEURICOMPONENT</a></div>
+					<div class="Description"><p>An integer that is used for selecting the JavaScript encodeURIComponent() function.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_web_js_escape">JS_ESCAPE</a></div>
+					<div class="Description"><p>An integer that is used for selecting the JavaScript escape() function.</p></div>
+				</div>
+				
+			</div>
+
+
+			<h2>Class Methods</h2>
+			<div class="ClassMethodsShort">
+				<div class="Method">
+					<div class="Name"><a href="#cm_web_cookiedecode" class="IndexMethodName">CookieDecode</a>(
+					 String cookie, String ipAddress, [Integer salt] )
+						<span class="Deprecated">Deprecated</span>
+					</div>
+					<div class="Description"><p>Decodes a string which was encoded 
+    using CookieEncode.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_web_cookieencode" class="IndexMethodName">CookieEncode</a>(
+					 String cookie, String ipAddress, [Integer salt] )
+						<span class="Deprecated">Deprecated</span>
+					</div>
+					<div class="Description"><p>Encodes a cookie for security purposes.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_web_decodeforurl" class="IndexMethodName">DecodeForURL</a>(
+					 String value )
+					</div>
+					<div class="Description"><p>Returns an unescaped decoding of the 
+    specified new URL-encoded String.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_web_encodeforurl" class="IndexMethodName">EncodeForURL</a>(
+					 String value )
+					</div>
+					<div class="Description"><p>Returns a new URL-encoded conversion of 
+    the specified String by converting non-ASCII characters to UTF-8 then escaping non-alphanumeric characters.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_web_escape" class="IndexMethodName">Escape</a>(
+					 String value )
+					</div>
+					<div class="Description"><p>Returns a URL-encoded conversion of 
+    the specified String by escaping non-alphanumeric characters.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_web_escapeforjs" class="IndexMethodName">EscapeForJS</a>(
+					 String value, Integer mode )
+					</div>
+					<div class="Description"><p>Returns a new encoded conversion of
+    the specified String by converting some non-ASCII characters, depending on the mode selected,  to UTF-8 then escaping non-alphanumeric characters.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_web_escapehtml" class="IndexMethodName">EscapeHTML</a>(
+					 String value )
+					</div>
+					<div class="Description"><p>Converts a specified string to HTML 
+    format by escaping special characters.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_web_escapejson" class="IndexMethodName">EscapeJSON</a>(
+					 String value, [Boolean trimStrings] )
+					</div>
+					<div class="Description"><p>Returns a copy of the given string that has been escaped for JSON.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_web_escapexml" class="IndexMethodName">EscapeXML</a>(
+					 String value )
+					</div>
+					<div class="Description"><p>Converts a specified string to XML compatible 
+    format by escaping special characters.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_web_escapexmlnocc" class="IndexMethodName">EscapeXMLNoCC</a>(
+					 String value )
+					</div>
+					<div class="Description"><p>Converts a specified string to XML compatible 
+    format by escaping special and control characters.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_web_file" class="IndexMethodName">File</a>(
+					 Dynamic context, String filePath, [String mimeType] )
+					</div>
+					<div class="Description"><p>Writes the specified file to the output 
+    context.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_web_format" class="IndexMethodName">Format</a>(
+					 String format, [List substitutions] )
+					</div>
+					<div class="Description"><p>Formats a list of values based on 
+    a specified formatting string.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_web_fromjson" class="IndexMethodName">FromJSON</a>(
+					 String value )
+					</div>
+					<div class="Description"><p>Deserializes a value from a given JSON string.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_web_tojson" class="IndexMethodName">ToJSON</a>(
+					 Dynamic value, [Boolean trimStrings] )
+					</div>
+					<div class="Description"><p>Serializes the given value to a JSON string.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_web_unescape" class="IndexMethodName">Unescape</a>(
+					 String value )
+					</div>
+					<div class="Description"><p>Returns an unescaped decoding of the 
+    specified URL-encoded String.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_web_unescapejson" class="IndexMethodName">UnescapeJSON</a>(
+					 String value )
+					</div>
+					<div class="Description"><p>Returns a copy of the given JSON string that has been unescaped.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_web_write" class="IndexMethodName">Write</a>(
+					 Dynamic context, Dynamic value, [List valueList] )
+					</div>
+					<div class="Description"><p>Writes the specified value to the 
+    output context.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_web_writeheaders" class="IndexMethodName">WriteHeaders</a>(
+					 Dynamic context, String status, String headers )
+					</div>
+					<div class="Description"><p>Writes a valid HTTP status line and 
+    headers to the output context.</p></div>
+				</div>
+			</div>
+
+
+				<h2>Class Attributes</h2>
+				<div class="ClassAttributes">
+					
+					<div class="Attribute">
+						<div class="Name">String <a name="ca_web_crlf">CRLF</a></div>
+						<div class="Description"><p>A String consisting of carriage return (ASCII 
+  13) and line feed (ASCII 10). It is generally used with HTTP headers.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ca_web_js_encodeuri">JS_ENCODEURI</a></div>
+						<div class="Description"><p>An integer (2) that is used for selecting the JavaScript encodeURI() function.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ca_web_js_encodeuricomponent">JS_ENCODEURICOMPONENT</a></div>
+						<div class="Description"><p>An integer (3) that is used for selecting the JavaScript encodeURIComponent() function.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ca_web_js_escape">JS_ESCAPE</a></div>
+						<div class="Description"><p>An integer (1) that is used for selecting the JavaScript escape() function.</p></div>
+					</div>
+				
+				</div>
+
+		
+				<h2>Class Methods</h2>
+				<div class="ClassMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_web_cookiedecode">CookieDecode</a></h3>
+
+								<span class="Deprecated">Deprecated</span>
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">CookieDecode</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">cookie</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">ipAddress</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">salt</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<div class="codehilite"><pre>Decodes a <span class="kt">string</span> which was encoded using CookieEncode<span class="o">.</span> 
+The ipAddress <span class="o">and</span> salt arguments must contain the same values as were passed 
+to CookieEncode<span class="o">.</span>
+</pre></div>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">cookie</span><span class="description"><p>The 
+            cookie string to be decoded.</p></span></div>
+											<div class="Parameter"><span class="name">ipAddress</span><span class="description"><p>The IP address of the workstation from 
+            which this cookie was received.</p></span></div>
+											<div class="Parameter"><span class="name">salt</span><span class="description"><p>An optional unique integer; must be 
+            the same as was passed to CookieEncode.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The decoded cookie string.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_web_cookieencode">CookieEncode</a></h3>
+
+								<span class="Deprecated">Deprecated</span>
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">CookieEncode</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">cookie</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">ipAddress</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">salt</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Encodes a cookie for security purposes. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">cookie</span><span class="description"><p>The cookie string to be encoded.</p></span></div>
+											<div class="Parameter"><span class="name">ipAddress</span><span class="description"><p>The IP address of the workstation to 
+            which this cookie will be sent.</p></span></div>
+											<div class="Parameter"><span class="name">salt</span><span class="description"><p>An optional unique integer which is 
+            factored into the encoding algorithm.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The encoded cookie string.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_web_decodeforurl">DecodeForURL</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">DecodeForURL</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">value</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Decodes a previously encoded string. The plus-sign 
+    character ("+") will be converted to a space and hexadecimal non-alphanumeric 
+    characters (represented by "%xx", where xx is hexadecimal notation) will be 
+    converted to their ASCII equivalent. In addition if the server is not using UTF-8, the UTF-8 
+    encoded characters will be converted.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>The String to be unescaped.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The converted string.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is an example:</p>
+<div class="codehilite"><pre> echo<span class="p">(</span> Web<span class="o">.</span>Unescape <span class="p">(</span> <span class="s">&quot;http%3A%2F%2Fjoe%2Efred%2Ecom&quot;</span> <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre>http<span class="o">:</span><span class="c">//joe.fred.com</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_web_encodeforurl">EncodeForURL</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">EncodeForURL</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">value</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts a specified String to new URL format. 
+    First represent each non-ASCII character in UTF-8 then by escaping 
+    non-alphanumeric characters into URL hexadecimal sequences and spaces in to 
+    the plus-sign ("+") character.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>The string to convert.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The converted string.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>When passing arguments to a CGI script, this function 
+    can be used to make the arguments URL compatible by escaping non-alphanumeric 
+    characters to a format recognizable by a CGI script. This is equivalent to
+    the Javascript EncodeURIComponent and to the Java URLDecoder.encode(). 
+    Here is an example:</p>
+<div class="codehilite"><pre><span class="kt">String</span>  text <span class="o">=</span> <span class="s">&quot;A Ã¼ URL_example&quot;</span>
+<span class="kt">String</span>  site <span class="o">=</span> <span class="s">&quot;http://www.bogus.com/somefile&quot;</span>
+<span class="kt">String</span>  query <span class="o">=</span> <span class="s">&quot;/search/query?site=%1&amp;text=%2&quot;</span>
+
+Echo<span class="p">(</span> <span class="s">&quot;Escaped String:  &quot;</span><span class="p">,</span> Web<span class="o">.</span>EncodeForURL<span class="p">(</span> text <span class="p">)</span> <span class="p">)</span>
+Echo<span class="p">(</span> <span class="s">&quot;Encoded URL: &quot;</span><span class="p">,</span> Str<span class="o">.</span>Format<span class="p">(</span> query<span class="p">,</span> Web<span class="o">.</span>EncodeForURL<span class="p">(</span> site <span class="p">),</span> web<span class="o">.</span>EncodeForURL<span class="p">(</span> text <span class="p">)</span> <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output is:</p>
+<div class="codehilite"><pre>Escaped <span class="kt">String</span><span class="o">:</span> A<span class="o">+%</span>C<span class="m">3</span><span class="o">%</span>BC<span class="o">+</span>URL_example
+Escaped URL<span class="o">:</span>    <span class="o">/</span>search<span class="o">/</span>query<span class="o">?</span>site<span class="o">=</span>http<span class="o">%</span><span class="m">3</span>A<span class="o">%</span><span class="m">2</span>F<span class="o">%</span><span class="m">2</span>Fwww<span class="o">%</span><span class="m">2</span>Ebogus<span class="o">%</span><span class="m">2</span>Ecom<span class="o">%</span><span class="m">2</span>Fsomefile<span class="o">&amp;</span>text<span class="o">=</span>A<span class="o">+%</span>C<span class="m">3</span><span class="o">%</span>BC<span class="o">+</span>URL_example
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_web_escape">Escape</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">Escape</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">value</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts a specified String to URL format by escaping 
+    non-alphanumeric characters into URL hexadecimal sequences and spaces in to 
+    the plus-sign ("+") character.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>The string to convert.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The converted string.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>When passing arguments to a CGI script, this function 
+    can be used to make the arguments URL compatible by escaping non-alphanumeric 
+    characters to a format recognizable by a CGI script. Here is an example:</p>
+<div class="codehilite"><pre><span class="kt">String</span>  text <span class="o">=</span> <span class="s">&quot;A URL_example&quot;</span>
+<span class="kt">String</span>  site <span class="o">=</span> <span class="s">&quot;http://www.bogus.com/somefile&quot;</span>
+<span class="kt">String</span>  query <span class="o">=</span> <span class="s">&quot;/search/query?site=%1&amp;text=%2&quot;</span>
+
+Echo<span class="p">(</span> <span class="s">&quot;Escaped String:  &quot;</span><span class="p">,</span> Web<span class="o">.</span>Escape<span class="p">(</span> text <span class="p">)</span> <span class="p">)</span>
+Echo<span class="p">(</span> <span class="s">&quot;Escaped URL: &quot;</span><span class="p">,</span> Str<span class="o">.</span>Format<span class="p">(</span> query<span class="p">,</span> Web<span class="o">.</span>Escape<span class="p">(</span> site <span class="p">),</span> web<span class="o">.</span>Escape<span class="p">(</span> text <span class="p">)</span> <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output is:</p>
+<div class="codehilite"><pre>Escaped <span class="kt">String</span><span class="o">:</span> A<span class="o">+</span>URL<span class="o">%</span><span class="m">5</span>Fexample
+Escaped URL<span class="o">:</span>    <span class="o">/</span>search<span class="o">/</span>query<span class="o">?</span>site<span class="o">=</span>http<span class="o">%</span><span class="m">3</span>A<span class="o">%</span><span class="m">2</span>F<span class="o">%</span><span class="m">2</span>Fwww<span class="o">%</span><span class="m">2</span>Ebogus<span class="o">%</span><span class="m">2</span>Ecom<span class="o">%</span><span class="m">2</span>Fsomefile<span class="o">&amp;</span>text<span class="o">=</span>A<span class="o">+</span>URL<span class="o">%</span><span class="m">5</span>Fexample
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_web_escapeforjs">EscapeForJS</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">EscapeForJS</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">value</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">mode</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts a specified string to the format that is compatible
+    with one of the JavaScript escape methods: escape(), escapeURI, and escapeURIComponent.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>The string to be escaped.</p></span></div>
+											<div class="Parameter"><span class="name">mode</span><span class="description"><p>The mode for selecting which JavaScript escape fuction to encode the string specified.
+  * mode = <a class="interdoc" href="#ca_web_js_escape">WEB.JS_ESCAPE</a>  for JavaScript's escape(), which does not encode: @<em>/+
+  * mode = <a class="interdoc" href="#ca_web_js_encodeuri">WEB.JS_ENCODEURI</a> for JavaScript's encodeURI(), which does not encode: ~!@#$&amp;</em>()=:/,;?+'
+  * mode = <a class="interdoc" href="#ca_web_js_encodeuricomponent">WEB.JS_ENCODEURICOMPONENT</a> JavaScript's encodeURIComponent(), which does not encode: ~!*()'.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The converted string.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here are some examples:</p>
+<div class="codehilite"><pre>Echo<span class="p">(</span> Web<span class="o">.</span>EscapeForJS<span class="p">(</span><span class="s">&#39;&quot;joe+B,smith&quot;@example.com&#39;</span><span class="p">,</span> WEB<span class="o">.</span>JS_ESCAPE<span class="p">)</span> <span class="p">)</span>
+
+Echo<span class="p">(</span> Web<span class="o">.</span>EscapeForJS<span class="p">(</span><span class="s">&#39;&quot;joe+B,smith&quot;@example.com&#39;</span><span class="p">,</span> WEB<span class="o">.</span>JS_ENCODEURI<span class="p">)</span> <span class="p">)</span>
+
+Echo<span class="p">(</span> Web<span class="o">.</span>EscapeForJS<span class="p">(</span><span class="s">&#39;&quot;joe+B,smith&quot;@example.com&#39;</span><span class="p">,</span> WEB<span class="o">.</span>JS_ENCODEURICOMPONENT <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The outputs are:</p>
+<div class="codehilite"><pre><span class="o">%</span><span class="m">22</span>joe<span class="o">+</span>B<span class="o">%</span><span class="m">2</span>Csmith<span class="o">%</span><span class="m">22</span><span class="o">@</span>example<span class="o">%</span><span class="m">2</span>Ecom
+
+<span class="o">%</span><span class="m">22</span>joe<span class="o">+</span>B<span class="p">,</span>smith<span class="o">%</span><span class="m">22</span><span class="o">@</span>example<span class="o">%</span><span class="m">2</span>Ecom
+
+<span class="o">%</span><span class="m">22</span>joe<span class="o">%</span><span class="m">2</span>BB<span class="o">%</span><span class="m">2</span>Csmith<span class="o">%</span><span class="m">22</span><span class="o">%</span><span class="m">40</span>example<span class="o">%</span><span class="m">2</span>Ecom
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_web_escapehtml">EscapeHTML</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">EscapeHTML</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">value</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts a specified string to HTML format by 
+    escaping special characters, such as greater-than, less-than, and ampersand.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>The string to be escaped.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The converted string.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is an example:</p>
+<div class="codehilite"><pre>Echo<span class="p">(</span> Web<span class="o">.</span>EscapeHTML<span class="p">(</span><span class="s">&quot;&lt;Hello&gt;&quot;</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output is:</p>
+<div class="codehilite"><pre><span class="o">&amp;lt</span><span class="p">;</span>Hello<span class="o">&amp;gt</span><span class="p">;</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_web_escapejson">EscapeJSON</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">EscapeJSON</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">value</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Boolean</span> <span class="PrototypeArgumentName">trimStrings</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts a specified String to JSON format.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>The string to convert.</p></span></div>
+											<div class="Parameter"><span class="name">trimStrings</span><span class="description"><p>TRUE if leading and trailing whitespace
+                    should be removed; FALSE otherwise. The default is TRUE.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The converted string.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_web_escapexml">EscapeXML</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">EscapeXML</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">value</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts a specified string to XML compatible format by 
+    escaping special characters, such as greater-than, less-than, ampersand and apostrophe.</p>
+<p>The difference between EscapeHTML and EscapeXML is a single quotation ' (or apostrophe) is escaped as &amp;apos;</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>The string to be escaped.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The converted string.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is an example:</p>
+<div class="codehilite"><pre>Echo<span class="p">(</span> Web<span class="o">.</span>EscapeXML<span class="p">(</span><span class="s">&quot;&lt;JOE&gt;&quot;</span>This <span class="s">&#39;&amp;&#39;</span> That<span class="s">&quot;&lt;/JOE&gt;&quot;</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output is:</p>
+<div class="codehilite"><pre><span class="o">&amp;lt</span><span class="p">;</span>JOE<span class="o">&amp;gt</span><span class="p">;</span><span class="o">&amp;</span>quot<span class="p">;</span>This <span class="o">&amp;</span>apos<span class="p">;</span><span class="o">&amp;</span>amp<span class="p">;</span><span class="o">&amp;</span>apos<span class="p">;</span> That<span class="o">&amp;</span>quot<span class="p">;</span><span class="o">&amp;lt</span><span class="p">;</span><span class="o">/</span>JOE<span class="o">&amp;gt</span><span class="p">;</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_web_escapexmlnocc">EscapeXMLNoCC</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">EscapeXMLNoCC</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">value</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts a specified string to XML compatible format by 
+    escaping special and control characters, such as greater-than, less-than, ampersand and apostrophe.
+    illegal control chars and del (0x7f) are replaced by substitute char 0xfffd</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>The string to be escaped.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The converted string.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is an example:
+^z means ctl-z hex 1A</p>
+<div class="codehilite"><pre>Echo( Web.EscapeXMLNoCC(&quot;<span class="err">&lt;&amp;</span>^z&quot;))
+</pre></div>
+
+
+<p>The output is:</p>
+<div class="codehilite"><pre><span class="o">&amp;lt</span><span class="p">;</span><span class="o">&amp;</span>amp<span class="p">;</span><span class="o">&amp;</span>#xfffd<span class="p">;</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_web_file">File</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">File</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">context</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">filePath</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">mimeType</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Writes the specified file to the output context. 
+    The output context may either be a socket, which will then send the file to 
+    the Web browser, or a file.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">context</span><span class="description"><p>The output context.</p></span></div>
+											<div class="Parameter"><span class="name">filePath</span><span class="description"><p>The server file path of the file to 
+            be sent to the output context.</p></span></div>
+											<div class="Parameter"><span class="name">mimeType</span><span class="description"><p>An optional data string specifying 
+            the MIME type of the data in <em>filePath</em>. 
+            If this parameter is specified, the HTTP headers are also sent as 
+            part of the file.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>TRUE if successful; FALSE if not.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is a short example: </p>
+<div class="codehilite"><pre>File    fin <span class="o">=</span> File<span class="o">.</span>Open<span class="p">(</span> <span class="s">&quot;in.txt&quot;</span><span class="p">,</span> File<span class="o">.</span>WriteMode <span class="p">)</span>
+File    fout <span class="o">=</span> File<span class="o">.</span>Open<span class="p">(</span> <span class="s">&quot;out.txt&quot;</span><span class="p">,</span> File<span class="o">.</span>WriteMode <span class="p">)</span>
+
+File<span class="o">.</span>Write<span class="p">(</span> fin<span class="p">,</span> <span class="s">&quot;Some string of text data.&quot;</span> <span class="p">)</span>
+File<span class="o">.</span>Close<span class="p">(</span> fin <span class="p">)</span>
+
+Web<span class="o">.</span>File<span class="p">(</span> fout<span class="p">,</span> <span class="s">&quot;in.txt&quot;</span><span class="p">,</span> <span class="s">&quot;text/plain&quot;</span> <span class="p">)</span>
+File<span class="o">.</span>Close<span class="p">(</span> fout <span class="p">)</span>
+</pre></div>
+
+
+<p>The output for the example in file "out.txt" 
+    is the following (where each end-of-line before the file data, 
+    <span class="ExampleCode">"Some string..."</span>
+    is actually a <a class="interdoc" href="#ca_web_crlf">Web.CRLF</a>):</p>
+<div class="codehilite"><pre>HTTP<span class="o">/</span><span class="m">1.0</span> <span class="m">200</span> 
+Content<span class="o">-</span>Type<span class="o">:</span> text<span class="o">/</span>plain
+
+Some <span class="kt">string</span> of text data<span class="o">.</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_web_format">Format</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">Format</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">format</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">List</span> <span class="PrototypeArgumentName">substitutions</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Web-formats a list of values based on a specified 
+    formatting string. This is useful for generating HTML, since Format() applies 
+    either HTML-escaping, URL-escaping, or no escaping (literal) to the substitution 
+    strings upon substitution. Formatting is marked in the format string by the 
+    backtick (`), instead of the percent symbol (%) as usual, since the percent 
+    symbol is used to escape URLs.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">format</span><span class="description"><p>The text and placeholders. Format strings are:</p>
+<table border="0" class="ParameterDescription" width="98%">
+    <tr>
+        <td><u>Value</u></td>
+        <td><u>Description</u></td>
+    </tr>
+    <tr>
+        <td>`</td>
+        <td>A backtick (`), consumes no substitution String.</td>
+    </tr>
+    <tr>
+        <td>`L</td>
+        <td>Literal (String is not escaped).</td>
+    </tr>
+    <tr>
+        <td>`H</td>
+        <td>HTML (calls [[EscapeHTML()]] on the String)</td>
+    </tr>
+    <tr>
+        <td>'U</td>
+        <td>URL (calls [[Escape()]] on the String)</td>
+    </tr>
+</table></span></div>
+											<div class="Parameter"><span class="name">substitutions</span><span class="description"><p>A list of Strings to substitute into 
+            the format.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The formatted String.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>A maximum of 20 format specifications can be made. 
+    Here is a short example: </p>
+<div class="codehilite"><pre>Echo<span class="p">(</span> Web<span class="o">.</span>Format<span class="p">(</span> <span class="s">&quot;` `L `H `U&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s">&quot;&lt;Joe1&gt;&quot;</span><span class="p">,</span> <span class="s">&quot;&lt;Joe2&gt;&quot;</span><span class="p">,</span> <span class="s">&quot;&lt;Joe3&gt;&quot;</span><span class="p">}</span> <span class="p">)</span> <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output is:</p>
+<div class="codehilite"><pre>` <span class="o">&lt;</span>Joe<span class="m">1</span><span class="o">&gt;</span> <span class="o">&amp;lt</span><span class="p">;</span>Joe<span class="m">2</span><span class="o">&amp;gt</span><span class="p">;</span> <span class="o">%</span><span class="m">3</span>CJoe<span class="m">3</span><span class="o">%</span><span class="m">3</span>E
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_web_fromjson">FromJSON</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Dynamic</span> 
+						<span class="PrototypeselfName">FromJSON</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">value</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Deserializes an object from the specified string in JSON format.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>The string to deserialize from JSON.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The deserialized object.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_web_tojson">ToJSON</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">ToJSON</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">value</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Boolean</span> <span class="PrototypeArgumentName">trimStrings</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Serializes the specified object to JSON format.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>The object to serialize to JSON.</p></span></div>
+											<div class="Parameter"><span class="name">trimStrings</span><span class="description"><p>TRUE if leading and trailing whitespace
+                    should be removed from String values; FALSE otherwise. The default is TRUE.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The JSON representation of the object.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_web_unescape">Unescape</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">Unescape</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">value</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Unescapes a previously escaped string. The plus-sign 
+    character ("+") will be converted to a space and hexadecimal non-alphanumeric 
+    characters (represented by "%xx", where xx is hexadecimal notation) will be 
+    converted to their ASCII equivalent.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>The String to be unescaped.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The converted string.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is an example:</p>
+<div class="codehilite"><pre> echo<span class="p">(</span> Web<span class="o">.</span>Unescape <span class="p">(</span> <span class="s">&quot;http%3A%2F%2Fjoe%2Efred%2Ecom&quot;</span> <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre>http<span class="o">:</span><span class="c">//joe.fred.com</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_web_unescapejson">UnescapeJSON</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">UnescapeJSON</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">value</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts a specified String from JSON format.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>The string to convert.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The converted string.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_web_write">Write</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">Write</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">context</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">value</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">List</span> <span class="PrototypeArgumentName">valueList</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Writes the specified value to the output context. 
+    The output context may either be a socket, as connected to a Web browser, 
+    or a file. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">context</span><span class="description"><p>The output context.</p></span></div>
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>The value to write. The value must 
+            be type Bytes or String.</p></span></div>
+											<div class="Parameter"><span class="name">valueList</span><span class="description"><p>An optional format. If this parameter 
+            is specified, the second and third parameters are passed to the <a class="interdoc" href="#cm_web_format">Web.Format</a> 
+            function and the resulting string is written to the output context.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>TRUE if successful; FALSE if not.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is a short example of Web.Write() and <a class="interdoc" href="#cm_web_writeheaders">Web.WriteHeaders()</a>:</p>
+<div class="codehilite"><pre><span class="kt">String</span>  fname <span class="o">=</span> <span class="s">&quot;c:\tmp\s.txt&quot;</span>
+File    f <span class="o">=</span> File<span class="o">.</span>Open<span class="p">(</span> fname<span class="p">,</span> File<span class="o">.</span>WriteMode <span class="p">)</span>
+<span class="kt">String</span>  headers <span class="o">=</span> <span class="s">&quot;Content-type: text/plain&quot;</span> <span class="o">+</span> Web<span class="o">.</span>CRLF <span class="o">+</span> \
+                  <span class="s">&quot;Cookie: This is a cookie&quot;</span> <span class="o">+</span> Web<span class="o">.</span>CRLF
+
+Web<span class="o">.</span>WriteHeaders<span class="p">(</span> f<span class="p">,</span> <span class="s">&quot;s.txt&quot;</span><span class="p">,</span> headers <span class="p">)</span>
+Web<span class="o">.</span>Write<span class="p">(</span> f<span class="p">,</span> <span class="s">&quot;This is some text.&quot;</span> <span class="p">)</span>
+File<span class="o">.</span>Close<span class="p">(</span> f <span class="p">)</span>
+
+Echo<span class="p">(</span> Str<span class="o">.</span>FileToString<span class="p">(</span> fname <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre>HTTP<span class="o">/</span><span class="m">1.0</span> s<span class="o">.</span>txt
+Content<span class="o">-</span>type<span class="o">:</span> text<span class="o">/</span>plain
+Cookie<span class="o">:</span> This is a cookie
+
+This is some text<span class="o">.</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_web_writeheaders">WriteHeaders</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">WriteHeaders</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">context</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">status</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">headers</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Writes a valid HTTP status line and headers to 
+    the output context (either a socket or a file).</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">context</span><span class="description"><p>The output context.</p></span></div>
+											<div class="Parameter"><span class="name">status</span><span class="description"><p>The return header status.</p></span></div>
+											<div class="Parameter"><span class="name">headers</span><span class="description"><p>Additional HTTP headers; this must 
+            include carriage returns and line feeds (<a class="interdoc" href="#ca_web_crlf">Web.CRLF</a>).</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>TRUE if successful; FALSE if not.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>See <a class="interdoc" href="file.html#cm_file_write">File.Write()</a> for an example.</p></div>
+							</div>
+						</div>
+				</div>
+		
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2018 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+
+
+
+</div>
+	</div>						
+						
+
+</div>
+
+</body></html>

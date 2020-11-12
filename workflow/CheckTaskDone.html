@@ -1,0 +1,69 @@
+<HTML>
+<HEAD>
+<TITLE>CheckTaskDone()</TITLE>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<script language="JavaScript">updateParentHeader( 'Code' );</script>
+<script language="JavaScript">includeContentContainer( 'wfbuilder', true );</script>
+<p class="body">
+
+
+<p class="title">CheckTaskDone()</p>
+<p class="body"> 
+This code sample describes how to verify that a workflow participant has
+specified values in all of the required workflow attribute fields on the Project and
+Customer tabs before the workflow is routed to the next workflow participant.</p>
+<pre class="code">
+	Function List CheckTaskDone( \
+		Object 		prgCtx, \
+		Dynamic 	data )
+		String 		msg
+		String 		name
+		List 		retVal = { True, '' }
+	
+		//Examine each workflow attribute field on the Project and
+		//Customer pages on the Table Values tab, and determine which
+		//fields are required. If a value has not been entered in a
+		//required field, return a message indicating that a value is
+		//required for that field.
+
+	for name in Assoc.Keys( data.Fields )
+	if ( name in data.Required )
+	if ( !IsDefined( data.fields.Name ) )
+	msg = Str.Format( 'A Value is required for the' + \
+	'table value %1.', \
+	Str.Quote( name, '&quot;' ) )
+	retVal = { False, msg }
+	break
+	end
+	
+	//If the creator of a workflow map specified that the
+	//Customer field is a required field for this task (which
+	//means that the entire Customer tab is displayed to
+	//workflow participants in the work package), verify that
+	//the workflow participant has entered a value in the
+	//Customer Name field on the Customer tab. If a value has
+	//not been entered, return a message indicating that a name
+	//for the customer is required.
+
+	if ( Str.Upper( name ) == 'CUSTOMER' )
+	if ( !IsDefined( data.Fields.Customer.Name ) )
+	msg = 'You must enter a name for the customer.'
+	retVal = { False, msg }
+	break
+	end
+	end
+	end
+	end
+	return( retVal )
+	end</pre>
+
+
+<script language="JavaScript">IncludeFooter();</script>
+
+</body>
+</html>

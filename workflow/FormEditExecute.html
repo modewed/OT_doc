@@ -1,0 +1,177 @@
+<HTML>
+<HEAD>
+<TITLE>FormEdit -- Execute()</TITLE>
+
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<script language="JavaScript">updateParentHeader( 'Code' );</script>
+<script language="JavaScript">includeContentContainer( 'wfbuilder', true );</script>
+<p>
+
+
+<p class="title">FormEdit -- Execute()</p>
+<p class="body">This code sample defines the 
+operation of the FormEdit request handler for the
+form task type.</p>
+<pre>
+	function Dynamic Execute( Dynamic ctxIn, Dynamic ctxOut, Record r )
+		Assoc 		extendedData
+		Assoc 		form
+		Assoc 		response
+		Assoc 		saveData
+		Assoc 		tmp
+		Dynamic 	forms
+		Dynamic 	status
+		Dynamic		taskInfo
+		Object 		obj
+		String 		mapName
+		Object 		prgCtx = .prgSession()
+		Object 		subSystem = $WebForm.WebFormSubsystem
+		String 		pageType = 'WORK'
+
+		//Find the controller object for the forms task type (that is, the
+		//form task's API object).
+		obj = $WFMain.WFPackageSubsystem.GetItemByName( 'Form' )
+		if ( IsDefined( obj ) )
+			taskInfo = prgCtx.WSession().LoadTaskStatus( \
+					r.WorkID, \
+					r.SubWorkID, \
+					r.TaskID )
+			if ( .Check( taskInfo ) )
+				mapName = taskInfo[ 1 ].SUBWORK_TITLE
+		//Retrieve the forms that are available to the workflow.
+		//This value depends on whether the workflow is at the Start
+		//task and if the data in the workflow is editable. The list
+		//of forms gets loaded from a different place if the Start
+		//task is active or if it is loaded from the Detailed Status
+		//page.
+			if ( r.TaskID > 0 )
+				if ( r.Editable )
+					forms = obj.LoadTaskWorkData( prgCtx, Undefined, \
+							taskInfo[ 1 ], r.SubWorkID )
+				else
+					forms = obj.GetTaskStatusWork( prgCtx, taskInfo[ 1 ], \
+							r.SubWorkID )
+				end
+			else
+				forms = obj.LoadWorkData( prgCtx, Undefined, r.SubWorkID )
+			end
+			.Check( forms )
+		end
+		else
+			.fError = 'Could not find Form controller object.'
+		end
+		if ( !IsDefined( .fError ) )
+			forms = forms.Forms
+		//Locate the form that is being edited, in the list of
+		//forms that are available to the workflow.
+			form = GetForm( forms, r.FormName )
+			if ( !IsDefined( form ) )
+				.fError = \
+					Str.Format( [WebFormWF_ErrMsg.CouldNotFindForm1], \
+					r.FormName )
+			end
+		end
+		
+		if ( !IsDefined( .fError ) )
+		//Set up the Assoc that will control the operation of the Save
+		//button on the form.
+			if ( r.Editable )
+				saveData.Func = 'formwf.saveform'
+				saveData.LL_ID = r.SubworkID
+				saveData.LL_FormName = r.FormName
+				saveData.LL_NextURL = Web.Escape( r.NextURL )
+			end
+			if ( Str.Locate( Str.Upper( r.NextURL ), 'WORK.STATUSTASKS' ) )
+				pageType = 'STATUS'
+			end
+		//Retrieve any extra data that may be needed to display the
+		//form.
+			extendedData = subSystem.GetWorkflowExtendedData( \
+						prgCtx, \
+						r, \
+						mapName, \
+						pageType, \
+						form.TemplateID )
+			if ( .CheckError( extendedData ) )
+		//Add ctxOut to the request record. This is a gateway to the
+		//Web server that serves up the HTML pages.
+				tmp = Assoc.FromRecord( r )
+				tmp.CtxOut = ctxOut
+				r = Assoc.ToRecord( tmp )
+		//Tell the forms subsystem to display the specified form.
+				status = subSystem.DisplayForm( \
+						prgCtx, \
+						r, \
+						form.TemplateID, \
+						form.Data, \
+						saveData, \
+						extendedData )
+				if ( .CheckError( status ) )
+					response.Data = Assoc.CreateAssoc()
+					response.Data.extendedData = extendedData
+		//Store information about the form being displayed and
+		//determine which HTML file to use to display the form.
+					.fResponse = response
+					if ( IsDefined( extendedData.HTMLFile ) )
+						.fHTMLFile = extendedData.HTMLFile
+					else
+						.fHTMLFile = Undefined
+					end
+				end
+			end
+		end
+	return Undefined
+end
+
+
+	function Assoc GetForm( \
+		List forms, \
+		String formName )
+		
+		Assoc 		form
+		Assoc 		formData
+		Assoc 		status
+		Integer 	templateID
+		Integer 	where
+		Assoc 		retVal = Undefined
+		Boolean 	found = False
+		Object 		prgCtx = .prgSession()
+		
+		//Look through all the forms and sub-forms that are
+		//available to the workflow and see if the specified
+		//form exists.
+	
+	for form in forms
+		if ( form.Name == formName )
+			templateID = form.TemplateID
+			formData = form.Data
+			found = True
+		else
+			where = formName in form.SubForms
+		//Find the ID of the template object for the form and find
+		//all the data that has been entered into the form.
+			if ( IsDefined( where ) && ( where > 0 ) )
+				templateID = form.SubFormTemplateIDs[ where ]
+				formData = form.Data
+				found = True
+			end
+		end
+		
+		if ( found )
+			retVal = Assoc.CreateAssoc()
+			retVal.TemplateID = templateID
+			retVal.Data = formData
+			break
+			end
+		end
+	return( retVal )
+end</pre>
+
+<script language="JavaScript">IncludeFooter();</script>
+</body>
+</html>

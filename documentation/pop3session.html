@@ -1,0 +1,674 @@
+
+<meta charset="UTF-8">
+<html>
+<head><title>Class: POP3Session</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../syntax.css" type="text/css">
+<link rel="stylesheet" href="builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td  align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody></table>
+
+<div id="document">
+	
+<div class="sidebar_container">
+		
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink"><a href="assoc.html">Assoc</a></div>
+				<div class="packagelink"><a href="boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="builder.html">Builder</a></div>
+				<div class="packagelink"><a href="bytes.html">Bytes</a></div>
+				<div class="packagelink"><a href="capi.html">CAPI</a></div>
+				<div class="packagelink"><a href="capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink"><a href="cachetree.html">CacheTree</a></div>
+				<div class="packagelink"><a href="compiler.html">Compiler</a></div>
+				<div class="packagelink"><a href="core.html">Core</a></div>
+				<div class="packagelink"><a href="dapi.html">DAPI</a></div>
+				<div class="packagelink"><a href="dapinode.html">DAPINODE</a></div>
+				<div class="packagelink"><a href="dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink"><a href="dapiversion.html">DAPIVERSION</a></div>
+				<div class="packagelink"><a href="domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="domcomment.html">DOMComment</a></div>
+				<div class="packagelink"><a href="domdocument.html">DOMDocument</a></div>
+				<div class="packagelink"><a href="domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink"><a href="domelement.html">DOMElement</a></div>
+				<div class="packagelink"><a href="domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink"><a href="domnamednodemap.html">DOMNamedNodeMap</a></div>
+				<div class="packagelink"><a href="domnode.html">DOMNode</a></div>
+				<div class="packagelink"><a href="domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="domtext.html">DOMText</a></div>
+				<div class="packagelink"><a href="date.html">Date</a></div>
+				<div class="packagelink"><a href="dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="env.html">Env</a></div>
+				<div class="packagelink"><a href="error.html">Error</a></div>
+				<div class="packagelink"><a href="file.html">File</a></div>
+				<div class="packagelink"><a href="filecopy.html">FileCopy</a></div>
+				<div class="packagelink"><a href="fileprefs.html">Fileprefs</a></div>
+				<div class="packagelink"><a href="frame.html">Frame</a></div>
+				<div class="packagelink"><a href="global.html">Global</a></div>
+				<div class="packagelink"><a href="integer.html">Integer</a></div>
+				<div class="packagelink"><a href="javaobject.html">JavaObject</a></div>
+				<div class="packagelink"><a href="language.html">Language</a></div>
+				<div class="packagelink"><a href="license.html">License</a></div>
+				<div class="packagelink"><a href="list.html">List</a></div>
+				<div class="packagelink"><a href="logging.html">Logging</a></div>
+				<div class="packagelink"><a href="long.html">Long</a></div>
+				<div class="packagelink"><a href="mailmessage.html">MailMessage</a></div>
+				<div class="packagelink"><a href="math.html">Math</a></div>
+				<div class="packagelink"><a href="memcached.html">Memcached</a></div>
+				<div class="packagelink"><a href="notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="object.html">Object</a></div>
+				<div class="packagelink curPage">POP3Session</div>
+				<div class="packagelink"><a href="patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="patfind.html">PatFind</a></div>
+				<div class="packagelink"><a href="pattern.html">Pattern</a></div>
+				<div class="packagelink"><a href="point.html">Point</a></div>
+				<div class="packagelink"><a href="profiler.html">Profiler</a></div>
+				<div class="packagelink"><a href="real.html">Real</a></div>
+				<div class="packagelink"><a href="recarray.html">RecArray</a></div>
+				<div class="packagelink"><a href="record.html">Record</a></div>
+				<div class="packagelink"><a href="regex.html">Regex</a></div>
+				<div class="packagelink"><a href="restclient.html">RestClient</a></div>
+				<div class="packagelink"><a href="saxparser.html">SAXParser</a></div>
+				<div class="packagelink"><a href="smtpsession.html">SMTPSession</a></div>
+				<div class="packagelink"><a href="ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="script.html">Script</a></div>
+				<div class="packagelink"><a href="security.html">Security</a></div>
+				<div class="packagelink"><a href="set.html">Set</a></div>
+				<div class="packagelink"><a href="socket.html">Socket</a></div>
+				<div class="packagelink"><a href="sql.html">Sql</a></div>
+				<div class="packagelink"><a href="sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink"><a href="str.html">Str</a></div>
+				<div class="packagelink"><a href="string.html">String</a></div>
+				<div class="packagelink"><a href="system.html">System</a></div>
+				<div class="packagelink"><a href="uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="void.html">Void</a></div>
+				<div class="packagelink"><a href="wapi.html">WAPI</a></div>
+				<div class="packagelink"><a href="wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink"><a href="web.html">Web</a></div>
+				<div class="packagelink"><a href="xslprocessor.html">XSLProcessor</a></div>
+				<div class="packagelink"><a href="zip.html">Zip</a></div>
+		</div>
+</div>
+
+	<div class="content_container">
+		<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+		<h1>Class: POP3Session</h1><div class="ClassDescription"><p>The built-in functions in the POP3Session class provide the ability to connect to a POP3 server with a variety of methods and retrieve email and send POP3 commands.</p>
+<p>The POP3Session class offers the following functionality:</p>
+<ul>
+<li><a class="interdoc" href="#cm_pop3session_new">New()</a> and <a class="interdoc" href="#cm_pop3session_newssl">NewSSL()</a> Create a new POP3 session object. </li>
+<li><a class="interdoc" href="#im_pop3session_settimeout">SetTimeout()</a> and <a class="interdoc" href="#im_pop3session_gettimeout">GetTimeout()</a> to get or set the POP3 command timeout value.</li>
+<li><a class="interdoc" href="#im_pop3session_serverhasuids">ServerHasUIDs()</a> to detect if a server supports UIDs.</li>
+<li><a class="interdoc" href="#im_pop3session_initcontext">InitContext()</a> to initialize an SSL context for secure connections.</li>
+<li><a class="interdoc" href="#im_pop3session_securelogin">SecureLogin()</a> and
+    <a class="interdoc" href="#im_pop3session_login">Login()</a> to login to the POP3 server.</li>
+<li><a class="interdoc" href="#im_pop3session_close">Close()</a> to close a POP3 connection.</li>
+<li><a class="interdoc" href="#im_pop3session_listmessages">ListMessages()</a> and <a class="interdoc" href="#im_pop3session_getmessagetable">GetMessageTable()</a> to get information about available messages on the POP3 server.
+    <a class="interdoc" href="#im_pop3session_messagecount">MessageCount()</a>, <a class="interdoc" href="#im_pop3session_retrievemessage">RetrieveMessage()</a>, <a class="interdoc" href="#im_pop3session_retrieveheader">RetrieveHeader()</a>, <a class="interdoc" href="#im_pop3session_retrieveheaderassoc">RetrieveHeaderAssoc()</a>, <a class="interdoc" href="#im_pop3session_deletemessage">DeleteMessage()</a>, <a class="interdoc" href="#im_pop3session_listmessage">ListMessage()</a>, <a class="interdoc" href="#im_pop3session_getuid">GetUID()</a> for message management on the POP3 server.</li>
+<li><a class="interdoc" href="#im_pop3session_getlasterror">GetLastError()</a> to return a string for the last error that occured. </li>
+</ul></div>
+
+			<h2>Instance Attributes</h2>
+			<div class="InstanceAttributesShort">
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_pop3session_list_by_ids">LIST_BY_IDS</a></div>
+					<div class="Description"><p>List messages by IDs</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_pop3session_list_by_uids">LIST_BY_UIDS</a></div>
+					<div class="Description"><p>List messages by UIDs </p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_pop3session_pop3_port">POP3_PORT</a></div>
+					<div class="Description"><p>The standard POP3 port, 110</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_pop3session_secure_pop3_port">SECURE_POP3_PORT</a></div>
+					<div class="Description"><p>The standard Secure POP3 port, 995</p></div>
+				</div>
+			</div>
+
+			<h2>Class Methods</h2>
+			<div class="ClassMethodsShort">
+				<div class="Method">
+					<div class="Name"><a href="#cm_pop3session_new" class="IndexMethodName">New</a>(
+					 String host, Integer port )
+					</div>
+					<div class="Description"><p>Returns a new POP3Session instance, or undefined if an error occured.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_pop3session_newssl" class="IndexMethodName">NewSSL</a>(
+					 String host, Integer port, SSLOptions options )
+					</div>
+					<div class="Description"><p>Returns a new POP3Session instance using a SSL socket, or undefined if an error occured.</p></div>
+				</div>
+			</div>
+
+			<h2>Instance Methods</h2>
+			<div class="InstanceMethodsShort">
+				<div class="Method">					
+					<div class="Name"><a href="#im_pop3session_close" class="IndexMethodName">Close</a>(
+					)
+					</div>
+					<div class="Description"><p>Close a connection to an POP3 server.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_pop3session_deletemessage" class="IndexMethodName">DeleteMessage</a>(
+					 Dynamic messageIndex )
+					</div>
+					<div class="Description"><p>deletes a message from the POP3 server.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_pop3session_getlasterror" class="IndexMethodName">GetLastError</a>(
+					)
+					</div>
+					<div class="Description"><p>Retrieve the a string for the last error code.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_pop3session_getmessagetable" class="IndexMethodName">GetMessageTable</a>(
+					 Integer listType )
+					</div>
+					<div class="Description"><p>Retrieves a table of message IDs from the POP3 server.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_pop3session_gettimeout" class="IndexMethodName">GetTimeout</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns the POP3 timeout in milliseconds.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_pop3session_getuid" class="IndexMethodName">GetUID</a>(
+					 Integer messageIndex )
+					</div>
+					<div class="Description"><p>retrieves a UID for a message on the POP3 server.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_pop3session_initcontext" class="IndexMethodName">InitContext</a>(
+					 SSLOptions options )
+					</div>
+					<div class="Description"><p>Used to initialize a security context for SecureLogin().</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_pop3session_listmessage" class="IndexMethodName">ListMessage</a>(
+					 Dynamic messageIndex )
+					</div>
+					<div class="Description"><p>retrieves the size of a message from the POP3 server.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_pop3session_listmessages" class="IndexMethodName">ListMessages</a>(
+					 Integer listType )
+					</div>
+					<div class="Description"><p>retrieves a list of messages from the POP3 server.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_pop3session_login" class="IndexMethodName">Login</a>(
+					 String username, String password )
+					</div>
+					<div class="Description"><p>Initiate a connection to an POP3 server.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_pop3session_messagecount" class="IndexMethodName">MessageCount</a>(
+					)
+					</div>
+					<div class="Description"><p>returns the number of messages for the logged in account.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_pop3session_retrieveheader" class="IndexMethodName">RetrieveHeader</a>(
+					 Dynamic messageIndex )
+					</div>
+					<div class="Description"><p>retrieves a message header from the POP3 server.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_pop3session_retrieveheaderassoc" class="IndexMethodName">RetrieveHeaderAssoc</a>(
+					 Dynamic messageIndex )
+					</div>
+					<div class="Description"><p>retrieves a message header from the POP3 server.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_pop3session_retrievemessage" class="IndexMethodName">RetrieveMessage</a>(
+					 Dynamic messageIndex )
+					</div>
+					<div class="Description"><p>retrieves a message from the POP3 server.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_pop3session_securelogin" class="IndexMethodName">SecureLogin</a>(
+					 String username, String password )
+					</div>
+					<div class="Description"><p>Initiate a secure connection to an POP3 server.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_pop3session_sendcommand" class="IndexMethodName">SendCommand</a>(
+					 String command, String arguments )
+					</div>
+					<div class="Description"><p>Sends raw POP3 commands.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_pop3session_serverhasuids" class="IndexMethodName">ServerHasUIDs</a>(
+					)
+					</div>
+					<div class="Description"><p>Determines if the server supports the UIDL command.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_pop3session_settimeout" class="IndexMethodName">SetTimeout</a>(
+					 Integer timeout )
+					</div>
+					<div class="Description"><p>Set POP3 timeout in milliseconds.</p></div>
+				</div>
+			</div>
+
+				<h2>Instance Attributes</h2>
+				<div class="InstanceAttributes">
+					
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_pop3session_list_by_ids">LIST_BY_IDS</a></div>
+						<div class="Description"><p>List messages by IDs</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_pop3session_list_by_uids">LIST_BY_UIDS</a></div>
+						<div class="Description"><p>List messages by UIDs </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_pop3session_pop3_port">POP3_PORT</a></div>
+						<div class="Description"><p>The standard POP3 port, 110</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_pop3session_secure_pop3_port">SECURE_POP3_PORT</a></div>
+						<div class="Description"><p>The standard Secure POP3 port, 995</p></div>
+					</div>
+				
+				</div>
+
+		
+				<h2>Class Methods</h2>
+				<div class="ClassMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_pop3session_new">New</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">POP3Session</span> 
+						<span class="PrototypeselfName">New</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">host</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">port</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a new POP3Session object</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">host</span><span class="description"><p>IP address or domain name of POP3 host.</p></span></div>
+											<div class="Parameter"><span class="name">port</span><span class="description"><p>POP3 connection port, optional and defaults to 110</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A new POP3Session object or undefined if there was an error constructing the object.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_pop3session_newssl">NewSSL</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">POP3Session</span> 
+						<span class="PrototypeselfName">NewSSL</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">host</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">port</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">SSLOptions</span> <span class="PrototypeArgumentName">options</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a new POP3Session object using a SSL socket.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">host</span><span class="description"><p>IP address or domain name of POP3 host.</p></span></div>
+											<div class="Parameter"><span class="name">port</span><span class="description"><p>POP3 connection port, optional and defaults to 110</p></span></div>
+											<div class="Parameter"><span class="name">options</span><span class="description"><p>SSL options</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A new POP3Session object using a SSL socket or undefined if there was an error constructing the object.</p></div>
+							</div>
+						</div>
+				</div>
+				<h2>Instance Methods</h2>
+				<div class="InstanceMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_pop3session_close">Close</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Close</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>No parameters.  Closes the session.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns 0 for success and -1 if an error occurred.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_pop3session_deletemessage">DeleteMessage</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">DeleteMessage</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">messageIndex</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>The messageIndex parameter can be either an Integer ID or a String UID.  Marks the specified message for deletion on the server.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">messageIndex</span><span class="description"><p>either an Integer ID or a String UID of the message to retrieve</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns 0 if successful, -1 if any errors occurred.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_pop3session_getlasterror">GetLastError</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">GetLastError</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>No parameters.  Returns an error string for the last error that occured.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns an error string for the last error that occured.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_pop3session_getmessagetable">GetMessageTable</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">RecArray</span> 
+						<span class="PrototypeselfName">GetMessageTable</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">listType</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>If listType is not specified or LIST_BY_IDS, then it returns a RecArray of message IDs and sizes. If listType is LIST_BY_UIDS, 
+    then it returns a RecArray of the message ids and their UID strings, one after the other.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">listType</span><span class="description"><p>type of list to return, either LIST_BY_IDS, or LIST_BY_UIDS.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns a table of ids.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_pop3session_gettimeout">GetTimeout</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">GetTimeout</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Gets the timeout value for POP3 commands.  The timeout is in milliseconds.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns the timeout in milliseconds, -1 if an error occured.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_pop3session_getuid">GetUID</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">GetUID</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">messageIndex</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the UID for the given message.  If no message exists, returns and empty string.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">messageIndex</span><span class="description"><p>ID of the message to retrieve</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns the UID for the given message.  If no message exists, returns and empty string.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_pop3session_initcontext">InitContext</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">InitContext</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">SSLOptions</span> <span class="PrototypeArgumentName">options</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sets the SSL options for a secure connection.  You must call this before attempting to do a SecureLogin() call.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">options</span><span class="description"><p>an instance of SSLOptions.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns 0 for success and -1 if an error occurred.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_pop3session_listmessage">ListMessage</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">ListMessage</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">messageIndex</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>The messageIndex parameter can be either an Integer ID or a String UID.<br />
+Returns the size of the message specified by mesgIndex or -1 if any errors occurred.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">messageIndex</span><span class="description"><p>either an Integer ID or a String UID of the message to retrieve</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns the size of the message specified by mesgIndex or -1 if any errors occurred.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_pop3session_listmessages">ListMessages</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">List</span> 
+						<span class="PrototypeselfName">ListMessages</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">listType</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>If listType is not specified or LIST_BY_IDS, then it returns a List of the message ids and sizes, one after the other.  i.e. {1,234,2,3435,3,5430}.</p>
+<p>If listType is LIST_BY_UIDS, then it returns a List of the message ids and their UID strings, one after the other, i.e., {1,34DF32EAC3,2,64EA32EDC3,3,354456CAE3}.</p>
+<p>The return value will be Undefined if the server returned an error.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">listType</span><span class="description"><p>type of list to return, either LIST_BY_IDS, or LIST_BY_UIDS.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns a list of ids.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_pop3session_login">Login</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Login</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">username</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">password</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>The client will check server capabilities and authenticate using CRAM-MD5 if available automatically, otherwise, it will login with CLEAR.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">username</span><span class="description"><p>username used to login to POP3 server.</p></span></div>
+											<div class="Parameter"><span class="name">password</span><span class="description"><p>password used to login to POP3 server.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns 1 for success and 0 if an error occurred.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_pop3session_messagecount">MessageCount</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">MessageCount</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>No parameters.  Returns the number of messages for the logged in user on the POP3 server.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns the number of messages for the logged in user on the POP3 server.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_pop3session_retrieveheader">RetrieveHeader</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">List</span> 
+						<span class="PrototypeselfName">RetrieveHeader</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">messageIndex</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>The messageIndex parameter can be either an Integer ID or a String UID.  </p>
+<p>Returns a List composed of the key/value string pairs found in the header of the given message.  </p>
+<p>The return value will be Undefined if no message exists at that index.  i.e. key1, value1, key2, value2, etc.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">messageIndex</span><span class="description"><p>either an Integer ID or a String UID of the message to retrieve</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns a List for the given messageIndex.  The return value will be Undefined if no message exists at that index.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_pop3session_retrieveheaderassoc">RetrieveHeaderAssoc</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Assoc</span> 
+						<span class="PrototypeselfName">RetrieveHeaderAssoc</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">messageIndex</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>The messageIndex parameter can be either an Integer ID or a String UID.  </p>
+<p>Returns an Assoc composed of the key/value string pairs found in the header of the given message.  </p>
+<p>The return value will be Undefined if no message exists at that index.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">messageIndex</span><span class="description"><p>either an Integer ID or a String UID of the message to retrieve</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns an Assoc for the given messageIndex.  The return value will be Undefined if no message exists at that index.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_pop3session_retrievemessage">RetrieveMessage</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">MailMessage</span> 
+						<span class="PrototypeselfName">RetrieveMessage</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">messageIndex</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>The messageIndex parameter can be either an Integer ID or a String UID.  </p>
+<p>Returns a MailMessage class for the given messageIndex.  </p>
+<p>The return value will be Undefined if no message exists at that index.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">messageIndex</span><span class="description"><p>either an Integer ID or a String UID of the message to retrieve</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns a MailMessage class for the given mesgIndex.  The return value will be Undefined if no message exists at that index.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_pop3session_securelogin">SecureLogin</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">SecureLogin</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">username</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">password</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Does an SSL secure login.  You must have called InitContext() before this.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">username</span><span class="description"><p>user login on POP3 server</p></span></div>
+											<div class="Parameter"><span class="name">password</span><span class="description"><p>user password for POP3 server</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns 0 for success and -1 if an error occurred.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_pop3session_sendcommand">SendCommand</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">SendCommand</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">command</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">arguments</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Use this to send other raw POP3 commands.  The arguments param is optional.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">command</span><span class="description"><p>command to send</p></span></div>
+											<div class="Parameter"><span class="name">arguments</span><span class="description"><p>command arguments to send</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns 0 for success and -1 if an error occurred.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_pop3session_serverhasuids">ServerHasUIDs</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">ServerHasUIDs</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Determines if the server supports the UIDL command that is used to list messages by UID.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>TRUE if the server supports the UIDL command, FALSE otherwise. If support
+cannot be determined, then the return value will be Undefined.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_pop3session_settimeout">SetTimeout</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">SetTimeout</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">timeout</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sets the timeout value for POP3 commands.  The timeout is in milliseconds.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">timeout</span><span class="description"><p>timeout in milliseconds.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns 0 for success and -1 if an error occurred.</p></div>
+							</div>
+						</div>
+				</div>
+		
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2018 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+
+
+
+</div>
+	</div>						
+						
+
+</div>
+
+</body></html>

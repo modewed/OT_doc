@@ -1,0 +1,138 @@
+<HTML>
+<HEAD>
+<TITLE>SaveForm -- Execute()</TITLE>
+
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<script language="JavaScript">updateParentHeader( 'Code' );</script>
+<script language="JavaScript">includeContentContainer( 'wfbuilder', true );</script>
+<p>
+
+
+<p class="title">SaveForm -- Execute()</p>
+<p class="body">
+This code sample defines the operation of the SaveForm 
+request handler for the form task type.</p>
+<pre>
+	function 	Dynamic Execute( Dynamic ctxIn, Dynamic ctxOut, Record r )
+
+		Assoc 		form
+		Assoc 		formData
+		Assoc 		tmp
+		Dynamic 	forms
+		Dynamic 	status
+		DAPINODE 	template
+		Integer 	index
+		Object 		obj
+		String 		name
+		Object 		prgCtx = .prgSession()
+		
+		//Find the controller object for the forms task type (that is,
+		//the form task's API object).
+		obj = $WFMain.WFPackageSubsystem.GetItemByName( 'Form' )
+
+		if ( IsDefined( obj ) )
+		//Load the forms that are available to this workflow.
+			forms = obj.LoadWorkData( prgCtx, Undefined, r.LL_ID )
+				if ( .Check( forms ) )
+					forms = forms.Forms
+		//Find the specific form that is being saved in the list of
+		//forms that are available to the workflow.
+					form = GetForm( forms, r.LL_FormName )
+					if ( IsDefined( form ) )
+						index = form.Index
+						template = form.Template
+						form = form.Form
+					else
+						.fError = Str.Format( \
+							[WebFormWF_ErrMsg.CouldNotFindForm1], \
+							r.LL_FormName )
+					end
+				end
+				else
+						.fError = \
+							[WebFormWF_ErrMsg.CouldNotFindFormControllerObject]
+				end
+				if ( !IsDefined( .fError ) )
+				//Retrieve the data that was entered into the form.
+					status = $WebForm.WebFormSubsystem.ValuesFromRequest( \
+							prgCtx, \
+							template, \
+							r, \
+							this )
+					if ( .CheckError( status ) )
+				//Store the data that was entered into the HTML page (form)
+				//in the workflow.
+						for name in Assoc.Keys( status.FormInfo )
+						form.Data.( name ) = status.FormInfo.( name )
+					end
+				//Save the workflow's form values back to the workflow.
+					status = obj.UpdateForm( prgCtx, r.LL_ID, index, form )
+				end
+				//Reset LL_NextURL to NextURL and set the NextURL to display
+				//after the data is saved.
+				tmp = Assoc.FromRecord( r )
+				tmp.NextURL = ( r.LL_NextURL[ 1 ] == '%' ) ? Web.UnEscape( \
+							tmp.LL_NextURL ) : tmp.LL_NextURL
+				r = Assoc.ToRecord( tmp )
+				$WebForm.WebFormSubsystem.RedirectAfterSave( \
+						template, ctxOut, this, r, status )
+				end
+				
+				return Undefined
+			end
+
+	function Assoc GetForm( \
+		List forms, \
+		String formName )
+		
+		Assoc 		form
+		Assoc 		status
+		Integer 	templateID
+		Integer 	where
+		Assoc 		retVal = Undefined
+		Boolean 	found = False
+		Integer 	index = 1
+		Object 		prgCtx = .prgSession()
+
+		for form in forms
+			if ( form.Name == formName )
+				templateID = form.TemplateID
+				found = True
+			else
+				where = formName in form.SubForms
+				if ( IsDefined( where ) && ( where > 0 ) )
+					templateID = form.SubFormTemplateIDs[ where ]
+					found = True
+				end
+			end
+
+		if ( found )
+			if ( !IsDefined( form.Data ) )
+				form.Data = Assoc.CreateAssoc()
+			end
+			status = $FormApi.TemplateSubsystem.TemplateNodeFromID( \
+					templateID, \
+					prgCtx.DSession() )
+			if ( status.OK )
+				retVal = Assoc.CreateAssoc()
+				retVal.Form = form
+				retVal.Index = index
+				retVal.Template = status.Template
+			else
+				echo( 'Could not find template for ', formName )
+			end
+			break
+		end
+	index += 1
+end
+
+return( retVal )
+end</pre>
+<script language="JavaScript">IncludeFooter();</script>
+</body>
+</html>

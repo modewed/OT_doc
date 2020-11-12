@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Adding Event Trigger Scripts: Overview</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script type="text/javascript" language="JavaScript" src="../documentation.js">
+</script>
+</head>
+<body class="Body" text="#000000" bgcolor="#FFFFFF" link="#003366" alink= 
+"#3300FF" vlink="#660033" background="../images/pattern.gif">
+<script language="JavaScript">updateParentHeader( 'Event Triggers' );</script>
+<script language="JavaScript">includeContentContainer( 'wfbuilder', true );</script>
+
+<p class="title">Adding Event Trigger Scripts: Overview</p>
+
+<p class="body">Callback events are workflow events or actions that tell WAPI
+to run certain scripts at specific times in the execution of a workflow map.
+When you add a callback event to a Content Server workflow, you instruct the workflow
+to perform an operation when a specific workflow event occurs. For example, you
+can add a callback event that instructs the workflow to send an e-mail
+notification to a workflow participant each time a Milestone step becomes
+ready.</p>
+
+<p class="body">Event trigger scripts provide an interface to callback events
+in Content Server. When you add event trigger scripts to Content Server, this interface
+(the <span class="gui">Event Scripts</span> tab) becomes available to the
+Content Server user painting a workflow map, allowing that user to determine which
+operations to associate with the particular workflow events that occur in the
+execution of a workflow map.</p>
+
+<p class="body">You can also <a href="eventtrigs_bg.html#backrest">restrict
+access</a> to event trigger scripts so that only certain Content Server users can use
+them.</p>
+
+<p class="body">All event trigger scripts are contained in a transaction, along
+with the workflow event that triggered them. This means that if you create an
+event trigger script that is supposed to run at workflow initiation time and
+the script returns an error, the workflow initiation also fails. If an event
+trigger script is attached to a step-ready event and fails, the step-ready
+event also fails.</p>
+
+<p class="body">There are three types of event trigger scripts:</p>
+
+<ul type="disc">
+<li class="body"><a href="eventtrigs_bg.html#backgen">General event trigger
+scripts</a>, which do not return any specific type of data, but verify that the
+data returned is not an error.<br>
+<br>
+</li>
+
+<li class="body"><a href="eventtrigs_bg.html#backper">Performer event trigger
+scripts</a>, which return an integer. This integer represents the ID of the
+Content Server user to whom a particular workflow task should be assigned when the
+corresponding step becomes ready.<br>
+<br>
+</li>
+
+<li class="body"><a href="eventtrigs_bg.html#backsub">Submap event trigger
+scripts</a>, which return an integer representing the MapID of a WAPIMAP
+definition. This WAPIMAP definition initiates a Sub-workflow process as the
+next step in the workflow. A submap event trigger script is powerful because it
+allows Content Server to analyze data and paint a Sub-workflow on-the-fly.</li>
+</ul>
+
+<p class="title">Creating Event Trigger Scripts</p> 
+
+<p class="body">To create an event trigger script, you determine which type of
+event trigger script can handle the operation that you want to perform, and
+then orphan one of the following event trigger objects:</p>
+
+<ul type="disc">
+<li class="code">WFMain:WFRoot:CallbackEventScripts:GeneralCallbackScripts<br>
+<br>
+</li>
+
+<li class="code">
+WFMain:WFRoot:CallbackEventScripts:PerformerCallbackScripts<br>
+<br>
+</li>
+
+<li class="code">WFMain:WFRoot:CallbackEventScripts:SubmapCallbackScripts</li>
+</ul>
+
+<p class="body">Each event trigger object is registered in a subsystem. General
+event trigger objects are registered in <span class="code">
+$WFMain:WFCBGeneralSubsystem</span>. Performer event trigger objects are
+registered in <span class="code">$WFMain:WFCBPerformerSubsystem</span>. Submap
+event trigger objects are registered in <span class="code">
+$WFMain:WFCBSubmapSubsystem</span>.</p>
+
+<p class="body">You determine the custom operations that can be performed
+throughout the execution of a workflow by creating event trigger scripts that
+are contained in the event trigger objects. You can create multiple event
+trigger scripts within an event trigger object, each of which extends the
+functionality of a Content Server workflow in different ways. Content Server becomes aware
+of the event trigger objects when you register them in their subsystems.</p>
+
+<p class="body">The event trigger interface (that is, the Event Scripts tab) is
+also exposed in the Content Server interface when you register the event trigger
+objects in their subsystems. The event trigger interface lets the creator of a
+workflow map associate an event trigger script with a specific workflow event.
+Behind the scenes, the creator of the workflow map specifies the data that is
+stored in the correct callback column in the WAPI database table.</p>
+
+<p class="body">Use event trigger scripts for operations that require more data
+than is contained in the work package. If the operations require additional
+input from a workflow participant, consider <a href="steptypes.html">creating a
+new task type</a>.</p>
+
+<script type="text/javascript" language="JavaScript">
+IncludeFooter();
+</script>
+</body>
+</html>
+

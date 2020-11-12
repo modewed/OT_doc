@@ -1,0 +1,117 @@
+<HTML>
+<HEAD>
+<TITLE>Special Characters</TITLE>
+
+<link rel="stylesheet" href="../llhelp2000.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<SCRIPT language=JavaScript>IncludeHeader( 'olang2', 'Special Characters' )</SCRIPT>
+
+
+<p class="title">Special Characters</p>
+
+<p class="body">The OScript language contains several types of special characters to indicate 
+particular types of text within a script. Special OScript characters are used to indicate the presence of 
+comments and labels, to provide a method of line continuation, and to separate several statements 
+that appear on a single line.</P>
+
+<P class="subh1">Comments</P>
+<p class="body">Comments are non-executable statements that help the reader of a script more 
+readily discern its purpose. OScript supports two types of comments: ( // ) and the ( /* ... */ ) pair.</P>
+<p class="body">The ( // ) comment character defines a single line comment. It can be used on a 
+line by itself or it can follow another statement. For example:</P>
+
+<pre>			// this is a whole line comment
+			Integer x = 55 // this is an end-of-line comment</pre>
+
+<p class="body">All characters on the line following the comment character are considered to be 
+part of the comment and are, therefore, ignored by the compiler.</P>
+<p class="body">The ( /* ... */ ) pair can be used to define a multiple line comment, although both characters 
+can be placed on a single line also. For example:</P>
+
+<pre>			/* 
+			this is a 
+			multiple line comment
+ 			*/
+			Integer x = 55 /* this is an end-of-line comment */</pre>
+
+<p class="body">All characters following the ( / * ) character and preceding the next ( */ ) 
+character are considered to be part of the comment and are, therefore, ignored by the compiler.</P>
+<p class="body">Comments are optional, but they provide a simple and straightforward method of 
+documenting your script.</P>
+
+
+<P class="subh1">Labels</P>
+<p class="body">Labels are non-executable statements that allow you to mark a location in your 
+script to which execution can be branched using the <span class="code">goto</span> control statement. 
+A label:</P>
+<ul class="body">
+<li>Must be on its own line in a script.</li>
+<li>Can include up to 32 alphanumeric characters and underscores.</li>
+<LI>Must start with a letter.</li>
+<LI>Is followed by a colon.</li></ul>
+
+<p class="body">For example:</P>
+
+	<pre>			String userName
+			List userData
+			File myFile = File.Open( &quot;C:\DATAFILE&quot;, File.ReadMode )
+			userName = File.Read( myFile )
+			if userName = ''
+				goto error_routine
+			else
+				userData[ 1 ] = userName
+			end
+				...<i>block of code</I>...
+			return
+			<B>error_routine:</B>
+			echo( 'You did not enter a valid value!' )</pre>
+
+
+<p class="subh1">Statement Continuation and Termination</P>
+<p class="body">The end-of-line character is the default statement delimiter. However, you may 
+need to continue a statement to the next physical line, or want to place more than one statement on a 
+single line.</P>
+<p class="body">The continuation character is the back slash ( \ ). For example:</P>
+
+	<pre>			Echo(&quot;x&quot;, \
+			&quot;y&quot;, \
+			&quot;z&quot;)</pre>
+
+<p class="body">The compiler considers this to be one statement, even though it spans three 
+physical lines.</P>
+<p class="body">Comments can follow the statement continuation character, but the continuation 
+character must <I>precede </I>the comment, for example:</P>
+
+	<pre>			Echo(&quot;x&quot;, \
+			&quot;y&quot;, \// this is the proper place for a comment
+			&quot;z&quot;)</pre>
+
+<p class="body">The continuation character cannot be used in the middle of a String 
+declaration. For example:</P>
+
+	<pre>			// error in the following statement:
+			String s = &quot;The quick brown fox \
+			jumped over the lazy dog.&quot;
+			// error fixed in the following statement:
+			String s = &quot;The quick brown fox&quot; + \
+			&quot;jumped over the lazy dog.&quot;</pre>
+
+<p class="body">The statement terminator is the semicolon ( ; ). For example:</P>
+
+	<pre>			Integer lineCount, recCount
+			lineCount = 1; recCount = 1 // initialize counters</pre>
+
+<p class="body">In the above example, the compiler considers the assignments to be two separate 
+statements even though they are on the same physical line.</P>
+
+
+
+<script language="JavaScript">
+IncludeFooter( '' )
+</script>
+
+</BODY>
+</HTML>

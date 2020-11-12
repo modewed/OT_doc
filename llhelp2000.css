@@ -1,0 +1,404 @@
+.body  {
+	font-family : arial, helvetica, sans-serif;
+	font-size : 10pt;
+}
+
+.title  {
+	font-family : arial, helvetica, sans-serif;
+	position : relative;
+	font-weight : bold;
+	font-size : 16pt;
+}
+
+.subh1  {
+	font-family : arial, helvetica, sans-serif;
+	position : relative;
+	font-weight : bold;
+	font-size : 14pt;
+}
+
+.subh2  {
+	font-family : arial, helvetica, sans-serif;
+	position : relative;
+	font-weight : bold;
+	font-size : 12pt;
+}
+
+.subh3  {
+	font-family : arial, helvetica, sans-serif;
+	position : relative;
+	font-weight : bold;
+	font-size : 10pt;
+}
+
+.code  {
+	font-family : courier, monospace;
+	font-size : 10pt;
+}
+
+.codevar  {
+	font-family : courier, monospace;
+	font-size : 10pt;
+	font-style : italic;
+}
+
+.gui  {
+	font-family : arial, helvetica, sans-serif;
+	font-size : 10pt;
+	font-weight : bold;
+}
+
+.guivar  {
+	font-family : arial, helvetica, sans-serif;
+	font-size : 10pt;
+	font-weight : bold;
+	font-style : italic;
+}
+
+.capt  {
+	font-family : arial, helvetica, sans-serif;
+	font-size : 10pt;
+	font-weight : bold;
+	font-style : italic;
+}
+
+.infin  {
+	font-family : arial, helvetica, sans-serif;
+	font-size : 10pt;
+	font-weight : bold;
+}
+
+.emph  {
+	font-family : arial, helvetica, sans-serif;
+	font-size : 10pt;
+	font-style : italic;
+}
+
+.var  {
+	font-style : italic;
+}
+
+.warn  {
+	font-family : arial, helvetica, sans-serif;
+	font-size : 10pt;
+	font-weight : bold;
+	color : #cc0000;
+}
+
+.thead  {
+	font-family : arial, helvetica, sans-serif;
+	font-size : 10pt;
+	font-weight : bold;
+}
+
+ul  {
+	font-family : arial, helvetica, sans-serif;
+	font-size : 10pt;
+}
+
+ol  {
+	font-family : arial, helvetica, sans-serif;
+	font-size : 10pt;
+}
+
+dl  {
+	font-family : arial, helvetica, sans-serif;
+	font-size : 10pt;
+}
+
+.TabFontSelected  {
+	font-family : arial, helvetica, sans-serif;
+	font-weight : bold;
+	font-size : 8pt;
+	color : black;
+}
+
+.NSTabFontSelected  {
+	font-family : arial, helvetica, sans-serif;
+	font-weight : bold;
+	font-size : 9pt;
+	color : black;
+}
+
+.NSTabFontNormal  {
+	font-family : arial, helvetica, sans-serif;
+	font-size : 9pt;
+	color : black;
+}
+
+.TabFontNormal  {
+	font-family : arial, helvetica, sans-serif;
+	font-size : 8pt;
+	color : black;
+	text-decoration : none;
+}
+
+.TabFontNormal:hover  {
+	font-family : arial, helvetica, sans-serif;
+	font-size : 8pt;
+	color : red;
+	text-decoration : underline;
+}
+
+.Copyright  {
+	font-family : arial, helvetica, sans-serif;
+	font-size : x-small;
+}
+
+.CopyrightTable  {
+	width : 100%;
+}
+
+.CopyrightCell  {
+	white-space : nowrap;
+	vertical-align : middle;
+	background-color : #CCCCCC;
+	font-family : arial, helvetica, sans-serif;
+	font-size : x-small;
+}
+
+.MastheadTable  {
+	width : 100%;
+	background-color : #039;
+	font-family : arial, helvetica, sans-serif;
+}
+
+.MastheadTitle  {
+	font-family : arial, helvetica, sans-serif;
+	font-size : 12pt;
+	color : white;
+}
+
+.MastheadTitle1  {
+	font-family : arial, helvetica, sans-serif;
+	font-size : 10pt;
+	color : white;
+}
+
+.MastheadTitle2  {
+	font-family : arial, helvetica, sans-serif;
+	font-size : 12pt;
+	font-weight : bold;
+	color : white;
+}
+
+.PackageListHeader  {
+	font-family : arial, helvetica, sans-serif;
+	font-size : large;
+	background-color : #CCC;
+	white-space : nowrap;
+	vertical-align : bottom;
+	text-align : left;
+}
+
+.PackageListName  {
+	white-space : nowrap;
+	vertical-align : top;
+	text-align : left;
+	font-size : x-small;
+}
+
+.PackageListDescr  {
+	vertical-align : top;
+	text-align : left;
+	font-size : x-small;
+}
+
+.ClassListNames  {
+	font-family : arial, helvetica, sans-serif;
+	font-weight : bold;
+	font-size : 8pt;
+}
+
+.Deprecated  {
+	font-variant : small-caps;
+	color : red;
+}
+
+.InternalUseOnly  {
+	font-variant : small-caps;
+	color : red;
+}
+
+DIV.LocationLink  {
+	font-family : Verdana, arial, helvetica, sans-serif;
+	font-weight : bold;
+}
+
+A.LocationLink  {
+	font-family : Verdana, arial, helvetica, sans-serif;
+	font-weight : bold;
+}
+
+.ClassLabel  {
+	font-family : arial, helvetica, sans-serif;
+	font-size : 10 pt.;
+}
+
+.ClassName  {
+	font-family : arial, helvetica, sans-serif;
+	font-size : 10 pt.;
+}
+
+.ClassHierarchyHeader  {
+	font-family : arial, helvetica, sans-serif;
+	font-weight : bold;
+	font-size : small;
+}
+
+.IndexClassAttributeName  {
+	font-family : arial, helvetica, sans-serif;
+	font-weight : bold;
+	font-size : 10pt;
+}
+
+.IndexClassMethodsName  {
+	font-family : arial, helvetica, sans-serif;
+	font-weight : bold;
+	font-size : 10pt;
+}
+
+.IndexInstanceMethodsName  {
+	font-family : arial, helvetica, sans-serif;
+	font-weight : bold;
+	font-size : 10pt;
+}
+
+.IndexInstanceAttributeName  {
+	font-family : arial, helvetica, sans-serif;
+	font-weight : bold;
+	font-size : 10pt;
+}
+
+.ClassDescription  {
+	font-family : arial, helvetica, sans-serif;
+	font-size : 10pt;
+}
+
+.ClassAttributeName  {
+	font-family : arial, helvetica, sans-serif;
+	font-weight : bold;
+	font-size : 10pt;
+}
+
+.ClassAttributeDescription  {
+	padding-left : 40px;
+	font-size : 10pt;
+}
+
+.InstanceAttributeName  {
+	font-family : arial, helvetica, sans-serif;
+	font-weight : bold;
+	font-size : 10pt;
+}
+
+.InstanceAttributeDescription  {
+	padding-left : 40px;
+	font-size : 10pt;
+}
+
+.MethodBlock  {
+	padding-left : 40px;
+	font-size : 10pt;
+}
+
+.MethodName  {
+	font-family : arial, helvetica, sans-serif;
+	font-weight : bold;
+	font-size : 10pt;
+}
+
+.ParameterName  {
+	font-size : 10pt;
+	color : teal;
+}
+
+.ParameterType  {
+	font-size : 10pt;
+	color : green;
+}
+
+.Parameter  {
+	font-style : italic;
+	font-size : 10pt;
+}
+
+.ParameterDescription  {
+	font-family : arial, helvetica, sans-serif;
+	font-style : italic;
+	font-size : 10pt;
+}
+
+.ParameterReference  {
+	font-style : italic;
+	font-size : 10pt;
+}
+
+.ReturnsLabel  {
+	font-weight : bold;
+	font-size : 10pt;
+}
+
+.ParametersLabel  {
+	font-weight : bold;
+	font-size : 10pt;
+}
+
+.PackageListHeader  {
+	font-family : arial, helvetica, sans-serif;
+	font-size : 10pt;
+	background-color : #CCC;
+	white-space : nowrap;
+	vertical-align : bottom;
+	text-align : left;
+}
+
+.PackageListName  {
+	white-space : nowrap;
+	vertical-align : top;
+	text-align : left;
+	font-size : 10pt;
+}
+
+.PackageListDescr  {
+	vertical-align : top;
+	text-align : left;
+	font-size : 10pt;
+}
+
+.ClassAttributeType  {
+	font-size : 10pt;
+}
+
+.toctext1   {
+	font-size : 10pt;
+	font-family : ms sans serif;
+}
+
+.toctext2  {
+	font-size : 9pt;
+	font-family : ms sans serif;
+}
+
+.toctext3  {
+
+            font-size : 9pt;
+            font-family : ms sans serif;
+            text-indent : 1.75em;
+}
+
+.toctext4  {
+            font-size : 9pt;
+            font-family : ms sans serif;
+            text-indent : 3.00em;
+}
+
+.MethodReturnValueDescription  {
+	font-family : arial, helvetica, sans-serif;
+	font-size : 10pt;
+}
+
+.sdk_headerbar .MastheadTitle, .MastheadTitle1, .MastheadTitle2
+{
+	color: #333;
+}

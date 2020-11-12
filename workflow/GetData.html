@@ -1,0 +1,91 @@
+<HTML>
+<HEAD>
+<TITLE>GetData()</TITLE>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<script language="JavaScript">updateParentHeader( 'Code' );</script>
+<script language="JavaScript">includeContentContainer( 'wfbuilder', true );</script>
+
+<p class="body">
+<p class="title">GetData()</p>
+<p class="body">This code sample describes how to set up the HTML 
+page that is loaded when the initiator of a workflow specifies values 
+for the workflow attributes on the Project and Customer pages just before 
+the first task is routed to the corresponding workflow participant.</p>
+
+<pre class="code">
+	function Assoc GetData( \
+		Object 		prgCtx, \
+		Dynamic 	context, \
+		Dynamic 	data, \
+		Record 		request, \
+		Boolean 	forStatus = False )
+		
+		Assoc 		paneData
+		Assoc 		tabPaneInfo
+		Assoc 		tmp
+		Dynamic 	retVal
+		Integer 	whichTab
+		RecArray 	array
+		
+	if ( IsDefined( data ) && Length( data ) )
+		retVal = Assoc.CreateAssoc()
+		retVal.Data = data
+		retVal.HTMLFile = 'tablevalues.html'
+		retVal.ModuleName = 'custmod'
+		whichTab = ( RecArray.IsColumn( request, 'CustPaneIndex' \
+					) ) ? Str.StringToInteger( request.CustPaneIndex ) : 1
+					
+		//Set up the information required to display the Project tab.
+
+		tmp.Label = 'Project'
+		tmp.URL = $CustMod.CustModPkg.SetSubPaneIndexArg( \
+		$WebDSP.HTMLPkg.ArgsToURL( request ), 1 )
+												
+		tabPaneInfo.TabList = { tmp }
+		tmp = Assoc.CreateAssoc()
+		tmp.ModuleName = 'custmod'
+		tmp.HTMLFile = 'projectpane.html'
+		tmp.Data = data
+		tabPaneInfo.PaneList = { tmp }
+		
+		//Set up the information required to display the Customer tab.
+
+		tmp = Assoc.CreateAssoc()
+		tmp.Label = 'Customer'
+		tmp.URL = $CustMod.CustModPkg.SetSubPaneIndexArg( \
+		$WebDSP.HTMLPkg.ArgsToURL( request ), 2 )
+		tmp.Active = FALSE
+		tabPaneInfo.TabList = { @tabPaneInfo.TabList, tmp }
+		tmp = Assoc.CreateAssoc()
+		tmp.ModuleName = 'custmod'
+		tmp.HTMLFile = 'customerpane.html'
+		tmp.Data = data
+		tabPaneInfo.PaneList = { @tabPaneInfo.PaneList, tmp }
+		
+		//If the tab value is less than 2 or greater than the maximum
+		//number of tabs, reset it to 1 so that the first tab is
+		//displayed.
+
+		if ( ( whichTab &lt; 2 ) || ( whichTab > Length( \
+					tabPaneInfo.TabList ) ) )
+			whichTab = 1
+		end
+		
+		tabPaneInfo.TabList[ whichTab ].Active = True
+		retVal.TabInfo = tabPaneInfo
+		retVal.Tab = whichTab
+		end
+		
+	return( retVal )
+	end</pre>
+
+
+<script language="JavaScript">IncludeFooter();</script>
+
+</body>
+</html>

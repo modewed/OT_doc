@@ -1,0 +1,79 @@
+<HTML>
+<HEAD>
+<TITLE>Preprocessor Directives</TITLE>
+
+<link rel="stylesheet" href="../llhelp2000.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<SCRIPT language=JavaScript>
+IncludeHeader( 'olang2', 'Directives' )
+</SCRIPT>
+
+
+<p class="title">Preprocessor Directives</p>
+
+<p class="body">Preprocessor directives are evaluated in the Livelink source code before being compiled. 
+These directives commonly substitute text or perform a conditional compile. OScript supports the following 
+preprocessor directives:</P>
+<ul class="body">
+<li><span class="code">#define</span>&#151;substitutes the specified values for names during compilation</li></p>
+<li><span class="code">#undef</span>&#151;undefines a <span class="code">#define</span> directive</li></p>
+<li><span class="code">#ifdef</span>&#151;tests within the preprocessor to see if a specified name is 
+defined</li></p>
+<li><span class="code">#ifndef</span>&#151;tests within the preprocessor to see if a specified name is not 
+defined</li></p>
+<li><span class="code">#else</span>&#151;else statement used with the <span class="code">#ifdef</span> 
+and <span class="code">#ifndef</span> directives</li></p>
+<li><span class="code">#endif</span>&#151;endif statement used with the <span class="code">#ifdef</span> 
+and <span class="code">#ifndef</span> directives</li></ul>
+
+<p class="subh1">#define</P>
+<p class="body">The <span class="code">#define</span> directive substitutes values for names during 
+compilation. They are defined using the syntax:</P>
+
+<pre>	#define <i>Name Value</i></pre>
+
+<p class="body">The <span class="code">Value</span> substitute may be of 
+any data type or function. For example:</P>
+
+<pre>	#define ERROR_VALUE5
+	#define ERROR_MSG&quot;File Not Found&quot;</pre>
+
+<p class="body">or</P>
+
+<pre>	#define CONTENTSFile.Read( myFile )</pre>
+
+<p class="subh1">#undef</P>
+<p class="body">The <span class="code">#undef</span>
+directive undefines a <span class="code">#define</span>
+token. A token is undefined using the syntax:</P>
+
+<pre>	#undef <span class="emph">identifier</span></pre>
+
+<p class="body">For example:</P>
+
+<pre>	#undef ERROR_MSG</pre>
+
+<P class="subh1">#ifdef, #ifndef, #else, #endif</P>
+<p class="body">The <span class="code">#ifdef, #ifndef, #else</span>, and 
+<span class="code">#endif</span> directives are used together to determine which parts of a script are 
+compiled. These conditional compilation directives allow for code portions to be either compiled or omitted, depending on the stated conditions. These directives use the syntax:</P>
+
+<pre>
+		#ifdef <span class="emph">identifier
+			...block of code...</span>  #else
+				#ifndef <span class="emph">identifier
+				...block of code...</span>
+			#else
+				<span class="emph">...block of code</span>
+			#endif
+		#endif</pre>
+
+<script language="JavaScript">
+IncludeFooter( '' )
+</script>
+
+</BODY>
+</HTML>

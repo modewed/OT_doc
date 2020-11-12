@@ -1,0 +1,437 @@
+<HTML>
+<HEAD>
+<TITLE>Adding New Data Types: Background Information</TITLE>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<script language="JavaScript">updateParentHeader( 'Data Types' );</script>
+<script language="JavaScript">includeContentContainer( 'wfbuilder', true );</script>
+
+<p class="body">
+<p class="title">Adding New Data Types: Background Information</p>
+<p class="body">
+In this section, you learn how to:</p>
+<ul type="disc">
+<li class="body"> Define the data type's API object</p>
+<li class="body"> Define the data type's Workflow Designer information</p>
+<li class="body"> Define the information required to route the data type through a workflow</p>
+<li class="body"> Add a new data type to your custom module</ul>
+<p class="title">Defining the Data Type's API Object</p>
+<p class="body">
+You begin creating a data type by defining its API object using the 
+<span class="code">WFDataTypes</span> object. This object contains the 
+features and scripts that are required for the operation of the data
+type. You can find the 
+<span class="code">WFDataTypes</span> object to orphan in 
+<span class="code">WFMain:WFRoot:WFObjectTypes</span>.</p>
+
+<p class="body">The <span class="code">WFDataTypes</span> object acts as 
+a class object that you use to create many different data types. 
+Create a child of the <span class="code">WFDataTypes</span> object for 
+each data type that you want to add to Content Server.
+
+<p class="body">For each data type API object that you create, you can modify the 
+following features.</p>
+
+<ul type="disc">
+	<li class="body"><span class="code">fDataName</span>, which
+	 stores the name of the custom tab that 
+	appears in the Content Server interface when you create a new data type.</p>
+	<li class="body"><span class="code">fSubType</span>, which stores a unique 
+	integer that works with 
+	the <span class="code">fType</span> feature to identify the object.</p>
+	<li class="body"><span class="code">fType</span>, which stores a unique integer 
+	that works with the 
+	<span class="code">fSubType</span> feature to identify the object.
+</ul>
+
+<dl class="body">
+	<dt><span class="gui">Note:</span><dd> When adding data types, set
+	the <span class="code">fSubType</span> 	values to 1 and the 
+	<span class="code">fType</span> 
+	values to an integer higher than 100. Values between 1 and 99 are reserved for 
+	Open Text internal use.</dl>
+
+<p class="body">For each data type that you create, you can modify the 
+following scripts.</p>
+
+<table border rules=rows>
+<tr class="capt">
+Scripts Associated With the WFDataTypes Object
+</td></tr>
+<tr>
+<td class="thead">
+Script </td>
+<td class="thead">Description</td></tr>
+<TR class="body">
+<TD class="code" valign="top">
+CheckTaskDone() &nbsp;&nbsp;&nbsp; </td>
+<td class="body">Verifies that a workflow participant has provided all of the data
+type's required information before their input is saved and the
+workflow is routed to the next workflow participant. For example,
+if you create a data type that groups workflow attributes and you
+indicate that entries are required for some of those attributes, this
+script verifies that a workflow participant has provided
+information for those required attributes before the workflow is
+routed to the next workflow participant.<p>
+This script returns a list that can contain two items: a Boolean
+value and an error message. The Boolean value specifies whether
+the required data has been provided. If the required data has not
+been provided, the Boolean value is set to FALSE and an error
+message identifying the required values that must be specified
+before Content Server can route the work package to the next workflow
+participant is returned.</td></tr>
+<TR class="body">
+<TD class="code" valign="top">
+CreateNewInstance() </td> 
+<td class="body">Creates a new instance of the data type when the data type is
+attached to a workflow map in the Workflow Designer.<p>
+This script is called when the creator of a workflow map selects the
+custom data type check box in the Packages section of a workflow
+map's Properties page, and then clicks the Add to Workflow
+Definition button.</td></tr>
+<TR class="body">
+<TD class="code" valign="top">
+CreateWorkData() </td> 
+<td class="body">Adds the data type to the work package of the specified workflow.
+This script is called when the initiator of a workflow clicks the
+workflow map's name in Content Server to begin the initiation process.</td></tr>
+<TR class="body">
+<TD class="code" valign="top">
+DeleteWorkData() </td> 
+<td class="body">Deletes any previous data that has been stored for the data type.
+This script is called when new values are specified for the data type.</td></tr>
+<TR class="body">
+<TD class="code" valign="top">
+GetStartRESTServiceData() </td> 
+<td class="body">Returns the data for the REST service response on the Start task. 
+<p>If there is support for the REST service, the data type must return a 'restSupport' attribute with value True and a data attribute with the corresponding data in the returned Assoc.
+In the case no REST serivce support exists, the data type should return a 'restSupport' attribute with the value False in the returned Assoc.</p>
+This script is called when the workflow in the initiation process is requested by the REST service.</td></tr>
+<TR class="body">
+<TD class="code" valign="top">
+GetRESTServiceData() </td> 
+<td class="body">Returns the data for the REST service response. 
+<p>If there is support for the REST service, the data type must return a 'restSupport' attribute with value True and a data attribute with the corresponding data in the returned Assoc.
+In the case no REST serivce support exists, the data type should return a 'restSupport' attribute with the value False in the returned Assoc.</p>
+This script is called when the workflow is requested by the REST service.</td></tr>
+<TR class="body">
+<TD class="code" valign="top">
+LoadStartTaskWorkData() </td> 
+<td class="body">Returns the information about the data type that must be available
+to the initiator of a workflow working on the Start task.<p>
+This script is called when the initiator of a workflow begins the initiation process.
+The initiator of a workflow to which a custom data type has been
+attached can then provide
+information for the data type before starting the workflow process.
+Because the initiator is the first workflow participant to provide
+data type information, this script does not have to retrieve any
+previous values that may have been stored for the data type.<p>
+</td></tr>
+<TR class="body">
+<TD class="code" valign="top">
+LoadTaskWorkData() </td> 
+<td class="body">Returns the information about the data type that must be available
+to workflow participants when they work on their tasks.
+This script is called when a workflow participant clicks the custom
+data type tab in the work package of an active workflow task. When
+a workflow participant clicks the custom data type tab, the
+information that was stored for the data type when the previous
+task was completed is retrieved and displayed. This script populates
+the data type's values with the input of the previous workflow
+participant. It is called for all workflow tasks &mdash; except the Start task.
+</td></tr>
+<TR class="body">
+<TD class="code" valign="top">
+LoadWorkData()</td> 
+<td class="body">Returns information about a data type for the specified workflow.
+This script is called when a workflow manager views the detailed
+status of a workflow that contains this data type. It is also called by
+event trigger scripts throughout the execution of a workflow.</td></tr>
+<TR class="body">
+<TD class="code" valign="top">
+RemoveWorkData() </td> 
+<td class="body">Removes the data type from the specified workflow.
+This script is called when a workflow that contains the data type is
+deleted from Content Server. It is also called when a workflow manager
+modifies an executing workflow by removing the data type.
+</td></tr>
+<TR class="body">
+<TD class="code" valign="top">
+SaveWorkData() </td> 
+<td class="body">Saves the data type information throughout the execution of a
+workflow.
+
+This script is called each time that a workflow participant updates
+the data type information.
+</td></tr>
+<TR class="body">
+<TD class="code" valign="top">
+SetReviewData() </td> 
+<td class="body">Stores the information about a data type that must be passed to the
+Sub-workflow that is created when a workflow participant sends a
+task for review.<p>
+
+This information is used by the SetSubWorkData() and
+SetSubWorkReturnData() scripts.
+</td></tr>
+<TR class="body">
+<TD class="code" valign="top">
+SetSubWorkData() </td> 
+<td class="body">Passes data type information from a workflow to a Sub-workflow.
+This script is called when a Sub-workflow starts or when a task is
+sent for review.
+</td></tr>
+<TR class="body">
+<TD class="code" valign="top">
+SetSubWorkReturnData() </td> 
+<td class="body">Passes data type information from a Sub-workflow back to a main
+workflow. This script is called when a Sub-workflow finishes or
+when a task that has been sent for review finishes.
+This is the companion script to the SetSubWorkData() script.</td></tr>
+<TR class="body">
+<TD class="code" valign="top">
+SyncPkgData() </td> 
+<td class="body">Synchronizes the different workflow package's. This is required
+for updating e.g. changed workflow attachment ids during workflow initiation or
+modification. This script is called when a workflow is initiated or suspended and
+modified.</td></tr></table>
+<br><p class="title">Defining the Data Type's Workflow Designer Information</p>
+<p class="body">
+After you define the API object for the data type, you must provide 
+the Workflow Designer with the information it requires to add the data type 
+to the workflow map. You define the Workflow Designer information using 
+the <span class="code">WFPackage</span> object. You can find this object to orphan in
+<span class="code">WebWFP:WebWFPRoot</span>.</p>
+<p class="body">
+For each data type WFPackage object that you create, you can modify the 
+following features.</p>
+
+<ul type="disc">
+	<li class="body"><span class="code">fSubType</span>, which stores a unique 
+	integer that works with 
+	the <span class="code">fType</span> feature to identify the object.</p>
+	<li class="body"><span class="code">fType</span>, which stores a unique 
+	integer that works with the 
+	<span class="code">fSubType</span> feature to identify the object.
+</ul>
+<dl class="body">
+	<dt><span class="gui">Note:</span><dd> When adding data types, 
+	set the <span class="code">fSubType</span> values to 1 and the 
+	<span class="code">fType</span> values to an integer higher than 100.</dl>
+    
+<p class="body">For each data type that you create, you can modify the following scripts.</p>
+<table border rules=rows>
+<tr>
+<td class="thead">
+Script </td>
+<td class="thead">Description</td></tr>
+<tr class="body">
+    <td class="code" valign="top">GetMapData() &nbsp;&nbsp;&nbsp; </td>
+    <td class="body">Specifies the name and location of the HTML file that is displayed to the
+    creator of the workflow map when defining data type information for tasks in the Workflow 
+    Designer.<p>
+    The HTML file called by this script is displayed when the creator of a workflow map clicks
+    the custom data type tab on a Step Definition page.</td>
+</tr>
+<tr class="body">
+    <td class="code" valign="top">PutMapData()</td>
+    <td class="body">Saves the information specified on the HTML page that is referenced in the
+    GetMapData() script. This script saves the settings that the creator of a workflow map 
+    specifies when defining the data type information for tasks in the Workflow Designer.<p>
+    This script is called when the creator of a workflow map adds the data type information 
+    specified on the custom data type page to the workflow definition.</td>
+</tr>
+<tr class="body">
+    <td class="code" valign="top">AddToWarehouse()</td>
+    <td class="body">Adds the package with its content as self-contained <span class="code">Transport
+    Item Parts</span> to the transport warehouse. This is required for packages like <span class="code">
+    Workflow Attachments</span> that contain itself objects with content that have to be transported
+    itself.</td>
+</tr>
+<tr class="body">
+    <td class="code" valign="top">DeployFromWarehouse()</td>
+    <td class="body">Deploys the package with its transported content from the transport warehouse.
+    This is required for packages like <span class="code">Workflow Attachments</span> that contain
+    itself objects with content that have to be transported itself.</td>
+</tr>
+<tr class="body">
+    <td class="code" valign="top">GetXmlMetaData()</td>
+    <td class="body">Adds package data that is relevant for the transport to the XML file that is written while the workflow map is
+    added to the workbench. Override this function to transport workflow packages like <span class="code">Workflow Attributes</span>
+    that contain metadata with an external dependency like an <span class="code">Item Reference</span> field or <span class="code">User</span>
+    field.</td>
+</tr>
+<tr class="body">
+    <td class="code" valign="top">PrepareXmlMetaData()</td>
+    <td class="body">Reads package data that is relevant for the transport from the XML file while the workflow map is deployed from 
+    the workbench. Additionally it converts the data to a data structure that matches the package configuration.</td>
+</tr>
+<tr class="body">
+    <td class="code" valign="top">SetXmlMetaData()</td>
+    <td class="body">Updates the existing workflow map package configuration with the updated target system information.</td>
+</tr>
+<tr class="body">
+    <td class="code" valign="top">GetXmlMetaDataTask()</td>
+    <td class="body">Steps like the <span class="code">Process Step</span> contain package specific data. Override this function to add
+    package data to the export that contains step specific data. Other than <span class="code">GetXmlMetaData()</span> this function is
+    executed during the export of the workflow step configuration.
+</tr>
+<tr class="body">
+    <td class="code" valign="top">PrepareXmlMetaDataTask()</td>
+    <td class="body">Reads package data that is relevant for the transport from the XML file while the workflow map is deployed from 
+    the workbench. Again, like <span class="code">GetXmlMetaDataTask()</span> this function is executed during the step import and is
+    executed with the actual step context.</td>
+</tr>
+<tr class="body">
+    <td class="code" valign="top">SetXmlMetaDataTask()</td>
+    <td class="body">Updates the existing workflow map package configuration with the updated target system information.</td>
+</tr>
+</table>
+
+<p class="body">In addition to the features and scripts that you modify to 
+define the Workflow Designer information for a data type, you must create 
+the HTML file that appears when a map creator defines the data type information 
+for each workflow task. </p>
+
+<p class="body">
+To support the transport capabilities for your custom workflow packages is optional and can be achieved by implementing the
+already mentioned functions <span class="code">GetXmlMetaData(), PrepareXmlMetaData(), SetXmlMetaData()</span> resp. the functions
+<span class="code">GetXmlMetaDataTask(), PrepareXmlMetaDataTask(), SetXmlMetaDataTask()</span> for the package specific task data. 
+With these implementations you ensure that the metadata is exported from the source environment while adding the workflow map to
+the Transport Warehouse and imported while it is deployed in the target environment. But the key feature of Content Server Transport 
+is the ability to map external references during the transport. The most obvious external references that exist in a workflow map
+are the users and groups that are used for step assignment. But also folders and documents differ at least in their id from one
+system to another. In order to map these references during the transport you have to implement <span class="code">dependency, dependency
+finder and dependency replacer</span> objects. You can refer to the different objects that are already implement in the workflow modules or 
+you check out the <span class="code">TRANSPORT</span> module which provides the basic transport functionality and the parent objects to
+orphan you objects from.</p>
+
+<p class="body">
+See package <span class="code">WEBWFP::Transport</span> for the workflow related dependency objects. As an example to maintain a sub
+workflow reference of the sub-workflow step, the following three objects where introduced:
+<ul type="disc">
+    <li class="body"><span class="code">WEBWFP::Transport::SubmapDependency</span> that identifies a dependency to a workflow map
+    used as sub workflow.</p>
+    <li class="body"><span class="code">WEBWFP::Transport::SubmapDependencyFinder</span> used to find sub workflow related metadata in
+    the export file and to display the dependency in the transport warehouse.</p>
+    <li class="body"><span class="code">WEBWFP::Transport::SubmapDependencyReplacer</span> used to replace the sub workflow related
+    metadata during the import.</p>
+</ul>
+</p>
+
+
+<p class="title">Defining the Data Type's Web Object</p>
+<p class="body">
+After you define the API object and the Workflow Designer information for the data type,
+you must define the data type's Web object. The Web object provides the information
+necessary to handle the data type when workflow participants manipulate its data in
+executing workflows. You define this information using the 
+<span class="code">WFPackage</span> object. You can
+find this object to orphan in <span class="code">WebWork:WebWorkRoot</span>.</p>
+
+<p class="body">The WFPackage object acts as a class object that you can use to create
+many data types. Create a child of the WFPackage object for each data
+type that you want to add to Content Server.</p>
+
+<p class="body">For each data type that you create, you can modify the 
+following features.</p>
+<ul type="disc">
+	<li class="body"><span class="code">fSubType</span>, which stores a unique 
+	integer that works with 
+	the <span class="code">fType</span> feature to identify the object.</p>
+	<li class="body"><span class="code">fType</span>, which stores a unique 
+	integer that works with the <span class="code">fSubType</span> feature 
+	to identify the object.
+</ul>
+<dl class="body">
+	<dt><span class="gui">Note:</span><dd> When adding data types, 
+	set the <span class="code">fSubType</span> values to 1 and the 
+	<span class="code">fType</span> values to an integer higher than 100.</dl>
+	
+<p class="body">For each data type that you create, you can modify the following scripts.</p>
+
+<table border rules=rows>
+<tr class="capt">
+Scripts Associated With the WFPackage Object</td></tr>
+<tr>
+<td class="thead">
+Script </td>
+<td class="thead">Description</td></tr>
+<TR class="body">
+<TD class="code" valign="top">
+GetData() &nbsp;&nbsp;&nbsp; </td>
+<td class="body">Sets up the display of the HTML page that is loaded when the initiator of
+a workflow provides data type information for the Start task, when a
+workflow participant opens a workflow task in their Tasks list, and when
+a workflow manager views the detailed status for this type of task.
+<p>
+This script sets up the tabs on the HTML page that is called when a
+Content Server user is working with the data stored by the data type for the
+workflow.</td></tr>
+<TR class="body">
+<TD class="code" valign="top">
+GetSubmapData()&nbsp;&nbsp;&nbsp; </td>
+<td class="body"> Specifies the name and location of the HTML file that is displayed to the
+creator of a workflow map when they define a Sub-workflow task that
+contains the custom data type in a workflow that also contains the
+custom data type. This HTML file is displayed when the creator of a
+workflow map clicks the custom data type tab on the Sub-Map Step
+Definition page. The Sub-Map Step Definition page lets the creator of a
+workflow map specify the information about the data type that the main
+workflow passes to a Sub-workflow.
+<p>
+This page is also displayed when a workflow participant sends a task for
+review.</td></tr>
+<TR class="body">
+<TD class="code" valign="top">
+GetTabInfo() &nbsp;&nbsp;&nbsp; </td>
+<td class="body">Generates the names of the custom data type tabs that are displayed
+when workflow participants work on their tasks. This script also
+generates the URLs that determine which HTML files are displayed when
+each tab is active. This script ensures that the correct page is displayed
+when a workflow participant clicks a custom data type tab in the work
+package of an active workflow task.</td></tr>
+<TR class="body">
+<TD class="code" valign="top">
+PutSubmapData() &nbsp;&nbsp;&nbsp; </td>
+<td class="body">Saves the data type information that the creator of a workflow map
+specifies on the Sub-Map Step Definition page when defining data type
+information for a Sub-workflow task.<p>
+This script is called when the creator of the workflow map clicks the Add
+to Workflow Definition button on the custom data type page (accessed
+by clicking the custom data type tab on the Sub-Map Step Definition
+page in the Workflow Designer).</td></tr>
+<TR class="body">
+<TD class="code" valign="top">
+SaveData() &nbsp;&nbsp;&nbsp; </td>
+<td class="body">Saves the information that is entered on the HTML page referenced by
+the GetData() script. The SaveData() script saves the information that
+the initiator of a workflow specifies for the Start task, the information
+that a workflow participant enters when working on this type of task in
+their Task list, and the information specified by the workflow manager
+when viewing the detailed status for this type of task.</td></tr></table>
+
+<p class="body">In addition to the features and scripts that you 
+modify to define the information that
+controls the operation of a data type, you must create the HTML 
+files that are displayed
+when:</p>
+<ul type="disc">
+<li class="body"> The creator of a workflow map defines the data type information for a Sub-workflow
+task on the Sub-Map Step Definition page.</p>
+<li class="body"> A workflow participant accesses the custom data type tab in the work package of an
+active workflow task.
+</ul>
+
+
+
+
+<script language="JavaScript">IncludeFooter();</script>
+
+</BODY>
+</html>

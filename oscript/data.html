@@ -1,0 +1,799 @@
+<HTML>
+<HEAD>
+<TITLE>Data Types</TITLE>
+
+<link rel="stylesheet" href="../llhelp2000.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<SCRIPT language=JavaScript>IncludeHeader( 'olang2', 'Data Types' )</SCRIPT>
+
+<p class="title">Data Types</p>
+
+<p class="body">Data types define the kinds of values that can be manipulated using OScript. 
+The OScript language contains many of the standard programming data types with which you are probably 
+familiar, and also includes additional data types that make working in the Livelink Builder environment 
+easier. OScript supports package-specific data types (listed in the <span class="emph">OScript Built-In Function </span>online help) and many fundamental data types. The following list describes each data type and the initial value of a variable declared to be of that type:</P>
+
+<ul class="body">
+<LI><a href="#assoc">Assoc</a>&#151;array of key-value pairs; initial value is an empty Assoc</li></p>
+<LI><a href="#boolean">Boolean</a>&#151;TRUE or FALSE; initial value is FALSE</li></p>
+<LI><a href="#date">Date</a>&#151;internal representation of a calendar date; initial value is Undefined</li></p>
+<LI><a href="#error">Error</a>&#151;a system- or user-defined error; initial value is Undefined</li></p>
+<LI><a href="#file">File</a>&#151;reference to a desktop file; initial value is Undefined</li></p>
+<LI><a href="#integer">Integer</a>&#151;32-bit signed integer; initial value is 0</li></p>
+<LI><a href="#list">List</a>&#151;one-dimensional array; initial value is an empty List</li></p>
+<LI><a href="#object">Object</a>&#151;reference to an OSpace object; initial value is an uninitialized object</li></p>
+<LI><a href="#real">Real</a>&#151;double-precision floating point number; initial value is 0</li></p>
+<LI><a href="#recarray">RecArray</a>&#151;two-dimensional array; initial value is Undefined</li></p>
+<LI><a href="#recarray">Record</a>&#151;a single row of a RecArray; initial value is Undefined</li></p>
+<LI><a href="#string">String</a>&#151;sequence of zero or more characters; initial value is &quot; &quot;</li></p>
+<LI><a href="#undefined">Undefined</a>&#151;unique typeless value; initial value is Undefined</li></ul>
+
+
+<p class="body">When you declare a variable, you can declare it to be of a particular data type. A 
+variable of type Dynamic can take on any data type. Any variable to which a value is assigned without 
+the variable first being declared is considered to be Dynamic -- it can take on a value of any data 
+type (for example Integer, Object, String), and can change from type to type as needed.</P>
+
+<p class="subh2">Value versus Reference Data Types</p>
+<p class="body">OScript language has a rich set of data types that can be placed into two groups -- value data 
+types and reference data types.</P>
+<p class="body">A value data type, for example, an Integer or a Date, contains an actual value. 
+It is copied when it is assigned or passed as a parameter. The original value is not affected by 
+any changes to the copy.</P>
+
+<pre>
+		Integer original = 55
+		Integer copyOfOriginal = original
+		original = 0 //At this point, copyOfOriginal still has the value 55
+</pre>
+
+<p class="body">A reference data type, for example, an Assoc or a Record, contains a reference to a 
+value. All variables based on a reference data type point to a shared value, but do not actually contain 
+the value itself. If this value changes, all variables based on the value are changed as well.</P>
+
+<pre>
+		Assoc a
+		Assoc b = a// both a and b reference the same Assoc
+		a.arnold = 'toronto'
+		a.amy = 'london'// both a and b associate the value
+		// london with the amy key
+		b.amy = 'beijing'// both a and b now associate the value
+		// beijing with the amy key
+</pre>
+
+<p class="body">The following table categorizes the OScript core data types:</P>
+
+
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=415>
+<TR>
+<TD class="gui" VALIGN="TOP">
+Value data types</TD>
+<TD class="gui" VALIGN="TOP">
+Reference data types</TD>
+</TR>
+<TR>
+<TD class="body" VALIGN="TOP">
+Boolean</TD>
+<TD class="body" VALIGN="TOP">
+Assoc</TD>
+</TR>
+<TR><TD class="body"  VALIGN="TOP">
+Date</TD>
+<TD class="body" VALIGN="TOP">Object</TD>
+</TR>
+<TR>
+<TD class="body"  VALIGN="TOP">
+Error</TD>
+<TD class="body" VALIGN="TOP">
+RecArray</TD>
+</TR>
+<TR><TD class="body" VALIGN="TOP">
+Integer</TD>
+<TD class="body" VALIGN="TOP">
+Record</TD>
+</TR>
+<TR>
+<TD class="body" VALIGN="TOP">
+List</TD>
+<TD class="body" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD class="body" VALIGN="TOP">Real</TD>
+<TD class="body" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD class="body" VALIGN="TOP">
+String</TD>
+<TD class="body" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD class="body" VALIGN="TOP">
+Undefined</TD>
+<TD class="body" VALIGN="TOP">&nbsp;</TD>
+</TR>
+</TABLE>
+
+
+<p class="body">Note that the Dynamic data type assumes the same type as the value it was last 
+assigned.</P>
+
+
+<p class="body">If an OScript programmer wishes to have a function which modifies a value data type 
+that is passed in, the function must return the modified value as its result, rather than modifying the 
+value directly. For example:</P>
+
+<pre>
+		// example that works
+		function Integer Increment( Integer inArg )
+			return inArg + 1
+		end
+
+		//example that does not work
+		function void Increment( Integer inArg )
+			inArg += 1
+		end</pre>
+
+<p class="body">The second function will simply increment a copy of <span class="code">inArg</span>
+and then discard it upon returning from the function.</P>
+
+<p class="body">However, a function which modifies a reference data type that is passed in, 
+modifies the value directly without explicitly returning the modified value as its result.</P>
+
+<pre>
+		Assoc a
+		a.joe = 'chicago'
+		ModAssoc( a )
+		function void ModAssoc( Assoc a )
+		a.joe = 'hong kong'
+		end</pre>
+
+<p class="body">After the <span class="code">ModAssoc</span> function executes, 
+ <span class="code">a.joe</span> contains the String <span class="code">'hong kong'</span>.</P>
+
+<p class="subh2"><a name="assoc">Assoc</a></P>
+<p class="body">Assoc data types are associative arrays of arbitrary key-value pairs. Values can be 
+added or retrieved by referencing the appropriate key. Assoc keys can be of any data type but are often 
+specified as Strings (this is not required). If String keys are used, the key is not case sensitive. If a 
+nonexistent key is referenced for a given Assoc, its default value (which defaults to Undefined if not 
+otherwise set using the Assoc.CreateAssoc() function) is returned.</P>
+
+<p class="body">Assoc values can be obtained by:</P>
+<ul class="body">
+<LI>Declaring a variable of type Assoc </li></p>
+<li>Executing the Assoc.CreateAssoc() function</li></p>
+<li>Executing a function that returns an Assoc value</li></ul>
+
+<p class="body">The following examples illustrate adding and retrieving values with an Assoc.</P>
+
+<pre>
+		Assoc namesAndNumbers
+		namesAndNumbers.Lucy = &quot;312/555-4587&quot;
+		namesAndNumbers.Joe = &quot;510/555-9986&quot;
+		namesAndNumbers.Amy = &quot;773/555-1142&quot;
+		namesAndNumbers.Arnold = &quot;510/555-4722&quot;</pre>
+
+<p class="body">In the above example, an Assoc of names and phone numbers is created and populated. 
+String keys corresponding to people's names are used to reference String phone numbers.</P>
+
+<pre>
+		StringeachKey, notFound
+		ListnamesList = Assoc.Keys( namesAndNumbers )
+		for eachKey in namesList
+			Echo( eachKey, &quot;'s number is: &quot;, namesAndNumbers.( eachKey ) )
+		end
+		notFound = namesAndNumbers.Steve</pre>
+
+<p class="body">In the above example, all the names and corresponding phone numbers stored in 
+the <span class="code">namesAndNumbers</span> Assoc are displayed by looping through a List containing 
+all of the Assoc keys. However, since there is no <span class="code">Steve</span> 
+key in this Assoc, Undefined is assigned to <span class="code">notFound</span>.</P>
+<p class="body">For a complete list of Assoc built-ins, see the <span class="emph">OScript Built-In Function</span> online 
+help.</P>
+
+<p class="subh2"><a name="boolean">Boolean</a></P>
+<p class="body">A Boolean represents a two-state value, either TRUE or FALSE. Boolean values can be 
+obtained by:</P>
+
+<ul class="body">
+<li>Declaring a Boolean variable (default value of FALSE)</li></p>
+<li>Using a Boolean constant (for example, TRUE or FALSE)</li></p>
+<li>Evaluating a Boolean expression (for example, recordNumber &gt;= 100)</li></p>
+<li>Executing a function that returns a Boolean value (for example, the File.Close() function)</li></ul>
+
+<p class="body">Boolean expressions are created by using relational or logical operators to form an 
+expression whose result is either TRUE or FALSE. For more information about relational and logical operators, see the <span class="emph">Operators </span>section.</P>
+<p class="body">For example, if these variables are declared:</P>
+
+<pre>
+		String dataLine
+		Integer count
+		Real x, y
+		Boolean library Records, newRecord</pre>
+
+<p class="body">The following are all valid Boolean expressions:</P>
+
+<pre>
+		dataLine != &quot;&quot;
+		count &lt;= 5000
+		y &lt; x
+		libraryRecord &amp;&amp; newRecord</pre>
+
+<p class="body">Booleans are often used as test criteria in conditional structures. 
+For example: </P>
+
+<pre>
+		Boolean done
+		while !done
+			textLine = File.Read( myFile )
+			allLines += ( textLine + Str.EOL() )
+			done = File.EOF( myFile )
+		end</pre>
+
+<p class="body">In this example, the Boolean expression <span class="code">!done</span> 
+is evaluated and then script execution branches or continues depending on whether 
+the Boolean expression evaluates to TRUE or FALSE.</P>
+<p class="body">For a complete list of Boolean built-ins, see the <span class="emph">OScript Built-In Function</span> online help.</P>
+
+<p class="subh2"><a name="date">Date</a></P>
+<p class="body">A Date represents a calendar date and time (for example May 27, 1993, 1:35 am). Dates 
+are stored in an internal, platform-independent format and should not be confused with String representations 
+of dates. Although <span class="code">&quot;11/30/82&quot;</span> 
+<span class="emph">looks </span>like a Date, it is actually a String representation of a date and cannot be stored in a Date variable or manipulated as an OScript Date.</P>
+<p class="body">Variables declared to be of type Date are initially Undefined. Dates include both the calendar date and the time, but either can be manipulated independently, if needed. Therefore, there is no such thing 
+as a Time data type. A time is considered a special case of a Date -- one for which the day, month, and year 
+information is ignored.</P>
+<p class="body">Date values can be obtained by executing a function that returns a Date value. For more information about these built-in functions, see the function syntax in the <span class="emph">OScript Built-In Function </span>online help. The most common functions used to generate new Date values are the Date.Now() function, used to generate a Date value representing the current date and time, and the Date.StringToDate() function, used to generate a Date value corresponding to a String representation of a Date. The following example 
+illustrates:</P>
+
+<pre>
+		String stringDate = &quot;03/23/89&quot;
+		Date nowDate = Date.Now()
+		Date thenDate = Date.StringToDate( stringDate, &quot;%m/%d/%y&quot; )</pre>
+
+<p class="body">In this example, the second parameter in the Date.StringToDate() function is a 
+formatted String that tells the function how to interpret the supplied String. Type conversions can be 
+performed to convert Strings to Dates (to perform Date manipulation) and to convert Dates to Strings 
+(for display purposes) using the Date.StringToDate() and the Date.DateToString() functions. </P>
+
+<p class="body">Arithmetic operations can be performed on Dates to obtain a Date earlier or later 
+than the supplied Date.</P>
+
+<p class="body">For example, you can add or subtract an Integer number of seconds to or from a 
+Date:</P>
+
+<pre>
+		Date rightNow, hourFromNow, tomorrow
+ 		rightNow = Date.Now()
+		hourFromNow = rightNow + ( 60 * 60 )
+		tomorrow = rightNow + ( 60 * 60 * 24 )</pre>
+
+<p class="body">Or you can use the Date.DateInteger() function and the Date.TimeInteger() function to 
+add and subtract days from Dates:</P>
+
+<pre>
+		Integer laterInt
+		Date laterDate, today
+		today = Date.Now()
+		laterInt = Date.DateInteger( today ) + 10
+		laterDate = Date.DateInteger(today, laterint )</pre>
+
+<p class="body">In this example, the <span class="code">laterDate</span> 
+value is obtained by converting the Date returned by the Date.Now() function 
+to an Integer, adding ten days to it, and then converting it back to a Date.</P>
+<p class="body">For a complete list of Date built-ins, see the <span class="emph">OScript Built-In Function</span> online help.</P>
+
+<p class="subh2"><a name="error">Error</a></P>
+<p class="body">An Error represents either a system-defined or user-defined Error. Errors can be used 
+not only to indicate <span class="emph">if </span>an operation failed or was successful (in which case a Boolean would suffice), but also to indicate <span class="emph">why</span> a failure occurred. For example, if you attempt to copy a file to the desktop, the process can either succeed or fail. If it fails, it could be because the file to copy cannot be found, because the destination disk is full, because a file with that name already exists, 
+and so on. A specific Error can be generated for each case, allowing the application designer to 
+determine the reason the function failed.</P>
+
+<p class="body">An Error can be thought of as containing two parts -- the Integer error identifier and 
+the String error message. Errors are referred to in scripts by their error identifiers, but the error 
+message can be used to provide the user with information about the type of error that occurred.</P>
+<p class="body">There are two types of Errors used in OScript:</P>
+<ul class="body">
+<li>System-defined Errors -- created by Open Text as part of Livelink, are returned when 
+OScript built-in functions fail. Designers can examine the messages associated with these Errors, but 
+cannot modify them or return them. For example, the File.Open() function returns a file reference if 
+successful, or an Error if the file could not be opened.</P>
+<li>User-defined Errors -- created using the Error.Define() function to associate an 
+error identifier (in the range 1024 to 2047) with an error message about the created Error. </P></ul>
+
+<p class="body">The following example illustrates the definition of user-defined Errors:</P>
+
+<pre>
+		Error.Define( 1024, &quot;Cannot find specified file.&quot; )
+		Error.Define( 2000, &quot;File already exists.&quot; )
+		Error.Define( 2047, &quot;Out of range.&quot; )</pre>
+
+<p class="body">Once an Error type is defined, it exists for the remainder of the application execution. 
+It is not disposed of when the script creating the Error completes execution. </P>
+<P>Values of type Error are obtained by executing the Error.Get() function. The following example 
+illustrates:</P>
+
+<pre>
+
+		function Boolean checkRange( Integer checkValue )
+			Boolean returnValue
+			Error negative = Error.Define( 2001, &quot;Negative&quot; )
+			if ( checkValue &lt; 0 ) 
+				// Return the negative value error.
+				returnValue = negative 
+			else if ( checkValue &gt; 1000 )
+				// Return the out of range error.
+				returnValue = Error.Get( 2047 )
+			else
+				returnValue = TRUE
+			end
+		return( returnValue )
+		end</pre>
+
+<p class="body">Unlike most other OScript data types, <span class="emph">any</span> type of variable can assume an Error value. This allows you to create a variable of any type and store a valid value in it if the operation was 
+successful, or store an Error in it if the operation failed.</P>
+<p class="body">For a complete list of Error built-ins, see the <span class="emph">OScript Built-In Function</span> online help.</P>
+
+
+<p class="subh2"><a name="file">File</a></P>
+<p class="body">A File represents a reference to an operating system file. Files are stored in an 
+internal format and should not be confused with String representations of a file specification (that is, 
+&quot;C:\Data\expenses.xls&quot; is not an OScript file). </P>
+<p class="body">When you declare a variable to be of type File, it initially assumes a value of Undefined. A File value can be obtained by opening or selecting a reference to a file using the File.Open function or by 
+converting a String representation of a file name to a File using the File.StringToFile() function. </P>
+
+<pre>
+			File readFile = File.Open( &quot;textfile.txt&quot;, File.ReadMode )</pre>
+
+<p class="body">In the above example a file is opened in preparation for reading.</p>
+
+<pre>
+		String fileName = &quot;c:\data\textfile.txt&quot;
+		File theFile = File.StringToFile( fileName )</pre>
+
+<p class="body">In the above example, a String file name is converted to an OScript file.</P>
+<p class="body">The return value of any of these functions is a File -- the reference to the specified file. 
+A variable containing the File can then be passed to other built-in functions that expect a File parameter.</P>
+<p class="body">Some of the built-in functions that operate on files expect the File to be an ASCII 
+text file (for example the File.Open() and File.Write() functions); however, OScript does not prevent you from referencing a non-text file. The File.IsText() function can be used to verify that the referenced File is a text file before proceeding.</P>
+<p class="body">For a complete list of File built-ins, see the <span class="emph">OScript Built-In Function</span> 
+online help.</P>
+
+<p class="subh2"><a name="integer">Integer</a></P>
+<p class="body">An OScript Integer is a 32-bit signed Integer and can take on any value in the 
+range of -2,147,483,648 to 2,147,483,647.</P>
+<p class="body">Integer values can be obtained by:</P>
+
+<ul class="body">
+<li>Declaring an Integer variable (default value of 0)</li></p>
+<li>Using an Integer literal (for example 27, -3958)</li></p>
+<li>Evaluating an expression that results in an Integer value (for example 345 + 26)</li></p>
+<li>Executing a function that returns an Integer value (for example Length())</li></ul>
+
+<p class="body">Integer expressions are created by joining two or more Integers (using the 
+arithmetic or bitwise operators) to form an expression whose result is another Integer. The following example 
+illustrates:</P>
+
+<pre>
+		Integer theLength = Length( &quot;abcdefghijklmno&quot; )
+		Integer shorter = ( theLength - 10 )</pre>
+
+<p class="body">Arithmetic expressions can be created containing a mixture of Reals and Integers. 
+When this is done, Integer math operations are performed until a Real is encountered. From that point on, 
+Real math operations are performed.</P>
+<p class="body">For a complete list of Integer built-ins, see the <span class="emph">OScript Built-In Function</span> online help.</P>
+
+<P class="subh1"><a name="list">List</a></P>
+<p class="body">A List represents a one-dimensional array of values. Each element in the List can 
+be of any data type (including List).</P>
+<p class="body">When you declare a variable to be of type List, it is initially empty. List values 
+can be obtained by using a List literal or by executing a function that returns a List value (for 
+example the Str.Elements() function).</P>
+
+<pre>
+		ListnamesList = { &quot;Amy&quot;, Naomi&quot;, &quot;Arnold, &quot;Miki&quot;, &quot;Blanca&quot; }
+		Listvalues = { namesList, ( 21 + 6 ), Date.Now() }</pre>
+
+<p class="body">In the above example, a List literal is created by defining a set of values, 
+surrounded by braces and separated by commas. Note that the elements in the List need not be literals; 
+they can be other Lists, expressions, or functions.</P>
+<p class="body">The expansion operator ( @ ) can be used to reference all elements contained in a 
+List, rather than the List itself. This is useful to insert the contents of a List into another List. 
+For example:</P>
+
+<pre>
+		templist = { &quot;Bruce&quot;, &quot;Toronto&quot;, 81 }
+		tempList = { @tempList, 34, &quot;dog&quot;, TRUE }</pre>
+
+<p class="body">In this example, <span class="code">tempList</SPAN> 
+is assigned a new value consisting of the current contents of <span class="code">tempList</SPAN> 
+with the addition of three elements. 
+Without the expansion operator, the first element of the new List would be the original List. With the 
+expansion operator, the original List's elements are inserted as separate elements in the new List.</P>
+<p class="body">The elements contained within a List can be referenced using the index operator <BR>
+( [ ] ), where the first element in the List is element 1. For example, the fourth element of the List 
+variable <span class="code">myList</span> can be obtained 
+using the following syntax:</P>
+
+<pre>
+		DynamictheValue = myList[ 4 ]</pre>
+
+<p class="body">The range operator ( : ) can be used to define a range of elements to form a subset. 
+The following example illustrates:</P>
+
+<pre>
+		Listwords = Str.Elements( &quot;Now is the time&quot;, &quot; &quot; )
+		ListfirstThree = words[ 1:3 ]</pre>
+
+<p class="body">In the above example, <span class="code">firstThree</span> 
+will contain the value:</P>
+
+<pre>
+		{ &quot;Now&quot;, &quot;is&quot;, &quot;the&quot; }</pre>
+
+<p class="body">You can use an open-ended range, for example, 
+<span class="code">[ : 6 ]</SPAN> specifies a range from the 
+beginning through the 6th element, and <span class="code">[ 3: ]</SPAN> 
+specifies a range from the third through the last element.</P>
+
+<p class="body">You can also refer to List elements using negative numbers, where the last element 
+of the List is -1. For example, <span class="code">myList[ -2:-1 ]</SPAN> 
+returns a List containing the last two elements of <span class="code">myList</SPAN>.</P>
+<p class="body">For a complete list of List built-ins, see the <span class="emph">OScript Built-In Function</span> 
+online help.</P>
+
+<P class="subh2"><a name="object">Object</a></P>
+<p class="body">An expression of type Object is a reference to an OSpace object. OScript can access 
+the features and methods of other objects via an object reference.</P>
+<p class="body">An object is created and manipulated with the built-in functions in the OS 
+(OSpace) package. In fact, it is these functions that underlie the Livelink Builder's Object menu commands. 
+The features of an object (both data features and methods) are referenced with the dot operator as 
+<span class="emph">objectName</span>.<span class="emph">featureName</span>.
+</P>
+<p class="body">For example, if you create an object reference feature named 
+<span class="code">logInfoObj</span> in the <span class="code">UserPkg</span> 
+object that refers to 
+the <span class="code">LogInfo</span> object, you can 
+reference the <span class="code">fName</span> method 
+of <span class="code">LogInfo</span> from a script 
+within <span class="code">UserPkg</span> using the 
+following syntax:</P>
+
+<pre>
+		.logInfoObj.fName</pre>
+
+<p class="body">The <span class="code">this</span> keyword references the current object 
+without using the object's name:</P>
+
+<pre>
+		this.fName</pre>
+
+<p class="body">If you create a global variable named 
+<span class="code">$logInfo
+</span> to store the <span class="code">logInfoObj
+</span> object reference, you can reference the 
+<span class="code">fName</span> method of 
+<span class="code">LogInfo</span> from any script using the 
+following syntax:</P>
+
+<pre>
+		$LogInfo.fName</pre>
+
+<p class="body">Creating a global variable to refer to an object allows <span class="emph">any </span>object to reference that object from <span class="emph">any </span>OSpace.</P>
+
+<p class="subh2"><a name="real">Real</a></P>
+<p class="body">A Real is a double-precision floating point number, and can therefore take on any 
+positive or negative value in the range of 1.0E-308 to 1.0E307, with fifteen digit precision.</P>
+<p class="body">Real values can be obtained by:</P>
+
+<ul class="body">
+<li>declaring a Real variable (default value of 0)</li></p>
+<li>using a Real literal, expressed using a decimal point (for example, 234.5678) or scientific notation 
+(for example 2.345678E2)</li></p>
+<li>evaluating an expression that results in a Real value (for example, 345.29 * 36)</li></p>
+<li>executing a function that returns a Real value (for example, the Math.Power() function)</li></ul>
+
+<p class="body">Real expressions are created by joining two or more numbers, at least one of which is a Real (the others can be Integers), using the arithmetic operators to form an expression whose result is another Real. The 
+following example illustrates:</P>
+
+<pre>
+		Integerdollars = 2000
+		RealtaxPercentage = .33
+		RealgrossPay = dollars * ( 1 - taxPercentage )</pre>
+
+<p class="body">Arithmetic expressions can be created containing a mixture of Reals and Integers. When 
+this is done, Integer math operations are performed until a Real is encountered. From this point on, Real 
+math operations are performed.</P>
+
+<p class="subh2"><a name="recarray">RecArray and Record</a></P>
+<p class="body">In OScript, there is a strong relationship between RecArrays and Records, so they are 
+presented together.</P>
+<p class="body">A RecArray is a reference to a two-dimensional array. It contains multiple rows of data, called Records, each made up of named fields. A RecArray is similar in structure to a table in a standard SQL database.</P>
+<p class="body">You can create a RecArray by executing the RecArray.Create() function:</P>
+
+<pre>
+		RecArraymyRecArray = RecArray.Create( { &quot;name&quot;, &quot;role&quot; } )</pre>
+
+<p class="body">This function creates a new RecArray with the specified fields and composed of no 
+Records. The field names specified must be String values. Data can be entered into the RecArray using the 
+RecArray.AddRecord() function or by using the dot operator. For more information, see the 
+<span class="emph">Dot Operator </span>section within the <span class="emph">Operators</span> section.</P>
+<p class="body">An individual Record within a RecArray can be referenced using the index operator 
+(&nbsp;[&nbsp;]&nbsp;), 
+where the first Record in the RecArray is Record 1. </P>
+<p class="body">For example, the first Record of the RecArray variable 
+<span class="code">myRecArray</span> can be obtained using the following syntax:</P>
+
+<pre>
+		RecordfirstRecord = myRecArray[ 1 ]</pre>
+
+<p class="body">The expression used within the brackets must evaluate to an Integer. For example, to 
+access the last Record in a RecArray, you could use the following statement:</P>
+
+<pre>
+		RecordlastRecord = myRecArray[ Length( myRecArray ) ]</pre>
+
+<p class="body">Records can be declared and used independently of RecArrays -- they need not only be used 
+within the context of a RecArray. However, an Assoc is used more often than a &quot;solo&quot; Record.</P>
+<p class="body">An individual field within a Record can be referenced using the dot operator ( . ), 
+where the expression following the dot identifies the desired field. This field can be specified by field name, Integer field position (where the first field is field 1), or by a String variable, enclosed in parentheses, that 
+evaluates to a valid field name.</P>
+<p class="body">For example:</P>
+
+<pre>
+		RecArraymyRecArray
+		RecordtheRecord
+		myRecArray = RecArray.Create( {&quot;name&quot;, &quot;modDate&quot;, &quot;saveDate&quot; } )
+		// the contents of the name field of the first Record
+		myRecArray[ 1 ].name
+		// the contents of the second field of the eleventh Record
+		myRecArray[ 11 ][ 2 ]
+		// the contents of the third field of the fifth Record
+		theRecord = myRecArray[ 5 ]
+		theRecord[ 3 ]//same as theRecord.saveDate
+		// the contents of the modDate field of the fifth Record
+		theRecord = myRecArray[ 5 ]
+		theRecord.modDate
+		// the contents of the modDate field of the fifth
+		// Record (using variable)
+		theRecord = myRecArray[ 5 ]
+		String s = &quot;modDate&quot; 
+		theRecord.(s)//same as theRecord.modDate</pre>
+
+<p class="body">A String expression can be used to specify a field reference when placed inside 
+parentheses. This can be useful in looping constructs. For example:</P>
+
+<pre>
+		function List columnData( RecArray dataTable, String colName )
+			Integer i
+			List listOfValues
+			for i = 1 to Length( dataTable )
+				listOfValues[ i ] = dataTable[ i ].( colName )
+			end
+			return( listOfValues )
+		end</pre>
+
+<p class="body">For a complete list of RecArray built-ins, see the <span class="emph">OScript Built-In Function</span> online help.</P>
+
+<p class="subh2"><a name="string">String</a></P>
+<p class="body">A String is any sequence of zero or more characters. String values can be 
+obtained by:</P>
+<ul class="body">
+<li>declaring a String variable (default value of a null String)</li></p>
+<li>using a String literal (for example, 'Joe')</li></p>
+<li>evaluating a String expression (for example, 'Name is' + 'Joe')</li></p>
+<li>executing a function that returns a String value (for example, the Str.Format() function)</li></ul>
+
+<p class="body">String literals consist of a sequence of zero or more characters delimited by either single or double quotation marks. For example:</P>
+
+<pre>
+		String	myName = &quot;Arnold Wilson&quot;
+		String	myBDay = 'August 20th, 1934'</pre>
+
+<p class="body">Single or double quotation marks can be embedded in the String by alternating the 
+delimiters used or by doubling the desired quotation character. For example:</P>
+
+<pre>
+		String phrase1 = 'The proper term is &quot;regardless.&quot;'
+		String phrase2 = &quot;She can''t understand.&quot;
+		String phrase3 = &quot;His name is John &quot;Rusty&quot;&quot; Smith&quot;</pre>
+
+<p class="body">Note that there are two single quotation characters between the 
+<span class="code">n</span> and the 
+<span class="code">t</span> in the String 
+<span class="code">phrase2</span>.</P>
+<p class="body">Strings can be concatenated using the + operator. For example:</P>
+
+<pre>
+		String myString = 'This is a test.'
+		Echo( myString + ' Really.' ) //displays 'This is a test. Really.'</pre>
+
+<p class="body">Substrings can be deleted from a String using the <span class="code">-</span> 
+operator. When using the <span class="code">-</span> operator to delete substrings, only the first 
+occurrence of the substring (read from left to right) is removed from the String. If the substring is not 
+found, an Error does not occur. For example:</P>
+
+<pre>
+		String myString = &quot;This is a test.&quot;
+		Echo( myString - &quot;is&quot; )//displays &quot;Th is a test.&quot;
+		Echo( myString - &quot;is&quot; - &quot;is&quot; )//displays &quot;Th a test.&quot;</pre>
+
+<p class="body">The characters in a String can be referenced using the index 
+operator (&nbsp;[&nbsp;]&nbsp;), where the first character in the String is character 1. For example, the 
+sixth and seventh characters of the String variable <span class="code">myString</span> 
+can be referenced using the following syntax:</P>
+
+<pre>
+		String myString = &quot;this is a test.&quot;
+		myString[ 1 ] = Str.Upper( myString[ 1 ] )
+		Echo( myString )//displays &quot;This is a test.&quot;
+		myString[ 6 : 7 ] = &quot;is not&quot;
+		Echo( myString )//displays &quot;This is not a test.&quot;</pre>
+
+<p class="body">You can use an open-ended range, for example, <span class="code">[ : 6 ]</span> 
+specifies a range from the beginning through the 6th character of the String, and 
+<span class="code">[ 3: ]</span> specifies a range from the third through the last character of the 
+String.</P>
+<p class="body">You can also refer to String characters using negative numbers, where the last character 
+of the String is -1. For example, <span class="code">myString[ -2:-1 ]</span> 
+returns a String containing the last two characters of <span class="code">myString</SPAN>.</P>
+<p class="body">For more information about the operators used with Strings, see the <span class="emph">Arithmetic </span> section and the <span class="emph">Indexing</span> section within the <span class="emph">Operators</span> section. For a complete list of String built-ins, see the <span class="emph">OScript Built-In Function</span> online help.</P>
+
+<p class="subh2"><a name="undefined">Undefined</a></P>
+<p class="body">Undefined is both a data type and a unique value that any data type may take on, 
+indicating the lack of another data type value. It can be used as a value against which variables can be 
+compared to determine whether a value has been assigned. The IsDefined() and IsUndefined() functions can be 
+used to determine if a result is Undefined. For example:</P>
+
+<pre>
+		FiletheFile = File.Open( &quot;textfile.txt&quot;, File.ReadMode )
+		if ( IsUndefined ( theFile ) )
+			echo( &quot;A valid file was not selected&quot; )
+		else
+			<span class="emph">...block of code...</span>
+		end</pre>
+
+<p class="body">Many built-in functions return Undefined when they fail.</P>
+
+<p class="gui">Type Conversion and Coercion</P>
+<p class="body">When expressions are created using operands of differing data types, they must first be 
+converted to a common type. The only automatic conversions that OScript makes are those that make intuitive 
+sense, for example, converting an Integer to a Real to perform an arithmetic operation, resulting 
+in a Real.</P>
+<p class="body">The OScript language contains many type conversion built-in functions. These 
+functions allow you to 
+explicitly convert a value from one data type to another. There are too many type conversion functions to be 
+listed here; they can be found throughout the <span class="emph">OScript Built-In Function </span>online help. To locate a 
+function for performing a particular kind of type conversion follow these guidelines:</P>
+<ul class="body">
+<li>The built-in function will be located in the package used to manipulate the 
+original data type. For example, the functions that convert Strings to other data types are in the <span class="emph">Str</span> package; the functions that convert Dates to other data types are in the <span class="emph">Date</span> package.</P>
+<li>The built-in function will be named <span class="emph">OldToNew</span> where <span class="emph">Old</span> corresponds to the original data type and <span class="emph">New</span> corresponds to the resulting data type. For example, to convert a Date to a List, you would use the Date.DateToList() function.</P></ul>
+
+<p class="body">OScript also allows certain kinds of data type coercion. Coercion differs from 
+conversion in that coercion does not actually change a value from one type to another, but allows a data type to be treated as if it were another type. In OScript, various data types can be coerced into Boolean values, according to the following table:</P>
+
+
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=464>
+<TR>
+<TD class="gui" VALIGN="TOP">
+Data type</TD>
+<TD class="gui" VALIGN="TOP">
+Coerced to</TD>
+<TD class="gui" VALIGN="TOP">
+Evaluates to</TD>
+<TD class="gui" VALIGN="TOP">
+When</TD>
+</TR>
+<TR>
+<TD class="body" VALIGN="TOP">
+Date</TD>
+<TD class="body" VALIGN="TOP">
+Boolean</TD>
+<TD class="body" VALIGN="TOP">
+TRUE</TD>
+<TD class="body" VALIGN="TOP">
+at all times</TD>
+</TR>
+<TR>
+<TD class="body" VALIGN="TOP">
+Error</TD>
+<TD class="body" VALIGN="TOP">
+Boolean</TD>
+<TD class="body" VALIGN="TOP">
+FALSE</TD>
+<TD class="body" VALIGN="TOP">
+at all times</TD>
+</TR>
+<TR>
+<TD class="body" VALIGN="TOP">
+Integer</TD>
+<TD class="body" VALIGN="TOP">
+Boolean</TD>
+<TD class="body" VALIGN="TOP">
+TRUE</TD>
+<TD class="body" VALIGN="TOP">
+nonzero</TD>
+</TR>
+<TR>
+<TD class="body" VALIGN="TOP">
+List</TD>
+<TD class="body" VALIGN="TOP">
+Boolean</TD>
+<TD class="body" VALIGN="TOP">
+TRUE</TD>
+<TD class="body" VALIGN="TOP">
+not empty</TD>
+</TR>
+<TR>
+<TD class="body" VALIGN="TOP">
+Real</TD>
+<TD class="body" VALIGN="TOP">
+Boolean</TD>
+<TD class="body" VALIGN="TOP">
+TRUE</TD>
+<TD class="body" VALIGN="TOP">
+nonzero</TD>
+</TR>
+<TR>
+<TD class="body" VALIGN="TOP">
+String</TD>
+<TD class="body" VALIGN="TOP">
+Boolean</TD>
+<TD class="body" VALIGN="TOP">
+TRUE</TD>
+<TD class="body" VALIGN="TOP">
+not empty</TD>
+</TR>
+<TR>
+<TD class="body" VALIGN="TOP">
+Undefined</TD>
+<TD class="body" VALIGN="TOP">
+Boolean</TD>
+<TD class="body" VALIGN="TOP">
+FALSE</TD>
+<TD class="body" VALIGN="TOP">
+at all times</TD>
+</TR>
+<TR>
+<TD class="body" VALIGN="TOP">
+Boolean</TD>
+<TD class="body" VALIGN="TOP">
+Integer/Real</TD>
+<TD class="body" VALIGN="TOP">
+0</TD>
+<TD class="body" VALIGN="TOP">
+when FALSE</TD>
+</TR>
+<TR>
+<TD class="body" VALIGN="TOP">
+Boolean</TD>
+<TD class="body" VALIGN="TOP">
+Integer/Real</TD>
+<TD class="body" VALIGN="TOP">
+1</TD>
+<TD class="body" VALIGN="TOP">
+when TRUE</TD>
+</TR>
+<TR>
+<TD class="body" VALIGN="TOP">
+Real (<span class="emph">a</span>.<span class="emph">b</span>)</TD>
+<TD class="body" VALIGN="TOP">
+Integer</TD>
+<TD class="body" VALIGN="TOP">
+<span class="emph">a</span></TD>
+<TD class="body" VALIGN="TOP">
+stored in an Integer variable</TD>
+</TR>
+</TABLE>
+
+<p class="body">Note that for the Real to Integer coercion, values are truncated rather than rounded. 
+Therefore, the value 3.6 becomes 3, rather than 4.</P>
+
+
+<script language="JavaScript">
+IncludeFooter( '' )
+</script>
+
+</BODY>
+</HTML>
+

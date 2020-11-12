@@ -1,0 +1,384 @@
+<meta charset="UTF-8">
+<html>
+<head>
+<title>JavaObject: Calling OScript from Java</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../documentation/builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody>
+</table>
+
+<div id="document">
+
+<div class="sidebar_container">
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink"><a href="../documentation/assoc.html">Assoc</a></div>
+				<div class="packagelink"><a href="../documentation/boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="../documentation/builder.html">Builder</a></div>
+				<div class="packagelink"><a href="../documentation/bytes.html">Bytes</a></div>
+				<div class="packagelink"><a href="../documentation/capi.html">CAPI</a></div>
+				<div class="packagelink"><a href="../documentation/capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="../documentation/capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="../documentation/capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="../documentation/capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink"><a href="../documentation/cachetree.html">CacheTree</a></div>
+				<div class="packagelink"><a href="../documentation/compiler.html">Compiler</a></div>
+				<div class="packagelink"><a href="../documentation/core.html">Core</a></div>
+				<div class="packagelink"><a href="../documentation/dapi.html">DAPI</a></div>
+				<div class="packagelink"><a href="../documentation/dapinode.html">DAPINODE</a></div>
+				<div class="packagelink"><a href="../documentation/dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="../documentation/dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink"><a href="../documentation/dapiversion.html">DAPIVERSION</a></div>
+				<div class="packagelink"><a href="../documentation/domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="../documentation/domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="../documentation/domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="../documentation/domcomment.html">DOMComment</a></div>
+				<div class="packagelink"><a href="../documentation/domdocument.html">DOMDocument</a></div>
+				<div class="packagelink"><a href="../documentation/domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="../documentation/domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink"><a href="../documentation/domelement.html">DOMElement</a></div>
+				<div class="packagelink"><a href="../documentation/domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="../documentation/domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="../documentation/domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink"><a href="../documentation/domnamednodemap.html">DOMNamedNodeMap</a></div>
+				<div class="packagelink"><a href="../documentation/domnode.html">DOMNode</a></div>
+				<div class="packagelink"><a href="../documentation/domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="../documentation/domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="../documentation/domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="../documentation/domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="../documentation/domtext.html">DOMText</a></div>
+				<div class="packagelink"><a href="../documentation/date.html">Date</a></div>
+				<div class="packagelink"><a href="../documentation/dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="../documentation/env.html">Env</a></div>
+				<div class="packagelink"><a href="../documentation/error.html">Error</a></div>
+				<div class="packagelink"><a href="../documentation/file.html">File</a></div>
+				<div class="packagelink"><a href="../documentation/filecopy.html">FileCopy</a></div>
+				<div class="packagelink"><a href="../documentation/fileprefs.html">Fileprefs</a></div>
+				<div class="packagelink"><a href="../documentation/frame.html">Frame</a></div>
+				<div class="packagelink"><a href="../documentation/global.html">Global</a></div>
+				<div class="packagelink"><a href="../documentation/integer.html">Integer</a></div>
+				<div class="packagelink"><a href="../documentation/javaobject.html">JavaObject</a></div>
+				<div class="packagelink"><a href="../documentation/language.html">Language</a></div>
+				<div class="packagelink"><a href="../documentation/license.html">License</a></div>
+				<div class="packagelink"><a href="../documentation/list.html">List</a></div>
+				<div class="packagelink"><a href="../documentation/logging.html">Logging</a></div>
+				<div class="packagelink"><a href="../documentation/long.html">Long</a></div>
+				<div class="packagelink"><a href="../documentation/mailmessage.html">MailMessage</a></div>
+				<div class="packagelink"><a href="../documentation/math.html">Math</a></div>
+				<div class="packagelink"><a href="../documentation/memcached.html">Memcached</a></div>
+				<div class="packagelink"><a href="../documentation/notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="../documentation/otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="../documentation/objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="../documentation/object.html">Object</a></div>
+				<div class="packagelink"><a href="../documentation/pop3session.html">POP3Session</a></div>
+				<div class="packagelink"><a href="../documentation/patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="../documentation/patfind.html">PatFind</a></div>
+				<div class="packagelink"><a href="../documentation/pattern.html">Pattern</a></div>
+				<div class="packagelink"><a href="../documentation/point.html">Point</a></div>
+				<div class="packagelink"><a href="../documentation/profiler.html">Profiler</a></div>
+				<div class="packagelink"><a href="../documentation/real.html">Real</a></div>
+				<div class="packagelink"><a href="../documentation/recarray.html">RecArray</a></div>
+				<div class="packagelink"><a href="../documentation/record.html">Record</a></div>
+				<div class="packagelink"><a href="../documentation/regex.html">Regex</a></div>
+				<div class="packagelink"><a href="../documentation/restclient.html">RestClient</a></div>
+				<div class="packagelink"><a href="../documentation/saxparser.html">SAXParser</a></div>
+				<div class="packagelink"><a href="../documentation/smtpsession.html">SMTPSession</a></div>
+				<div class="packagelink"><a href="../documentation/ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="../documentation/script.html">Script</a></div>
+				<div class="packagelink"><a href="../documentation/security.html">Security</a></div>
+				<div class="packagelink"><a href="../documentation/set.html">Set</a></div>
+				<div class="packagelink"><a href="../documentation/socket.html">Socket</a></div>
+				<div class="packagelink"><a href="../documentation/sql.html">Sql</a></div>
+				<div class="packagelink"><a href="../documentation/sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="../documentation/sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink"><a href="../documentation/str.html">Str</a></div>
+				<div class="packagelink"><a href="../documentation/string.html">String</a></div>
+				<div class="packagelink"><a href="../documentation/system.html">System</a></div>
+				<div class="packagelink"><a href="../documentation/uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="../documentation/uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="../documentation/uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="../documentation/void.html">Void</a></div>
+				<div class="packagelink"><a href="../documentation/wapi.html">WAPI</a></div>
+				<div class="packagelink"><a href="../documentation/wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="../documentation/wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="../documentation/wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="../documentation/wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="../documentation/wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink"><a href="../documentation/web.html">Web</a></div>
+				<div class="packagelink"><a href="../documentation/xslprocessor.html">XSLProcessor</a></div>
+				<div class="packagelink"><a href="../documentation/zip.html">Zip</a></div>
+		</div>
+</div>
+
+<div class="content_container">
+<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+
+<h1 style="text-align:center;">Calling OScript from Java</h1>
+
+<h2> Introduction</h2>
+
+<p>Java methods invoked by <a
+href="../documentation/javaobject.html#InvokeMethod()">JavaObject.InvokeMethod</a> and <a
+href="../documentation/javaobject.html#InvokeStaticMethod()">JavaObject.InvokeStaticMethod</a>
+can reference OScript objects and call OScript scripts and built-in functions
+through the OScriptObject class. This requires the current thread being an OScript thread, i.e. the
+Java method has to be invoked through <a
+href="../documentation/javaobject.html">JavaObject</a>. Also the OScriptObject and OPeer objects created in the OScript thread or passed from the OScript layer can
+NOT be used in other threads.</p>
+
+<p>This feature is available since Livelink 10.0.0.</p>
+
+<h2>Calling OScript built-in functions in Java</h2>
+
+<p>Java code can call OScript built-in functions through the OScriptObject.runScript 
+method. This feature opens up OScript builtin types to the Java layer. For
+example, with this feature, you can access Livelink system configuration
+information by calling <a href="../documentation/capi.html#IniGet()">CAPI.IniGet</a> or put a
+log message in the thread logs with <a href="../documentation/core.html#Echo()">echo</a>.</p>
+
+<h4>Example 1.</h4>
+<pre>    // Java Code.
+    OScriptObject.runScript( "echo", "This message goes to thread log" );</pre>
+
+<p>This example calls the <a href="../documentation/core.html#Echo()">echo</a> builtin method
+and puts a message in the thread log if logging is enabled.</p>
+
+<h4>Example 2.</h4>
+
+<p><pre>    // Java Code.
+    String result = (String) OScriptObject.runScript( "$Kernel.SystemPreferences.GetPref",
+			"general",
+			"port" );
+</pre>
+</p>
+
+<p>This example reads the Livelink port from the opentext.ini file.</p>
+
+<h4>Example 3.</h4>
+<pre>    // Java Code.
+    public static void testBuiltin( OScriptObject prgCtx )
+    throws Exception
+    {
+        try
+        {
+            OScriptObject dapiCtx = (OScriptObject) prgCtx.invokeScript( "DSession" );
+            
+            ODAPISession dapiSess = (ODAPISession) dapiCtx.getFeature( "fSession" );
+            
+            if ( null == dapiSess )
+            {
+                throw new NullPointerException( "dapiSess is null" );
+            }
+            
+            // Get Enterprise workspace.
+            ODAPINode result = (ODAPINode) OScriptObject.runScript( "DAPI.GetNodeByID",
+					dapiSess,
+					2000 );
+            
+            sLogger.log( Level.INFO, "DAPI.GetNodeByID result: " + result.pNAME() );            
+        }
+        catch( Exception e )
+        {
+            sLogger.log( Level.SEVERE, "Caught Exception", e );
+            throw e;
+        }
+    }</pre>
+
+<p>This example takes a prgCtx parameter passed from the OScript layer and
+calls the <a href="../documentation/dapi.html#GetNodeByID()">DAPI.GetNodeByID</a> built-in
+function to get the Enterprise Workspace node. To run this example, you need
+to invoke the above method with <a
+href="../documentation/javaobject.html#InvokeStaticMethod()">JavaObject.InvokeStaticMethod</a>.</p>
+
+<p></p>
+
+<h2>Calling OScript scripts in Java</h2>
+
+<p>Java code can call both global and object scripts with the OScriptObject.runScript and OScriptObject.invokeScript method. 
+Use the OScriptObject.runScript method to call global scripts. Use the OScriptObject.invokeScript 
+method to call scripts of an OScriptObject. This feature opens up OScript
+scripts to the Java layer. For example, with this feature, you can get the
+sub-nodes of a node with the $LLIAPI.NodeUtil.ListNodes script or update
+opentext.ini file with the $Kernel.SystemPreferences.AddPref script.</p>
+
+<h4>Example 4.</h4>
+<pre>    // Java Code.
+    public static Map&lt;String,Object&gt; testScript( OScriptObject prgCtx )
+    throws Exception
+    {
+        Map&lt;String,Object&gt; result = null;
+        ArrayList&lt;Integer&gt; args = new ArrayList&lt;Integer&gt;( 1 );
+        
+        // Enterprise workspace is 2000.
+        args.add( 2000 );
+        
+        try
+        {
+            // List nodes in the Enterprise workspace.
+            result = (Map&lt;String,Object&gt;) OScriptObject.runScript( "$LLIAPI.NodeUtil.ListNodes",
+				prgCtx,
+				"(ParentID=:A1)",
+				args );
+            
+            Boolean ok = (Boolean) result.get( "OK" );
+            
+            if ( ok.booleanValue() )
+            {
+                RecArray contents = (RecArray) result.get( "Contents" );
+                Record r;
+                
+                // Loops through the child nodes and write out the node name.
+                for ( int i = 0; i &lt; contents.size(); ++i )
+                {
+                    r = (Record) contents.getRecord( i );
+                    sLogger.log( Level.INFO, "child node name: " + r.get( "Name" ) );
+                }
+            }
+            else
+            {
+                sLogger.log( Level.SEVERE, "ListNodes error message: " + result.get( "ErrMsg" ) );
+                sLogger.log( Level.SEVERE, "ListNodes api error: " + result.get( "ApiError" ) );
+            }
+        }
+        catch( Exception e )
+        {
+            sLogger.log( Level.SEVERE, "Caught Exception", e );
+            throw e;
+        }
+        
+        return result;        
+    } </pre>
+
+<p></p>
+
+<p>This example takes a prgCtx parameter passed from the OScript layer and
+calls $LLIAPI.NodeUtil.ListNodes to get the sub-nodes in the Enterprise
+Workspace. It then loops through the contents and logs the name of each node.
+To run this example, you need to invoke the above method with <a
+href="../documentation/javaobject.html#InvokeStaticMethod()">JavaObject.InvokeStaticMethod</a>.</p>
+
+<p></p>
+
+<h4>Example 5.</h4>
+<pre>    // Java Code.
+    public static String testScript2( OScriptObject prgCtx )
+    throws Exception
+    {
+        String retval = "zzz not found";
+        
+        try
+        {        
+            OScriptObject uSession = (OScriptObject) prgCtx.invokeScript( "USession" );
+            
+            Integer userID = (Integer) uSession.getFeature( "fUserId" );
+            
+            sLogger.log( Level.INFO, "UserID is " + userID );
+            
+            retval = "The current login User: " + userID;
+            
+            // Get Admin user's name.
+            Map&lt;String,Object&gt; status = (Map&lt;String,Object&gt;)
+			OScriptObject.runScript( "$LLIAPI.UsersPkg.NameGetByID", uSession, 1000 );
+			
+            sLogger.log( Level.INFO, String.valueOf( status ) );
+            sLogger.log( Level.INFO, (String) status.get( "Name" ) );
+        }
+        catch( Exception e )
+        {
+            sLogger.log( Level.SEVERE, "Caught Exception", e );
+            throw e;
+        }
+        
+        return retval;
+    }
+</pre>
+
+<p></p>
+
+<p>This example takes a prgCtx parameter passed from the OScript layer and
+calls the "USession" script of the prgCtx object to get the user session. It
+then uses the user session to get the current login userID and the Admin
+user's name. To run this example, you need to invoke the above method with <a
+href="../documentation/javaobject.html#InvokeStaticMethod()">JavaObject.InvokeStaticMethod</a>.</p>
+
+<p></p>
+
+<h2>Accessing the features of an OScriptObject</h2>
+
+<p>Java code can access the features of an OScriptObject with the OScriptObject.getFeature method. The feature name is case insensitive just like in OScript.</p>
+
+<p></p>
+
+<h4>Example 6.</h4>
+<pre>    // Java Code.
+    OScriptObject uSession = (OScriptObject) prgCtx.invokeScript( "USession" );
+            
+    Integer userID = (Integer) uSession.getFeature( "fUserId" );
+</pre>
+
+<p></p>
+
+<p>This example is a snippet from Example 4. It accesses the fUserId feature
+of the uSession object.</p>
+
+<p></p>
+
+<h2>Enable Java in Livelink Builder</h2>
+
+<p>In order to use <a href="../documentation/javaobject.html">JavaObject</a>, Livelink JVM has
+to be started. However, unlike Livelink service, Livelink Builder does not
+start the JVM by default. To start the JVM in Livelink Builder, add
+"-loadjavavm" in the Target field of the Livelink Builder's program
+shortcut.</p>
+
+<p></p>
+
+<h2>Deploy Java Code in Livelink</h2>
+<ul>
+  <li>Build your code into jar files.</li>
+  <li>Add the jar files in OTHOME/ojlib/ or
+    OTHOME/module/somemodule_1_0_0/ojlib/ directory (and their
+    subdirectories) to be recognized by Livelink JVM's application
+    classloader.</li>
+</ul>
+
+<p></p>
+
+<h2>Notes</h2>
+<ul>
+  <li>OPeer and OScriptObject 
+    objects are only valid in the thread where the Java method is invoked by
+    <a href="../documentation/javaobject.html">JavaObject</a>. They can not be used in other
+    threads.</li>
+  <li>At the end of each <a
+    href="../documentation/javaobject.html#InvokeMethod()">JavaObject.InvokeMethod</a> and <a
+    href="../documentation/javaobject.html#InvokeStaticMethod()">JavaObject.InvokeStaticMethod</a>
+    call, all OPeer objects of the thread are cleaned up. For this reason, OPeer 
+    objects are only valid in the Java method where they are passed to as
+    parameter or created.</li>
+</ul>
+
+<p></p>
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2016 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+</div>
+</div>
+</body>
+</html>

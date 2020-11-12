@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Adding Event Trigger Scripts: Background Information</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script type="text/javascript" language="JavaScript" src="../documentation.js">
+</script>
+</head>
+<body class="Body" text="#000000" bgcolor="#FFFFFF" link="#003366" alink= 
+"#3300FF" vlink="#660033" background="../images/pattern.gif">
+<script language="JavaScript">updateParentHeader( 'Event Triggers' );</script>
+<script language="JavaScript">includeContentContainer( 'wfbuilder', true );</script>
+
+<p class="body"><p class="title">Adding Event Trigger Scripts: Background
+Information</p>
+ This section summarizes the features involved in creating <a href="#backgen">
+general</a>, <a href="#backper">performer</a>, and <a href="#backsub">
+submap</a> event scripts, along with how to <a href="#backrest">restrict</a>
+access to event scripts.<br>
+<br>
+ <span id="backgen" class="title2">Background on General Event Trigger
+Scripts</span></p>
+
+<p class="body">Before you can create an event trigger script for the General
+callback event, you must create an orphan of the <span class="code">
+GeneralCallbackScripts</span> object, located in <span class="code">
+WFMain:WFRoot:CallbackEventsScripts</span>, into your custom module. The <span
+class="code">GeneralCallbackScripts</span> object contains the scripts that can
+be attached to general workflow events. </p>
+
+<p class="body">For each general event trigger script that you create, you can
+set the following features:</p>
+
+<ul type="disc">
+<li class="body"><span class="code">fEnabled</span>, which contains a Boolean
+value. When set to TRUE, the fEnabled feature lets you register the object 
+in WFMain:WFCBGeneralSubsystem.<br>
+<br>
+</li>
+
+<li class="body"><span class="code">fScriptName</span>, which contains a String
+value. This feature stores the name that you want to represent the event
+trigger script on the Event Scripts tab in the Content Server interface. By default,
+the name that you give to the script is used to name the option on the Event
+Scripts tab in the Content Server interface; however, you can customize the name that
+is displayed by creating this String feature.</li>
+</ul>
+
+<p class="body">If the names of the scripts that you add to the <span class= 
+"code">GeneralCallbackScripts</span> object do not begin with a 0 or an
+underscore (_), they are displayed on the Event
+Scripts tab in the Content Server interface as options for Content Server users to
+attach to general workflow events. If the names of your scripts begin with a 0
+or an underscore (_), they are not displayed in the Content Server interface, but can
+be used as utility scripts that are referenced by the event trigger
+scripts.</p>
+
+<p class="body">If you attach a general event trigger script to a Step Ready
+event and the event trigger script returns a value of <span class="code">
+TRUE</span>, the step is automatically completed.</p>
+
+<p class="body">After you set the features associated with the <span class=
+"code">GeneralCallbackScripts</span> object, you can create the general event
+trigger scripts. A prototype for the general event trigger scripts is stored in
+the <span class="code">ODocumentation()</span> script in the <span class=
+"code">GeneralCallbackScripts</span> object. General event trigger scripts must
+return a Boolean value -- <span class="code">TRUE</span> for success or <span
+class="code">FALSE</span> for failure.</p>
+
+<p class="body">After you orphan the general event trigger object, set the
+<span class="code">fEnabled</span> feature, and create the general event
+trigger scripts, you run the <span class="code">BuildOSpace()</span> script in
+the <span class="code">Globals</span> object of your custom OSpace and restart
+the Content Server Builder to register your changes. The <span class="code">
+BuildOSpace()</span> script registers the <span class="code">
+GeneralCallbackScripts</span> object in <span class="code">
+WFMain:WFCBGeneralSubsystem</span> and exposes the Event
+Scripts tab in the Content Server interface.</p>
+
+<p class="body">When you install the custom module in which the general event
+trigger functionality is contained, you can view your changes in the Content Server
+interface. The names that you specified in the <i><span class="code">
+fScriptName</span></i> features of the <span class="code">
+GeneralCallbackScripts</span> object are displayed as options in the lists
+associated with general workflow events on the <span class="gui">Event
+Scripts</span> tab.</p>
+
+<p class="body">For <span class="code">GeneralCallbackScripts</span> attached
+to Before Send On events in the <span class="gui">Event Scripts</span> tab:</p>
+
+<ul type="disc">
+<li class="body">Before Send On events are designed for validation purposes, for
+example to check if an attachment is reserved or not. For scalability reasons the
+Before Send event scripts are executed without locking the process instance. They
+are executed even if parallel paths or sub workflows are executed at the same time.
+<br><br>
+</li>
+
+<li class="body">Only read-only operations are allowed, no modifications are
+possible (e.g. on the work package) in <span class="code">GeneralCallbackScripts</span>
+referenced in the Before Send On callback.<br><br>
+</li>
+
+<li class="body">It is possible to set a specific error message. Use the
+<span class="code">fErrorMsg</span> feature of the WSession to set
+the desired error message in the general event script. For example:<br><br>
+<span class="code">prgCtx.WSession().fErrorMsg = Str.Format( "The document %1
+is reserved", documentName )</span><br><br> This error message is displayed in
+case the <span class="code">GeneralCallbackScripts</span> returns 
+<span class="code">FALSE</span> for failure.
+</li>
+</ul>
+
+<span id="backper" class="title2">Background on Performer Event Trigger
+Scripts</span>
+
+<p class="body">Before you can create the event trigger scripts for the
+Performer callback event, you must create an orphan of the <span class="code">
+PerformerCallbackScripts</span> object in your custom module. You can find the
+<span class="code">PerformerCallbackScripts</span> object in <span class=
+"code">WFMain:WFRoot:CallbackEventScripts</span>. The <span class="code">
+PerformerCallbackScripts</span> object will contain the scripts that can be
+attached to the Assign Step Performer workflow event.</p>
+
+<p class="body">For each performer event trigger script that you create,
+you can set the following features.</p>
+
+<ul type="disc">
+<li class="body"><span class="code">fEnabled</span> contains a Boolean value.
+When set to TRUE, the fEnabled feature lets you register the object with 
+WFMain:WFCBPerformerSubsystem.</li><br><br>
+
+<li class="body"><span class="codevar">fScriptName</span>&nbsp; contains a String value.
+This feature stores the name that you want to represent the event trigger
+script on the Event Scripts tab in the Content Server interface. By default, the name
+that you give to the script is used to name the option on the Event Scripts tab
+in the Content Server interface; however, you can customize the name that is
+displayed by creating this String feature.</li>
+</ul>
+
+<p class="body">After you set the features associated with the <span class=
+"code">PerformerCallbackScripts</span> object, you can create the performer
+event trigger scripts. A prototype for the performer event trigger scripts is
+stored in the <span class="code">ODocumentation()</span> script, which is
+contained in the <span class="code">PerformerCallbackScripts</span> object. If
+successful, these scripts return the ID of a Content Server user or group to which
+the workflow step is assigned when it becomes ready; otherwise, these scripts
+return errors.</p>
+
+<p class="body">After you create and edit the performer event trigger scripts,
+you must run the <span class="code">BuildOSpace()</span> script in the <span
+class="code">Globals</span> object of your custom OSpace and restart the
+Livelink Builder to register your changes. The <span class="code">
+BuildOspace()</span> script registers the <span class="code">
+PerformerCallbackScripts</span> object in <span class="code">
+WFMain:WFCBPerformerSubsystem</span> and exposes the <span class="gui">Event
+Scripts</span> tab in the Content Server interface.</p>
+
+<p class="body">When you install the custom module in which the performer event
+trigger functionality is contained, you can view your changes in the Content Server
+interface. The names that you specified in the <i><span class="code">
+fScriptName</span></i>&nbsp; features of the <span class="code">
+PerformerCallbackScripts</span> object are displayed as options in the <span
+class="gui">Assign Step Performer</span> list on the <span class="gui">Events
+Script</span> tab. This lets you add performer event trigger scripts to Assign
+Step Performer workflow events.</p>
+
+<span id="backsub" class="title2">Background on Submap Event Trigger
+Scripts</span>
+
+<p class="body">Before you can create the event trigger scripts for the Submap
+callback event, you must create an orphan of the <span class="code">
+SubmapCallbackScripts</span> object in your custom module. You can find the
+<span class="code">SubmapCallbackScripts</span> object in <span class="code">
+WFMain:WFRoot:CallbackEventScripts</span>. The <span class="code">
+SubmapCallbackScripts</span> object will contain the scripts that can be
+attached to the Determine Sub-Map To Use workflow event.</p>
+
+<p class="body">For each submap event trigger script that you create, you can
+set the following features:</p>
+
+
+<ul type="disc" class="body">
+	<li class="body">fEnabled contains a Boolean value. When set to TRUE, the fEnabled
+feature lets you register the object with the <span
+class="code">WFMain:WFCBSubmapSubsystem</span>.<br><br>
+	<li class="body"><span class="codevar">fScriptName</span>&nbsp;
+contains a String value. This feature stores the name that you
+want to represent the event trigger script on the Event
+Scripts tab in the Content Server interface.
+</ul>
+
+<p>By default, the name that you give to the script is used to name the option
+on the <span class="gui">Event Scripts</span> tab in the Content Server interface;
+however, you can customize the name that is displayed by creating this String
+feature.</p>
+</td>
+</tr>
+</table>
+
+<p class="body">After you set the features associated with the <span class=
+"code">SubmapCallbackScripts</span> object, you can create the submap event
+trigger scripts. A prototype for the submap event trigger scripts is stored in
+the <span class="code">ODocumentation()</span> script associated with the <span
+class="code">SubmapCallbackScripts</span> object. If successful, these scripts
+return an integer representing the MapID of a workflow map definition (as stored
+in WAPI) that is initiated as a Sub-workflow when the corresponding step
+becomes ready; otherwise these scripts return errors.</p>
+
+<p class="body">After you create and edit the submap event trigger scripts, you
+must run the <span class="code">BuildOSpace()</span> script in the <span class= 
+"code">Globals</span> object of your custom OSpace, and restart the Livelink
+Builder to register your changes. The <span class="code">BuildOSpace()</span>
+script registers the <span class="code">GeneralCallbackScripts</span> object in
+<span class="code">WFMain:WFCBSubmapSubsystem</span> and exposes the <span
+class="gui">Event Scripts</span> tab in the Content Server interface.</p>
+
+<p class="body">When you install the custom module in which the submap event
+trigger functionality is contained, you can view your changes in the Content Server
+interface.The names that you specified in the <i><span class="code">
+fScriptName</span></i>&nbsp; features of the <span class="code">
+SubmapCallbackScripts</span> object are displayed as options in the <span
+class="gui">Determine Sub-Map To Use</span> list on the <span class="gui">Event
+Scripts</span> tab. This lets you add submap event trigger scripts to Determine
+Sub-Map To Use workflow events.</p>
+
+<span id="backrest" class="title2">Restricting Access to Event Trigger
+Scripts</span>
+
+<p class="body">Creating event trigger scripts lets the creators of workflows
+access the Event Scripts tab in the Content Server interface, where they can add
+custom operations to specific workflow events. This means that the creators of
+workflows can determine which operation to perform when a specific workflow
+event occurs in the execution of a workflow.</p>
+
+<p class="body">If you want to restrict access to an event trigger script that
+you add to Content Server so that only certain Content Server users can attach the event
+trigger script to specific workflow events, you can modify the <span class=
+"code">fObjectFactory</span> feature and the <span class="code">
+FactoryName()</span> script associated with the corresponding event trigger
+object. For example, if you want to specify which Content Server users can attach a
+general event script to specific workflow events, you can modify the <span
+class="code">fObjectFactory</span> feature and the <span class="code">
+FactoryName()</span> script contained in the general event trigger object in
+your custom module. Similarly, if you want to specify which Content Server users can
+attach a performer event trigger script to the Assign Step Performer workflow
+event, you can modify the <span class="code">fObjectFactory</span> feature and
+the <span class="code">FactoryName()</span> script contained in the performer
+event trigger object in your custom module. If you want to specify which
+Content Server users can attach a submap event trigger script to the Determine
+Sub-Map To Use workflow event, you can modify the <span class="code">
+fObjectFactory</span> feature and the <span class="code">FactoryName()</span>
+script contained in the submap event trigger object.</p>
+
+<ul type="disc" class="body">
+	<li class="body">fObjectFactory contains a Boolean value. 
+	When set to TRUE, this feature works
+with the <span class="code">FactoryName()</span> script to allow the Admin user (Content Server Administrator)
+to restrict access to event trigger scripts.<br><br>
+<li class="body">FactoryName() returns a string that identifies the event trigger scripts to
+which you want to restrict access.
+</ul>
+
+<p class="body">You can restrict access to general event trigger scripts,
+performer event trigger scripts, and submap event trigger scripts individually
+by setting different return values for the <span class="code">
+FactoryName()</span> scripts for each event trigger object. You can restrict
+access to all general event trigger scripts, performer event trigger scripts,
+and submap event trigger scripts together by setting the same return values for
+the <span class="code">FactoryName()</span> scripts for each event trigger
+object.</p>
+
+<p class="body">After you modify the <span class="code">fObjectFactory</span>
+features and the <span class="code">FactoryName()</span> scripts contained in
+the event trigger objects for the event trigger scripts to which you want to
+restrict access, you must run the <span class="code">BuildOSpace()</span>
+script in the Globals object of your custom OSpace. Then, the <span class=
+"code">Admin</span> user can go to the Administer Object and Usage Privileges 
+section of the Content Server Administration page and specify which Content Server users can
+attach the event trigger scripts to workflow events.</p>
+
+<p class="body">Suppose that you create general, performer, and submap event
+trigger scripts in your custom module and you want to restrict access to the
+performer and submap event trigger scripts. You can set the <span class="code">
+fObjectFactory</span> feature to <span class="code">TRUE</span> and modify the
+<span class="code">FactoryName()</span> script to return the same string value
+in the performer and submap event trigger objects. This means that the <span
+class="code">Admin</span> user can specify which Content Server users can attach the
+performer and submap event trigger scripts to workflow events. In this case,
+certain Content Server users can attach the performer and submap event trigger
+scripts to workflow events and all Content Server users can attach the general event
+trigger scripts to workflow events.</p>
+
+<script type="text/javascript" language="JavaScript">
+IncludeFooter();
+</script>
+</body>
+</html>
+

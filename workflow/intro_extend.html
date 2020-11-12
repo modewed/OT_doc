@@ -1,0 +1,237 @@
+<html>
+<head>
+<title>Introduction to Extending Content Server Workflow</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+
+</head>
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<script language="JavaScript">updateParentHeader( 'Extending Workflow' );</script>
+<script language="JavaScript">includeContentContainer( 'wfbuilder', true );</script>
+
+<p class="body">
+<p class="title">Introduction to Extending Content Server Workflow</p>
+<p class="body">Once you understand how the Content Server Workflow module operates 
+within Content Server, you can begin to explore the possibilities for extending
+Content Server's existing workflow functionality, such as:</p>
+<ul type="disc">
+	<li class="body"><a href="#step">Adding new step types</a></li>
+	<li class="body"><a href="#data">Adding new data types</a></li>
+	<li class="body"><a href="#wf">Adding new workflow types</a></li>
+	<li class="body"><a href="#event">Adding event trigger scripts</a></li>
+</ul>
+
+<span id="step" class="title2"><a href="steptypes.html">New Step Types</a></span>
+<p class="body">One way to extend the functionality of Content Server workflow 
+is to add new step types to the Step Palette. You add a new step type 
+to Content Server when you want to customize the interface and operations presented 
+to workflow participants for particular types of steps in a workflow, or when 
+you want a new step that executes automatically within the workflow. When 
+you add a new step type, you design the interface that is presented 
+to the performer of a workflow step and you define the custom functionality 
+that the new interface provides. You can create step types that require 
+workflow participants to perform automated steps, such as filling out 
+a form or sending a file to the printer or fax machine.</p>
+
+<span id="wfsteps" class="title3">Understanding Step Types in Content Server Workflow</span>
+<p class="body">To a Content Server user, workflows can include many different step 
+types. To WAPI, all of the step types in a
+workflow are essentially the same -- the difference is primarily determined 
+by the values stored in the <span class="code">pFlags</span> attribute 
+associated with each step.</p>
+<p class="body">The <span class="code">pFlags</span> attribute controls the
+behavior of the step. There are two optional values for the 
+<span class="code">pFlags</span> <span class="code">FLAG_MILESTONE</span>. 
+These values are stored in the MapTask_Flags column in the WMapTask table.</p>
+
+<p class="body">The <span class="code">WAPI.MAPTASK_FLAG_AUTODONE</span> flag 
+is a constant value that tells WAPI that the current step does not require 
+user interaction and can be marked <span class="emph">finished</span> as soon 
+as it becomes <span class="emph">ready</span>.</p>
+<p class="body">The <span class="code">WAPI.MAPTASK_FLAG_MILESTONE</span> 
+flag is a constant value that indicates to WAPI that the step should be 
+marked as a Milestone step and that milestone dates should be calculated 
+and stored. This flag also stores the milestone date (that is, the date 
+by which the step is scheduled to be complete).</p>
+
+<p class="body">Many of the step types that you define in a workflow map use callback 
+scripts to perform their operations. For example, the <span class="gui">One Level 
+Expand</span> and <span class="gui">Full Expand</span> options in the 
+<span class="gui">Group Options</span> list for the Group step type use callback 
+scripts to determine which workflow participants must work on the step. These options 
+use a callback script to launch a Sub-workflow that assigns the step to the appropriate 
+members of the group (depending on the option that you choose). The 
+<span class="gui">Member Accept</span> option does not use a callback 
+script to perform its function. It leaves the step assigned to a group. 
+Content Server knows that when a step is assigned to an entire group, one member 
+of the group must accept the step before work on the step can begin.</p>
+
+
+
+<span id="data" class="title2"><a href="datatypes.html">New Data Types</a></span>
+<p class="body">You add new data types to Content Server if you want to include 
+new types of information in the work packages that accompany your workflows. 
+By default, work packages can contain three data types: attachments, 
+attributes, and comments; however, you can create a data
+type for any new type of information that you want to add to a work 
+package, even data not stored in the Content Server database. Adding new data 
+types to Content Server also lets you customize the 
+Content Server interface. For example, if the work packages that users include with 
+workflows usually contain many attributes, you could create a data 
+type that creates the attributes and groups them for convenience on tabs 
+in the Content Server interface.</p>
+
+
+<span class="title3">Understanding Data Types in Content Server Workflow</span>
+
+<p class="body">The self-sufficient objects, which control the data that 
+is routed in workflows know how to save, retrieve, and display their own data. 
+In fact, a workflow only knows two things about the data it routes:</p>
+<ul type="disc">
+	<li class="body">Identifier information (type and subtype integers), which 
+	allows the workflow to call scripts contained in the self-sufficient object</li></p>
+	<li class="body">Information specified by the data type, which allows the object to access the correct data for the workflow</li>
+</ul>
+
+<span id="wf" class="title2"><a href="wftypes.html">New Workflow Types</a></span>
+<p class="body">You can also extend the functionality of Content Server 
+workflows by adding new workflow types to Content Server. You add new workflow 
+types when you want to apply a particular set of custom operations to 
+different workflow map definitions. Adding new workflow types lets you define 
+the set of custom operations that are applied to a workflow map definition
+when the creator of a workflow map chooses to create that particular type 
+of workflow in Content Server. These custom operations can include adding 
+workflow steps, modifying the duration or name of existing workflow steps, 
+adding callback scripts to workflow events, or any other modification 
+that you want to make to a workflow map definition.</p>
+
+<span id="types" class="title3">Understanding Workflow Types in Content Server Workflow</span>
+<p class="body">Content Server uses two different types of maps to create and 
+process workflows: the Content Server Workflow Map, which is used for painting 
+the workflow process, and the WAPIMAP, which is the route definition used by WAPI.</p>
+<span class="title3">The Workflow Map</span>
+<p class="body">The Content Server Workflow Map definition is recognized by the 
+Workflow Designer and stored as a Record data type for easy manipulation 
+with OScript. It contains fields that correspond to the WAPIMAP database 
+table columns, and other fields that are used for temporary storage when 
+the workflow map is being painted and before it is initiated.</p>
+
+<p class="body">When a user creates a workflow map in Content Server, Content Server 
+actually creates an empty document item. This empty document item is 
+represented by a workflow map node in Content Server. A painted workflow map 
+is stored as a Record data type. If a user saves the painted workflow map, 
+the Record that represents the Content Server Workflow Map definition is added 
+(in BLOB format) as a new version to the document item in Content Server. 
+Each time the workflow map is modified and saved, a new version of 
+the workflow map definition is saved in BLOBData.</p>
+
+<p class="body">If the workflow map contains attachments 
+(specified in the Attachments work package data type), an attachment 
+folder is stored as a child of the workflow map node in Content Server.</p>
+
+<p class="body">When a workflow map is opened in the Workflow Designer, 
+a copy of the workflow map node is temporarily stored in a hidden folder. 
+The changes that a workflow designer makes to a workflow map in the Workflow 
+Painter are stored in the temporary copy of the workflow map node until saved. 
+When the changes made in the Workflow Designer are saved, the temporary copy of 
+the workflow map node is added to the original node as a new version. 
+The temporary version of the workflow map node is stored in the Content Server
+database for seven days, which allows you to return to a map that is in 
+the process of being painted (but not yet saved).</p>
+
+<span class="title3">The WAPIMAP</span>
+<p class="body">When a Content Server user initiates a workflow map, the 
+Content Server Workflow Map definition is used to create the WAPIMAP. The
+ WAPIMAP stores the routing information that is used by WAPI to control 
+ the workflow route. This map definition is stored in the WMap and WMapTask 
+ database tables and is used throughout the life of the workflow.</p>
+
+<p class="body">At the time of initiation, the Content Server Workflow Map and the 
+WAPIMAP are completely separate. Any changes made to the painted Content Server 
+Workflow Map do not affect the active workflows that were initiated from the 
+Content Server Workflow Map definition. Similarly, any changes made to a 
+ specific workflow's WAPIMAP after initiation do not affect the
+Content Server Workflow Map.</p>
+
+<span id="event" class="title2"><a href="eventtrigs.html">Custom Event Trigger 
+Scripts and Callback Events</a></span>
+<p class="body">Another way to extend the functionality of Content Server workflows 
+is to create custom event trigger scripts that perform any operation when 
+a specific workflow event occurs. For example, you can create
+an event trigger script that automatically saves a workflow attachment as a 
+new version of an existing Content Server document when the workflow is complete. 
+You can also create event trigger scripts that monitor the work load 
+of all workflow participants and assign a particular workflow step to the 
+participant with the fewest steps.</p>
+
+<span id="callback" class="title3">Understanding Callback Events in Content Server 
+Workflow</span>
+
+<p class="body">Callback event data is stored in special columns in the 
+WAPI database tables. Each of these columns is also associated with a 
+specific workflow event. For example, one column is associated with initiating 
+a workflow, another is associated with deleting a workflow, another is associated 
+with completing a workflow, and so on. When a Content Server user initiates the 
+workflow, Content Server checks the WAPI database columns to 
+determine if and when callback events should occur. The columns in the WAPI 
+database table that store callback event data are identifiable because of 
+their names,which all end in <span class="code">CB</span>.
+
+<p class="body">If you want a callback event to occur when a 
+specific workflow step becomes <span class="emph">ready</span>, you store the 
+callback event data in the WAPI database table column that is
+associated with a workflow step becoming <span class="emph">ready</span>. 
+Then, when Content Server reaches that step in the workflow, the callback event occurs.</p>
+
+<p class="body">When Content Server encounters callback event data in a WAPI 
+database column, it calls a script that is stored in the 
+<span class="code">WAPISESSION</span> object. This script examines the 
+workflow event that triggered the callback event, and then calls another 
+script named <span class="code">GenericCB()</span>.
+
+
+<p class="body">The <span class="code">GenericCB()</span> script examines the 
+callback event data that is stored in the corresponding column of the 
+WAPI database table. This data must be formatted as a list of lists, where 
+each sub-list contains two elements: an integer and the additional data that
+is required to execute the callback event. The <span class="code">GenericCB()</span> 
+script examines the integer element and does one of two things based on its value. 
+If the integer is a value between 1 and 99 (signifying that the callback event 
+is part of the Content Server Workflow module), a standard workflow operation is 
+performed. If the integer is a value outside of this range 
+(signifying that the script was added as a Workflow customization), the 
+<span class="code">GenericCB()</span> script calls another script 
+named <span class="code"> CustomCB()</span>, indicating that a custom 
+callback event is present in the Content Server workflow.
+
+<p class="body">The <span class="code">CustomCB()</span> script begins 
+loading all of the custom objects that are registered in WAPI and 
+calling their <span class="code">CBExecute()</span> scripts. When 
+the <span class="code">CustomCB()</span> script calls a 
+<span class="code">CBExecute()</span> script that matches the 
+value of the integer associated with the callback event, it runs 
+that <span class="code">CBExecute()</span> script and returns an 
+<span class="code">Assoc</span>. The <span class="code">CBExecute()</span> script
+performs the custom operations associated with the workflow step.
+Note that one of the fields in the <span class="code">Assoc</span> 
+is called <span class="code">Handled</span>. If <span class="code">Handled</span> 
+is set to <span class="code">TRUE</span>, it indicates that the operation 
+is being <span class="emph">handled</span> or performed. 
+If <span class="code">Handled</span> is set to <span class="code">FALSE</span>, 
+the process continues until the operation can be handled or performed.</p>
+
+<span class="title3">Event Trigger Scripts</span>
+<p class="body">If you want to use callback events to add functionality to Content Server, but you do not want to create a supporting interface -- or if you want to add functionality that does not require an interface -- you can use special classes of callback events called event trigger scripts. Event trigger scripts provide a preexisting interface to callback events in Content Server. When you add event trigger scripts to Content Server, this interface 
+(the <span class="gui">Event Scripts</span> tab) becomes available to the Content Server user painting a workflow map, allowing that user to 
+determine which operations to associate with the particular workflow events that occur in the execution of a workflow map.
+
+<p class="body">There are three types of event trigger scripts: general event trigger scripts, performer event trigger scripts, and submap event trigger scripts. For more information about event trigger scripts, see 
+<a href="eventtrigs.html">Adding Event Trigger Scripts</a>.</p>
+
+<script language="JavaScript">IncludeFooter();
+</script>
+</body>
+</html>
+
+

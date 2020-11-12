@@ -1,0 +1,957 @@
+
+<meta charset="UTF-8">
+<html>
+<head><title>Class: Memcached</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../syntax.css" type="text/css">
+<link rel="stylesheet" href="builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td  align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody></table>
+
+<div id="document">
+	
+<div class="sidebar_container">
+		
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink"><a href="assoc.html">Assoc</a></div>
+				<div class="packagelink"><a href="boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="builder.html">Builder</a></div>
+				<div class="packagelink"><a href="bytes.html">Bytes</a></div>
+				<div class="packagelink"><a href="capi.html">CAPI</a></div>
+				<div class="packagelink"><a href="capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink"><a href="cachetree.html">CacheTree</a></div>
+				<div class="packagelink"><a href="compiler.html">Compiler</a></div>
+				<div class="packagelink"><a href="core.html">Core</a></div>
+				<div class="packagelink"><a href="dapi.html">DAPI</a></div>
+				<div class="packagelink"><a href="dapinode.html">DAPINODE</a></div>
+				<div class="packagelink"><a href="dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink"><a href="dapiversion.html">DAPIVERSION</a></div>
+				<div class="packagelink"><a href="domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="domcomment.html">DOMComment</a></div>
+				<div class="packagelink"><a href="domdocument.html">DOMDocument</a></div>
+				<div class="packagelink"><a href="domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink"><a href="domelement.html">DOMElement</a></div>
+				<div class="packagelink"><a href="domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink"><a href="domnamednodemap.html">DOMNamedNodeMap</a></div>
+				<div class="packagelink"><a href="domnode.html">DOMNode</a></div>
+				<div class="packagelink"><a href="domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="domtext.html">DOMText</a></div>
+				<div class="packagelink"><a href="date.html">Date</a></div>
+				<div class="packagelink"><a href="dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="env.html">Env</a></div>
+				<div class="packagelink"><a href="error.html">Error</a></div>
+				<div class="packagelink"><a href="file.html">File</a></div>
+				<div class="packagelink"><a href="filecopy.html">FileCopy</a></div>
+				<div class="packagelink"><a href="fileprefs.html">Fileprefs</a></div>
+				<div class="packagelink"><a href="frame.html">Frame</a></div>
+				<div class="packagelink"><a href="global.html">Global</a></div>
+				<div class="packagelink"><a href="integer.html">Integer</a></div>
+				<div class="packagelink"><a href="javaobject.html">JavaObject</a></div>
+				<div class="packagelink"><a href="language.html">Language</a></div>
+				<div class="packagelink"><a href="license.html">License</a></div>
+				<div class="packagelink"><a href="list.html">List</a></div>
+				<div class="packagelink"><a href="logging.html">Logging</a></div>
+				<div class="packagelink"><a href="long.html">Long</a></div>
+				<div class="packagelink"><a href="mailmessage.html">MailMessage</a></div>
+				<div class="packagelink"><a href="math.html">Math</a></div>
+				<div class="packagelink curPage">Memcached</div>
+				<div class="packagelink"><a href="notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="object.html">Object</a></div>
+				<div class="packagelink"><a href="pop3session.html">POP3Session</a></div>
+				<div class="packagelink"><a href="patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="patfind.html">PatFind</a></div>
+				<div class="packagelink"><a href="pattern.html">Pattern</a></div>
+				<div class="packagelink"><a href="point.html">Point</a></div>
+				<div class="packagelink"><a href="profiler.html">Profiler</a></div>
+				<div class="packagelink"><a href="real.html">Real</a></div>
+				<div class="packagelink"><a href="recarray.html">RecArray</a></div>
+				<div class="packagelink"><a href="record.html">Record</a></div>
+				<div class="packagelink"><a href="regex.html">Regex</a></div>
+				<div class="packagelink"><a href="restclient.html">RestClient</a></div>
+				<div class="packagelink"><a href="saxparser.html">SAXParser</a></div>
+				<div class="packagelink"><a href="smtpsession.html">SMTPSession</a></div>
+				<div class="packagelink"><a href="ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="script.html">Script</a></div>
+				<div class="packagelink"><a href="security.html">Security</a></div>
+				<div class="packagelink"><a href="set.html">Set</a></div>
+				<div class="packagelink"><a href="socket.html">Socket</a></div>
+				<div class="packagelink"><a href="sql.html">Sql</a></div>
+				<div class="packagelink"><a href="sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink"><a href="str.html">Str</a></div>
+				<div class="packagelink"><a href="string.html">String</a></div>
+				<div class="packagelink"><a href="system.html">System</a></div>
+				<div class="packagelink"><a href="uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="void.html">Void</a></div>
+				<div class="packagelink"><a href="wapi.html">WAPI</a></div>
+				<div class="packagelink"><a href="wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink"><a href="web.html">Web</a></div>
+				<div class="packagelink"><a href="xslprocessor.html">XSLProcessor</a></div>
+				<div class="packagelink"><a href="zip.html">Zip</a></div>
+		</div>
+</div>
+
+	<div class="content_container">
+		<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+		<h1>Class: Memcached</h1><div class="ClassDescription"><p>The Memcached package provides the client interface API to a Memcached server. The major functionalities offered in the Memcached Package are the following:</p>
+<ul>
+<li><a class="interdoc" href="#cm_memcached_init">Init()</a> and <a class="interdoc" href="#cm_memcached_addserver">AddServer()</a> initializes the client and sets up the list of Memcached servers. Must be called before calling any other features. </li>
+<li><a class="interdoc" href="#cm_memcached_add">Add()</a>, <a class="interdoc" href="#cm_memcached_set">Set()</a>, <a class="interdoc" href="#cm_memcached_get">Get()</a>, <a class="interdoc" href="#cm_memcached_delete">Delete()</a> and <a class="interdoc" href="#cm_memcached_replace">Replace()</a> are the basic functions for manipulating Memcached values.</li>
+<li><a class="interdoc" href="#cm_memcached_multiget">MultiGet()</a> retrieves multiple values from Memcached.</li>
+<li><a class="interdoc" href="#cm_memcached_increment">Increment()</a> and <a class="interdoc" href="#cm_memcached_decrement">Decrement()</a> increments and decrements a Memcached value respectively.</li>
+<li><a class="interdoc" href="#cm_memcached_stats">Stats()</a> and <a class="interdoc" href="#cm_memcached_version">Version()</a> returns information for a server.</li>
+</ul></div>
+			<h2>Class Attributes</h2>
+			<div class="ClassAttributesShort">
+				
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_memcached_data_error">DATA_ERROR</a></div>
+					<div class="Description"><p>Data was not stored.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_memcached_error">ERROR</a></div>
+					<div class="Description"><p>Generic error constant.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_memcached_init_error">INIT_ERROR</a></div>
+					<div class="Description"><p>Error initializing Memcached.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_memcached_keyalreadyexist">KEYALREADYEXIST</a></div>
+					<div class="Description"><p>Specified key already exists in cache.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_memcached_keynotfound">KEYNOTFOUND</a></div>
+					<div class="Description"><p>Specified key was not found in the cache.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_memcached_nomemory">NOMEMORY</a></div>
+					<div class="Description"><p>Out of memory error constant.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_memcached_notinitialized">NOTINITIALIZED</a></div>
+					<div class="Description"><p>Memcached not initialized. Call Init() to initialize Memcached.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_memcached_servernotfound_error">SERVERNOTFOUND_ERROR</a></div>
+					<div class="Description"><p>The specified server could not be found in the server list.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_memcached_success">SUCCESS</a></div>
+					<div class="Description"><p>Return code for a successful operation.</p></div>
+				</div>
+				
+			</div>
+
+
+			<h2>Class Methods</h2>
+			<div class="ClassMethodsShort">
+				<div class="Method">
+					<div class="Name"><a href="#cm_memcached_add" class="IndexMethodName">Add</a>(
+					 String key, String value, Integer valueLength, Integer timeout, Integer flags )
+					</div>
+					<div class="Description"><p>Add a key/value pair to the cache</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_memcached_addserver" class="IndexMethodName">AddServer</a>(
+					 String host, Integer port, Integer min, Integer smax, Integer max, Integer ttl )
+					</div>
+					<div class="Description"><p>Add a server to the client server list.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_memcached_decrement" class="IndexMethodName">Decrement</a>(
+					 String key, Integer num )
+					</div>
+					<div class="Description"><p>Decrement the value corresponding to key by num.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_memcached_delete" class="IndexMethodName">Delete</a>(
+					 String key, Integer timeout )
+					</div>
+					<div class="Description"><p>Delete the key entry in the cache.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_memcached_get" class="IndexMethodName">Get</a>(
+					 String key )
+					</div>
+					<div class="Description"><p>Retrieve the value corresponding to key.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_memcached_increment" class="IndexMethodName">Increment</a>(
+					 String key, Integer num )
+					</div>
+					<div class="Description"><p>Increment the value corresponding to key.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_memcached_init" class="IndexMethodName">Init</a>(
+					 Integer maxServers )
+					</div>
+					<div class="Description"><p>Initialize the Memcached client.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_memcached_multiget" class="IndexMethodName">MultiGet</a>(
+					 List keyList )
+					</div>
+					<div class="Description"><p>Retrieve multiple values corresponding to the keys in keyList.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_memcached_replace" class="IndexMethodName">Replace</a>(
+					 String key, String newValue, Integer newValueLength, Integer timeout, Integer flags )
+					</div>
+					<div class="Description"><p>Replace the value corresponding to key with newValue.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_memcached_set" class="IndexMethodName">Set</a>(
+					 String key, String value, Integer valueLength, Integer timeout, Integer flags )
+					</div>
+					<div class="Description"><p>Set a key/value pair to the cache</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_memcached_stats" class="IndexMethodName">Stats</a>(
+					 String host, Integer port )
+					</div>
+					<div class="Description"><p>Return a set of statistics for the specified server.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_memcached_version" class="IndexMethodName">Version</a>(
+					 String host, Integer port )
+					</div>
+					<div class="Description"><p>Return the version number for the specified server.</p></div>
+				</div>
+			</div>
+
+
+				<h2>Class Attributes</h2>
+				<div class="ClassAttributes">
+					
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_memcached_data_error">DATA_ERROR</a></div>
+						<div class="Description"><p>The data could not be stored in Memcached.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_memcached_error">ERROR</a></div>
+						<div class="Description"><p>Generic error constant.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_memcached_init_error">INIT_ERROR</a></div>
+						<div class="Description"><p>Server failed to initialize.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_memcached_keyalreadyexist">KEYALREADYEXIST</a></div>
+						<div class="Description"><p>Key already exists in cache.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_memcached_keynotfound">KEYNOTFOUND</a></div>
+						<div class="Description"><p>Key not found.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_memcached_nomemory">NOMEMORY</a></div>
+						<div class="Description"><p>Not enough memory.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_memcached_notinitialized">NOTINITIALIZED</a></div>
+						<div class="Description"><p>Memcached not initialized. Call <a class="interdoc" href="#cm_memcached_init">Init()</a> to intialize before calling any other features. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_memcached_servernotfound_error">SERVERNOTFOUND_ERROR</a></div>
+						<div class="Description"><p>Server not found.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_memcached_success">SUCCESS</a></div>
+						<div class="Description"><p>Return code for an successful operation.</p></div>
+					</div>
+				
+				</div>
+
+		
+				<h2>Class Methods</h2>
+				<div class="ClassMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_memcached_add">Add</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Add</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">key</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">value</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">valueLength</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">timeout</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Add a <em>key</em>/<em>value</em> pair to the cache.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">key</span><span class="description"><p>String containing the key to be added to the cache.</p></span></div>
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>String containing the value to be added to the cache.</p></span></div>
+											<div class="Parameter"><span class="name">valueLength</span><span class="description"><p>Length of <em>value</em> to be added.</p></span></div>
+											<div class="Parameter"><span class="name">timeout</span><span class="description"><p>Time, in seconds, for the data to live on the server. Enter 0 for indefinite timeout.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>Any flags set by the client for this key.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A return code indicating the operation status. Possible values are: </p>
+<table>
+<thead>
+<tr>
+<th>Result</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_success">SUCCESS</a></td>
+<td>Operation was successful</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_keyalreadyexist">KEYALREADYEXIST</a></td>
+<td><em>key</em> already exists in the cache</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_servernotfound_error">SERVERNOTFOUND_ERROR</a></td>
+<td>No servers were found.</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_notinitialized">NOTINITIALIZED</a></td>
+<td>Memcached not initialized. Call <a class="interdoc" href="#cm_memcached_init">Init()</a> before calling any other features.</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_data_error">DATA_ERROR</a></td>
+<td><em>value</em> could not be stored in Memcached.</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_error">ERROR</a></td>
+<td>any other errors</td>
+</tr>
+</tbody>
+</table></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_memcached_addserver">AddServer</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">AddServer</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">host</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">port</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">min</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">smax</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">max</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">ttl</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Add a server to the Memcached client server list.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">host</span><span class="description"><p>hostname of the server.</p></span></div>
+											<div class="Parameter"><span class="name">port</span><span class="description"><p>port of the server.</p></span></div>
+											<div class="Parameter"><span class="name">min</span><span class="description"><p>minimum number of client sockets to open.</p></span></div>
+											<div class="Parameter"><span class="name">smax</span><span class="description"><p>soft maximum number of client connections to open.</p></span></div>
+											<div class="Parameter"><span class="name">max</span><span class="description"><p>hard maximum number of client connections to open.</p></span></div>
+											<div class="Parameter"><span class="name">ttl</span><span class="description"><p>time to live, in seconds, of a client connection.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A return code indicating the operation status. Possible values are:</p>
+<table>
+<thead>
+<tr>
+<th>Result</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_success">SUCCESS</a></td>
+<td>Operation was successful</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_nomemory">NOMEMORY</a></td>
+<td>Not enough memory to add server.</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_notinitialized">NOTINITIALIZED</a></td>
+<td>Memcached not initialized. Call <a class="interdoc" href="#cm_memcached_init">Init()</a> before calling any other features.</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_error">ERROR</a></td>
+<td>any other errors</td>
+</tr>
+</tbody>
+</table></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_memcached_decrement">Decrement</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Decrement</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">key</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">num</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Decrement the value corresponding to <em>key</em> by <em>num</em>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">key</span><span class="description"><p>key to the value being decremented.</p></span></div>
+											<div class="Parameter"><span class="name">num</span><span class="description"><p>number to decrement by.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A return code indicating the operation status. Possible values are:</p>
+<table>
+<thead>
+<tr>
+<th>Result</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_success">SUCCESS</a></td>
+<td>Operation was successful</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_servernotfound_error">SERVERNOTFOUND_ERROR</a></td>
+<td>No servers were found.</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_notinitialized">NOTINITIALIZED</a></td>
+<td>Memcached not initialized. Call <a class="interdoc" href="#cm_memcached_init">Init()</a> before calling any other features.</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_error">ERROR</a></td>
+<td>any other errors</td>
+</tr>
+</tbody>
+</table></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_memcached_delete">Delete</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Delete</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">key</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">timeout</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Delete <em>key</em> from the cache.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">key</span><span class="description"><p>The <em>key</em> to delete. </p></span></div>
+											<div class="Parameter"><span class="name">timeout</span><span class="description"><p>time for the delete to stop other clients from adding.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An Integer indicating the return status. Possible values are:</p>
+<table>
+<thead>
+<tr>
+<th>Result</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_success">SUCCESS</a></td>
+<td>Operation was successful</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_servernotfound_error">SERVERNOTFOUND_ERROR</a></td>
+<td>No servers were found</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_keynotfound">KEYNOTFOUND</a></td>
+<td>The <em>key</em> was not found in the cache.</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_notinitialized">NOTINITIALIZED</a></td>
+<td>Memcached not initialized. Call <a class="interdoc" href="#cm_memcached_init">Init()</a> before calling any other features.</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_error">ERROR</a></td>
+<td>any other errors</td>
+</tr>
+</tbody>
+</table></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_memcached_get">Get</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">Get</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">key</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Get the value corresponding to <em>key</em> from the cache.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">key</span><span class="description"><p>The <em>key</em> to get. </p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A string containing the retrieved value if successful else an error code. Possible error codes are: </p>
+<table>
+<thead>
+<tr>
+<th>Result</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_keynotfound">KEYNOTFOUND</a></td>
+<td>The <em>key</em> was not found in the cache.</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_notinitialized">NOTINITIALIZED</a></td>
+<td>Memcached not initialized. Call <a class="interdoc" href="#cm_memcached_init">Init()</a> before calling any other features.</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_error">ERROR</a></td>
+<td>any other errors</td>
+</tr>
+</tbody>
+</table></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_memcached_increment">Increment</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Increment</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">key</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">num</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Increment the value corresponding to <em>key</em> by <em>num</em>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">key</span><span class="description"><p>key to the value being incremented.</p></span></div>
+											<div class="Parameter"><span class="name">num</span><span class="description"><p>number to increment by.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A return code indicating the operation status. Possible values are: </p>
+<table>
+<thead>
+<tr>
+<th>Result</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_success">SUCCESS</a></td>
+<td>Operation was successful</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_servernotfound_error">SERVERNOTFOUND_ERROR</a></td>
+<td>No servers were found.</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_notinitialized">NOTINITIALIZED</a></td>
+<td>Memcached not initialized. Call <a class="interdoc" href="#cm_memcached_init">Init()</a> before calling any other features.</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_error">ERROR</a></td>
+<td>any other errors</td>
+</tr>
+</tbody>
+</table></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_memcached_init">Init</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Init</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">maxServers</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Initialize the Memcached client with a maximum of  <em>maxServers</em> servers.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">maxServers</span><span class="description"><p>Maximum number of servers that can be added to this client.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A return code indicating the operation status. Possible values are: </p>
+<table>
+<thead>
+<tr>
+<th>Result</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_success">SUCCESS</a></td>
+<td>Operation was successful</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_init_error">INIT_ERROR</a></td>
+<td>Server failed to initialize.</td>
+</tr>
+</tbody>
+</table></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_memcached_multiget">MultiGet</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Assoc</span> 
+						<span class="PrototypeselfName">MultiGet</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">List</span> <span class="PrototypeArgumentName">keyList</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Get a list of values, corresponding to the list of keys in <em>keyList</em>, from the cache.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">keyList</span><span class="description"><p>A list keys to get from the cache.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An Assoc containing the retrieved key/value pairs if successful else an error code. Possible error codes are: </p>
+<table>
+<thead>
+<tr>
+<th>Result</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_notinitialized">NOTINITIALIZED</a></td>
+<td>Memcached not initialized. Call <a class="interdoc" href="#cm_memcached_init">Init()</a> before calling any other features.</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_error">ERROR</a></td>
+<td>any other errors</td>
+</tr>
+</tbody>
+</table></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_memcached_replace">Replace</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Replace</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">key</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">newValue</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">newValueLength</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">timeout</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Add a <em>key</em>/<em>value</em> pair to the cache.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">key</span><span class="description"><p>String containing the key to be replaced in the cache.</p></span></div>
+											<div class="Parameter"><span class="name">newValue</span><span class="description"><p>String containing the new value to replace the current value corresponding to <em>key</em> in the cache.</p></span></div>
+											<div class="Parameter"><span class="name">newValueLength</span><span class="description"><p>Length of the <em>newValue</em>.</p></span></div>
+											<div class="Parameter"><span class="name">timeout</span><span class="description"><p>Time, in seconds, for the data to live on the server. Enter 0 for indefinite timeout.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>Any flags set by the client for this key.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A return code indicating the operation status. Possible values are: </p>
+<table>
+<thead>
+<tr>
+<th>Result</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_success">SUCCESS</a></td>
+<td>Operation was successful</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_keynotfound">KEYNOTFOUND</a></td>
+<td><em>key</em> not found in the cache</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_servernotfound_error">SERVERNOTFOUND_ERROR</a></td>
+<td>No servers were found.</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_notinitialized">NOTINITIALIZED</a></td>
+<td>Memcached not initialized. Call <a class="interdoc" href="#cm_memcached_init">Init()</a> before calling any other features.</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_data_error">DATA_ERROR</a></td>
+<td><em>newValue</em> could not be stored in Memcached.</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_error">ERROR</a></td>
+<td>any other errors</td>
+</tr>
+</tbody>
+</table></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_memcached_set">Set</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Set</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">key</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">value</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">valueLength</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">timeout</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Set a <em>key</em>/<em>value</em> pair to the cache.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">key</span><span class="description"><p>String containing the key to be added to the cache.</p></span></div>
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>String containing the value to be added to the cache.</p></span></div>
+											<div class="Parameter"><span class="name">valueLength</span><span class="description"><p>Length of <em>value</em> to be added.</p></span></div>
+											<div class="Parameter"><span class="name">timeout</span><span class="description"><p>Time, in seconds, for the data to live on the server. Enter 0 for indefinite timeout.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>Any flags set by the client for this key.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A return code indicating the operation status. Possible values are: </p>
+<table>
+<thead>
+<tr>
+<th>Result</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_success">SUCCESS</a></td>
+<td>Operation was successful</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_servernotfound_error">SERVERNOTFOUND_ERROR</a></td>
+<td>No servers were found.</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_notinitialized">NOTINITIALIZED</a></td>
+<td>Memcached not initialized. Call <a class="interdoc" href="#cm_memcached_init">Init()</a> before calling any other features.</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_data_error">DATA_ERROR</a></td>
+<td><em>value</em> could not be stored in Memcached.</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_error">ERROR</a></td>
+<td>any other errors</td>
+</tr>
+</tbody>
+</table></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_memcached_stats">Stats</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Assoc</span> 
+						<span class="PrototypeselfName">Stats</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">host</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">port</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Retrieves statistics for the specified server.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">host</span><span class="description"><p>hostname of the server.</p></span></div>
+											<div class="Parameter"><span class="name">port</span><span class="description"><p>port of the server.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns an Assoc containing various statistics for the specified server. The Assoc contains the following keys: </p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="ParameterName" nowrap="" valign="top">version</td>
+<td class="ParameterDescription">Version string of this server</td>
+</tr>
+<tr>
+<td class="ParameterName" nowrap="" valign="top">pid</td>
+<td class="ParameterDescription">Process id of this server process</td>
+</tr>
+<tr>
+<td class="ParameterName" nowrap="" valign="top">uptime</td>
+<td class="ParameterDescription">Number of seconds this server has been running</td>
+</tr>
+<tr>
+<td class="ParameterName" nowrap="" valign="top">time</td>
+<td class="ParameterDescription">current UNIX time according to the server</td>
+</tr>
+<tr>
+<td class="ParameterName" nowrap="" valign="top">pointer_size</td>
+<td class="ParameterDescription">The size of a pointer on the current machine</td>
+</tr>
+<tr>
+<td class="ParameterName" nowrap="" valign="top">rusage_user</td>
+<td class="ParameterDescription">Accumulated user time for this process</td>
+</tr>
+<tr>
+<td class="ParameterName" nowrap="" valign="top">rusage_system</td>
+<td class="ParameterDescription">Accumulated system time for this process</td>
+</tr>
+<tr>
+<td class="ParameterName" nowrap="" valign="top">curr_items</td>
+<td class="ParameterDescription">Current number of items stored by the server</td>
+</tr>
+<tr>
+<td class="ParameterName" nowrap="" valign="top">total_items</td>
+<td class="ParameterDescription">Total number of items stored by this server</td>
+</tr>
+<tr>
+<td class="ParameterName" nowrap="" valign="top">bytes</td>
+<td class="ParameterDescription">Current number of bytes used by this server to store items</td>
+</tr>
+<tr>
+<td class="ParameterName" nowrap="" valign="top">curr_connections</td>
+<td class="ParameterDescription">Number of open connections</td>
+</tr>
+<tr>
+<td class="ParameterName" nowrap="" valign="top">total_connections</td>
+<td class="ParameterDescription">Total number of connections opened since the server started running</td>
+</tr>
+<tr>
+<td class="ParameterName" nowrap="" valign="top">connection_structures</td>
+<td class="ParameterDescription">Number of connection structures allocated by the server</td>
+</tr>
+<tr>
+<td class="ParameterName" nowrap="" valign="top">cmd_get</td>
+<td class="ParameterDescription">Cumulative number of retrieval requests</td>
+</tr>
+<tr>
+<td class="ParameterName" nowrap="" valign="top">cmd_set</td>
+<td class="ParameterDescription">Cumulative number of storage requests</td>
+</tr>
+<tr>
+<td class="ParameterName" nowrap="" valign="top">get_hits</td>
+<td class="ParameterDescription">Number of keys that have been requested and found present</td>
+</tr>
+<tr>
+<td class="ParameterName" nowrap="" valign="top">get_misses</td>
+<td class="ParameterDescription">Number of items that have been requested and not found</td>
+</tr>
+<tr>
+<td class="ParameterName" nowrap="" valign="top">evictions</td>
+<td class="ParameterDescription">Number of items removed from cache because they passed their expiration time</td>
+</tr>
+<tr>
+<td class="ParameterName" nowrap="" valign="top">bytes_read</td>
+<td class="ParameterDescription">Total number of bytes read by this server </td>
+</tr>
+<tr>
+<td class="ParameterName" nowrap="" valign="top">bytes_written</td>
+<td class="ParameterDescription">Total number of bytes sent by this server</td>
+</tr>
+<tr>
+<td class="ParameterName" nowrap="" valign="top">limit_maxbytes</td>
+<td class="ParameterDescription">Number of bytes this server is allowed to use for storage</td>
+</tr>
+<tr>
+<td class="ParameterName" nowrap="" valign="top">threads</td>
+<td class="ParameterDescription">Number of threads the server is running (if built with threading)</td>
+</tr>
+</table>
+
+<p>If unsuccessful the following error codes may be returned:</p>
+<table>
+<thead>
+<tr>
+<th>Result</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_servernotfound_error">SERVERNOTFOUND_ERROR</a></td>
+<td>No servers were found.</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_notinitialized">NOTINITIALIZED</a></td>
+<td>Memcached not initialized. Call <a class="interdoc" href="#cm_memcached_init">Init()</a> before calling any other features.</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_error">ERROR</a></td>
+<td>any other errors</td>
+</tr>
+<tr>
+<td></table></td>
+<td></td>
+</tr>
+<tr>
+<td></br></dd></td>
+<td></td>
+</tr>
+<tr>
+<td></br></br></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_memcached_version">Version</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">Version</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">host</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">port</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Retrieves the version number for the specified server.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">host</span><span class="description"><p>hostname of the server.</p></span></div>
+											<div class="Parameter"><span class="name">port</span><span class="description"><p>port of the server.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns a string containing the version number for the specified server if successful else returns an error code. Possible error codes are: </p>
+<table>
+<thead>
+<tr>
+<th>Result</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_servernotfound_error">SERVERNOTFOUND_ERROR</a></td>
+<td>No servers were found.</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_notinitialized">NOTINITIALIZED</a></td>
+<td>Memcached not initialized. Call <a class="interdoc" href="#cm_memcached_init">Init()</a> before calling any other features.</td>
+</tr>
+<tr>
+<td><a class="interdoc" href="#ca_memcached_error">ERROR</a></td>
+<td>any other errors</td>
+</tr>
+</tbody>
+</table></div>
+							</div>
+						</div>
+				</div>
+		
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2018 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+
+
+
+</div>
+	</div>						
+						
+
+</div>
+
+</body></html>

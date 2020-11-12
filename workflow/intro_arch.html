@@ -1,0 +1,126 @@
+<html>
+<head>
+<title>Introduction to Content Server Workflow Architecture</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+
+</head>
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<script language="JavaScript">updateParentHeader( 'The Workflow Module' );</script>
+<script language="JavaScript">includeContentContainer( 'wfbuilder', true );</script>
+
+</script>
+<p class="body">
+<p class="title">Introduction to Content Server Workflow Architecture</p>
+<p class="body">A high-level extension of Content Server's workflow functionality 
+requires an advanced understanding of the architecture and operation 
+of the existing Content Server Workflow module.</p>
+
+<p class="body">The functionality of the Content Server Workflow module 
+is controlled by the Workflow Application Programming Interface (WAPI) 
+and the OScript programming language. WAPI and OScript work together to 
+create a robust workflow management system that provides advanced management 
+tools and status control.</p>
+
+<p class="body">The Content Server Workflow module is based on a combination 
+of step types, data types, workflow types, and event trigger scripts. 
+After you understand how these features work
+in the main Content Server Workflow module, you can create your own 
+module that extends their capabilities.</p>
+<p class="body">In this section, you learn about:</p>
+<ul type="disc">
+	<li class="body"><a href="#wfarch">Content Server Workflow Architecture</a></p>
+	<li class="body"><a href="#wfstatus">Workflow management and status</a>
+</ul>
+
+<span id="wfarch" class="title2">Content Server Workflow Architecture</span>
+
+<p class="body">The Content Server Workflow module lets you create and manage 
+workflows in Content Server using the Workflow Application Programming Interface (WAPI) 
+and the OScript programming language.</p>
+
+<span class="title3">WAPI</span>
+<p class="body">WAPI is an application programming interface that maintains 
+a database of workflow maps <span class="emph">(maps)</span> and work 
+packages <span class="emph">(work)</span>. Workflow maps define specific steps 
+and the links that join those steps in a workflow. Work is created when a 
+workflow map is initiated in Content Server and defines the work package that 
+is routed through the workflow. WAPI also provides functions that you 
+can use to query the database of workflow maps and work packages.</p>
+
+<p class="body">WAPI is responsible for most of the database interaction 
+involved in the creation and execution of Content Server workflows, including the 
+maintenance of basic workflow information such as titles, due dates, and status. 
+WAPI is also responsible for maintaining a complete audit trail.</p>
+
+<span class="title3">OScript</span>
+<p class="body"><span class="emph">OScript</span> is an object-oriented 
+programming language that lets you develop and customize applications 
+using the Content Server IDE. In Content Server, OScript is used to control 
+the graphical user interface (GUI) for painting workflow maps and 
+displaying task lists and step information to workflow participants.
+
+<p class="body">OScript is used, along with Content Server's document 
+management functionality, to store workflow maps as document nodes 
+that can manipulate Content Server's extensive document management 
+functionality (including permissions, version control, and attributes). 
+Additionally, OScript almost completely handles the flow of data as it 
+is routed through a workflow.</p>
+
+<span id="wfstatus" class="title2">Using WAPI and OScript for Workflow Management and Status</span>
+<p class="body">WAPI and OScript together manage the permissions that you can 
+assign to workflow managers and the status of workflows in Content Server.</p>
+
+<p class="body">The manager of a workflow monitors a workflow's status 
+and may have the authority to modify, suspend, resume, or stop a workflow 
+after it is initiated. WAPI lets the creator of a workflow map specify only 
+one Content Server user or group as the workflow manager; however, OScript lets the 
+creator of a workflow map establish different permission levels within a 
+single management group. Because WAPI and OScript work together in this way, the
+creator of a workflow map can specify a group of Content Server users as the manager 
+of the workflow, and can then expand that group and assign different permission 
+levels to the base group members and the workflow initiator.</p>
+
+<p class="body">WAPI is responsible for calculating and maintaining all of the 
+due dates and completed dates for a workflow, but tracks only the 
+workflow status categories; OScript is responsible for 
+defining the more detailed workflow status that is presented to workflow 
+managers. Detailed status levels are determined by analyzing the due 
+dates for a workflow and the steps it contains.</p>
+
+<p class="body">Because detailed status levels are determined by OScript, 
+OScript programmers can change the definition of the status levels or add 
+new levels by overriding the script that defines them.</p>
+
+<span class="title3">Storing Workflow Management and 
+Status Information</span>
+
+<p class="body">Workflow management and status information is stored in a table 
+named WWork, located in the Content Server database.</p>
+
+<p class="body">The rows in the WWork table contain specific workflow 
+management information, such as due dates, milestone dates, permission 
+settings, and status. For example, the WORK_DATECOMPLETED row contains 
+the date on which the workflow was completed.</p>
+
+<p class="body">Workflow management and status information for 
+Sub-workflows is stored in a table named WSubWork in the Content Server database.</p>
+
+<p class="body">The rows in the WSubWork table contain specific workflow 
+management information, such as due dates, milestone dates, permission 
+settings, and status for Sub-workflows. For example, the SUBWORK_DATECOMPLETED 
+row contains the date on which the Sub-workflow
+was completed.</p>
+
+
+
+
+
+
+<script language="JavaScript">IncludeFooter();
+</script>
+</body>
+</html>
+
+

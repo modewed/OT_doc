@@ -1,0 +1,429 @@
+
+<meta charset="UTF-8">
+<html>
+<head><title>Class: Pattern</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../syntax.css" type="text/css">
+<link rel="stylesheet" href="builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td  align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody></table>
+
+<div id="document">
+	
+<div class="sidebar_container">
+		
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink"><a href="assoc.html">Assoc</a></div>
+				<div class="packagelink"><a href="boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="builder.html">Builder</a></div>
+				<div class="packagelink"><a href="bytes.html">Bytes</a></div>
+				<div class="packagelink"><a href="capi.html">CAPI</a></div>
+				<div class="packagelink"><a href="capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink"><a href="cachetree.html">CacheTree</a></div>
+				<div class="packagelink"><a href="compiler.html">Compiler</a></div>
+				<div class="packagelink"><a href="core.html">Core</a></div>
+				<div class="packagelink"><a href="dapi.html">DAPI</a></div>
+				<div class="packagelink"><a href="dapinode.html">DAPINODE</a></div>
+				<div class="packagelink"><a href="dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink"><a href="dapiversion.html">DAPIVERSION</a></div>
+				<div class="packagelink"><a href="domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="domcomment.html">DOMComment</a></div>
+				<div class="packagelink"><a href="domdocument.html">DOMDocument</a></div>
+				<div class="packagelink"><a href="domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink"><a href="domelement.html">DOMElement</a></div>
+				<div class="packagelink"><a href="domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink"><a href="domnamednodemap.html">DOMNamedNodeMap</a></div>
+				<div class="packagelink"><a href="domnode.html">DOMNode</a></div>
+				<div class="packagelink"><a href="domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="domtext.html">DOMText</a></div>
+				<div class="packagelink"><a href="date.html">Date</a></div>
+				<div class="packagelink"><a href="dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="env.html">Env</a></div>
+				<div class="packagelink"><a href="error.html">Error</a></div>
+				<div class="packagelink"><a href="file.html">File</a></div>
+				<div class="packagelink"><a href="filecopy.html">FileCopy</a></div>
+				<div class="packagelink"><a href="fileprefs.html">Fileprefs</a></div>
+				<div class="packagelink"><a href="frame.html">Frame</a></div>
+				<div class="packagelink"><a href="global.html">Global</a></div>
+				<div class="packagelink"><a href="integer.html">Integer</a></div>
+				<div class="packagelink"><a href="javaobject.html">JavaObject</a></div>
+				<div class="packagelink"><a href="language.html">Language</a></div>
+				<div class="packagelink"><a href="license.html">License</a></div>
+				<div class="packagelink"><a href="list.html">List</a></div>
+				<div class="packagelink"><a href="logging.html">Logging</a></div>
+				<div class="packagelink"><a href="long.html">Long</a></div>
+				<div class="packagelink"><a href="mailmessage.html">MailMessage</a></div>
+				<div class="packagelink"><a href="math.html">Math</a></div>
+				<div class="packagelink"><a href="memcached.html">Memcached</a></div>
+				<div class="packagelink"><a href="notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="object.html">Object</a></div>
+				<div class="packagelink"><a href="pop3session.html">POP3Session</a></div>
+				<div class="packagelink"><a href="patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="patfind.html">PatFind</a></div>
+				<div class="packagelink curPage">Pattern</div>
+				<div class="packagelink"><a href="point.html">Point</a></div>
+				<div class="packagelink"><a href="profiler.html">Profiler</a></div>
+				<div class="packagelink"><a href="real.html">Real</a></div>
+				<div class="packagelink"><a href="recarray.html">RecArray</a></div>
+				<div class="packagelink"><a href="record.html">Record</a></div>
+				<div class="packagelink"><a href="regex.html">Regex</a></div>
+				<div class="packagelink"><a href="restclient.html">RestClient</a></div>
+				<div class="packagelink"><a href="saxparser.html">SAXParser</a></div>
+				<div class="packagelink"><a href="smtpsession.html">SMTPSession</a></div>
+				<div class="packagelink"><a href="ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="script.html">Script</a></div>
+				<div class="packagelink"><a href="security.html">Security</a></div>
+				<div class="packagelink"><a href="set.html">Set</a></div>
+				<div class="packagelink"><a href="socket.html">Socket</a></div>
+				<div class="packagelink"><a href="sql.html">Sql</a></div>
+				<div class="packagelink"><a href="sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink"><a href="str.html">Str</a></div>
+				<div class="packagelink"><a href="string.html">String</a></div>
+				<div class="packagelink"><a href="system.html">System</a></div>
+				<div class="packagelink"><a href="uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="void.html">Void</a></div>
+				<div class="packagelink"><a href="wapi.html">WAPI</a></div>
+				<div class="packagelink"><a href="wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink"><a href="web.html">Web</a></div>
+				<div class="packagelink"><a href="xslprocessor.html">XSLProcessor</a></div>
+				<div class="packagelink"><a href="zip.html">Zip</a></div>
+		</div>
+</div>
+
+	<div class="content_container">
+		<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+		<h1>Class: Pattern</h1><div class="ClassDescription"><p>The Pattern built-ins implement a simplified and slightly modified subset of UNIX's regular expression pattern matching.  They allow find patterns to be compiled for finding patterns within text, as well as change patterns which replacing that text as well.</p>
+<p>A find pattern may consist of the following elements:</p>
+<table border="0">
+<tr class="ClassDescription"><th align="left" width="15%">Element</th><th align="left">Meaning in find pattern</th></tr>
+<tr class="ClassDescription"><td><i>c</i></td><td>Match exact character (<i>c</i> is any character here)</td></tr>
+<tr class="ClassDescription"><td><i>@c</i></td><td>Match escaped character ( such as <i>@%</i>, <i>@[</i>, <i>@*</i>)</td></tr>
+<tr class="ClassDescription"><td><i>?</i></td><td>Match any character except end of line</td></tr>
+<tr class="ClassDescription"><td><i>%</i></td><td>Match beginning of line</td></tr>
+<tr class="ClassDescription"><td><i>$</i></td><td>Match end of line (null string before end of line)</td></tr>
+<tr class="ClassDescription"><td><i>[...]</i></td>
+<td>Match character class (any one of 'these' characters, such as <i>[abc]</i> or <i>[a-z]</i>)</td></tr>
+<tr class="ClassDescription"><td><i>[!...]</i></td><td>Match negated character class (all but these characters, such as <i>[! ]</i> for no spaces)</td></tr>
+<tr class="ClassDescription"><td><i>*</i></td><td>Closure (match zero or more occurrences of the previous element, such as <i>[0-9]*</i> for zero or more digits)</td></tr>
+<tr class="ClassDescription"><td><i>+</i></td><td>Closure (match one or more occurrences of the previous element, such as <i>[A-Za-z]+</i> for one or more letters)</td></tr>
+<tr class="ClassDescription"><td><i>&lt;&gt;</i></td><td>Brackets tagged material which is specially extracted for later reference or use</td></tr>
+</table>
+
+<p>Any element of a find pattern may be 'tagged' with the angle brackets <i>&lt;&gt;</i>.  The tagged elements are numbered 1..n from left to right and can be specially extracted from the return value of Pattern.Find() or specially referred to in a change pattern.</p>
+<p>A character class consists of zero or more of the following elements, surrounded by brackets (<i>[]</i>):</p>
+<table border="0">
+<tr class="ClassDescription"><th align="left" width="30%">Element</th><th align="left">Meaning in character class</th></tr>
+<tr class="ClassDescription"><td><i>c</i></td><td>Literal character, including <i>[</i></td></tr>
+<tr class="ClassDescription"><td><i>a-c</i></td><td>Range of characters (digits, lower or upper case)</td></tr>
+<tr class="ClassDescription"><td><i>!</i></td><td>Negated character class (if at beginning)</td></tr>
+<tr class="ClassDescription"><td><i>@c</i></td><td>Escaped character (<i>@!</i>, <i>@-</i>, <i>@@</i>, <i>@]</i>)</td></tr>
+</table>
+
+<p>Special meaning of characters in a character class is lost when escaped or for exclamation point (<i>!</i>) when it is not at the beginning, and dash (<i>-</i>) when it is not at the beginning or end of the character class.</p>
+<p>A change pattern is used to map the results of a find pattern to some replacement patter, as for a find and replace operation.  It consists of zero or more of the following elements:</p>
+<table>
+<tr class="ClassDescription"><th align="left" width="30%">Element</th><th align="left">Meaning in change pattern</th></tr>
+<tr class="ClassDescription"><td><i>c</i></td><td>literal character</td></tr>
+<tr class="ClassDescription"><td><i>&amp;</i></td><td>ditto (whatever was matched)</td></tr>
+<tr class="ClassDescription"><td><i>@c</i></td><td>escaped character (such as <i>@&amp;</i>)</td></tr>
+<tr class="ClassDescription"><td><i>#n</i></td><td>tagged substring insertion</td></tr>
+</table>
+
+<p>In any pattern, an escape sequence consists of the character <i>@</i> followed by a single character:</p>
+<table border="0">
+<tr class="ClassDescription"><th align="left" width="30%">Element</th><th align="left">Meaning in escape sequence</th></tr>
+<tr class="ClassDescription"><td><i>@r</i></td><td>carriage return</td></tr>
+<tr class="ClassDescription"><td><i>@n</i></td><td>end of line</td></tr>
+<tr class="ClassDescription"><td><i>@t</i></td><td>tab character</td></tr>
+<tr class="ClassDescription"><td><i>@c</i></td><td>any other character (including @@)</td></tr>
+</table>
+
+<p>For those familiar with UNIX's regexp, use of OScript's pattern built-ins is easy keeping the following in mind:</p>
+<ul>
+<li>Use at sign <i>@</i> instead of backslash (<i>\</i>) to escape characters.</li>
+<li>Use percent (<i>%</i>) instead of caret (<i>^</i>) to match beginning of line.</li>
+<li>Use exclamation point (<i>!</i>) instead of caret (<i>^</i>) to negate at the beginning of a character class.</li>
+<li>Use question mark (<i>?</i>) instead of dot (<i>.</i>) to match any character.</li>
+<li>Remember that OScript's patterns are a small subset and do not support composition, etc.</li>
+</ul>
+<p><a name="_FindExample_"></a> Here is an example of <a class="interdoc" href="#cm_pattern_find">Pattern.Find()</a> which retrieves name value pairs, formatted in a particular way (<i>" name = value;"</i>), from a data string:</p>
+<div class="codehilite"><pre><span class="kt">String</span>  target <span class="o">=</span> <span class="s">&quot;&lt;data&gt; firstname   =  Mary;lastname =Smith;job=plumber; phone = 555-5555; address= 4444 Some Lane, Nowhere, SS 99999; &lt;/data&gt;&quot;</span>
+<span class="kt">String</span>  search <span class="o">=</span> <span class="s">&quot; *&lt;[A-Za-z]+&gt; *= *&lt;[!;]+&gt;;&quot;</span>
+<span class="kt">String</span>  s <span class="o">=</span> target
+PatFind finder <span class="o">=</span> Pattern<span class="o">.</span>CompileFind<span class="p">(</span> search <span class="p">)</span>
+List    result <span class="o">=</span> Pattern<span class="o">.</span>Find<span class="p">(</span> s<span class="p">,</span> finder <span class="p">)</span>
+
+<span class="k">while</span> <span class="p">(</span> IsDefined<span class="p">(</span> result <span class="p">)</span> <span class="p">)</span>
+    Echo<span class="p">(</span> result<span class="p">[</span> <span class="m">4</span> <span class="p">],</span> <span class="s">&#39; = &quot;&#39;</span><span class="p">,</span> result<span class="p">[</span> <span class="m">5</span> <span class="p">],</span> <span class="s">&#39;&quot;&#39;</span> <span class="p">)</span>
+
+    s <span class="o">=</span> s<span class="p">[</span> result<span class="p">[</span> <span class="m">2</span> <span class="p">]</span> <span class="o">:</span> <span class="p">]</span>
+    result <span class="o">=</span> Pattern<span class="o">.</span>Find<span class="p">(</span> s<span class="p">,</span> finder <span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+
+<p>The output of the example is: </p>
+<div class="codehilite"><pre>address <span class="o">=</span> <span class="s">&quot;4444 Some Lane, Nowhere, SS 99999&quot;</span>
+firstname <span class="o">=</span> <span class="s">&quot;Mary&quot;</span>
+job <span class="o">=</span> <span class="s">&quot;plumber&quot;</span>
+lastname <span class="o">=</span> <span class="s">&quot;Smith&quot;</span>
+phone <span class="o">=</span> <span class="s">&quot;555-5555&quot;</span>
+</pre></div>
+
+
+<p><a name="_ChangeExample_"></a> Here is an example of <a class="interdoc" href="#cm_pattern_change">Pattern.Change()</a> which operates on the same data, but instead produces an alteration of the input string with quoted data values and extraneous spaces removed:</p>
+<div class="codehilite"><pre><span class="kt">String</span>      target <span class="o">=</span> <span class="s">&quot;&lt;data&gt; firstname   =  Mary;lastname =Smith;job=plumber; phone = 555-5555; address= 4444 Some Lane, Nowhere, SS 99999; &lt;/data&gt;&quot;</span>
+<span class="kt">String</span>      search <span class="o">=</span> <span class="s">&quot; *&lt;[A-Za-z]+&gt; *= *&lt;[!;]+&gt;;&quot;</span>
+<span class="kt">String</span>      change <span class="o">=</span> <span class="s">&#39;#1=&quot;#2&quot;;&#39;</span>
+PatFind     finder <span class="o">=</span> Pattern<span class="o">.</span>CompileFind<span class="p">(</span> search <span class="p">)</span>
+PatChange   replacer <span class="o">=</span> Pattern<span class="o">.</span>CompileChange<span class="p">(</span> change <span class="p">)</span>
+<span class="kt">String</span>      result <span class="o">=</span> Pattern<span class="o">.</span>Change<span class="p">(</span> target<span class="p">,</span> finder<span class="p">,</span> replacer <span class="p">)</span>
+
+Echo<span class="p">(</span> <span class="s">&quot;Input: &quot;</span><span class="p">,</span> target <span class="p">)</span>
+Echo<span class="p">(</span> <span class="s">&quot;Result: &quot;</span><span class="p">,</span> result <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of the example is: </p>
+<div class="codehilite"><pre>Input<span class="o">:</span> <span class="o">&lt;</span>data<span class="o">&gt;</span> firstname   <span class="o">=</span>  Mary<span class="p">;</span>lastname <span class="o">=</span>Smith<span class="p">;</span>job<span class="o">=</span>plumber<span class="p">;</span> phone <span class="o">=</span> <span class="m">555</span><span class="o">-</span><span class="m">5555</span><span class="p">;</span> address<span class="o">=</span> <span class="m">4444</span> Some Lane<span class="p">,</span> Nowhere<span class="p">,</span> SS <span class="m">99999</span><span class="p">;</span> <span class="o">&lt;/</span>data<span class="o">&gt;</span>
+Result<span class="o">:</span> <span class="o">&lt;</span>data<span class="o">&gt;</span>firstname<span class="o">=</span><span class="s">&quot;Mary&quot;</span><span class="p">;</span>lastname<span class="o">=</span><span class="s">&quot;Smith&quot;</span><span class="p">;</span>job<span class="o">=</span><span class="s">&quot;plumber&quot;</span><span class="p">;</span>phone<span class="o">=</span><span class="s">&quot;555-5555&quot;</span><span class="p">;</span>address<span class="o">=</span><span class="s">&quot;4444 Some Lane, Nowhere, SS 99999&quot;</span><span class="p">;</span> <span class="o">&lt;/</span>data<span class="o">&gt;</span>
+</pre></div></div>
+			<h2>Class Attributes</h2>
+			<div class="ClassAttributesShort">
+				
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_pattern_e_illegalchangepattern">E_IllegalChangePattern</a></div>
+					<div class="Description"><p>Error returned when an invalid change pattern is compiled.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_pattern_e_illegalfindpattern">E_IllegalFindPattern</a></div>
+					<div class="Description"><p>Error returned when an invalid find pattern is compiled.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_pattern_patchangetype">PatChangeType</a></div>
+					<div class="Description"><p>The datatype number for the PatChange datatype.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_pattern_patfindtype">PatFindType</a></div>
+					<div class="Description"><p>The datatype number for the PatFind datatype.</p></div>
+				</div>
+				
+			</div>
+
+
+			<h2>Class Methods</h2>
+			<div class="ClassMethodsShort">
+				<div class="Method">
+					<div class="Name"><a href="#cm_pattern_change" class="IndexMethodName">Change</a>(
+					 String target, Dynamic find, Dynamic change, [Boolean ignoreCase] )
+					</div>
+					<div class="Description"><p>Performs a find and replace on the target String with the given patterns.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_pattern_compilechange" class="IndexMethodName">CompileChange</a>(
+					 String pattern )
+					</div>
+					<div class="Description"><p>Returns a compiled version of the specified change pattern.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_pattern_compilefind" class="IndexMethodName">CompileFind</a>(
+					 String pattern )
+					</div>
+					<div class="Description"><p>Returns a compiled version of the specified find pattern.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_pattern_find" class="IndexMethodName">Find</a>(
+					 String target, Dynamic find, [Boolean ignoreCase] )
+					</div>
+					<div class="Description"><p>Returns the result of the applying the find pattern to the target String.</p></div>
+				</div>
+			</div>
+
+
+				<h2>Class Attributes</h2>
+				<div class="ClassAttributes">
+					
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_pattern_e_illegalchangepattern">E_IllegalChangePattern</a></div>
+						<div class="Description"><p>Error returned when an invalid change pattern is compiled.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_pattern_e_illegalfindpattern">E_IllegalFindPattern</a></div>
+						<div class="Description"><p>Error returned when an invalid find pattern is compiled.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_pattern_patchangetype">PatChangeType</a></div>
+						<div class="Description"><p>The datatype number for the PatChange datatype.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_pattern_patfindtype">PatFindType</a></div>
+						<div class="Description"><p>The datatype number for the PatFind datatype.</p></div>
+					</div>
+				
+				</div>
+
+		
+				<h2>Class Methods</h2>
+				<div class="ClassMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_pattern_change">Change</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">Change</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">target</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">find</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">change</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Boolean</span> <span class="PrototypeArgumentName">ignoreCase</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Searches the target String for all occurrences of the find pattern,
+and replaces each occurrence with the specified change pattern.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">target</span><span class="description"><p>The target String upon which to perform a search and replace.</p></span></div>
+											<div class="Parameter"><span class="name">find</span><span class="description"><p>The find pattern, either as a String or a compiled PatFind.</p></span></div>
+											<div class="Parameter"><span class="name">change</span><span class="description"><p>The change pattern, either as a String or a compiled PatChange.</p></span></div>
+											<div class="Parameter"><span class="name">ignoreCase</span><span class="description"><p>If specified and TRUE, case is ignored in comparisons, otherwise FALSE, the default, for case-sensitive comparisons.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The new String result of the find and replace operation.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>See the <a href="#_ChangeExample_">example</a> in the class description.  </p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_pattern_compilechange">CompileChange</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">PatChange</span> 
+						<span class="PrototypeselfName">CompileChange</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">pattern</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a compiled version of the specified String change pattern.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">pattern</span><span class="description"><p>The change pattern to compile.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The successfully compiled PatChange, or
+an Error if the pattern String could not be compiled.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_pattern_compilefind">CompileFind</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">PatFind</span> 
+						<span class="PrototypeselfName">CompileFind</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">pattern</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a compiled version of the specified String find pattern.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">pattern</span><span class="description"><p>The find pattern to compile.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The successfully compiled PatChange, or
+an Error if the pattern String could not be compiled.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_pattern_find">Find</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">List</span> 
+						<span class="PrototypeselfName">Find</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">target</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">find</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Boolean</span> <span class="PrototypeArgumentName">ignoreCase</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Finds and returns a List describing the first match found of the find pattern in the target String.
+Otherwise, Undefined is returned if no match could be found.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">target</span><span class="description"><p>The target String upon which the pattern match is performed.</p></span></div>
+											<div class="Parameter"><span class="name">find</span><span class="description"><p>The find pattern, either as a String or a compiled FindPat.</p></span></div>
+											<div class="Parameter"><span class="name">ignoreCase</span><span class="description"><p>If specified and TRUE, case is ignored in comparisons, otherwise FALSE, the default, for case-sensitive comparisons.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>If a match was found, a List, otherwise, Undefined
+if a match could not be found, or Error if a String pattern could not be compiled.
+The List will contain the following elements:</p>
+
+<table border="0" cellpadding="0" cellspacing="0" class="MethodReturnValueDescription">
+<tr>
+<th align="left" nowrap="" valign="top">Element</th>
+<th align="left">Meaning</th>
+</tr>
+<tr>
+<td nowrap="" valign="top">1</td>
+<td>The inclusive start index of the match within the _target_ String.</td>
+</tr>
+<tr>
+<td nowrap="" valign="top">2</td>
+<td>The exclusive end index of the match within the _target_ String.</td>
+</tr>
+<tr>
+<td nowrap="" valign="top">3</td>
+<td>The complete match text as a String.</td>
+</tr>
+<tr>
+<td nowrap="" valign="top"><i>[ 4 onwards ]</i></td>
+<td>Optionally any tagged elements extracted as Strings listed in the order they were tagged.</td>
+</tr>
+</table></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Remember that Pattern.Find() returns only the first
+match found.  To do multiple matches, the material following the match
+must be passed back to Find() until no matches can be found.  Also, find pattern
+should be compiled beforehand to avoid the performance costs of repeated unnecessary
+compilation.  See the <a href="#_FindExample_">example</a> in the class description.  </p></div>
+							</div>
+						</div>
+				</div>
+		
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2018 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+
+
+
+</div>
+	</div>						
+						
+
+</div>
+
+</body></html>

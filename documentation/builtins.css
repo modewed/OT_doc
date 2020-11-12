@@ -1,0 +1,96 @@
+.note { color: #ff0000; }
+.signature { font-family: monospace; border: 1px solid #aaa; padding: 0.5em; background: #eee; margin:1em; }
+	.signature .PrototypeReturnValueType { color: #00aaaa; }
+	.signature .PrototypeArgumentType { color: #00aaaa; }
+	.signature .PrototypeselfName { font-weight: bold; }
+p { font-size: 10pt;}
+li { font-size: 10pt;}
+.document td { color: #666666; line-height: 1.5em; }
+pre { margin-left: 2em; }
+h3 {border-bottom-style: solid; border-color: #000; border-width: 1px; }
+h2 { font-size: 2em; border-bottom: 4px double black; }	
+h4 { font-size: 12pt; }
+.MethodName { font-size: 1.5em; }
+.Parameters { display: table; padding-left: 2em;}
+.Parameter { margin-left: 2em; display: table-row; }
+.Parameter .name { margin-left: 2em; display: table-cell; width: 10em; color: #005555; }
+.Parameter .description { font-style: normal; display: table-cell;}
+.Parameter .description p:first-child { margin-top: 0pt; }
+.Parameter .description p:last-child { margin-bottom: 0pt; }
+
+.ClassAttributesShort, .InstanceAttributesShort, .ClassMethodsShort, .InstanceMethodsShort {
+	display: table;
+	border: 1px solid #000;
+	background: #fff;
+	margin-left: 2em;
+	margin-right: 2em;
+}
+.ClassAttributesShort .Attribute, .InstanceAttributesShort .Attribute, .ClassMethodsShort .Method, .InstanceMethodsShort .Method {
+	display: table-row;
+}
+.ClassAttributesShort .Attribute:nth-child(even), 
+	.InstanceAttributesShort .Attribute:nth-child(even), 
+	.ClassMethodsShort .Method:nth-child(even), 
+	.InstanceMethodsShort .Method:nth-child(even) {
+		background: #f2f5f7;
+}
+.ClassAttributesShort .Name, .InstanceAttributesShort .Name, .ClassMethodsShort .Name, .InstanceMethodsShort .Name {
+	display: table-cell;
+	padding-left: 1em;
+}
+.ClassAttributesShort .Description, .InstanceAttributesShort .Description, .ClassMethodsShort .Description, .InstanceMethodsShort .Description {
+	display: table-cell;
+	padding-left: 2em;
+	padding-right: 1em;
+}
+
+.ClassAttributes, .InstanceAttributes, .ClassMethods, .InstanceMethods { margin-left: 2em; }
+.ClassAttributes .Name, .InstanceAttributes .Name { 
+	font-size: 1.5em; 
+	border-bottom: 1px solid black;
+}
+
+
+
+.returnDesc { padding-left: 2em; }
+.Example { margin-left: 2em; }
+.curPage { font-weight: bold; }
+a.unknown { color: #ff0000; }
+.IndexMethodName { 
+	font-weight: bold; 
+}
+.hidden 
+{
+	display: none;
+}
+.revealed
+{
+	display: block;
+}
+.document td { 
+	padding-left: 1em; 
+}
+#document { width: 90em;}
+.sidebar_container { 
+	float:left;
+	padding: 0.5em;
+	margin: 0.25em;
+	width: 15em;
+}
+.packageName
+{
+	color: #000;
+	font-size: 1.25em;
+	cursor: pointer;
+}
+.packageLink 
+{
+	margin-left: 1em;
+}
+.content_container { 
+	float:left;
+	padding:0.5em;
+	margin: 0.25em;
+	display: inline-block;
+	width: 60em;
+}

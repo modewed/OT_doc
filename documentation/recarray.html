@@ -1,0 +1,712 @@
+
+<meta charset="UTF-8">
+<html>
+<head><title>Class: RecArray</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../syntax.css" type="text/css">
+<link rel="stylesheet" href="builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td  align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody></table>
+
+<div id="document">
+	
+<div class="sidebar_container">
+		
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink"><a href="assoc.html">Assoc</a></div>
+				<div class="packagelink"><a href="boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="builder.html">Builder</a></div>
+				<div class="packagelink"><a href="bytes.html">Bytes</a></div>
+				<div class="packagelink"><a href="capi.html">CAPI</a></div>
+				<div class="packagelink"><a href="capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink"><a href="cachetree.html">CacheTree</a></div>
+				<div class="packagelink"><a href="compiler.html">Compiler</a></div>
+				<div class="packagelink"><a href="core.html">Core</a></div>
+				<div class="packagelink"><a href="dapi.html">DAPI</a></div>
+				<div class="packagelink"><a href="dapinode.html">DAPINODE</a></div>
+				<div class="packagelink"><a href="dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink"><a href="dapiversion.html">DAPIVERSION</a></div>
+				<div class="packagelink"><a href="domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="domcomment.html">DOMComment</a></div>
+				<div class="packagelink"><a href="domdocument.html">DOMDocument</a></div>
+				<div class="packagelink"><a href="domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink"><a href="domelement.html">DOMElement</a></div>
+				<div class="packagelink"><a href="domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink"><a href="domnamednodemap.html">DOMNamedNodeMap</a></div>
+				<div class="packagelink"><a href="domnode.html">DOMNode</a></div>
+				<div class="packagelink"><a href="domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="domtext.html">DOMText</a></div>
+				<div class="packagelink"><a href="date.html">Date</a></div>
+				<div class="packagelink"><a href="dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="env.html">Env</a></div>
+				<div class="packagelink"><a href="error.html">Error</a></div>
+				<div class="packagelink"><a href="file.html">File</a></div>
+				<div class="packagelink"><a href="filecopy.html">FileCopy</a></div>
+				<div class="packagelink"><a href="fileprefs.html">Fileprefs</a></div>
+				<div class="packagelink"><a href="frame.html">Frame</a></div>
+				<div class="packagelink"><a href="global.html">Global</a></div>
+				<div class="packagelink"><a href="integer.html">Integer</a></div>
+				<div class="packagelink"><a href="javaobject.html">JavaObject</a></div>
+				<div class="packagelink"><a href="language.html">Language</a></div>
+				<div class="packagelink"><a href="license.html">License</a></div>
+				<div class="packagelink"><a href="list.html">List</a></div>
+				<div class="packagelink"><a href="logging.html">Logging</a></div>
+				<div class="packagelink"><a href="long.html">Long</a></div>
+				<div class="packagelink"><a href="mailmessage.html">MailMessage</a></div>
+				<div class="packagelink"><a href="math.html">Math</a></div>
+				<div class="packagelink"><a href="memcached.html">Memcached</a></div>
+				<div class="packagelink"><a href="notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="object.html">Object</a></div>
+				<div class="packagelink"><a href="pop3session.html">POP3Session</a></div>
+				<div class="packagelink"><a href="patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="patfind.html">PatFind</a></div>
+				<div class="packagelink"><a href="pattern.html">Pattern</a></div>
+				<div class="packagelink"><a href="point.html">Point</a></div>
+				<div class="packagelink"><a href="profiler.html">Profiler</a></div>
+				<div class="packagelink"><a href="real.html">Real</a></div>
+				<div class="packagelink curPage">RecArray</div>
+				<div class="packagelink"><a href="record.html">Record</a></div>
+				<div class="packagelink"><a href="regex.html">Regex</a></div>
+				<div class="packagelink"><a href="restclient.html">RestClient</a></div>
+				<div class="packagelink"><a href="saxparser.html">SAXParser</a></div>
+				<div class="packagelink"><a href="smtpsession.html">SMTPSession</a></div>
+				<div class="packagelink"><a href="ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="script.html">Script</a></div>
+				<div class="packagelink"><a href="security.html">Security</a></div>
+				<div class="packagelink"><a href="set.html">Set</a></div>
+				<div class="packagelink"><a href="socket.html">Socket</a></div>
+				<div class="packagelink"><a href="sql.html">Sql</a></div>
+				<div class="packagelink"><a href="sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink"><a href="str.html">Str</a></div>
+				<div class="packagelink"><a href="string.html">String</a></div>
+				<div class="packagelink"><a href="system.html">System</a></div>
+				<div class="packagelink"><a href="uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="void.html">Void</a></div>
+				<div class="packagelink"><a href="wapi.html">WAPI</a></div>
+				<div class="packagelink"><a href="wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink"><a href="web.html">Web</a></div>
+				<div class="packagelink"><a href="xslprocessor.html">XSLProcessor</a></div>
+				<div class="packagelink"><a href="zip.html">Zip</a></div>
+		</div>
+</div>
+
+	<div class="content_container">
+		<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+		<h1>Class: RecArray</h1><div class="ClassDescription"><p>The built-in functions in the RecArray package allow
+ you to create and manipulate values of type Record and RecArray. You can think
+ of a RecArray as a table of information where each column has a name and each
+ row is a Record. Records and RecArrays are frequently used together. If you
+ just need a name-value association, you may want to use an <a class="interdoc" href="assoc.html">Assoc</a>
+ instead. Fields (or columns) in a Record or RecArray can be referenced by name
+ or by index. Records and RecArrays use one-based indexes. Records and RecArrays
+ are both reference data types. For more information, including an example of
+ using Records and RecArrays, please see the <a href="../oscript/oscript.html">OScript
+ Language Reference</a>.</p></div>
+			<h2>Class Attributes</h2>
+			<div class="ClassAttributesShort">
+				
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_recarray_recarraytype">RecArrayType</a></div>
+					<div class="Description"><p>Specifies a value of type RecArray.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_recarray_recordtype">RecordType</a></div>
+					<div class="Description"><p>Specifies a value of type Record.</p></div>
+				</div>
+				
+			</div>
+
+
+			<h2>Class Methods</h2>
+			<div class="ClassMethodsShort">
+				<div class="Method">
+					<div class="Name"><a href="#cm_recarray_addfield" class="IndexMethodName">AddField</a>(
+					 RecArray theRecArray, Dynamic fieldNames )
+					</div>
+					<div class="Description"><p>Adds a field to a RecArray if a field 
+    with the specified name does not exist.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_recarray_addrecord" class="IndexMethodName">AddRecord</a>(
+					 RecArray theRecArray, [List values] )
+					</div>
+					<div class="Description"><p>Adds a Record to the end of the RecArray.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_recarray_allocate" class="IndexMethodName">Allocate</a>(
+					 RecArray theRecArray, Integer numRecords )
+					</div>
+					<div class="Description"><p>Allocates space into which a RecArray 
+    can expand.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_recarray_columntolist" class="IndexMethodName">ColumnToList</a>(
+					 RecArray theRecArray, Dynamic colRef )
+					</div>
+					<div class="Description"><p>Returns a List containing the values 
+    stored in a RecArray column.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_recarray_copy" class="IndexMethodName">Copy</a>(
+					 RecArray theRecArray )
+					</div>
+					<div class="Description"><p>Duplicates a RecArray.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_recarray_create" class="IndexMethodName">Create</a>(
+					 [List fieldNames], [Integer numRecords] )
+					</div>
+					<div class="Description"><p>Creates a new RecArray.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_recarray_createrecord" class="IndexMethodName">CreateRecord</a>(
+					 [List fieldNames], [List values] )
+					</div>
+					<div class="Description"><p>Creates a Record containing the specified 
+    field names and values.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_recarray_dropfield" class="IndexMethodName">DropField</a>(
+					 RecArray theRecArray, Dynamic fieldName )
+					</div>
+					<div class="Description"><p>Removes the specified field from a 
+    RecArray.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_recarray_droprecord" class="IndexMethodName">DropRecord</a>(
+					 RecArray theRecArray, Integer index1, [Integer index2] )
+					</div>
+					<div class="Description"><p>Removes one or more Records from a 
+    RecArray.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_recarray_fieldnames" class="IndexMethodName">FieldNames</a>(
+					 Dynamic theRecArray )
+					</div>
+					<div class="Description"><p>Returns the names of the fields in 
+    the specified RecArray or Record.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_recarray_getrecord" class="IndexMethodName">GetRecord</a>(
+					 Dynamic value, [Integer index] )
+					</div>
+					<div class="Description"><p>Returns a List containing the values 
+    stored in the specified Record.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_recarray_insertrecordat" class="IndexMethodName">InsertRecordAt</a>(
+					 RecArray theRecArray, Dynamic values, Integer position )
+					</div>
+					<div class="Description"><p>Inserts a Record into a RecArray at 
+    the specified position, moving all subsequent Records down.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_recarray_iscolumn" class="IndexMethodName">IsColumn</a>(
+					 Dynamic value, String fieldName )
+					</div>
+					<div class="Description"><p>Returns the Integer (1-based) index 
+    of a field in a Record or RecArray.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_recarray_renamefield" class="IndexMethodName">RenameField</a>(
+					 RecArray theRecArray, Dynamic oldField, String newField )
+					</div>
+					<div class="Description"><p>Changes the name of a field in a RecArray.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_recarray_setrecord" class="IndexMethodName">SetRecord</a>(
+					 Dynamic toReplace, Dynamic values, [Integer position] )
+					</div>
+					<div class="Description"><p>Replaces the contents of the specified 
+    Record.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_recarray_sort" class="IndexMethodName">Sort</a>(
+					 RecArray theRecArray, Dynamic sortVal, [Boolean ignoreCase] )
+					</div>
+					<div class="Description"><p>Sorts a RecArray in place according 
+    to the specified fields.</p></div>
+				</div>
+			</div>
+
+
+				<h2>Class Attributes</h2>
+				<div class="ClassAttributes">
+					
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_recarray_recarraytype">RecArrayType</a></div>
+						<div class="Description"><p>Specifies a value of type RecArray.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_recarray_recordtype">RecordType</a></div>
+						<div class="Description"><p>Specifies a value of type Record.</p></div>
+					</div>
+				
+				</div>
+
+		
+				<h2>Class Methods</h2>
+				<div class="ClassMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_recarray_addfield">AddField</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">AddField</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">RecArray</span> <span class="PrototypeArgumentName">theRecArray</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">fieldNames</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Adds a field to a RecArray if a field with the 
+    specified name does not exist. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theRecArray</span><span class="description"><p>The RecArray to which the field will 
+            be added.</p></span></div>
+											<div class="Parameter"><span class="name">fieldNames</span><span class="description"><p>Either a String indicating the name 
+            of the field to add or a List containing String elements indicating 
+            multiple fields to add.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The index of the newly added field. 
+      If the field already exists, its index is returned. If more than one field 
+      is added, the index of the last field added is returned.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_recarray_addrecord">AddRecord</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">AddRecord</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">RecArray</span> <span class="PrototypeArgumentName">theRecArray</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">List</span> <span class="PrototypeArgumentName">values</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Adds a Record to the end of the RecArray.</p>
+<p>If there are fewer elements in the <em>values</em> 
+    List than there are fields, the unspecified field values are set to Undefined. </p>
+<p>If there are more elements in the <em>values</em> 
+    List than there are fields, the extra elements in the List are ignored.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theRecArray</span><span class="description"><p>The RecArray to which the Record will 
+            be added.</p></span></div>
+											<div class="Parameter"><span class="name">values</span><span class="description"><p>An optional List of values to add, 
+            containing one value for each field in the Record. If not specified, 
+            a Record with Undefined values is added.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The position of the added Record 
+      in the RecArray. For example, if there are four Records in the specified 
+      RecArray, the result of executing the RecArray.AddRecord function would 
+      be 5.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_recarray_allocate">Allocate</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Allocate</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">RecArray</span> <span class="PrototypeArgumentName">theRecArray</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">numRecords</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Allocates space into which a RecArray can expand.</p>
+<p>This function can be used to optimize performance during RecArray creation. 
+    The most efficient procedure for filling a RecArray is to create the RecArray, 
+    use the RecArray.Allocate function to allocate space for the desired number 
+    of Records, and then add the Records.</p>
+<p>Note that the numRecords parameters specifies the desired size of the RecArray, 
+    irrespective of any existing records. For example, if <em>theRecArray</em> 
+    contains five Records and you Allocate 10, the RecArray will contain 10 Records, 
+    not 15. If you Allocate the same RecArray to three Records, the RecArray will 
+    be truncated so that it contains only three Records.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theRecArray</span><span class="description"><p>The RecArray in which to pre-allocate 
+            space.</p></span></div>
+											<div class="Parameter"><span class="name">numRecords</span><span class="description"><p>The desired size of the RecArray.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The number of records in the RecArray.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_recarray_columntolist">ColumnToList</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">List</span> 
+						<span class="PrototypeselfName">ColumnToList</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">RecArray</span> <span class="PrototypeArgumentName">theRecArray</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">colRef</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a List containing the values stored in 
+    a RecArray column. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theRecArray</span><span class="description"><p>The RecArray from which to retrieve 
+            the values.</p></span></div>
+											<div class="Parameter"><span class="name">colRef</span><span class="description"><p>Either a String containing the name 
+            or an Integer containing the (1-based) index of the desired column.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A List of values stored in the specified 
+      column. If the <em>colRef</em> parameter 
+      is not a String or an Integer, if the field name is not found, or if the 
+      index is out of range, Undefined is returned. If the RecArray contains no 
+      Records, an empty List is returned.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_recarray_copy">Copy</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">RecArray</span> 
+						<span class="PrototypeselfName">Copy</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">RecArray</span> <span class="PrototypeArgumentName">theRecArray</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Duplicates a RecArray.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theRecArray</span><span class="description"><p>The RecArray to duplicate.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A new RecArray, identical in format 
+      and content to the original.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_recarray_create">Create</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">RecArray</span> 
+						<span class="PrototypeselfName">Create</span><span class="PrototypePunctuation">(</span> <span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">List</span> <span class="PrototypeArgumentName">fieldNames</span><span class="PrototypePunctuation">]</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">numRecords</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Creates a new RecArray.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">fieldNames</span><span class="description"><p>An optional List of String names for 
+            the fields in the RecArray. If this parameter is not specified, a 
+            RecArray with no fields or Records is created. Fields can later be 
+            specified using the RecArray.AddField function; Records can be added 
+            using RecArray.AddRecord or RecArray.InsertRecordAt, or by using the 
+            index operator ([ ]).</p></span></div>
+											<div class="Parameter"><span class="name">numRecords</span><span class="description"><p>An optional Integer indicating the 
+            number of Records (containing Undefined field values) to add. No Records 
+            are added if this parameter is not specified.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A new RecArray.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_recarray_createrecord">CreateRecord</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Record</span> 
+						<span class="PrototypeselfName">CreateRecord</span><span class="PrototypePunctuation">(</span> <span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">List</span> <span class="PrototypeArgumentName">fieldNames</span><span class="PrototypePunctuation">]</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">List</span> <span class="PrototypeArgumentName">values</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Creates a Record containing the specified field 
+    names and values. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">fieldNames</span><span class="description"><p>A List of String elements indicating 
+            the desired field names. Defaults to Undefined if not specified.</p></span></div>
+											<div class="Parameter"><span class="name">values</span><span class="description"><p>The values to be stored in the Record. 
+            The values will be inserted in the order in which they are contained 
+            in the List. Defaults to Undefined if not specified.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A new Record.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_recarray_dropfield">DropField</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">DropField</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">RecArray</span> <span class="PrototypeArgumentName">theRecArray</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">fieldName</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Removes the specified field from a RecArray. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theRecArray</span><span class="description"><p>The RecArray from which the field will 
+            be removed.</p></span></div>
+											<div class="Parameter"><span class="name">fieldName</span><span class="description"><p>Either a String indicating the name 
+            or an Integer indicating the (1-based) index of the field to be dropped. 
+            If the specified field does not exist, the RecArray is not modified.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>TRUE if the specified field was 
+      removed from the RecArray.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_recarray_droprecord">DropRecord</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">DropRecord</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">RecArray</span> <span class="PrototypeArgumentName">theRecArray</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">index1</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">index2</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Removes one or more Records from a RecArray. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theRecArray</span><span class="description"><p>The RecArray from which you want to 
+            drop the Record(s).</p></span></div>
+											<div class="Parameter"><span class="name">index1</span><span class="description"><p>The Integer (1-based) index of the 
+            first Record to drop.</p></span></div>
+											<div class="Parameter"><span class="name">index2</span><span class="description"><p>The Integer (1-based) index of the 
+            last Record to drop.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>TRUE if the specified Records were 
+      removed from the RecArray.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_recarray_fieldnames">FieldNames</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">List</span> 
+						<span class="PrototypeselfName">FieldNames</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">theRecArray</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the names of the fields in the specified 
+    RecArray or Record. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theRecArray</span><span class="description"><p>The Record or RecArray whose field 
+            names you want to retrieve.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A List containing String field name 
+      elements.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_recarray_getrecord">GetRecord</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">List</span> 
+						<span class="PrototypeselfName">GetRecord</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">value</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">index</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a List containing the values stored in 
+    the specified Record. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>Either a Record whose data will be 
+            returned or a RecArray from which a specified Record's data will be 
+            returned.</p></span></div>
+											<div class="Parameter"><span class="name">index</span><span class="description"><p>An Integer (1-based) index of the Record 
+            to retrieve. Specify this parameter only if the <span class="ParameterName">value</span> 
+            parameter is a RecArray.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A List containing one element for 
+      each field in the specified Record.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_recarray_insertrecordat">InsertRecordAt</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Record</span> 
+						<span class="PrototypeselfName">InsertRecordAt</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">RecArray</span> <span class="PrototypeArgumentName">theRecArray</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">values</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">position</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Inserts a Record into a RecArray at the specified 
+    position, moving all subsequent Records down. </p>
+<p>If the <em>values</em> parameter is a List, 
+    and too few values are passed, the remaining values in the Record are Undefined. 
+    If too many values are passed, the extra values are ignored.</p>
+<p>If the <em>values</em> parameter is a Record, 
+    it should have the same format (same name and number of fields) as the RecArray 
+    into which it will be inserted. If it has a different format, a new Record 
+    is created with the proper format, and filled with values from the specified 
+    Record (the value in the first field of the specified Record is copied to 
+    the first field of the new Record, and so on). If there are too few fields 
+    in the specified Record, the new Record is padded with Undefined values. If 
+    there are too many fields in the specified Record, the extra fields are ignored.</p>
+<p>If the value of the <em>position</em> parameter 
+    is greater than the length of the RecArray, Records with all Undefined values 
+    will automatically be added to the RecArray, expanding it to include the number 
+    of Records as specified by the <em>position</em> 
+    parameter.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theRecArray</span><span class="description"><p>The RecArray to modify.</p></span></div>
+											<div class="Parameter"><span class="name">values</span><span class="description"><p>A Record or List of values to insert.</p></span></div>
+											<div class="Parameter"><span class="name">position</span><span class="description"><p>An Integer (1-based) index indicating 
+            the desired position of the new Record.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The inserted Record.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_recarray_iscolumn">IsColumn</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">IsColumn</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">value</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">fieldName</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the Integer (1-based) index of a field 
+    in a Record or RecArray.</p>
+<p>Note: it is more efficient to reference a field by its Integer index than 
+    by its String name.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>TheRecord or RecArray in which to look 
+            for the field.</p></span></div>
+											<div class="Parameter"><span class="name">fieldName</span><span class="description"><p>The field name for which to search.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The 1-based field index if found, 
+      0 otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_recarray_renamefield">RenameField</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">RenameField</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">RecArray</span> <span class="PrototypeArgumentName">theRecArray</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">oldField</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">newField</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Changes the name of a field in a RecArray.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theRecArray</span><span class="description"><p>The RecArray containing the field to 
+            rename.</p></span></div>
+											<div class="Parameter"><span class="name">oldField</span><span class="description"><p>Either a String indicating the name 
+            or an Integer indicating the (1-based) index of the field to rename.</p></span></div>
+											<div class="Parameter"><span class="name">newField</span><span class="description"><p>The new field name.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>TRUE if the field was renamed.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_recarray_setrecord">SetRecord</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Record</span> 
+						<span class="PrototypeselfName">SetRecord</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">toReplace</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">values</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">position</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Replaces the contents of the specified Record.</p>
+<p>If the <em>values</em> parameter is a List, 
+    and too few values are passed, the remaining values in the Record are Undefined. 
+    If too many values are passed, the extra values are ignored.</p>
+<p>If the <em>values</em> parameter is a Record, 
+    it should have the same format (same name and number of fields) as the RecArray 
+    in which it will be inserted. If it has a different format, a new Record is 
+    created with the proper format, and filled with values from the specified 
+    Record (the value in the first field of the specified Record is copied to 
+    the first field of the new Record, and so on). If there are too few fields 
+    in the specified Record, the new Record is padded with Undefined values. If 
+    there are too many fields in the specified Record, the extra fields are ignored 
+    and the specified Record is left unchanged.</p>
+<p>If the value of the <em>position</em> parameter 
+    is out of range, the RecArray will not be modified and Undefined will be returned.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">toReplace</span><span class="description"><p>the RecArray or Record on which to 
+            operate.</p></span></div>
+											<div class="Parameter"><span class="name">values</span><span class="description"><p>a Record or List of values for the 
+            replacement Record.</p></span></div>
+											<div class="Parameter"><span class="name">position</span><span class="description"><p>an Integer (1-based) index of the Record 
+            to replace. Do not specify if the toReplace parameter is a Record.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The replacement Record if successful; 
+      otherwise Undefined.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_recarray_sort">Sort</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">RecArray</span> 
+						<span class="PrototypeselfName">Sort</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">RecArray</span> <span class="PrototypeArgumentName">theRecArray</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">sortVal</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Boolean</span> <span class="PrototypeArgumentName">ignoreCase</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sorts a RecArray in place according to the specified 
+    fields.</p>
+<p>The maximum number of sort values the <em>sortVal</em> 
+    parameter can contain is 10.</p>
+<p>This function sorts in ascending order by default. If a negative sort index 
+    is specified, this function sorts in descending order.</p>
+<p>The <em>sortVal</em> parameter can only contain 
+    Strings or Integers. If the <em>sortVal</em> 
+    parameter contains other data types, the RecArray does not sort and a runtime 
+    error is generated.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theRecArray</span><span class="description"><p>The RecArray to sort.</p></span></div>
+											<div class="Parameter"><span class="name">sortVal</span><span class="description"><p>A String, Integer, or List indicating 
+            the fields by which to sort. If <em>sortVal</em> 
+            is a String field name or Integer field index, the RecArray is sorted 
+            by the specified column. If <em>sortVal</em> 
+            is a List, it can contain field names (Strings), field indices (Integers), 
+            or both.</p></span></div>
+											<div class="Parameter"><span class="name">ignoreCase</span><span class="description"><p>Specifies whether the sort is case-insensitive 
+            for all String values, where TRUE indicates a case-insensitive sort.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A reference to the sorted RecArray.</p></div>
+							</div>
+						</div>
+				</div>
+		
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2018 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+
+
+
+</div>
+	</div>						
+						
+
+</div>
+
+</body></html>

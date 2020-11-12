@@ -1,0 +1,100 @@
+<HTML>
+<HEAD>
+<TITLE>NewPerformer()</TITLE>
+
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<script language="JavaScript">updateParentHeader( 'Code' );</script>
+<script language="JavaScript">includeContentContainer( 'wfbuilder', true );</script>
+<p>
+
+
+<p class="title">NewPerformer()</p>
+<p class="body">
+This code sample describes how to update step information if the step is
+reassigned in Livelink.</p>
+<pre class="code">
+	Function Assoc NewPerformer( \
+		Object prgCtx, \
+		Record taskRec, \
+		Integer newID )
+
+		Assoc retVal
+		Dynamic userInfo
+		String name
+		
+		//Set some default variables and locate the initiator step object
+		//in the WebWork OSpace.
+
+		Boolean success = True
+		Integer painterInfo = 0
+		Integer performerID = 0
+		Object taskType = $WebWork.WFTaskSubsystem.GetItemByName( \
+		'Initiator' )
+		String initTitle = taskType.GetTaskName()
+		String title = taskRec.TITLE
+
+		//Determine the default title for the step based on the
+		//performer ID.
+
+		if ( !IsDefined( taskRec.PERFORMERID ) )
+			name = .GetTaskName()
+		elseif ( taskRec.PERFORMERID == 0 )
+			name = initTitle
+		else
+			userInfo = UAPI.GetByID( prgCtx.USession().fSession, \
+			taskRec.PERFORMERID )
+			if ( !IsError( userInfo ) )
+				userInfo = userInfo[ 1 ]
+				name = userInfo.NAME
+			end
+		end
+
+		//Determine the default title for the step based on the
+		//new performer ID.
+
+		if ( newID == 0 ) // Initiator
+			title = initTitle
+		elseif ( !IsDefined( newID ) ) // Generic user
+			title = .GetTaskName()
+			performerID = newID
+		else
+			performerID = newID
+			painterInfo = newID
+
+		//Determine the user name of the performer, based on their
+		//performer ID.
+
+		userInfo = UAPI.GetByID( prgCtx.USession().fSession, newID )
+		if ( !IsError( userInfo ) && Length( userInfo ) )
+			userInfo = userInfo[ 1 ]
+			
+			title = userInfo.NAME
+		end
+	end
+	//If the title of the step was set to the default title, then
+	//update it with the new default title. If the title of the step
+	//was not set to the default title, then don't change it.
+
+	if ( success )
+		if ( taskRec.TITLE == name )
+			taskRec.TITLE = title
+		end
+
+		taskRec.PERFORMERID = performerID
+		taskRec.PAINTER[ 2 ] = painterInfo
+	end
+	
+	retVal.OK = success
+	
+	return( retVal )
+end</pre>
+
+
+<script language="JavaScript">IncludeFooter();</script>
+</body>
+</html>

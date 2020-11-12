@@ -1,0 +1,186 @@
+<HTML>
+<HEAD>
+<TITLE>ReassignStep()</TITLE>
+
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<script language="JavaScript">updateParentHeader( 'Code' );</script>
+<script language="JavaScript">includeContentContainer( 'wfbuilder', true );</script>
+<p>
+
+
+<p class="title">ReassignStep()</p>
+<p class="body">
+This code sample describes how to create a script that lets workflow participants
+reassign a step on the Step Detail page.</p>
+<pre class="code">
+	Function Boolean ReassignStep( \
+		Object prgCtx, \
+		Record taskRec, \
+		Record user, \
+		Record workData, \
+		WAPIWORK work )
+
+		Assoc userInfo
+		Integer where
+		List cbData
+
+		Boolean ok = False
+		Object uSession = prgCtx.USession()
+		Object wSession = prgCtx.WSession()
+		String cr = Str.EOL()
+
+		//Determine whether a manager of a workflow has permission to
+		//reassign the step.
+		
+		if ( $WFMain.WAPIPkg.CheckWFPermissions( prgCtx, workData, \
+		$WFMain.WFConst.kWFChangeWork ) )
+		ok = wSession.StartTrans()
+
+		//If the title of the step was set to the default title, then
+		//update it with the new default title. If the title of the step
+		//was not set to the default title, then don't change it.
+
+		if ( ok )
+			userInfo = .GetDisplayInfo( prgCtx, taskRec )
+
+			ok = UpdateStepTitle( prgCtx, work, taskRec, userInfo, \
+			user )
+
+		//If the step has been assigned to a group, add a performer
+		//callback script that runs if the workflow loops back during the
+		//reassignment. If the workflow loops back, this callback makes
+		//sure that the step is reassigned to the entire group -- not just to
+		//the group member that originally accepted it.
+
+			if ( ok )
+				if ( user.TYPE != UAPI.USER )
+					cbData = { { $WFMain.WFConst.kCBSetGrpStepPerformer, \
+					user.ID } }
+				else
+					cbData = Undefined
+				end
+		
+		//Save the callback script in the database.
+			
+			ok = UpdateMapTask( prgCtx, taskRec, cbData )
+		end
+
+		//Set the performer ID to the new user ID.
+
+			if ( ok )
+				ok = UpdatePerformer( prgCtx, work, taskRec, user )
+			end
+
+			if ( !wSession.EndTrans( ok ) )
+				ok = False
+			end
+		end
+	end
+
+	return( ok )
+end
+
+	Function Boolean UpdatePerformer( \
+		Object prgCtx, \
+		WAPIWORK work, \
+		Record old, \
+		Record new )
+
+		Boolean success
+		List info
+
+		//Make the WAPI call that reassigns the step.
+
+		success = prgCtx.WSession().CheckRetVal( \
+			WAPI.ReassignTask( \
+				work, \
+				old.WORK.SUBWORKTASK_WORKID, \
+				old.WORK.SUBWORKTASK_SUBWORKID, \
+				old.WORK.SUBWORKTASK_TASKID, \
+				new.ID ) )
+		if ( success )
+			info = { 1, { Str.String( [WebWork_Message.StepReassignedTo] \
+			), new.ID } }
+
+			$WFMain.WAPIPkg.AddAuditData( prgCtx, work, info )
+			
+			old.WORK.SUBWORKTASK_PERFORMERID = new.ID
+		end
+
+		return( success )
+	end
+
+	Function Boolean UpdateStepTitle( \
+		Object prgCtx, \
+		WAPIWORK work, \
+		Record step, \
+		Assoc info, \
+		Record user )
+
+		String name
+
+		Boolean success = True
+		Object wSession = prgCtx.WSession()
+
+		//Save the new step title to the database.
+
+		if ( info.Title == step.WORK._SUBWORKTASK_PERFORMERID_Name )
+			name = user.NAME
+
+			success = wSession.CheckRetVal( WAPI.UpdateTaskAttribute( \
+							work, \
+							step.WORK.SUBWORKTASK_WORKID, \
+							step.WORK.SUBWORKTASK_SUBWORKID, \
+							step.WORK.SUBWORKTASK_TASKID, \
+							WAPI.SUBWORKTASK_TITLE, \
+							name ) )
+			if ( success )
+				step.WORK.SUBWORKTASK_TITLE = name
+			end
+		end
+
+		return( success )
+	end
+
+	Function Boolean UpdateMapTask( \
+		Object prgCtx, \
+		Record taskData, \
+		List cbData = Undefined )
+
+		Boolean success
+		WAPIMAPTASK step
+
+		Object session = prgCtx.WSession()
+		WAPIMAP map = session.AllocMap()
+		success = session.CheckRetVal( WAPI.LoadMapByID( map, \
+		taskData.WORKINFO.SUBWORK_MAPID ) )
+
+		if ( success )
+			step = WAPI.AllocNthMapTask( map, \
+			taskData.WORK.SUBWORKTASK_TASKID )
+			
+			success = session.CheckRetVal( step )
+		
+		if ( success )
+			step.pPerformerCB = cbData
+
+			WAPI.FreeMapTask( step )
+
+			success = session.CheckRetVal( WAPI.ReplaceMap( map ) )
+		end
+	end
+
+	WAPI.FreeMap( map )
+	
+	return( success )
+end</pre>
+
+
+<script language="JavaScript">IncludeFooter();</script>
+</body>
+</html>

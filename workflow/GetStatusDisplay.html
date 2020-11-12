@@ -1,0 +1,171 @@
+<HTML>
+<HEAD>
+<TITLE>GetStatusDisplay()</TITLE>
+
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<script language="JavaScript">updateParentHeader( 'Code' );</script>
+<script language="JavaScript">includeContentContainer( 'wfbuilder', true );</script>
+<p>
+
+
+<p class="title">GetStatusDisplay()</p>
+<p class="body">
+This code sample describes how to retrieve the information that is displayed
+when a workflow participant clicks the step name on the Step List page. The Step List page
+is accessed by clicking the <span class="gui">Step List</span> tab on the Detailed Status page for a workflow.</p>
+<pre class="code">
+	function Assoc GetStatusDisplay( \
+		Object prgCtx, \
+		Dynamic context, \
+		Dynamic data = Undefined )
+
+		Assoc a
+		Assoc retVal
+		Assoc tabPaneInfo
+		Assoc tmp
+		Integer whichTab
+		RecArray auditInfo
+		RecArray disposition
+		RecArray performer
+		String title
+
+		Record mapRec = context.MAP_PAINTER
+		Record step = context
+
+		whichTab = ( RecArray.IsColumn( data, 'PaneIndex' ) ) ? \
+		Str.StringToInteger( data.PaneIndex ) : 1
+
+		//Populate the tmp Assoc with Label, URL, HelpKey, and Active
+		//values. The Label value specifies the name of the tab that you
+		//are preparing for display (General). The URL value identifies
+		//the page to display on the General tab. The HelpKey value
+		//specifies the help page to display for this step type. If set
+		//to TRUE, the Active value indicates that the tab is the active
+		//tab (currently displayed). If set to FALSE, the Active value
+		//specifies that the General tab is not the active tab and must
+		//be called for display.
+
+		tmp.Label = [WebWork_HTMLLabel.General]
+		tmp.URL = $WebWork.WFPkg.SetPaneIndexArg( \
+		$WebDSP.HTMLPkg.ArgsToURL( data ), 1 )
+		tmp.HelpKey = 'User' // do not XLATE
+		tmp.Active = FALSE
+
+		//Store the tmp Assoc in a list and assign it to
+		//tabPaneInfo.TabList.
+		
+		tabPaneInfo.TabList = { tmp }
+		a.Gif = '16user.gif'
+		
+		//Determine whether the workflow participant can reassign the
+		//step by checking permissions.
+
+		a.CanReassign = $WFMain.WAPIPkg.CheckWFPermissions( \
+		prgCtx, step, $WFMain.WFConst.kWFChangeWork )
+
+		//Retrieve the disposition data for the step.
+
+		disposition = $WFMain.WAPIPkg.GetDispositionData( \
+		prgCtx, step.SUBWORKTASK_SUBWORKID, step.SUBWORKTASK_TASKID )
+
+		//If a disposition was specified for this step, add it to the
+		//Assoc of data that is passed to the HTML file so that it can be
+		//displayed.
+
+		if ( IsDefined( disposition ) && Length( disposition ) )
+			a.Disposition = Str.Quote( $LLIAPI.FormatPkg.ValToString( \
+			disposition[ 1 ].VALUE ), '&quot;' )
+		end
+
+		if ( IsDefined( step.SUBWORKTASK_PERFORMERID ) )
+			performer = UAPI.GetByID( prgCtx.USession().fSession, \
+			step.SUBWORKTASK_PERFORMERID )
+		
+		if ( !IsError( performer ) )
+			a.PerformerName = performer[ 1 ].NAME
+
+			if ( performer[ 1 ].TYPE != UAPI.USER )
+				a.Gif = '16group.gif'
+			end
+		end
+	end
+
+	a.WorkRec = step
+
+	tmp = Assoc.CreateAssoc()
+	tmp.ModuleName = 'webwork'
+	tmp.HTMLFile = 'wwtuser.html'
+	tmp.Data = a
+
+	tabPaneInfo.PaneList = { tmp }
+
+	//Retrieve the audit trail, if necessary.
+	
+	if ( whichTab == 2 )
+		auditInfo = $WFMain.WAPIPkg.GetAuditRec( \
+		prgCtx, step.WORK_WORKID, step.SUBWORK_SUBWORKID, \
+		step.SUBWORKTASK_TASKID )
+
+		if ( IsError( auditInfo ) )
+			auditInfo = Undefined
+		end
+	end
+
+	//Add the Audit tab to the Step Detail page for this type of
+	//step.
+
+	tmp = Assoc.CreateAssoc()
+	tmp.Label = [WebWork_HTMLLabel.Audit]
+	tmp.URL = $WebWork.WFPkg.SetPaneIndexArg( \
+	$WebDSP.HTMLPkg.ArgsToURL( data ), 2 )
+	tmp.HelpKey = 'Audit'
+	tmp.Active = FALSE
+
+	tabPaneInfo.TabList = { @tabPaneInfo.TabList, tmp }
+
+	tmp = Assoc.CreateAssoc()
+	tmp.ModuleName = 'webwork'
+	tmp.HTMLFile = 'audittrail.html'
+	tmp.Data = auditInfo
+
+	tabPaneInfo.PaneList = { @tabPaneInfo.PaneList, tmp }
+	tmp = .GetPackageStatusData( prgCtx, step, data, tabPaneInfo )
+
+	//Set the Active flag for the tab that is currently selected.
+
+	if ( tmp.OK )
+		if ( ( whichTab &lt; 2 ) || ( whichTab &gt; Length( \
+		tabPaneInfo.TabList ) ) )
+			whichTab = 1
+		end
+
+		tabPaneInfo.TabList[ whichTab ].Active = TRUE
+	end
+
+	//Set up an Assoc that returns all of the data required by
+	//Livelink to draw the Step Detail page.
+
+	retVal.OK = tmp.OK
+	retVal.ErrMsg = tmp.ErrMsg
+	retVal.HTMLFile = &quot;wwt.html&quot;
+	retVal.ModuleName = 'webwork'
+	retVal.Tab = whichTab
+	retVal.TabInfo = tabPaneInfo
+	retVal.Data = step
+
+	//Set the masthead information so that the correct header is
+	//displayed at the top of the Step Detail page.
+
+	retVal.HeaderArgs = $WebWork.WFPkg.GetHeaderTypeArgs( 'STATUS', \
+	step.SUBWORK_TITLE )
+	return( retVal )
+	end</pre>
+
+<script language="JavaScript">IncludeFooter();</script>
+</body>
+</html>

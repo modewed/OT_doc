@@ -1,0 +1,608 @@
+
+<meta charset="UTF-8">
+<html>
+<head><title>Class: DOMElement</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../syntax.css" type="text/css">
+<link rel="stylesheet" href="builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td  align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody></table>
+
+<div id="document">
+	
+<div class="sidebar_container">
+		
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink"><a href="assoc.html">Assoc</a></div>
+				<div class="packagelink"><a href="boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="builder.html">Builder</a></div>
+				<div class="packagelink"><a href="bytes.html">Bytes</a></div>
+				<div class="packagelink"><a href="capi.html">CAPI</a></div>
+				<div class="packagelink"><a href="capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink"><a href="cachetree.html">CacheTree</a></div>
+				<div class="packagelink"><a href="compiler.html">Compiler</a></div>
+				<div class="packagelink"><a href="core.html">Core</a></div>
+				<div class="packagelink"><a href="dapi.html">DAPI</a></div>
+				<div class="packagelink"><a href="dapinode.html">DAPINODE</a></div>
+				<div class="packagelink"><a href="dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink"><a href="dapiversion.html">DAPIVERSION</a></div>
+				<div class="packagelink"><a href="domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="domcomment.html">DOMComment</a></div>
+				<div class="packagelink"><a href="domdocument.html">DOMDocument</a></div>
+				<div class="packagelink"><a href="domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink curPage">DOMElement</div>
+				<div class="packagelink"><a href="domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink"><a href="domnamednodemap.html">DOMNamedNodeMap</a></div>
+				<div class="packagelink"><a href="domnode.html">DOMNode</a></div>
+				<div class="packagelink"><a href="domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="domtext.html">DOMText</a></div>
+				<div class="packagelink"><a href="date.html">Date</a></div>
+				<div class="packagelink"><a href="dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="env.html">Env</a></div>
+				<div class="packagelink"><a href="error.html">Error</a></div>
+				<div class="packagelink"><a href="file.html">File</a></div>
+				<div class="packagelink"><a href="filecopy.html">FileCopy</a></div>
+				<div class="packagelink"><a href="fileprefs.html">Fileprefs</a></div>
+				<div class="packagelink"><a href="frame.html">Frame</a></div>
+				<div class="packagelink"><a href="global.html">Global</a></div>
+				<div class="packagelink"><a href="integer.html">Integer</a></div>
+				<div class="packagelink"><a href="javaobject.html">JavaObject</a></div>
+				<div class="packagelink"><a href="language.html">Language</a></div>
+				<div class="packagelink"><a href="license.html">License</a></div>
+				<div class="packagelink"><a href="list.html">List</a></div>
+				<div class="packagelink"><a href="logging.html">Logging</a></div>
+				<div class="packagelink"><a href="long.html">Long</a></div>
+				<div class="packagelink"><a href="mailmessage.html">MailMessage</a></div>
+				<div class="packagelink"><a href="math.html">Math</a></div>
+				<div class="packagelink"><a href="memcached.html">Memcached</a></div>
+				<div class="packagelink"><a href="notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="object.html">Object</a></div>
+				<div class="packagelink"><a href="pop3session.html">POP3Session</a></div>
+				<div class="packagelink"><a href="patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="patfind.html">PatFind</a></div>
+				<div class="packagelink"><a href="pattern.html">Pattern</a></div>
+				<div class="packagelink"><a href="point.html">Point</a></div>
+				<div class="packagelink"><a href="profiler.html">Profiler</a></div>
+				<div class="packagelink"><a href="real.html">Real</a></div>
+				<div class="packagelink"><a href="recarray.html">RecArray</a></div>
+				<div class="packagelink"><a href="record.html">Record</a></div>
+				<div class="packagelink"><a href="regex.html">Regex</a></div>
+				<div class="packagelink"><a href="restclient.html">RestClient</a></div>
+				<div class="packagelink"><a href="saxparser.html">SAXParser</a></div>
+				<div class="packagelink"><a href="smtpsession.html">SMTPSession</a></div>
+				<div class="packagelink"><a href="ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="script.html">Script</a></div>
+				<div class="packagelink"><a href="security.html">Security</a></div>
+				<div class="packagelink"><a href="set.html">Set</a></div>
+				<div class="packagelink"><a href="socket.html">Socket</a></div>
+				<div class="packagelink"><a href="sql.html">Sql</a></div>
+				<div class="packagelink"><a href="sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink"><a href="str.html">Str</a></div>
+				<div class="packagelink"><a href="string.html">String</a></div>
+				<div class="packagelink"><a href="system.html">System</a></div>
+				<div class="packagelink"><a href="uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="void.html">Void</a></div>
+				<div class="packagelink"><a href="wapi.html">WAPI</a></div>
+				<div class="packagelink"><a href="wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink"><a href="web.html">Web</a></div>
+				<div class="packagelink"><a href="xslprocessor.html">XSLProcessor</a></div>
+				<div class="packagelink"><a href="zip.html">Zip</a></div>
+		</div>
+</div>
+
+	<div class="content_container">
+		<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+		<h1>Class: DOMElement</h1><div class="ClassDescription"><p>By far the vast majority of objects (apart from text)    that authors encounter when traversing a document are Element nodes. Assume    the following XML document:</p>
+<div class="codehilite"><pre><span class="o">&lt;</span>elementexample id<span class="o">=</span><span class="s">&quot;demo&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span>subelement<span class="m">1</span><span class="o">/&gt;</span>
+      <span class="o">&lt;</span>subelement<span class="m">2</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span>subsubelement<span class="o">/&gt;</span>
+    <span class="o">&lt;/</span>subelement<span class="m">2</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span>elementexample<span class="o">&gt;</span>
+</pre></div>
+
+
+<p>When represented using DOM, the top node is a Document node containing an Element  node for "elementExample" which contains two child Element nodes, one for "subelement1"  and one for "subelement2". "subelement1" contains no child nodes. Elements may  have attributes associated with them; since the Element interface inherits from  Node, the generic Node interface attribute attributes may be used to retrieve  the set of all attributes for an element. There are methods on the Element interface  to retrieve either an Attr object by name or an attribute value by name. In XML,  where an attribute value may contain entity references, an Attr object should  be retrieved to examine the possibly fairly complex sub-tree representing the  attribute value. On the other hand, in HTML, where all attributes have simple  string values, methods to directly access an attribute value can safely be used  as a convenience. </p></div>
+
+
+
+			<h2>Instance Methods</h2>
+			<div class="InstanceMethodsShort">
+				<div class="Method">					
+					<div class="Name"><a href="#im_domelement_getattribute" class="IndexMethodName">GetAttribute</a>(
+					 String name )
+					</div>
+					<div class="Description"><p>Retrieves the attribute value by name.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domelement_getattributenode" class="IndexMethodName">GetAttributeNode</a>(
+					 String arg1 )
+					</div>
+					<div class="Description"><p>Retrieves an attribute node by name.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domelement_getattributenodens" class="IndexMethodName">GetAttributeNodeNS</a>(
+					 String namespaceURI, String localName )
+					</div>
+					<div class="Description"><p>Retrieves a DOMAttr node by local name and namespace URI.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domelement_getattributens" class="IndexMethodName">GetAttributeNS</a>(
+					 String namespaceURI, String localName )
+					</div>
+					<div class="Description"><p>Retrieves an attribute value by local name and namespace URI.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domelement_getelementsbytagname" class="IndexMethodName">GetElementsByTagName</a>(
+					 String name )
+					</div>
+					<div class="Description"><p>Returns the list of descendant 
+    elements with the given name.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domelement_getelementsbytagnamens" class="IndexMethodName">GetElementsByTagNameNS</a>(
+					 String namespaceURI, String localName )
+					</div>
+					<div class="Description"><p>Returns a DOMNodeList of all the DOMElement with a given local name and namespace URI.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domelement_gettagname" class="IndexMethodName">GetTagName</a>(
+					)
+					</div>
+					<div class="Description"><p>The name of the element.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domelement_hasattribute" class="IndexMethodName">HasAttribute</a>(
+					 String attrName )
+					</div>
+					<div class="Description"><p>Determines if this element has the attribute specified by attrName</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domelement_hasattributens" class="IndexMethodName">HasAttributeNS</a>(
+					 String namespaceURI, String localName )
+					</div>
+					<div class="Description"><p>Determines if this element has the attribute specified by namespaceURI and localName</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domelement_normalize" class="IndexMethodName">Normalize</a>(
+					)
+					</div>
+					<div class="Description"><p>Merges adjacent text nodes.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domelement_removeattribute" class="IndexMethodName">RemoveAttribute</a>(
+					 String name )
+					</div>
+					<div class="Description"><p>Removes the specified attribute 
+    node.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domelement_removeattributenode" class="IndexMethodName">RemoveAttributeNode</a>(
+					 DOMAttr oldAttr )
+					</div>
+					<div class="Description"><p>Removes the attribute specified by the local name and namespace URI.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domelement_removeattributens" class="IndexMethodName">RemoveAttributeNS</a>(
+					 String namespaceURI, String localName )
+					</div>
+					<div class="Description"><p>Adds a new attribute or alters an existing one.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domelement_setattribute" class="IndexMethodName">SetAttribute</a>(
+					 String name, String value )
+					</div>
+					<div class="Description"><p>Adds a new attribute node.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domelement_setattributenode" class="IndexMethodName">SetAttributeNode</a>(
+					 DOMAttr newAttr )
+					</div>
+					<div class="Description"><p>Adds a new attribute.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domelement_setattributenodens" class="IndexMethodName">SetAttributeNodeNS</a>(
+					 DOMAttr newAttr )
+					</div>
+					<div class="Description"><p>Adds a new attribute.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domelement_setattributens" class="IndexMethodName">SetAttributeNS</a>(
+					 String namespaceURI, String qualifiedName, String value )
+					</div>
+					<div class="Description"></div>
+				</div>
+			</div>
+
+
+		
+				<h2>Instance Methods</h2>
+				<div class="InstanceMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domelement_getattribute">GetAttribute</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">GetAttribute</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">name</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Retrieves the attribute value by name.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">name</span><span class="description"><p>The name of the attribute to retrieve</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The value of the attribute.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domelement_getattributenode">GetAttributeNode</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMAttr</span> 
+						<span class="PrototypeselfName">GetAttributeNode</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">arg1</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Retrieves an attribute node by name. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">arg1</span><span class="description"><p>Name of the attribute to retrieve.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The DOMAttr node with the specified 
+      name (nodeName) or null if there is no such attribute.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domelement_getattributenodens">GetAttributeNodeNS</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMAttr</span> 
+						<span class="PrototypeselfName">GetAttributeNodeNS</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">namespaceURI</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">localName</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Retrieves a DOMAttr node by local name and namespace URI. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">namespaceURI</span><span class="description"><p>Name of the attribute to retrieve.</p></span></div>
+											<div class="Parameter"><span class="name">localName</span><span class="description"><p>Name of the attribute to retrieve.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The DOMAttr node with the specified 
+      namespaceURI and localName or null if there is no such attribute.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domelement_getattributens">GetAttributeNS</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">GetAttributeNS</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">namespaceURI</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">localName</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Retrieves an attribute value by local name and namespace URI. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">namespaceURI</span><span class="description"><p>The namespace URI of the attribute to retrieve.</p></span></div>
+											<div class="Parameter"><span class="name">localName</span><span class="description"><p>The local name of the attribute to retrieve.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The attribute value spedified by local name and namespace URI.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domelement_getelementsbytagname">GetElementsByTagName</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMNodeList</span> 
+						<span class="PrototypeselfName">GetElementsByTagName</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">name</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a NodeList of all descendant elements 
+    with a given tag name, in the order in which they would be encountered in 
+    a preorder traversal of the Element tree. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">name</span><span class="description"><p>The name of the tag to match on. The 
+            special value "*" matches all tags.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A list of matching Element nodes.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domelement_getelementsbytagnamens">GetElementsByTagNameNS</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMNodeList</span> 
+						<span class="PrototypeselfName">GetElementsByTagNameNS</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">namespaceURI</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">localName</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a DOMNodeList of all the DOMElement with a given local name and namespace URI in 
+    the order in which they would be encountered in a preorder traversal of the DOMDocument
+    tree, starting from this node. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">namespaceURI</span><span class="description"><p>The namespace URI of the elements to match on. The special value "*" matches all namespaces.</p></span></div>
+											<div class="Parameter"><span class="name">localName</span><span class="description"><p>The local name of the elements to match on. The special value "*" matches all local names.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A DOMNodeList of all the DOMElement with a given local name and namespace URI</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domelement_gettagname">GetTagName</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">GetTagName</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>The name of the element. </p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The name of the element.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domelement_hasattribute">HasAttribute</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">HasAttribute</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">attrName</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Determines if this element contains the attribute specified by attrName. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">attrName</span><span class="description"><p>The name of the attribute to look for.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>TRUE if attrName exists, FALSE otherwise</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domelement_hasattributens">HasAttributeNS</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">HasAttributeNS</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">namespaceURI</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">localName</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Determines if this element contains the attribute specified by namespaceURI and localName </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">namespaceURI</span><span class="description"><p>The namespace URI of the attribute to look for.</p></span></div>
+											<div class="Parameter"><span class="name">localName</span><span class="description"><p>The local name of the attribute to look for.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>TRUE if the attribute exists, FALSE otherwise</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domelement_normalize">Normalize</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Void</span> 
+						<span class="PrototypeselfName">Normalize</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Puts all Text nodes in the full depth of the sub-tree 
+    underneath this Node, including attribute nodes, into a "normal" form where 
+    only markup (e.g., tags, comments, processing instructions, CDATA sections, 
+    and entity references) separates Text nodes, i.e., there are no adjacent Text 
+    nodes. This can be used to ensure that the DOM view of a document is the same 
+    as if it were saved and re-loaded, and is useful when operations (such as 
+    XPointer lookups) that depend on a particular document tree structure are 
+    to be used. </p>
+<p>Note: In cases where the document contains CDATASections, 
+    the normalize operation alone may not be sufficient, since XPointers do not 
+    differentiate between Text nodes and CDATASection nodes. </p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domelement_removeattribute">RemoveAttribute</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Void</span> 
+						<span class="PrototypeselfName">RemoveAttribute</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">name</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Removes an attribute by name. If the removed attribute 
+    is known to have a default value, an attribute immediately appears containing 
+    the default value.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">name</span><span class="description"><p>Name of the attribute to remove.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domelement_removeattributenode">RemoveAttributeNode</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMAttr</span> 
+						<span class="PrototypeselfName">RemoveAttributeNode</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">DOMAttr</span> <span class="PrototypeArgumentName">oldAttr</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Removes the specified attribute node. If the removed 
+    Attr has a default value it is immediately replaced. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">oldAttr</span><span class="description"><p>The attribute node to remove.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The Attr node that was removed.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domelement_removeattributens">RemoveAttributeNS</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Void</span> 
+						<span class="PrototypeselfName">RemoveAttributeNS</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">namespaceURI</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">localName</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Removes an attribute by local name and namespace URI. If the
+        removed attribute has a default value it is immediately replaced.
+        The replacing attribute has the same namespace URI and local name, as well as
+        the original prefix. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">namespaceURI</span><span class="description"><p>The namespace URI of the attribute to remove.</p></span></div>
+											<div class="Parameter"><span class="name">localName</span><span class="description"><p>The local name of the attribute to remove.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domelement_setattribute">SetAttribute</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Void</span> 
+						<span class="PrototypeselfName">SetAttribute</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">name</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">value</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Adds a new attribute. If an attribute with that 
+    name is already present in the element, its value is changed to be that of 
+    the value parameter. This value is a simple string, it is not parsed as it 
+    is being set. So any markup (such as syntax to be recognized as an entity 
+    reference) is treated as literal text, and needs to be appropriately escaped 
+    by the implementation when it is written out. In order to assign an attribute 
+    value that contains entity references, the user must create an Attr node plus 
+    any Text and EntityReference nodes, build the appropriate subtree, and use 
+    setAttributeNode to assign it as the value of an attribute. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">name</span><span class="description"><p>Name of the attribute to create or 
+            alter.</p></span></div>
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>Value to set in string form.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domelement_setattributenode">SetAttributeNode</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMAttr</span> 
+						<span class="PrototypeselfName">SetAttributeNode</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">DOMAttr</span> <span class="PrototypeArgumentName">newAttr</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Adds a new attribute node. If an attribute with 
+    that name (nodeName) is already present in the element, it is replaced by 
+    the new one. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">newAttr</span><span class="description"><p>The attribute node to add.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>If the newAttr attribute replaces 
+      an existing attribute, the replaced Attr node is returned, otherwise undefined 
+      is returned.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domelement_setattributenodens">SetAttributeNodeNS</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMAttr</span> 
+						<span class="PrototypeselfName">SetAttributeNodeNS</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">DOMAttr</span> <span class="PrototypeArgumentName">newAttr</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Adds a new attribute.If an attribute with that local name and namespace URI is already 
+    present in the element, it is replaced by the new one.. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">newAttr</span><span class="description"><p>The DOMAttr node to add to the attribute list.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>If the newAttr attribute replaces an existing
+         attribute with the same local name and namespace URI,
+         the replaced DOMAttr node is
+         returned, otherwise undefined is returned.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domelement_setattributens">SetAttributeNS</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Void</span> 
+						<span class="PrototypeselfName">SetAttributeNS</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">namespaceURI</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">qualifiedName</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">value</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Adds a new attribute. If an attribute with the same
+        local name and namespace URI is already present on the element, its prefix
+        is changed to be the prefix part of the qualifiedName, and
+        its value is changed to be the value parameter. This value is
+        a simple string, it is not parsed as it is being set. So any markup (such
+        as syntax to be recognized as an entity reference) is treated as literal
+        text, and needs to be appropriately escaped by the implementation when it
+        is written out. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">namespaceURI</span><span class="description"><p>The namespace URI of the attribute to create or alter.</p></span></div>
+											<div class="Parameter"><span class="name">qualifiedName</span><span class="description"><p>The qualified name of the attribute to create or alter.</p></span></div>
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>The value to set in string form.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"></div>
+							</div>
+						</div>
+				</div>
+		
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2018 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+
+
+
+</div>
+	</div>						
+						
+
+</div>
+
+</body></html>

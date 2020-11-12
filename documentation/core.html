@@ -1,0 +1,1130 @@
+
+<meta charset="UTF-8">
+<html>
+<head><title>Class: Core</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../syntax.css" type="text/css">
+<link rel="stylesheet" href="builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td  align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody></table>
+
+<div id="document">
+	
+<div class="sidebar_container">
+		
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink"><a href="assoc.html">Assoc</a></div>
+				<div class="packagelink"><a href="boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="builder.html">Builder</a></div>
+				<div class="packagelink"><a href="bytes.html">Bytes</a></div>
+				<div class="packagelink"><a href="capi.html">CAPI</a></div>
+				<div class="packagelink"><a href="capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink"><a href="cachetree.html">CacheTree</a></div>
+				<div class="packagelink"><a href="compiler.html">Compiler</a></div>
+				<div class="packagelink curPage">Core</div>
+				<div class="packagelink"><a href="dapi.html">DAPI</a></div>
+				<div class="packagelink"><a href="dapinode.html">DAPINODE</a></div>
+				<div class="packagelink"><a href="dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink"><a href="dapiversion.html">DAPIVERSION</a></div>
+				<div class="packagelink"><a href="domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="domcomment.html">DOMComment</a></div>
+				<div class="packagelink"><a href="domdocument.html">DOMDocument</a></div>
+				<div class="packagelink"><a href="domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink"><a href="domelement.html">DOMElement</a></div>
+				<div class="packagelink"><a href="domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink"><a href="domnamednodemap.html">DOMNamedNodeMap</a></div>
+				<div class="packagelink"><a href="domnode.html">DOMNode</a></div>
+				<div class="packagelink"><a href="domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="domtext.html">DOMText</a></div>
+				<div class="packagelink"><a href="date.html">Date</a></div>
+				<div class="packagelink"><a href="dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="env.html">Env</a></div>
+				<div class="packagelink"><a href="error.html">Error</a></div>
+				<div class="packagelink"><a href="file.html">File</a></div>
+				<div class="packagelink"><a href="filecopy.html">FileCopy</a></div>
+				<div class="packagelink"><a href="fileprefs.html">Fileprefs</a></div>
+				<div class="packagelink"><a href="frame.html">Frame</a></div>
+				<div class="packagelink"><a href="global.html">Global</a></div>
+				<div class="packagelink"><a href="integer.html">Integer</a></div>
+				<div class="packagelink"><a href="javaobject.html">JavaObject</a></div>
+				<div class="packagelink"><a href="language.html">Language</a></div>
+				<div class="packagelink"><a href="license.html">License</a></div>
+				<div class="packagelink"><a href="list.html">List</a></div>
+				<div class="packagelink"><a href="logging.html">Logging</a></div>
+				<div class="packagelink"><a href="long.html">Long</a></div>
+				<div class="packagelink"><a href="mailmessage.html">MailMessage</a></div>
+				<div class="packagelink"><a href="math.html">Math</a></div>
+				<div class="packagelink"><a href="memcached.html">Memcached</a></div>
+				<div class="packagelink"><a href="notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="object.html">Object</a></div>
+				<div class="packagelink"><a href="pop3session.html">POP3Session</a></div>
+				<div class="packagelink"><a href="patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="patfind.html">PatFind</a></div>
+				<div class="packagelink"><a href="pattern.html">Pattern</a></div>
+				<div class="packagelink"><a href="point.html">Point</a></div>
+				<div class="packagelink"><a href="profiler.html">Profiler</a></div>
+				<div class="packagelink"><a href="real.html">Real</a></div>
+				<div class="packagelink"><a href="recarray.html">RecArray</a></div>
+				<div class="packagelink"><a href="record.html">Record</a></div>
+				<div class="packagelink"><a href="regex.html">Regex</a></div>
+				<div class="packagelink"><a href="restclient.html">RestClient</a></div>
+				<div class="packagelink"><a href="saxparser.html">SAXParser</a></div>
+				<div class="packagelink"><a href="smtpsession.html">SMTPSession</a></div>
+				<div class="packagelink"><a href="ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="script.html">Script</a></div>
+				<div class="packagelink"><a href="security.html">Security</a></div>
+				<div class="packagelink"><a href="set.html">Set</a></div>
+				<div class="packagelink"><a href="socket.html">Socket</a></div>
+				<div class="packagelink"><a href="sql.html">Sql</a></div>
+				<div class="packagelink"><a href="sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink"><a href="str.html">Str</a></div>
+				<div class="packagelink"><a href="string.html">String</a></div>
+				<div class="packagelink"><a href="system.html">System</a></div>
+				<div class="packagelink"><a href="uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="void.html">Void</a></div>
+				<div class="packagelink"><a href="wapi.html">WAPI</a></div>
+				<div class="packagelink"><a href="wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink"><a href="web.html">Web</a></div>
+				<div class="packagelink"><a href="xslprocessor.html">XSLProcessor</a></div>
+				<div class="packagelink"><a href="zip.html">Zip</a></div>
+		</div>
+</div>
+
+	<div class="content_container">
+		<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+		<h1>Class: Core</h1><div class="ClassDescription"><p>The Core class contains a set of functions and constants   that are integral to the effective use of OScript. For all intents and purposes,   these entities are intrinsics in the language, which is why no class prefix   is required when using them.</p>
+<p>Most of the Core methods and attributes deal with   the dynamic datatypes available within OScript, including comparison and testing   of these datatypes, as well as a variety of constants indicating the datatype   numbers of the builtin types.</p>
+<p>A bit of background on OScript's dynamic datatyping   might be in order here. Every value within OScript has a specific datatype associated   with it. This datatype determines the behavior of the value within the OScript   environment; for example, Strings behave decidedly different than Integers.   Associated with each datatype is a datatype name and an integer. Given a value,   the type number can be obtained with the Type() function. Given a type number,   the name can be obtained with the DatatypeName() function. The Core class contains   constants corresponding to the type numbers for various basic types (such as IntegerType,   StringType, ListType).</p>
+<p>In addition, there are a few miscellaneous functions   that are in the intrinsic Core package for unfortunate historical reasons:</p>
+<ul>
+<li>IsNotSet()</li>
+<li>IsSet()</li>
+<li>Point()</li>
+<li>PointH()</li>
+<li>PointV()</li>
+</ul></div>
+			<h2>Class Attributes</h2>
+			<div class="ClassAttributesShort">
+				
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_core_booleantype">BooleanType</a></div>
+					<div class="Description"><p>A constant indicating the datatype
+    number of the datatype Boolean.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_core_bytestype">BytesType</a></div>
+					<div class="Description"><p>A constant indicating the datatype
+    number of the datatype Bytes.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_core_datetype">DateType</a></div>
+					<div class="Description"><p>A constant indicating the datatype
+    number of the datatype Date.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_core_dynamictype">DynamicType</a></div>
+					<div class="Description"><p>A constant indicating the datatype
+    number of the datatype Dynamic.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_core_errortype">ErrorType</a></div>
+					<div class="Description"><p>A constant indicating the datatype
+    number of the datatype Error.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_core_externtype">ExternType</a></div>
+					<div class="Description"><p>A constant indicating the datatype
+    number of the datatype Extern.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_core_false">False</a></div>
+					<div class="Description"><p>A constant indicating the Boolean
+    value FALSE.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_core_integertype">IntegerType</a></div>
+					<div class="Description"><p>A constant indicating the datatype
+    number of the datatype Integer.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_core_listtype">ListType</a></div>
+					<div class="Description"><p>A constant indicating the datatype
+    number of the datatype List.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_core_objecttype">ObjectType</a></div>
+					<div class="Description"><p>A constant indicating the datatype
+    number of the datatype Object.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_core_objreftype">ObjRefType</a></div>
+					<div class="Description"><p>A constant indicating the datatype
+    number of the datatype ObjRef.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_core_pointtype">PointType</a></div>
+					<div class="Description"><p>A constant indicating the datatype
+    number of the datatype Point.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_core_realtype">RealType</a></div>
+					<div class="Description"><p>A constant indicating the datatype
+    number of the datatype Real.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_core_scripttype">ScriptType</a></div>
+					<div class="Description"><p>A constant indicating the datatype
+    number of the datatype Script.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_core_stringtype">StringType</a></div>
+					<div class="Description"><p>A constant indicating the datatype
+    number of the datatype String.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_core_true">True</a></div>
+					<div class="Description"><p>A constant indicating the Boolean
+    value TRUE.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_core_undefined">Undefined</a></div>
+					<div class="Description"><p>A constant indicating the Undefined
+    value Undefined.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_core_undefinedtype">UndefinedType</a></div>
+					<div class="Description"><p>A constant indicating the datatype
+    number of the datatype Undefined.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_core_voidtype">VoidType</a></div>
+					<div class="Description"><p>A constant indicating the datatype
+    void.</p></div>
+				</div>
+				
+			</div>
+
+
+			<h2>Class Methods</h2>
+			<div class="ClassMethodsShort">
+				<div class="Method">
+					<div class="Name"><a href="#cm_core_datatypename" class="IndexMethodName">DatatypeName</a>(
+					 Integer typeNumber )
+					</div>
+					<div class="Description"><p>For a type number, returns a String
+    containing the corresponding type name.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_core_echo" class="IndexMethodName">Echo</a>(
+					 [Dynamic firstValue] )
+					</div>
+					<div class="Description"><p>Converts arguments to a string display
+    format and emits the result to the debug/log output with a log level of INFO. (Alias of EchoInfo)</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_core_echodebug" class="IndexMethodName">EchoDebug</a>(
+					 [Dynamic firstValue] )
+					</div>
+					<div class="Description"><p>Converts arguments to a string display
+    format and emits the result to the debug/log output with a log level of DEBUG.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_core_echoerror" class="IndexMethodName">EchoError</a>(
+					 [Dynamic firstValue] )
+					</div>
+					<div class="Description"><p>Converts arguments to a string display
+    format and emits the result to the output/log with a log level of ERROR.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_core_echoinfo" class="IndexMethodName">EchoInfo</a>(
+					 [Dynamic firstValue] )
+					</div>
+					<div class="Description"><p>Converts arguments to a string display
+    format and emits the result to the debug/log output with a log level of INFO.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_core_echostamp" class="IndexMethodName">EchoStamp</a>(
+					 Boolean enable )
+					</div>
+					<div class="Description"><p>Enables/disables a timestamp prefix on
+    Echo output.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_core_echowarn" class="IndexMethodName">EchoWarn</a>(
+					 [Dynamic firstValue] )
+					</div>
+					<div class="Description"><p>Converts arguments to a string display
+    format and emits the result to the output/log with a log level of WARN.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_core_getfeatures" class="IndexMethodName">GetFeatures</a>(
+					 Dynamic firstValue, [Boolean dummy] )
+					</div>
+					<div class="Description"></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_core_isdefined" class="IndexMethodName">IsDefined</a>(
+					 Dynamic testValue )
+					</div>
+					<div class="Description"><p>Determines whether a value is not Undefined.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_core_iserror" class="IndexMethodName">IsError</a>(
+					 Dynamic testValue, [Error compareValue] )
+					</div>
+					<div class="Description"><p>Determines whether a value is of datatype
+    Error.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_core_isfeature" class="IndexMethodName">IsFeature</a>(
+					 Dynamic object, Dynamic feature )
+					</div>
+					<div class="Description"><p>Indicates whether a value has the
+    given feature.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_core_isinvokable" class="IndexMethodName">IsInvokable</a>(
+					 Dynamic testValue )
+					</div>
+					<div class="Description"><p>Indicates whether the specified value
+    can be invoked.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_core_isnoterror" class="IndexMethodName">IsNotError</a>(
+					 Dynamic testValue, [Error compareValue] )
+					</div>
+					<div class="Description"><p>Determines whether a value is of datatype
+    Error and, if so, optionally tests equality against another Error value.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_core_isnotset" class="IndexMethodName">IsNotSet</a>(
+					 Dynamic testValue )
+						<span class="Deprecated">Deprecated</span>
+					</div>
+					<div class="Description"><p>Determines whether a value
+    is the special pseudo-value NotSet. </p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_core_isobject" class="IndexMethodName">IsObject</a>(
+					 Dynamic testValue )
+					</div>
+					<div class="Description"><p>Determines whether a value
+    is of datatype Object.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_core_isset" class="IndexMethodName">IsSet</a>(
+					 Dynamic testValue )
+						<span class="Deprecated">Deprecated</span>
+					</div>
+					<div class="Description"><p>Determines whether a value
+    is not the special pseudo-value NotSet. </p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_core_isundefined" class="IndexMethodName">IsUndefined</a>(
+					 Dynamic testValue )
+					</div>
+					<div class="Description"><p>Determines whether a value is the
+    special value Undefined.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_core_length" class="IndexMethodName">Length</a>(
+					 Dynamic value )
+					</div>
+					<div class="Description"><p>Returns the length of the specified
+    value.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_core_maxreal" class="IndexMethodName">MaxReal</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns the maximum Real value (in double precision).</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_core_minreal" class="IndexMethodName">MinReal</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns the minimum Real value (in double precision).</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_core_nparameters" class="IndexMethodName">NParameters</a>(
+					)
+					</div>
+					<div class="Description"></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_core_parameters" class="IndexMethodName">Parameters</a>(
+					 [Integer whichArg] )
+					</div>
+					<div class="Description"><p>Access the actual parameter values
+    from within the currently executing OScript function.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_core_point" class="IndexMethodName">Point</a>(
+					 Integer hCoord, Integer vCoord )
+						<span class="Deprecated">Deprecated</span>
+					</div>
+					<div class="Description"><p>Construct a Point value
+    from two coordinates. </p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_core_pointh" class="IndexMethodName">PointH</a>(
+					 Point somePoint )
+						<span class="Deprecated">Deprecated</span>
+					</div>
+					<div class="Description"><p>Return the H coordinate
+    from the specified point. </p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_core_pointv" class="IndexMethodName">PointV</a>(
+					 Point somePoint )
+						<span class="Deprecated">Deprecated</span>
+					</div>
+					<div class="Description"><p>Return the V coordinate
+    from the specified point. </p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_core_type" class="IndexMethodName">Type</a>(
+					 Dynamic testValue )
+					</div>
+					<div class="Description"><p>Returns the datatype number corresponding to
+    the type of the given value.</p></div>
+				</div>
+			</div>
+
+
+				<h2>Class Attributes</h2>
+				<div class="ClassAttributes">
+					
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_core_booleantype">BooleanType</a></div>
+						<div class="Description"><p>A constant indicating the datatype number
+  of the datatype Boolean.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_core_bytestype">BytesType</a></div>
+						<div class="Description"><p>A constant indicating the datatype number
+  of the datatype Bytes.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_core_datetype">DateType</a></div>
+						<div class="Description"><p>A constant indicating the datatype number
+  of the datatype Date.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_core_dynamictype">DynamicType</a></div>
+						<div class="Description"><p>A constant indicating the datatype number
+  of the pseudo-datatype Dynamic.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_core_errortype">ErrorType</a></div>
+						<div class="Description"><p>A constant indicating the datatype number
+  of the datatype Error.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_core_externtype">ExternType</a></div>
+						<div class="Description"><p>A constant indicating the datatype number
+  of the datatype Extern.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Boolean <a name="ca_core_false">False</a></div>
+						<div class="Description"><p>A constant indicating the Boolean constant
+  FALSE.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_core_integertype">IntegerType</a></div>
+						<div class="Description"><p>A constant indicating the datatype number
+  of the datatype Integer.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_core_listtype">ListType</a></div>
+						<div class="Description"><p>A constant indicating the datatype number
+  of the datatype List.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_core_objecttype">ObjectType</a></div>
+						<div class="Description"><p>A constant indicating the datatype number
+  of the datatype Object.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_core_objreftype">ObjRefType</a></div>
+						<div class="Description"><p>A constant indicating the datatype number
+  of the datatype ObjRef.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_core_pointtype">PointType</a></div>
+						<div class="Description"><p>A constant indicating the datatype number
+  of the datatype Point.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_core_realtype">RealType</a></div>
+						<div class="Description"><p>A constant indicating the datatype number
+  of the datatype Real.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_core_scripttype">ScriptType</a></div>
+						<div class="Description"><p>A constant indicating the datatype number
+  of the datatype Script.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_core_stringtype">StringType</a></div>
+						<div class="Description"><p>A constant indicating the datatype number
+  of the datatype String.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Boolean <a name="ca_core_true">True</a></div>
+						<div class="Description"><p>A constant indicating the Boolean value
+  TRUE.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Undefined <a name="ca_core_undefined">Undefined</a></div>
+						<div class="Description"><p>A constant indicating the special value Undefined,
+  which is of datatype Undefined.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_core_undefinedtype">UndefinedType</a></div>
+						<div class="Description"><p>A constant indicating the datatype number
+  of the datatype Undefined.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_core_voidtype">VoidType</a></div>
+						<div class="Description"><p>A constant indicating the datatype number of the datatype void.</p></div>
+					</div>
+				
+				</div>
+
+		
+				<h2>Class Methods</h2>
+				<div class="ClassMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_core_datatypename">DatatypeName</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">DatatypeName</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">typeNumber</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>For a type number, returns a String containing
+    the corresponding type name. If there is no loaded type, then Undefined is returned.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">typeNumber</span><span class="description"><p>The datatype number.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String containing the name of
+      the type specified by <em>typeNumber</em>.
+      If the specified type number does not
+      correspond to a loaded type, this will return Undefined.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>This is intended to be used for debugging
+      purposes and in conjunction with <a class="interdoc" href="#cm_core_type">Core.Type()</a>.</p>
+<p>Here is an example:</p>
+<div class="codehilite"><pre>  <span class="kt">String</span>  x
+  echo<span class="p">(</span> DatatypeName<span class="p">(</span> Type<span class="p">(</span> x <span class="p">)</span> <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output from the example is:</p>
+<div class="codehilite"><pre>  <span class="kt">String</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_core_echo">Echo</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Void</span> 
+						<span class="PrototypeselfName">Echo</span><span class="PrototypePunctuation">(</span> <span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">firstValue</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts arguments to a string display format
+    and emits the result to the debug/log output with a level of INFO. This
+    function terminates its output with a newline. If no arguments are specified,
+    then only a newline is emitted. A maximum of 127 arguments can be passed.
+        This method is an alias of EchoInfo.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">firstValue</span><span class="description"><p>First value to be echoed/logged.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Undefined</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_core_echodebug">EchoDebug</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Void</span> 
+						<span class="PrototypeselfName">EchoDebug</span><span class="PrototypePunctuation">(</span> <span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">firstValue</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts arguments to a string display format
+    and emits the result to the debug/log output with a level of DEBUG. This
+    function terminates its output with a newline. If no arguments are specified,
+    then only a newline is emitted. A maximum of 127 arguments can be passed.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">firstValue</span><span class="description"><p>First value to be echoed/logged.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Undefined</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_core_echoerror">EchoError</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Void</span> 
+						<span class="PrototypeselfName">EchoError</span><span class="PrototypePunctuation">(</span> <span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">firstValue</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts arguments to a string display format
+    and emits the result to the debug/log output with a level of ERROR. This
+    function terminates its output with a newline. If no arguments are specified,
+    then only a newline is emitted. A maximum of 127 arguments can be passed.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">firstValue</span><span class="description"><p>First value to be echoed/logged.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Undefined</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_core_echoinfo">EchoInfo</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Void</span> 
+						<span class="PrototypeselfName">EchoInfo</span><span class="PrototypePunctuation">(</span> <span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">firstValue</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts arguments to a string display format
+    and emits the result to the debug/log output with a level of INFO. This
+    function terminates its output with a newline. If no arguments are specified,
+    then only a newline is emitted. A maximum of 127 arguments can be passed.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">firstValue</span><span class="description"><p>First value to be echoed/logged.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Undefined</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_core_echostamp">EchoStamp</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Void</span> 
+						<span class="PrototypeselfName">EchoStamp</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Boolean</span> <span class="PrototypeArgumentName">enable</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Enables/disables a timestamp prefix for all Echo output.  When enabled,
+    a timestamp will be prepended to all Echo, EchoError, EchoDebug, and EchoWarn statements in the
+    format "mm/dd/YYY HH:MM:SS [ssss] ", where ssss is the current system tick count in microseconds.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">enable</span><span class="description"><p>True to enable the timestamp, false to disable.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Undefined</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_core_echowarn">EchoWarn</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Void</span> 
+						<span class="PrototypeselfName">EchoWarn</span><span class="PrototypePunctuation">(</span> <span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">firstValue</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts arguments to a string display format
+    and emits the result to the debug/log output with a level of WARN. This
+    function terminates its output with a newline. If no arguments are specified,
+    then only a newline is emitted. A maximum of 127 arguments can be passed.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">firstValue</span><span class="description"><p>First value to be echoed/logged.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Undefined</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_core_getfeatures">GetFeatures</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">List</span> 
+						<span class="PrototypeselfName">GetFeatures</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">firstValue</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Boolean</span> <span class="PrototypeArgumentName">dummy</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p><span class="InternalUseOnly">Internal use only</span>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">firstValue</span><span class="description"><p>First value.</p></span></div>
+											<div class="Parameter"><span class="name">dummy</span><span class="description"><p>Unused.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A list.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_core_isdefined">IsDefined</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">IsDefined</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">testValue</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Determines whether a value is not Undefined.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">testValue</span><span class="description"><p>The value to evaluate.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>FALSE if the value is Undefined, TRUE
+      otherwise.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Note that this will return TRUE for values of type
+      Error. </p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_core_iserror">IsError</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">IsError</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">testValue</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Error</span> <span class="PrototypeArgumentName">compareValue</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Determines whether a value is of datatype Error
+    and, if so, optionally tests equality against a second error value
+    if <em>compareValue</em> is specified.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">testValue</span><span class="description"><p>Value to test.</p></span></div>
+											<div class="Parameter"><span class="name">compareValue</span><span class="description"><p>Value to compare.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>If called with one argument, then
+      this function returns TRUE if the type of the argument is Error. If called
+      with two arguments, then this returns TRUE if both arguments are of
+      type Error and are identical.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_core_isfeature">IsFeature</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">IsFeature</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">object</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">feature</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Indicates whether a value has the given feature.
+    Note that this function applies to any datatype that can be dotted (e.g.,
+    Record, Assoc, Object) and it performs the appropriate type-specific function.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">object</span><span class="description"><p>Object-like value</p></span></div>
+											<div class="Parameter"><span class="name">feature</span><span class="description"><p>Feature</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>TRUE if the object has the specified
+      feature, FALSE otherwise.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>This function has a type-specific equivalent function
+      for most datatypes. The following table illustrates these equivalents:</p>
+<p>Here is an example:</p>
+<div class="codehilite"><pre>  <span class="kt">Assoc</span> a <span class="o">=</span> <span class="kt">Assoc</span><span class="o">.</span>CreateAssoc<span class="p">()</span>
+  a<span class="o">.</span>someKey <span class="o">=</span> <span class="s">&quot;Hello&quot;</span>
+  <span class="k">if</span> IsFeature<span class="p">(</span> a<span class="p">,</span> <span class="s">&quot;someKey&quot;</span> <span class="p">)</span>
+    echo<span class="p">(</span> <span class="s">&quot;Yes&quot;</span> <span class="p">)</span>
+  <span class="k">else</span>
+    echo<span class="p">(</span> <span class="s">&quot;No&quot;</span> <span class="p">)</span>
+  <span class="k">end</span>
+</pre></div>
+
+
+<p>The output from the example is:</p>
+<div class="codehilite"><pre>  Yes
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_core_isinvokable">IsInvokable</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">IsInvokable</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">testValue</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Indicates whether the specified value can be invoked.
+    Note that currently, only <a class="interdoc" href="script.html">Script</a> values are invokable.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">testValue</span><span class="description"><p>Value to examine for invokability.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>TRUE if the value can be invoked.
+      FALSE otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_core_isnoterror">IsNotError</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">IsNotError</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">testValue</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Error</span> <span class="PrototypeArgumentName">compareValue</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Determines whether a value is of datatype Error
+    and optionally compares two error values for equality. If compareValue is
+    specified, then it is compared with testValue.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">testValue</span><span class="description"><p>Value to test</p></span></div>
+											<div class="Parameter"><span class="name">compareValue</span><span class="description"><p>Value to compare</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>If a single argument is specified,
+      this returns FALSE if testValue is of datatype Error. If both arguments
+      are specified, this will return FALSE if testValue is of datatype Error
+      and is equal to compareValue. This function will return TRUE otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_core_isnotset">IsNotSet</a></h3>
+
+								<span class="Deprecated">Deprecated</span>
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">IsNotSet</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">testValue</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Determines whether a value is the
+    special pseudo-value NotSet. This value is a special value used in conjunction
+    with Assoc. See <a class="interdoc" href="assoc.html#cm_assoc_notsetvalue">Assoc.NotSetValue()</a>
+    for more information.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">testValue</span><span class="description"><p>Value to evaluate</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>FALSE if the value is the special
+      value returned by Assoc.NotSetValue(), TRUE otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_core_isobject">IsObject</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">IsObject</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">testValue</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Determines whether a value is of datatype Object.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">testValue</span><span class="description"><p>Value to evaluate</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>TRUE if the value is of datatype Object, FALSE otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_core_isset">IsSet</a></h3>
+
+								<span class="Deprecated">Deprecated</span>
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">IsSet</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">testValue</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Determines whether a value is not
+    the special pseudo-value NotSet. This value is a special value used in conjunction
+    with Assoc. See <a class="interdoc" href="assoc.html#cm_assoc_notsetvalue">Assoc.NotSetValue()</a> for more information. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">testValue</span><span class="description"><p>Value to evaluate</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>TRUE if the value is not the special
+      value returned by Assoc.NotSetValue(), FALSE otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_core_isundefined">IsUndefined</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">IsUndefined</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">testValue</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Determines whether a value is the special value
+    Undefined. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">testValue</span><span class="description"><p>Value to evaluate.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>TRUE if the value is Undefined,
+      FALSE otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_core_length">Length</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Length</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">value</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the length of the specified value.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>Value to return length of.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The length of the specified value.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_core_maxreal">MaxReal</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Real</span> 
+						<span class="PrototypeselfName">MaxReal</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the maximum Real value.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>the maximum Real value.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_core_minreal">MinReal</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Real</span> 
+						<span class="PrototypeselfName">MinReal</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the minimum Real value.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>the minimum Real value.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_core_nparameters">NParameters</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">NParameters</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Indicates the number of actual parameters passed
+    to the current function. Useful when variable argument lists are used. Note
+    that defaulted parameters count as parameters with respect to this function.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The number of actual and/or defaulted
+      parameters passed to the current function.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_core_parameters">Parameters</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Dynamic</span> 
+						<span class="PrototypeselfName">Parameters</span><span class="PrototypePunctuation">(</span> <span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">whichArg</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Access the actual parameter values from within
+    the currently executing OScript function. This is especially useful with variable
+    argument lists, since it permits unnamed parameters to be examined.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">whichArg</span><span class="description"><p>Index (1-based) of desired parameter</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>If no index is specified, then this
+      will return a list of the actual parameters passed to the current function.
+      If an index is specified, then the parameter with the given index will be
+      returned. If an out-of-bounds index is specified, this function will return
+      Undefined.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is an example:</p>
+<div class="codehilite"><pre>  <span class="k">function</span> <span class="kt">void</span> main<span class="p">()</span>
+    joe<span class="p">(</span> <span class="m">1</span> <span class="p">)</span>
+    joe<span class="p">(</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span> <span class="p">)</span>
+    joe<span class="p">(</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span> <span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="k">function</span> <span class="kt">void</span> joe<span class="p">(</span> <span class="kt">Integer</span> a<span class="p">,</span> <span class="kt">Integer</span> b <span class="o">=</span> <span class="m">5</span><span class="p">,</span> <span class="o">...</span> <span class="p">)</span>
+    echo<span class="p">(</span> <span class="s">&quot;NParameters()=&quot;</span><span class="p">,</span> NParameters<span class="p">()</span> <span class="p">)</span>
+    echo<span class="p">(</span> <span class="s">&quot;Parameters()=&quot;</span><span class="p">,</span> Parameters<span class="p">()</span> <span class="p">)</span>
+    echo<span class="p">(</span> <span class="s">&quot;Parameters( 3 )=&quot;</span><span class="p">,</span> Parameters<span class="p">(</span> <span class="m">3</span> <span class="p">)</span> <span class="p">)</span>
+    echo<span class="p">()</span>
+  <span class="k">end</span>
+</pre></div>
+
+
+<p>The output from the example is:</p>
+<div class="codehilite"><pre> NParameters<span class="p">()</span><span class="o">=</span><span class="m">2</span>
+  Parameters<span class="p">()</span><span class="o">=</span><span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="m">5</span><span class="p">}</span>
+  Parameters<span class="p">(</span> <span class="m">3</span> <span class="p">)</span><span class="o">=?</span>
+
+  NParameters<span class="p">()</span><span class="o">=</span><span class="m">2</span>
+  Parameters<span class="p">()</span><span class="o">=</span><span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">}</span>
+  Parameters<span class="p">(</span> <span class="m">3</span> <span class="p">)</span><span class="o">=?</span>
+
+  NParameters<span class="p">()</span><span class="o">=</span><span class="m">3</span>
+  Parameters<span class="p">()</span><span class="o">=</span><span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">}</span>
+  Parameters<span class="p">(</span> <span class="m">3</span> <span class="p">)</span><span class="o">=</span><span class="m">3</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_core_point">Point</a></h3>
+
+								<span class="Deprecated">Deprecated</span>
+
+							<div class="signature"><span class="PrototypeReturnValueType">Point</span> 
+						<span class="PrototypeselfName">Point</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">hCoord</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">vCoord</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Construct a Point value from two coordinates.
+    Note that the coordinate values must be between -32768 and +32767.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">hCoord</span><span class="description"><p>The H coordinate</p></span></div>
+											<div class="Parameter"><span class="name">vCoord</span><span class="description"><p>The V coordinate</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A Point value consisting of the
+      specified coordinates.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_core_pointh">PointH</a></h3>
+
+								<span class="Deprecated">Deprecated</span>
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">PointH</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Point</span> <span class="PrototypeArgumentName">somePoint</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Return the H coordinate from the specified
+    point.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">somePoint</span><span class="description"><p>Point value from which the
+            H coordinate is to be extracted.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The H coordinate of the specified
+      point.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_core_pointv">PointV</a></h3>
+
+								<span class="Deprecated">Deprecated</span>
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">PointV</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Point</span> <span class="PrototypeArgumentName">somePoint</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Return the V coordinate from a Point
+    value. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">somePoint</span><span class="description"><p>Point value from which the
+            V coordinate is to be extracted.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The V coordinate of the specified
+      point.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_core_type">Type</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Type</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">testValue</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the datatype number indicating the type
+    of the given value.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">testValue</span><span class="description"><p>Value for which
+            the corresponding type number is returned.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The datatype number for the specified
+      value.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is an example:</p>
+<div class="codehilite"><pre>  <span class="kt">String</span>  x
+  echo<span class="p">(</span> Type<span class="p">(</span> x <span class="p">)</span> <span class="p">)</span>
+  echo<span class="p">(</span> DatatypeName<span class="p">(</span> Type<span class="p">(</span> x <span class="p">)</span> <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output from the example is:</p>
+<div class="codehilite"><pre> <span class="o">-</span><span class="m">1</span>
+  <span class="kt">String</span>
+</pre></div></div>
+							</div>
+						</div>
+				</div>
+		
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2018 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+
+
+
+</div>
+	</div>						
+						
+
+</div>
+
+</body></html>

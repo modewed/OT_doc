@@ -1,0 +1,294 @@
+
+<meta charset="UTF-8">
+<html>
+<head><title>Class: DOMNamedNodeMap</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../syntax.css" type="text/css">
+<link rel="stylesheet" href="builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td  align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody></table>
+
+<div id="document">
+	
+<div class="sidebar_container">
+		
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink"><a href="assoc.html">Assoc</a></div>
+				<div class="packagelink"><a href="boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="builder.html">Builder</a></div>
+				<div class="packagelink"><a href="bytes.html">Bytes</a></div>
+				<div class="packagelink"><a href="capi.html">CAPI</a></div>
+				<div class="packagelink"><a href="capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink"><a href="cachetree.html">CacheTree</a></div>
+				<div class="packagelink"><a href="compiler.html">Compiler</a></div>
+				<div class="packagelink"><a href="core.html">Core</a></div>
+				<div class="packagelink"><a href="dapi.html">DAPI</a></div>
+				<div class="packagelink"><a href="dapinode.html">DAPINODE</a></div>
+				<div class="packagelink"><a href="dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink"><a href="dapiversion.html">DAPIVERSION</a></div>
+				<div class="packagelink"><a href="domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="domcomment.html">DOMComment</a></div>
+				<div class="packagelink"><a href="domdocument.html">DOMDocument</a></div>
+				<div class="packagelink"><a href="domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink"><a href="domelement.html">DOMElement</a></div>
+				<div class="packagelink"><a href="domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink curPage">DOMNamedNodeMap</div>
+				<div class="packagelink"><a href="domnode.html">DOMNode</a></div>
+				<div class="packagelink"><a href="domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="domtext.html">DOMText</a></div>
+				<div class="packagelink"><a href="date.html">Date</a></div>
+				<div class="packagelink"><a href="dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="env.html">Env</a></div>
+				<div class="packagelink"><a href="error.html">Error</a></div>
+				<div class="packagelink"><a href="file.html">File</a></div>
+				<div class="packagelink"><a href="filecopy.html">FileCopy</a></div>
+				<div class="packagelink"><a href="fileprefs.html">Fileprefs</a></div>
+				<div class="packagelink"><a href="frame.html">Frame</a></div>
+				<div class="packagelink"><a href="global.html">Global</a></div>
+				<div class="packagelink"><a href="integer.html">Integer</a></div>
+				<div class="packagelink"><a href="javaobject.html">JavaObject</a></div>
+				<div class="packagelink"><a href="language.html">Language</a></div>
+				<div class="packagelink"><a href="license.html">License</a></div>
+				<div class="packagelink"><a href="list.html">List</a></div>
+				<div class="packagelink"><a href="logging.html">Logging</a></div>
+				<div class="packagelink"><a href="long.html">Long</a></div>
+				<div class="packagelink"><a href="mailmessage.html">MailMessage</a></div>
+				<div class="packagelink"><a href="math.html">Math</a></div>
+				<div class="packagelink"><a href="memcached.html">Memcached</a></div>
+				<div class="packagelink"><a href="notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="object.html">Object</a></div>
+				<div class="packagelink"><a href="pop3session.html">POP3Session</a></div>
+				<div class="packagelink"><a href="patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="patfind.html">PatFind</a></div>
+				<div class="packagelink"><a href="pattern.html">Pattern</a></div>
+				<div class="packagelink"><a href="point.html">Point</a></div>
+				<div class="packagelink"><a href="profiler.html">Profiler</a></div>
+				<div class="packagelink"><a href="real.html">Real</a></div>
+				<div class="packagelink"><a href="recarray.html">RecArray</a></div>
+				<div class="packagelink"><a href="record.html">Record</a></div>
+				<div class="packagelink"><a href="regex.html">Regex</a></div>
+				<div class="packagelink"><a href="restclient.html">RestClient</a></div>
+				<div class="packagelink"><a href="saxparser.html">SAXParser</a></div>
+				<div class="packagelink"><a href="smtpsession.html">SMTPSession</a></div>
+				<div class="packagelink"><a href="ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="script.html">Script</a></div>
+				<div class="packagelink"><a href="security.html">Security</a></div>
+				<div class="packagelink"><a href="set.html">Set</a></div>
+				<div class="packagelink"><a href="socket.html">Socket</a></div>
+				<div class="packagelink"><a href="sql.html">Sql</a></div>
+				<div class="packagelink"><a href="sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink"><a href="str.html">Str</a></div>
+				<div class="packagelink"><a href="string.html">String</a></div>
+				<div class="packagelink"><a href="system.html">System</a></div>
+				<div class="packagelink"><a href="uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="void.html">Void</a></div>
+				<div class="packagelink"><a href="wapi.html">WAPI</a></div>
+				<div class="packagelink"><a href="wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink"><a href="web.html">Web</a></div>
+				<div class="packagelink"><a href="xslprocessor.html">XSLProcessor</a></div>
+				<div class="packagelink"><a href="zip.html">Zip</a></div>
+		</div>
+</div>
+
+	<div class="content_container">
+		<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+		<h1>Class: DOMNamedNodeMap</h1><div class="ClassDescription"><p>Objects implementing the DOMNamedNodeMap interface    are used to represent collections of nodes that can be accessed by name. Note    that NamedNodeMap does not inherit from NodeList; NamedNodeMaps are not maintained    in any particular order. Objects contained in an object implementing NamedNodeMap    may also be accessed by an ordinal index, but this is simply to allow convenient    enumeration of the contents of a NamedNodeMap, and does not imply that the DOM    specifies an order to these Nodes. </p></div>
+
+
+
+			<h2>Instance Methods</h2>
+			<div class="InstanceMethodsShort">
+				<div class="Method">					
+					<div class="Name"><a href="#im_domnamednodemap_getlength" class="IndexMethodName">GetLength</a>(
+					)
+					</div>
+					<div class="Description"><p>The number of nodes in the map. 
+    The range of valid child node indices is 0 to length-1 inclusive.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domnamednodemap_getnameditem" class="IndexMethodName">GetNamedItem</a>(
+					 String name )
+					</div>
+					<div class="Description"><p>Retrieves a node specified by name.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domnamednodemap_item" class="IndexMethodName">Item</a>(
+					 Integer index )
+					</div>
+					<div class="Description"><p>Returns the indexth item in the 
+    map. If index is greater than or equal to the number of nodes in the map, 
+    this returns null.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domnamednodemap_removenameditem" class="IndexMethodName">RemoveNamedItem</a>(
+					 String name )
+					</div>
+					<div class="Description"><p>Removes a node specified by name.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domnamednodemap_setnameditem" class="IndexMethodName">SetNamedItem</a>(
+					 DOMNode node )
+					</div>
+					<div class="Description"><p>Adds a node using its nodeName 
+    attribute. As the nodeName attribute is used to derive the name which the 
+    node must be stored under, multiple nodes of certain types (those that have 
+    a "special" string value) cannot be stored as the names would clash. This 
+    is seen as preferable to allowing nodes to be aliased.</p></div>
+				</div>
+			</div>
+
+
+		
+				<h2>Instance Methods</h2>
+				<div class="InstanceMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domnamednodemap_getlength">GetLength</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">GetLength</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>The number of nodes in the map. The range of valid 
+    child node indices is 0 to length-1 inclusive. </p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The number of nodes in the map.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domnamednodemap_getnameditem">GetNamedItem</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMNode</span> 
+						<span class="PrototypeselfName">GetNamedItem</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">name</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Retrieves a node specified by name. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">name</span><span class="description"><p>The name of the node.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A Node (of any type) with the specified 
+      nodeName, or null if it does not identify any node in the map.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domnamednodemap_item">Item</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMNode</span> 
+						<span class="PrototypeselfName">Item</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">index</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the indexth item in the map. If index 
+    is greater than or equal to the number of nodes in the map, this returns null. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">index</span><span class="description"><p>Index into the map.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The node at the indexth position 
+      in the NamedNodeMap, or null if that is not a valid index.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domnamednodemap_removenameditem">RemoveNamedItem</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMNode</span> 
+						<span class="PrototypeselfName">RemoveNamedItem</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">name</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Removes a node specified by name. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">name</span><span class="description"><p>The nodeName of the node to remove. 
+            When this NamedNodeMap contains the attributes attached to an element, 
+            as returned by the attributes attribute of the Node interface, if 
+            the removed attribute is known to have a default value, an attribute 
+            immediately appears containing the default value as well as the corresponding 
+            namespace URI, local name, and prefix when applicable.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The node removed from the map if 
+      a node with such a name exists.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domnamednodemap_setnameditem">SetNamedItem</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMNode</span> 
+						<span class="PrototypeselfName">SetNamedItem</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">DOMNode</span> <span class="PrototypeArgumentName">node</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Adds a node using its nodeName attribute. As the 
+    nodeName attribute is used to derive the name which the node must be stored 
+    under, multiple nodes of certain types (those that have a "special" string 
+    value) cannot be stored as the names would clash. This is seen as preferable 
+    to allowing nodes to be aliased.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">node</span><span class="description"><p>A node to store in a named node map. 
+            The node will later be accessible using the value of the nodeName 
+            attribute of the node. If a node with that name is already present 
+            in the map, it is replaced by the new one.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>If the new Node replaces an existing 
+      node the replaced Node is returned, otherwise null is returned.</p></div>
+							</div>
+						</div>
+				</div>
+		
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2018 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+
+
+
+</div>
+	</div>						
+						
+
+</div>
+
+</body></html>

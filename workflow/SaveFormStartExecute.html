@@ -1,0 +1,161 @@
+<HTML>
+<HEAD>
+<TITLE>SaveFormStart -- Execute()</TITLE>
+
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<script language="JavaScript">updateParentHeader( 'Code' );</script>
+<script language="JavaScript">includeContentContainer( 'wfbuilder', true );</script>
+<p>
+
+
+<p class="title">SaveFormStart -- Execute()</p>
+<p class="body">This code sample describes how to validate request handler arguments for the
+SaveFormStart request handler. After you edit this script, you must run it to set the
+fPrototype feature for the request handler.</p>
+<pre>
+		function Dynamic Execute( Dynamic ctxIn, Dynamic ctxOut, Record r )
+			Assoc 		form
+			Assoc 		formData
+			Assoc 		mapData
+			Assoc 		status
+			Assoc 		tmp
+
+			DAPINODE 	template
+			String 		name
+			Object 		prgCtx = .prgSession()
+			
+			//Load the workflow map.
+		mapData = $WebWFP.WFPkg.LoadMap( prgCtx, r.LL_ID )
+		
+			if ( mapData.OK )
+			//Locate the specified form in the work package.
+				formData = GetForm( \
+				mapData.MapInfo.WORK_PACKAGES, r.LL_FormName )
+				if ( IsDefined( formData ) )
+					form = formData.Form
+					template = form.Template
+			//Retrieve the data that was entered into the form.
+					status = $WebForm.WebFormSubsystem.ValuesFromRequest( \
+							prgCtx, \
+							template, \
+							r, \
+							this )
+				if ( .CheckError( status ) )
+					form.Template = Undefined
+			//Store the values from the HTML page (form) into the
+			//workflow.
+			
+					for name in Assoc.Keys( status.FormInfo )
+						form.Data.( name ) = status.FormInfo.( name )
+					end
+			//Store the data in the workflow map definition.
+					formData.Record.USERDATA[ formData.Index ] = form
+			//Save the workflow map definition.
+					if ( !$WebWFP.WFPkg.SaveMap( prgCtx, mapData.MapInfo, \
+							mapData.MapHolder, True ) )
+						status.OK = False
+						status.ErrMsg = Str.Format(
+						[WebWFP_ErrMsg.CouldNotSaveMap1], \
+							prgCtx.WSession().fErrorMsg )
+					end
+				end
+			//Reset LL_NextURL to NextURL and set the NextURL to
+			//display.
+				tmp = Assoc.FromRecord( r )
+				tmp.NextURL = ( r.LL_NextURL[ 1 ] == '%' ) ? \
+					Web.UnEscape( tmp.LL_NextURL ) : tmp.LL_NextURL
+				r = Assoc.ToRecord( tmp )
+				$WebForm.WebFormSubsystem.RedirectAfterSave( template, \
+					ctxOut, this, r, status )
+			else
+				.fError = Str.Format( 'Could not find form &quot;%1&quot; \
+							in map.', \
+							r.LL_FormName )
+			end
+			else
+				.fError = mapData.ErrMsg
+			end
+
+			return Undefined
+			end
+		
+		function Assoc GetForm( \
+			RecArray work_packages, \
+			String formName )
+
+			Assoc 		form
+			Assoc 		status
+			Integer 	templateID
+			Integer 	where
+			List 		forms
+			List 		key
+			Record 		r
+			Assoc 		retVal = Undefined
+			Boolean 	found = False
+			Integer 	index = 1
+			Object 		objType = $WFMain.WFPackageSubsystem.GetItemByName( \
+						'Form' ) // No XLATE
+			Object 		prgCtx = .prgSession()
+			//Find the form's data type in the workflow's work package and
+			//prepare it for use.
+
+			if ( IsDefined( objType ) )
+				key = { objType.fType, objType.fSubType }
+				for r in work_packages
+					if ( key == { r.TYPE, r.SUBTYPE } )
+						forms = r.USERDATA = objType.ReadyForModification( \
+								prgCtx, r.USERDATA )
+						break
+					end
+				end
+			end
+				for form in forms
+					if ( form.Name == formName )
+						templateID = form.TemplateID
+						found = True
+					else
+						where = formName in form.SubForms
+					if ( IsDefined( where ) && ( where > 0 ) )
+						templateID = form.SubFormTemplateIDs[ where ]
+						found = True
+					end
+				end
+			//Look through all the forms and sub-forms that are
+			//available to the workflow and see if the specified
+			//form exists. If the form is found, store the information
+			//about the form in an Assoc and return it so that it can be
+			//used to display the form.
+			
+			if ( found )
+				status = $FormApi.TemplateSubsystem.TemplateNodeFromID( \
+						templateID, \
+						prgCtx.DSession() )
+				if ( status.OK )
+					form.Template = status.Template
+				if ( !IsDefined( form.Data ) )
+					form.Data = Assoc.CreateAssoc()
+				end
+
+			retVal = Assoc.CreateAssoc()
+			retVal.Form = form
+			retVal.Record = r
+			retVal.Index = index
+		
+			else
+				echo( 'Could not find template for ', formName )
+			end
+		break
+		end
+		index += 1
+	end
+
+	return( retVal )
+end</pre>
+<script language="JavaScript">IncludeFooter();</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<HTML>
+<HEAD>
+<TITLE>CBExecute()</TITLE>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+</HEAD>
+
+<BODY CLASS="Body" TEXT="Black" BGCOLOR="White" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<script language="JavaScript">updateParentHeader( 'Code' );</script>
+<script language="JavaScript">includeContentContainer( 'wfbuilder', true );</script>
+<p>
+
+
+<p class="title">CBExecute()</p>
+<p class="body">
+This code sample describes how to handle the callback scripts that can be used
+with the custom display step type.</p>
+<pre class="code">
+	Function Assoc CBExecute( \
+		Object prgCtx, \
+		WAPIWORK work, \
+		Integer workID, \
+		Integer subWorkID, \
+		Integer taskID, \
+		Integer returnSubWorkID, \
+		Integer returnTaskID, \
+		List info, \
+		Dynamic extraData = Undefined )
+		Assoc data
+		Dynamic retVal
+		Boolean handled = True
+
+		//If the callback script that is being executed is one of the
+		/scripts that is added by the custom display step type, then run
+		//the script.
+
+		switch( info[ 1 ] )
+			case 500
+				retVal = $Custmod.UtilityPkg.ExecuteCustTaskScript( \
+				prgCtx, work, workID, subWorkID, taskID, info[ 2 ] )
+			end
+			default
+				handled = False
+			end
+		end
+		data.Handled = handled
+		data.retVal = retVal
+		return( data )
+	end</pre>
+
+
+<script language="JavaScript">IncludeFooter();</script>
+</body>
+</html>

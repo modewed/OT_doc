@@ -1,0 +1,145 @@
+<HTML>
+<HEAD>
+<TITLE>Variables</TITLE>
+
+<link rel="stylesheet" href="../llhelp2000.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<SCRIPT language=JavaScript>IncludeHeader( 'olang2', 'Variables' )</SCRIPT>
+
+
+<p class="title">Variables</p>
+
+<p class="body">Variables are named storage locations with values that can change. Variable names 
+can contain letters, numbers, and underscore characters ( _ ), but must start with a letter. These 
+names are <span class="emph">not</span> case-sensitive and can be no longer than 255 characters.</P>
+
+<p class="body">Open Text recommends that you give your variables meaningful descriptive names; for example, variables named <span class="code">count</span>, <span class="code">contents</span>, and <span class="code">defaultValue</span> are more 
+meaningful than variables named <span class="code">x</span>, <span class="code">y</span>, and <span class="code">z</span>. </P>
+
+<p class="body">You cannot give your variables names corresponding to reserved words. Examples of 
+reserved words include:</P>
+
+<ul class="body">
+<li>Control keywords (for example: <span class="code">end</span>, 
+<span class="code">if</span>, <span class="code">while</span>)</P>
+<li>Function keywords (for example: <span class="code">function</span>, 
+<span class="code">return</span>, <span class="code">void</span>)</P>
+<li>Data type keywords (for example: <span class="code">Integer</span>, 
+<span class="code">String</span>, <span class="code">Real</span>)</P>
+<li>Unprefixed constants (for example: <span class="code">FALSE</span>, 
+<span class="code">TRUE</span>, <span class="code">IntegerType</span>)</P>
+<li>Unprefixed built-in function names (for example: <span class="code">Echo</span>, 
+<span class="code">Open</span>)</P>
+<li>Built-in function package names (for example: <span class="code">Math</span>, 
+<span class="code">Dialog</span>)</P>
+<li>Operators (for example: <span class="code">and</span>, <span class="code">or</span>)</P></ul>
+
+<p class="body">For a complete listing of OScript reserved words, see <a href="reserved.html"> 
+<span class="emph">Reserved Words</span></a>. </P>
+<p class="body">Any of these reserved words can be used as <span class="emph">part</span> of your variable name 
+(for example, <span class="code">openPage</span> and <span class="code">ifExists</span> are valid variable names).</P>
+
+<p class="subh2">Declaration</P>
+<p class="body">A variable declaration associates a data type (for example: Boolean, File, String) 
+with a variable. The declared variable can then assume a value of the specified type, Undefined, or 
+Error.</P>
+<p class="body">A variable declaration consists of a data type name followed by one or more 
+spaces and/or tabs and a list (separated by commas) of one or more variable names of that type. A typical set of variable declarations might look like this:</P>
+
+<pre>		Integer numberOfItems
+		Boolean found, modified
+		File libraryDoc, externalDoc</pre>
+
+<p class="body">Variables should be declared before they are used. If you do not declare a 
+variable, the OScript compiler implicitly assumes it to be <span class="emph">Dynamic</span>, allowing its type to 
+change. The compiler performs no type checking on Dynamic variables.</P>
+
+<p class="body">Variables can be initialized in their declaration. To specify an initial value in 
+your variable declaration, follow the variable name with the OScript assignment operator and an 
+initial value. For example:</P>
+
+<pre>		Integer numberOfItems = 6
+		Date rightNow = Date.Now()
+		String strDate = Str.String( rightNow ) </pre>
+
+<p class="body">If you attempt to assign a value to an undeclared variable, a warning message is 
+generated when you compile the script, indicating that the variable has not been declared. If you 
+do not correct this error, the compiler assumes you intended to create a new Dynamic local 
+variable.</P>
+
+<p class="body">Variable declarations can be placed anywhere in your script but are commonly 
+found at the beginning of the script, making it easier to read.</P>
+
+<p class="subh2">Scope</P>
+<p class="body">The scope of a variable defines the range over which it is accessible. OScript 
+allows you to define both local variables and global variables, each with a different scope.</P>
+
+<p class="subh2">Local Variables</P>
+<p class="body">Local variables are defined only within the script, function, or control statement 
+in which they are declared. </P>
+
+<ul class="body">
+<LI>If a <span class="gui">script </span>contains a call to another script, the variables defined in the calling script are not accessible to the called script, and the variables defined in the called script cannot be 
+accessed by the calling script.</LI></p>
+<LI>If you create a <span class="gui">function</span>, the variables defined within the function are not accessible outside of the function and the variables defined outside of the function are not accessible by the 
+function.</li></p>
+<LI>If you declare a variable inside a <span class="gui">control statement </span>(a loop or conditional structure), the variable is not accessible outside of the loop, even if the statements are all part of the 
+same script or function.</li></ul>
+
+<p class="body">For example, if your script contains a call to another script:</P>
+
+<pre>		Integer result
+		result = CalledScript()</pre>
+
+<p class="body">The variable <span class="code">result</span>, defined in the calling script, 
+is not accessible to <span class="code">CalledScript</span>.</P>
+<p class="body">Or, for example:</P>
+
+<pre>		Integer	myNumber
+		String	myText
+		myText = subFunction()
+		function void subFunction()
+				...block of code...
+		end<br></pre>
+
+<p class="body">References to <span class="code">myNumber</span> or 
+<span class="code">myText</span> from within the function 
+<span class="code">subFunction</span> are invalid since they are defined outside of 
+<span class="code">subFunction</span>. For more information about functions and how 
+they are defined, see the <span class="emph">Functions</span> section.</P>
+<p class="body">Or, for example:</P>
+
+<pre>		Integer myNumber = 1
+		while ( myNumber &gt; 20 )
+			Integer	yourNumber = myNumber * 10
+			myNumber += 1
+		end</pre>
+
+<p class="body">References to <span class="code">yourNumber</span> outside of the while 
+loop are invalid since <span class="code">yourNumber</span> was declared inside the loop.</P>
+
+<p class="subh1">Global Variables</P>
+
+<p class="body">A global variable is accessible by all scripts. A global variable is not 
+explicitly declared. It is created the first time a value is assigned to it, and exists for the 
+duration of a program.</P>
+<p class="body">Global variable names are prefaced with a dollar sign ($).</P>
+
+<pre>		Integer myAge
+		$globalAge = 25
+		myAge = $globalAge + 10</pre>
+
+<p class="body">There is no compile-time checking of either the type or existence of global 
+variables. Exercise caution when using global variables.</P>
+
+
+
+<script language="JavaScript">
+IncludeFooter( '' )
+</script>
+
+</BODY>
+</HTML>

@@ -1,0 +1,345 @@
+
+<meta charset="UTF-8">
+<html>
+<head><title>Class: Logging</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../syntax.css" type="text/css">
+<link rel="stylesheet" href="builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td  align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody></table>
+
+<div id="document">
+	
+<div class="sidebar_container">
+		
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink"><a href="assoc.html">Assoc</a></div>
+				<div class="packagelink"><a href="boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="builder.html">Builder</a></div>
+				<div class="packagelink"><a href="bytes.html">Bytes</a></div>
+				<div class="packagelink"><a href="capi.html">CAPI</a></div>
+				<div class="packagelink"><a href="capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink"><a href="cachetree.html">CacheTree</a></div>
+				<div class="packagelink"><a href="compiler.html">Compiler</a></div>
+				<div class="packagelink"><a href="core.html">Core</a></div>
+				<div class="packagelink"><a href="dapi.html">DAPI</a></div>
+				<div class="packagelink"><a href="dapinode.html">DAPINODE</a></div>
+				<div class="packagelink"><a href="dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink"><a href="dapiversion.html">DAPIVERSION</a></div>
+				<div class="packagelink"><a href="domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="domcomment.html">DOMComment</a></div>
+				<div class="packagelink"><a href="domdocument.html">DOMDocument</a></div>
+				<div class="packagelink"><a href="domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink"><a href="domelement.html">DOMElement</a></div>
+				<div class="packagelink"><a href="domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink"><a href="domnamednodemap.html">DOMNamedNodeMap</a></div>
+				<div class="packagelink"><a href="domnode.html">DOMNode</a></div>
+				<div class="packagelink"><a href="domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="domtext.html">DOMText</a></div>
+				<div class="packagelink"><a href="date.html">Date</a></div>
+				<div class="packagelink"><a href="dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="env.html">Env</a></div>
+				<div class="packagelink"><a href="error.html">Error</a></div>
+				<div class="packagelink"><a href="file.html">File</a></div>
+				<div class="packagelink"><a href="filecopy.html">FileCopy</a></div>
+				<div class="packagelink"><a href="fileprefs.html">Fileprefs</a></div>
+				<div class="packagelink"><a href="frame.html">Frame</a></div>
+				<div class="packagelink"><a href="global.html">Global</a></div>
+				<div class="packagelink"><a href="integer.html">Integer</a></div>
+				<div class="packagelink"><a href="javaobject.html">JavaObject</a></div>
+				<div class="packagelink"><a href="language.html">Language</a></div>
+				<div class="packagelink"><a href="license.html">License</a></div>
+				<div class="packagelink"><a href="list.html">List</a></div>
+				<div class="packagelink curPage">Logging</div>
+				<div class="packagelink"><a href="long.html">Long</a></div>
+				<div class="packagelink"><a href="mailmessage.html">MailMessage</a></div>
+				<div class="packagelink"><a href="math.html">Math</a></div>
+				<div class="packagelink"><a href="memcached.html">Memcached</a></div>
+				<div class="packagelink"><a href="notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="object.html">Object</a></div>
+				<div class="packagelink"><a href="pop3session.html">POP3Session</a></div>
+				<div class="packagelink"><a href="patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="patfind.html">PatFind</a></div>
+				<div class="packagelink"><a href="pattern.html">Pattern</a></div>
+				<div class="packagelink"><a href="point.html">Point</a></div>
+				<div class="packagelink"><a href="profiler.html">Profiler</a></div>
+				<div class="packagelink"><a href="real.html">Real</a></div>
+				<div class="packagelink"><a href="recarray.html">RecArray</a></div>
+				<div class="packagelink"><a href="record.html">Record</a></div>
+				<div class="packagelink"><a href="regex.html">Regex</a></div>
+				<div class="packagelink"><a href="restclient.html">RestClient</a></div>
+				<div class="packagelink"><a href="saxparser.html">SAXParser</a></div>
+				<div class="packagelink"><a href="smtpsession.html">SMTPSession</a></div>
+				<div class="packagelink"><a href="ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="script.html">Script</a></div>
+				<div class="packagelink"><a href="security.html">Security</a></div>
+				<div class="packagelink"><a href="set.html">Set</a></div>
+				<div class="packagelink"><a href="socket.html">Socket</a></div>
+				<div class="packagelink"><a href="sql.html">Sql</a></div>
+				<div class="packagelink"><a href="sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink"><a href="str.html">Str</a></div>
+				<div class="packagelink"><a href="string.html">String</a></div>
+				<div class="packagelink"><a href="system.html">System</a></div>
+				<div class="packagelink"><a href="uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="void.html">Void</a></div>
+				<div class="packagelink"><a href="wapi.html">WAPI</a></div>
+				<div class="packagelink"><a href="wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink"><a href="web.html">Web</a></div>
+				<div class="packagelink"><a href="xslprocessor.html">XSLProcessor</a></div>
+				<div class="packagelink"><a href="zip.html">Zip</a></div>
+		</div>
+</div>
+
+	<div class="content_container">
+		<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+		<h1>Class: Logging</h1><div class="ClassDescription"><p>This API will allow a developer to configure and use logging in Content Server.</p></div>
+			<h2>Class Attributes</h2>
+			<div class="ClassAttributesShort">
+				
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_logging_cs_logger_name_prefix">CS_LOGGER_NAME_PREFIX</a></div>
+					<div class="Description"><p>The logger name prefix for all Content Server loggers.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_logging_level_all">LEVEL_ALL</a></div>
+					<div class="Description"><p>All message levels will be logged.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_logging_level_debug">LEVEL_DEBUG</a></div>
+					<div class="Description"><p>Only DEBUG log messages and higher will be logged.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_logging_level_error">LEVEL_ERROR</a></div>
+					<div class="Description"><p>Only ERROR log messages and higher will be logged.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_logging_level_fatal">LEVEL_FATAL</a></div>
+					<div class="Description"><p>Only FATAL log messages will be logged.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_logging_level_info">LEVEL_INFO</a></div>
+					<div class="Description"><p>Only INFO log messages and higher will be logged.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_logging_level_off">LEVEL_OFF</a></div>
+					<div class="Description"><p>Log level output is disabled. Nothing will be logged.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_logging_level_trace">LEVEL_TRACE</a></div>
+					<div class="Description"><p>Only TRACE log messages and higher will be logged.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_logging_level_warn">LEVEL_WARN</a></div>
+					<div class="Description"><p>Only WARN log messages and higher will be logged.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_logging_ok">OK</a></div>
+					<div class="Description"><p>Success return constant.</p></div>
+				</div>
+				
+			</div>
+
+
+			<h2>Class Methods</h2>
+			<div class="ClassMethodsShort">
+				<div class="Method">
+					<div class="Name"><a href="#cm_logging_getloggernames" class="IndexMethodName">GetLoggerNames</a>(
+					 String loggerPrefix, Boolean collapse )
+					</div>
+					<div class="Description"><p>Gets the master list of loggers defined in Content Server.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_logging_getloglevel" class="IndexMethodName">GetLogLevel</a>(
+					 String loggerName )
+					</div>
+					<div class="Description"><p>Gets the current level for the given logger (LEVEL_OFF if the logger doesn't exist).</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_logging_logleveltostring" class="IndexMethodName">LogLevelToString</a>(
+					 Integer logLevel )
+					</div>
+					<div class="Description"><p>Gets a string description for the given log level.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_logging_setloglevel" class="IndexMethodName">SetLogLevel</a>(
+					 String loggerName, Integer logLevel )
+					</div>
+					<div class="Description"><p>Sets the current level for the given logger.</p></div>
+				</div>
+			</div>
+
+
+				<h2>Class Attributes</h2>
+				<div class="ClassAttributes">
+					
+					<div class="Attribute">
+						<div class="Name">String <a name="ca_logging_cs_logger_name_prefix">CS_LOGGER_NAME_PREFIX</a></div>
+						<div class="Description"><p>The logger name prefix for all Content Server loggers.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_logging_level_all">LEVEL_ALL</a></div>
+						<div class="Description"><p>Messages for all log levels will be logged.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_logging_level_debug">LEVEL_DEBUG</a></div>
+						<div class="Description"><p>Only DEBUG log messages and higher will be logged. Debug level is reserved for internal debugging messages.
+    Enabling this level could have a severe impact on program performance.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_logging_level_error">LEVEL_ERROR</a></div>
+						<div class="Description"><p>Only ERROR log messages and higher will be logged.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_logging_level_fatal">LEVEL_FATAL</a></div>
+						<div class="Description"><p>Only FATAL log messages will be logged.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_logging_level_info">LEVEL_INFO</a></div>
+						<div class="Description"><p>Only INFO log messages and higher will be logged.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_logging_level_off">LEVEL_OFF</a></div>
+						<div class="Description"><p>Log level output is disabled. Nothing will be logged.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_logging_level_trace">LEVEL_TRACE</a></div>
+						<div class="Description"><p>Only TRACE log messages and higher will be logged. Trace level is reserved for internal function-level trace debugging.
+    Enabling this level will have a severe impact on program performance.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_logging_level_warn">LEVEL_WARN</a></div>
+						<div class="Description"><p>Only WARN log messages and higher will be logged.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_logging_ok">OK</a></div>
+						<div class="Description"><p>Success return constant.</p></div>
+					</div>
+				
+				</div>
+
+		
+				<h2>Class Methods</h2>
+				<div class="ClassMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_logging_getloggernames">GetLoggerNames</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">List</span> 
+						<span class="PrototypeselfName">GetLoggerNames</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">loggerPrefix</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Boolean</span> <span class="PrototypeArgumentName">collapse</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Gets the master list of loggers defined in Content Server.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">loggerPrefix</span><span class="description"><p>The prefix logger name to match (for example, "<code>com.opentext.contentserver</code>"    would match any logger name that started with this string.</p></span></div>
+											<div class="Parameter"><span class="name">collapse</span><span class="description"><p>True if logger names containing numbers should be collapsed, false if each should be returned separately.</p>
+<p>For example, <code>application.logger.[1]</code>, <code>application.logger.[2]</code> are defined in the system. If collapse is true, the logger list will only contain application.logger.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A <a class="interdoc" href="list.html">List</a> containing the logger names if successful.  If the function fails, an error code will be returned.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_logging_getloglevel">GetLogLevel</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">GetLogLevel</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">loggerName</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Gets the current level configured for the given logger.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">loggerName</span><span class="description"><p>The name of the logger to get the current level for.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An <a class="interdoc" href="integer.html">Integer</a> representing the current log level.  <a class="interdoc" href="#ca_logging_level_off">Logging.LEVEL_OFF</a> if the logger doesn't exist.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_logging_logleveltostring">LogLevelToString</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">LogLevelToString</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">logLevel</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Gets a (localized) description string for a given log level.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">logLevel</span><span class="description"><p>The log level to get a description for.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A <a class="interdoc" href="string.html">String</a> representation of the given log level. </p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_logging_setloglevel">SetLogLevel</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">SetLogLevel</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">loggerName</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">logLevel</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sets the log level for the given logger.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">loggerName</span><span class="description"><p>The name of the logger whose level is to be set.</p></span></div>
+											<div class="Parameter"><span class="name">logLevel</span><span class="description"><p>The level to set.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p><a class="interdoc" href="#ca_logging_ok">Logging.OK</a> (Integer zero) if successful; <a class="interdoc" href="error.html">Error</a> otherwise.</p></div>
+							</div>
+						</div>
+				</div>
+		
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2018 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+
+
+
+</div>
+	</div>						
+						
+
+</div>
+
+</body></html>

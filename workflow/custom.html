@@ -1,0 +1,247 @@
+<HTML>
+<HEAD>
+<TITLE>Setting Up a Custom Module</TITLE>
+
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<script language="JavaScript">updateParentHeader( 'Custom Module' );</script>
+<script language="JavaScript">includeContentContainer( 'wfbuilder', true );</script>
+<p class="body">
+<p class="title">Creating a Custom Module</p>
+
+
+<p class="body">You can extend the functionality of the Livelink 
+Workflow module by adding task types, data types, workflow types, 
+or event trigger scripts that perform customized operations.
+To do so, you must first create a custom module that stores the 
+new functionality you are adding.</p>
+
+<p class="body">Always store the custom functionality that you create in 
+a module that can be installed and uninstalled separately from all other 
+Livelink modules. If you modify an original Livelink module, future updates to the
+module will automatically overwrite your changes.</p>
+
+<p class="body">In this chapter, you learn how to:</p>
+<ul type="disc">
+<li class="body">Create the module's <a href="#dirstruct">directory structure</a></li></p>
+<li class="body">Create an <a href="#ospace">OSpace</a></li></p>
+<li class="body">Create a <a href="#config">Configure request handler and request 
+handler group</a> for the module</li></ul>
+
+<span id="dirstruct" class="title2">Creating the Module's Directory Structure</span>
+<p class="body">You begin setting up a module by creating the module's 
+directory structure in the staging
+directory of your primary Livelink installation 
+(for example, c:/opentext/staging).</p>
+
+<p class="infin">To create the module directory structure:</p>
+<ol>
+	<li class="body">Create a new directory in the staging directory of your 
+	primary Livelink installation,
+	and name it <span class="codevar">modulename</span><span class="code">_1_0_0</span>.</li>
+	The module name is followed by the major version number, the minor
+	version number, and the revision number, respectively.</li></p>
+	<li class="body">In the <span class="codevar">modulename</span><span class="code">_1_0_0</span> 
+	directory, create three new directories and name them 
+	<span class="code">html</span>, <span class="code">ospace</span>, 
+	and <span class="code">support</span>.</p>
+	<li class="body">If you are going to include HTML help files with
+	your module, create a directory named <span class="code">help</span> 
+	in your <span class="codevar">modulename</span><span class="code">_1_0_0</span> 
+	directory.</li>
+</ol>
+
+<span id="ospace" class="title2">Creating an OSpace</span>
+<p class="body">After you create the directory structure for your 
+custom module, you create the OSpace to contain the 
+functionality of the module. All OSpaces have the .oll file
+extension.</p>
+
+<p class="infin">To create the Custom Module's OSpace:</p>
+<ol>
+	<li class="body"> In the Livelink Builder, click 
+	<span class="gui">New OSpace</span> on the 
+	<span class="gui">OSpace</span> menu.</li></p>
+	<li class="body"> Name the OSpace 
+	<span class="codevar">modulename</span><span class="code">.oll</span>, and save it in your 
+	custom module's ospace directory (for example, 
+	c:/opentext/staging/<span class="codevar">modulename</span><span class="code">_1_0_0</span>/ospace).</li>
+</ol>
+
+<span id="config" class="title2">Configuring the Module</span>
+<p class="body">Each Livelink module contains a WebModule object 
+which stores the configuration information for the module. The 
+WebModule object defines the name of the module as it appears on 
+the Livelink administration pages, the internal name of the module, the
+OSpaces contained in the module, the major version number, minor 
+version number, build level, and revision number of the module, 
+the module's dependencies, and the script that is necessary to 
+create a .ini file for the module.</p>
+
+<span class="infin">To configure the module:</span>
+<ol>
+	<li class="body"> Orphan <span class="code">WebDsp:WebModule</span> 
+	in the OSpace of your custom module, and
+	name it <span class="codevar">modulename</span><span class="code">WebModule</span>.</li></p>
+	<li class="body"> In the <span class="codevar">modulename</span><span class="code">WebModule</span> 
+	object, set the value of the <span class="code">fEnabled</span> feature 
+	to <span class="code">TRUE</span>.</p>
+	When set to <span class="code">TRUE</span>, this feature allows 
+	Livelink to register the <span class="codevar">modulename</span><span class="code">WebModule</span> 
+	object in <span class="code">Kernel:KernelRoot:SubSystem:ModuleSubSystem</span>.</p>
+	<li class="body">Set the value of the <span class="code">fName</span> 
+	feature to <span class="codevar">&quot;Module Name&quot;</span>.
+	This feature contains the name that is displayed on the Livelink Intranet
+	Administration page when a Livelink Administrator 
+	installs, upgrades, or uninstalls your custom module.</p>
+	<li class="body">Set the value of the <span class="code">fModuleName</span> 
+	feature to <span class="codevar">modulename</span>.
+	This feature stores the internal name for your module. The value must be in
+	lowercase letters and must match the name you used when you created your module
+	directory structure.</p>
+	<li class="body">Set the value of the <span class="code">fOSpaces</span> 
+	feature to {<span class="codevar">'modulename'</span>}.
+	This feature lists the OSpaces that are contained in your custom module.</p>
+	<li class="body">Set the value of the <span class="code">fVersion</span> 
+	feature to {<span class="code">'1','0','d','0'</span>}.
+	This feature specifies the major version number, minor version number, 
+	build level (b for beta, r for revision, and d for development), and 
+	revision number of your custom module. The major version number, 
+	minor version number, and revision number must match those you 
+	used when you created the module's directory
+	structure. The build level is for your personal reference only.</p>
+	<li class="body">In the <span class="var">modulename</span> 
+	<span class="code">Globals</span> object, run the 
+	<span class="code">BuildOSpace()</span> script.
+</ol>
+
+<span class="title3">Orphaning the Configure Request Handler Object</span>
+<p class="body">The <span class="code">Configure</span> request 
+handler object is used to install, uninstall, and upgrade 
+your custom module. This object defines the name of your module, 
+the schema modifications required by your module, and the custom 
+setup steps that your module needs to perform.</p>
+
+<span class="infin">To orphan the Configure request handler object 
+and modify its features:</span>
+<ol>
+	<li class="body"> Orphan 
+	<span class="code">WebAdmin:AdminRequestHandler:Configure</span> 
+	in the custom module's OSpace, and name it <span class="code">Configure</span>.</p>
+	<li class="body">In the <span class="code">Configure</span> object, 
+	set the <span class="code">fEnabled</span> feature to 
+	<span class="code">TRUE</span>.</p>
+	<li class="body"> Set the value of the 
+	<span class="code">fFuncPrefix</span> feature to 
+	<span class="var">modulename</span>.
+</ol>
+
+<span class="title3">Setting Up the Query String and the module.ini File</span>
+
+<p class="body">After you orphan the Configure request handler, 
+you set up the query string that calls the request handler 
+during installation. Next, you create the
+module.ini file, which is required to install, upgrade, and uninstall 
+the custom module.</p>
+
+<span class="infin">To set up the query string and the module.ini file:</span>
+<ol>
+	<li class="body">In the 
+	<span class="codevar">modulename</span><span class="code">WebModule</span> 
+	object, set the value of the <span class="code">fSetUpQueryString</span>
+	feature to
+	<span class="code">func=</span><span class="codevar">modulename</span><span class="code">.configure&amp;module=</span><span class="codevar">modulename</span><span class="code">&amp;nextUrl=%1.</span></p>
+	<li class="body">In the <span class="codevar">modulename</span><span class="code"> Globals</span> object, 
+	run the <span class="code">BuildOSpace()</span> script.</p>
+	<li class="body">In the 
+	<span class="codevar">modulename</span><span class="code">WebModule</span> 
+	object, run the <span class="code">0DumpModuleConfigToFile()</span> script 
+	and save the <span class="codevar">modulename</span>.ini file in the 
+	<span class="codevar">modulename</span><span class="code">_1_0_0</span> directory 
+	(the root of your module's directory structure).</ol>
+
+<span class="title3">Orphaning a RequestHandlerGroup Object</span>
+
+<p class="body">The <span class="code">RequestHandlerGroup</span> 
+object keeps track of all the request handlers in your 
+custom module's OSpace. This allows the <span class="code">Configure</span> 
+request handler object that you just created to be registered 
+in the <span class="code">RequestHandlerSubsystem</span>.</p>
+
+<span class="infin">To create a RequestHandlerGroup object:</span>
+<ol>
+	<li class="body"> Orphan 
+	<span class="code">WebDSP:WebDspRoot:RequestHandlerGroup</span> in 
+	your custom module's OSpace, and name it 
+	<span class="codevar">modulename</span><span class="code"> 
+	RequestHandlerGroup</span>.</p>
+	<li class="body"> In the 
+	<span class="codevar">modulename</span><span class="code"> 
+	RequestHandlerGroup</span> object, 
+	set the <span class="code">fEnabled</span> feature to <span class="code">TRUE</span>.</p>
+	<li class="body"> Run the <span class="code">SetRequestHandlers()</span> script.</p>
+	<li class="body"> In the <span class="codevar">modulename</span>
+	<span class="code">Globals</span> object, run the <span class="code">BuildOSpace()</span> 
+	script.</p>
+	<li class="body"> Save and export the custom module's OSpace, and then exit Livelink Builder.
+	You can now start your Livelink Intranet service and install your custom module in
+	Livelink. For more information about installing modules, see the Livelink Installation
+	Guide.
+</ol>
+
+<dl class="body">
+	<dt><span class="gui">Tip:</span><dd>You can set the value of the 
+	<span class="code">changeStateOspaces</span> variable in the WebBuilder.lxe 
+	file to <span class="codevar">MODULENAME</span> (all uppercase letters), 
+	to open the custom module's OSpace in an unlocked state in the 
+	Livelink Builder. The WebBuilder.lxe file is stored in the main directory 
+	of your primary Livelink installation (for example, c:/opentext).</dl>
+
+<span class="title2">Completing the Custom Module</span>
+<p class="body">Now that you have set up the custom module, 
+installed it, and prepared it for use in Livelink, you can 
+begin to create the functionality required to add a new task 
+type, data type, workflow type, or callback event trigger script 
+to a Livelink workflow.</p>
+
+<p class="body">The following sections describe how to complete the 
+custom module:</p>
+<ul type="disc">
+	<li class="body"><a href="steptypes.html">Adding New Step Types</a> 
+	describes how to add a new type of task to 	your module. 
+	In that section, you add a task type that lets the creators of
+	workflow maps customize the interface that is presented to 
+	workflow participants and the operations that occur when the 
+	workflow participant works on the task in Livelink.</li></p>
+	<li class="body"><a href="datatypes.html">Adding New Data Types</a> 
+	describes how to add new types of data to your module. In that
+	section, you add a data type that creates a series of
+	workflow attributes and arranges them on custom tabs available 
+	to workflow participants when they work on the corresponding tasks.</li></p>
+	<li class="body"><a href="wftypes.html">Adding New Workflow Types</a> 
+	describes how to add new types of workflows to your module. In 
+	that section, you create a custom workflow type that appends a 
+	date stamp to the title of the workflow when it is initiated in Livelink.
+	This workflow type also runs a callback script when it 
+	is initiated.</li></p>
+	<li class="body"><a href="eventtrigs.html">Adding Event Trigger Scripts</a> 
+	describes how to add event trigger scripts to your module. In 
+	that section, you create three event trigger scripts that
+	perform different functions when different workflow events occur.</li>
+</ul>
+
+<p class="body">Each of these sections provides you with general 
+information for incorporating new workflow functionality. This general 
+information is complemented by a specific example of
+how to apply the functionality, with references to included code samples.
+
+          
+<script language="JavaScript">IncludeFooter();</script>
+
+</BODY>
+</html>

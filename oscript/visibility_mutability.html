@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<title>OScript Language Reference : Parsing</title>
+<link rel="stylesheet" type="text/css" href="../ot_common_ui.css">
+<link rel="stylesheet" type="text/css" href="languageref.css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+
+</head>
+<body>
+<SCRIPT language="JavaScript">
+IncludeHeader( 'olang2', 'Visibility &amp; Mutability' )
+</SCRIPT>
+<h1>Visibility and Mutability</h1>
+<p>One of the new features provided by the new compiler and source format is the ability to apply modifiers to features, scripts and functions that modify their visibility to other objects, and prevent other objects from overriding them. By adding restrictions in this manner, it becomes easier to separate implementation from interface, making it safer to change underlying details without putting other modules at risk of breaking.</p>
+
+<!--
+%<h2>Final (object)</h2>
+%An object marked as Final cannot have any children. 
+-->
+
+<h2>Public</h2>
+<p>The default modifier, a Public feature, function or script can be modified or overridden by any other object.</p>
+
+<h2>Overrides</h2>
+<p>The Overrides modifier indicates that this feature is not defining a new feature, function or script, but is overriding the value or behaviour of one defined on a parent object. This guards against accidentally replacing a feature, function or script.</p>
+
+<p>An overridden feature or function has some constraints. A replacement feature should be of the same or more restrictive type (e.g. a Dynamic feature may be overridden by an Integer one, but not the other way around) than the feature that is being overridden&mdash;in most cases, this means that all that is allowed to change is the value.</p>
+
+<p>A replacement function should have a return value that is the same or more restrictive type, and its parameters should be of the same or less restrictive types. Additional parameters are allowed, provided that they all have default values. A general rule of thumb is that the new function definition must be valid in all circumstances where the old function could be used.</p>
+
+
+<h2>Private</h2>
+<!--<p>A Private feature, script or function can only be directly referenced by the declaring object, or its children, making it akin to Protected in other languages. The Private keyword allows one to hide the implementation details of a feature from other objects, forcing them to work through established interfaces. This allows for easier reasoning about state.</p>-->
+<p>The <code>Private</code> keyword currently has no effect, but can be used to mark functions or features that should not be accessed by other objects or modules.</p>
+
+<script language="JavaScript">
+IncludeFooter( '' )
+</script>
+
+</body>
+</html>

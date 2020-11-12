@@ -1,0 +1,286 @@
+<HTML>
+<HEAD>
+<TITLE>t_user.html</TITLE>
+
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<script language="JavaScript">updateParentHeader( 'Code' );</script>
+<script language="JavaScript">includeContentContainer( 'wfbuilder', true );</script>
+<p>
+
+
+<p class="title">t_user.html</p>
+<p class="body">
+This code sample describes how to design the Web page that is displayed when
+the creator of a workflow map edits a custom display step in the Workflow Designer. You
+edit a custom display step on the Custom Display Step Definition page, which is accessed
+by double-clicking the task's icon or by right-clicking the task's icon, and then clicking
+<span class="gui">Edit</span>.</p>
+
+<pre class="code">
+;;webscript t_user( Assoc data )
+	&lt;!-- File: custmod/t_user.html --&gt;
+
+	;;oscript{
+		Integer i
+		List durationInfo
+		String checked
+		String dueDuration
+		Dynamic taskInfo = data.TaskInfo
+		
+	//Set up the URLs that define the links on the Step Definition
+	//page (for example, the Map Editor link which jumps back to
+	//the Workflow Designer).
+
+	String nextURL = Str.Format( \
+	&quot;%1?func=wfp.TaskEdit&amp;MapID=%2&amp;TaskID=%3&amp;NextURL=%4&quot;, \
+				.URL(), \
+				data.MapID, \
+				data.TaskID, \
+				Web.Escape( data.NextURL ) )
+	String chooseUserURL = .url() + Str.Format( \
+	&quot;?func=wfp.TaskUserSet&amp;MapID=%1&amp;TaskID=%2&amp;PerformerID=%3&quot; + \
+	&quot;&amp;nextURL=%4&quot;, \
+				data.MapID, \
+				data.TaskID, \
+				taskInfo.PerformerID, \
+				Web.Escape( nextURL ) );
+
+	//Set up the contents of the Group Options list.
+
+	List flags = { $WFMain.WFConst.kWFGroupStandard, \
+	$WFMain.WFConst.kWFGroupExpand, \
+	$WFMain.WFConst.kWFGroupExpandFull }
+	List flagLabels = { [WebWFP_HTMLLabel.MemberAccept], \
+	[WebWFP_HTMLLabel.OneLevelExpand], \
+	[WebWFP_HTMLLabel.FullExpand] }
+	;;}
+
+	//Set up the information that is displayed on the General tab of
+	//the Custom Display Step Definition page. This includes the
+	//title, the performer, the group options, the step instructions,
+	//the name of the callback script to run, the workflow event that
+	//triggers the callback script, the template to use, the
+	//duration, and the start date.
+
+	&lt;TABLE BORDER=&quot;0&quot; CELLPADDING=&quot;2&quot; CELLSPACING=&quot;1&quot;&gt;
+
+		//Set up the Step Name field.
+		
+		&lt;TR&gt;
+			&lt;TD bgcolor=&quot;#CCCCCC&quot; NOWRAP&gt;&lt;FONT
+		FACE=&quot;'[WebDsp_Font.SansSerif]'&quot;
+		size=&quot;2&quot;>&nbsp;'[WebWFP_HTMLLabel.StepName_]'&nbsp;&lt;/FONT&gt;&lt;/TD&gt;
+		
+		&lt;TD&gt;
+		&lt;IMG SRC=&quot;`.ModImg( 'custmod' )``data.Gif`&quot; WIDTH=&quot;16&quot;
+		HEIGHT=&quot;16&quot; ALIGN=&quot;BOTTOM&quot; BORDER=&quot;0&quot; VALIGN=&quot;TOP&quot;
+		HALIGN=&quot;RIGHT&quot;&gt;&nbsp;
+			&lt;INPUT TYPE=&quot;TEXT&quot; NAME=&quot;Title&quot; SIZE=&quot;33&quot;
+		VALUE=&quot;`taskInfo.Title`&quot; MAXLENGTH=&quot;255&quot;
+		ONCHANGE=&quot;markTaskEditDirty();&quot;&gt;
+			&lt;INPUT TYPE=&quot;HIDDEN&quot; NAME=&quot;PerformerID&quot;
+		VALUE=&quot;`taskInfo.PerformerID`&quot;&gt;
+			&lt;/TD&gt;
+		&lt;/TR&gt;
+
+			//Set up the Assigned To field.
+		
+			&lt;TR&gt;
+				&lt;TD bgcolor=&quot;#CCCCCC&quot; NOWRAP&gt;&lt;FONT
+		FACE=&quot;`[WebDsp_Font.SansSerif]`&quot;
+		size=&quot;2&quot;&gt;&nbsp;`[WebWFP_HTMLLabel.AssignedTo_]`&nbsp;&lt;/FONT>&lt;/TD&gt;
+
+				&lt;TD&gt;
+				&lt;A HREF=&quot;`chooseUserURL`&quot;
+		ONCLICK=&quot;if ( leaveTaskEdit() )taskEditGo( '`%LchooseUserURL`' ); else return false;&quot;&gt;
+		&lt;B&gt;`[WebWFP_HTMLLabel.UserOrGroupColon]`&lt;/B&gt;
+		&lt;/A&gt;
+
+				&lt;IMG SRC=&quot;`.Img()``data.PerformerInfo.Gif`&quot; WIDTH=&quot;16&quot;
+		HEIGHT=&quot;16&quot; ALIGN=&quot;BOTTOM&quot; BORDER=&quot;0&quot; VALIGN=&quot;TOP&quot; HALIGN=&quot;RIGHT&quot;&gt;
+		
+			;if ( data.PerformerInfo.KnownUser )
+				;;call &lt;.HTMLPrefix() + 'douserdialog.html'&gt;(
+		data.PerformerInfo.ID, data.PerformerInfo.Name )
+			;else
+				`%Ldata.PerformerInfo.Name`
+			;end
+		&lt;/TD&gt;
+	&lt;/TR&gt;
+	
+	//Set up the Group Options field.
+
+	&lt;TR&gt;
+		&lt;TD bgcolor=&quot;#CCCCCC&quot; NOWRAP&gt;&lt;
+	FONT FACE=&quot;`[WebDsp_Font.SansSerif]`&quot;
+	size=&quot;2&quot;&gt;&nbsp;`[WebWFP_HTMLLabel.GroupOptions_]`&nbsp;&lt;/FONT>&lt;/TD&gt;
+
+		&lt;TD&gt;
+			&lt;SELECT NAME=&quot;GroupFlags&quot; ONCHANGE=&quot;markTaskEditDirty();&quot;&gt;
+				;for i = 1 to Length( flags )
+					;if ( taskInfo.EXATTS.GroupFlags == flags[ i ] )
+							&lt;OPTION VALUE=&quot;`flags[ i ]`&quot;
+	SELECTED>`flagLabels[ i ]`
+					;else
+						&lt;OPTION VALUE=&quot;`flags[ i ]`&quot;>`flagLabels[ i ]`
+					;end
+				;end
+			&lt;/SELECT&gt;
+		&lt;/TD&gt;
+	&lt;/TR&gt;
+	//Set up the Instructions field.
+	
+		&lt;TR&gt;
+			&lt;TD bgcolor=&quot;#CCCCCC&quot; NOWRAP valign=&quot;TOP&quot;&gt;&lt;FONT
+	FACE=&quot;`[WebDsp_Font.SansSerif]`&quot;
+	size=&quot;2&quot;&gt;&nbsp;`[WebWFP_HTMLLabel.Instructions_]`&nbsp;&lt;/FONT&gt;&lt;/TD&gt;
+
+		&lt;TD&gt;
+			&lt;TEXTAREA NAME=&quot;Instructions&quot; ROWS=&quot;6&quot; COLS=&quot;45&quot;
+	WRAP=&quot;SOFT&quot;
+	ONCHANGE=&quot;markTaskEditDirty();&quot;&gt;`taskInfo.Instructions`&lt;/TEXTAREA&gt;
+		&lt;/TD&gt;
+	&lt;/TR&gt;
+
+	//Set up the Script to run field.
+
+	&lt;TR&gt;
+		&lt;TD bgcolor=&quot;#CCCCCC&quot; NOWRAP valign=&quot;TOP&quot;&gt;&lt;
+	FONT face=&quot;Arial, Helvetica, sans-serif&quot; 
+	size=&quot;2&quot;&gt;&nbsp;Script to run:&nbsp;&lt;/FONT&gt;&lt;/TD&gt; 
+	
+		&lt;TD&gt;
+			&lt;SELECT NAME=&quot;CustTaskScript&quot;
+	ONCHANGE=&quot;markTaskEditDirty();&quot;&gt;
+				;String scriptName
+				
+				;List scriptsList =
+	$Custmod.UtilityPkg.ListScripts()
+		
+		&lt;OPTION&gt;&lt;None&gt;
+
+		;for scriptName in scriptsList
+				&lt;OPTION `( taskInfo.ExAtts.CustTaskScript ==
+	scriptName ) ? 'selected':''`&gt;`scriptName`
+			;end
+			&lt;/SELECT&gt;
+
+		&lt;BR&gt;
+
+		//Set up the Step Becomes Ready and Step Is Done radio
+		//buttons.
+		
+		&lt;TABLE BORDER=&quot;0&quot; CELLPADDING=&quot;2&quot; CELLSPACING=&quot;1&quot;&gt;
+			&lt;TR&gt;
+				&lt;TD&gt;Script runs when:&lt;/TD&gt;
+
+				&lt;TD&gt;
+
+						;checked = ( taskInfo.ExAtts.RunScript ==
+		'ReadyCB' ) ? &quot;CHECKED&quot; : &quot;&quot;
+				&lt;INPUT TYPE=&quot;RADIO&quot; NAME=&quot;RunScript&quot; `checked`
+	VALUE=&quot;ReadyCB ONCLICK=&quot;markTaskEditDirty();&quot;>Step Becomes Ready
+
+						&lt;BR&gt;
+
+				;checked = ( taskInfo.ExAtts.RunScript ==
+	'DoneCB' ) ? &quot;CHECKED&quot; : &quot;&quot;
+				&lt;INPUT TYPE=&quot;RADIO&quot; NAME=&quot;RunScript&quot; `checked`
+	VALUE=&quot;DoneCB&quot; ONCLICK=&quot;markTaskEditDirty();&quot;&gt;Step Is Done
+							&lt;/TD&gt;
+						&lt;/TR&gt;
+					&lt;/TABLE&gt;
+				&lt;/TD&gt;
+			&lt;/TR&gt;
+			
+			//Set up the Template to use field.
+			
+			&lt;TR&gt;
+
+				&lt;TD bgcolor=&quot;#CCCCCC&quot; NOWRAP valign=&quot;TOP&quot;&gt;&lt;FONT face=&quot;Arial,
+	Helvetica, sans-serif&quot; size=&quot;2&quot;&gt;&nbsp;Template to
+	use:&nbsp;&lt;/FONT&gt;&lt;/TD&gt;
+
+			&lt;TD&gt;
+				&lt;SELECT NAME=&quot;CustTaskTemplate&quot;
+	ONCHANGE=&quot;markTaskEditDirty();&quot;&gt;
+					;String templateName
+					
+					;List templatesList =
+	$Custmod.UtilityPkg.ListTemplates()
+
+					&lt;OPTION>&lt;None&gt;
+					
+					;for templateName in templatesList
+							&lt;OPTION `( taskInfo.customData.CustTaskTemplate ==
+	templateName ) ? 'selected':''`&gt;`templateName`
+					;end
+			&lt;/SELECT&gt;
+		&lt;/TD&gt;
+	&lt;/TR&gt;
+
+	//Set up the Duration field.
+
+	;;oscript{
+		if IsDefined( taskInfo.DueDuration )
+		durationInfo = $LLIAPI.FormatPkg.ConvertFromSeconds( \
+		taskInfo.DueDuration )
+		dueDuration = $LLIAPI.FormatPkg.ValToString( \
+		durationInfo[2] )
+	else
+		durationInfo = { TRUE, 0 }
+	end
+	;;}
+		&lt;TR&gt;
+		&lt;TD bgcolor=&quot;#CCCCCC&quot; NOWRAP&gt;&lt;FONT
+	FACE=&quot;`[WebDsp_Font.SansSerif]`&quot;
+	size=&quot;2&quot;>&nbsp;`[WebWFP_HTMLLabel.Duration_]`&nbsp;&lt;/FONT>&lt;/TD&gt;
+		&lt;TD>
+			&lt;INPUT TYPE=&quot;TEXT&quot; NAME=&quot;Duration&quot; VALUE=&quot;`dueDuration`&quot;
+	SIZE=&quot;5&quot; ONCHANGE=&quot;markTaskEditDirty();&quot;&gt;
+			;checked = ( durationInfo[ 1 ] ) ? &quot;&quot; : &quot;&quot;
+			&lt;INPUT TYPE=&quot;RADIO&quot; NAME=&quot;DurationUnits&quot; `checked`
+	VALUE=&quot;Days&quot; ONCLICK=&quot;markTaskEditDirty();&quot;&gt;`[WebWFP_HTMLLabel.Days]`
+			;checked = ( !durationInfo[ 1 ] ) ? &quot;CHECKED&quot; : &quot;&quot;
+			&lt;INPUT TYPE=&quot;RADIO&quot; NAME=&quot;DurationUnits&quot; `checked`
+	VALUE=&quot;Hours&quot;
+	ONCLICK=&quot;markTaskEditDirty();&quot;&gt;`[WebWFP_HTMLLabel.Hours]`
+			&lt;/TD&gt;
+		&lt;/TR&gt;
+
+		//Set up the Start Date field.
+		
+		&lt;TR&gt;
+			&lt;TD bgcolor=&quot;#CCCCCC&quot; NOWRAP&gt;&lt;FONT
+	FACE=&quot;`[WebDsp_Font.SansSerif]`&quot;
+	size=&quot;2&quot;&gt;&nbsp;`[WebWFP_HTMLLabel.StartDate_]`&nbsp;&lt;/FONT>&lt;/TD&gt;
+
+		&lt;TD NOWRAP&gt;
+				;;call &lt;.htmlPrefix() + 'datefield.html'&gt;( 'StartDate',
+	taskInfo.StartDate, TRUE, TRUE )
+		&lt;/TD&gt;
+		&lt;/TR&gt;
+
+		//Set up the Action field, which contains the Add to Workflow
+		//Definition button.
+
+		&lt;TR&gt;
+				&lt;TD bgcolor=&quot;#CCCCCC&quot; NOWRAP&gt;&lt;FONT
+	FACE=&quot;`[WebDsp_Font.SansSerif]`&quot;
+	size=&quot;2&quot;&gt;&nbsp;`[WebDoc_HTMLLabel.Action_]`&nbsp;&lt;/FONT&gt;&lt;/TD&gt;
+			&lt;TD&gt;
+					&lt;INPUT TYPE=&quot;Submit&quot;
+	VALUE=&quot;`[WebWFP_HTMLLabel.AddToWorkflowDefinitionButtonLabel]`&quot;&gt;
+			&lt;/TD&gt;
+		&lt;/TR&gt;
+	&lt;/TABLE&gt;
+	;;end</pre>
+
+<script language="JavaScript">IncludeFooter();</script>
+</body>
+</html>

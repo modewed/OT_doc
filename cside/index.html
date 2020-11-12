@@ -1,0 +1,283 @@
+<html>
+	<head>
+		<title>Content Server IDE Quick Start Guide</title>
+		<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+		<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+		<script language="JavaScript" src="../documentation.js"></script>
+	</head>
+
+	<body>
+
+	<script language="JavaScript">
+	IncludeHeader( 'cside' )
+	</script>
+
+<h1>Overview</h1>
+
+<p>The Content Server IDE Plug-in for Eclipse (CSIDE) is the next-generation IDE for OpenText Content Server, and is intended to replace the existing Content Server Builder IDE.  In addition to a new IDE, OpenText will release an officially supported source code format. The new IDE will facilitate conversion of existing modules to the new source format, and provide tools to build and maintain Content Server OSpaces, modules and customizations.</p>
+
+<h1>Installing the Plug-In</h1>
+
+<p>The minimum supported Eclipse version is <strong>Mars</strong>. Once you have downloaded and installed Eclipse (either the zipped or the installer version), copy the <code>com.opentext.cside</code> jar file into the "dropins" folder (used to be the "plugins" folder) in the Eclipse installation directory, and then restart Eclipse.</p>
+
+<p>If you replaced an older version of the <code>.jar</code> file, you may need to restart eclipse with the -clean option.</p>
+
+<p>Please note that only the following Eclipse IDE's are supported:</p>
+<ul>
+<li>Eclipse IDE for Java Developers.
+<li>Eclipse IDE for Java EE Developers.
+<li>Eclipse IDE for Java and Report Developers.
+</ul>
+
+<h1>Creating a Project</h1>
+
+<p>The Project Creation Wizard defines both the location where you will create OScript source files and the connection to your installed Content Server instance. </p>
+
+<ol>
+<li><p>Start the wizard by clicking "<strong>New > Project</strong>" from the top-level Eclipse File menu. </p>
+
+<p><img src="screenshots/NewProjectPage1.png" alt="New Project Wizard" title="" /></p></li>
+<li><p>Select OScript Project from the OScript folder and click Next. </p>
+
+<p><img src="screenshots/NewProjectPage2.png" alt="New Project Wizard, page 2" title="" /></p>
+
+<p><img src="screenshots/NewProjectPage3.png" alt="New Project Wizard, page 3" title="" /></p>
+
+<p>The project name and location can be anything you like. The project location will be where your source code is stored.  A subfolder called "<strong>srcmodules</strong>" will be created where your source will be exported.  </p>
+
+<p>You can accept your workspace as the default project location, or use the <strong>Browse</strong> button to provide a new location. </p>
+
+<p>If you already have OScript source in the .os file format in a folder called "<strong>srcmodules</strong>", you can select the srcmodule folder's <em>parent</em> folder and your source will be automatically imported into your project.</p>
+
+<p>The Content Server directory (OTHOME) is the folder containing your Content Server installation.</p></li>
+<li><p>Click <strong>Finish</strong>. </p></li>
+<li><p>Your project will be created and Content Server will start up.</p></li>
+</ol>
+
+<p>Starting with the 16.2.2 release, a workspace can be attached to a single server project only. Each new source project will have the server project field greyed out with the existing OTHOME of that server selected. Your workspace will be checked if multiple servers are defined and you will be notified to fix this through the Eclipse Error Log view. You will be also notified if your source project is associated with a server that no longer exists.</p>
+
+<p><img src="screenshots/NewProjectPage4.png" alt="New Project Wizard, page 4" title="" /></p>
+             
+<h1>Project Layout</h1>
+
+<p>Two projects are created by the <strong>New OScript Project</strong> wizard.  The first project (for example, "MyModule") has the name you provided in the <strong>Project</strong> field.  That project is your "source project."  It contains the <strong>srcmodules</strong> folder which will contain your OScript source code.</p>
+
+<p>The second project (for example, MyModule_server)  is your "server project."  It contains the link to the OTHOME folder you specified.</p>
+
+<p>A source project can contain multiple modules, but you can also create additional projects to separate code bases.  When creating additional source projects, create the projects as before, specifying the same Content Server directory as you did for the first project.</p>
+
+<h1>Import your Module</h1>
+
+<p>To convert a module created for Content Server 10.0 or earlier to the new source format, you must first install the module.  </p>
+
+<ol>
+<li><p>In Eclipse, select "<strong>File > Import</strong>" from the main menu.  </p>
+
+<p><img src="screenshots/ImportPage1.png" alt="Import, page 1" title="" /></p></li>
+<li><p>Under "OScript" select <strong>Source code from OLL</strong> and click "Next."</p></li>
+<li><p>Select your modules from the list by checking the checkboxes beside them.</p>
+
+<p><img src="screenshots/ImportPage2.png" alt="Import, page 2" title="" /></p>
+
+<p>Selecting "Copy supplemental folders" will copy the files from your module folder in your server’s install directory to your source tree, which is helpful for placing those files under version control.  Note you will need to copy those files back to your OTHome module folder if you make any changes.</p></li>
+<li><p>Click "<strong>Finish</strong>."</p></li>
+</ol>
+
+<p>The new source code for your module has been exported to the “srcmodules” folder in your source project specified by the Import dialog.</p>
+
+<p><strong>NOTE:</strong> This process overwrites any existing source code at that location, so modules should be exported more than once only in exceptional circumstances. </p>
+
+<p>Building a module from source is the only way to push changes from the source files into your OLLs. From that point on, to make a permanent change to an OSpace, you should modify the .os file and compile the changes. Modifying an object using the Module Explorer has no effect on the exported source files. </p>
+
+<p>The import automatically performs a full build. If there are no problems, the module should be successfully imported at this point. </p>
+
+<p>If the import does encounter problems, you will need to manually fix the source files. The Problems View (Select "<strong>Window > Show View > Problems</strong>") is helpful in finding compile errors. After you make the fixes, you must perform a clean build so that all files are re-examined and parent-child relationships are properly established. </p>
+
+<h1>Learning the Interface</h1>
+
+<p>There are two primary panes used by the Content Server IDE Plug-Iin for Eclipse: the Module Explorer, and the OScript Explorer. </p>
+
+<p><img src="screenshots/CSIDE.png" alt="Full CSIDE screenshot" title="" /></p>
+
+<h2>OScript Explorer</h2>
+
+<p><img src="screenshots/OScriptExplorer.png" alt="OScript Explorer" title="" /></p>
+
+<p>This pane shows all of the exported source code in the current project. While Ospaces are still divided by module, objects in an Ospace are now arranged by package. Objects are represented by .os source code files and packages by folders.  The package structure in the OScript Explorer matches the folder hierarchy on disk.</p>
+
+<p>By default, a package structure is generated during export to closely match the inheritance model, but need not stay that way.  Objects can be moved between packages, with caution. If you move or rename an object or package, you must update the object name or the package header in each source file to match. </p>
+
+<p>Each Ospace is now a base package, containing objects and subpackages.  Packages are containers intended to help you organize your code.  </p>
+
+<h2>Module Explorer</h2>
+
+<p><img src="screenshots/ModuleExplorer.png" alt="Module Explorer" title="" /></p>
+
+<p>The Module Explorer provides a view into the currently running Content Server. Here, you can observe the state of currently loaded OLLs and modify their contents. This pane is similar to Builder, but has a few differences. First, Ospaces are grouped by module, instead of alphabetically. </p>
+
+<p>Second, the feature list is integrated into the object browser, rather than in a separate pane. To see all features on an object, instead of just the new or modified ones, click the small "i" in a grey circle in the upper-right corner of the pane. </p>
+
+<h2>Object Inheritance View</h2>
+
+<p><img src="screenshots/ObjectInheritanceView.png" alt="Object Inheritance View" title="" /></p>
+
+<p>When you right-click an object in the Module Explorer and then click Open Inheritance View, a new pane opens listing the object's parentage and descendants. </p>
+
+<p>When you modify features and scripts using the Module Explorer, it modifies only the values stored in the OLL. It does not affect any previously exported source code, and changes to the source code will overwrite modifications made in the OLL. </p>
+
+<h1>Editing OScript</h1>
+
+<p>Writing OScript now consists primarily of editing text-based source files.  CSIDE provides some tools to help OScript developers.</p>
+
+<h2>Overriding Features</h2>
+
+<p>If you don't already know the signature of a feature, function or script you're overriding, select <strong>Source > Override Features</strong> from the top-level menu to get a list of available features for the object in the current editor window.</p>
+
+<p><img src="screenshots/OverrideFeatures.png" alt="Override Features Dialog" title="" /></p>
+
+<p>Select the features you wish to override and hit Okay.  A template containing the default value for the feature, copied from the parent, will be inserted into your object.</p>
+
+<h2>Xlates</h2>
+
+<p>Xlates allow you to move user interface string into a separate properties file so that they can be translated into other languages.</p>
+
+<p>To replace a string with an Xlate, right-click on string and select "<strong>Xlate</strong>" from the context menu.  You will be presented with the <strong>Find Xlate</strong> dialog.</p>
+
+<p><img src="screenshots/FindXlate.png" alt="Find Xlate Dialog" title="" /></p>
+
+<p>From there, you can either choose an existing Xlate from the list, or, if the desired Xlate does not exist, hit the "New" button.</p>
+
+<p><img src="screenshots/NewXlate.png" alt="New Xlate Dialog" title="" /></p>
+
+<p>From here, select the appropriate properties file, select or add the group, and optionally change the key and Xlate text.  Hit Replace and your string will be replaced with the Xlate token.</p>
+
+<h1>Eclipse Build System</h1>
+
+<p>The Content Server IDE Plug-In integrates with the Eclipse build system.  When you change a source file and save it, it is immediately compiled and the object is updated in Content Server.  Some changes, such as adding or removing object source files, will prompt a rebuild of the entire ospace. This happens automatically and the ospace is reloaded with the updated version.</p>
+
+<p>If you would prefer not to have Eclipse building your changes in the background, you can turn off this functionality by deselecting <strong>Project > Build Automatically</strong> from the top-level Eclipse menu. Eclipse will still keep track of your changes, however, so you can trigger a build of the objects and ospaces that have changed by selecting <strong>Project > Build All</strong>.  Build All does not necessarily initiate a build of all your module source code.  </p>
+
+<p>If you make major structural changes, it may be good idea to rebuild everything. </p>
+
+<ol>
+<li><p>Run <strong>Project > Clean</strong>. </p>
+
+<p><img src="screenshots/Clean.png" alt="Clean dialog" title="" /></p></li>
+<li><p>Click OK. </p></li>
+<li><p>After you do a clean build, it is often a good idea to restart the Content Server instance. You can do this by clicking the red square in the upper-right corner of the Module Explorer. </p>
+
+<p><img src="screenshots/ModuleExplorerToolbar.png" alt="Module Explorer toolbar" title="" /></p></li>
+<li><p>Next, click the green arrow which appears adjacent to the red square. </p></li>
+</ol>
+
+<h1>Creating New Modules</h1>
+
+<p>To create a new module, do the following:</p>
+
+<ol>
+<li><p>Select <strong>File > New > Other...</strong> from the top-level menu. Select <strong>Module</strong> from under the OScript category. Click Next.</p>
+
+<p><img src="screenshots/NewModule1.png" alt="New Module Wizard, page 1" title="" /></p></li>
+<li><p>On the New Module dialog box, enter the name of the new module (a primary OSpace will be created with the same name as well for that module) in the Module Name box. You can also set the version number.</p>
+
+<p><img src="screenshots/NewModule2.png" alt="New Module Wizard, page 2" title="" /></p></li>
+<li><p>The module's primary ospace is loaded, giving you the opportunity to make whatever changes you'd like to make before installing your new module.  </p></li>
+<li><p>Once you're ready, restart Content Server and install the module as normal.  </p></li>
+</ol>
+
+<h1>Creating a New OSpace</h1>
+
+<p>To create a new OSpace in a module, do the following:</p>
+
+<ol>
+<li><p>Right-click the module in the OScript Explorer, and then click <strong>New OSpace</strong>.</p>
+
+<p><img src="screenshots/NewOSpace1.png" alt="Selecting the New OSpace Wizard" title="" /></p></li>
+<li><p>Specify the name of the OSpace in the OSpace Name box.</p>
+
+<p><img src="screenshots/NewOSpace2.png" alt="New OSpace Wizard" title="" /></p></li>
+</ol>
+
+<h1>Creating a New Package</h1>
+
+<p>Packages are a new feature in OScript which allow you to organize your source code.  To create a new package, do the following:</p>
+
+<ol>
+<li><p>Right-click its parent package (an OSpace may be selected as a parent package) and then click <strong>New Package</strong>.</p>
+
+<p><img src="screenshots/NewPackage1.png" alt="Selecting the New Package Wizard" title="" /></p></li>
+<li><p>Specify the name of the package relative to its parent in the Package Name box. </p>
+
+<p><img src="screenshots/NewPackage2.png" alt="New Package Wizard" title="" /></p></li>
+</ol>
+
+<h1>Creating a New Object</h1>
+
+<p>To create a new object, do the following:</p>
+
+<ol>
+<li><p>Right-click a parent object or a package, and then click <strong>New Object</strong>.</p>
+
+<p><img src="screenshots/NewObject1.png" alt="Selecting the New Object Wizard" title="" /></p></li>
+<li><p>In the New Object wizard, specify the object name in the Object name box.  If you select a parent object, specify a fully-qualified package name in the Package box.  If you select a package, specify a fully-qualified object name in the Parent object box.</p>
+
+<p><img src="screenshots/NewObject2.png" alt="New Object Wizard" title="" /></p></li>
+<li><p>The "Browse" button helps you fill in whichever field the wizard wasn't able to fill by the context.  Start typing the name of the parent object or package and it will appear in the list.</p>
+
+<p><img src="screenshots/NewObject3.png" alt="Browse for parent object" title="" /></p></li>
+</ol>
+
+<h1>Creating Script Files</h1>
+
+<p>Ad hoc scripts can be used for testing and debugging content server and running automated tasks. To create a script, do the following:</p>
+
+<ol>
+<li><p>Select <strong>File > New > Script</strong> File from the top-level menu.</p>
+
+<p><img src="screenshots/NewScriptFile.png" alt="New Script File Dialog" title="" /></p></li>
+<li><p>Choose a location to save the script file and click Finish.</p></li>
+</ol>
+
+<h1>Debugging</h1>
+
+<h2>Setting breakpoints</h2>
+
+<p>Breakpoints can be set in the editor for .os object source files, ad hoc scripts and script features.  To set a breakpoint,</p>
+
+<ol>
+<li><p>Double-click in the margin at the desired line.</p></li>
+<li><p>When you run the script, or otherwise execute that line of code, you will be prompted to swith to the "<strong>Debug Perspective</strong>" in Eclipse.  Execution will have stopped at that line and you can continue to step through and otherwise evaluate the state of your code.</p></li>
+</ol>
+
+<p><img src="screenshots/DebugPerspective.png" alt="Debug Perspective" title="" /></p>
+
+<h2>Evaluating variables</h2>
+
+<p>All current variables are listed in the <strong>Variables</strong> view in the Debug perspective.  </p>
+
+<p><img src="screenshots/Variables.png" alt="Variables view" title="" /></p>
+
+<p>Clicking on the variable displays the current value in the pane below.</p>
+
+<p>Any "Object" type variables (ie., those that can be an used in a '.' operator expression) can be expanded to inspect constituent features or values.</p>
+
+<p>Variable values can be changed by clicking and editing their value in the <strong>Value</strong> column.</p>
+
+<h2>Debugging Weblingo</h2>
+
+<p>Weblingo files can be debugged like other source files.</p>
+
+<p><strong><em>NOTE</em></strong>: When setting a breakpoint in a weblingo file, ensure that the breakpoint is set in your module's html folder in your Content Server intall directory, not in the copy that you may have in your source folder.  Currently, Content Server only obeys breakpoints in its copy of Weblingo HTML files.</p>
+
+<h1>Notes</h1>
+
+<ul>
+<li>Content Server continues to use the Weblingo .html files, language properties files and support files in your Content Server OTHOME folder in your server project.  While those files are exported to the srcmodules folder of your Source project, changes to those exported files will not be reflected in Content Server.  They must be copied to your OTHOME folder manually.  </li>
+<li>Content Server now calls BuildOSpace and SetRequestHandlers on start-up, so it's no longer necessary to register request handlers at development time. To create a request handler, just create a new child of the appropriate request handler, set fEnabled to TRUE and it should register itself the next time your restart CS.</li>
+</ul>
+
+	<script language="JavaScript">
+		IncludeFooter( 'index_toplevel' )
+	</script>
+	</body>
+</html>

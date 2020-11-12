@@ -1,0 +1,66 @@
+<HTML>
+<HEAD>
+<TITLE>GetDisplayPerformerInfo()</TITLE>
+
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<script language="JavaScript">updateParentHeader( 'Code' );</script>
+<script language="JavaScript">includeContentContainer( 'wfbuilder', true );</script>
+<p>
+
+
+<p class="title">GetDisplayPerformerInfo()</p>
+<p class="body">
+This code sample describes how to retrieve the name and ID of the workflow
+participant to which the step is assigned.<p>
+<pre class="code">
+	Function Dynamic GetDisplayPerformerInfo( \
+		Object prgCtx, \
+		Record taskRec )
+		
+		Dynamic performer
+		Dynamic retVal
+		Integer performerID
+		Object uSession = prgCtx.USession()
+
+		//Search for the ID of the Livelink user to which the step is
+		//assigned.
+		
+		if ( RecArray.IsColumn( taskRec, 'PERFORMERID' ) )
+			performerID = taskRec.PERFORMERID
+		elseif ( RecArray.IsColumn( taskRec, 'WORK' ) )
+			performerID = taskRec.WORK.SUBWORKTASK_PERFORMERID
+		elseif ( RecArray.IsColumn( taskRec, 'SUBWORKTASK_PERFORMERID' \
+		) )
+			performerID = taskRec.SUBWORKTASK_PERFORMERID
+		else
+			performerID = Undefined
+		end
+
+		//If the Livelink user ID is defined, retrieve the Livelink user
+		//name that is associated with it.
+
+		if ( IsDefined( performerID ) )
+			performer = UAPI.GetByID( uSession.fSession, performerID )
+		
+		//If the Livelink user name is found, create an Assoc named retVal
+		//in which you store the Livelink user name and ID.
+			
+			if ( !IsError( performer ) )
+				retVal = Assoc.CreateAssoc()
+				retVal.ID = performer[ 1 ].ID
+				retVal.Name = performer[ 1 ].NAME'
+				end
+			else
+				retVal = [WebWork_Label.User]
+			end
+			return( retVal )
+		end</pre>
+
+<script language="JavaScript">IncludeFooter();</script>
+</body>
+</html>

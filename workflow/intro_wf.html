@@ -1,0 +1,157 @@
+
+<html>
+<head>
+<title>Introduction to Content Server Workflow Functionality</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+
+</head>
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<script language="JavaScript">updateParentHeader( 'Workflow Overview' );</script>
+<script language="JavaScript">includeContentContainer( 'wfbuilder', true );</script>
+<p class="body">
+<p class="title">Introduction to Content Server Workflow Functionality</p>
+<p class="body">Content Server Workflow is a preinstalled, optional Content Server module 
+that allows Content Server users to create and manage workflows in Content Server.  
+Workflows are business processes that follow 
+sequential paths from start to completion, and automate procedures that 
+have a series of defined steps.</p>
+<p class="body">For example, a user can define a workflow that runs each time a user submits an 
+expense report.  During execution of this workflow, Content Server might route the 
+document to a manager or supervisor for approval, and then to the company's 
+Accounting department for payment. Content Server Workflow can 
+create simple or complex workflows, depending on the business processes a Content Server
+user wants to automate.</p>
+<p class="body">You can extend Content Server's workflow functionality by creating 
+new task types, data types, workflow types, and event trigger scripts that work
+with the existing Content Server Workflow module. When you extend Content Server's workflow 
+functionality in this way, you create a separate, custom module to store
+the new objects you need for the extended functionality.
+Do not alter the original Content Server Workflow module. If you do, future upgrades 
+to Content Server or the Content Server Workflow module will overwrite your changes.
+See <a href="custom.html">Creating a Custom Module</a>, or the Module 
+Development Guide, for instructions on creating a new module in the Builder.</p>
+<p class="body">In this section, you learn about:
+<ul type="disc">
+	<li class="body"><a href="#wfroute">Workflows, Workflow Paths, and Work Packages</a></li>
+	<li class="body"><a href="#wfroles">Workflow roles</a></li>
+	<li class="body"><a href="#wfpainter">The Workflow Designer</a></li>
+	<li class="body"><a href="#status">Workflow Status</a></li>
+</ul></p>
+
+<span id="wfroute" class="title2">Workflows, Workflow Paths, and Work Packages</span>
+<p class="body"><span class="emph">Workflows</span> are business processes that 
+follow sequential paths from start to completion.
+The sequential paths of defined steps are called 
+<span class="emph">workflow paths</span>. 
+Some steps in a workflow path are tasks that
+particular Content Server users or groups are responsible for completing. 
+Other steps execute automatically, including Milestone steps, which 
+track workflow and workflow task due dates, and Sub-workflow steps,
+which initiate other workflow processes within the main workflow.</p>
+
+<p class="body">When a workflow is initiated, Content Server analyzes the first 
+step and routes the corresponding task to the Tasks page of the Content Server 
+user or group to which it is assigned.  When that task is complete, 
+Content Server repeats the analysis for
+each step in the workflow until the workflow is complete.</p>
+
+<p class="body">Content Server users view the workflow tasks assigned to them
+on their Personal Assignments page.
+<p class="body">The data associated with each Content Server workflow 
+that travels along the workflow route is stored in the 
+<span class="emph">work package</span>. 
+Work packages, by default, can include the attachments (for
+example, documents and other Content Server items), attributes, and comments. 
+The workflow designer defines attributes to
+store and track information throughout the workflow. Workflow
+participants, depending on the workflow step settings, may examine
+and specify new values for workflow attributes at each 
+workflow step.
+The workflow designer also sets whether users can view or modify comments, which
+are instructions or notes that can be added by workflow 
+participants as they complete their task assignments.</p>
+
+<p class="body">In Content Server, each workflow is saved as a workflow map.  
+<span class="emph">Workflow maps</span> contain the workflow route, along with
+all other information associated with a workflow and its steps.  The workflow map 
+is instantiated as an executing workflow each time a user initiates a workflow.</p>
+
+<span id="wfroles" class="title2">Workflow Roles</span>
+<p class="body">Workflow roles define the responsibilities and 
+capabilities that particular Content Server
+users and groups have in a workflow. Content Server
+users can have four roles:
+<ul type="disc">
+	<li class="body">The <span class="emph">creator</span> adds 
+	the workflow map to Content Server, 
+	paints it, and defines its work package
+	<li class="body">The <span class="emph">initiator</span> initiates the 
+	workflow map, starting a workflow process
+	<li class="body">The <span class="emph">participant</span> 
+	completes tasks, modifying the work package if necessary
+	<li class="body">The <span class="emph">manager</span> monitors 
+	the status of a workflow on the Workflow Status page, 
+	and usually has the authority to modify,
+	suspend, resume, or stop a workflow after it is initiated
+</ul>
+
+<span id="wfpainter" class="title2">The Workflow Designer</span>
+<p class="body">The workflow creator <span class="emph">paints</span> a 
+graphical representation of a workflow process with Content Server's 
+Java-based Workflow Designer. The Workflow Designer provides a drag-and-drop
+interface for defining the workflow route and work package using icons. It 
+contains the Step Palette and the Zoom View, and 
+is located on the Map Editor page in Content Server.</p>
+
+<p class="body">The Step Palette contains icons that represent the 
+different types of steps that users can add to the workflow map they design with 
+the Workflow Designer.</p>
+
+<p class="body">When workflow creators make a workflow map in the 
+Workflow Designer, they define a work package that contains the data that 
+the workflow participants require to complete their task assignments.</p>
+<p class="body">On the Workflow Properties page, workflow creators can:</p>
+<ul type="disc">
+	<li class="body">Define general information associated with the 
+	workflow map, such as its title and description.</li>
+	<li class="body">Define the manager or management group responsible 
+	for monitoring and updating the status and execution of the workflow map.</li>
+	<li class="body">Select documents and other Content Server items 
+	(for example, queries, URLs, forms, and spreadsheets) to include as 
+	attachments in the work package.</li>
+	<li class="body">Define attributes in the work package that store 
+	information as a means of tracking and managing the work process and 
+	that prompt for user input.</li>
+	<li class="body">Define whether comments or other custom items 
+	are included in the work package.
+</ul>
+
+<span class="title3">The Zoom View</span>
+<p class="body">The Zoom View, the movable mini-map of the workflow, 
+allows workflow creators to navigate a workflow map that is not entirely 
+visible in the Workflow Designer. Instead of using the scroll bars to view a 
+large map, they move the rectangular outline in the Zoom View to display the 
+corresponding area of the Workflow Designer. Clicking an area in the Zoom View 
+takes them to that place in the main map.</p>
+
+<img src="../images/mapov.gif" width=208 height=139 border=0 alt="Zoom View">
+
+<p class="body">The modifications made to a workflow map in the Workflow 
+Painter are dynamically updated in the Zoom View. This is especially useful for
+large maps that cannot be displayed on a single screen in the Workflow Designer.</p>
+
+
+<span id="status" class="title2">Workflow Status</span>
+<p class="body">Managers or initiators of a workflow can monitor the 
+status of the workflow after it is initiated in Content Server. The Workflow Status 
+page displays the title, status, step information, due date, and relationship 
+associated with the active workflows in Content Server.</p>
+
+
+<script language="JavaScript">IncludeFooter();
+</script>
+</body>
+</html>
+

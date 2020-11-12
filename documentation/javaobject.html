@@ -1,0 +1,726 @@
+
+<meta charset="UTF-8">
+<html>
+<head><title>Class: JavaObject</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../syntax.css" type="text/css">
+<link rel="stylesheet" href="builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td  align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody></table>
+
+<div id="document">
+	
+<div class="sidebar_container">
+		
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink"><a href="assoc.html">Assoc</a></div>
+				<div class="packagelink"><a href="boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="builder.html">Builder</a></div>
+				<div class="packagelink"><a href="bytes.html">Bytes</a></div>
+				<div class="packagelink"><a href="capi.html">CAPI</a></div>
+				<div class="packagelink"><a href="capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink"><a href="cachetree.html">CacheTree</a></div>
+				<div class="packagelink"><a href="compiler.html">Compiler</a></div>
+				<div class="packagelink"><a href="core.html">Core</a></div>
+				<div class="packagelink"><a href="dapi.html">DAPI</a></div>
+				<div class="packagelink"><a href="dapinode.html">DAPINODE</a></div>
+				<div class="packagelink"><a href="dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink"><a href="dapiversion.html">DAPIVERSION</a></div>
+				<div class="packagelink"><a href="domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="domcomment.html">DOMComment</a></div>
+				<div class="packagelink"><a href="domdocument.html">DOMDocument</a></div>
+				<div class="packagelink"><a href="domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink"><a href="domelement.html">DOMElement</a></div>
+				<div class="packagelink"><a href="domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink"><a href="domnamednodemap.html">DOMNamedNodeMap</a></div>
+				<div class="packagelink"><a href="domnode.html">DOMNode</a></div>
+				<div class="packagelink"><a href="domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="domtext.html">DOMText</a></div>
+				<div class="packagelink"><a href="date.html">Date</a></div>
+				<div class="packagelink"><a href="dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="env.html">Env</a></div>
+				<div class="packagelink"><a href="error.html">Error</a></div>
+				<div class="packagelink"><a href="file.html">File</a></div>
+				<div class="packagelink"><a href="filecopy.html">FileCopy</a></div>
+				<div class="packagelink"><a href="fileprefs.html">Fileprefs</a></div>
+				<div class="packagelink"><a href="frame.html">Frame</a></div>
+				<div class="packagelink"><a href="global.html">Global</a></div>
+				<div class="packagelink"><a href="integer.html">Integer</a></div>
+				<div class="packagelink curPage">JavaObject</div>
+				<div class="packagelink"><a href="language.html">Language</a></div>
+				<div class="packagelink"><a href="license.html">License</a></div>
+				<div class="packagelink"><a href="list.html">List</a></div>
+				<div class="packagelink"><a href="logging.html">Logging</a></div>
+				<div class="packagelink"><a href="long.html">Long</a></div>
+				<div class="packagelink"><a href="mailmessage.html">MailMessage</a></div>
+				<div class="packagelink"><a href="math.html">Math</a></div>
+				<div class="packagelink"><a href="memcached.html">Memcached</a></div>
+				<div class="packagelink"><a href="notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="object.html">Object</a></div>
+				<div class="packagelink"><a href="pop3session.html">POP3Session</a></div>
+				<div class="packagelink"><a href="patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="patfind.html">PatFind</a></div>
+				<div class="packagelink"><a href="pattern.html">Pattern</a></div>
+				<div class="packagelink"><a href="point.html">Point</a></div>
+				<div class="packagelink"><a href="profiler.html">Profiler</a></div>
+				<div class="packagelink"><a href="real.html">Real</a></div>
+				<div class="packagelink"><a href="recarray.html">RecArray</a></div>
+				<div class="packagelink"><a href="record.html">Record</a></div>
+				<div class="packagelink"><a href="regex.html">Regex</a></div>
+				<div class="packagelink"><a href="restclient.html">RestClient</a></div>
+				<div class="packagelink"><a href="saxparser.html">SAXParser</a></div>
+				<div class="packagelink"><a href="smtpsession.html">SMTPSession</a></div>
+				<div class="packagelink"><a href="ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="script.html">Script</a></div>
+				<div class="packagelink"><a href="security.html">Security</a></div>
+				<div class="packagelink"><a href="set.html">Set</a></div>
+				<div class="packagelink"><a href="socket.html">Socket</a></div>
+				<div class="packagelink"><a href="sql.html">Sql</a></div>
+				<div class="packagelink"><a href="sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink"><a href="str.html">Str</a></div>
+				<div class="packagelink"><a href="string.html">String</a></div>
+				<div class="packagelink"><a href="system.html">System</a></div>
+				<div class="packagelink"><a href="uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="void.html">Void</a></div>
+				<div class="packagelink"><a href="wapi.html">WAPI</a></div>
+				<div class="packagelink"><a href="wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink"><a href="web.html">Web</a></div>
+				<div class="packagelink"><a href="xslprocessor.html">XSLProcessor</a></div>
+				<div class="packagelink"><a href="zip.html">Zip</a></div>
+		</div>
+</div>
+
+	<div class="content_container">
+		<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+		<h1>Class: JavaObject</h1><div class="ClassDescription"><p>The built-in functions in the JavaObject package provide the ability to access Java classes and services from OScript. The major functionalities offered in the JavaObject package are the following: </p>
+<ul>
+<li><a class="interdoc" href="#cm_javaobject_new">New()</a> Creates a new
+    instance of a Java class.</li>
+<li><a class="interdoc" href="#cm_javaobject_invokestaticmethod">InvokeStaticMethod()</a> Invokes a static
+    method defined for a Java class.</li>
+<li><a class="interdoc" href="#cm_javaobject_getstaticfield">GetStaticField()</a> Returns the value of a
+    static field.</li>
+<li><a class="interdoc" href="#cm_javaobject_setstaticfield">SetStaticField()</a> Sets the value of a static
+    field.</li>
+<li><a class="interdoc" href="#cm_javaobject_geterror">GetError()</a> Returns
+    the JNI exception error message from the last operation.</li>
+<li><a class="interdoc" href="#cm_javaobject_geterrorstack">GetErrorStack()</a>
+    Returns a <a class="interdoc" href="list.html">List</a>
+    for the stack trace associated with an exception in the last JNI
+    operation.</li>
+<li><a class="interdoc" href="#im_javaobject_invokemethod">InvokeMethod()</a>
+    Invokes an instance method defined for a Java class.</li>
+<li><a class="interdoc" href="#im_javaobject_getfield">GetField()</a> Returns
+    the value of an instance field.</li>
+<li>
+<p><a class="interdoc" href="#im_javaobject_setfield">SetField()</a> Sets the
+    value of an instance field.
+<h4>Note:</h4></p>
+</li>
+<li>
+<p>In order to use JavaObject, Livelink JVM has to be started. However,
+    unlike Livelink service, Livelink Builder does not start the JVM by
+    default. To start the JVM in Livelink Builder, add "-loadjavavm" in the
+    Target field of the Livelink Builder's program shortcut.</p>
+</li>
+<li>To deploy your jar files in Livelink JVM, added the jar files in
+    OTHOME/ojlib/ or OTHOME/module/somemodule_1_0_0/ojlib/ directory (and
+    their subdirectories) to be recognized by the JVM's application
+    classloader. </li>
+<li>Since Livelink 10.0.0, Java methods invoked by <a class="interdoc" href="#im_javaobject_invokemethod">InvokeMethod</a> and <a class="interdoc" href="#cm_javaobject_invokestaticmethod">InvokeStaticMethod</a> can access OScript
+    features. Please see the "<a href="../docs/jo.html">Calling OScript from
+    Java</a>" section for details.</li>
+</ul>
+<h4>OScript and Java Type Mappings </h4>
+
+<div style="margin-left: 3em">
+<h4>OScript To Java Type Mappings (passing parameters to JavaObject
+  methods)</h4>
+<table border="1" cellpadding="2" cellspacing="0" style="text-align: left; width: 1%;">
+<tbody>
+<tr>
+<th style="vertical-align: top; white-space: nowrap;">OScript<br>
+</br></th>
+<th style="text-align: center; vertical-align: top; white-space: nowrap;">Java<br>
+</br></th>
+</tr>
+<tr>
+<td style="vertical-align: top; white-space: nowrap;"><a href="assoc.html">Assoc</a><br>
+</br></td>
+<td style="vertical-align: top; white-space: nowrap;"><a href="http://java.sun.com/j2se/1.4/docs/api/java/util/Map.html">java.util.Map</a>
+<br>
+</br></td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1" style="vertical-align: top; white-space: nowrap;"><a href="boolean.html">Boolean</a><br>
+</br></td>
+<td colspan="1" rowspan="1" style="vertical-align: top; white-space: nowrap;"><a href="http://java.sun.com/docs/books/tutorial/java/nutsandbolts/datatypes.html">boolean</a>,
+          <a href="http://java.sun.com/j2se/1.4/docs/api/java/lang/Boolean.html">Boolean</a><br>
+</br></td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1" style="vertical-align: top; white-space: nowrap;"><a href="integer.html">Integer</a><br>
+</br></td>
+<td colspan="1" rowspan="1" style="vertical-align: top; white-space: nowrap;"><a href="http://java.sun.com/docs/books/tutorial/java/nutsandbolts/datatypes.html">short</a>,
+          <a href="http://java.sun.com/j2se/1.4/docs/api/java/lang/Short.html">Short</a><br>
+<a href="http://java.sun.com/docs/books/tutorial/java/nutsandbolts/datatypes.html">int</a>,
+          <a href="http://java.sun.com/j2se/1.4/docs/api/java/lang/Integer.html">Integer</a><br>
+<a href="http://java.sun.com/docs/books/tutorial/java/nutsandbolts/datatypes.html">long</a>,
+          <a href="http://java.sun.com/j2se/1.4/docs/api/java/lang/Long.html">Long</a>
+<br>
+</br></br></br></td>
+</tr>
+<tr>
+<td style="vertical-align: top; white-space: nowrap;">JavaObject<br>
+</br></td>
+<td style="vertical-align: top; white-space: nowrap;">Passed as the
+          wrapped value<br>
+</br></td>
+</tr>
+<tr>
+<td style="vertical-align: top; white-space: nowrap;"><a href="list_class.html">List</a><br>
+</br></td>
+<td style="vertical-align: top; white-space: nowrap;"><a href="http://java.sun.com/j2se/1.4/docs/api/java/util/List.html">java.util.List</a>
+<br>
+</br></td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1" style="vertical-align: top; white-space: nowrap;"><a href="long.html">Long</a><br>
+</br></td>
+<td colspan="1" rowspan="1" style="vertical-align: top; white-space: nowrap;"><a href="http://java.sun.com/docs/books/tutorial/java/nutsandbolts/datatypes.html">short</a>,
+          <a href="http://java.sun.com/j2se/1.4/docs/api/java/lang/Short.html">Short</a>
+<br>
+<a href="http://java.sun.com/docs/books/tutorial/java/nutsandbolts/datatypes.html">int</a>,
+          <a href="http://java.sun.com/j2se/1.4/docs/api/java/lang/Integer.html">Integer</a>
+<br>
+<a href="http://java.sun.com/docs/books/tutorial/java/nutsandbolts/datatypes.html">long</a>,
+          <a href="http://java.sun.com/j2se/1.4/docs/api/java/lang/Long.html">Long</a><br>
+</br></br></br></td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1" style="vertical-align: top; white-space: nowrap;"><a href="../oscript/data.html#object">Object or Frame</a> (Since
+          10.0.0)<br>
+</br></td>
+<td style="vertical-align: top; white-space: nowrap;"><a href="../javasdk/api/com/opentext/livelink/oml/OScriptObject.html">com.opentext.livelink.oml.OScriptObject</a>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1" style="vertical-align: top; white-space: nowrap;"><a href="real.html">Real</a><br>
+</br></td>
+<td colspan="1" rowspan="1" style="vertical-align: top; white-space: nowrap;"><a href="http://java.sun.com/docs/books/tutorial/java/nutsandbolts/datatypes.html">float</a>,
+          <a href="http://java.sun.com/j2se/1.4/docs/api/java/lang/Float.html">Float</a><br>
+<a href="http://java.sun.com/docs/books/tutorial/java/nutsandbolts/datatypes.html">double</a>,
+          <a href="http://java.sun.com/j2se/1.4/docs/api/java/lang/Double.html">Double</a><br>
+</br></br></td>
+</tr>
+<tr>
+<td style="vertical-align: top; white-space: nowrap;"><a href="record.html">Record</a><br>
+</br></td>
+<td style="vertical-align: top; white-space: nowrap;"><a href="../javasdk/api/com/opentext/util/Record.html">com.opentext.util.Record</a><br>
+</br></td>
+</tr>
+<tr>
+<td style="vertical-align: top; white-space: nowrap;"><a href="recarray.html">RecArray</a><br>
+</br></td>
+<td style="vertical-align: top; white-space: nowrap;"><a href="../javasdk/api/com/opentext/util/RecArray.html">com.opentext.util.RecArray</a></td>
+</tr>
+<tr>
+<td style="vertical-align: top; white-space: nowrap;"><a href="string.html">String</a><br>
+</br></td>
+<td style="vertical-align: top; white-space: nowrap;"><a href="http://java.sun.com/j2se/1.4/docs/api/java/lang/String.html">String</a><br>
+</br></td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1" style="vertical-align: top; white-space: nowrap;"><a href="core.html#Undefined">Undefined</a><br>
+</br></td>
+<td style="vertical-align: top; white-space: nowrap;">null<br>
+</br></td>
+</tr>
+<tr>
+<td style="vertical-align: top; white-space: nowrap;">Java types not
+          listed in this table (Since 10.0.0)<br>
+</br></td>
+<td style="vertical-align: top; white-space: nowrap;"><a href="../javasdk/api/com/opentext/livelink/oml/OPeer.html">com.opentext.livelink.oml.OPeer</a>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<h4>Java to OScript Type Mappings (return values from JavaObject
+  methods)</h4>
+<table border="1" cellpadding="2" cellspacing="0" style="text-align: left; width: 1%;">
+<tbody>
+<tr>
+<th style="vertical-align: top; white-space: nowrap;">Java<br>
+</br></th>
+<th style="text-align: center; vertical-align: top; white-space: nowrap;">OScript<br>
+</br></th>
+</tr>
+<tr>
+<td colspan="1" rowspan="1" style="vertical-align: top; white-space: nowrap;"><a href="http://java.sun.com/docs/books/tutorial/java/nutsandbolts/datatypes.html">boolean</a>,
+          <a href="http://java.sun.com/j2se/1.4/docs/api/java/lang/Boolean.html">Boolean</a><br>
+</br></td>
+<td colspan="1" rowspan="1" style="vertical-align: top; white-space: nowrap;"><a href="boolean.html">Boolean</a><br>
+</br></td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1" style="vertical-align: top; white-space: nowrap;"><a href="http://java.sun.com/docs/books/tutorial/java/nutsandbolts/datatypes.html">byte</a>
+<br>
+<a href="http://java.sun.com/docs/books/tutorial/java/nutsandbolts/datatypes.html">char</a>,
+          <a href="http://java.sun.com/j2se/1.4/docs/api/java/lang/Character.html">Character</a>
+<br>
+<a href="http://java.sun.com/docs/books/tutorial/java/nutsandbolts/datatypes.html">short</a>,
+          <a href="http://java.sun.com/j2se/1.4/docs/api/java/lang/Short.html">Short</a><br>
+<a href="http://java.sun.com/docs/books/tutorial/java/nutsandbolts/datatypes.html">int</a>,
+          <a href="http://java.sun.com/j2se/1.4/docs/api/java/lang/Integer.html">Integer</a><br>
+</br></br></br></br></td>
+<td colspan="1" rowspan="1" style="vertical-align: top; white-space: nowrap;"><a href="integer.html">Integer</a><br>
+</br></td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1" style="vertical-align: top; white-space: nowrap;"><a href="http://java.sun.com/docs/books/tutorial/java/nutsandbolts/datatypes.html">float</a>,
+          <a href="http://java.sun.com/j2se/1.4/docs/api/java/lang/Float.html">Float</a><br>
+<a href="http://java.sun.com/docs/books/tutorial/java/nutsandbolts/datatypes.html">double</a>,
+          <a href="http://java.sun.com/j2se/1.4/docs/api/java/lang/Double.html">Double</a><br>
+</br></br></td>
+<td colspan="1" rowspan="1" style="vertical-align: top; white-space: nowrap;"><a href="real.html">Real</a><br>
+</br></td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1" style="vertical-align: top; white-space: nowrap;"><a href="http://java.sun.com/docs/books/tutorial/java/nutsandbolts/datatypes.html">long</a>,
+          <a href="http://java.sun.com/j2se/1.4/docs/api/java/lang/Long.html">Long</a><br>
+</br></td>
+<td colspan="1" rowspan="1" style="vertical-align: top; white-space: nowrap;"><a href="long.html">Long</a><br>
+</br></td>
+</tr>
+<tr>
+<td style="vertical-align: top; white-space: nowrap;"><a href="http://java.sun.com/j2se/1.4/docs/api/java/util/List.html">java.util.List</a>
+          (Since 10.0.0) <sup>[[[1]]]</sup></td>
+<td style="vertical-align: top; white-space: nowrap;"><a href="list_class.html">List</a><br>
+</br></td>
+</tr>
+<tr>
+<td style="vertical-align: top; white-space: nowrap;"><a href="http://java.sun.com/j2se/1.4/docs/api/java/util/Map.html">java.util.Map</a>
+          (Since 10.0.0) <sup>[[[1]]]</sup><br>
+</br></td>
+<td style="vertical-align: top; white-space: nowrap;"><a href="assoc.html">Assoc</a><br>
+</br></td>
+</tr>
+<tr>
+<td style="vertical-align: top; white-space: nowrap;"><a href="../javasdk/api/com/opentext/util/RecArray.html">com.opentext.util.RecArray</a>
+          (Since 10.0.0) <sup>[[[1]]]</sup></td>
+<td style="vertical-align: top; white-space: nowrap;"><a href="recarray.html">RecArray</a><br>
+</br></td>
+</tr>
+<tr>
+<td style="vertical-align: top; white-space: nowrap;"><a href="../javasdk/api/com/opentext/util/Record.html">com.opentext.util.Record</a>
+          (Since 10.0.0) <sup>[[[1]]]</sup><br>
+</br></td>
+<td style="vertical-align: top; white-space: nowrap;"><a href="record.html">Record</a><br>
+</br></td>
+</tr>
+<tr>
+<td style="vertical-align: top; white-space: nowrap;"><a href="http://java.sun.com/j2se/1.4/docs/api/java/lang/String.html">String</a><br>
+</br></td>
+<td style="vertical-align: top; white-space: nowrap;"><a href="string.html">String</a><br>
+</br></td>
+</tr>
+<tr>
+<td style="vertical-align: top; white-space: nowrap;">null<br>
+</br></td>
+<td colspan="1" rowspan="1" style="vertical-align: top; white-space: nowrap;"><a href="core.html#Undefined">Undefined</a><br>
+</br></td>
+</tr>
+<tr>
+<td style="vertical-align: top; white-space: nowrap;">Java types not
+          listed in this table<br>
+</br></td>
+<td style="vertical-align: top; white-space: nowrap;">JavaObject<br>
+</br></td>
+</tr>
+</tbody>
+</table>
+</br></br></div>
+
+<p><a id="L1601" name="L1601">1.</a> This conversion is not backward compatible with the earlier versions of Livelink which convert this type to JavaObject. To switch to the old behavior, you can set "ReturnAsCollectionType=false" in the [JavaObject] section of opentext.ini file. But we strongly recommend that you update your code to comply with the new conversion. </p></div>
+
+
+			<h2>Class Methods</h2>
+			<div class="ClassMethodsShort">
+				<div class="Method">
+					<div class="Name"><a href="#cm_javaobject_geterror" class="IndexMethodName">GetError</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns the JNI exception error
+      message from the last operation.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_javaobject_geterrorstack" class="IndexMethodName">GetErrorStack</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns a <a class="interdoc" href="list.html">List</a> for the
+      stack trace associated with an exception in the last JNI operation.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_javaobject_getstaticfield" class="IndexMethodName">GetStaticField</a>(
+					 String className, String fieldName )
+					</div>
+					<div class="Description"><p>Returns the value of a static
+      field.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_javaobject_invokestaticmethod" class="IndexMethodName">InvokeStaticMethod</a>(
+					 String className, String methodName, List parameters )
+					</div>
+					<div class="Description"><p>Invokes a static method defined
+      for a Java class.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_javaobject_new" class="IndexMethodName">New</a>(
+					 String className, List parameters )
+					</div>
+					<div class="Description"><p>Creates a new instance of a Java
+      class.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_javaobject_setstaticfield" class="IndexMethodName">SetStaticField</a>(
+					 String className, String methodName, Dynamic value )
+					</div>
+					<div class="Description"><p>Sets the value of a static
+      field.</p></div>
+				</div>
+			</div>
+
+			<h2>Instance Methods</h2>
+			<div class="InstanceMethodsShort">
+				<div class="Method">					
+					<div class="Name"><a href="#im_javaobject_getfield" class="IndexMethodName">GetField</a>(
+					 String fieldName )
+					</div>
+					<div class="Description"><p>Returns the value of an
+      instance field.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_javaobject_invokemethod" class="IndexMethodName">InvokeMethod</a>(
+					 String methodName, List parameters )
+					</div>
+					<div class="Description"><p>Invokes an instance method
+      defined for a Java class.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_javaobject_setfield" class="IndexMethodName">SetField</a>(
+					 String fieldName, Dynamic value )
+					</div>
+					<div class="Description"><p>Sets the value of an instance
+      field.</p></div>
+				</div>
+			</div>
+
+
+		
+				<h2>Class Methods</h2>
+				<div class="ClassMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_javaobject_geterror">GetError</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">GetError</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the JNI exception error message from the
+last operation.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A string containing JNI
+      exception error message from the last operation.</p>
+
+<p>If no exception occurs, an empty
+      string is returned. </p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is an example:</p>
+<div class="codehilite"><pre>    <span class="kt">Dynamic</span> result <span class="o">=</span> JavaObject<span class="o">.</span>SetStaticField<span class="p">(</span> <span class="s">&quot;com.opentext.util.DateFormat&quot;</span><span class="p">,</span> <span class="s">&quot;fDefaultMonthFormat&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="s">&quot;mm&quot;</span> <span class="p">}</span> <span class="p">)</span>
+    <span class="k">if</span> IsError<span class="p">(</span> result <span class="p">)</span>
+        echo<span class="p">(</span> JavaObject<span class="o">.</span>GetError<span class="p">()</span> <span class="p">)</span>
+    <span class="k">end</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_javaobject_geterrorstack">GetErrorStack</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">List</span> 
+						<span class="PrototypeselfName">GetErrorStack</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a <a class="interdoc" href="list.html">List</a> for the stack trace associated with an
+exception in the last JNI operation.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A [[List]] of [[String]] from the Java stack trace
+      elements at the time of an exception. Each [[String]] represents a single stack
+      frame. As described in the Java API specification documentation for
+      Class StackTraceElement, all stack frames except for the one at the top
+      of the stack represent a method invocation. The frame at the top of the
+      stack represents the the execution point at which the stack trace was
+      generated.</p>
+
+<p>If no exception has occurred, an
+      empty [[List]]
+      is returned. </p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is an example:</p>
+<div class="codehilite"><pre>    List        errStack
+    <span class="kt">String</span>      s
+    JavaObject  fileStream <span class="o">=</span> JavaObject<span class="o">.</span>New<span class="p">(</span> <span class="s">&quot;java.io.FileInputStream&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="s">&#39;c:\badfile&#39;</span> <span class="p">}</span> <span class="p">)</span>
+
+    <span class="k">if</span> IsError<span class="p">(</span> fileStream <span class="p">)</span>
+        errStack <span class="o">=</span> JavaObject<span class="o">.</span>GetErrorStack<span class="p">()</span>
+
+        <span class="k">for</span> s <span class="o">in</span> errStack
+            echo<span class="p">(</span> s <span class="p">)</span>
+        <span class="k">end</span>
+    <span class="k">end</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_javaobject_getstaticfield">GetStaticField</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Dynamic</span> 
+						<span class="PrototypeselfName">GetStaticField</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">className</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">fieldName</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the value of a static field.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">className</span><span class="description"><p>The name of the class that defines
+              the field.</p></span></div>
+											<div class="Parameter"><span class="name">fieldName</span><span class="description"><p>The name of the field to get the
+              value of.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The return value can be either
+      an <a class="interdoc" href="error.html">Error</a>
+      object if it fails or a <a class="interdoc" href="dynamic.html">Dynamic</a> if it succeeds. </p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is an example:</p>
+<div class="codehilite"><pre><span class="kt">Dynamic</span> result <span class="o">=</span> JavaObject<span class="o">.</span>GetStaticField<span class="p">(</span> <span class="s">&quot;com.opentext.util.DateFormat&quot;</span><span class="p">,</span> <span class="s">&quot;fDefaultMonthFormat&quot;</span> <span class="p">)</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_javaobject_invokestaticmethod">InvokeStaticMethod</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Dynamic</span> 
+						<span class="PrototypeselfName">InvokeStaticMethod</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">className</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">methodName</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">List</span> <span class="PrototypeArgumentName">parameters</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Invokes a static method defined for a Java
+class.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">className</span><span class="description"><p>The name of the class that defines
+              the method.</p></span></div>
+											<div class="Parameter"><span class="name">methodName</span><span class="description"><p>The name of the method to
+              invoke.</p></span></div>
+											<div class="Parameter"><span class="name">parameters</span><span class="description"><p>The parameter list to pass to
+              the method.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The return value can be either
+      an <a class="interdoc" href="error.html">Error</a>
+      object if it fails or a <a class="interdoc" href="dynamic.html">Dynamic</a> if it succeeds. </p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is an example:</p>
+<div class="codehilite"><pre><span class="kt">Dynamic</span> result <span class="o">=</span> JavaObject<span class="o">.</span>InvokeStaticMethod<span class="p">(</span> <span class="s">&quot;com.opentext.util.DateFormat&quot;</span><span class="p">,</span> <span class="s">&quot;GetDefaultMonthFormat&quot;</span><span class="p">,</span> <span class="p">{}</span> <span class="p">)</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_javaobject_new">New</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">JavaObject</span> 
+						<span class="PrototypeselfName">New</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">className</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">List</span> <span class="PrototypeArgumentName">parameters</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Creates a new instance of a Java class. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">className</span><span class="description"><p>The name of the class to
+              instantiate.</p></span></div>
+											<div class="Parameter"><span class="name">parameters</span><span class="description"><p>The parameter list to pass to
+              the constructor.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The return value can be either
+      an <a class="interdoc" href="error.html">Error</a>
+      object if it fails or a <a class="interdoc" href="javaobject.html">JavaObject</a> if it succeeds. </p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is an example:</p>
+<div class="codehilite"><pre>JavaObject dateFormat <span class="o">=</span> JavaObject<span class="o">.</span>New<span class="p">(</span> <span class="s">&quot;com.opentext.util.DateFormat&quot;</span><span class="p">,</span> <span class="p">{}</span> <span class="p">)</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_javaobject_setstaticfield">SetStaticField</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Dynamic</span> 
+						<span class="PrototypeselfName">SetStaticField</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">className</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">methodName</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">value</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sets the value of a static field.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">className</span><span class="description"><p>The name of the class that defines
+              the field.</p></span></div>
+											<div class="Parameter"><span class="name">methodName</span><span class="description"><p>The name of the field to set the
+              value of.</p></span></div>
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>The value to set the static
+              field.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The return value can be either
+      an <a class="interdoc" href="error.html">Error</a>
+      object if it fails or a <a class="interdoc" href="core.html#ca_core_undefined">Undefined</a> if it succeeds. </p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is an example:</p>
+<div class="codehilite"><pre><span class="kt">Dynamic</span> result <span class="o">=</span> JavaObject<span class="o">.</span>SetStaticField<span class="p">(</span> <span class="s">&quot;com.opentext.util.DateFormat&quot;</span><span class="p">,</span> <span class="s">&quot;fDefaultMonthFormat&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="s">&quot;mm&quot;</span> <span class="p">}</span> <span class="p">)</span>
+</pre></div></div>
+							</div>
+						</div>
+				</div>
+				<h2>Instance Methods</h2>
+				<div class="InstanceMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_javaobject_getfield">GetField</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Dynamic</span> 
+						<span class="PrototypeselfName">GetField</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">fieldName</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the value of an instance field.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">fieldName</span><span class="description"><p>The name of the field to get the
+              value of.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The return value can be either
+      an <a class="interdoc" href="error.html">Error</a>
+      object if it fails or a <a class="interdoc" href="dynamic.html">Dynamic</a> if it succeeds. </p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is an example:</p>
+<div class="codehilite"><pre><span class="kt">Dynamic</span> result <span class="o">=</span> dateFormat<span class="o">.</span>GetField<span class="p">(</span> <span class="s">&quot;fMonthFormat&quot;</span> <span class="p">)</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_javaobject_invokemethod">InvokeMethod</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Dynamic</span> 
+						<span class="PrototypeselfName">InvokeMethod</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">methodName</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">List</span> <span class="PrototypeArgumentName">parameters</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Invokes an instance method defined for a Java
+class.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">methodName</span><span class="description"><p>The name of the method to
+              invoke.</p></span></div>
+											<div class="Parameter"><span class="name">parameters</span><span class="description"><p>The parameter list to pass to
+              the method.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The return value can be either
+      an <a class="interdoc" href="error.html">Error</a>
+      object if it fails or a <a class="interdoc" href="dynamic.html">Dynamic</a> if it succeeds. </p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is an example:</p>
+<div class="codehilite"><pre><span class="kt">Dynamic</span> result <span class="o">=</span> dateFormat<span class="o">.</span>InvokeMethod<span class="p">(</span> <span class="s">&quot;GetMonthFormat&quot;</span><span class="p">,</span> <span class="p">{}</span> <span class="p">)</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_javaobject_setfield">SetField</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Dynamic</span> 
+						<span class="PrototypeselfName">SetField</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">fieldName</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">value</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sets the value of an instance field.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">fieldName</span><span class="description"><p>The name of the field to set the
+              value of.</p></span></div>
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>The value to set the field.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The return value can be either
+      an <a class="interdoc" href="error.html">Error</a>
+      object if it fails or a <a class="interdoc" href="core.html#ca_core_undefined">Undefined</a> if it succeeds. </p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is an example:</p>
+<div class="codehilite"><pre><span class="kt">Dynamic</span> result <span class="o">=</span> dateFormat<span class="o">.</span>SetField<span class="p">(</span> <span class="s">&quot;fMonthFormat&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="s">&quot;mm&quot;</span> <span class="p">}</span> <span class="p">)</span>
+</pre></div></div>
+							</div>
+						</div>
+				</div>
+		
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2018 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+
+
+
+</div>
+	</div>						
+						
+
+</div>
+
+</body></html>

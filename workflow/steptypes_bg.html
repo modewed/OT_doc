@@ -1,0 +1,294 @@
+<HTML>
+<HEAD>
+<TITLE>Adding New Step Types: Background Information</TITLE>
+
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<script language="JavaScript">updateParentHeader( 'Step Types' );</script>
+<script language="JavaScript">includeContentContainer( 'wfbuilder', true );</script>
+
+<p class="body">
+<p class="title">Adding New Step Types: Background Information</p>
+
+<a name="backapi"><span class="title2">Defining the step Type's API Object</span></a>
+<p class="body">
+You begin creating a step type by defining its API object. This object 
+contains features and scripts that are required for the operation 
+of a workflow step type and is named <span class="code">StandardTasks</span>. 
+You can find the <span class="code">StandardTasks</span> object in 
+<span class="code">WFMain:WFRoot:WFObjectTypes:WFTaskTypes</span>.
+
+<p class="body">The <span class="code">StandardTasks</span> object 
+acts as a class object that you can use to create many different step types.
+You can also access the <span class="code">StandardTasks</span> object using 
+the Content Server API. For more information, see the <a href="../lapi/frameset.html">Content Server API Developer's 
+Reference</a>.</p>
+
+<p class="body">For each step type that you create, you can modify the 
+following features:</p>
+<ul type="disc">
+	<li class="body"><span class="code">fSubType</span> stores a unique integer 
+	value that works with the fType feature to identify the object.
+	The <span class="code">WFTask</span> object and the 
+	<span class="code">WFTask</span> object also contain fSubType features, which
+	must be the same as the value of this <span class="code">fSubType</span> feature.</p>
+	<li class="body"><span class="code">fTaskName</span> stores the name of the step. By default, 
+	this value is displayed when you position your cursor over the task's 
+	icon in the Workflow Designer.</p>
+	<li class="body"><span class="code">fType</span> stores a unique integer 
+	value that works with the <span class="code">fSubType</span> feature 
+	to identify the object.
+</ul>
+
+<p class="body">When adding step types, set the <span class="code">fType</span> 
+values to an integer higher than 99 and the <span class="code">fSubType</span> 
+values to an integer between 1 and 10.</p>
+
+<p class="body">For each step type that you create, you can modify the 
+following scripts:</p>
+<ul type="disc">
+	<li class="body"><span class="code">GetPainterInfo()</span> retrieves the text that is displayed 
+	as a title below the step icon in the Workflow Desinger. The default value is 
+	the title of the step, as specified in the <span class="code">fTaskName</span> 
+	feature.  If you do not want to display the title of the step in the
+	Workflow Designer, you can modify this script.</p>
+	<li class="body"><span class="code">ReadyTaskForInitiation()</span> stores callback scripts and 
+	any additional data that is required by the step type throughout 
+	the execution of a workflow. This script is called when the workflow is initiated.
+	You can use this script to store the type, subtype, and
+	permission information for the step type in the
+	MAPTASK_USERDATA column of the WMapTask table. The
+	type and subtype information must be present in the
+	WMapTask table so that Content Server can distinguish between
+	different types of tasks.</p>
+	<li class="body"><span class="code">SetTaskDefaults()</span> stores the default data that must be 
+	present before Content Server can recognize the step type (that is, the type and subtype). This
+	script also stores the title, performer ID, and any other
+	information that you want to appear as default values on the
+	Step Definition page when a step of this type is edited in
+	Content Server.  You can also use this script to store step information that must
+	be present if the creator of a workflow map does not edit the
+	step on the Step Definition page before the workflow is
+	initiated.</p>
+	<li class="body"><span class="code">SetTaskRecFromMap()</span> converts a workflow step that has 
+	been prepared for initiation to a workflow map definition step. This script 
+	transfers data from the <span class="code">WAPIMAPTASK</span> to the correct 
+	fields in the map definition step to convert the workflow step back to a format
+	that the Workflow Designer recognizes.  The <span class="code">WAPIMAPTASK
+	</span> data type is used to define the object handle of a workflow map step 
+	that is stored in the WAPI database. It is used in WAPI functions for all 
+	step manipulation operations.
+	This script is called when a workflow manager attempts to
+	modify a workflow that has already been initiated. It undoes the
+	changes that were made by the <span class="code">ReadyTaskForInitiation()</span>
+	script (because the <span class="code">ReadyTaskForInitiation()</span> script is called
+	again when the workflow manager saves their changes and the
+	workflow process is resumed).
+</ul>
+
+<a name="backpaint"><span class="title2">Defining the Workflow Designer Information</span></a>
+<p class="body">
+After you define the step type's API object, you must provide the Workflow 
+Painter with the information it requires to display the step and manipulate 
+the data provided by the creator of the workflow map. You define the Workflow 
+Painter information using the <span class="code">WFTask</span> object. 
+You can find this object in <span class="code">WebWFP:WebWFPRoot</span>.</p>
+
+<p class="body">For each step type that you create, you can modify the following 
+features:</p>
+
+<ul type="disc">
+	<li class="body"><span class="code">fSubType</span> stores a unique integer 
+	value that works with the fType feature to identify the object.
+	The <span class="code">StandardTask</span> object and the 
+	<span class="code">WFTask</span> object also contain fSubType features, which
+	must be the same as the value of this <span class="code">fSubType</span> feature.</p>
+	<li class="body"><span class="code">fType</span> stores a unique integer 
+	value that works with the <span class="code">fSubType</span> feature 
+	to identify the object.
+</ul>
+
+<p class="body">When adding step types, set the <span class="code">fType</span> 
+values to an integer higher than 99 and the <span class="code">fSubType</span> 
+values to an integer between 1 and 10.</p>
+
+<p class="body">For each step type that you create, you can modify the following 
+scripts:</p>
+
+<ul type="disc">
+	<li class="body"><span class="code">GetMapData()</span> tells Content Server what to display when the creator 
+	of a workflow map edits this type of step. This script identifies the location 
+	and name of the HTML file to display for the Step Definition page for this step 
+	type. You can maintain consistency with other Content Server Step Definition
+	pages by using the commonedittask.html file.</p>
+	<li class="body"><span class="code">PutMapData()</span> saves the information that the creator of a 
+	workflow map enters on the Step Definition page when editing the step in the 
+	Workflow Designer. This data is saved in the workflow map definition.
+</ul>
+
+<p class="body">In addition to the features and scripts that you modify to 
+define the Workflow Designer information for a step type, you must create the 
+HTML file for this task's Step Definition page.</p>
+
+<p class="body">If you want to support the transport capabilities of Content Server, you
+must modify these additional scripts that are executed while a workflow is transported 
+from one system to another:</p>
+
+<ul type="disc">
+	<li class="body"><span class="code">GetXmlMetaDataSubclass()</span> adds step data that is relevant for
+    the transport to the XML file that is written while the workflow map is added to the workbench.</p>
+	<li class="body"><span class="code">PrepareXmlMetaDataSubclass()</span> reads step data that is relevant 
+    for the transport from the XML file while the workflow map is deployed from the workbench. Additionally it
+    converts the data to a data structure that matches the step configuration.</p>
+    <li class="body"><span class="code">SetXmlMetaDataSubclass()</span> updates the existing workflow map step 
+    configuration with the updated target system information.
+</ul>
+
+<p class="body">
+To support the transport capabilities for your custom workflow packages is optional and can be achieved by implementing the
+already mentioned functions <span class="code">GetXmlMetaData(), PrepareXmlMetaData(), SetXmlMetaData()</span> resp. the functions
+<span class="code">GetXmlMetaDataTask(), PrepareXmlMetaDataTask(), SetXmlMetaDataTask()</span> for the package specific task data. 
+With these implementations you ensure that the metadata is exported from the source environment while adding the workflow map to
+the Transport Warehouse and imported while it is deployed in the target environment. But the key feature of Content Server Transport 
+is the ability to map external references during the transport. The most obvious external references that exist in a workflow map
+are the users and groups that are used for step assignment. But also folders and documents differ at least in their id from one
+system to another. In order to map these references during the transport you have to implement <span class="code">dependency, dependency
+finder and dependency replacer</span> objects. You can refer to the different objects that are already implement in the workflow modules or 
+you check out the <span class="code">TRANSPORT</span> module which provides the basic transport functionality and the parent objects to
+orphan you objects from.</p>
+
+<p class="body">
+See package <span class="code">WEBWFP::Transport</span> for the workflow related dependency objects. As an example to maintain a sub
+workflow reference of the sub-workflow step, the following three objects where introduced:
+<ul type="disc">
+    <li class="body"><span class="code">WEBWFP::Transport::SubmapDependency</span> that identifies a dependency to a workflow map
+    used as sub workflow.</p>
+    <li class="body"><span class="code">WEBWFP::Transport::SubmapDependencyFinder</span> used to find sub workflow related metadata in
+    the export file and to display the dependency in the transport warehouse.</p>
+    <li class="body"><span class="code">WEBWFP::Transport::SubmapDependencyReplacer</span> used to replace the sub workflow related
+    metadata during the import.</p>
+</ul>
+</p>
+
+<a name="backstat"><span class="title2">Defining the Status and Display of the Step</span></a>
+<p class="body">
+After you define the API object and Workflow Designer information for the step 
+type, you must define the information that handles the step when a workflow 
+participant is working on it and when it is displayed on the Detailed Status 
+page in Content Server. You define this information using the 
+<span class="code">WFTask</span> object. You can find this 
+object in <span class="code">WebWork:WebWorkRoot</span>.</p>
+
+<p class="body">For each step type that you create, you can modify the following 
+features:</p>
+<ul type="disc">
+	<li class="body"><span class="code">fPaletteTask</span> stores a Boolean value. If the value of this 
+	feature is set to <span class="code">TRUE</span>, an icon
+	representing the step type can be displayed on the Icon Palette in the
+	Workflow Designer. If the value of this feature is set to 
+	<span class="code">FALSE</span>, an icon representing the step type cannot 
+	be displayed on the Step Palette in the Workflow Designer.</p>
+	<li class="body"><span class="code">fSubType</span> stores a unique integer 
+	value that works with the fType feature to identify the object.
+	The <span class="code">StandardTask</span> object and the 
+	<span class="code">WFTask</span> object also contain fSubType features which
+	must be the same as the value of this <span class="code">fSubType</span> feature.</p>
+	<li class="body"><span class="code">fTaskGif</span> stores the name of the image that was used until Content Server 10.5 to 
+	represent the step on the Step Palette in the Workflow Designer. The image must be 32x32 pixels.
+	This image must be stored in your module's support directory (for example,
+	c:/opentext/module/<i>modulename</i><span class="code">_1_0_0</span>/support).</p>
+	<li class="body"><span class="code">fSmallTaskGif</span> stores the name of the image that is used to 
+	represent the step on the Step Palette in the Workflow Designer of Content Server 10.5. It is added to the upper left corner of the BPMN 2.0 activity shape.
+    The image must be 16x16 pixels. If it is not set the <span class="code">fTaskGif</span> image is used and scaled to this size.
+	This image must be stored in your module's support directory (for example,
+	c:/opentext/module/<i>modulename</i><span class="code">_1_0_0</span>/support).</p>
+	<li class="body"><span class="code">fType</span> stores a unique integer that works with the 
+	<span class="code">fSubType</span> feature to identify the object.
+</ul>
+
+<p class="body">When adding step types, set the <span class="code">fType</span> 
+values to an integer higher than 99 and the <span class="code">fSubType</span> 
+values to an integer between 1 and 10.</p>
+
+
+<p class="body">For each step type that you create, you can modify the 
+following scripts:</p>
+
+<ul type="disc">
+	<li class="body"><span class="code">GetDisplayPerformerInfo()</span> examines the workflow and 
+	determines if the step has been assigned to a workflow participant. 
+	If it has, this script retrieves the name and ID of the workflow 
+	participant to whom the step has been assigned. This information 
+	is displayed when the workflow participant attempts to reassign 
+	the step in Content Server.
+	</p><li class="body"><span class="code">GetPainterInfo()</span> defines the information (for example, 
+	the name, type, subtype, icon, or module) that the Workflow Designer 
+	needs to know about the step type. This includes all of the information 
+	that the Workflow Designer requires to perform operations on the step.
+	</p><li class="body"><span class="code">GetPainterMenu()</span> returns a list of Assocs that define 
+	the menu commands that appear when you right-click this step type's 
+	icon in the Workflow Designer. You can set the Boolean value of the 
+	<span class="code">viewonly</span> variable to <span class="code">
+	TRUE</span> if you want to display a standard set of menu commands that do
+	not let the creator of a workflow map edit the step type in the Workflow 
+	Painter. You can set the Boolean value of the <span class="code">viewonly
+	</span> variable to <span class="code">FALSE</span> if you want to display 
+	a standard set of menu commands that let the creator of a workflow map edit
+	the step type in the Workflow Designer. Whether you set the Boolean value of the 
+	<span class="code">viewonly</span> variable to <span class="code">TRUE</span> 
+	or <span class="code">FALSE</span>, you can use this script to override the 
+	menu commands that are displayed in the Content Server interface as needed.
+	</p><li class="body"><span class="code">GetStatusDisplay()</span> retrieves 
+	the information that is 
+	displayed when a workflow participant clicks the step name on the 
+	Step List tab or double-clicks the step icon on the Map View tab of the 
+	Detailed Status page. This script returns <span class="code">Undefined
+	</span> (indicating that there is no information of this type relevant 
+	to the active workflow) or it returns an Assoc. If the script returns an 
+	Assoc, the fields in the Assoc must contain the information that the 
+	HTML file (specified by <span class="code">retval.HTMLFile</span>) 
+	needs to be displayed in Content Server. The Assoc contains OK if the data 
+	needed for display is retrieved; otherwise, it contains a string named 
+	<span class="code">ErrMsg</span>.
+	</p><li class="body"><span class="code">GetTaskEditData()</span> retrieves 
+	the information that is 
+	displayed when a workflow participant clicks the step name on the Tasks 
+	page in their Personal Workspace. This script returns <span class="code">
+	Undefined</span> (indicating that there is no information of this type 
+	relevant to the active workflow) or it returns an Assoc. If the function 
+	returns an Assoc, the fields in the Assoc must contain the information 
+	that the HTML file (specified by <span class="code">retval.HTMLFile</span>) 
+	needs to be displayed in Content Server. The Assoc contains OK if the data needed 
+	for display is retrieved; otherwise, it contains a string named 
+	<span class="code">ErrMsg</span>.
+	</p><li class="body"><span class="code">NewPerformer()</span> updates step information if the step is 
+	reassigned in Content Server. For example, if the performer's name is also the 
+	name of the step in the Workflow Designer, this script updates the names. 
+	This script is called when this type of step is reassigned in Content Server so 
+	that all performer-dependent information is updated.
+</ul>
+
+<p class="body">Depending on the complexity of the step types that you add to 
+Content Server, you may have to provide additional functionality. For example, 
+if you create a step type that allows the creators of workflow maps to 
+attach custom callback scripts to particular workflow events that are 
+associated with that step type, you may need to define the objects 
+responsible for handling those callback scripts in Content Server. 
+For more information, see the <a href="custom.html">WFCustomScriptPkg Object</a>.</p>
+
+<p class="body">If you add a complex step type to the custom module that you are creating, you may need
+to create custom request handlers that perform the operations associated with the step
+type. For example, the form step type (installed with the Content Server Forms module) uses
+request handlers to display the data in the form, to retrieve data from the form, and to
+pass the data to the workflow. In this case, the request handlers set up and manipulate all
+of the form's data correctly.</p>
+
+<script language="JavaScript">IncludeFooter();</script>
+
+</BODY>
+</html>

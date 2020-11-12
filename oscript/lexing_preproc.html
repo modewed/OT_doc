@@ -1,0 +1,393 @@
+<!doctype html>
+<html>
+<head>
+<title>OScript Language Reference : Lexing &amp; Preprocessing</title>
+<link rel="stylesheet" type="text/css" href="../ot_common_ui.css">
+<link rel="stylesheet" type="text/css" href="languageref.css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+
+<script language="JavaScript" src="../documentation.js"></script>
+
+</head>
+<body>
+<SCRIPT language=JavaScript>
+IncludeHeader( 'olang2', 'Lexing &amp; Preprocessing' )
+</SCRIPT>
+<h1>Lexing and Preprocessing</h1>
+<p>In this section, the non-terminal <span class="syntax">Digit</span> refers to the characters &lsquo;0&rsquo;..&lsquo;9&rsquo;, while <span class="syntax">Letter</span> refers to the ASCII characters &lsquo;a&rsquo;..&lsquo;z&rsquo; and &lsquo;A&rsquo;..&lsquo;Z&rsquo;.</p>
+
+<h2>Preprocessing</h2>
+<h3>Definitions</h3>
+<p>A definition is an entry in a table visible to the compiler, optionally mapping to a value. They can be used as both a way to selectively include code for compilation, or for macro substitution. Unlike other languages, such as C, definitions in OScript do not take any parameters. In addition, while the preprocessor is capable of associating substitutions with definitions, it is unable to perform any logic based on those substitutions.</p>
+
+<h3><a name="preproc-directives"></a>Preprocessor directives</h3>
+<p>A preprocessor directive is a line beginning with zero or more whitespace characters, followed by a <code>#</code>, zero or more white space characters, followed by the directive.</p>
+
+<p>There are six preprocessor directives:</p>
+<ul>
+	<li><span class="directive">define</span> <i>name</i> [<i>value</i>]</li>
+	<li><span class="directive">undef</span> <i>name</i></li>
+	<li><span class="directive">ifdef</span> <i>name</i></li>
+	<li><span class="directive">ifndef</span> <i>name</i></li>
+	<li><span class="directive">else</span></li>
+	<li><span class="directive">endif</span></li>
+</ul>
+
+<p>Preprocessor Directive:</p>
+<img src="rr-Preproc.png" alt="Railroad diagram for preprocessor statements" />
+
+<p>Name:</p>
+<img src="rr-Name.png" alt="Railroad diagram for identifiers" />
+
+<p><i>name</i> must be a sequence of alphanumerical or underscore characters, which must not lead with a digit. Unlike in old OScript, one cannot use macro substitution to change, if one were fool-hardy enough, the values of integer constants.</p>
+
+<p><span class="directive">define</span> adds a new definition to a global environment, and will persist until the end of the current file, unless undefined first. The definition binds a name to an optional value.</p>
+
+<p><span class="directive">undef</span> will remove a definition from the global environment, if it is present. If the definition is absent, nothing will happen.</p>
+
+<p><span class="directive">ifdef</span>, <span class="directive">ifndef</span>, <span class="directive">else</span> and <span class="directive">endif</span> will optionally include or omit code from being seen by the parser, depending on the state of definitions. Each <span class="directive">ifdef</span> must have a corresponding <span class="directive">endif</span>, and at most one <span class="directive">else</span>. <span class="directive">ifndef</span> behaves has similar requirements. <span class="directive">ifdef</span>s and <span class="directive">ifndef</span>s may be nested.</p>
+
+
+<div class="example"><span class="directive">#ifdef </span><i>name</i><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<i>Branch A</i><br />
+<span class="directive">#else</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<i>Branch B</i><br />
+<span class="directive">#endif</span></div>
+
+<p>If and only if <i>name</i> has been defined in the environment does Branch A get included in the source code that is sent to the rest of the compiler. Otherwise, Branch B gets sent. If the <span class="directive">else</span> directive and corresponding branch are omitted, then no code is included if <i>name</i> is not defined. If <span class="directive">ifndef</span> was used instead of <span class="directive">ifdef</span>, then Branch A would be included if and only if <i>name</i> wasn't defined. Otherwise, Branch B would be included.</p>
+
+<h3>Macro substitution</h3>
+<p>If a line is not a preprocessor directive, as described <a href="#preproc-directives">here</a>, then it is a candidate for macro substitution. All tokens in the line, that are not enclosed in strings and are not in comments, are compared against known definitions. If a match is found, the token is replaced with the value (if any) corresponding to the definition. Macro substitution is recursively performed on the substituted text.</p>
+
+<p>Macro substitution is non-recursive&mdash;if a macro expands to a token that would otherwise lead to recursion, it's left as it is.</p>
+
+<h3>Special macros</h3>
+<h4>__LINE__</h4>
+<p>This macro substitutes the current line number for <code>__LINE__</code>.</p>
+
+<p>For example:</p>
+<div class="example"><code><pre>
+Echo( "Current line number = " + Str.ValueToString( __LINE__ ) + Str.EOL() )
+</pre></code>
+<p>Output:</p>
+<code><pre>
+Current line number = 42 
+</pre></code></div>
+
+<h4>__FILE__</h4>
+
+<p>This directives substitutes the current oscript file name for <code>__FILE__</code> if running in an oscript file. If it is running in an ospace then the object.function name is substituted</p>
+
+<p>For example:</p>
+<div class="example"><code><pre>
+Echo( "Current File = " + __FILE__ + Str.EOL() )
+</pre></code>
+<p>Outputs:</p>
+<code><pre>
+Current File = test.lxe
+</pre></code></div>
+<p>If it is running in an ospace function then the object.function name is substituted</p>
+
+For example:
+<div class="example"><code><pre>
+Echo( "Current File = " + __FILE__ + Str.EOL() )
+</pre></code>
+<p>Outputs:</p>
+<code><pre>
+Current File = object:&amp;webdsp[261].Echo
+</pre></code></div>
+<h2>Lexing</h2>
+<h3><a name="lexer-continuation"></a>Line continuation</h3>
+<p>While lexing, if the final non-whitespace character on the line is the line continuation character (<code>\</code>), and the final character is not part of an unclosed string, the line continuation character and the remainder of the line (including any newline characters) are ignored. The result is that newline tokens are not sent to the parser, making multiple lines appear to be a single one.</p>
+
+<h3><a name="lexer-comments"></a>Comments</h3>
+<p>OScript has two comment styles&mdash;end-of-line or C++ style comments, and C-style comments.</p>
+
+<p>An end-of-line comment begins with <code>//</code> and continues until the end of the line. </p>
+
+<p>C-style comments begin with <code>/*</code> and continue until <code>*/</code> is reached. C-style comments cannot be nested&mdash;subsequent <code>/*</code> are considered to be part of the comment text, and the comment will end at the first <code>*/</code> encountered.</p>
+
+<h3>Numerical constants</h3>
+<p>There are two classes of numerical constants&mdash;integer constants and real constants.</p>
+<p>Integer:</p>
+<img src="rr-Integer.png" alt="Railroad diagram for integer" />
+<p>Real:</p>
+<img src="rr-Real.png" alt="Railroad diagram for Real" />
+
+
+<h3>String constants</h3>
+<p>OScript allows both double and single quoted strings. Enclosed quotes are escaped by repeating them: 
+<code>"-""-"</code>
+corresponds to the string <code>'-"-'</code>, while <code>'-'-'</code> corresponds to <code>"-'-"</code>.</p>
+
+<p>These strings may not span lines, and do not have any escape characters. In order to include special characters, e.g. newlines, it's necessary to append an expression evaluating to the character to the string using the <code>+</code> operator.</p>
+
+<p>To address the need of including SQL statements, and documentation in a source file without having to wrap them in a script, the new compiler also supports long strings, which are delimited with the back-tick character (<code>`</code>). These strings extend until they encounter another back-tick, and can span multiple lines. Like with short strings, a double back-tick embeds a literal back-tick into the string.</p>
+
+<p>String:</p>
+<img src="rr-String.png" alt="Railroad diagram for String" />
+<p>DblString:</p>
+<img src="rr-DblString.png" alt="Railroad diagram for double-quoted strings" />
+<p>SnglString:</p>
+<img src="rr-SnglString.png" alt="Railroad diagram for single-quoted strings" />
+<p>LongString:</p>
+<img src="rr-LongString.png" alt="Railroad diagram for long strings" />
+
+
+<h3><a name="keywords"></a><a name="lexer-identifiers"></a>Identifiers and Keywords</h3>
+<p>An OScript identifier is a letter or underscore, followed by zero or more additional letters, underscores or digits. All identifiers must be composed of ASCII characters.</p>
+<p>Identifier</p>
+<img src="rr-Identifier.png" alt="Railroad diagram for identifier" />
+
+<p>If an identifier matches a keyword, a token corresponding to that keyword is returned instead. The old keywords are:</p>
+
+<table class="keywordlist">
+	<tr>
+		<td><code>and</code></td>
+		<td><code>break</code></td>
+		<td><code>breakif</code></td>		
+		<td><code>by</code></td>
+		<td><code>case</code></td>
+	</tr>
+	<tr>
+		<td><code>continue</code></td>
+		<td><code>continueif</code></td>
+		<td><code>default</code></td>
+		<td><code>do</code></td>
+		<td><code>downto</code></td>
+	</tr>
+	<tr>
+		<td><code>else</code></td>
+		<td><code>elseif</code></td>
+		<td><code>end</code></td>
+		<td><code>eq</code></td>
+		<td><code>for</code></td>
+	</tr>
+	<tr>
+		<td><code>function</code></td>
+		<td><code>ge</code></td>
+		<td><code>goto</code></td>
+		<td><code>gt</code></td>
+		<td><code>if</code></td>
+	</tr>
+	<tr>
+		<td><code>in</code></td>
+		<td><code>le</code></td>
+		<td><code>lt</code></td>
+		<td><code>ne</code></td>
+		<td><code>nodebug</code></td>
+	</tr>
+	<tr>
+		<td><code>not</code></td>
+		<td><code>or</code></td>
+		<td><code>repeat</code></td>
+		<td><code>return</code></td>
+		<td><code>switch</code></td>
+	</tr>
+	<tr>
+		<td><code>then</code></td>
+		<td><code>to</code></td>
+		<td><code>until</code></td>
+		<td><code>while</code></td>
+	</tr>
+</table>
+
+
+<p>In addition, the new compiler defines the following keywords:</p>
+
+<table class="keywordlist">
+	<tr>
+		<td><code>final</code></td>
+		<td><code>inherits</code></td>
+		<td><code>interface</code></td>
+		<td><code>none</code></td>
+		<td><code>object</code></td>
+	</tr>
+	<tr>
+		<td><code>override</code></td>
+		<td><code>package</code></td>
+		<td><code>private</code></td>
+		<td><code>public</code></td>
+		<td><code>undefined</code></td>
+	</tr>
+	<tr>
+		<td><code>using</code></td>
+	</tr>
+</table>
+
+<p>Many of these keywords are only considered keywords outside of scripts. Inside of a script, they will behave as identifiers or type names as normal.</p>
+
+<h3>Hash-quotes</h3>
+<p>Due to the increased number of keywords, plus the need to allow identifiers that contain spaces and other punctuation, the new compiler also supports &lsquo;hash-quotes&rsquo; as a way of using arbitrary sequences of characters as an identifier. Hash-quotes look ugly. This is intentional, as a way of discouraging their casual use.</p>
+<p>Hash-quote:</p>
+<img src="rr-HashQuote.png" alt="Railroad diagram for hashquotes" />
+
+<h3>Operators</h3>
+<p>An &lsquo;operator&rsquo; is a sequence of one or more of the following characters:</p>
+<table class="operators">
+<tr>
+	<td>( </td><td> ) </td><td> { </td><td> } </td><td> [ </td><td> ] </td><td> + </td><td> - </td><td> * </td>
+</tr>
+<tr>
+	<td>/ </td><td> = </td><td> ^ </td><td> . </td><td> ! </td><td> % </td><td> : </td><td> ; </td><td> , </td>
+</tr>
+<tr>
+	<td>~</td><td>&lt;</td><td> &gt; </td><td> &amp; </td><td> | </td><td> @ </td><td> ? </td><td> \ </td><td> $ </td>
+</tr>
+</table>
+
+<p>The lexer will match the longest sequence of consecutive characters that matches a known operator. As such, <code>==</code> will be matched as a single token, rather than two <code>=</code> tokens.</p>
+
+<p>&lsquo;Operators&rsquo; includes characters such as parentheses and semicolons, as well as more traditional operators such as <code>+</code> or <code>/</code>.</p>
+
+<p>A complete list of current operators:</p>
+<table class="operators">
+<tr>
+	<td> @ </td>
+	<td> ; </td>
+	<td> ( </td>
+	<td> ) </td>
+	<td> [ </td>
+	<td> ] </td>
+	<td> { </td>
+	<td> } </td>
+	<td> . </td>
+	<td> $ </td>
+</tr>
+<tr>
+	<td>$$</td>
+	<td>,</td>
+	<td>..</td>
+	<td>...</td>
+	<td>+</td>
+	<td>-</td>
+	<td>*</td>
+	<td>/</td>
+	<td>%</td>
+	<td>^</td>
+ </tr>
+<tr>
+	<td>|</td>
+	<td>&amp;</td>
+	<td>||</td>
+	<td>&amp;&amp;</td>
+	<td>^^</td>
+	<td>==</td>
+	<td>!=</td>
+	<td>&lt;&gt;</td>
+	<td>&lt;=</td>
+	<td>>=</td>
+</tr>
+<tr>
+	<td>&lt;</td>
+	<td>&gt;</td>
+	<td>~</td>
+	<td>!</td>
+	<td>&lt;&lt;</td>
+	<td>&gt;&gt;</td>
+	<td>?</td>
+	<td>:</td>
+	<td>=</td>
+	<td>+=</td>
+ </tr>
+<tr>
+	<td>-=</td>
+	<td>*=</td>
+	<td>&amp;=</td>
+	<td>^=</td>
+	<td>|=</td>
+	<td>\</td>
+	<td>::</td>
+ 
+ </tr>
+</table>
+
+<h2>Comments</h2>
+<p>Comments are non-executable statements that help the reader of a script more readily discern its purpose. OScript supports two types of comments: ( <code>//</code> ) and the ( <code>/*</code> ... <code>*/</code> ) pair.</p>
+
+<p>The ( <code>//</code> ) comment character defines a single line comment. It can be used on a line by itself or it can follow another statement. For example:</p>
+
+<code><pre>
+	// this is a whole line comment
+	Integer x = 55 // this is an end-of-line comment
+</pre></code>
+<p>All characters on the line following the comment character are considered to be part of the comment and are, therefore, ignored by the compiler.</p>
+
+<p>The ( <code>/*</code> ... <code>*/</code> ) pair can be used to define a multiple line comment, although both characters can be placed on a single line also. For example:</p>
+
+<code><pre>
+	/* 
+	this is a 
+	multiple line comment
+	*/
+	Integer x = 55 /* this is an end-of-line comment */
+</pre></code>
+
+<p>All characters following the ( <code>/*</code> ) character and preceding the next ( <code>*/</code> ) character are considered to be part of the comment and are, therefore, ignored by the compiler. Multi-line comments do not nest&mdash;the comment will end at the first <code>*/</code> regardless of how many <code>/*</code> preceded it.</p>
+
+<p>Comments are optional, but they provide a simple and straightforward method of documenting your script.</p>
+
+<h2>Line continuations</h2>
+<p>OScript is a white-space sensitive language&mdash;new-line characters function as end-of-statement markers. Sometimes, however, one wishes a statement to span multiple lines.</p>
+
+<p>Traditionally, this has been achieved by using back slashes (<code>\</code>) as line continuation characters. If the last non-whitespace character on a line is a back slash, the following line is appended to the current line. This process is repeated for each line ending with a line continuation character.</p>
+<div class="example"><code><pre>
+Echo("x", \
+     "y", \
+     "z")
+</pre></code></div>
+
+<p>If the line needs continuation, and there is an end-of-line comment, the back slash should go before the comment. For example:</p>
+<div class="example"><code><pre>
+Echo("x", \
+     "y", \// this is the proper place for a comment
+     "z")
+</pre></code></div>
+
+<p>The continuation character cannot be used in the middle of a String declaration. For example:</p>
+<div class="example"><code><pre>
+// error in the following statement:
+String s = "The quick brown fox \
+jumped over the lazy dog."
+// error fixed in the following statement:
+String s = "The quick brown fox" + \
+"jumped over the lazy dog."
+</pre></code></div>
+
+<p>Since CS 10.5, the line continuation character becomes optional in many cases where starting a new statement would be syntactically invalid. As such, continuation characters are no longer necessary in the following circumstances:</p>
+<ul>
+	<li>After opening parenthesis (<code>(</code>)), braces (<code>{</code>) and brackets (<code>[</code>)</li>
+	<li>Before closing parenthesis (<code>)</code>)) and braces (<code>}</code>)</li>
+	<li>After commas</li>
+	<li>After (but not before) binary operators such as +, -, =, ., &amp;&amp;, </li>
+</ul>
+
+<p>In most cases, this will greatly reduce the number of continuation characters needed, while making it easier to write readable code. For instance, the above examples become:</p>
+<div class="example"><code><pre>
+Echo("x", 
+     "y", // this is the proper place for a comment
+     "z")
+
+String s = "The quick brown fox" +
+	"jumped over the lazy dog."
+</pre></code></div>
+
+<p>In other cases, some small adjustment might be necessary. For instance,</p>
+<div class="example"><code><pre>
+if( conditionA \
+    &amp;&amp; conditionB \
+    &amp;&amp; conditionC )
+</pre></code></div>
+<p>becomes</p>
+<div class="example"><code><pre>
+if( conditionA &amp;&amp;
+    conditionB &amp;&amp;
+    conditionC )
+</pre></code></div>
+
+<script language="JavaScript">
+IncludeFooter( '' )
+</script>
+
+</body>
+</html>

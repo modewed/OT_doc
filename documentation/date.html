@@ -1,0 +1,1301 @@
+
+<meta charset="UTF-8">
+<html>
+<head><title>Class: Date</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../syntax.css" type="text/css">
+<link rel="stylesheet" href="builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td  align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody></table>
+
+<div id="document">
+	
+<div class="sidebar_container">
+		
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink"><a href="assoc.html">Assoc</a></div>
+				<div class="packagelink"><a href="boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="builder.html">Builder</a></div>
+				<div class="packagelink"><a href="bytes.html">Bytes</a></div>
+				<div class="packagelink"><a href="capi.html">CAPI</a></div>
+				<div class="packagelink"><a href="capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink"><a href="cachetree.html">CacheTree</a></div>
+				<div class="packagelink"><a href="compiler.html">Compiler</a></div>
+				<div class="packagelink"><a href="core.html">Core</a></div>
+				<div class="packagelink"><a href="dapi.html">DAPI</a></div>
+				<div class="packagelink"><a href="dapinode.html">DAPINODE</a></div>
+				<div class="packagelink"><a href="dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink"><a href="dapiversion.html">DAPIVERSION</a></div>
+				<div class="packagelink"><a href="domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="domcomment.html">DOMComment</a></div>
+				<div class="packagelink"><a href="domdocument.html">DOMDocument</a></div>
+				<div class="packagelink"><a href="domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink"><a href="domelement.html">DOMElement</a></div>
+				<div class="packagelink"><a href="domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink"><a href="domnamednodemap.html">DOMNamedNodeMap</a></div>
+				<div class="packagelink"><a href="domnode.html">DOMNode</a></div>
+				<div class="packagelink"><a href="domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="domtext.html">DOMText</a></div>
+				<div class="packagelink curPage">Date</div>
+				<div class="packagelink"><a href="dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="env.html">Env</a></div>
+				<div class="packagelink"><a href="error.html">Error</a></div>
+				<div class="packagelink"><a href="file.html">File</a></div>
+				<div class="packagelink"><a href="filecopy.html">FileCopy</a></div>
+				<div class="packagelink"><a href="fileprefs.html">Fileprefs</a></div>
+				<div class="packagelink"><a href="frame.html">Frame</a></div>
+				<div class="packagelink"><a href="global.html">Global</a></div>
+				<div class="packagelink"><a href="integer.html">Integer</a></div>
+				<div class="packagelink"><a href="javaobject.html">JavaObject</a></div>
+				<div class="packagelink"><a href="language.html">Language</a></div>
+				<div class="packagelink"><a href="license.html">License</a></div>
+				<div class="packagelink"><a href="list.html">List</a></div>
+				<div class="packagelink"><a href="logging.html">Logging</a></div>
+				<div class="packagelink"><a href="long.html">Long</a></div>
+				<div class="packagelink"><a href="mailmessage.html">MailMessage</a></div>
+				<div class="packagelink"><a href="math.html">Math</a></div>
+				<div class="packagelink"><a href="memcached.html">Memcached</a></div>
+				<div class="packagelink"><a href="notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="object.html">Object</a></div>
+				<div class="packagelink"><a href="pop3session.html">POP3Session</a></div>
+				<div class="packagelink"><a href="patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="patfind.html">PatFind</a></div>
+				<div class="packagelink"><a href="pattern.html">Pattern</a></div>
+				<div class="packagelink"><a href="point.html">Point</a></div>
+				<div class="packagelink"><a href="profiler.html">Profiler</a></div>
+				<div class="packagelink"><a href="real.html">Real</a></div>
+				<div class="packagelink"><a href="recarray.html">RecArray</a></div>
+				<div class="packagelink"><a href="record.html">Record</a></div>
+				<div class="packagelink"><a href="regex.html">Regex</a></div>
+				<div class="packagelink"><a href="restclient.html">RestClient</a></div>
+				<div class="packagelink"><a href="saxparser.html">SAXParser</a></div>
+				<div class="packagelink"><a href="smtpsession.html">SMTPSession</a></div>
+				<div class="packagelink"><a href="ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="script.html">Script</a></div>
+				<div class="packagelink"><a href="security.html">Security</a></div>
+				<div class="packagelink"><a href="set.html">Set</a></div>
+				<div class="packagelink"><a href="socket.html">Socket</a></div>
+				<div class="packagelink"><a href="sql.html">Sql</a></div>
+				<div class="packagelink"><a href="sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink"><a href="str.html">Str</a></div>
+				<div class="packagelink"><a href="string.html">String</a></div>
+				<div class="packagelink"><a href="system.html">System</a></div>
+				<div class="packagelink"><a href="uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="void.html">Void</a></div>
+				<div class="packagelink"><a href="wapi.html">WAPI</a></div>
+				<div class="packagelink"><a href="wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink"><a href="web.html">Web</a></div>
+				<div class="packagelink"><a href="xslprocessor.html">XSLProcessor</a></div>
+				<div class="packagelink"><a href="zip.html">Zip</a></div>
+		</div>
+</div>
+
+	<div class="content_container">
+		<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+		<h1>Class: Date</h1><div class="ClassDescription"><p>The Date package supplies a set of built-ins for querying   the current time and date, and creating and manipulating Date values. The major   functionalities offered are the following:</p>
+<ul>
+<li><a class="interdoc" href="#cm_date_now">Now()</a> and <a class="interdoc" href="#cm_date_utnow">UTNow()</a>to query the current
+    date and time.</li>
+<li><a class="interdoc" href="#cm_date_datetostring">DateToString()</a> and
+    <a class="interdoc" href="#cm_date_stringtodate">StringToDate()</a> to convert Date values to and
+    from Strings.</li>
+<li><a class="interdoc" href="#cm_date_datetolist">DateToList()</a> and <a class="interdoc" href="#cm_date_listtodate">ListToDate()</a>
+    to convert a Date to or from its individual numerical elements.</li>
+<li><a class="interdoc" href="#cm_date_second">Second()</a>, <a class="interdoc" href="#cm_date_minute">Minute()</a>,
+    <a class="interdoc" href="#cm_date_hour">Hour()</a>, <a class="interdoc" href="#cm_date_day">Day()</a>, <a class="interdoc" href="#cm_date_dayofweek">DayofWeek()</a>,
+    <a class="interdoc" href="#cm_date_dayofyear">DayofYear()</a>, <a class="interdoc" href="#cm_date_month">Month()</a>, and
+    <a class="interdoc" href="#cm_date_year">Year()</a> to isolate numerical elements of a Date.</li>
+<li><a class="interdoc" href="#cm_date_date">Date()</a>, <a class="interdoc" href="#cm_date_time">Time()</a>
+    to isolate the date and time portions of a Date.</li>
+<li><a class="interdoc" href="#cm_date_dateinteger">DateInteger()</a> and
+    <a class="interdoc" href="#cm_date_timeinteger">TimeInteger()</a> to translate Dates to and from Integer
+    representations of their date and time portions.</li>
+<li><a class="interdoc" href="#cm_date_nexttime">NextTime()</a> to calculate
+    relative Dates for which some information should be isolated and maintained.
+    NextTime() is rather specific and abstruse in its operation, and unless this
+    is desired, DateInteger() or TimeInteger() should be used for calculating
+    simple relative Dates.  <a class="interdoc" href="#cm_date_nextcrontime">NextCronTime()</a> is similar to <a class="interdoc" href="#cm_date_nexttime">NextTime()</a> but it accepts a cron-like string.</li>
+<li><a class="interdoc" href="#cm_date_clock">Clock()</a>, <a class="interdoc" href="#cm_date_tick">Tick()</a>, <a class="interdoc" href="#cm_date_microtick">MicroTick()</a> and <a class="interdoc" href="#cm_date_systime">Systime()</a>
+    to calculate elapsed times, as for performance timing.</li>
+</ul></div>
+
+
+			<h2>Class Methods</h2>
+			<div class="ClassMethodsShort">
+				<div class="Method">
+					<div class="Name"><a href="#cm_date_clock" class="IndexMethodName">Clock</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns the number of clock tick since the start of the process.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_date_date" class="IndexMethodName">Date</a>(
+					 Date theDate )
+					</div>
+					<div class="Description"><p>Returns a copy of <em>theDate</em>
+    with the time portion cleared to 00:00:00.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_date_dateinteger" class="IndexMethodName">DateInteger</a>(
+					 Date theDate, [Integer nDays] )
+					</div>
+					<div class="Description"><p>Converts a Date to an Integer or an
+    Integer to a Date.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_date_datetolist" class="IndexMethodName">DateToList</a>(
+					 Date theDate )
+					</div>
+					<div class="Description"><p>Breaks a Date into a List of numerical
+    date elements.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_date_datetostring" class="IndexMethodName">DateToString</a>(
+					 Date theDate, [String format] )
+					</div>
+					<div class="Description"><p>Returns a String representation of
+    a Date.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_date_day" class="IndexMethodName">Day</a>(
+					 Date theDate )
+					</div>
+					<div class="Description"><p>Returns the day of the month for a
+    specified Date.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_date_dayofweek" class="IndexMethodName">DayofWeek</a>(
+					 Date theDate )
+					</div>
+					<div class="Description"><p>Returns the day of the week for a
+    specified Date.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_date_dayofyear" class="IndexMethodName">DayofYear</a>(
+					 Date theDate )
+					</div>
+					<div class="Description"><p>Returns the year for a specified Date.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_date_hour" class="IndexMethodName">Hour</a>(
+					 Date theDate )
+					</div>
+					<div class="Description"><p>Returns the number of hours past midnight
+    for a specified Date.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_date_listtodate" class="IndexMethodName">ListToDate</a>(
+					 List theList )
+					</div>
+					<div class="Description"><p>Creates a Date from a List of numerical
+    date elements.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_date_microtick" class="IndexMethodName">MicroTick</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns the elapsed time in microseconds;
+    useful for calculating timing.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_date_minute" class="IndexMethodName">Minute</a>(
+					 Date theDate )
+					</div>
+					<div class="Description"><p>Returns the number of minutes past
+    the hour for a specified Date.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_date_month" class="IndexMethodName">Month</a>(
+					 Date theDate )
+					</div>
+					<div class="Description"><p>Returns the numerical month for a
+    specified Date.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_date_nextcrontime" class="IndexMethodName">NextCronTime</a>(
+					 Date theDate, String cronString )
+					</div>
+					<div class="Description"><p>Calculates a Date relative to the
+    specified Date, as specified by a cron-like string.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_date_nexttime" class="IndexMethodName">NextTime</a>(
+					 Date theDate, Integer MinsOfHour, Integer HoursOfDay, Integer DaysOfWeek, Integer MonthsOfYear )
+					</div>
+					<div class="Description"><p>Calculates a Date relative to the
+    specified Date, as specified by a set of bit masks.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_date_now" class="IndexMethodName">Now</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns a Date for the current date
+    and time.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_date_second" class="IndexMethodName">Second</a>(
+					 Date theDate )
+					</div>
+					<div class="Description"><p>Returns the number of seconds past
+    the minute for a given Date.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_date_stringtodate" class="IndexMethodName">StringToDate</a>(
+					 String dateString, String format )
+					</div>
+					<div class="Description"><p>Creates a Date from a String representation.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_date_systime" class="IndexMethodName">Systime</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns the current value of the server
+    system clock.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_date_tick" class="IndexMethodName">Tick</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns the elapsed time in milliseconds;
+    useful for calculating timing.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_date_time" class="IndexMethodName">Time</a>(
+					 Date theDate )
+					</div>
+					<div class="Description"><p>Returns a copy of <em>theDate</em>
+    with the date portion cleared. </p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_date_timeinteger" class="IndexMethodName">TimeInteger</a>(
+					 Date theDate, [Integer nSeconds] )
+					</div>
+					<div class="Description"><p>Converts the time portion of a Date
+    value from a Date to an Integer or from an Integer to a Date.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_date_utnow" class="IndexMethodName">UTNow</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns the current Greenwich Mean time.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_date_year" class="IndexMethodName">Year</a>(
+					 Date theDate )
+					</div>
+					<div class="Description"><p>Returns the year from a given Date.</p></div>
+				</div>
+			</div>
+
+
+
+		
+				<h2>Class Methods</h2>
+				<div class="ClassMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_date_clock">Clock</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer </span> 
+						<span class="PrototypeselfName">Clock</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns Returns the number of clock tick since the start of the process. </p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The number of clock tick since the start of the process.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_date_date">Date</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Date</span> 
+						<span class="PrototypeselfName">Date</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Date</span> <span class="PrototypeArgumentName">theDate</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a copy of the specified Date, clearing
+    the time in the copy to 00:00:00. See <a class="interdoc" href="#cm_date_time">Time()</a>.</p>
+<p>The output from a test is:</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theDate</span><span class="description"><p>Specifies a Date for which a time-cleared
+            copy will be returned.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A new date whose time information is set to 00:00:00.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>This simple example demonstrates how Date() can be
+    used to isolate the date portion of a Date value: </p>
+<div class="codehilite"><pre>Date    rightNow <span class="o">=</span> Date<span class="o">.</span>Now<span class="p">()</span>
+Date    todaysDate <span class="o">=</span> Date<span class="o">.</span>Date<span class="p">(</span> rightNow <span class="p">)</span>
+
+Echo<span class="p">(</span> <span class="s">&quot;The date is &quot;</span><span class="p">,</span> todaysDate <span class="p">)</span>
+</pre></div>
+
+
+<p>The output from a test is:</p>
+<div class="codehilite"><pre>The date is Thu Aug <span class="m">06</span> <span class="m">00</span><span class="o">:</span><span class="m">00</span><span class="o">:</span><span class="m">00</span> <span class="m">1998</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_date_dateinteger">DateInteger</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Dynamic</span> 
+						<span class="PrototypeselfName">DateInteger</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Date</span> <span class="PrototypeArgumentName">theDate</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">nDays</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts the date portion of a Date value to or
+    from an Integer number of days relative to October 15, 1582 (the start of
+    the Gregorian Calendar). To convert the time portion of a Date value, see
+    <a class="interdoc" href="#cm_date_timeinteger">TimeInteger()</a>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theDate</span><span class="description"><p>If <em>nDays</em>
+            is not specified, <em>theDate</em>
+            is converted to an Integer number of days relative to October 15,
+            1582. Otherwise, if <em>nDays</em>
+            is specified, the time portion of <em>theDate</em>
+            will fill in the resulting Date converted from <em>nDays</em>.</p></span></div>
+											<div class="Parameter"><span class="name">nDays</span><span class="description"><p>An Integer number of days since October
+            15, 1582, which, if specified, is converted to the date portion of
+            a new Date value.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>If <em>nDays</em>
+      is not specified, an Integer conversion of the date portion of <em>theDate</em>
+      into a number of days relative to October 15, 1582. Otherwise, it returns
+      a new Date value converted from <em>nDays</em>
+      and the time portion of <em>theDate</em>.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Note that negative integers are handled as well, referring
+    to a given number of days before October 15, 1582. </p>
+<p>This example uses DateInteger() to calculate a relative
+    date: </p>
+<div class="codehilite"><pre>Echo<span class="p">(</span> <span class="s">&quot;Today is &quot;</span><span class="p">,</span> Date<span class="o">.</span>Now<span class="p">()</span> <span class="p">)</span>
+Echo<span class="p">(</span> <span class="s">&quot;Five days from now is &quot;</span><span class="p">,</span> calculateLaterDate<span class="p">(</span> Date<span class="o">.</span>Now<span class="p">(),</span> <span class="m">5</span> <span class="p">)</span> <span class="p">)</span>
+
+<span class="k">function</span> Date CalculateLaterDate<span class="p">(</span> Date theDate<span class="p">,</span> <span class="kt">Integer</span> moreDays <span class="p">)</span>
+    <span class="kt">Integer</span> dateDays <span class="o">=</span> Date<span class="o">.</span>DateInteger<span class="p">(</span> theDate <span class="p">)</span>
+    <span class="kt">Integer</span> laterDays <span class="o">=</span> dateDays <span class="o">+</span> moreDays
+    Date    laterDate <span class="o">=</span> Date<span class="o">.</span>DateInteger<span class="p">(</span> theDate<span class="p">,</span> laterDays <span class="p">)</span>
+
+    return laterDate
+<span class="k">end</span>
+</pre></div>
+
+
+<p>The output of this example is: </p>
+<div class="codehilite"><pre>Today is Tue Aug <span class="m">11</span> <span class="m">10</span><span class="o">:</span><span class="m">44</span><span class="o">:</span><span class="m">49</span> <span class="m">1998</span>
+Five days from now is Sun Aug <span class="m">16</span> <span class="m">10</span><span class="o">:</span><span class="m">44</span><span class="o">:</span><span class="m">49</span> <span class="m">1998</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_date_datetolist">DateToList</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">List</span> 
+						<span class="PrototypeselfName">DateToList</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Date</span> <span class="PrototypeArgumentName">theDate</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts a Date to a List with six individual
+    date elements. See <a class="interdoc" href="#cm_date_listtodate">ListToDate()</a>.</p>
+<p>The result from one test is:</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theDate</span><span class="description"><p>Specifies a Date to convert to a List.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A List containing the following
+      integer elements:</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>This example uses the DateToList function which converts
+    the Date to the List: </p>
+<div class="codehilite"><pre>Date    rightNow <span class="o">=</span> Date<span class="o">.</span>Now<span class="p">()</span>
+List    dateList <span class="o">=</span> Date<span class="o">.</span>DateToList<span class="p">(</span> rightNow <span class="p">)</span>
+<span class="kt">String</span>  hours <span class="o">=</span> Str<span class="o">.</span><span class="kt">String</span><span class="p">(</span> dateList <span class="p">[</span> <span class="m">4</span> <span class="p">]</span> <span class="p">)</span>
+<span class="kt">String</span>  minutes <span class="o">=</span> Str<span class="o">.</span><span class="kt">String</span><span class="p">(</span> dateList <span class="p">[</span> <span class="m">5</span> <span class="p">]</span> <span class="p">)</span>
+
+Echo<span class="p">(</span> <span class="s">&#39;It is &#39;</span> <span class="o">+</span> hours <span class="o">+</span> <span class="s">&#39; hours and &#39;</span> <span class="o">+</span> minutes <span class="o">+</span> <span class="s">&#39; minutes past midnight.&#39;</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The result from one test is:</p>
+<div class="codehilite"><pre>It is <span class="m">11</span> hours <span class="o">and</span> <span class="m">51</span> minutes past midnight<span class="o">.</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_date_datetostring">DateToString</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">DateToString</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Date</span> <span class="PrototypeArgumentName">theDate</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">format</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts a Date to a String. The optional <em>format</em>
+    String allows for a high degree of customization in the resulting String representation.
+    See <a class="interdoc" href="#cm_date_stringtodate">StringToDate()</a>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theDate</span><span class="description"><p>Specifies a Date to be converted.</p></span></div>
+											<div class="Parameter"><span class="name">format</span><span class="description"><p>Specifies an String indicating how the resulting String should
+              be formatted. It can contain both text, and any of the following
+              format characters:</p>
+<table>
+<thead>
+<tr>
+<th><em>Value</em></th>
+<th><em>Description</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%%</td>
+<td>A percentage sign</td>
+</tr>
+<tr>
+<td>%a</td>
+<td>The three-character abbreviated weekday name (e.g., Mon, Tue, etc.)</td>
+</tr>
+<tr>
+<td>%b</td>
+<td>The three-character abbreviated month name (e.g., Jan, Feb, etc.)</td>
+</tr>
+<tr>
+<td>%d</td>
+<td>The two-digit day of the month, from 01 to 31 (e.g., 01-31)</td>
+</tr>
+<tr>
+<td>%j</td>
+<td>The three-digit day of year, from 001 through 366</td>
+</tr>
+<tr>
+<td>%m</td>
+<td>The two-digit month (e.g., 01-12)</td>
+</tr>
+<tr>
+<td>%p</td>
+<td>AM or PM</td>
+</tr>
+<tr>
+<td>%w</td>
+<td>The 1-digit weekday, from 1 through 7, where 1= Sunday</td>
+</tr>
+<tr>
+<td>%y</td>
+<td>The two-digit year (e.g., 93)</td>
+</tr>
+<tr>
+<td>%A</td>
+<td>The full weekday name (e.g., Monday)</td>
+</tr>
+<tr>
+<td>%B</td>
+<td>The full month name (e.g., January)</td>
+</tr>
+<tr>
+<td>%H</td>
+<td>The two-digit hour on a 24-hour clock, from 00 to 23</td>
+</tr>
+<tr>
+<td>%I</td>
+<td>The two-digit hour, from 01 through 12</td>
+</tr>
+<tr>
+<td>%M</td>
+<td>The minutes past the hour, from 00 to 59</td>
+</tr>
+<tr>
+<td>%S</td>
+<td>The seconds past the minute, from 00 to 59</td>
+</tr>
+<tr>
+<td>%L</td>
+<td>The three-digit milliseconds, from 000 to 999</td>
+</tr>
+<tr>
+<td>%Y</td>
+<td>The year, including the century (e.g., 1993)</td>
+</tr>
+<tr>
+<td>%P</td>
+<td>AD or BC</td>
+</tr>
+</tbody>
+</table></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>If a valid Date is specified, a
+      String representation of the Date is returned, 0 otherwise. If no format
+      String is specified, the default format String is used, namely "%a %b %d
+      %H:%M:%S %Y".</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>This example uses DateToString() to convert a Date
+    to a custom String representation: </p>
+<div class="codehilite"><pre>Date rightNow <span class="o">=</span> Date<span class="o">.</span>Now<span class="p">()</span>
+
+Echo<span class="p">(</span> Date<span class="o">.</span>DateToString<span class="p">(</span> rightNow<span class="p">,</span> <span class="s">&quot;It is now %H:%M on %A, %B %d.&quot;</span> <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of this example is: </p>
+<div class="codehilite"><pre>It is now <span class="m">10</span><span class="o">:</span><span class="m">51</span> on Tuesday<span class="p">,</span> August <span class="m">11.</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_date_day">Day</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Day</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Date</span> <span class="PrototypeArgumentName">theDate</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the day of the month for a specified Date.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theDate</span><span class="description"><p>Specifies a Date for which the day
+            of the month is returned.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An Integer, from 1 to 31, representing
+      the day of the month for the given Date.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>This example uses the Day() function to return the
+    day of the month from the given Date: </p>
+<div class="codehilite"><pre><span class="kt">Integer</span> daysLeft
+<span class="kt">Integer</span> dayOfMonth <span class="o">=</span> Date<span class="o">.</span>Day<span class="p">(</span> Date<span class="o">.</span>Now<span class="p">()</span> <span class="p">)</span>
+
+<span class="k">if</span> dayOfMonth <span class="o">&lt;=</span> <span class="m">15</span>
+   daysLeft <span class="o">=</span> <span class="p">(</span> <span class="m">15</span> <span class="o">-</span> dayOfMonth <span class="p">)</span>
+<span class="k">else</span>
+   daysLeft <span class="o">=</span> <span class="p">(</span> <span class="m">31</span> <span class="o">-</span> dayOfMonth <span class="p">)</span>
+<span class="k">end</span>
+
+Echo<span class="p">(</span> <span class="s">&quot;There are &quot;</span><span class="p">,</span> daysLeft<span class="p">,</span> <span class="s">&quot; days til payday!&quot;</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of this example is: </p>
+<div class="codehilite"><pre>There are <span class="m">4</span> days til payday<span class="o">!</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_date_dayofweek">DayofWeek</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">DayofWeek</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Date</span> <span class="PrototypeArgumentName">theDate</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the day of the week for a specified Date.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theDate</span><span class="description"><p>Specifies a Date for which the day
+            of the week is returned.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An Integer, from 1 to 7, representing
+      the day of the week, where 1 = Sunday.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>This example uses the DayOfWeek() function to return
+    the day of the week from a given Date: </p>
+<div class="codehilite"><pre>Date    rightNow <span class="o">=</span> Date<span class="o">.</span>Now<span class="p">()</span>
+<span class="kt">Integer</span> dayOfWeek <span class="o">=</span> Date<span class="o">.</span>DayOfWeek<span class="p">(</span> rightNow <span class="p">)</span>
+<span class="kt">String</span>  todayString <span class="o">=</span> Date<span class="o">.</span>DateToString<span class="p">(</span> rightNow<span class="p">,</span> <span class="s">&quot;%A&quot;</span> <span class="p">)</span>
+
+<span class="k">if</span> <span class="p">(</span> dayOfWeek <span class="o">==</span> <span class="m">0</span> <span class="o">||</span> dayOfWeek <span class="o">==</span> <span class="m">7</span> <span class="p">)</span>
+    Echo<span class="p">(</span> todayString<span class="p">,</span> <span class="s">&quot; is the weekend!&quot;</span> <span class="p">)</span>
+<span class="k">else</span>
+    Echo<span class="p">(</span> todayString<span class="p">,</span> <span class="s">&quot; is a weekday.&quot;</span> <span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+
+<p>The output of this example is: </p>
+<div class="codehilite"><pre>Tuesday is a weekday<span class="o">.</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_date_dayofyear">DayofYear</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">DayofYear</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Date</span> <span class="PrototypeArgumentName">theDate</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the day of the year for a specified Date.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theDate</span><span class="description"><p>Specifies a Date for which the day
+            of the year is returned.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An Integer, from 1 to 366, representing
+      the number of days since January 1, where January 1 = 1.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>This example uses the DateOfYear() function to return
+    the day of the year from a given Date: </p>
+<div class="codehilite"><pre><span class="kt">Integer</span> dayOfYear <span class="o">=</span> Date<span class="o">.</span>DayOfYear<span class="p">(</span> Date<span class="o">.</span>Now<span class="p">()</span> <span class="p">)</span>
+Date    taxDate <span class="o">=</span> Date<span class="o">.</span>StringToDate<span class="p">(</span> <span class="s">&quot;April 15&quot;</span><span class="p">,</span> <span class="s">&quot;%B %d&quot;</span> <span class="p">)</span>
+<span class="kt">Integer</span> tilTaxes <span class="o">=</span> Date<span class="o">.</span>DayOfYear<span class="p">(</span> taxDate <span class="p">)</span> <span class="o">-</span> dayOfYear
+
+<span class="k">if</span> tilTaxes <span class="o">&lt;</span> <span class="m">0</span>
+   tilTaxes <span class="o">=</span> <span class="p">(</span> tilTaxes <span class="o">+</span> <span class="m">365</span> <span class="p">)</span>
+<span class="k">end</span>
+
+Echo<span class="p">(</span> <span class="s">&quot;Taxes are due in only &quot;</span><span class="p">,</span> tilTaxes<span class="p">,</span> <span class="s">&quot; days!&quot;</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of this example is: </p>
+<div class="codehilite"><pre>Taxes are due <span class="o">in</span> only <span class="m">247</span> days<span class="o">!</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_date_hour">Hour</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Hour</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Date</span> <span class="PrototypeArgumentName">theDate</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the number of hours past midnight for
+    a specified Date. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theDate</span><span class="description"><p>Specifies a Date for which the number
+            of hours past midnight is returned.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An Integer, from 0 to 23, representing
+      the number of hours past midnight for the given Date.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>The value returned is not rounded and represents
+      the number of whole hours that have passed. For instance, Date.Hour() on
+      a Date with a time of 4:59 PM would return 16. </p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_date_listtodate">ListToDate</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Date</span> 
+						<span class="PrototypeselfName">ListToDate</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">List</span> <span class="PrototypeArgumentName">theList</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts a List of numerical date elements to
+    a new Date. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theList</span><span class="description"><p>Specifies a List to convert to a Date.</p>
+<p>It must contain the following Integer elements:</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>year</td>
+</tr>
+<tr>
+<td>2</td>
+<td>month (integer from 1 to 12; January = 1)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>day of the month (integer from 1 to 31)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>hours since midnight (integer from 0 to 23)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>minutes past the hour (integer from 0 to 59)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>seconds past the minute (integer from 0 to 59)</td>
+</tr>
+</tbody>
+</table></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A Date if the elements in the given
+      List specify valid values (i.e., not out of the specified range), Undefined
+      otherwise.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>This example uses the ListToDate function which converts
+    the List to Date: </p>
+<div class="codehilite"><pre>List dateList <span class="o">=</span> <span class="p">{</span> <span class="m">1976</span><span class="p">,</span> <span class="m">7</span><span class="p">,</span> <span class="m">4</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span> <span class="p">}</span>
+Date USDate <span class="o">=</span> Date<span class="o">.</span>ListToDate<span class="p">(</span> dateList <span class="p">)</span>
+<span class="kt">String</span> stringDate <span class="o">=</span> Date<span class="o">.</span>DateToString<span class="p">(</span> USDate<span class="p">,</span> <span class="s">&quot;%B %d, %Y&quot;</span> <span class="p">)</span>
+
+Echo<span class="p">(</span> <span class="s">&quot;Independence day for the US was &quot;</span> <span class="o">+</span> stringDate <span class="o">+</span> <span class="s">&quot;.&quot;</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of this example is:</p>
+<div class="codehilite"><pre>Independence day <span class="k">for</span> the US was July <span class="m">04</span><span class="p">,</span> <span class="m">1976.</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_date_microtick">MicroTick</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">MicroTick</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns an Integer elapsed time in microseconds.
+    MicroTick() is most often used for timing operations, possibly for system logging
+    or performance evaluation. See <a class="interdoc" href="#cm_date_tick">Tick()</a> and <a class="interdoc" href="#cm_date_systime">Systime()</a>.</p>
+<p>For legacy reasons, the time returned is a 32-bit value, which means that MicroTick()'s value will roll over every 2147 seconds, or approximately 36 minutes. Any code using MicroTick() should be prepared for potential roll-overs.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An Integer elapsed time in microseconds.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>This function is most often used to compare two elapsed
+    time values, allowing a relatively fine granularity of timing between Date.MicroTick()
+    calls to be determined. </p>
+<p>This example uses MicroTick() for simple performance timing:</p>
+<div class="codehilite"><pre><span class="kt">Integer</span> i
+<span class="kt">Integer</span> start <span class="o">=</span> Date<span class="o">.</span>MicroTick<span class="p">()</span>
+
+<span class="k">for</span> <span class="p">(</span> i <span class="o">=</span> <span class="m">0</span><span class="p">;</span> i <span class="o">&lt;</span> <span class="m">100000</span><span class="p">;</span> i <span class="o">+=</span> <span class="m">1</span> <span class="p">)</span>
+<span class="k">end</span>
+
+<span class="kt">Integer</span> endTime <span class="o">=</span> Date<span class="o">.</span>MicroTick<span class="p">()</span>
+<span class="kt">Integer</span> duration <span class="o">=</span> endTime <span class="o">&gt;</span> start <span class="o">?</span> endTime <span class="o">-</span> start <span class="o">:</span> endTime <span class="o">+</span> <span class="p">(</span><span class="m">1</span> <span class="o">&lt;&lt;</span> <span class="m">31</span><span class="p">)</span> <span class="o">-</span> start
+Echo<span class="p">(</span> <span class="s">&quot;It took &quot;</span><span class="p">,</span> duration<span class="p">,</span> <span class="s">&quot;µs to count to a hundred thousand in Oscript.&quot;</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of this example is:</p>
+<div class="codehilite"><pre>It took <span class="m">250790</span>µs to count to a hundred thousand <span class="o">in</span> Oscript<span class="o">.</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_date_minute">Minute</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Minute</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Date</span> <span class="PrototypeArgumentName">theDate</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the number of minutes past the hour from
+    a given Date. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theDate</span><span class="description"><p>Specifies a Date for which the minute
+            past the hour is returned.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An Integer, from 0 to 59, representing
+      the number of minutes past the hour for the specified Date.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_date_month">Month</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Month</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Date</span> <span class="PrototypeArgumentName">theDate</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the index of the month for a specified
+    Date. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theDate</span><span class="description"><p>Specifies a Date for which the month
+            is returned.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An Integer, from 1 to 12, representing
+      the month index, where January = 1.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>This example uses Month() to return the index of the
+    month: </p>
+<div class="codehilite"><pre><span class="kt">Integer</span> month <span class="o">=</span> Date<span class="o">.</span>Month<span class="p">(</span> Date<span class="o">.</span>Now<span class="p">()</span> <span class="p">)</span>
+<span class="kt">Integer</span> seasonIndex <span class="o">=</span> <span class="p">(</span> month <span class="o">/</span> <span class="m">3</span> <span class="p">)</span> <span class="o">+</span> <span class="m">1</span>
+List    seasons <span class="o">=</span> <span class="p">{</span> <span class="s">&quot;winter&quot;</span><span class="p">,</span> <span class="s">&quot;spring&quot;</span><span class="p">,</span> <span class="s">&quot;summer&quot;</span><span class="p">,</span> <span class="s">&quot;fall&quot;</span> <span class="p">}</span>
+<span class="kt">String</span>  monthString <span class="o">=</span> Date<span class="o">.</span>DateToString<span class="p">(</span> Date<span class="o">.</span>Now<span class="p">(),</span> <span class="s">&quot;%B&quot;</span> <span class="p">)</span>
+
+Echo<span class="p">(</span> monthString<span class="p">,</span> <span class="s">&quot; is in  &quot;</span><span class="p">,</span> seasons<span class="p">[</span> seasonIndex <span class="p">],</span> <span class="s">&quot;.&quot;</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of this example is: </p>
+<div class="codehilite"><pre>August is <span class="o">in</span> summer<span class="o">.</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_date_nextcrontime">NextCronTime</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Date</span> 
+						<span class="PrototypeselfName">NextCronTime</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Date</span> <span class="PrototypeArgumentName">theDate</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">cronString</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Calculates a relative date from a Date based on
+    a cron-like string. The crontabStr is similar to the a standard UN#X crontab string.</p>
+<p>This method works like <a class="interdoc" href="#cm_date_nexttime">NextTime()</a>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theDate</span><span class="description"><p>The initial date.</p></span></div>
+											<div class="Parameter"><span class="name">cronString</span><span class="description"><p>It is similar to the a standard UN#X crontab string. It consists of 5 fields separated by spaces or tabs of integer patterns that specify the following:</p>
+<ul>
+<li>Minute (0-59),</li>
+<li>Hour (0-23),</li>
+<li>Day of month (1-31),</li>
+<li>Month of year (1-12),</li>
+<li>Day of week (0-6 with 0=Sunday)</li>
+</ul>
+<p>Each of these patterns may be either an asterisk (meaning all legal values) or a list of elements separated by commas. An element is either a number or two numbers separated by a minus sign (meaning an inclusive range).</p>
+<p>Unlike the UN#X crontab, we only use a 5 minute resolution.   So minute values that are not increments of 5 will be rounded down to the previous increment of 5.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns the next date.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_date_nexttime">NextTime</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Date</span> 
+						<span class="PrototypeselfName">NextTime</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Date</span> <span class="PrototypeArgumentName">theDate</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">MinsOfHour</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">HoursOfDay</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">DaysOfWeek</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">MonthsOfYear</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Calculates a relative date from a Date based on
+    a set of relative time and date mask information. Note that this does no simply
+    calculate a relative date based on integer offsets. Instead, the use of masks
+    allows certain information in the Date to be preserved, while other information
+    can be set to vary at a certain granularity. For simply calculating relative
+    dates, see <a class="interdoc" href="#cm_date_dateinteger">DateInteger()</a> and
+    <a class="interdoc" href="#cm_date_timeinteger">TimeInteger()</a>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theDate</span><span class="description"><p>The initial date.</p></span></div>
+											<div class="Parameter"><span class="name">MinsOfHour</span><span class="description"><p>Specifies minutes of hour mask using
+            bits (0-11), 5 min. resolution.</p></span></div>
+											<div class="Parameter"><span class="name">HoursOfDay</span><span class="description"><p>Specifies hours of day mask using bits
+            (0-23).</p></span></div>
+											<div class="Parameter"><span class="name">DaysOfWeek</span><span class="description"><p>Specifies days of week mask using
+            bits (0-6) or (0-31).</p></span></div>
+											<div class="Parameter"><span class="name">MonthsOfYear</span><span class="description"><p>Specifies months of year mask using bits (0-11). If this parameter
+              is set then DaysOfWeek parameter must utilize mask using (0-31).</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns the next date based upon
+      the set of masks.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>This example uses NextTime() to calculate relative
+    dates: </p>
+<div class="codehilite"><pre><span class="kt">Integer</span> i
+<span class="kt">Integer</span> allDays <span class="o">=</span> <span class="m">1</span>
+<span class="kt">Integer</span> allHours <span class="o">=</span> <span class="m">1</span> <span class="o">&lt;&lt;</span> <span class="p">(</span> <span class="m">24</span> <span class="o">-</span> <span class="m">1</span> <span class="p">)</span>
+<span class="kt">Integer</span> allMinutes <span class="o">=</span> <span class="m">1</span> <span class="o">&lt;&lt;</span> <span class="p">(</span> <span class="m">1</span> <span class="o">-</span> <span class="m">1</span> <span class="p">)</span>
+<span class="kt">Integer</span> allMonths <span class="o">=</span> <span class="m">0</span>
+Date    d <span class="o">=</span> Date<span class="o">.</span>Now<span class="p">()</span>
+
+<span class="c">// The output is the next four Sundays.</span>
+<span class="k">for</span> i <span class="o">=</span> <span class="m">1</span> to <span class="m">4</span>
+   echo<span class="p">(</span> d <span class="o">=</span> Date<span class="o">.</span>NextTime<span class="p">(</span> d<span class="p">,</span> allMinutes<span class="p">,</span> allHours<span class="p">,</span> allDays<span class="p">,</span> allMonths <span class="p">)</span> <span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+
+<p>The output from a test is:</p>
+<div class="codehilite"><pre>Sun Aug <span class="m">16</span> <span class="m">23</span><span class="o">:</span><span class="m">00</span><span class="o">:</span><span class="m">00</span> <span class="m">1998</span>
+Sun Aug <span class="m">23</span> <span class="m">23</span><span class="o">:</span><span class="m">00</span><span class="o">:</span><span class="m">00</span> <span class="m">1998</span>
+Sun Aug <span class="m">30</span> <span class="m">23</span><span class="o">:</span><span class="m">00</span><span class="o">:</span><span class="m">00</span> <span class="m">1998</span>
+Sun Sep <span class="m">06</span> <span class="m">23</span><span class="o">:</span><span class="m">00</span><span class="o">:</span><span class="m">00</span> <span class="m">1998</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_date_now">Now</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Date</span> 
+						<span class="PrototypeselfName">Now</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the current date and time. </p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A Date representing the current
+      server system date and time, if successful.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Now() is the simple and oft-used function for querying
+    the current date and time, as seen in this example:</p>
+<div class="codehilite"><pre>Echo<span class="p">(</span> <span class="s">&quot;The current date and time is &quot;</span><span class="p">,</span> Date<span class="o">.</span>Now<span class="p">()</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of this example is:</p>
+<div class="codehilite"><pre>The current date <span class="o">and</span> time is Wed Aug <span class="m">12</span> <span class="m">00</span><span class="o">:</span><span class="m">55</span><span class="o">:</span><span class="m">38</span> <span class="m">1998</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_date_second">Second</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Second</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Date</span> <span class="PrototypeArgumentName">theDate</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the number of seconds past the minute
+    for a given Date. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theDate</span><span class="description"><p>Specifies a Date for which the number
+            of seconds past the minute is returned..</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An Integer, from 0 to 59, representing
+      the number of seconds past the minute for the given Date.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_date_stringtodate">StringToDate</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Date</span> 
+						<span class="PrototypeselfName">StringToDate</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">dateString</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">format</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts a String representation of a Date to
+    a Date, using a format string to specify the translation. See <a class="interdoc" href="#cm_date_datetostring">DateToString()</a>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">dateString</span><span class="description"><p>Specifies a String to be converted.</p></span></div>
+											<div class="Parameter"><span class="name">format</span><span class="description"><p>Specifies a String indicating how to interpret <em>theString</em>.
+It can contain both text and any of the following format characters:</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%%</td>
+<td>A percentage sign</td>
+</tr>
+<tr>
+<td>%b</td>
+<td>The three-character abbreviated month name (e.g., Jan, Feb, etc.)</td>
+</tr>
+<tr>
+<td>%d</td>
+<td>The two-digit day of the month, from 01 to 31 (e.g., 01-31)</td>
+</tr>
+<tr>
+<td>%m</td>
+<td>The two-digit month (e.g., 01-12)</td>
+</tr>
+<tr>
+<td>%p</td>
+<td>AM or PM</td>
+</tr>
+<tr>
+<td>%y</td>
+<td>The two-digit year (e.g., 93)</td>
+</tr>
+<tr>
+<td>%B</td>
+<td>The full month name (e.g., January)</td>
+</tr>
+<tr>
+<td>%H</td>
+<td>The two-digit hour on a 24-hour clock, from 00 to 23</td>
+</tr>
+<tr>
+<td>%I</td>
+<td>The two-digit hour, from 01 through 12</td>
+</tr>
+<tr>
+<td>%M</td>
+<td>The minutes past the hour, from 00 to 59</td>
+</tr>
+<tr>
+<td>%S</td>
+<td>The seconds past the minute, from 00 to 59</td>
+</tr>
+<tr>
+<td>%L</td>
+<td>The three-digit milliseconds, from 000 to 999</td>
+</tr>
+<tr>
+<td>%Y</td>
+<td>The year, including the century (e.g., 1993)</td>
+</tr>
+<tr>
+<td>%P</td>
+<td>AD or BC</td>
+</tr>
+</tbody>
+</table></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A Date if the given arguments specify
+      a valid Date and format, otherwise Undefined.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>This example uses the DateToString function which converts
+    the String to Date: </p>
+<div class="codehilite"><pre>Date theDate
+
+<span class="kt">String</span> dateString <span class="o">=</span> <span class="s">&quot;January 05, 1993&quot;</span>
+
+theDate <span class="o">=</span> Date<span class="o">.</span>StringToDate<span class="p">(</span> dateString<span class="p">,</span> <span class="s">&quot;%B %d, %Y&quot;</span> <span class="p">)</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_date_systime">Systime</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Systime</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the current value of the server system
+    clock, timed in seconds. </p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An Integer indicating the current
+      value of the server system clock, in seconds.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>This function is most often used to compare two system
+    clock values to calculate timing in seconds. See <a class="interdoc" href="#cm_date_tick">Tick()</a>.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_date_tick">Tick</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Tick</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns an Integer elapsed time in milliseconds.
+    Tick() is most often used for timing operations, possibly for system logging
+    or performance evaluation. See <a class="interdoc" href="#cm_date_systime">Systime()</a>.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An Integer elapsed time in milliseconds.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>This function is most often used to compare two elapsed
+    time values, allowing a relatively fine granularity of timing between Date.Tick()
+    calls to be determined. </p>
+<p>This example uses Tick() for simple performance timing:</p>
+<div class="codehilite"><pre><span class="kt">Integer</span> i
+<span class="kt">Integer</span> start <span class="o">=</span> Date<span class="o">.</span>Tick<span class="p">()</span>
+
+<span class="k">for</span> <span class="p">(</span> i <span class="o">=</span> <span class="m">0</span><span class="p">;</span> i <span class="o">&lt;</span> <span class="m">100000</span><span class="p">;</span> i <span class="o">+=</span> <span class="m">1</span> <span class="p">)</span>
+<span class="k">end</span>
+
+Echo<span class="p">(</span> <span class="s">&quot;It took &quot;</span><span class="p">,</span> Date<span class="o">.</span>Tick<span class="p">()</span> <span class="o">-</span> start<span class="p">,</span> <span class="s">&quot;ms to count to a hundred thousand in Oscript.&quot;</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of this example is:</p>
+<div class="codehilite"><pre>It took <span class="m">246</span>ms to count to a hundred thousand <span class="o">in</span> Oscript<span class="o">.</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_date_time">Time</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Date</span> 
+						<span class="PrototypeselfName">Time</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Date</span> <span class="PrototypeArgumentName">theDate</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a copy of the specified Date, clearing
+    the date portion of the copy. See <a class="interdoc" href="#cm_date_date">Date()</a>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theDate</span><span class="description"><p>Specifies a Date for which a date-cleared
+            copy will be returned.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A Date where the time information
+      remains unaltered and the Date information is set to the first representable
+      day (January 1, 0001).</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>This example uses Time() to isolate the Time portion
+    of a Date value: </p>
+<div class="codehilite"><pre>Date    theTime <span class="o">=</span> Date<span class="o">.</span>Time<span class="p">(</span> Date<span class="o">.</span>Now<span class="p">()</span> <span class="p">)</span>
+<span class="kt">String</span>  timeString <span class="o">=</span> Date<span class="o">.</span>DateToString<span class="p">(</span> theTime<span class="p">,</span> <span class="s">&quot;%M minutes past %I %p&quot;</span> <span class="p">)</span>
+
+Echo<span class="p">(</span> <span class="s">&quot;The time is now &quot;</span> <span class="o">+</span> timeString <span class="o">+</span> <span class="s">&quot;.&quot;</span> <span class="p">)</span>
+
+The output of this example is<span class="o">:</span>
+
+The time is now <span class="m">48</span> minutes past <span class="m">11</span> AM<span class="o">.</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_date_timeinteger">TimeInteger</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Dynamic</span> 
+						<span class="PrototypeselfName">TimeInteger</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Date</span> <span class="PrototypeArgumentName">theDate</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">nSeconds</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts the time portion of a Date value to or
+    from an Integer number of seconds since midnight. To convert the date portion
+    of a Date value, see <a class="interdoc" href="#cm_date_dateinteger">DateInteger()</a>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theDate</span><span class="description"><p>If <em>nSeconds</em>
+            is not specified, the time portion of <em>theDate</em>
+            is converted to an Integer number of seconds since midnight. Otherwise,
+            if <em>nSeconds</em> is specified,
+            a new Date value is returned with the date portion taken from <em>theDate</em>
+            and time from <em>nSeconds</em>.</p></span></div>
+											<div class="Parameter"><span class="name">nSeconds</span><span class="description"><p>An Integer number of seconds since
+            midnight, which, if specified, is converted to the time portion of
+            a new Date value.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>If <em>nSeconds</em>
+      is not specified, an Integer conversion of the time portion of <em>theDate</em>
+      into a number seconds since midnight. Otherwise, it returns a new Date value
+      converted from <em>nSeconds</em> and the
+      date portion of <em>theDate</em>.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>This example uses <span class="ExampleCode">TimeInteger()</span> to convert the time
+    portion a Date value into an Integer number of seconds: </p>
+<div class="codehilite"><pre><span class="kt">Integer</span> nSeconds <span class="o">=</span> Date<span class="o">.</span>TimeInteger<span class="p">(</span> Date<span class="o">.</span>Now<span class="p">()</span> <span class="p">)</span>
+<span class="kt">Integer</span> lunchSeconds <span class="o">=</span> <span class="p">(</span> <span class="m">12</span> <span class="o">*</span> <span class="m">60</span> <span class="o">*</span> <span class="m">60</span> <span class="p">)</span> <span class="o">-</span> nSeconds
+
+<span class="k">if</span> <span class="p">(</span> lunchSeconds <span class="o">&lt;</span> <span class="m">0</span> <span class="p">)</span>
+    Echo<span class="p">(</span> <span class="s">&quot;It is &quot;</span><span class="p">,</span> <span class="o">-</span>lunchSeconds <span class="o">/</span> <span class="m">60</span> <span class="o">/</span> <span class="m">60</span><span class="p">,</span> <span class="s">&quot; hours after lunch.&quot;</span> <span class="p">)</span>
+<span class="k">else</span>
+    Echo<span class="p">(</span> <span class="s">&quot;It is &quot;</span><span class="p">,</span> lunchSeconds <span class="o">/</span> <span class="m">60</span> <span class="o">/</span> <span class="m">60</span><span class="p">,</span> <span class="s">&quot; hours before lunch.&quot;</span> <span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+
+<p>The output of this example for a random test time is: </p>
+<div class="codehilite"><pre>It is <span class="m">2</span> hours after lunch<span class="o">.</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_date_utnow">UTNow</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Date </span> 
+						<span class="PrototypeselfName">UTNow</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the current Greenwich Mean time. </p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The current Greenwich Mean time.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_date_year">Year</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Year</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Date</span> <span class="PrototypeArgumentName">theDate</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the year for a specified Date. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theDate</span><span class="description"><p>Specifies a Date for which the year
+            is returned.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An Integer representing the year,
+      where positive values represent years A.D., 0 represents 1 B.C., -1 represents
+      2 B.C., and so on.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>This example uses Year() to return the year from a
+    given Date: </p>
+<div class="codehilite"><pre><span class="kt">Integer</span> year <span class="o">=</span> Date<span class="o">.</span>Year<span class="p">(</span> Date<span class="o">.</span>Now<span class="p">()</span> <span class="p">)</span>
+
+<span class="k">if</span> <span class="p">(</span> year <span class="o">%</span> <span class="m">4</span> <span class="o">==</span> <span class="m">0</span> <span class="o">&amp;&amp;</span> year <span class="o">%</span> <span class="m">100</span> <span class="o">!=</span> <span class="m">0</span> <span class="p">)</span>
+    Echo<span class="p">(</span> year<span class="p">,</span> <span class="s">&quot; is a leap year.&quot;</span> <span class="p">)</span>
+<span class="k">else</span>
+    Echo<span class="p">(</span> year<span class="p">,</span> <span class="s">&quot; is not a leap year.&quot;</span> <span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+
+<p>The output of this example is: </p>
+<div class="codehilite"><pre><span class="m">1998</span> is not a leap year<span class="o">.</span>
+</pre></div></div>
+							</div>
+						</div>
+				</div>
+		
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2018 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+
+
+
+</div>
+	</div>						
+						
+
+</div>
+
+</body></html>

@@ -1,0 +1,258 @@
+<HTML>
+<HEAD>
+<TITLE>Livelink Builder Developer's Guide: Table of Contents</TITLE>
+<link rel="stylesheet" href="../llhelp2000.css" type="text/css">
+
+<!--OUTLINE-->
+
+<SCRIPT LANGUAGE="JavaScript">
+     <!--
+
+     NS4 = (document.layers) ? 1 : 0;
+     IE4 = (document.all) ? 1 : 0;
+     ver4 = (NS4 || IE4) ? 1 : 0;
+
+     if (ver4) {
+         with (document) {
+             write("<STYLE TYPE='text/css'>");
+             if (NS4) {
+                 write(".parent {position:absolute; visibility:visible; font-family : arial, helvetica, sans-serif;	font-size : 9pt;}");
+                 write(".child {position:absolute; visibility:hidden; font-family : arial, helvetica, sans-serif;	font-size : 9pt;}");
+                 write(".regular {position:absolute; visibility:visible; font-family : arial, helvetica, sans-serif;	font-size : 9pt;}")
+             }
+             else {
+                 write(".child {display:none; font-family : arial, helvetica, sans-serif;	font-size : 9pt;}")
+             }
+             write("</STYLE>");
+         }
+     }
+
+     isExpanded = false;
+
+     function getIndex(el) {
+         ind = null;
+         for (i=0; i<document.layers.length; i++) {
+             whichEl = document.layers[i];
+             if (whichEl.id == el) {
+                 ind = i;
+                 break;
+             }
+         }
+         return ind;
+     }
+
+     function arrange() {
+         nextY = document.layers[firstInd].pageY + document.layers[firstInd].document.height;
+         for (i=firstInd+1; i<document.layers.length; i++) {
+             whichEl = document.layers[i];
+             if (whichEl.visibility != "hide") {
+                 whichEl.pageY = nextY;
+                 nextY += whichEl.document.height;
+             }
+         }
+     }
+
+     function initIt(){
+         if (!ver4) return;
+         if (NS4) {
+             for (i=0; i<document.layers.length; i++) {
+                 whichEl = document.layers[i];
+                 if (whichEl.id.indexOf("Child") != -1) whichEl.visibility = "hide";
+             }
+             arrange();
+         }
+         else {
+             divColl = document.all.tags("DIV");
+             for (i=0; i<divColl.length; i++) {
+                 whichEl = divColl(i);
+                 if (whichEl.className == "child") whichEl.style.display = "none";
+             }
+         }
+     }
+
+     function expandIt(el) {
+         if (!ver4) return;
+         if (IE4) {
+             whichEl = eval(el + "Child");
+             whichIm = event.srcElement;
+             if (whichEl.style.display == "none") {
+                 whichEl.style.display = "block";
+                 whichIm.src = "../images/folder-open.gif";        
+             }
+             else {
+                 whichEl.style.display = "none";
+                 whichIm.src = "../images/folder-closed.gif";
+             }
+         }
+         else {
+             whichEl = eval("document." + el + "Child");
+             whichIm = eval("document." + el + "Parent.document.images['imEx']");
+             if (whichEl.visibility == "hide") {
+                 whichEl.visibility = "show";
+                 whichIm.src = "../images/folder-open.gif";
+             }
+             else {
+                 whichEl.visibility = "hide";
+                 whichIm.src = "../images/folder-closed.gif";
+             }
+             arrange();
+         }
+     }
+
+     function expandAll() {
+         if (!ver4) return;
+         newSrc = (isExpanded) ? "../images/folder-closed.gif" : "images/folder-open.gif";
+
+         if (NS4) {
+             document.images["imEx"].src = newSrc;
+             for (i=firstInd; i<document.layers.length; i++) {
+                 whichEl = document.layers[i];
+                 if (whichEl.id.indexOf("Parent") != -1) {
+                     whichEl.document.images["imEx"].src = newSrc;
+                 }
+                 if (whichEl.id.indexOf("Child") != -1) {
+                     whichEl.visibility = (isExpanded) ? "hide" : "show";
+                 }
+             }
+
+             arrange();
+             if (isExpanded) scrollTo(0,document.layers[firstInd].pageY);
+         }
+         else {
+             divColl = document.all.tags("DIV");
+             for (i=0; i<divColl.length; i++) {
+                 if (divColl(i).className == "child") {
+                     divColl(i).style.display = (isExpanded) ? "none" : "block";
+                 }
+             }
+             imColl = document.images.item("imEx");
+             for (i=0; i<imColl.length; i++) {
+                 imColl(i).src = newSrc;
+             }
+         }
+         
+         isExpanded = !isExpanded;
+     }
+
+     onload = initIt;
+
+     //-->
+     </SCRIPT>
+<!--END OUTLINE-->
+<BASE TARGET="rtpane">
+<STYLE TYPE="TEXT/CSS">
+<!--
+-->
+</STYLE></HEAD>
+
+<BODY BGCOLOR="#CCCCCC" LINK="#003366" VLINK="#660033" ALINK="#3300FF">
+<p class="subh1">Table of Contents</p>
+<!---------- begin OUTLINE ----------->
+<DIV ID="elOneParent" CLASS=parent><A 
+HREF="#" onClick="expandIt('elOne'); return false"><IMG
+NAME="imEx" src="../images/folder-closed.gif" BORDER=0 ALT="Expand/Collapse Item"></A>
+<A HREF="oscript.html">Overview of OScript</a>
+</DIV>
+<DIV ID="elOneChild" CLASS=child>
+</DIV><br>
+<DIV ID="elTwoParent" CLASS=parent>
+<A HREF="#" onClick="expandIt('elTwo'); return false"><IMG
+NAME="imEx" src="../images/folder-closed.gif" BORDER=0 ALT="Expand/Collapse Item"></A>
+<A HREF="notational.html">Notational Conventions</a>
+</DIV>
+<DIV ID="elTwoChild" CLASS=child>
+</DIV><br>
+<DIV ID="elThreeParent" CLASS=parent>
+<A HREF="#" onClick="expandIt('elThree'); return false"><IMG
+NAME="imEx" src="../images/folder-closed.gif" BORDER=0 ALT="Expand/Collapse Item"></A>
+<A HREF="variables.html">Variables</a>
+</DIV>
+<DIV ID="elThreeChild" CLASS=child>
+</DIV><br>
+<DIV ID="elFourParent" CLASS=parent>
+<A 
+HREF="#" onClick="expandIt('elFour'); return false"><IMG
+NAME="imEx" src="../images/folder-closed.gif" BORDER=0 ALT="Expand/Collapse Item"></A>
+<A HREF="directives.html">Preprocessor Directives</a>
+</DIV>
+<DIV ID="elFourChild" CLASS=child>
+</DIV><br>
+<DIV ID="elFiveParent" CLASS=parent>
+<A 
+HREF="#" onClick="expandIt('elFive'); return false"><IMG
+NAME="imEx" src="../images/folder-closed.gif" BORDER=0 ALT="Expand/Collapse Item"></A>
+<A HREF="data.html">Data Types</a>
+</DIV>
+<DIV ID="elFiveChild" CLASS=child>
+</DIV><br>
+<DIV ID="elSixParent" CLASS=parent>
+<A 
+HREF="#" onClick="expandIt('elSix'); return false"><IMG
+NAME="imEx" src="../images/folder-closed.gif" BORDER=0 ALT="Expand/Collapse Item"></A>
+<A HREF="operators.html">Operators</a>
+</DIV>
+<DIV ID="elSixChild" CLASS=child>
+</DIV><br>
+<DIV ID="elSevenParent" CLASS=parent>
+<A HREF="#" onClick="expandIt('elSeven'); return false"><IMG
+NAME="imEx" src="../images/folder-closed.gif" BORDER=0 ALT="Expand/Collapse Item"></A>
+<A HREF="characters.html">Special Characters</a>
+</DIV>
+<DIV ID="elSevenChild" CLASS=child>
+</DIV><br>
+<DIV ID="elEightParent" CLASS=parent>
+<A HREF="#" onClick="expandIt('elEight'); return false"><IMG
+NAME="imEx" src="../images/folder-closed.gif" BORDER=0 ALT="Expand/Collapse Item"></A>
+<a href="statements.html">Control Statements</a>
+</DIV>
+<DIV ID="elEightChild" CLASS=child>
+</DIV><br>
+<DIV ID="elNineParent" CLASS=parent>
+<A HREF="#" onClick="expandIt('elNine'); return false"><IMG
+NAME="imEx" src="../images/folder-closed.gif" BORDER=0 ALT="Expand/Collapse Item"></A>
+<a href="functions.html">Functions</a>
+</DIV>
+<DIV ID="elNineChild" CLASS=child>
+</DIV><br>
+<DIV ID="elTenParent" CLASS=parent>
+<A HREF="#" onClick="expandIt('elNine'); return false"><IMG
+NAME="imEx" src="../images/folder-closed.gif" BORDER=0 ALT="Expand/Collapse Item"></A>
+<a href="reserved.html">Reserved Words</a>
+</DIV>
+<DIV ID="elTenChild" CLASS=child>
+</DIV><br>
+<DIV ID="elElevenParent" CLASS=parent>
+<A HREF="#" onClick="expandIt('elNine'); return false"><IMG
+NAME="imEx" src="../images/folder-closed.gif" BORDER=0 ALT="Expand/Collapse Item"></A>
+<a href="weblingo.html">WebLingo</a>
+</DIV>
+<DIV ID="elElevenChild" CLASS=child>
+</DIV><br>
+<DIV ID="elTwelveParent" CLASS=parent>
+<A HREF="#" onClick="expandIt('elNine'); return false"><IMG
+NAME="imEx" src="../images/folder-closed.gif" BORDER=0 ALT="Expand/Collapse Item"></A>
+<a href="xlates.html">Xlates</a>
+</DIV>
+<DIV ID="elTwelveChild" CLASS=child>
+</DIV><br>
+
+<!---------- end OUTLINE ----------->
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<SCRIPT LANGUAGE=JavaScript1.2>
+<!--
+if (NS4) {
+	firstEl = "elOneParent";
+	firstInd = getIndex(firstEl);
+	arrange();
+}
+//-->
+</SCRIPT>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</BODY>
+</HTML>

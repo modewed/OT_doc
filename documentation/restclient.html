@@ -1,0 +1,542 @@
+
+<meta charset="UTF-8">
+<html>
+<head><title>Class: RestClient</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../syntax.css" type="text/css">
+<link rel="stylesheet" href="builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td  align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody></table>
+
+<div id="document">
+	
+<div class="sidebar_container">
+		
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink"><a href="assoc.html">Assoc</a></div>
+				<div class="packagelink"><a href="boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="builder.html">Builder</a></div>
+				<div class="packagelink"><a href="bytes.html">Bytes</a></div>
+				<div class="packagelink"><a href="capi.html">CAPI</a></div>
+				<div class="packagelink"><a href="capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink"><a href="cachetree.html">CacheTree</a></div>
+				<div class="packagelink"><a href="compiler.html">Compiler</a></div>
+				<div class="packagelink"><a href="core.html">Core</a></div>
+				<div class="packagelink"><a href="dapi.html">DAPI</a></div>
+				<div class="packagelink"><a href="dapinode.html">DAPINODE</a></div>
+				<div class="packagelink"><a href="dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink"><a href="dapiversion.html">DAPIVERSION</a></div>
+				<div class="packagelink"><a href="domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="domcomment.html">DOMComment</a></div>
+				<div class="packagelink"><a href="domdocument.html">DOMDocument</a></div>
+				<div class="packagelink"><a href="domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink"><a href="domelement.html">DOMElement</a></div>
+				<div class="packagelink"><a href="domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink"><a href="domnamednodemap.html">DOMNamedNodeMap</a></div>
+				<div class="packagelink"><a href="domnode.html">DOMNode</a></div>
+				<div class="packagelink"><a href="domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="domtext.html">DOMText</a></div>
+				<div class="packagelink"><a href="date.html">Date</a></div>
+				<div class="packagelink"><a href="dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="env.html">Env</a></div>
+				<div class="packagelink"><a href="error.html">Error</a></div>
+				<div class="packagelink"><a href="file.html">File</a></div>
+				<div class="packagelink"><a href="filecopy.html">FileCopy</a></div>
+				<div class="packagelink"><a href="fileprefs.html">Fileprefs</a></div>
+				<div class="packagelink"><a href="frame.html">Frame</a></div>
+				<div class="packagelink"><a href="global.html">Global</a></div>
+				<div class="packagelink"><a href="integer.html">Integer</a></div>
+				<div class="packagelink"><a href="javaobject.html">JavaObject</a></div>
+				<div class="packagelink"><a href="language.html">Language</a></div>
+				<div class="packagelink"><a href="license.html">License</a></div>
+				<div class="packagelink"><a href="list.html">List</a></div>
+				<div class="packagelink"><a href="logging.html">Logging</a></div>
+				<div class="packagelink"><a href="long.html">Long</a></div>
+				<div class="packagelink"><a href="mailmessage.html">MailMessage</a></div>
+				<div class="packagelink"><a href="math.html">Math</a></div>
+				<div class="packagelink"><a href="memcached.html">Memcached</a></div>
+				<div class="packagelink"><a href="notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="object.html">Object</a></div>
+				<div class="packagelink"><a href="pop3session.html">POP3Session</a></div>
+				<div class="packagelink"><a href="patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="patfind.html">PatFind</a></div>
+				<div class="packagelink"><a href="pattern.html">Pattern</a></div>
+				<div class="packagelink"><a href="point.html">Point</a></div>
+				<div class="packagelink"><a href="profiler.html">Profiler</a></div>
+				<div class="packagelink"><a href="real.html">Real</a></div>
+				<div class="packagelink"><a href="recarray.html">RecArray</a></div>
+				<div class="packagelink"><a href="record.html">Record</a></div>
+				<div class="packagelink"><a href="regex.html">Regex</a></div>
+				<div class="packagelink curPage">RestClient</div>
+				<div class="packagelink"><a href="saxparser.html">SAXParser</a></div>
+				<div class="packagelink"><a href="smtpsession.html">SMTPSession</a></div>
+				<div class="packagelink"><a href="ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="script.html">Script</a></div>
+				<div class="packagelink"><a href="security.html">Security</a></div>
+				<div class="packagelink"><a href="set.html">Set</a></div>
+				<div class="packagelink"><a href="socket.html">Socket</a></div>
+				<div class="packagelink"><a href="sql.html">Sql</a></div>
+				<div class="packagelink"><a href="sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink"><a href="str.html">Str</a></div>
+				<div class="packagelink"><a href="string.html">String</a></div>
+				<div class="packagelink"><a href="system.html">System</a></div>
+				<div class="packagelink"><a href="uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="void.html">Void</a></div>
+				<div class="packagelink"><a href="wapi.html">WAPI</a></div>
+				<div class="packagelink"><a href="wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink"><a href="web.html">Web</a></div>
+				<div class="packagelink"><a href="xslprocessor.html">XSLProcessor</a></div>
+				<div class="packagelink"><a href="zip.html">Zip</a></div>
+		</div>
+</div>
+
+	<div class="content_container">
+		<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+		<h1>Class: RestClient</h1><div class="ClassDescription"><p>The built-in functions in the RestClient class provide the ability to connect to a HTTP server and send get or post with content requests.</p>
+<p>The RestClient class offers the following functionality:</p>
+<ul>
+<li><a class="interdoc" href="#cm_restclient_new">New()</a> Create a new restclient object for http.</li>
+<li><a class="interdoc" href="#cm_restclient_newsecure">NewSecure()</a> Create a new restclient object for https.</li>
+<li><a class="interdoc" href="#im_restclient_addauthentication">AddAuthentication()</a> Add a user and password/certificate for authenticating.</li>
+<li><a class="interdoc" href="#im_restclient_setdestfile">SetDestFile()</a> Set the filename where returned content will be written.</li>
+<li><a class="interdoc" href="#im_restclient_setcontenttype">SetContentType()</a> Set the Content-Type HTTP header for the request.</li>
+<li><a class="interdoc" href="#im_restclient_geturi">GetURI()</a> Get the current URI.</li>
+<li><a class="interdoc" href="#im_restclient_seturi">SetURI()</a> Set the URI to a new value.</li>
+<li><a class="interdoc" href="#im_restclient_get">Get()</a> Sends an HTTP get.</li>
+<li><a class="interdoc" href="#im_restclient_post">Post()</a> Sends an HTTP post.</li>
+<li><a class="interdoc" href="#im_restclient_delete">Delete()</a> Sends an HTTP delete.</li>
+<li><a class="interdoc" href="#im_restclient_put">Put()</a> Sends an HTTP put.</li>
+<li><a class="interdoc" href="#im_restclient_patch">Patch()</a> Sends an HTTP patch.</li>
+</ul></div>
+
+			<h2>Instance Attributes</h2>
+			<div class="InstanceAttributesShort">
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_restclient_hostname">hostName</a></div>
+					<div class="Description"><p>The name of the server</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_restclient_initialuri">initialURI</a></div>
+					<div class="Description"><p>The URI</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_restclient_nport">nPort</a></div>
+					<div class="Description"><p>The port to connect to the server </p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_restclient_ntimeout">nTimeout</a></div>
+					<div class="Description"><p>The request timeout in seconds (default 200)</p></div>
+				</div>
+			</div>
+
+			<h2>Class Methods</h2>
+			<div class="ClassMethodsShort">
+				<div class="Method">
+					<div class="Name"><a href="#cm_restclient_new" class="IndexMethodName">New</a>(
+					 String hostName, Integer port, String initialURI, Integer timeout )
+					</div>
+					<div class="Description"><p>Returns a new RestClient instance, or undefined if an error occured.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_restclient_newsecure" class="IndexMethodName">NewSecure</a>(
+					 String hostName, Integer port, String initialURI, [Integer timeout], [String certPath], [String certFile], [String keyFile] )
+					</div>
+					<div class="Description"><p>Returns a new RestClient instance for HTTPS, or undefined if an error occured.</p></div>
+				</div>
+			</div>
+
+			<h2>Instance Methods</h2>
+			<div class="InstanceMethodsShort">
+				<div class="Method">					
+					<div class="Name"><a href="#im_restclient_addauthentication" class="IndexMethodName">AddAuthentication</a>(
+					 String userName, String password )
+					</div>
+					<div class="Description"><p>Adds user and password/cert authentication.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_restclient_delete" class="IndexMethodName">Delete</a>(
+					 Assoc urlParams, Assoc headerFields )
+					</div>
+					<div class="Description"><p>Sends an HTTP delete.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_restclient_get" class="IndexMethodName">Get</a>(
+					 Assoc urlParams, Assoc headerFields )
+					</div>
+					<div class="Description"><p>Sends an HTTP get.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_restclient_geturi" class="IndexMethodName">GetURI</a>(
+					)
+					</div>
+					<div class="Description"><p>Get the current URI.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_restclient_patch" class="IndexMethodName">Patch</a>(
+					 Assoc urlParams, String body, Integer bodyLen, Assoc headerFields )
+					</div>
+					<div class="Description"><p>Sends an HTTP patch.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_restclient_post" class="IndexMethodName">Post</a>(
+					 Assoc urlParams, String body, Integer bodyLen, [Assoc headerFields], [Assoc postParams] )
+					</div>
+					<div class="Description"><p>Sends an HTTP post.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_restclient_postfile" class="IndexMethodName">PostFile</a>(
+					 Assoc urlParams, String filePath, String fileName, String postFileParam, String contentType, [Assoc headerFields], [Assoc postParams] )
+					</div>
+					<div class="Description"><p>Sends an HTTP post with local file reference to upload with the request.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_restclient_put" class="IndexMethodName">Put</a>(
+					 Assoc urlParams, String body, Integer bodyLen, Assoc headerFields )
+					</div>
+					<div class="Description"><p>Sends an HTTP put.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_restclient_setcontenttype" class="IndexMethodName">SetContentType</a>(
+					 String contentType )
+					</div>
+					<div class="Description"><p>Set the Content-Type HTTP header.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_restclient_setdestfile" class="IndexMethodName">SetDestFile</a>(
+					 String filename )
+					</div>
+					<div class="Description"><p>Set the filename where content is written.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_restclient_seturi" class="IndexMethodName">SetURI</a>(
+					 String newURI )
+					</div>
+					<div class="Description"><p>Set the URI.</p></div>
+				</div>
+			</div>
+
+				<h2>Instance Attributes</h2>
+				<div class="InstanceAttributes">
+					
+					<div class="Attribute">
+						<div class="Name">string <a name="ia_restclient_hostname">hostName</a></div>
+						<div class="Description"><p>The name of the server</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">string <a name="ia_restclient_initialuri">initialURI</a></div>
+						<div class="Description"><p>The URI</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_restclient_nport">nPort</a></div>
+						<div class="Description"><p>The port to connect to the server </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_restclient_ntimeout">nTimeout</a></div>
+						<div class="Description"><p>The request timeout in seconds (default 200)</p></div>
+					</div>
+				
+				</div>
+
+		
+				<h2>Class Methods</h2>
+				<div class="ClassMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_restclient_new">New</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">RestClient</span> 
+						<span class="PrototypeselfName">New</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">hostName</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">port</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">initialURI</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">timeout</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a new RestClient object.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">hostName</span><span class="description"><p>IP address or domain name of HTTP host.</p></span></div>
+											<div class="Parameter"><span class="name">port</span><span class="description"><p>HTTP connection port, required</p></span></div>
+											<div class="Parameter"><span class="name">initialURI</span><span class="description"><p>The base URI</p></span></div>
+											<div class="Parameter"><span class="name">timeout</span><span class="description"><p>Request timeout, default 200, min value 15</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A new RestClient object or undefined if there was an error constructing the object.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_restclient_newsecure">NewSecure</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">RestClient</span> 
+						<span class="PrototypeselfName">NewSecure</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">hostName</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">port</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">initialURI</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">timeout</span><span class="PrototypePunctuation">]</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">certPath</span><span class="PrototypePunctuation">]</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">certFile</span><span class="PrototypePunctuation">]</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">keyFile</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a new RestClient object, one of the certpath, certfile or keyfile parameters is required. Certificate validation disabled.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">hostName</span><span class="description"><p>IP address or domain name of HTTP host.</p></span></div>
+											<div class="Parameter"><span class="name">port</span><span class="description"><p>HTTP connection port, required</p></span></div>
+											<div class="Parameter"><span class="name">initialURI</span><span class="description"><p>The base URI</p></span></div>
+											<div class="Parameter"><span class="name">timeout</span><span class="description"><p>Request timeout, default 200, min value 15</p></span></div>
+											<div class="Parameter"><span class="name">certPath</span><span class="description"><p>The path to default certs, if no cert file or keyfile is supplied, this directory will be searched for the apppropriate certificate, on linux usually /etc/ssl/certs, on windows, a default directory must be populated</p></span></div>
+											<div class="Parameter"><span class="name">certFile</span><span class="description"><p>The path/name of a user supplied certs file, this file must contain a complete certificate chain. use if there is no default cert store or certificate is self-signed</p></span></div>
+											<div class="Parameter"><span class="name">keyFile</span><span class="description"><p>The path/name of a user supplied private key file, used for self-generated keys</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A new RestClient object or undefined if there was an error constructing the object.</p></div>
+							</div>
+						</div>
+				</div>
+				<h2>Instance Methods</h2>
+				<div class="InstanceMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_restclient_addauthentication">AddAuthentication</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">AddAuthentication</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">userName</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">password</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Adds authentication to the request and sends it if the server returns an authentication required http response.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">userName</span><span class="description"><p>The username for authentication</p></span></div>
+											<div class="Parameter"><span class="name">password</span><span class="description"><p>The password or certificate for authentication</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>0 if successful or undefined if an error</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_restclient_delete">Delete</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Assoc</span> 
+						<span class="PrototypeselfName">Delete</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Assoc</span> <span class="PrototypeArgumentName">urlParams</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Assoc</span> <span class="PrototypeArgumentName">headerFields</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Constructs the header using the initialURI and supplied list of parm=value pairs and sends a delete.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">urlParams</span><span class="description"><p>Assoc of key value pairs to add to the URL query string (will URL encode if required)</p></span></div>
+											<div class="Parameter"><span class="name">headerFields</span><span class="description"><p>Assoc of key value pairs to add additional fields to the HTTP header</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Request return or error with message</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_restclient_get">Get</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Assoc</span> 
+						<span class="PrototypeselfName">Get</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Assoc</span> <span class="PrototypeArgumentName">urlParams</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Assoc</span> <span class="PrototypeArgumentName">headerFields</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Constructs the header using the initialURI and supplied Assoc of parm=value pairs and sends a get.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">urlParams</span><span class="description"><p>Assoc of key value pairs to add to the URL query string (will URL encode if required)</p></span></div>
+											<div class="Parameter"><span class="name">headerFields</span><span class="description"><p>Assoc of key value pairs to add additional fields to the HTTP header</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Request return or error with message</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_restclient_geturi">GetURI</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">GetURI</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the current URI.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The URI or undefined</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_restclient_patch">Patch</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Assoc</span> 
+						<span class="PrototypeselfName">Patch</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Assoc</span> <span class="PrototypeArgumentName">urlParams</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">body</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">bodyLen</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Assoc</span> <span class="PrototypeArgumentName">headerFields</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Constructs the header using the initialURI and supplied Assoc of parm=value pairs and sends a patch.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">urlParams</span><span class="description"><p>Assoc of key value pairs to add to the URL query string (will URL encode if required)</p></span></div>
+											<div class="Parameter"><span class="name">body</span><span class="description"><p>String containing patch content, may contain binary data</p></span></div>
+											<div class="Parameter"><span class="name">bodyLen</span><span class="description"><p>Length of the body content</p></span></div>
+											<div class="Parameter"><span class="name">headerFields</span><span class="description"><p>Assoc of key value pairs to add additional fields to the HTTP header</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Request return or error with message</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_restclient_post">Post</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Assoc</span> 
+						<span class="PrototypeselfName">Post</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Assoc</span> <span class="PrototypeArgumentName">urlParams</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">body</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">bodyLen</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Assoc</span> <span class="PrototypeArgumentName">headerFields</span><span class="PrototypePunctuation">]</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Assoc</span> <span class="PrototypeArgumentName">postParams</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Constructs the header using the initialURI and supplied Assoc of parm=value pairs and sends a post.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">urlParams</span><span class="description"><p>Assoc of key value pairs to add to the URL query string (will URL encode if required)</p></span></div>
+											<div class="Parameter"><span class="name">body</span><span class="description"><p>String containing post content, may contain binary data</p></span></div>
+											<div class="Parameter"><span class="name">bodyLen</span><span class="description"><p>Length of the body content</p></span></div>
+											<div class="Parameter"><span class="name">headerFields</span><span class="description"><p>Assoc of key value pairs to add additional fields to the HTTP header</p></span></div>
+											<div class="Parameter"><span class="name">postParams</span><span class="description"><p>Assoc of key value pairs to send as HTTP POST parameters. NOTE: Should NOT be URL escaped. This can only be specified if the body is empty and length is 0.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Request return or error with message</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_restclient_postfile">PostFile</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Assoc</span> 
+						<span class="PrototypeselfName">PostFile</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Assoc</span> <span class="PrototypeArgumentName">urlParams</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">filePath</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">fileName</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">postFileParam</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">contentType</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Assoc</span> <span class="PrototypeArgumentName">headerFields</span><span class="PrototypePunctuation">]</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Assoc</span> <span class="PrototypeArgumentName">postParams</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sends the given file as a HTTP multipart message</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">urlParams</span><span class="description"><p>Assoc of key value pairs to add to the URL query string (will URL encode if required)</p></span></div>
+											<div class="Parameter"><span class="name">filePath</span><span class="description"><p>The fully qualified path to the local file that is to be uploaded</p></span></div>
+											<div class="Parameter"><span class="name">fileName</span><span class="description"><p>The file name to be used for the HTML form element (may be different than the local filename)</p></span></div>
+											<div class="Parameter"><span class="name">postFileParam</span><span class="description"><p>The HTML form element name associated with the file</p></span></div>
+											<div class="Parameter"><span class="name">contentType</span><span class="description"><p>The content or MIME type of the file</p></span></div>
+											<div class="Parameter"><span class="name">headerFields</span><span class="description"><p>Assoc of key value pairs to add additional fields to the HTTP header</p></span></div>
+											<div class="Parameter"><span class="name">postParams</span><span class="description"><p>Assoc of key value pairs to send as HTTP multipart POST parameters. NOTE: Should NOT be URL escaped.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Request return or error with message</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_restclient_put">Put</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Assoc</span> 
+						<span class="PrototypeselfName">Put</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Assoc</span> <span class="PrototypeArgumentName">urlParams</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">body</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">bodyLen</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Assoc</span> <span class="PrototypeArgumentName">headerFields</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Constructs the header using the initialURI and supplied Assoc of parm=value pairs and sends a put.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">urlParams</span><span class="description"><p>Assoc of key value pairs to add to the URL query string (will URL encode if required)</p></span></div>
+											<div class="Parameter"><span class="name">body</span><span class="description"><p>String containing put content, may contain binary data</p></span></div>
+											<div class="Parameter"><span class="name">bodyLen</span><span class="description"><p>Length of the body content</p></span></div>
+											<div class="Parameter"><span class="name">headerFields</span><span class="description"><p>Assoc of key value pairs to add additional fields to the HTTP header</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Request return or error with message</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_restclient_setcontenttype">SetContentType</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">SetContentType</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">contentType</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Set the Content-Type HTTP header for all requests sent by this client.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">contentType</span><span class="description"><p>The value of the header</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>0 or undefined</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_restclient_setdestfile">SetDestFile</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">SetDestFile</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">filename</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Allows larger content from the server to be written to a file instead of returning it in the Assoc.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">filename</span><span class="description"><p>String containing the file path/name</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>0 or undefined</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_restclient_seturi">SetURI</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">SetURI</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">newURI</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sets the URI to a new value.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">newURI</span><span class="description"><p>The URI</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>0 or undefined</p></div>
+							</div>
+						</div>
+				</div>
+		
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2018 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+
+
+
+</div>
+	</div>						
+						
+
+</div>
+
+</body></html>

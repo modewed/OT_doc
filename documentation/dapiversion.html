@@ -1,0 +1,453 @@
+
+<meta charset="UTF-8">
+<html>
+<head><title>Class: DAPIVERSION</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../syntax.css" type="text/css">
+<link rel="stylesheet" href="builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td  align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody></table>
+
+<div id="document">
+	
+<div class="sidebar_container">
+		
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink"><a href="assoc.html">Assoc</a></div>
+				<div class="packagelink"><a href="boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="builder.html">Builder</a></div>
+				<div class="packagelink"><a href="bytes.html">Bytes</a></div>
+				<div class="packagelink"><a href="capi.html">CAPI</a></div>
+				<div class="packagelink"><a href="capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink"><a href="cachetree.html">CacheTree</a></div>
+				<div class="packagelink"><a href="compiler.html">Compiler</a></div>
+				<div class="packagelink"><a href="core.html">Core</a></div>
+				<div class="packagelink"><a href="dapi.html">DAPI</a></div>
+				<div class="packagelink"><a href="dapinode.html">DAPINODE</a></div>
+				<div class="packagelink"><a href="dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink curPage">DAPIVERSION</div>
+				<div class="packagelink"><a href="domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="domcomment.html">DOMComment</a></div>
+				<div class="packagelink"><a href="domdocument.html">DOMDocument</a></div>
+				<div class="packagelink"><a href="domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink"><a href="domelement.html">DOMElement</a></div>
+				<div class="packagelink"><a href="domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink"><a href="domnamednodemap.html">DOMNamedNodeMap</a></div>
+				<div class="packagelink"><a href="domnode.html">DOMNode</a></div>
+				<div class="packagelink"><a href="domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="domtext.html">DOMText</a></div>
+				<div class="packagelink"><a href="date.html">Date</a></div>
+				<div class="packagelink"><a href="dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="env.html">Env</a></div>
+				<div class="packagelink"><a href="error.html">Error</a></div>
+				<div class="packagelink"><a href="file.html">File</a></div>
+				<div class="packagelink"><a href="filecopy.html">FileCopy</a></div>
+				<div class="packagelink"><a href="fileprefs.html">Fileprefs</a></div>
+				<div class="packagelink"><a href="frame.html">Frame</a></div>
+				<div class="packagelink"><a href="global.html">Global</a></div>
+				<div class="packagelink"><a href="integer.html">Integer</a></div>
+				<div class="packagelink"><a href="javaobject.html">JavaObject</a></div>
+				<div class="packagelink"><a href="language.html">Language</a></div>
+				<div class="packagelink"><a href="license.html">License</a></div>
+				<div class="packagelink"><a href="list.html">List</a></div>
+				<div class="packagelink"><a href="logging.html">Logging</a></div>
+				<div class="packagelink"><a href="long.html">Long</a></div>
+				<div class="packagelink"><a href="mailmessage.html">MailMessage</a></div>
+				<div class="packagelink"><a href="math.html">Math</a></div>
+				<div class="packagelink"><a href="memcached.html">Memcached</a></div>
+				<div class="packagelink"><a href="notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="object.html">Object</a></div>
+				<div class="packagelink"><a href="pop3session.html">POP3Session</a></div>
+				<div class="packagelink"><a href="patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="patfind.html">PatFind</a></div>
+				<div class="packagelink"><a href="pattern.html">Pattern</a></div>
+				<div class="packagelink"><a href="point.html">Point</a></div>
+				<div class="packagelink"><a href="profiler.html">Profiler</a></div>
+				<div class="packagelink"><a href="real.html">Real</a></div>
+				<div class="packagelink"><a href="recarray.html">RecArray</a></div>
+				<div class="packagelink"><a href="record.html">Record</a></div>
+				<div class="packagelink"><a href="regex.html">Regex</a></div>
+				<div class="packagelink"><a href="restclient.html">RestClient</a></div>
+				<div class="packagelink"><a href="saxparser.html">SAXParser</a></div>
+				<div class="packagelink"><a href="smtpsession.html">SMTPSession</a></div>
+				<div class="packagelink"><a href="ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="script.html">Script</a></div>
+				<div class="packagelink"><a href="security.html">Security</a></div>
+				<div class="packagelink"><a href="set.html">Set</a></div>
+				<div class="packagelink"><a href="socket.html">Socket</a></div>
+				<div class="packagelink"><a href="sql.html">Sql</a></div>
+				<div class="packagelink"><a href="sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink"><a href="str.html">Str</a></div>
+				<div class="packagelink"><a href="string.html">String</a></div>
+				<div class="packagelink"><a href="system.html">System</a></div>
+				<div class="packagelink"><a href="uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="void.html">Void</a></div>
+				<div class="packagelink"><a href="wapi.html">WAPI</a></div>
+				<div class="packagelink"><a href="wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink"><a href="web.html">Web</a></div>
+				<div class="packagelink"><a href="xslprocessor.html">XSLProcessor</a></div>
+				<div class="packagelink"><a href="zip.html">Zip</a></div>
+		</div>
+</div>
+
+	<div class="content_container">
+		<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+		<h1>Class: DAPIVERSION</h1><div class="ClassDescription"><p>DAPIVERSION is the object handle of a version of a node stored in the DAPI database. It is used in the <a class="interdoc" href="dapi.html">DAPI</a> functions for all version manipulation operations.</p></div>
+
+			<h2>Instance Attributes</h2>
+			<div class="InstanceAttributesShort">
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapiversion_pcomment">pComment</a></div>
+					<div class="Description"><p>The comment field.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapiversion_pcreatedate">pCreateDate</a></div>
+					<div class="Description"><p>The creation date and time of this version.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapiversion_pexternalcreatedate">pExternalCreateDate</a></div>
+					<div class="Description"><p>The external system creation date.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapiversion_pexternalcreatorid">pExternalCreatorID</a></div>
+					<div class="Description"><p>ID of the entity that created the item externally.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapiversion_pexternalmodifydate">pExternalModifyDate</a></div>
+					<div class="Description"><p>The external system modification date.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapiversion_pexternalsourceid">pExternalSourceID</a></div>
+					<div class="Description"><p>ID of the external source for this item.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapiversion_pfilecreatedate">pFileCreateDate</a></div>
+					<div class="Description"><p>The file creation date and time.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapiversion_pfilecreator">pFileCreator</a></div>
+					<div class="Description"><p>The file creator (specific to the Macintosh platform).</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapiversion_pfiledatasize">pFileDataSize</a></div>
+					<div class="Description"><p>The data size of this version of the file.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapiversion_pfilemodifydate">pFileModifyDate</a></div>
+					<div class="Description"><p>The file modification date and time.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapiversion_pfilename">pFileName</a></div>
+					<div class="Description"><p>The file name.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapiversion_pfileplatform">pFilePlatform</a></div>
+					<div class="Description"><p>The platform from which the file originated.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapiversion_pfileressize">pFileResSize</a></div>
+					<div class="Description"><p>The resource size of this version of the
+    file.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapiversion_pfiletype">pFileType</a></div>
+					<div class="Description"><p>The file type.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapiversion_pguid">pGUID</a></div>
+					<div class="Description"><p>The GUID for this version.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapiversion_pid">pID</a></div>
+					<div class="Description"><p>The unique ID.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapiversion_pindexed">pIndexed</a></div>
+					<div class="Description"><p>Unused.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapiversion_plocked">pLocked</a></div>
+					<div class="Description"><p>An integer indicating locked status.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapiversion_plockedby">pLockedBy</a></div>
+					<div class="Description"><p>The ID of the user who locked this version.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapiversion_plockeddate">pLockedDate</a></div>
+					<div class="Description"><p>The date and time when the
+    version is locked.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapiversion_pmimetype">pMIMEType</a></div>
+					<div class="Description"><p>The file MIME type.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapiversion_pmodifydate">pModifyDate</a></div>
+					<div class="Description"><p>The modification date and time of this version.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapiversion_pname">pName</a></div>
+					<div class="Description"><p>The name of this version.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapiversion_pnodeid">pNodeID</a></div>
+					<div class="Description"><p>The ID of the node which contains this version.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapiversion_pnumber">pNumber</a></div>
+					<div class="Description"><p>The version number of this version.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapiversion_powner">pOwner</a></div>
+					<div class="Description"><p>The ID of the user who created this version.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapiversion_ppagenum">pPageNum</a></div>
+					<div class="Description"><p>The page number for this version.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapiversion_pproviderid">pProviderID</a></div>
+					<div class="Description"><p>The ID of the associated provider.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapiversion_pprovidername">pProviderName</a></div>
+					<div class="Description"><p>The name of the associated provider.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapiversion_ptype">pType</a></div>
+					<div class="Description"><p>The type of this version, if it is a rendition.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapiversion_pvermajor">pVerMajor</a></div>
+					<div class="Description"><p>The major version number.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapiversion_pverminor">pVerMinor</a></div>
+					<div class="Description"><p>The minor version number.</p></div>
+				</div>
+			</div>
+
+
+
+				<h2>Instance Attributes</h2>
+				<div class="InstanceAttributes">
+					
+					<div class="Attribute">
+						<div class="Name">String <a name="ia_dapiversion_pcomment">pComment</a></div>
+						<div class="Description"><p>The comment field. The column in
+    the DVersData table is VerComment.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Date <a name="ia_dapiversion_pcreatedate">pCreateDate</a></div>
+						<div class="Description"><p>The creation date and time of
+    this version. The column in the DVersData table is VerCDate.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Date <a name="ia_dapiversion_pexternalcreatedate">pExternalCreateDate</a></div>
+						<div class="Description"><p>If available, this is the original creation
+    date and time for the item in an external system. The column in the 
+    DTreeCoreExternalData table is ExternalCreateDate.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapiversion_pexternalcreatorid">pExternalCreatorID</a></div>
+						<div class="Description"><p>If available, this is the ID of the entity
+    that created the item in an external system. The column in the 
+    DTreeCoreExternalData table is ExternalCreatorID.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Date <a name="ia_dapiversion_pexternalmodifydate">pExternalModifyDate</a></div>
+						<div class="Description"><p>If available, this is the modification
+    date and time for the item in an external system. The column in the 
+    DTreeCoreExternalData table is ExternalModifyDate.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapiversion_pexternalsourceid">pExternalSourceID</a></div>
+						<div class="Description"><p>If available, this is the ID of the external
+    system where this item originated. The column in the DTreeCoreExternalData 
+    table is ExternalSourceID.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Date <a name="ia_dapiversion_pfilecreatedate">pFileCreateDate</a></div>
+						<div class="Description"><p>The file creation date and time.
+    The column in the DVersData table is FileCDate.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ia_dapiversion_pfilecreator">pFileCreator</a></div>
+						<div class="Description"><p>The file creator (specific to the Macintosh
+    platform). The column in the DVersData table is FileCreator.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapiversion_pfiledatasize">pFileDataSize</a></div>
+						<div class="Description"><p>The data size of this version of the
+    file. The column in the DVersData table is DataSize.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Date <a name="ia_dapiversion_pfilemodifydate">pFileModifyDate</a></div>
+						<div class="Description"><p>The file modification date and
+    time. The column in the DVersData table is FileMDate.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ia_dapiversion_pfilename">pFileName</a></div>
+						<div class="Description"><p>The file name. The column in
+    the DVersData table is FileName.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapiversion_pfileplatform">pFilePlatform</a></div>
+						<div class="Description"><p>The platform from which the file originated.
+    The column in the DVersData table is Platform.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapiversion_pfileressize">pFileResSize</a></div>
+						<div class="Description"><p>The resource size of this version of the file.
+    It is Mac platform specific. The column in the DVersData table is ResSize.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ia_dapiversion_pfiletype">pFileType</a></div>
+						<div class="Description"><p>The file type. The column in the DVersData table
+    is FileType.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">GUID <a name="ia_dapiversion_pguid">pGUID</a></div>
+						<div class="Description"><p>The GUID for this version. The column in the 
+    DVersData table is GUID.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapiversion_pid">pID</a></div>
+						<div class="Description"><p>The unique ID for this version. The column in the 
+    DVersData table is VersionID.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ia_dapiversion_pindexed">pIndexed</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapiversion_plocked">pLocked</a></div>
+						<div class="Description"><p>An integer indicating locked
+    status. The column in the DVersData table is Locked.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapiversion_plockedby">pLockedBy</a></div>
+						<div class="Description"><p>The ID of the user who locked this version.
+    The column in the DVersData table is LockedBy.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Date <a name="ia_dapiversion_plockeddate">pLockedDate</a></div>
+						<div class="Description"><p>The date and time when this version
+    is locked. The column in the DVersData table is LockedDate.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ia_dapiversion_pmimetype">pMIMEType</a></div>
+						<div class="Description"><p>The file MIME type. The column
+    in the DVersData table is MimeType.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Date <a name="ia_dapiversion_pmodifydate">pModifyDate</a></div>
+						<div class="Description"><p>The modification date and time of this version.
+    The column in the DVersData table is VerMDate.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ia_dapiversion_pname">pName</a></div>
+						<div class="Description"><p>The name of this version. The
+    column in the DVersData table is VersionName.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapiversion_pnodeid">pNodeID</a></div>
+						<div class="Description"><p>The ID of the node which contains this
+    version. The column in the DVersData table is DocID.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapiversion_pnumber">pNumber</a></div>
+						<div class="Description"><p>The version number of this version. The
+    column in the DVersData table is Version.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapiversion_powner">pOwner</a></div>
+						<div class="Description"><p>The ID of the user who created
+    this version. The column in the DVersData table is Owner.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapiversion_ppagenum">pPageNum</a></div>
+						<div class="Description"><p>The page number for this version. The
+    column in the DVersData table is PageNum.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapiversion_pproviderid">pProviderID</a></div>
+						<div class="Description"><p>The ID of the associated provider.
+    The column in the DVersData table is ProviderId.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ia_dapiversion_pprovidername">pProviderName</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ia_dapiversion_ptype">pType</a></div>
+						<div class="Description"><p>If this DAPIVERSION is a rendition, 
+    this is the rendition type. The column in the DVersData table 
+    is VerType.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapiversion_pvermajor">pVerMajor</a></div>
+						<div class="Description"><p>The major version number. The
+    column in the DVersData table is VerMajor.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapiversion_pverminor">pVerMinor</a></div>
+						<div class="Description"><p>The minor version number. The
+    column in the DVersData table is VerMinor.</p></div>
+					</div>
+				
+				</div>
+
+		
+		
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2018 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+
+
+
+</div>
+	</div>						
+						
+
+</div>
+
+</body></html>

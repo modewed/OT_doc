@@ -1,0 +1,930 @@
+
+<meta charset="UTF-8">
+<html>
+<head><title>Class: MailMessage</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../syntax.css" type="text/css">
+<link rel="stylesheet" href="builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td  align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody></table>
+
+<div id="document">
+	
+<div class="sidebar_container">
+		
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink"><a href="assoc.html">Assoc</a></div>
+				<div class="packagelink"><a href="boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="builder.html">Builder</a></div>
+				<div class="packagelink"><a href="bytes.html">Bytes</a></div>
+				<div class="packagelink"><a href="capi.html">CAPI</a></div>
+				<div class="packagelink"><a href="capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink"><a href="cachetree.html">CacheTree</a></div>
+				<div class="packagelink"><a href="compiler.html">Compiler</a></div>
+				<div class="packagelink"><a href="core.html">Core</a></div>
+				<div class="packagelink"><a href="dapi.html">DAPI</a></div>
+				<div class="packagelink"><a href="dapinode.html">DAPINODE</a></div>
+				<div class="packagelink"><a href="dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink"><a href="dapiversion.html">DAPIVERSION</a></div>
+				<div class="packagelink"><a href="domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="domcomment.html">DOMComment</a></div>
+				<div class="packagelink"><a href="domdocument.html">DOMDocument</a></div>
+				<div class="packagelink"><a href="domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink"><a href="domelement.html">DOMElement</a></div>
+				<div class="packagelink"><a href="domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink"><a href="domnamednodemap.html">DOMNamedNodeMap</a></div>
+				<div class="packagelink"><a href="domnode.html">DOMNode</a></div>
+				<div class="packagelink"><a href="domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="domtext.html">DOMText</a></div>
+				<div class="packagelink"><a href="date.html">Date</a></div>
+				<div class="packagelink"><a href="dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="env.html">Env</a></div>
+				<div class="packagelink"><a href="error.html">Error</a></div>
+				<div class="packagelink"><a href="file.html">File</a></div>
+				<div class="packagelink"><a href="filecopy.html">FileCopy</a></div>
+				<div class="packagelink"><a href="fileprefs.html">Fileprefs</a></div>
+				<div class="packagelink"><a href="frame.html">Frame</a></div>
+				<div class="packagelink"><a href="global.html">Global</a></div>
+				<div class="packagelink"><a href="integer.html">Integer</a></div>
+				<div class="packagelink"><a href="javaobject.html">JavaObject</a></div>
+				<div class="packagelink"><a href="language.html">Language</a></div>
+				<div class="packagelink"><a href="license.html">License</a></div>
+				<div class="packagelink"><a href="list.html">List</a></div>
+				<div class="packagelink"><a href="logging.html">Logging</a></div>
+				<div class="packagelink"><a href="long.html">Long</a></div>
+				<div class="packagelink curPage">MailMessage</div>
+				<div class="packagelink"><a href="math.html">Math</a></div>
+				<div class="packagelink"><a href="memcached.html">Memcached</a></div>
+				<div class="packagelink"><a href="notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="object.html">Object</a></div>
+				<div class="packagelink"><a href="pop3session.html">POP3Session</a></div>
+				<div class="packagelink"><a href="patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="patfind.html">PatFind</a></div>
+				<div class="packagelink"><a href="pattern.html">Pattern</a></div>
+				<div class="packagelink"><a href="point.html">Point</a></div>
+				<div class="packagelink"><a href="profiler.html">Profiler</a></div>
+				<div class="packagelink"><a href="real.html">Real</a></div>
+				<div class="packagelink"><a href="recarray.html">RecArray</a></div>
+				<div class="packagelink"><a href="record.html">Record</a></div>
+				<div class="packagelink"><a href="regex.html">Regex</a></div>
+				<div class="packagelink"><a href="restclient.html">RestClient</a></div>
+				<div class="packagelink"><a href="saxparser.html">SAXParser</a></div>
+				<div class="packagelink"><a href="smtpsession.html">SMTPSession</a></div>
+				<div class="packagelink"><a href="ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="script.html">Script</a></div>
+				<div class="packagelink"><a href="security.html">Security</a></div>
+				<div class="packagelink"><a href="set.html">Set</a></div>
+				<div class="packagelink"><a href="socket.html">Socket</a></div>
+				<div class="packagelink"><a href="sql.html">Sql</a></div>
+				<div class="packagelink"><a href="sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink"><a href="str.html">Str</a></div>
+				<div class="packagelink"><a href="string.html">String</a></div>
+				<div class="packagelink"><a href="system.html">System</a></div>
+				<div class="packagelink"><a href="uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="void.html">Void</a></div>
+				<div class="packagelink"><a href="wapi.html">WAPI</a></div>
+				<div class="packagelink"><a href="wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink"><a href="web.html">Web</a></div>
+				<div class="packagelink"><a href="xslprocessor.html">XSLProcessor</a></div>
+				<div class="packagelink"><a href="zip.html">Zip</a></div>
+		</div>
+</div>
+
+	<div class="content_container">
+		<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+		<h1>Class: MailMessage</h1><div class="ClassDescription"><p>The built-in functions in the MailMessage class provide the ability to create and read e-mail messages for SMTP or POP3 sessions.</p>
+<p>The MailMessage class offers the following functionality:</p>
+<ul>
+<li><a class="interdoc" href="#cm_mailmessage_new">New()</a> Creates a new MailMessage object. </li>
+<li><a class="interdoc" href="#im_mailmessage_addrecipient">AddRecipient()</a> and <a class="interdoc" href="#im_mailmessage_getrecipients">GetRecipients()</a> to manipulate e-mail recipients.</li>
+<li><a class="interdoc" href="#im_mailmessage_getheaders">GetHeaders()</a> to return a list set of all the message headers.</li>
+<li><a class="interdoc" href="#im_mailmessage_getheaderassoc">GetHeaderAssoc()</a> to return the set of all the message headers as an Assoc.</li>
+<li><a class="interdoc" href="#im_mailmessage_setsubject">SetSubject()</a> and <a class="interdoc" href="#im_mailmessage_getsubject">GetSubject()</a> to manipulate e-mail subject.</li>
+<li><a class="interdoc" href="#im_mailmessage_setsender">SetSender()</a> and <a class="interdoc" href="#im_mailmessage_getsender">GetSender()</a> to manipulate e-mail sender.</li>
+<li><a class="interdoc" href="#im_mailmessage_setdate">SetDate()</a> and <a class="interdoc" href="#im_mailmessage_getdate">GetDate()</a> to manipulate e-mail date.</li>
+<li><a class="interdoc" href="#im_mailmessage_setcontenttype">SetContentType()</a> and <a class="interdoc" href="#im_mailmessage_getcontenttype">GetContentType()</a> to manipulate e-mail content type.</li>
+<li><a class="interdoc" href="#im_mailmessage_setcontent">SetContent()</a> and <a class="interdoc" href="#im_mailmessage_getcontent">GetContent()</a> to manipulate e-mail contents.</li>
+<li><a class="interdoc" href="#im_mailmessage_setheaderfield">SetHeaderField()</a> and <a class="interdoc" href="#im_mailmessage_getheaderfield">GetHeaderField()</a> to manipulate e-mail headers.</li>
+<li><a class="interdoc" href="#im_mailmessage_setrawmessage">SetRawMessage()</a> and <a class="interdoc" href="#im_mailmessage_getrawmessage">GetRawMessage()</a> to work with a string representation of an entire raw message.</li>
+<li><a class="interdoc" href="#im_mailmessage_ismultipart">IsMultipart()</a>, <a class="interdoc" href="#im_mailmessage_getmultipartcontent">GetMultipartContent()</a>, <a class="interdoc" href="#im_mailmessage_getallmultipartcontent">GetAllMultipartContent()</a>, <a class="interdoc" href="#im_mailmessage_addfilepart">AddFilePart()</a>, <a class="interdoc" href="#im_mailmessage_addstringpart">AddStringPart()</a>, <a class="interdoc" href="#im_mailmessage_addcontent">AddContent()</a>, <a class="interdoc" href="#im_mailmessage_addfileattachment">AddFileAttachment()</a>, <a class="interdoc" href="#im_mailmessage_addstringattachment">AddStringAttachment()</a> to manipulate email multipart content.</li>
+<li><a class="interdoc" href="#im_mailmessage_processmessage">ProcessMessage()</a> to convert the entire MailMessage object into a usable data structure.</li>
+<li><a class="interdoc" href="#im_mailmessage_getlasterror">GetLastError()</a> to return a string for the last error that occured. </li>
+</ul></div>
+			<h2>Class Attributes</h2>
+			<div class="ClassAttributesShort">
+				
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_mailmessage_bcc_recipient">BCC_RECIPIENT</a></div>
+					<div class="Description"><p>Add a recipient as a blind-carbon-copy (BCC) recipient of an e-mail message.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_mailmessage_cc_recipient">CC_RECIPIENT</a></div>
+					<div class="Description"><p>Add a recipient as a carbon-copy (CC) recipient of an e-mail message.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_mailmessage_content_attachment">CONTENT_ATTACHMENT</a></div>
+					<div class="Description"><p>Set the Content-Disposition for a message part to 'attachment'.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_mailmessage_content_inline">CONTENT_INLINE</a></div>
+					<div class="Description"><p>Set the Content-Disposition for a message part to 'inline'.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_mailmessage_encoding_7bit">ENCODING_7BIT</a></div>
+					<div class="Description"><p>Set the message Content-Transfer-Encoding to '7-bit'.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_mailmessage_encoding_8bit">ENCODING_8BIT</a></div>
+					<div class="Description"><p>Set the message Content-Transfer-Encoding to '8-bit'.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_mailmessage_encoding_base64">ENCODING_BASE64</a></div>
+					<div class="Description"><p>Set the message Content-Transfer-Encoding to 'base64'.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_mailmessage_encoding_quotedprintable">ENCODING_QUOTEDPRINTABLE</a></div>
+					<div class="Description"><p>Set the message Content-Transfer-Encoding to 'quoted-printable'.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_mailmessage_primary_recipient">PRIMARY_RECIPIENT</a></div>
+					<div class="Description"><p>Add a recipient as the primary recipient of an e-mail message.</p></div>
+				</div>
+				
+			</div>
+
+
+			<h2>Class Methods</h2>
+			<div class="ClassMethodsShort">
+				<div class="Method">
+					<div class="Name"><a href="#cm_mailmessage_new" class="IndexMethodName">New</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns a new, empty MailMessage object.</p></div>
+				</div>
+			</div>
+
+			<h2>Instance Methods</h2>
+			<div class="InstanceMethodsShort">
+				<div class="Method">					
+					<div class="Name"><a href="#im_mailmessage_addcontent" class="IndexMethodName">AddContent</a>(
+					 String content, Integer contentEncoding )
+					</div>
+					<div class="Description"><p>Adds inline content to a multipart e-mail message.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_mailmessage_addfileattachment" class="IndexMethodName">AddFileAttachment</a>(
+					 String attachmentName, String filename, Integer contentEncoding, [String contentType] )
+					</div>
+					<div class="Description"><p>Same as calling AddFilePart( attachmentName, filename, <a class="interdoc" href="#ca_mailmessage_content_attachment">CONTENT_ATTACHMENT</a>, contentEncoding, contentType ).</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_mailmessage_addfilepart" class="IndexMethodName">AddFilePart</a>(
+					 String partName, String fileName, Integer contentDisposition, Integer contentEncoding, [String contentType] )
+					</div>
+					<div class="Description"><p>Adds a part from a file to a multipart e-mail.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_mailmessage_addrecipient" class="IndexMethodName">AddRecipient</a>(
+					 Integer type, String emailAddress, [String fullName] )
+					</div>
+					<div class="Description"><p>Add a recipient to an e-mail.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_mailmessage_addstringattachment" class="IndexMethodName">AddStringAttachment</a>(
+					 String attachmentName, String stringData, Integer contentEncoding, [String contentType] )
+					</div>
+					<div class="Description"><p>Same as calling AddStringPart( attachmentName, stringData, <a class="interdoc" href="#ca_mailmessage_content_attachment">CONTENT_ATTACHMENT</a>, contentEncoding, contentType ) .</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_mailmessage_addstringpart" class="IndexMethodName">AddStringPart</a>(
+					 String partName, String stringData, Integer contentDisposition, Integer contentEncoding, [String contentType] )
+					</div>
+					<div class="Description"><p>Adds string data to a multipart e-mail.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_mailmessage_getallmultipartcontent" class="IndexMethodName">GetAllMultipartContent</a>(
+					)
+					</div>
+					<div class="Description"><p>Retrieves a list of the multipart content.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_mailmessage_getcontent" class="IndexMethodName">GetContent</a>(
+					)
+					</div>
+					<div class="Description"><p>Retrieves the body of the message.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_mailmessage_getcontenttype" class="IndexMethodName">GetContentType</a>(
+					)
+					</div>
+					<div class="Description"><p>Retrieves the e-mail content type.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_mailmessage_getdate" class="IndexMethodName">GetDate</a>(
+					)
+					</div>
+					<div class="Description"><p>Retrieves the date of the e-mail.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_mailmessage_getheaderassoc" class="IndexMethodName">GetHeaderAssoc</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns the set of all the e-mail message headers.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_mailmessage_getheaderfield" class="IndexMethodName">GetHeaderField</a>(
+					 String fieldName )
+					</div>
+					<div class="Description"><p>Retrieves the field data for a specific header field.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_mailmessage_getheaders" class="IndexMethodName">GetHeaders</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns a list of all the e-mail message headers.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_mailmessage_getlasterror" class="IndexMethodName">GetLastError</a>(
+					)
+					</div>
+					<div class="Description"><p>Retrieve the a string for the last error code.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_mailmessage_getmultipartcontent" class="IndexMethodName">GetMultipartContent</a>(
+					)
+					</div>
+					<div class="Description"><p>Retrieves a table of the multipart content.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_mailmessage_getrawmessage" class="IndexMethodName">GetRawMessage</a>(
+					)
+					</div>
+					<div class="Description"><p>Retrieves the full text of the raw message.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_mailmessage_getrecipients" class="IndexMethodName">GetRecipients</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns a RecArray of recipients.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_mailmessage_getsender" class="IndexMethodName">GetSender</a>(
+					)
+					</div>
+					<div class="Description"><p>Retrieves the sender of the e-mail.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_mailmessage_getsubject" class="IndexMethodName">GetSubject</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns the subject of the e-mail.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_mailmessage_ismultipart" class="IndexMethodName">IsMultipart</a>(
+					)
+					</div>
+					<div class="Description"><p>Checks if the message is a multipart e-mail.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_mailmessage_processmessage" class="IndexMethodName">ProcessMessage</a>(
+					)
+					</div>
+					<div class="Description"><p>Processes the MailMessage data and returns an Assoc.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_mailmessage_setcontent" class="IndexMethodName">SetContent</a>(
+					 String content, [Integer contentEncoding] )
+					</div>
+					<div class="Description"><p>Adds content to the body of the e-mail.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_mailmessage_setcontenttype" class="IndexMethodName">SetContentType</a>(
+					 String contentType )
+					</div>
+					<div class="Description"><p>Set the e-mail content type.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_mailmessage_setdate" class="IndexMethodName">SetDate</a>(
+					 Date date )
+					</div>
+					<div class="Description"><p>Sets the origination date of the e-mail.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_mailmessage_setheaderfield" class="IndexMethodName">SetHeaderField</a>(
+					 String fieldName, String fieldValue )
+					</div>
+					<div class="Description"><p>Sets a generic header field in the message.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_mailmessage_setrawmessage" class="IndexMethodName">SetRawMessage</a>(
+					 String rawMessage )
+					</div>
+					<div class="Description"><p>Reads a String representation of an e-mail message.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_mailmessage_setsender" class="IndexMethodName">SetSender</a>(
+					 String sender )
+					</div>
+					<div class="Description"><p>Sets the sender of the e-mail.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_mailmessage_setsubject" class="IndexMethodName">SetSubject</a>(
+					 String subject )
+					</div>
+					<div class="Description"><p>Sets the subject of the e-mail.</p></div>
+				</div>
+			</div>
+
+				<h2>Class Attributes</h2>
+				<div class="ClassAttributes">
+					
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_mailmessage_bcc_recipient">BCC_RECIPIENT</a></div>
+						<div class="Description"><p>Add a recipient as a blind-carbon-copy (BCC) recipient of an e-mail message.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_mailmessage_cc_recipient">CC_RECIPIENT</a></div>
+						<div class="Description"><p>Add a recipient as a carbon-copy (CC) recipient of an e-mail message.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_mailmessage_content_attachment">CONTENT_ATTACHMENT</a></div>
+						<div class="Description"><p>Set the Content-Disposition for a message part to 'attachment'.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_mailmessage_content_inline">CONTENT_INLINE</a></div>
+						<div class="Description"><p>Set the Content-Disposition for a message part to 'inline'.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_mailmessage_encoding_7bit">ENCODING_7BIT</a></div>
+						<div class="Description"><p>Set the message Content-Transfer-Encoding to '7-bit'.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_mailmessage_encoding_8bit">ENCODING_8BIT</a></div>
+						<div class="Description"><p>Set the message Content-Transfer-Encoding to '8-bit'.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_mailmessage_encoding_base64">ENCODING_BASE64</a></div>
+						<div class="Description"><p>Set the message Content-Transfer-Encoding to 'base64'.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_mailmessage_encoding_quotedprintable">ENCODING_QUOTEDPRINTABLE</a></div>
+						<div class="Description"><p>Set the message Content-Transfer-Encoding to 'quoted-printable'.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_mailmessage_primary_recipient">PRIMARY_RECIPIENT</a></div>
+						<div class="Description"><p>Add a recipient as the primary recipient of an e-mail message.</p></div>
+					</div>
+				
+				</div>
+
+		
+				<h2>Class Methods</h2>
+				<div class="ClassMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_mailmessage_new">New</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">MailMessage</span> 
+						<span class="PrototypeselfName">New</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a new, empty MailMessage object.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A new MailMessage object or Undefined if there was an error constructing the object.</p></div>
+							</div>
+						</div>
+				</div>
+				<h2>Instance Methods</h2>
+				<div class="InstanceMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_mailmessage_addcontent">AddContent</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">AddContent</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">content</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">contentEncoding</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Adds inline content to a multipart e-mail message.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">content</span><span class="description"><p>the content to inline</p></span></div>
+											<div class="Parameter"><span class="name">contentEncoding</span><span class="description"><p>the content transfer encoding type: <a class="interdoc" href="#ca_mailmessage_encoding_7bit">ENCODING_7BIT</a>, <a class="interdoc" href="#ca_mailmessage_encoding_8bit">ENCODING_8BIT</a>, <a class="interdoc" href="#ca_mailmessage_encoding_quotedprintable">ENCODING_QUOTEDPRINTABLE</a>, or <a class="interdoc" href="#ca_mailmessage_encoding_base64">ENCODING_BASE64</a></p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns 0 for success and -1 if an error occurred.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_mailmessage_addfileattachment">AddFileAttachment</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">AddFileAttachment</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">attachmentName</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">filename</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">contentEncoding</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">contentType</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Same as calling AddFilePart( attachmentName, filename, <a class="interdoc" href="#ca_mailmessage_content_attachment">CONTENT_ATTACHMENT</a>, contentEncoding, contentType ). </p>
+<p>If the contentType is not specified, then it will be assumed to be "application/octet-stream".</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">attachmentName</span><span class="description"><p>the name of the attachment</p></span></div>
+											<div class="Parameter"><span class="name">filename</span><span class="description"><p>the filename of the attachment</p></span></div>
+											<div class="Parameter"><span class="name">contentEncoding</span><span class="description"><p>the content transfer encoding type: <a class="interdoc" href="#ca_mailmessage_encoding_7bit">ENCODING_7BIT</a>, <a class="interdoc" href="#ca_mailmessage_encoding_8bit">ENCODING_8BIT</a>, <a class="interdoc" href="#ca_mailmessage_encoding_quotedprintable">ENCODING_QUOTEDPRINTABLE</a>, or <a class="interdoc" href="#ca_mailmessage_encoding_base64">ENCODING_BASE64</a></p></span></div>
+											<div class="Parameter"><span class="name">contentType</span><span class="description"><p>the content type of the attachment</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns 0 for success and -1 if an error occurred.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_mailmessage_addfilepart">AddFilePart</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">AddFilePart</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">partName</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">fileName</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">contentDisposition</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">contentEncoding</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">contentType</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Adds a part from a file to a multipart e-mail. </p>
+<p>If the contentType is not specified, then it will be assumed to be "application/octet-stream".</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">partName</span><span class="description"><p>the name for the part</p></span></div>
+											<div class="Parameter"><span class="name">fileName</span><span class="description"><p>the filename to use for the part data</p></span></div>
+											<div class="Parameter"><span class="name">contentDisposition</span><span class="description"><p>the content disposition type: <a class="interdoc" href="#ca_mailmessage_content_attachment">CONTENT_ATTACHMENT</a> or <a class="interdoc" href="#ca_mailmessage_content_inline">CONTENT_INLINE</a></p></span></div>
+											<div class="Parameter"><span class="name">contentEncoding</span><span class="description"><p>the content transfer encoding type: <a class="interdoc" href="#ca_mailmessage_encoding_7bit">ENCODING_7BIT</a>, <a class="interdoc" href="#ca_mailmessage_encoding_8bit">ENCODING_8BIT</a>, <a class="interdoc" href="#ca_mailmessage_encoding_quotedprintable">ENCODING_QUOTEDPRINTABLE</a>, or <a class="interdoc" href="#ca_mailmessage_encoding_base64">ENCODING_BASE64</a></p></span></div>
+											<div class="Parameter"><span class="name">contentType</span><span class="description"><p>the content type of the message part</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns 0 for success and -1 if an error occurred.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_mailmessage_addrecipient">AddRecipient</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">AddRecipient</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">type</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">emailAddress</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">fullName</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>The type can be one of <a class="interdoc" href="#ca_mailmessage_primary_recipient">PRIMARY_RECIPIENT</a>, <a class="interdoc" href="#ca_mailmessage_cc_recipient">CC_RECIPIENT</a> or <a class="interdoc" href="#ca_mailmessage_bcc_recipient">BCC_RECIPIENT</a>.  </p>
+<p>The e-mail parameter should be the fully qualified e-mail address and the fullName parameter is optional and can 
+contain the user's full name (e.g. "John Doe").</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">type</span><span class="description"><p>recipient type: <a class="interdoc" href="#ca_mailmessage_primary_recipient">PRIMARY_RECIPIENT</a>, <a class="interdoc" href="#ca_mailmessage_cc_recipient">CC_RECIPIENT</a>, or <a class="interdoc" href="#ca_mailmessage_bcc_recipient">BCC_RECIPIENT</a></p></span></div>
+											<div class="Parameter"><span class="name">emailAddress</span><span class="description"><p>fully qualified e-mail address of the recipient</p></span></div>
+											<div class="Parameter"><span class="name">fullName</span><span class="description"><p>the full name of the recipient</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns 0 for success and -1 if an error occurred.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><div class="codehilite"><pre><span class="c">// Create a new mail message</span>
+MailMessage m <span class="o">=</span> MailMessage<span class="o">.</span>New<span class="p">()</span>
+
+<span class="c">// To: John W. Doe &lt;john.doe@example.com&gt;</span>
+m<span class="o">.</span>AddRecipient<span class="p">(</span> MailMessage<span class="o">.</span>PRIMARY_RECIPIENT<span class="p">,</span> <span class="s">&quot;john.doe@example.com&quot;</span><span class="p">,</span> <span class="s">&quot;John W. Doe&quot;</span> <span class="p">)</span>
+
+<span class="c">// Cc: Jane Doe &lt;jane.doe@example.com&gt;</span>
+m<span class="o">.</span>AddRecipient<span class="p">(</span> MailMessage<span class="o">.</span>CC_RECIPIENT<span class="p">,</span> <span class="s">&quot;jane.doe@example.com&quot;</span><span class="p">,</span> <span class="s">&quot;Jane Doe&quot;</span> <span class="p">)</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_mailmessage_addstringattachment">AddStringAttachment</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">AddStringAttachment</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">attachmentName</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">stringData</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">contentEncoding</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">contentType</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Same as calling AddStringPart( attachmentName, stringData, <a class="interdoc" href="#ca_mailmessage_content_attachment">CONTENT_ATTACHMENT</a>, contentEncoding, contentType ). </p>
+<p>If the contentType is not specified, then it will be assumed to be "text/plain; charset=UTF-8".</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">attachmentName</span><span class="description"><p>the name for the attachment</p></span></div>
+											<div class="Parameter"><span class="name">stringData</span><span class="description"><p>the string data of the attachment</p></span></div>
+											<div class="Parameter"><span class="name">contentEncoding</span><span class="description"><p>the content transfer encoding type: <a class="interdoc" href="#ca_mailmessage_encoding_7bit">ENCODING_7BIT</a>, <a class="interdoc" href="#ca_mailmessage_encoding_8bit">ENCODING_8BIT</a>, <a class="interdoc" href="#ca_mailmessage_encoding_quotedprintable">ENCODING_QUOTEDPRINTABLE</a>, or <a class="interdoc" href="#ca_mailmessage_encoding_base64">ENCODING_BASE64</a></p></span></div>
+											<div class="Parameter"><span class="name">contentType</span><span class="description"><p>the content type of the message part</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns 0 for success and -1 if an error occurred.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_mailmessage_addstringpart">AddStringPart</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">AddStringPart</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">partName</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">stringData</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">contentDisposition</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">contentEncoding</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">contentType</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Adds parts to a multipart e-mail, from a text source. </p>
+<p>If the contentType is not specified, then it will be assumed to be "text/plain; charset=UTF-8".</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">partName</span><span class="description"><p>the name for the part</p></span></div>
+											<div class="Parameter"><span class="name">stringData</span><span class="description"><p>the string data to use for the part data</p></span></div>
+											<div class="Parameter"><span class="name">contentDisposition</span><span class="description"><p>the content disposition type: <a class="interdoc" href="#ca_mailmessage_content_attachment">CONTENT_ATTACHMENT</a> or <a class="interdoc" href="#ca_mailmessage_content_inline">CONTENT_INLINE</a></p></span></div>
+											<div class="Parameter"><span class="name">contentEncoding</span><span class="description"><p>the content transfer encoding type: <a class="interdoc" href="#ca_mailmessage_encoding_7bit">ENCODING_7BIT</a>, <a class="interdoc" href="#ca_mailmessage_encoding_8bit">ENCODING_8BIT</a>, <a class="interdoc" href="#ca_mailmessage_encoding_quotedprintable">ENCODING_QUOTEDPRINTABLE</a>, or <a class="interdoc" href="#ca_mailmessage_encoding_base64">ENCODING_BASE64</a></p></span></div>
+											<div class="Parameter"><span class="name">contentType</span><span class="description"><p>the content type of the message part</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns 0 for success and -1 if an error occurred.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_mailmessage_getallmultipartcontent">GetAllMultipartContent</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">RecArray</span> 
+						<span class="PrototypeselfName">GetAllMultipartContent</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a List of all the parts in a multipart message. Each part is an Assoc which contains the following keys:</p>
+<ul>
+<li>header: An Assoc which contains the part headers (e.g. Content-Type, Content-Disposition, etc.)</li>
+<li>parts: If the part is a container for other parts, then this is a list of parts</li>
+<li>multipartSubType: If the part is a container for other parts, then this is the second part of its content type (e.g. "multipart/mixed" becomes "mixed")</li>
+<li>body: If the part is not a container for other parts, this is the raw content of the part</li>
+</ul>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns a RecArray of all of the parts in the e-mail.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_mailmessage_getcontent">GetContent</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">GetContent</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a string containing the content, or body, of the e-mail. This is only applicable for single-part messages.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns a string containing the content, or body, of the e-mail.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_mailmessage_getcontenttype">GetContentType</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">GetContentType</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Retrieves the e-mail content type.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>the content type of the e-mail.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_mailmessage_getdate">GetDate</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Date</span> 
+						<span class="PrototypeselfName">GetDate</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Gets the date of the e-mail.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The origination date of the e-mail, adjusted to UTC.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_mailmessage_getheaderassoc">GetHeaderAssoc</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Assoc</span> 
+						<span class="PrototypeselfName">GetHeaderAssoc</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the set all the message headers as an Assoc. The Assoc will be Undefined if an error occurred.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns the set of all the message headers as an Assoc. The Assoc will be Undefined if an error occurred.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_mailmessage_getheaderfield">GetHeaderField</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">GetHeaderField</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">fieldName</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Gets the data of the specified header field. If the message doesn't contain the fieldname, then the string is empty.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">fieldName</span><span class="description"><p>the name of the field to retrieve</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The data of the field, or an empty String if the header field does not exist.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_mailmessage_getheaders">GetHeaders</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">List</span> 
+						<span class="PrototypeselfName">GetHeaders</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a List of all the message headers. The list will be Undefined if an error occurred.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>a List of all the message headers. The list will be Undefined if an error occurred.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_mailmessage_getlasterror">GetLastError</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">GetLastError</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>No parameters.  Returns an error string for the last error that occurred.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns an error string for the last error that occurred.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_mailmessage_getmultipartcontent">GetMultipartContent</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">RecArray</span> 
+						<span class="PrototypeselfName">GetMultipartContent</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a RecArray of all top-level parts in a multipart message. The following fields will be returned for each part:</p>
+<ul>
+<li>type: the content type</li>
+<li>disposition: the content disposition</li>
+<li>data: the raw contents of the part</li>
+<li>encoding: the content transfer encoding</li>
+<li>description: description of the part</li>
+<li>id: part identifier</li>
+</ul>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns a RecArray of all of the parts in the e-mail.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_mailmessage_getrawmessage">GetRawMessage</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">GetRawMessage</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a String containing the entire raw contents of the e-mail.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns a String containing the entire raw contents of the e-mail.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_mailmessage_getrecipients">GetRecipients</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">RecArray</span> 
+						<span class="PrototypeselfName">GetRecipients</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a RecArray of the current e-mail recipients. Each recipient record consists of the following data:</p>
+<ul>
+<li>type: one of PRIMARY_RECIPIENT, CC_RECIPIENT, or BCC_RECIPIENT</li>
+<li>address: the recipient's e-mail address</li>
+<li>realName: the recipient's real name, if available</li>
+</ul>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns a RecArray of the current e-mail recipients.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_mailmessage_getsender">GetSender</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">GetSender</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Gets the sender of the e-mail.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns the sender of the e-mail.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_mailmessage_getsubject">GetSubject</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">GetSubject</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Gets the subject of the e-mail.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns the subject of the e-mail.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_mailmessage_ismultipart">IsMultipart</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">IsMultipart</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>TRUE if the e-mail is a multipart e-mail, FALSE otherwise.  No parameters.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns TRUE if the e-mail is a multipart e-mail, FALSE otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_mailmessage_processmessage">ProcessMessage</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Assoc</span> 
+						<span class="PrototypeselfName">ProcessMessage</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Processes the MailMessage data and returns an Assoc. The Assoc has the following keys:</p>
+<ul>
+<li>header: message header as returned by GetHeaders()</li>
+<li>parts: if this is a multipart message, then a list of parts, as returned by GetAllMultipartContent()</li>
+<li>multipartSubType: if the part is a container for other parts, then this is the second part of its content type (e.g. "multipart/mixed" becomes "mixed")</li>
+<li>body: if this message is a single-part message, then this is the raw content of the part</li>
+</ul>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The processed MailMessage data</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_mailmessage_setcontent">SetContent</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">SetContent</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">content</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">contentEncoding</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Adds text to the body of the e-mail.  This function is only for single-part messages.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">content</span><span class="description"><p>the content to add to the body</p></span></div>
+											<div class="Parameter"><span class="name">contentEncoding</span><span class="description"><p>the content transfer encoding type: <a class="interdoc" href="#ca_mailmessage_encoding_7bit">ENCODING_7BIT</a>, <a class="interdoc" href="#ca_mailmessage_encoding_8bit">ENCODING_8BIT</a>, <a class="interdoc" href="#ca_mailmessage_encoding_quotedprintable">ENCODING_QUOTEDPRINTABLE</a>, or <a class="interdoc" href="#ca_mailmessage_encoding_base64">ENCODING_BASE64</a></p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns 0 for success and -1 if an error occurred.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_mailmessage_setcontenttype">SetContentType</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">SetContentType</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">contentType</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sets the content type of the e-mail.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">contentType</span><span class="description"><p>Sets the content type of the e-mail.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns 0 for success and -1 if an error occurred.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_mailmessage_setdate">SetDate</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">SetDate</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Date</span> <span class="PrototypeArgumentName">date</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sets the origination date of the e-mail.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">date</span><span class="description"><p>the origination date of the e-mail</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns 0 for success and -1 if an error occurred.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_mailmessage_setheaderfield">SetHeaderField</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">SetHeaderField</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">fieldName</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">fieldValue</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sets a generic header field in the message.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">fieldName</span><span class="description"><p>the name of the field to set</p></span></div>
+											<div class="Parameter"><span class="name">fieldValue</span><span class="description"><p>the String representation of the value for the field</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns 0 for success and -1 if an error occurred.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_mailmessage_setrawmessage">SetRawMessage</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">SetRawMessage</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">rawMessage</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Reads a String representation of an e-mail message.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">rawMessage</span><span class="description"><p>a raw message as a String</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns 0 for success and -1 if an error occurred.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_mailmessage_setsender">SetSender</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">SetSender</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">sender</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sets the sender of the e-mail.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">sender</span><span class="description"><p>the sender of the e-mail.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns 0 for success and -1 if an error occurred.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_mailmessage_setsubject">SetSubject</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">SetSubject</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">subject</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sets the subject of the e-mail.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">subject</span><span class="description"><p>the subject of the e-mail.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns 0 for success and -1 if an error occurred.</p></div>
+							</div>
+						</div>
+				</div>
+		
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2018 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+
+
+
+</div>
+	</div>						
+						
+
+</div>
+
+</body></html>

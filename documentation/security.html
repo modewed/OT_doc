@@ -1,0 +1,738 @@
+
+<meta charset="UTF-8">
+<html>
+<head><title>Class: Security</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../syntax.css" type="text/css">
+<link rel="stylesheet" href="builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td  align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody></table>
+
+<div id="document">
+	
+<div class="sidebar_container">
+		
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink"><a href="assoc.html">Assoc</a></div>
+				<div class="packagelink"><a href="boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="builder.html">Builder</a></div>
+				<div class="packagelink"><a href="bytes.html">Bytes</a></div>
+				<div class="packagelink"><a href="capi.html">CAPI</a></div>
+				<div class="packagelink"><a href="capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink"><a href="cachetree.html">CacheTree</a></div>
+				<div class="packagelink"><a href="compiler.html">Compiler</a></div>
+				<div class="packagelink"><a href="core.html">Core</a></div>
+				<div class="packagelink"><a href="dapi.html">DAPI</a></div>
+				<div class="packagelink"><a href="dapinode.html">DAPINODE</a></div>
+				<div class="packagelink"><a href="dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink"><a href="dapiversion.html">DAPIVERSION</a></div>
+				<div class="packagelink"><a href="domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="domcomment.html">DOMComment</a></div>
+				<div class="packagelink"><a href="domdocument.html">DOMDocument</a></div>
+				<div class="packagelink"><a href="domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink"><a href="domelement.html">DOMElement</a></div>
+				<div class="packagelink"><a href="domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink"><a href="domnamednodemap.html">DOMNamedNodeMap</a></div>
+				<div class="packagelink"><a href="domnode.html">DOMNode</a></div>
+				<div class="packagelink"><a href="domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="domtext.html">DOMText</a></div>
+				<div class="packagelink"><a href="date.html">Date</a></div>
+				<div class="packagelink"><a href="dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="env.html">Env</a></div>
+				<div class="packagelink"><a href="error.html">Error</a></div>
+				<div class="packagelink"><a href="file.html">File</a></div>
+				<div class="packagelink"><a href="filecopy.html">FileCopy</a></div>
+				<div class="packagelink"><a href="fileprefs.html">Fileprefs</a></div>
+				<div class="packagelink"><a href="frame.html">Frame</a></div>
+				<div class="packagelink"><a href="global.html">Global</a></div>
+				<div class="packagelink"><a href="integer.html">Integer</a></div>
+				<div class="packagelink"><a href="javaobject.html">JavaObject</a></div>
+				<div class="packagelink"><a href="language.html">Language</a></div>
+				<div class="packagelink"><a href="license.html">License</a></div>
+				<div class="packagelink"><a href="list.html">List</a></div>
+				<div class="packagelink"><a href="logging.html">Logging</a></div>
+				<div class="packagelink"><a href="long.html">Long</a></div>
+				<div class="packagelink"><a href="mailmessage.html">MailMessage</a></div>
+				<div class="packagelink"><a href="math.html">Math</a></div>
+				<div class="packagelink"><a href="memcached.html">Memcached</a></div>
+				<div class="packagelink"><a href="notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="object.html">Object</a></div>
+				<div class="packagelink"><a href="pop3session.html">POP3Session</a></div>
+				<div class="packagelink"><a href="patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="patfind.html">PatFind</a></div>
+				<div class="packagelink"><a href="pattern.html">Pattern</a></div>
+				<div class="packagelink"><a href="point.html">Point</a></div>
+				<div class="packagelink"><a href="profiler.html">Profiler</a></div>
+				<div class="packagelink"><a href="real.html">Real</a></div>
+				<div class="packagelink"><a href="recarray.html">RecArray</a></div>
+				<div class="packagelink"><a href="record.html">Record</a></div>
+				<div class="packagelink"><a href="regex.html">Regex</a></div>
+				<div class="packagelink"><a href="restclient.html">RestClient</a></div>
+				<div class="packagelink"><a href="saxparser.html">SAXParser</a></div>
+				<div class="packagelink"><a href="smtpsession.html">SMTPSession</a></div>
+				<div class="packagelink"><a href="ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="script.html">Script</a></div>
+				<div class="packagelink curPage">Security</div>
+				<div class="packagelink"><a href="set.html">Set</a></div>
+				<div class="packagelink"><a href="socket.html">Socket</a></div>
+				<div class="packagelink"><a href="sql.html">Sql</a></div>
+				<div class="packagelink"><a href="sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink"><a href="str.html">Str</a></div>
+				<div class="packagelink"><a href="string.html">String</a></div>
+				<div class="packagelink"><a href="system.html">System</a></div>
+				<div class="packagelink"><a href="uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="void.html">Void</a></div>
+				<div class="packagelink"><a href="wapi.html">WAPI</a></div>
+				<div class="packagelink"><a href="wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink"><a href="web.html">Web</a></div>
+				<div class="packagelink"><a href="xslprocessor.html">XSLProcessor</a></div>
+				<div class="packagelink"><a href="zip.html">Zip</a></div>
+		</div>
+</div>
+
+	<div class="content_container">
+		<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+		<h1>Class: Security</h1><div class="ClassDescription"><p>The Security package provides encryption, decryption and hashing functions. The major functionalities offered in the Security Package are the following:</p>
+<ul>
+<li><a class="interdoc" href="#cm_security_encrypt">Encrypt()</a>, <a class="interdoc" href="#cm_security_encryptbytes">EncryptBytes()</a> and <a class="interdoc" href="#cm_security_decrypt">Decrypt()</a>, <a class="interdoc" href="#cm_security_decryptbytes">DecryptBytes()</a> provide crypting functionality.</li>
+<li><a class="interdoc" href="#cm_security_hash">Hash()</a> provides a set of one-way, secure hashes.</li>
+</ul></div>
+			<h2>Class Attributes</h2>
+			<div class="ClassAttributesShort">
+				
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_aes_128_cbc">AES_128_CBC</a></div>
+					<div class="Description"><p>128 bit AES in CBC mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_aes_128_cfb128">AES_128_CFB128</a></div>
+					<div class="Description"><p>128 bit AES in 128 bit CFB mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_aes_128_cfb8">AES_128_CFB8</a></div>
+					<div class="Description"><p>128 bit AES in 8 bit CFB mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_aes_128_ecb">AES_128_ECB</a></div>
+					<div class="Description"><p>128 bit AES in ECB mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_aes_128_ofb128">AES_128_OFB128</a></div>
+					<div class="Description"><p>128 bit AES in 128 bit OFB mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_aes_192_cbc">AES_192_CBC</a></div>
+					<div class="Description"><p>192 bit AES in CBC mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_aes_192_cfb128">AES_192_CFB128</a></div>
+					<div class="Description"><p>192 bit AES in 128 bit CFB mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_aes_192_cfb8">AES_192_CFB8</a></div>
+					<div class="Description"><p>192 bit AES in 8 bit CFB mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_aes_192_ecb">AES_192_ECB</a></div>
+					<div class="Description"><p>192 bit AES in ECB mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_aes_192_ofb128">AES_192_OFB128</a></div>
+					<div class="Description"><p>192 bit AES in 128 bit OFB mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_aes_256_cbc">AES_256_CBC</a></div>
+					<div class="Description"><p>256 bit AES in CBC mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_aes_256_cfb128">AES_256_CFB128</a></div>
+					<div class="Description"><p>256 bit AES in 128 CFB mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_aes_256_cfb8">AES_256_CFB8</a></div>
+					<div class="Description"><p>256 bit AES in 8 bit CFB mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_aes_256_ecb">AES_256_ECB</a></div>
+					<div class="Description"><p>256 bit AES in ECB mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_aes_256_ofb128">AES_256_OFB128</a></div>
+					<div class="Description"><p>256 bit AES in 128 OFB mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_bf_cbc">BF_CBC</a></div>
+					<div class="Description"><p>128 bit blowfish in CBC mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_bf_cfb64">BF_CFB64</a></div>
+					<div class="Description"><p>128 bit blowfish in 64 bit CFB mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_bf_ecb">BF_ECB</a></div>
+					<div class="Description"><p>128 bit blowfish in ECB mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_bf_ofb64">BF_OFB64</a></div>
+					<div class="Description"><p>128 bit blowfish in 64 bit OFB mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_cast5_cbc">CAST5_CBC</a></div>
+					<div class="Description"><p>128 bit CAST5 in CBC mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_cast5_cfb64">CAST5_CFB64</a></div>
+					<div class="Description"><p>128 bit CAST5 in 64 bit CFB mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_cast5_ecb">CAST5_ECB</a></div>
+					<div class="Description"><p>128 bit CAST5 in ECB mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_cast5_ofb64">CAST5_OFB64</a></div>
+					<div class="Description"><p>128 bit CAST5 in 64 bit OFB mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_des_cbc">DES_CBC</a></div>
+					<div class="Description"><p>56 bit DES in CBC mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_des_cfb64">DES_CFB64</a></div>
+					<div class="Description"><p>56 bit DES in 64 bit CFB mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_des_cfb8">DES_CFB8</a></div>
+					<div class="Description"><p>56 bit DES in 8 bit CFB mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_des_ecb">DES_ECB</a></div>
+					<div class="Description"><p>56 bit DES in ECB mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_des_ede3_cbc">DES_EDE3_CBC</a></div>
+					<div class="Description"><p>168 bit 3DES in CBC mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_des_ede3_cfb64">DES_EDE3_CFB64</a></div>
+					<div class="Description"><p>168 bit 3DES in 64 bit CFB mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_des_ede3_ecb">DES_EDE3_ECB</a></div>
+					<div class="Description"><p>168 bit 3DES in ECB mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_des_ede3_ofb64">DES_EDE3_OFB64</a></div>
+					<div class="Description"><p>168 bit 3DES in 64 bit OFB mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_des_ede_cbc">DES_EDE_CBC</a></div>
+					<div class="Description"><p>112 bit 2 key triple DES in ECB mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_des_ede_cfb64">DES_EDE_CFB64</a></div>
+					<div class="Description"><p>112 bit 2 key triple DES in 64 bit CFB mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_des_ede_ecb">DES_EDE_ECB</a></div>
+					<div class="Description"><p>112 bit 2 key triple DES in ECB mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_des_ede_ofb64">DES_EDE_OFB64</a></div>
+					<div class="Description"><p>112 bit 2 key triple DES in 64 bit OFB mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_des_ofb64">DES_OFB64</a></div>
+					<div class="Description"><p>56 bit DES in 64 bit OFB mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_desx_cbc">DESX_CBC</a></div>
+					<div class="Description"><p>56 bit DESX in CBC mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_md2">MD2</a></div>
+					<div class="Description"><p>128 bit </p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_md4">MD4</a></div>
+					<div class="Description"><p>128 bit </p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_md5">MD5</a></div>
+					<div class="Description"><p>128 bit </p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_rc2_40_cbc">RC2_40_CBC</a></div>
+					<div class="Description"><p>40 bit RC2 in CBC mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_rc2_64_cbc">RC2_64_CBC</a></div>
+					<div class="Description"><p>64 bit RC2 in CBC mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_rc2_cbc">RC2_CBC</a></div>
+					<div class="Description"><p>128 bit RC2 in CBC mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_rc2_cfb64">RC2_CFB64</a></div>
+					<div class="Description"><p>128 bit RC2 in CFB mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_rc2_ecb">RC2_ECB</a></div>
+					<div class="Description"><p>128 bit RC2 in ECB mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_rc2_ofb64">RC2_OFB64</a></div>
+					<div class="Description"><p>128 bit RC2 in OFB mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_rc4">RC4</a></div>
+					<div class="Description"><p>128 bit RC4.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_rc4_40">RC4_40</a></div>
+					<div class="Description"><p>40 bit RC4.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_ripemd160">RIPEMD160</a></div>
+					<div class="Description"><p>160 bit </p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_sha">SHA</a></div>
+					<div class="Description"><p>160 bit </p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_sha1">SHA1</a></div>
+					<div class="Description"><p>160 bit </p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_sha224">SHA224</a></div>
+					<div class="Description"><p>224 bit </p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_sha256">SHA256</a></div>
+					<div class="Description"><p>256 bit SHA-2 hash.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_sha384">SHA384</a></div>
+					<div class="Description"><p>384 bit SHA-2 hash.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_security_sha512">SHA512</a></div>
+					<div class="Description"><p>512 bit SHA-2 hash.</p></div>
+				</div>
+				
+			</div>
+
+
+			<h2>Class Methods</h2>
+			<div class="ClassMethodsShort">
+				<div class="Method">
+					<div class="Name"><a href="#cm_security_decrypt" class="IndexMethodName">Decrypt</a>(
+					 String value, String key, Integer encryptionType )
+					</div>
+					<div class="Description"><p>Decrypts 'value' with a key generated with 'key' using the encryptionType constant ( see above for constants ).
+    Value should a base64 encoded string of bytes</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_security_decryptbytes" class="IndexMethodName">DecryptBytes</a>(
+					 Bytes value, String key, Integer encryptionType )
+					</div>
+					<div class="Description"><p>Decrypts the Bytes 'value' with a key generated with 'key' using the encryptionType constant ( see above for constants ). Returns a string.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_security_encrypt" class="IndexMethodName">Encrypt</a>(
+					 String value, String key, Integer encryptionType )
+					</div>
+					<div class="Description"><p>Encrypts 'value' with a key generated with 'key' using the encryptionType constant ( see above for constants ).
+    Returns a base64 encoded string of bytes</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_security_encryptbytes" class="IndexMethodName">EncryptBytes</a>(
+					 String value, String key, Integer encryptionType )
+					</div>
+					<div class="Description"><p>Encrypts the String 'value' with a key generated with 'key' using the encryptionType constant ( see above for constants ). Returns a Bytes object</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_security_hash" class="IndexMethodName">Hash</a>(
+					 String value, Integer hashType )
+					</div>
+					<div class="Description"><p>Hashes 'value' with the algorithm specified, returning a hex-encoded string.</p></div>
+				</div>
+			</div>
+
+
+				<h2>Class Attributes</h2>
+				<div class="ClassAttributes">
+					
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_aes_128_cbc">AES_128_CBC</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_aes_128_cfb128">AES_128_CFB128</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_aes_128_cfb8">AES_128_CFB8</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_aes_128_ecb">AES_128_ECB</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_aes_128_ofb128">AES_128_OFB128</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_aes_192_cbc">AES_192_CBC</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_aes_192_cfb128">AES_192_CFB128</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_aes_192_cfb8">AES_192_CFB8</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_aes_192_ecb">AES_192_ECB</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_aes_192_ofb128">AES_192_OFB128</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_aes_256_cbc">AES_256_CBC</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_aes_256_cfb128">AES_256_CFB128</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_aes_256_cfb8">AES_256_CFB8</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_aes_256_ecb">AES_256_ECB</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_aes_256_ofb128">AES_256_OFB128</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_bf_cbc">BF_CBC</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_bf_cfb64">BF_CFB64</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_bf_ecb">BF_ECB</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_bf_ofb64">BF_OFB64</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_cast5_cbc">CAST5_CBC</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_cast5_cfb64">CAST5_CFB64</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_cast5_ecb">CAST5_ECB</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_cast5_ofb64">CAST5_OFB64</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_des_cbc">DES_CBC</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_des_cfb64">DES_CFB64</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_des_cfb8">DES_CFB8</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_des_ecb">DES_ECB</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_des_ede3_cbc">DES_EDE3_CBC</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_des_ede3_cfb64">DES_EDE3_CFB64</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_des_ede3_ecb">DES_EDE3_ECB</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_des_ede3_ofb64">DES_EDE3_OFB64</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_des_ede_cbc">DES_EDE_CBC</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_des_ede_cfb64">DES_EDE_CFB64</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_des_ede_ecb">DES_EDE_ECB</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_des_ede_ofb64">DES_EDE_OFB64</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_des_ofb64">DES_OFB64</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_desx_cbc">DESX_CBC</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_md2">MD2</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_md4">MD4</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_md5">MD5</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_rc2_40_cbc">RC2_40_CBC</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_rc2_64_cbc">RC2_64_CBC</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_rc2_cbc">RC2_CBC</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_rc2_cfb64">RC2_CFB64</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_rc2_ecb">RC2_ECB</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_rc2_ofb64">RC2_OFB64</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_rc4">RC4</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_rc4_40">RC4_40</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_ripemd160">RIPEMD160</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_sha">SHA</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_sha1">SHA1</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_sha224">SHA224</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_sha256">SHA256</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_sha384">SHA384</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_security_sha512">SHA512</a></div>
+						<div class="Description"></div>
+					</div>
+				
+				</div>
+
+		
+				<h2>Class Methods</h2>
+				<div class="ClassMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_security_decrypt">Decrypt</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">Decrypt</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">value</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">key</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">encryptionType</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Decrypts <em>value</em> with <em>key</em> using <em>encryptionType</em></p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>String containing the base64 encoded value to be decrypted.</p></span></div>
+											<div class="Parameter"><span class="name">key</span><span class="description"><p>String containing the text used to generate the key to decrypt the value with.</p></span></div>
+											<div class="Parameter"><span class="name">encryptionType</span><span class="description"><p>Type of encryption to use</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A hex encoded string of the decrypted value.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_security_decryptbytes">DecryptBytes</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">DecryptBytes</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">value</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">key</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">encryptionType</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Decrypts <em>value</em> with <em>key</em> using <em>encryptionType</em></p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>Bytes containing the value to be decrypted.</p></span></div>
+											<div class="Parameter"><span class="name">key</span><span class="description"><p>String containing the text used to generate the key to decrypt the value with.</p></span></div>
+											<div class="Parameter"><span class="name">encryptionType</span><span class="description"><p>Type of encryption to use</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String object of the decrypted value.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_security_encrypt">Encrypt</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">Encrypt</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">value</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">key</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">encryptionType</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Encrypt <em>value</em> with <em>key</em> using <em>encryptionType</em></p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>String containing the value to be encrypted.</p></span></div>
+											<div class="Parameter"><span class="name">key</span><span class="description"><p>String containing the text used to generate the key to encrypt the value with.</p></span></div>
+											<div class="Parameter"><span class="name">encryptionType</span><span class="description"><p>Type of encryption to use</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A base64 encoded string of the encrypted value.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_security_encryptbytes">EncryptBytes</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Bytes</span> 
+						<span class="PrototypeselfName">EncryptBytes</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">value</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">key</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">encryptionType</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Encrypts <em>value</em> with <em>key</em> using <em>encryptionType</em></p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>String containing the value to be encrypted.</p></span></div>
+											<div class="Parameter"><span class="name">key</span><span class="description"><p>String containing the text used to generate the key to encrypt the value with.</p></span></div>
+											<div class="Parameter"><span class="name">encryptionType</span><span class="description"><p>Type of encryption to use</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A Bytes object of the encrypted value.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_security_hash">Hash</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">Hash</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">value</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">hashType</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Hash <em>value</em> using <em>hashType</em></p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>String containing the value to be decrypted.</p></span></div>
+											<div class="Parameter"><span class="name">hashType</span><span class="description"><p>Type of hash algorithm to use</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A hex encoded string of the hash.</p></div>
+							</div>
+						</div>
+				</div>
+		
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2018 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+
+
+
+</div>
+	</div>						
+						
+
+</div>
+
+</body></html>

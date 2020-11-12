@@ -1,0 +1,46 @@
+<HTML>
+<HEAD>
+<TITLE>Adding New Data Types: Overview</TITLE>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<script language="JavaScript">updateParentHeader( 'Data Types' );</script>
+<script language="JavaScript">includeContentContainer( 'wfbuilder', true );</script>
+<p class="body">
+
+<p class="title">Adding New Data Types: Overview</p>
+
+<p class="body">You add new data types (also called package types) 
+to Content Server if you want to include new types of information in the 
+work packages that accompany your workflows. By default, work packages can contain
+three data types: attachments, attributes, and comments. However, you can 
+create a data type for any new type of information that you want to add to a 
+work package.</p>
+
+<p class="body">
+Adding new data types to Content Server also lets you customize the Content Server 
+interface. For example, if the work packages that you include with 
+your workflows usually contain many attributes, you can create a data type 
+that creates the attributes and groups them on tabs in the Content Server 
+interface. This makes it easy for workflow participants to locate and use the
+attributes in the work package.</p>
+
+<p class="body">You add new data types to Content Server by orphaning three objects:
+<ul type="disc">
+    <li class="body">The <span class="code">WFMain:WFRoot:WFObjectTypes:WFDataTypes</span> object is
+    the API object for the task type.</p>
+    <li class="body">The <span class="code">WebWFP:WebWFPRoot:WFPackage</span> object controls the 
+    information required by the Workflow Designer to add the data type to a workflow map and to support
+    the transport capability of Content Server.</p>
+    <li class="body">The <span class="code">WebWork:WebWorkRoot:WFPackage</span> object controls the
+    operation of the data type in executing workflows.</p>
+</ul>
+</p>
+<script language="JavaScript">IncludeFooter();</script>
+
+</BODY>
+</html>

@@ -1,0 +1,252 @@
+<HTML>
+<HEAD>
+<TITLE>Adding New Step Types: Procedures</TITLE>
+
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<script language="JavaScript">updateParentHeader( 'Step Types' );</script>
+<script language="JavaScript">includeContentContainer( 'wfbuilder', true );</script>
+
+<p class="body">
+
+<p class="title">Adding New Step Types: Procedures</p>
+
+<p class="body">The following example describes how to add a new type of step to 
+Content Server. When the creator of a workflow adds this type of step to their workflow, 
+they can do the following:</p>
+<ul type="disc">
+	<li class="body"> Attach callback scripts to particular workflow events that 
+	are associated with the step. These callback scripts define the custom 
+	operations that can occur when a step of this type becomes ready or is complete.</p>
+	<li class="body"> Attach HTML templates to the step. These HTML 
+	templates define the interface that is presented to workflow participants 
+	when they work on tasks of this type.
+</ul>
+
+<p class="body">
+The Step Definition page for this step looks just like the User Step 
+Definition page, but contains two new fields: the 
+<span class="gui">Script to run</span> field and the 
+<span class="gui">Template to use</span> field. The creator
+of a workflow map can choose a callback script to run for the step from 
+the <span class="gui">Script to run</span> field. This callback script can perform any custom 
+operation and can run when the step becomes ready or when the step is complete. 
+The creator of a workflow map can also choose an HTML template file to 
+display for the step from the <span class="gui">Template to use</span> field. 
+The HTML template defines the interface that is displayed when a workflow 
+participant works on that particular step in Content Server. The creator of a 
+workflow map can create many different tasks of this type, and can choose 
+different callback scripts and HTML templates for each, so that each step 
+looks and behaves differently. This lets the creators of workflow
+maps customize the workflow interface and operations - without actually 
+changing any code using the Content Server IDE.</p>
+
+<p class="body">
+The HTML templates and callback scripts used for this step type are stored 
+in two new folders in your custom module directory structure: the templates 
+folder and the scripts folder. The HTML templates that you store in the 
+templates folder can be selected from the <span class="gui">Template to use</span> 
+field on a Step Definition page for this type of step. The callback scripts 
+that you store in the scripts folder can be selected from the 
+<span class="gui">Script to run</span> field on a Step Definition page 
+for this type of step.</p>
+
+<span class="title2">The CustomDisplayAPI Object</span>
+
+<p class="body">You begin adding the custom display step type to Content Server by 
+defining the API object.</p>
+
+<p class="infin">To define the API object for this step:</p>
+<ol>
+	<li class="body"> Orphan <span class="code">WFMain:WFRoot:WFObjectTypes:WFTaskTypes:StandardTasks</span> 
+	in your custom module's OSpace, and name it 
+	<span class="code">CustomDisplayAPI</span>.<p></li>
+	<li class="body"> In the <span class="code">CustomDisplayAPI</span> object, 
+	change the <span class="code">fSubType</span> feature to an Integer/Real
+	type, and set its value to 1.
+	The <span class="code">fSubType</span> feature stores a unique integer that 
+	works with the <span class="code">fType</span> feature to
+	identify the object.<p></li>
+	<li class="body"> Ensure that the <span class="code">fType</span> feature is 
+	an Integer/Real type, and set its value to 11.
+	The <span class="code">fType</span> feature stores a unique integer that works with the <span class="code">fSubType</span> feature to
+	identify the object.<p></li>
+	<li class="body"> Ensure that the <span class="code">fTaskName</span> feature 
+	is a String type, and set its value to 
+	<span class="code">Custom Display Step</span>.
+	The <span class="code">fTaskName</span> feature stores the name of the 
+	step type as it is displayed in the
+	Workflow Designer.<p></li>
+	<li class="body"> Create a script, and name it 
+	<a href="createreviewmaprec.html"><span class="code">CreateReviewMapRec()</span></a>. <p></li>
+	<li class="body"> Override the following scripts:<p>
+		<ul type="disc">
+			<li class="body"><a href="getpainterinfo.html"><span class="code">GetPainterInfo()</span></a></p>
+			<li class="body"><a href="readytask.html"><span class="code">ReadyTaskForInitiation()</span></a></p>
+			<li class="body"><a href="settaskdefaults.html"><span class="code">SetTaskDefaults()</span></a></p>
+			<li class="body"><a href="settaskrec.html"><span class="code">SetTaskRecFromMapTask()</span></a>
+		</ul><p>
+	</li>
+</ol>
+
+<p class="body">You have created the API object. Now you must customize it for 
+the custom display step type.</p>
+
+<span class="title2">The CustomDisplayPaint Object</span>
+<p class="body">
+After you define the API object for the step type that you are creating, 
+you must provide the Workflow Designer with the information it requires to 
+display the step and handle the data that the performer of the step provides.</p>
+
+<p class="infin">To define the Workflow Designer information:</P>
+
+<ol>
+	<li class="body">Orphan <span class="code">WebWFP:WebWFPRoot:WFTask</span> in 
+	your custom module's OSpace, 
+	and name it <span class="code">CustomDisplayPaint</span>.<p></li>
+	<li class="body"> In the <span class="code">CustomDisplayPaint</span> object, 
+	change the <span class="code">fSubType</span> feature to an Integer/Real
+	type, and set it to 1.
+	The <span class="code">fSubType</span> feature stores a unique integer that works with the <span class="code">fType</span> feature to
+	identify the object. It must match the value specified for the <span class="code">
+	fSubType</span> feature in the <span class="code">CustomDisplayAPI</span> object.<p></li>
+	<li class="body"> Change the <span class="code">fType</span> feature to an 
+	Integer/Real type, and set it to 11.
+	The <span class="code">fType</span> feature stores a unique integer that 
+	works with the <span class="code">fSubType</span> feature to
+	identify the object. It must match the value specified for the 
+	<span class="code">fType</span> feature in the <span class="code">
+	CustomDisplayAPI</span> object.<p></li>
+	<li class="body"> Override the following scripts:<p>
+		<ul type="disc">
+			<li class="body"><a href="getmapdata.html"> <span class="code">GetMapData()</span></a></p>
+			<li class="body"> <a href="putmapdata.html"><span class="code">PutMapData()</span></a>
+		</ul><p>
+	<li class="body"> Create an HTML file, name it <a href="t_user.html"><span class="code">t_user.html</span></a>, and store it in 
+	your module's html	directory (for example, 
+	c:/opentext/module/<span class="codevar">modulename</span><span class="code">_1_0_0</span>/html).</ol>
+
+<p class="body">You have created the object necessary to define a step type's 
+Workflow Designer information. Now you must provide the code required to 
+customize the information for the custom display step type.</p>
+
+
+<p class="title">The CustomDisplayWork object</p>
+<p class="body">
+After you define the API object and Workflow Designer information for the custom display
+step type, you must define the information that handles the step when a workflow
+participant is working on it and when it is displayed on the Detailed Status page in
+Content Server.</p>
+<p class="infin">
+To define the information that handles the step and displays it on the Detailed Status
+page:</p>
+<ol>
+<li class="body"> Orphan <span class="code">WebWork:WebWork Root:WFTask</span> in 
+your custom
+module's OSpace, and name it <span class="code">CustomDisplayWork</span>.<p></li>
+<li class="body"> In the <span class="code">CustomDisplayWork</span> object, set the <span class="code">fPaletteTask</span> feature to <span class="code">TRUE</span>.<p></li>
+<li class="body"> Change the <span class="code">fSubType</span> feature to an Integer/Real type, and set it to 1.<p>
+The <span class="code">fSubType</span> feature stores a unique integer that works with the <span class="code">fType</span> feature to identify the object. It must match the value specified for the <span class="code">fSubType</span> feature in the <span class="code">CustomDisplayAPI</span> object and the <span class="code">CustomDisplayPaint</span> object.<p></li>
+<li class="body"> Change the <span class="code">fType</span> feature to an Integer/Real type, and set it to 11.<p>
+The <span class="code">fType</span> feature stores a unique integer that works with the <span class="code">fSubType</span> feature to identify the object. It must match the value specified for the <span class="code">fType</span> feature in the <span class="code">CustomDisplayAPI</span> object and the <span class="code">CustomDisplayPaint</span> object.<p></li>
+<li class="body"> Change the <span class="code">fSmallTaskGif</span> feature to a String type, and set it to <span class="code">custtask.gif</span>.<p>
+The <span class="code">custtask.gif</span> file identifies the image that you want to display for the custom
+display step in the Step Palette and must be 16x16 pixels.<p></li>
+<li class="body"> Copy the <span class="code">custtask.gif</span> file to the /webwork directory of your Content Server installation (for example, 
+c:/opentext/module/webwork/support).<p></li>
+<li class="body"> Create a 16x16 pixel version of the custtask.gif file, name it 16user.gif, and copy the
+16user.gif file to the support directory in your custom module. This 16user.gif file
+identifies the image that is displayed on the Custom Display Step Definition page.<p></li>
+<li class="body"> Override the following scripts:<p>
+<ul type="disc">
+<li class="body"> <a href="getdisplayperformer.html"><span class="code">GetDisplayPerformerInfo()</span></a></p>
+<li class="body"><a href="getpainterinfo2.html"> <span class="code">GetPainterInfo()</span></a></p>
+<li class="body"><a href="getpaintermenu.html"> <span class="code">GetPainterMenu()</span></a></p>
+<li class="body"> <a href="getstatusdisplay.html"><span class="code">GetStatusDisplay()</span></a></p>
+<li class="body"><a href="gettaskeditdata.html"> <span class="code">GetTaskEditData()</span></a></p>
+<li class="body"> <a href="gettaskgif.html"><span class="code">GetTaskGif()</span></a></p>
+<li class="body"><a href="newperformer.html"><span class="code"> NewPerformer()</span></a></ul>
+</p>
+<li class="body"> Create a script, and name it <a href="putreviewdata.html"><span class="code">PutReviewData</span></a>.
+<p></li>
+<li class="body"> Create a script, and name it<a href="reassignstep.html"> <span class="code">ReassignStep</span></a>.
+<p></li>
+<li class="body"> Create an HTML file, name it <a href="redirecthtml.html"><span class="code">redirect.html</span></a>, and store it in your module's html directory (for example, 
+c:/opentext/module/<span class="codevar">modulename</span><span class="code">_1_0_0</span>/html).<p></li>
+
+</li></ol>
+
+<p class="body">You have created the object necessary to handle the step operations. Now you must
+provide the code required to customize the information for the custom display step type.</p>
+
+<a name="wfcustom"><p class="title">The WFCustomScriptPkg Object</p></a>
+<p class="body">
+After you customize the objects necessary to create the custom display step type, you must
+orphan the <span class="code">WFCustomScriptPkg</span> object, which is responsible 
+for executing the callback scripts that can be used with this step type.</p>
+<p class="infin">
+To orphan the WFCustomScriptPkg Object:</p>
+<ol>
+<li class="body"> Orphan <span class="code">WFMain:WFRoot:WFCustomScriptPkg</span> 
+in your custom module's OSpace, and name it <span class="code">WFCustomScriptPkg</span>.</p>
+<li class="body"> In the <span class="code">WFCustomScriptPkg</span> object, modify the <span class="code">CBExecute()</span> script.
+</p>
+<li class="body">In your custom module, create a child object of the <span class="code">Root</span> 
+object, and name it <span class="code">UtilityPkg</span>.</p>
+<li class="body"> In the <span class="code">UtilityPkg</span> object, 
+create a script, and name it 
+<a href="executecusttask.html"><span class="code">ExecuteCustTaskScript</span></a>.
+</p>
+<li class="body"> Create a Script feature, 
+and name it <a href="executescript.html"><span class="code">ExecuteScript</span></a>.
+</p>
+<li class="body"> Create a Script feature, and name it <a href="listscripts.html"><span class="code">ListScripts</span></a>.
+</p>
+<li class="body"> Create a Script feature, and name it <a href="listtemplates.html"><span class="code">ListTemplates</span></a>.
+</p>
+<li class="body"> In the <span class="code">Globals</span> object, create a Dynamic feature, name it <span class="code">custtaskmodule</span>,
+and set its value to the object reference number of the 
+<i>modulename</i><span class="code">WebModule</span> object in your custom module.</p>
+<li class="body"> In the <span class="code">Globals</span> object, create a Dynamic feature, name it <span class="code">UtilityPkg</span>, and
+set its value to the object reference number of the <span class="code">UtilityPkg</span> object that you
+created in step 3.</p>
+<li class="body"> In the <span class="code">Globals</span> object, 
+run the <span class="code">BuildOSpace()</span> script.</p>
+<li class="body"> Save and export your OSpace, then restart the Livelink Builder.</ol>
+
+<p class="body">
+You have created the object responsible for handling callback scripts. Now you must
+customize this object for the custom display step type.</p>
+
+
+<p class="title">Adding Custom Scripts and Templates</p>
+<p class="body">
+After you implement the functionality required to create the custom display step type,
+you must create and store the custom scripts and templates for the tasks.</p>
+
+<p class="infin">To add custom scripts and templates:</p>
+<ol>
+<li class="body"> Create a folder in your custom module's directory structure, and name it <span class="code">scripts</span>
+(for example, c:/opentext/module/<i>modulename</i><span class="code">_1_0_0</span>/scripts).</p>
+<li class="body"> Create a folder in your custom module's directory structure and name it <span class="code">templates</span>
+(for example, c:/opentext/module/<i>modulename</i><span class="code">_1_0_0</span>/templates).</p>
+<li class="body"> Add the scripts that you want to make available to the custom display step type to
+the scripts folder that you created in step 1.
+The scripts appear in the Script to run list on the Custom Display Step Definition
+page in the Workflow Designer.</p>
+<li class="body"> Add the templates that you want to make available to the Custom Display step type
+to the templates folder that you created in step 2.
+The templates appear in the Template to use list on the Custom Display Step
+Definition page in the Workflow Designer.</li></ol>
+
+
+
+<script language="JavaScript">IncludeFooter();</script>
+
+</BODY>
+</html>

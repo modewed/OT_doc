@@ -1,0 +1,2135 @@
+
+<meta charset="UTF-8">
+<html>
+<head><title>Class: File</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../syntax.css" type="text/css">
+<link rel="stylesheet" href="builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td  align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody></table>
+
+<div id="document">
+	
+<div class="sidebar_container">
+		
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink"><a href="assoc.html">Assoc</a></div>
+				<div class="packagelink"><a href="boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="builder.html">Builder</a></div>
+				<div class="packagelink"><a href="bytes.html">Bytes</a></div>
+				<div class="packagelink"><a href="capi.html">CAPI</a></div>
+				<div class="packagelink"><a href="capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink"><a href="cachetree.html">CacheTree</a></div>
+				<div class="packagelink"><a href="compiler.html">Compiler</a></div>
+				<div class="packagelink"><a href="core.html">Core</a></div>
+				<div class="packagelink"><a href="dapi.html">DAPI</a></div>
+				<div class="packagelink"><a href="dapinode.html">DAPINODE</a></div>
+				<div class="packagelink"><a href="dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink"><a href="dapiversion.html">DAPIVERSION</a></div>
+				<div class="packagelink"><a href="domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="domcomment.html">DOMComment</a></div>
+				<div class="packagelink"><a href="domdocument.html">DOMDocument</a></div>
+				<div class="packagelink"><a href="domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink"><a href="domelement.html">DOMElement</a></div>
+				<div class="packagelink"><a href="domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink"><a href="domnamednodemap.html">DOMNamedNodeMap</a></div>
+				<div class="packagelink"><a href="domnode.html">DOMNode</a></div>
+				<div class="packagelink"><a href="domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="domtext.html">DOMText</a></div>
+				<div class="packagelink"><a href="date.html">Date</a></div>
+				<div class="packagelink"><a href="dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="env.html">Env</a></div>
+				<div class="packagelink"><a href="error.html">Error</a></div>
+				<div class="packagelink curPage">File</div>
+				<div class="packagelink"><a href="filecopy.html">FileCopy</a></div>
+				<div class="packagelink"><a href="fileprefs.html">Fileprefs</a></div>
+				<div class="packagelink"><a href="frame.html">Frame</a></div>
+				<div class="packagelink"><a href="global.html">Global</a></div>
+				<div class="packagelink"><a href="integer.html">Integer</a></div>
+				<div class="packagelink"><a href="javaobject.html">JavaObject</a></div>
+				<div class="packagelink"><a href="language.html">Language</a></div>
+				<div class="packagelink"><a href="license.html">License</a></div>
+				<div class="packagelink"><a href="list.html">List</a></div>
+				<div class="packagelink"><a href="logging.html">Logging</a></div>
+				<div class="packagelink"><a href="long.html">Long</a></div>
+				<div class="packagelink"><a href="mailmessage.html">MailMessage</a></div>
+				<div class="packagelink"><a href="math.html">Math</a></div>
+				<div class="packagelink"><a href="memcached.html">Memcached</a></div>
+				<div class="packagelink"><a href="notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="object.html">Object</a></div>
+				<div class="packagelink"><a href="pop3session.html">POP3Session</a></div>
+				<div class="packagelink"><a href="patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="patfind.html">PatFind</a></div>
+				<div class="packagelink"><a href="pattern.html">Pattern</a></div>
+				<div class="packagelink"><a href="point.html">Point</a></div>
+				<div class="packagelink"><a href="profiler.html">Profiler</a></div>
+				<div class="packagelink"><a href="real.html">Real</a></div>
+				<div class="packagelink"><a href="recarray.html">RecArray</a></div>
+				<div class="packagelink"><a href="record.html">Record</a></div>
+				<div class="packagelink"><a href="regex.html">Regex</a></div>
+				<div class="packagelink"><a href="restclient.html">RestClient</a></div>
+				<div class="packagelink"><a href="saxparser.html">SAXParser</a></div>
+				<div class="packagelink"><a href="smtpsession.html">SMTPSession</a></div>
+				<div class="packagelink"><a href="ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="script.html">Script</a></div>
+				<div class="packagelink"><a href="security.html">Security</a></div>
+				<div class="packagelink"><a href="set.html">Set</a></div>
+				<div class="packagelink"><a href="socket.html">Socket</a></div>
+				<div class="packagelink"><a href="sql.html">Sql</a></div>
+				<div class="packagelink"><a href="sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink"><a href="str.html">Str</a></div>
+				<div class="packagelink"><a href="string.html">String</a></div>
+				<div class="packagelink"><a href="system.html">System</a></div>
+				<div class="packagelink"><a href="uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="void.html">Void</a></div>
+				<div class="packagelink"><a href="wapi.html">WAPI</a></div>
+				<div class="packagelink"><a href="wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink"><a href="web.html">Web</a></div>
+				<div class="packagelink"><a href="xslprocessor.html">XSLProcessor</a></div>
+				<div class="packagelink"><a href="zip.html">Zip</a></div>
+		</div>
+</div>
+
+	<div class="content_container">
+		<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+		<h1>Class: File</h1><div class="ClassDescription"><p>The File Package offers a set of built-in functions   for handling the OScript File data type which is used to reference and   access files in the file system.  The File Package facilitates file   and directory creation, deletion,   directory traversal, and searching, as well as the usual reading and writing   functions.</p>
+<p>A file may opened for read or write in either   normal text mode, or binary mode.  Files also come in two types, standard   (as opened with <a class="interdoc" href="#cm_file_open">File.Open()</a>) and stream files   (as opened with <a class="interdoc" href="#cm_file_openstream">File.OpenStream()</a>)   which differ in that stream files behave as streams or pipes, and thus   are not traversable (as with <a class="interdoc" href="#cm_file_seek">File.Seek()</a> or   <a class="interdoc" href="#cm_file_rewind">File.Rewind()</a>), and while the content readable from them can   be exhausted for a given time, there is no "end" until the stream is   closed, since, as with C's STDIN, there is always the potential for   more input waiting, even if it is not present.  Certain   read and write functions operate on only stream files, while others   operate on normal files, and some operate on both.  See   <a class="interdoc" href="#cm_file_openstream">File.OpenStream()</a> for further details.</p>
+<p>The major   functionalities offered in the File Package are the following:</p>
+<ul>
+<li><a class="interdoc" href="#cm_file_open">Open()</a> to open a file and
+    <a class="interdoc" href="#cm_file_openstream">OpenStream()</a> to open a stream file.</li>
+<li><a class="interdoc" href="#cm_file_read">Read()</a> and
+    <a class="interdoc" href="#cm_file_write">Write()</a> to read and write text as a String to and from a
+    file.</li>
+<li><a class="interdoc" href="#cm_file_readbytes">ReadBytes()</a> and
+    <a class="interdoc" href="#cm_file_writebytes">WriteBytes()</a> to read or write binary
+    data in the form of a Bytes value to or from a binary file.</li>
+<li><a class="interdoc" href="#cm_file_writevalue">WriteValue()</a> and
+    <a class="interdoc" href="#cm_file_readvalue">ReadValue()</a> to read and write common OScript
+    values to and from a stream file.</li>
+<li><a class="interdoc" href="#cm_file_seek">Seek()</a> and
+    <a class="interdoc" href="#cm_file_rewind">Rewind()</a> to reposition the file position
+    pointer, and <a class="interdoc" href="#cm_file_eof">Eof()</a> to test if the pointer
+    is at the end of the file.</li>
+<li><a class="interdoc" href="#cm_file_flush">Flush()</a> to flush a file
+    and <a class="interdoc" href="#cm_file_close">Close()</a> to close a file.</li>
+<li><a class="interdoc" href="#cm_file_stringtofile">StringToFile()</a> and
+    <a class="interdoc" href="#cm_file_filetostring">FileToString()</a> to get a File value
+    given a file name and vice versa.</li>
+<li><a class="interdoc" href="#cm_file_getpath">GetPath()</a> and
+    <a class="interdoc" href="#cm_file_getname">GetName()</a> to query the file path and name
+    of a File value, <a class="interdoc" href="#cm_file_setname">SetName()</a> to set the file
+    name, and <a class="interdoc" href="#cm_file_isdirspec">IsDirSpec()</a> to test
+    if a path name is a directory specification.</li>
+<li><a class="interdoc" href="#cm_file_istext">IsText()</a> to test
+    if a file is a text file and <a class="interdoc" href="#cm_file_linetermination">LineTermination()</a>
+    to set or query the line termination used in reading and writing the
+    file. </li>
+<li><a class="interdoc" href="#cm_file_create">Create()</a>,
+    <a class="interdoc" href="#cm_file_delete">Delete()</a>, and
+    <a class="interdoc" href="#cm_file_exists">Exists()</a>, to create, delete, or test for
+    the existence of files or directories.</li>
+<li><a class="interdoc" href="#cm_file_filelist">FileList()</a> to list
+    the contents of a directory, and <a class="interdoc" href="#cm_file_isdir">IsDir()</a>
+    to test if a named file is a directory.</li>
+<li><a class="interdoc" href="#cm_file_access">Access()</a> to
+    search for a given file by name in various system-dependent directories.</li>
+<li><a class="interdoc" href="#cm_file_rename">Rename()</a> to rename a file.</li>
+<li><a class="interdoc" href="#cm_file_dir">Dir()</a> to query or
+    set the current directory.</li>
+<li><a class="interdoc" href="#cm_file_startupdir">StartupDir()</a>,
+    <a class="interdoc" href="#cm_file_systemdir">SystemDir()</a>, and
+    <a class="interdoc" href="#cm_file_threaddir">ThreadDir()</a> to query various system-specific
+    and working directories.</li>
+<li><a class="interdoc" href="#cm_file_separator">Separator()</a> to query
+    the system-dependent directory separator.</li>
+<li><a class="interdoc" href="#cm_file_stat">Stat()</a> to obtain
+    file status information, similar to the ANSI stat call.</li>
+<li><a class="interdoc" href="#cm_file_copystart">CopyStart()</a>,
+    <a class="interdoc" href="#cm_file_copynext">CopyNext()</a>, <a class="interdoc" href="#cm_file_nextblock">NextBlock()</a>,
+    <a class="interdoc" href="#cm_file_numblocks">NumBlocks()</a>, and <a class="interdoc" href="#cm_file_copyend">CopyEnd()</a>
+    to copy a file.</li>
+<li><a class="interdoc" href="#cm_file_freespace">FreeSpace()</a> returns the
+    number of free bytes in a directory.</li>
+<li><a class="interdoc" href="#cm_file_getfilepermission">GetFilePermission()</a> and
+   <a class="interdoc" href="#cm_file_setfilepermission">SetFilePermission()</a> to get/set file permissions of the specified file.</li>
+</ul></div>
+			<h2>Class Attributes</h2>
+			<div class="ClassAttributesShort">
+				
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_appendmode">AppendMode</a></div>
+					<div class="Description"><p>Passed to <a class="interdoc" href="#cm_file_write">File.Write()</a>
+    to open the file in Append mode; sets the write pointer to the end of the
+    file.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_dostermination">DOSTermination</a></div>
+					<div class="Description"><p>Passed to <a class="interdoc" href="#cm_file_linetermination">File.LineTermination()</a>
+    to specify that DOS line termination be used.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_e_alreadyopen">E_AlreadyOpen</a></div>
+					<div class="Description"><p>Error returned by <a class="interdoc" href="#cm_file_open">File.Open()</a>
+    indicating that the specified file is currently open.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_e_cannotcopydirs">E_CannotCopyDirs</a></div>
+					<div class="Description"><p>Error returned by <a class="interdoc" href="#cm_file_copystart">File.CopyStart()</a>
+    indicating that the specified directory is a source directory.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_e_destalreadyexists">E_DestAlreadyExists</a></div>
+					<div class="Description"><p>Error returned by <a class="interdoc" href="#cm_file_copystart">File.CopyStart()</a>
+    indicating that the specified destination file already exists.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_e_eof">E_Eof</a></div>
+					<div class="Description"><p>Error returned by <a class="interdoc" href="#cm_file_read">File.Read()</a>
+    and <a class="interdoc" href="#cm_file_copynext">File.CopyNext()</a> indicating that the end of the
+    file has been reached.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_e_failedcreatingdest">E_FailedCreatingDest</a></div>
+					<div class="Description"><p>Error returned by <a class="interdoc" href="#cm_file_copystart">File.CopyStart()</a>
+    indicating that a problem occurred while creating the destination file.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_e_failedopeningdest">E_FailedOpeningDest</a></div>
+					<div class="Description"><p>Error returned by <a class="interdoc" href="#cm_file_copystart">File.CopyStart()</a>
+    indicating that an error occurred while attempting to open the specified destination
+    file.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_e_failedopeningsource">E_FailedOpeningSource</a></div>
+					<div class="Description"><p>Error returned by <a class="interdoc" href="#cm_file_copystart">File.CopyStart()</a>
+    indicating that an error occurred while attempting to open the specified source
+    file.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_e_filename">E_Filename</a></div>
+					<div class="Description"><p>Error returned by functions that
+    require a File specification indicating that a file name was not specified
+    or that bad file name syntax was used.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_e_filesystemerror">E_FileSystemError</a></div>
+					<div class="Description"><p>Error returned by various File built-in
+    functions indicating that an internal File system error occurred.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_e_insufficientmemory">E_InsufficientMemory</a></div>
+					<div class="Description"><p>Error returned by <a class="interdoc" href="#cm_file_copynext">File.CopyNext()</a>
+    or <a class="interdoc" href="#cm_file_read">File.Read()</a> indicating that there is not enough memory
+    to perform the read or copy operation.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_e_mode">E_Mode</a></div>
+					<div class="Description"><p>Error returned by <a class="interdoc" href="#cm_file_open">File.Open()</a>
+    indicating that an illegal open option was specified.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_e_modeerror">E_ModeError</a></div>
+					<div class="Description"><p>Error returned by various File built-in
+    functions indicating that the File being acted upon should be a stream, as
+    opened with <a class="interdoc" href="#cm_file_openstream">File.OpenStream()</a>, but is not, or
+    vice versa.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_e_notadirectory">E_NotADirectory</a></div>
+					<div class="Description"><p>Error returned by various File built-in
+    functions indicating that the specified directory is invalid.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_e_notenoughfreespace">E_NotEnoughFreeSpace</a></div>
+					<div class="Description"><p>Error returned by <a class="interdoc" href="#cm_file_copystart">File.CopyStart()</a>
+    indicating that there is not enough disk space to place a file in the specified
+    location.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_e_notopen">E_NotOpen</a></div>
+					<div class="Description"><p>Error returned by <a class="interdoc" href="#cm_file_open">File.Open()</a>
+    indicating that the specified file is not open.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_e_notopenforbinaryaccess">E_NotOpenForBinaryAccess</a></div>
+					<div class="Description"><p>Error returned indicating that the
+    file being operated on is not in binary mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_e_notopenforread">E_NotOpenForRead</a></div>
+					<div class="Description"><p>Error returned by <a class="interdoc" href="#cm_file_read">File.Read()</a>
+    indicating that the <a class="interdoc" href="#ca_file_readmode">File.ReadMode</a> or <a class="interdoc" href="#ca_file_readbinmode">File.ReadBinMode</a>
+    constant was not passed as the mode parameter to <a class="interdoc" href="#cm_file_open">File.Open()</a>.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_e_notopenforwrite">E_NotOpenForWrite</a></div>
+					<div class="Description"><p>Error returned by <a class="interdoc" href="#cm_file_write">File.Write()</a>
+    indicating that the <a class="interdoc" href="#ca_file_writemode">File.WriteMode</a> or <a class="interdoc" href="#ca_file_writebinmode">File.WriteBinMode</a>
+    constant was not passed as the mode parameter to <a class="interdoc" href="#cm_file_open">File.Open()</a>.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_e_notsamedirectory">E_NotSameDirectory</a></div>
+					<div class="Description"><p>Error returned by <a class="interdoc" href="#cm_file_rename">File.Rename()</a>
+    indicating that the specified directory is different than the original file
+    directory.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_e_open">E_Open</a></div>
+					<div class="Description"><p>Error returned by <a class="interdoc" href="#cm_file_open">File.Open()</a>
+    indicating that the specified file could not be opened.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_e_sourcenotfound">E_SourceNotFound</a></div>
+					<div class="Description"><p>Error returned by <a class="interdoc" href="#cm_file_copystart">File.CopyStart()</a>
+    indicating that the specified source file cannot be located.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_e_targetdirnotfound">E_TargetDirNotFound</a></div>
+					<div class="Description"><p>Error returned by <a class="interdoc" href="#cm_file_copystart">File.CopyStart()</a>
+    indicating that the target directory cannot be located or does not exist.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_e_write">E_Write</a></div>
+					<div class="Description"><p>Error returned by <a class="interdoc" href="#cm_file_write">File.Write()</a>
+    or <a class="interdoc" href="#cm_file_writebytes">File.WriteBytes()</a> indicating that there was
+    an error writing to the file.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_filecopytype">FileCopyType</a></div>
+					<div class="Description"><p>Specifies a value of type FileCopy.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_filetype">FileType</a></div>
+					<div class="Description"><p>Specifies a value of type File.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_freespacebig">FreeSpaceBig</a></div>
+					<div class="Description"><p>Indicates that the amount of freespace is too big.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_readbinmode">ReadBinMode</a></div>
+					<div class="Description"><p>Passed to <a class="interdoc" href="#cm_file_open">File.Open()</a>;
+    opens the file for reading in binary mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_readmode">ReadMode</a></div>
+					<div class="Description"><p>Passed to <a class="interdoc" href="#cm_file_open">File.Open()</a>;
+    opens the file for reading in text mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_statdeviceid">StatDeviceID</a></div>
+					<div class="Description"><p>Used as an index in the Assoc returned
+    by <a class="interdoc" href="#cm_file_stat">Stat()</a>.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_statfilemode">StatFileMode</a></div>
+					<div class="Description"><p>Used as an index in the Assoc returned
+    by <a class="interdoc" href="#cm_file_stat">Stat()</a>.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_statgroupid">StatGroupID</a></div>
+					<div class="Description"><p>Used as an index in the Assoc returned
+    by <a class="interdoc" href="#cm_file_stat">Stat()</a>.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_statinodenumber">StatInodeNumber</a></div>
+					<div class="Description"><p>Used as an index in the Assoc returned
+    by <a class="interdoc" href="#cm_file_stat">Stat()</a>.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_statlastaccesstime">StatLastAccessTime</a></div>
+					<div class="Description"><p>Used as an index in the Assoc returned
+    by <a class="interdoc" href="#cm_file_stat">Stat()</a>.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_statlastchangetime">StatLastChangeTime</a></div>
+					<div class="Description"><p>Used as an index in the Assoc returned
+    by <a class="interdoc" href="#cm_file_stat">Stat()</a>.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_statlastmodifytime">StatLastModifyTime</a></div>
+					<div class="Description"><p>Used as an index in the Assoc returned
+    by <a class="interdoc" href="#cm_file_stat">Stat()</a>.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_statnumberlinks">StatNumberLinks</a></div>
+					<div class="Description"><p>Used as an index in the Assoc returned
+    by <a class="interdoc" href="#cm_file_stat">Stat()</a>.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_statrdevice">StatRDevice</a></div>
+					<div class="Description"><p>Used as an index in the Assoc returned
+    by <a class="interdoc" href="#cm_file_stat">Stat()</a>.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_statsize">StatSize</a></div>
+					<div class="Description"><p>Used as an index in the Assoc returned
+    by <a class="interdoc" href="#cm_file_stat">Stat()</a>.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_statuserid">StatUserID</a></div>
+					<div class="Description"></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_stauserid">StaUserID</a></div>
+					<div class="Description"><p>Used as an index in the Assoc returned
+    by <a class="interdoc" href="#cm_file_stat">Stat()</a>.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_unixtermination">UNIXTermination</a></div>
+					<div class="Description"><p>Passed to <a class="interdoc" href="#cm_file_linetermination">File.LineTermination()</a>;
+    sets line termination to UNIX line termination.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_writebinmode">WriteBinMode</a></div>
+					<div class="Description"><p>Passed to <a class="interdoc" href="#cm_file_open">File.Open()</a>;
+    opens the file for writing in binary mode.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_file_writemode">WriteMode</a></div>
+					<div class="Description"><p>Passed to <a class="interdoc" href="#cm_file_open">File.Open()</a>;
+    opens the file for writing in text mode.</p></div>
+				</div>
+				
+			</div>
+
+			<h2>Instance Attributes</h2>
+			<div class="InstanceAttributesShort">
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_file_pcreatedate">pCreateDate</a></div>
+					<div class="Description"><p>Date and time on which the file
+    was created.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_file_pcreator">pCreator</a></div>
+					<div class="Description"></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_file_plinetermination">pLineTermination</a></div>
+					<div class="Description"><p>Line terminator currently set
+    for the file. This feature defaults to the appropriate value for the platform
+    from which the file is obtained. The <a class="interdoc" href="#ca_file_dostermination">File.DOSTermination</a>
+    and <a class="interdoc" href="#ca_file_unixtermination">File.UNIXTermination</a>
+    constants are available for use with this property.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_file_pmodifydate">pModifyDate</a></div>
+					<div class="Description"><p>The date and time on which the
+    file was most recently modified.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_file_preadonly">pReadOnly</a></div>
+					<div class="Description"><p>DOS read only file attribute.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_file_presourcesize">pResourceSize</a></div>
+					<div class="Description"></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_file_psize">pSize</a></div>
+					<div class="Description"><p>The size (in bytes) of the file.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_file_ptype">pType</a></div>
+					<div class="Description"><p>The file type.</p></div>
+				</div>
+			</div>
+
+			<h2>Class Methods</h2>
+			<div class="ClassMethodsShort">
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_access" class="IndexMethodName">Access</a>(
+					 String filePath  )
+					</div>
+					<div class="Description"><p>Searches for the specified file.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_close" class="IndexMethodName">Close</a>(
+					 File openFile  )
+					</div>
+					<div class="Description"><p>Closes an open file.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_copyend" class="IndexMethodName">CopyEnd</a>(
+					 FileCopy operation  )
+					</div>
+					<div class="Description"><p>Ends the file copy operation and closes
+    the File being copied.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_copynext" class="IndexMethodName">CopyNext</a>(
+					 FileCopy operation  )
+					</div>
+					<div class="Description"><p>Copies the next block in the specified
+    file copy operation.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_copystart" class="IndexMethodName">CopyStart</a>(
+					 Dynamic source, Dynamic destination, [Integer blockSize] )
+					</div>
+					<div class="Description"><p>Begins a file copy operation.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_create" class="IndexMethodName">Create</a>(
+					 Dynamic newFile )
+					</div>
+					<div class="Description"><p>Creates an empty text file or directory.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_delete" class="IndexMethodName">Delete</a>(
+					 Dynamic delFile  )
+					</div>
+					<div class="Description"><p>Deletes the specified file or directory.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_dir" class="IndexMethodName">Dir</a>(
+					 [String directory] )
+					</div>
+					<div class="Description"><p>Returns the name of the current directory,
+    and changes it if a new directory is specified.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_eof" class="IndexMethodName">Eof</a>(
+					 File openFile )
+					</div>
+					<div class="Description"><p>Determines whether the current file
+    position is at the end of file.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_exists" class="IndexMethodName">Exists</a>(
+					 Dynamic theFile  )
+					</div>
+					<div class="Description"><p>Determines if the specified file or
+    directory exists.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_filelist" class="IndexMethodName">FileList</a>(
+					 [String directory] )
+					</div>
+					<div class="Description"><p>Returns a List of all of the files
+    in the specified directory.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_filetostring" class="IndexMethodName">FileToString</a>(
+					 File theFile )
+					</div>
+					<div class="Description"><p>Converts a File reference to a String.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_flush" class="IndexMethodName">Flush</a>(
+					 File theFile )
+					</div>
+					<div class="Description"><p>Flushes the file buffer.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_freespace" class="IndexMethodName">FreeSpace</a>(
+					 [String target] )
+					</div>
+					<div class="Description"><p>Returns the number of free bytes in the given directory,
+    or number of free bytes in the current directory if no directory is specified.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_getfilepermission" class="IndexMethodName">GetFilePermission</a>(
+					 String filePath )
+					</div>
+					<div class="Description"><p>Returns the permissions of the specified file.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_getname" class="IndexMethodName">GetName</a>(
+					 Dynamic theFile )
+					</div>
+					<div class="Description"><p>Returns the file name, not including
+    path, of a file.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_getpath" class="IndexMethodName">GetPath</a>(
+					 Dynamic myFile )
+					</div>
+					<div class="Description"><p>Returns the directory specification
+    path of a file ending in <a class="interdoc" href="#cm_file_separator">File.Separator()</a> and not
+    including the file's name.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_isdir" class="IndexMethodName">IsDir</a>(
+					 String directory )
+					</div>
+					<div class="Description"><p>Determines whether the supplied String
+    represents an existing directory when the object being tested is accessible.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_isdirspec" class="IndexMethodName">IsDirSpec</a>(
+					 String directory )
+					</div>
+					<div class="Description"><p>Determines whether the last character
+    of the supplied String is a directory separator.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_istext" class="IndexMethodName">IsText</a>(
+					 Dynamic theFile )
+					</div>
+					<div class="Description"><p>Determines if the specified file is
+    a text file.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_linetermination" class="IndexMethodName">LineTermination</a>(
+					 File theFile, String terminator )
+					</div>
+					<div class="Description"><p>Specifies the type of line termination
+    to use when writing to a text file.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_nextblock" class="IndexMethodName">NextBlock</a>(
+					 FileCopy operation )
+					</div>
+					<div class="Description"><p>Returns the ordinal number of the
+    next file block to be copied.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_numblocks" class="IndexMethodName">NumBlocks</a>(
+					 FileCopy operation )
+					</div>
+					<div class="Description"><p>Returns the number of file blocks
+    to be copied.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_open" class="IndexMethodName">Open</a>(
+					 Dynamic theFile, String mode )
+					</div>
+					<div class="Description"><p>Opens a text file in preparation for
+    an append, read, or write operation.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_openstream" class="IndexMethodName">OpenStream</a>(
+					 Dynamic theFile, String mode )
+					</div>
+					<div class="Description"><p>Opens a file as a stream file.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_read" class="IndexMethodName">Read</a>(
+					 File theFile, [Integer arg2] )
+					</div>
+					<div class="Description"><p>Reads one line from a text file.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_readbytes" class="IndexMethodName">ReadBytes</a>(
+					 File theFile, Integer numBytes )
+					</div>
+					<div class="Description"><p>Reads and returns a block of Bytes
+    data from the specified File.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_readuntil" class="IndexMethodName">ReadUntil</a>(
+					 File theFile, String delimiter )
+					</div>
+					<div class="Description"><p>Read file until the delimiter is found.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_readvalue" class="IndexMethodName">ReadValue</a>(
+					 File theFile )
+					</div>
+					<div class="Description"><p>Read an OScript Value from a file.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_rename" class="IndexMethodName">Rename</a>(
+					 Dynamic theFile, Dynamic name )
+					</div>
+					<div class="Description"><p>Renames the specified file.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_rewind" class="IndexMethodName">Rewind</a>(
+					 File theFile )
+					</div>
+					<div class="Description"><p>Sets the file read/write pointer back
+    to the start of the file.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_seek" class="IndexMethodName">Seek</a>(
+					 File theFile, Integer newPosition )
+					</div>
+					<div class="Description"><p>Set the file position pointer to a
+    new position.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_separator" class="IndexMethodName">Separator</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns the operating system-dependent
+    character used to separate directories in a path specification.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_setfilepermission" class="IndexMethodName">SetFilePermission</a>(
+					 String filePath, Integer permSettings )
+					</div>
+					<div class="Description"><p>Sets the specified file permission to the specified file.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_setname" class="IndexMethodName">SetName</a>(
+					 File theFile, String newName )
+					</div>
+					<div class="Description"><p>Sets the name of a file.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_startupdir" class="IndexMethodName">StartupDir</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns the full path of the Livelink
+    start-up directory.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_stat" class="IndexMethodName">Stat</a>(
+					 Dynamic statFile  )
+					</div>
+					<div class="Description"><p>Get an Assoc of the file status for
+    the given file.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_stringtofile" class="IndexMethodName">StringToFile</a>(
+					 String fileSpec )
+					</div>
+					<div class="Description"><p>Converts a file specification String
+    to an OScript file reference.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_systemdir" class="IndexMethodName">SystemDir</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns the name of the System directory.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_threaddir" class="IndexMethodName">ThreadDir</a>(
+					 [String directory] )
+					</div>
+					<div class="Description"><p>Returns or optionally sets the working
+    directory for the currently executing thread.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_write" class="IndexMethodName">Write</a>(
+					 File theFile, String text )
+					</div>
+					<div class="Description"><p>Writes the specified text to a text
+    file.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_writebytes" class="IndexMethodName">WriteBytes</a>(
+					 File theFile, Bytes value )
+					</div>
+					<div class="Description"><p>Writes the contents of Bytes to the
+    specified file and returns the number of bytes written.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_file_writevalue" class="IndexMethodName">WriteValue</a>(
+					 File theFile, Dynamic value )
+					</div>
+					<div class="Description"><p>Writes an OScript Value to a file.</p></div>
+				</div>
+			</div>
+
+
+				<h2>Class Attributes</h2>
+				<div class="ClassAttributes">
+					
+					<div class="Attribute">
+						<div class="Name">String <a name="ca_file_appendmode">AppendMode</a></div>
+						<div class="Description"><p>Passed to <a class="interdoc" href="#cm_file_write">File.Write()</a> to open
+  the file in Append mode; sets the write pointer to the end of the file. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ca_file_dostermination">DOSTermination</a></div>
+						<div class="Description"><p>Passed to <a class="interdoc" href="#cm_file_linetermination">File.LineTermination()</a>
+  to specify that DOS line termination be used. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_file_e_alreadyopen">E_AlreadyOpen</a></div>
+						<div class="Description"><p>Error returned by <a class="interdoc" href="#cm_file_open">File.Open()</a>
+  indicating that the specified file is currently open. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_file_e_cannotcopydirs">E_CannotCopyDirs</a></div>
+						<div class="Description"><p>Error returned by <a class="interdoc" href="#cm_file_copystart">File.CopyStart()</a>
+  indicating that the specified directory is a source directory. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_file_e_destalreadyexists">E_DestAlreadyExists</a></div>
+						<div class="Description"><p>Error returned by <a class="interdoc" href="#cm_file_copystart">File.CopyStart()</a>
+  indicating that the specified destination file already exists. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_file_e_eof">E_Eof</a></div>
+						<div class="Description"><p>Error returned by <a class="interdoc" href="#cm_file_read">File.Read()</a>
+  and <a class="interdoc" href="#cm_file_copynext">File.CopyNext()</a> indicating that the end of the file has been
+  reached. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_file_e_failedcreatingdest">E_FailedCreatingDest</a></div>
+						<div class="Description"><p>Error returned by <a class="interdoc" href="#cm_file_copystart">File.CopyStart()</a>
+  indicating that a problem occurred while creating the destination file. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_file_e_failedopeningdest">E_FailedOpeningDest</a></div>
+						<div class="Description"><p>Error returned by <a class="interdoc" href="#cm_file_copystart">File.CopyStart()</a>
+  indicating that an error occurred while attempting to open the specified destination
+  file.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_file_e_failedopeningsource">E_FailedOpeningSource</a></div>
+						<div class="Description"><p>Error returned by <a class="interdoc" href="#cm_file_copystart">File.CopyStart()</a>
+  indicating that an error occurred while attempting to open the specified source
+  file. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_file_e_filename">E_Filename</a></div>
+						<div class="Description"><p>Error returned by functions that require
+  a File specification indicating that a file name was not specified or that bad
+  file name syntax was used.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_file_e_filesystemerror">E_FileSystemError</a></div>
+						<div class="Description"><p>Error returned by various File built-in
+  functions indicating that an internal File system error occurred.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_file_e_insufficientmemory">E_InsufficientMemory</a></div>
+						<div class="Description"><p>Error returned by <a class="interdoc" href="#cm_file_copynext">File.CopyNext()</a> or <a class="interdoc" href="#cm_file_read">File.Read()</a>
+   indicating that there is not enough memory to perform the read or copy
+  operation. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_file_e_mode">E_Mode</a></div>
+						<div class="Description"><p>Error returned by <a class="interdoc" href="#cm_file_open">File.Open()</a>
+  indicating that an illegal open option was specified. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_file_e_modeerror">E_ModeError</a></div>
+						<div class="Description"><p>Error returned by various File built-in
+  functions indicating that the operation requires a stream File as opened
+  with <a class="interdoc" href="#cm_file_openstream">File.OpenStream()</a> instead of a regular file
+  as opened with <a class="interdoc" href="#cm_file_open">File.Open()</a>, or vice versa.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_file_e_notadirectory">E_NotADirectory</a></div>
+						<div class="Description"><p>Error returned by various File built-in
+  functions indicating that the specified directory is invalid.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_file_e_notenoughfreespace">E_NotEnoughFreeSpace</a></div>
+						<div class="Description"><p>Error returned by <a class="interdoc" href="#cm_file_copystart">File.CopyStart()</a>
+  indicating that there is not enough disk space to place a file in the specified
+  location. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_file_e_notopen">E_NotOpen</a></div>
+						<div class="Description"><p>Error returned by <a class="interdoc" href="#cm_file_open">File.Open()</a>
+  indicating that the specified file is not open. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_file_e_notopenforbinaryaccess">E_NotOpenForBinaryAccess</a></div>
+						<div class="Description"><p>Error returned by
+    <a class="interdoc" href="#cm_file_readbytes">File.ReadBytes()</a>,
+    <a class="interdoc" href="#cm_file_writebytes">File.WriteBytes()</a>, or
+    <a class="interdoc" href="#cm_file_seek">File.Seek()</a>
+    indicating that the File being operated upon is not in binary mode as required.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_file_e_notopenforread">E_NotOpenForRead</a></div>
+						<div class="Description"><p>Error returned by <a class="interdoc" href="#cm_file_read">File.Read()</a>
+  indicating that <a class="interdoc" href="#ca_file_readmode">File.ReadMode</a> or <a class="interdoc" href="#ca_file_readbinmode">File.ReadBinMode</a> was not passed
+  as the mode parameter to <a class="interdoc" href="#cm_file_open">File.Open()</a>. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_file_e_notopenforwrite">E_NotOpenForWrite</a></div>
+						<div class="Description"><p>Error returned by <a class="interdoc" href="#cm_file_write">File.Write()</a>
+  indicating that <a class="interdoc" href="#ca_file_writemode">File.WriteMode</a> or <a class="interdoc" href="#ca_file_writebinmode">File.WriteBinMode</a> was not passed
+  as the mode parameter to <a class="interdoc" href="#cm_file_open">File.Open()</a>. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_file_e_notsamedirectory">E_NotSameDirectory</a></div>
+						<div class="Description"><p>Error returned by <a class="interdoc" href="#cm_file_rename">File.Rename()</a>
+  indicating that the specified directory is different than the original file
+  directory. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_file_e_open">E_Open</a></div>
+						<div class="Description"><p>Error returned by <a class="interdoc" href="#cm_file_open">File.Open()</a>
+  indicating that the specified file could not be opened. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_file_e_sourcenotfound">E_SourceNotFound</a></div>
+						<div class="Description"><p>Error returned by <a class="interdoc" href="#cm_file_copystart">File.CopyStart()</a>
+  indicating that the specified source file cannot be located. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_file_e_targetdirnotfound">E_TargetDirNotFound</a></div>
+						<div class="Description"><p>Error returned by <a class="interdoc" href="#cm_file_copystart">File.CopyStart()</a>
+  indicating that the target directory cannot be located or does not exist. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_file_e_write">E_Write</a></div>
+						<div class="Description"><p>Error returned by <a class="interdoc" href="#cm_file_write">File.Write()</a>
+  or the <a class="interdoc" href="#cm_file_writebytes">File.WriteBytes</a> function indicating that there was an error writing to
+  the file. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_file_filecopytype">FileCopyType</a></div>
+						<div class="Description"><p>The type number for a value of type FileCopy.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_file_filetype">FileType</a></div>
+						<div class="Description"><p>The type number for a value of type File.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_file_freespacebig">FreeSpaceBig</a></div>
+						<div class="Description"><p>The value that can be returned by FreeSpace() if the amount of freespace exceeds the size of the largest Integer.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ca_file_readbinmode">ReadBinMode</a></div>
+						<div class="Description"><p>Passed to <a class="interdoc" href="#cm_file_open">File.Open()</a>; opens
+  the file for reading in binary mode. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ca_file_readmode">ReadMode</a></div>
+						<div class="Description"><p>Passed to <a class="interdoc" href="#cm_file_open">File.Open()</a>;
+  opens the file for reading in text mode. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ca_file_statdeviceid">StatDeviceID</a></div>
+						<div class="Description"><p>Constant used as an index in the Assoc returned by
+  <a class="interdoc" href="#cm_file_stat">Stat()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ca_file_statfilemode">StatFileMode</a></div>
+						<div class="Description"><p>Constant used as an index in the Assoc returned by
+  <a class="interdoc" href="#cm_file_stat">Stat()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ca_file_statgroupid">StatGroupID</a></div>
+						<div class="Description"><p>Constant used as an index in the Assoc returned by
+  <a class="interdoc" href="#cm_file_stat">Stat()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ca_file_statinodenumber">StatInodeNumber</a></div>
+						<div class="Description"><p>Constant used as an index in the Assoc returned by
+  <a class="interdoc" href="#cm_file_stat">Stat()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ca_file_statlastaccesstime">StatLastAccessTime</a></div>
+						<div class="Description"><p>Constant used as an index in the Assoc returned by
+  <a class="interdoc" href="#cm_file_stat">Stat()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ca_file_statlastchangetime">StatLastChangeTime</a></div>
+						<div class="Description"><p>Constant used as an index in the Assoc returned by
+  <a class="interdoc" href="#cm_file_stat">Stat()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ca_file_statlastmodifytime">StatLastModifyTime</a></div>
+						<div class="Description"><p>Constant used as an index in the Assoc returned by
+  <a class="interdoc" href="#cm_file_stat">Stat()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ca_file_statnumberlinks">StatNumberLinks</a></div>
+						<div class="Description"><p>Constant used as an index in the Assoc returned by
+  <a class="interdoc" href="#cm_file_stat">Stat()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ca_file_statrdevice">StatRDevice</a></div>
+						<div class="Description"><p>Constant used as an index in the Assoc returned by
+  <a class="interdoc" href="#cm_file_stat">Stat()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ca_file_statsize">StatSize</a></div>
+						<div class="Description"><p>Constant used as an index in the Assoc returned by
+  <a class="interdoc" href="#cm_file_stat">Stat()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ca_file_statuserid">StatUserID</a></div>
+						<div class="Description"><p>Constant used as an index in the Assoc returned by
+  <a class="interdoc" href="#cm_file_stat">Stat()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_file_stauserid">StaUserID</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ca_file_unixtermination">UNIXTermination</a></div>
+						<div class="Description"><p>Passed to <a class="interdoc" href="#cm_file_linetermination">File.LineTermination()</a>;
+  sets line termination to UNIX line termination. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ca_file_writebinmode">WriteBinMode</a></div>
+						<div class="Description"><p>Passed to <a class="interdoc" href="#cm_file_open">File.Open()</a>; opens
+  the file for writing in binary mode. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ca_file_writemode">WriteMode</a></div>
+						<div class="Description"><p>Passed to <a class="interdoc" href="#cm_file_open">File.Open()</a>; opens
+  the file for writing in text mode. </p></div>
+					</div>
+				
+				</div>
+				<h2>Instance Attributes</h2>
+				<div class="InstanceAttributes">
+					
+					<div class="Attribute">
+						<div class="Name">Date <a name="ia_file_pcreatedate">pCreateDate</a></div>
+						<div class="Description"><p>Date and time on which the file was created.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ia_file_pcreator">pCreator</a></div>
+						<div class="Description"><p>Not used.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ia_file_plinetermination">pLineTermination</a></div>
+						<div class="Description"><p>Line terminator currently set for the
+  file. This feature defaults to the appropriate value for the platform from which
+  the file is obtained. The <a class="interdoc" href="#ca_file_dostermination">File.DOSTermination</a> and <a class="interdoc" href="#ca_file_unixtermination">File.UNIXTermination</a> constants
+  are available for use with this property. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Date <a name="ia_file_pmodifydate">pModifyDate</a></div>
+						<div class="Description"><p>The date and time on which the file was
+  most recently modified.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Boolean <a name="ia_file_preadonly">pReadOnly</a></div>
+						<div class="Description"><p>DOS read-only file attribute.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_file_presourcesize">pResourceSize</a></div>
+						<div class="Description"><p>Always return 0.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Long <a name="ia_file_psize">pSize</a></div>
+						<div class="Description"><p>The size (in bytes) of the file.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ia_file_ptype">pType</a></div>
+						<div class="Description"><p>The file type.</p></div>
+					</div>
+				
+				</div>
+
+		
+				<h2>Class Methods</h2>
+				<div class="ClassMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_access">Access</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">Access</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">filePath </span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Searches for the specified file. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">filePath </span><span class="description"><p>A String indicating the local
+            file path and file name. The path can be specified in full or partially.
+            The name of the file (for example, MYFILE.TXT) must be specified.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The full file path of the specified
+      file, if found; Undefined otherwise.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>If only a partial file path is specified, the search
+    is performed in the following order:</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_close">Close</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">Close</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">File</span> <span class="PrototypeArgumentName">openFile </span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Closes an open file. To avoid resource leaks,
+    close all open files when they are no longer needed. See <a class="interdoc" href="#cm_file_open">File.Open()</a>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">openFile </span><span class="description"><p>A File opened by <a class="interdoc" href="#cm_file_open">File.Open()</a>.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A Boolean value where TRUE indicates
+      that the file was successfully closed; Error otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_copyend">CopyEnd</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">CopyEnd</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">FileCopy</span> <span class="PrototypeArgumentName">operation </span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Ends the file copy operation and closes the File
+    being copied. See <a class="interdoc" href="#cm_file_copystart">File.CopyStart()</a> and <a class="interdoc" href="#cm_file_copynext">File.CopyNext()</a>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">operation </span><span class="description"><p>A FileCopy, as returned by
+            the <a class="interdoc" href="#cm_file_copystart">File.CopyStart</a> function, indicating the file copy operation to
+            end.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A Boolean value where TRUE indicates
+      that the operation successfully ended and closed the file.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_copynext">CopyNext</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">CopyNext</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">FileCopy</span> <span class="PrototypeArgumentName">operation </span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Copies the next block in the specified file copy
+    operation. See <a class="interdoc" href="#cm_file_copystart">File.CopyStart()</a> and <a class="interdoc" href="#cm_file_copyend">File.CopyEnd()</a>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">operation </span><span class="description"><p>A FileCopy value, as returned by
+            <a class="interdoc" href="#cm_file_copystart">File.CopyStart()</a>, indicating the file copy operation to
+            continue.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>TRUE if there are more
+      file blocks to copy, <a class="interdoc" href="#ca_file_e_eof">File.E_Eof</a> if the last block was copied; or another
+      Error if an error occurred in the file copy process. </p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_copystart">CopyStart</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">FileCopy</span> 
+						<span class="PrototypeselfName">CopyStart</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">source</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">destination</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">blockSize</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Begins a file copy operation. This function fails
+    and returns Error if the file specified by the destination parameter exists.
+    Use <a class="interdoc" href="#cm_file_exists">File.Exists()</a> to determine if the file exists before
+    proceeding with File.CopyStart().  See <a class="interdoc" href="#cm_file_copynext">File.CopyNext()</a>
+    and <a class="interdoc" href="#cm_file_copyend">File.CopyEnd()</a>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">source</span><span class="description"><p>Either a File, as returned
+            by <a class="interdoc" href="#cm_file_stringtofile">File.StringToFile()</a>, or a String indicating the file
+            to be copied.</p></span></div>
+											<div class="Parameter"><span class="name">destination</span><span class="description"><p>Either a File, as returned
+            by <a class="interdoc" href="#cm_file_stringtofile">File.StringToFile()</a>, or a String indicating the path
+            and file name of the file to be copied to the source file.</p></span></div>
+											<div class="Parameter"><span class="name">blockSize</span><span class="description"><p>An optional Integer indicating
+            the size, in bytes, of the file blocks to be copied. Defaults to a
+            block size of 16K if not specified.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A FileCopy identifying the file
+      copy operation, if successful; Error otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_create">Create</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">Create</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">newFile</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Creates an empty text file or directory. The newly
+    created file must be opened by <a class="interdoc" href="#cm_file_open">File.Open()</a> before it can be used.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">newFile</span><span class="description"><p>Either a file or directory,
+            as returned by <a class="interdoc" href="#cm_file_stringtofile">File.StringToFile()</a>, or a String indicating
+            the file or directory (including full path specification) to be created.
+            Defaults to the current directory if no path is specified. A directory
+            is created if the operating system-specific directory separator is
+            included in newFile (for example, TEMP).</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A Boolean value where TRUE indicates
+      that the file or directory was created.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_delete">Delete</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">Delete</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">delFile </span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Deletes the specified file or directory. No confirmation
+    dialog box is displayed before the specified file or directory is deleted.
+    The File.Delete function fails and returns FALSE if the specified directory
+    is not empty. The File.Delete function will fail if the file being deleted
+    was opened by <a class="interdoc" href="#cm_file_open">File.Open()</a>. If the file is open, it must be closed
+    by <a class="interdoc" href="#cm_file_close">File.Close()</a> before it can be deleted.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">delFile </span><span class="description"><p>Either a File, as returned
+            by <a class="interdoc" href="#cm_file_stringtofile">File.StringToFile()</a>, referencing the desired file, or
+            a String indicating the file or directory to be deleted. Defaults
+            to the current directory if no path is specified.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A Boolean value where TRUE indicates
+      that the file or directory was successfully deleted.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_dir">Dir</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">Dir</span><span class="PrototypePunctuation">(</span> <span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">directory</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the name of the current directory and changes it if a new directory is specified. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">directory</span><span class="description"><p>An optional String indicating
+            the new current directory. If not specified, the current directory
+            will not be changed.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String indicating the current
+      directory. If a new directory was specified, the original directory is returned.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_eof">Eof</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">Eof</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">File</span> <span class="PrototypeArgumentName">openFile</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Determines whether the current file position is
+    at the end of file. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">openFile</span><span class="description"><p>A File opened by <a class="interdoc" href="#cm_file_open">File.Open()</a>.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A Boolean value where TRUE indicates
+      that the current file position is at the end of file.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_exists">Exists</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">Exists</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">theFile </span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Determines if the specified file or directory
+    exists. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theFile </span><span class="description"><p>Either a File, as returned
+            by <a class="interdoc" href="#cm_file_filetostring">File.FileToString()</a>, referencing the desired file or
+            directory, or a String indicating the name of the file or directory.
+            Defaults to the current directory if no path is specified.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A Boolean value where TRUE indicates
+      that the specified file or directory exists.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_filelist">FileList</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">List</span> 
+						<span class="PrototypeselfName">FileList</span><span class="PrototypePunctuation">(</span> <span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">directory</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a List of all of the files in the specified
+    directory. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">directory</span><span class="description"><p>An optional String indicating
+            the directory whose files are to be listed. Defaults to the current
+            directory if not specified.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A List containing String elements,
+      each of which is the name of a file in the specified directory.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_filetostring">FileToString</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">FileToString</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">File</span> <span class="PrototypeArgumentName">theFile</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts a File reference to a String.
+    This function is the converse of <a class="interdoc" href="#cm_file_stringtofile">File.StringToFile()</a>,
+    and not <a class="interdoc" href="str.html#cm_str_filetostring">Str.FileToString()</a>, in that it
+    does nothing regarding the contents of a file, but rather it only returns the
+    file name with appropriate path information as related to an open File. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theFile</span><span class="description"><p>A File, as returned by
+            <a class="interdoc" href="#cm_file_stringtofile">File.StringToFile</a> or <a class="interdoc" href="#cm_file_open">File.Open()</a>, referencing
+            the File to be converted to a String.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String specifying the name of
+      the file, including any supplied path information.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_flush">Flush</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Dynamic</span> 
+						<span class="PrototypeselfName">Flush</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">File</span> <span class="PrototypeArgumentName">theFile</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Flushes the file buffer.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theFile</span><span class="description"><p>A File, as returned by
+            <a class="interdoc" href="#cm_file_stringtofile">File.StringToFile()</a> or <a class="interdoc" href="#cm_file_open">File.Open()</a>.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Undefined if successful, or an Error
+      if the operation failed.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>If the file is open for output, Flush() writes the contents of the buffer
+    to that file. If the file is open for input, Flush() clears the contents of
+    the buffer. </p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_freespace">FreeSpace</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Long</span> 
+						<span class="PrototypeselfName">FreeSpace</span><span class="PrototypePunctuation">(</span> <span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">target</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the number of free bytes in the target directory, or the current directory. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">target</span><span class="description"><p>An optional String indicating
+            the target directory. If not specified, the current directory
+            will be the target.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A Long indicating the number of free bytes
+      in the directory.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_getfilepermission">GetFilePermission</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">GetFilePermission</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">filePath</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the permissions of the specified file. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">filePath</span><span class="description"><p>The file path.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The permission settings on the file if successful; 0 (zero) otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_getname">GetName</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">GetName</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">theFile</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the file name of a File, not including the path. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theFile</span><span class="description"><p>Either a File, as returned
+            by <a class="interdoc" href="#cm_file_stringtofile">File.StringToFile()</a> or
+            <a class="interdoc" href="#cm_file_open">File.Open()</a>, referencing the desired
+            file or a String indicating the name of the file.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String containing the file name
+      (file and extension), not including the path.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_getpath">GetPath</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">GetPath</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">myFile</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the directory specification for a file. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">myFile</span><span class="description"><p>Either a File, as returned
+            by <a class="interdoc" href="#cm_file_stringtofile">File.StringToFile()</a> or
+            <a class="interdoc" href="#cm_file_open">File.Open()</a>, referencing the desired
+            file or a String indicating the name of the file.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String containing only the path
+      name, including a directory separator. Returns an empty String if the myFile
+      parameter does not specify a path.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_isdir">IsDir</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">IsDir</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">directory</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Determines whether the supplied String represents
+    an existing directory when the object being tested is accessible. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">directory</span><span class="description"><p>A String indicating the directory
+            name.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A Boolean value where TRUE indicates
+      that the directory parameter specifies an existing directory. Note that the function would also return FALSE when the object being tested is not accessible due to various reasons (e.g., network failure, insufficient permissions). </p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_isdirspec">IsDirSpec</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">IsDirSpec</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">directory</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Determines whether the last character of the supplied
+    String is a directory separator. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">directory</span><span class="description"><p>A String to test.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A Boolean value where TRUE indicates
+      that the last character of the supplied String is the system-dependent directory
+      separator. This function does not check for the existence of the specified
+      directory.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_istext">IsText</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">IsText</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">theFile</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Determines if the specified file is a text file.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theFile</span><span class="description"><p>Either a File, as returned
+            by <a class="interdoc" href="#cm_file_stringtofile">File.StringToFile()</a> or
+            <a class="interdoc" href="#cm_file_open">File.Open()</a>, referencing the desired
+            file or a String indicating the name of the file. Defaults to the
+            current directory if no path is specified.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A Boolean value where TRUE indicates
+      that the specified file has a txt extension.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_linetermination">LineTermination</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">LineTermination</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">File</span> <span class="PrototypeArgumentName">theFile</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">terminator</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Alters the system-dependent default
+    line termination used by <a class="interdoc" href="#cm_file_write">File.Write()</a> for a given File.
+    This allows text files to be created for use on different platforms. This
+    function alters the system-dependent default line termination used by
+    <a class="interdoc" href="#cm_file_write">File.Write()</a>. This allows text
+    files to be created for use on different platforms.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theFile</span><span class="description"><p>A File, as returned by
+            <a class="interdoc" href="#cm_file_stringtofile">File.StringToFile()</a> or
+            <a class="interdoc" href="#cm_file_open">File.Open()</a>, referencing the File on which
+            to operate.</p></span></div>
+											<div class="Parameter"><span class="name">terminator</span><span class="description"><p>A String constant indicating
+            the type of line termination to use.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String specifying the line termination
+      character string, identical to the String provided in the terminator parameter.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_nextblock">NextBlock</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">NextBlock</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">FileCopy</span> <span class="PrototypeArgumentName">operation</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the ordinal number of the next file block
+    to be copied. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">operation</span><span class="description"><p>A FileCopy, as returned by
+            <a class="interdoc" href="#cm_file_copystart">File.CopyStart()</a>, indicating the desired file copy operation.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An Integer specifying the number
+      of the next block to be copied.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_numblocks">NumBlocks</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">NumBlocks</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">FileCopy</span> <span class="PrototypeArgumentName">operation</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the number of file blocks to be copied.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">operation</span><span class="description"><p>A FileCopy value, as returned by
+            <a class="interdoc" href="#cm_file_copystart">File.CopyStart()</a>, indicating the
+            desired file copy operation.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An Integer specifying the total
+      number of blocks to be copied.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_open">Open</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">File</span> 
+						<span class="PrototypeselfName">Open</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">theFile</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">mode</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Opens a text file in preparation for an append,
+    read, or write operation. Note that the file is not opened as a stream file,
+    as with <a class="interdoc" href="#cm_file_openstream">File.OpenStream()</a>, and certain
+    read and write operations, such as <a class="interdoc" href="#cm_file_readvalue">File.ReadValue()</a>,
+    <a class="interdoc" href="#cm_file_readuntil">File.ReadUntil()</a>, and
+    <a class="interdoc" href="#cm_file_writevalue">File.WriteValue()</a> require a stream file.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theFile</span><span class="description"><p>Either a File, as returned
+            by <a class="interdoc" href="#cm_file_stringtofile">File.StringToFile()</a>, or
+            a String indicating a file name
+            and an optional path to the desired file.</p></span></div>
+											<div class="Parameter"><span class="name">mode</span><span class="description"><p>A mode constant indicating
+            the operation to be performed on the open file.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A File representing the open file
+      if successful; Error otherwise.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>If the file was opened for write
+    (<a class="interdoc" href="#cm_file_open">File.Open()</a> mode = <a class="interdoc" href="#ca_file_writemode">File.WriteMode</a>), the write
+    pointer is positioned at the beginning of the file, all text currently in
+    the file is deleted. If the file was opened for append (File.Open()
+    mode = <a class="interdoc" href="#ca_file_appendmode">File.AppendMode</a>),
+    the write pointer is positioned at the end of the file. If the specified file
+    does not exist and either the <a class="interdoc" href="#ca_file_appendmode">File.AppendMode</a> or <a class="interdoc" href="#ca_file_writemode">File.WriteMode</a> constant is
+    specified, the file is automatically created and then opened.</p>
+<p>The File.Open
+    function may fail if the specified file cannot be found, if the required operating
+    system-specific permissions are not set, or if there is insufficient memory
+    to open the file. Each successful call to the File.Open function should be
+    followed with a subsequent <a class="interdoc" href="#cm_file_close">File.Close()</a> once the file is no longer
+    needed.</p>
+<p>For an example, See <a class="interdoc" href="#cm_file_read">File.Read()</a>.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_openstream">OpenStream</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">File</span> 
+						<span class="PrototypeselfName">OpenStream</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">theFile</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">mode</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Similar to <a class="interdoc" href="#cm_file_open">File.Open()</a>,
+  except that the file is opened as a stream file.  A stream file differs
+  from a regular file in that behaves as a stream, pipe, socket, or C's STDIN.  Because of this
+  cannot be traversed (<a class="interdoc" href="#cm_file_seek">File.Seek()</a> and
+  <a class="interdoc" href="#cm_file_rewind">File.Rewind()</a> are not supported on stream files)
+  and, while its input can be exhausted, <a class="interdoc" href="#cm_file_eof">File.Eof()</a> does
+  not apply in practice, since there is no "end" to the stream since the
+  potential for more input exists while the stream is open.  Various other operations
+  are not supported for streams, such as <a class="interdoc" href="#cm_file_read">File.Read()</a>
+  or <a class="interdoc" href="#cm_file_readbytes">File.ReadBytes()</a>.  Meanwhile, other
+  operations are available only to stream files, such as
+  <a class="interdoc" href="#cm_file_readuntil">File.ReadUntil()</a>,
+  <a class="interdoc" href="#cm_file_readvalue">File.ReadValue()</a>, and
+  <a class="interdoc" href="#cm_file_writevalue">File.WriteValue()</a>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theFile</span><span class="description"><p>The stream File to open, which should
+            be either a String specifying the file, or a File as from
+            <a class="interdoc" href="#cm_file_filetostring">File.FileToString()</a>.</p></span></div>
+											<div class="Parameter"><span class="name">mode</span><span class="description"><p>A mode constant
+          (<a class="interdoc" href="#ca_file_readmode">File.ReadMode</a>, etc.) indicating
+          the operation to be performed on the file.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The newly opened file if
+      successful; Error otherwise.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>For an example, see <a class="interdoc" href="#cm_file_readvalue">File.ReadValue()</a>.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_read">Read</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">Read</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">File</span> <span class="PrototypeArgumentName">theFile</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">arg2</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Reads one line from a text file. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theFile</span><span class="description"><p>A File, as returned by
+            <a class="interdoc" href="#cm_file_open">File.Open()</a>, referencing a file that was opened for a normal, and not binary, read
+            operation.</p></span></div>
+											<div class="Parameter"><span class="name">arg2</span><span class="description"><p>An optional Integer indicating
+            the number of characters to read. If not included, one line, as determined
+            by an operating system-specific line delimiter, is read. To read a
+            line that is longer than the default of 1024 characters, specify a value between
+            1024 and 65,534 inclusive. Values outside of this range will be ignored.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String containing one line of
+      the File (not including the line delimiter) if successful; Error otherwise.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>The specified File must be opened by <a class="interdoc" href="#cm_file_open">File.Open()</a> with
+    the mode parameter set to <a class="interdoc" href="#ca_file_readmode">File.ReadMode</a>. After execution,
+    Read() sets the read pointer to the next character.  Here is an example:</p>
+<div class="codehilite"><pre><span class="kt">String</span>  fname <span class="o">=</span> <span class="s">&quot;c:/tmp/somefile.txt&quot;</span>
+File    f <span class="o">=</span> File<span class="o">.</span>Open<span class="p">(</span> fname<span class="p">,</span> File<span class="o">.</span>WriteMode <span class="p">)</span>
+File    fr
+<span class="kt">String</span>  s <span class="o">=</span> <span class="s">&quot;&quot;</span>
+
+File<span class="o">.</span>Write<span class="p">(</span> f<span class="p">,</span> <span class="s">&quot;This is some text.&quot;</span> <span class="p">)</span>
+File<span class="o">.</span>Write<span class="p">(</span> f<span class="p">,</span> <span class="s">&quot;This is some more text.&quot;</span> <span class="p">)</span>
+
+File<span class="o">.</span>Close<span class="p">(</span> f <span class="p">)</span>
+
+fr <span class="o">=</span> File<span class="o">.</span>Open<span class="p">(</span> fname<span class="p">,</span> File<span class="o">.</span>ReadMode <span class="p">)</span>
+
+<span class="k">if</span> <span class="p">(</span> <span class="o">!</span>IsError<span class="p">(</span> fr <span class="p">)</span> <span class="p">)</span>
+    <span class="k">for</span> <span class="p">(</span> s <span class="o">=</span> File<span class="o">.</span>Read<span class="p">(</span> fr <span class="p">);</span> \
+          s <span class="o">!=</span> File<span class="o">.</span>E_Eof<span class="p">;</span> \
+          s <span class="o">=</span> File<span class="o">.</span>Read<span class="p">(</span> fr <span class="p">)</span> <span class="p">)</span>
+
+        Echo<span class="p">(</span> s <span class="p">)</span>
+    <span class="k">end</span>
+
+    File<span class="o">.</span>Close<span class="p">(</span> fr <span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre>This is some text<span class="o">.</span>
+This is some more text<span class="o">.</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_readbytes">ReadBytes</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Bytes</span> 
+						<span class="PrototypeselfName">ReadBytes</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">File</span> <span class="PrototypeArgumentName">theFile</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">numBytes</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Reads and returns a block of Bytes data from the
+    specified File. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theFile</span><span class="description"><p>A File, opened with
+            <a class="interdoc" href="#cm_file_open">File.Open()</a> in
+            <a class="interdoc" href="#ca_file_readbinmode">File.ReadBinMode</a>, from which to read.</p></span></div>
+											<div class="Parameter"><span class="name">numBytes</span><span class="description"><p>Specifies an Integer indicating the
+            number of bytes to read, up to a maximum of 32K.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The number of Bytes read; Error
+      otherwise.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>The specified File must be opened by <a class="interdoc" href="#cm_file_open">File.Open()</a>
+    with the mode parameter set to <a class="interdoc" href="#ca_file_readbinmode">File.ReadBinMode</a>.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_readuntil">ReadUntil</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">ReadUntil</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">File</span> <span class="PrototypeArgumentName">theFile</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">delimiter</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Reads a stream File until the specified delimiter is found. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theFile</span><span class="description"><p>The stream File from which to read, as opened by <a class="interdoc" href="#cm_file_openstream">File.OpenStream()</a>.</p></span></div>
+											<div class="Parameter"><span class="name">delimiter</span><span class="description"><p>A character delimiter which stops reading when encountered.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String if no error resulted, which
+      will be the characters read either up to and including
+      <em>delimiter</em> if it is found,
+      or until the stream is exhausted.  The File must be a stream, as opened with
+      <a class="interdoc" href="#cm_file_openstream">File.OpenStream()</a>, otherwise <a class="interdoc" href="#ca_file_e_notopenforbinaryaccess">File.E_NotOpenForBinaryAccess</a> is returned.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_readvalue">ReadValue</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Dynamic</span> 
+						<span class="PrototypeselfName">ReadValue</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">File</span> <span class="PrototypeArgumentName">theFile</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Reads an OScript Value from a stream File. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theFile</span><span class="description"><p>A stream file, as opened with
+            <a class="interdoc" href="#cm_file_openstream">File.OpenStream()</a>, from which one OScript value,
+            as written by <a class="interdoc" href="#cm_file_writevalue">File.WriteValue()</a>,
+            is read.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The value read, or Undefined
+      if there was nothing on the stream to read, or
+      <a class="interdoc" href="#ca_file_e_modeerror">File.E_ModeError</a>
+      if the File is not a stream as opened with <a class="interdoc" href="#cm_file_openstream">File.OpenStream()</a>.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>File.ReadValue() can only be used on a stream.
+    ReadValue() may return unpredictable results if the value read
+    was not written with <a class="interdoc" href="#cm_file_writevalue">File.WriteValue()</a>.
+    Here is an example:</p>
+<div class="codehilite"><pre><span class="kt">String</span>  fname <span class="o">=</span> <span class="s">&quot;c:/tmp/somefile.txt&quot;</span>
+File    f <span class="o">=</span> File<span class="o">.</span>OpenStream<span class="p">(</span> fname<span class="p">,</span> File<span class="o">.</span>WriteMode <span class="p">)</span>
+File    fr
+<span class="kt">String</span>  s
+
+File<span class="o">.</span>WriteValue<span class="p">(</span> f<span class="p">,</span> <span class="s">&quot;This is some text.&quot;</span> <span class="p">)</span>
+File<span class="o">.</span>WriteValue<span class="p">(</span> f<span class="p">,</span> <span class="m">6</span> <span class="p">)</span>
+File<span class="o">.</span>WriteValue<span class="p">(</span> f<span class="p">,</span> <span class="p">{</span> <span class="m">8</span><span class="p">,</span> Date<span class="o">.</span>Now<span class="p">(),</span> <span class="m">4.7</span><span class="p">,</span> <span class="s">&quot;blue&quot;</span> <span class="p">}</span> <span class="p">)</span>
+File<span class="o">.</span>WriteValue<span class="p">(</span> f<span class="p">,</span> <span class="s">&quot;This is some more text.&quot;</span> <span class="p">)</span>
+
+File<span class="o">.</span>Close<span class="p">(</span> f <span class="p">)</span>
+
+fr <span class="o">=</span> File<span class="o">.</span>OpenStream<span class="p">(</span> fname<span class="p">,</span> File<span class="o">.</span>ReadMode <span class="p">)</span>
+
+<span class="k">if</span> <span class="p">(</span> <span class="o">!</span>IsError<span class="p">(</span> fr <span class="p">)</span> <span class="p">)</span>
+    <span class="k">while</span> IsDefined<span class="p">(</span> s <span class="o">=</span> File<span class="o">.</span>ReadValue<span class="p">(</span> fr <span class="p">)</span> <span class="p">)</span>
+        Echo<span class="p">(</span> s <span class="p">)</span>
+    <span class="k">end</span>
+
+    File<span class="o">.</span>Close<span class="p">(</span> fr <span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre>This is some text<span class="o">.</span>
+<span class="m">6</span>
+<span class="p">{</span><span class="m">8</span><span class="p">,</span>D<span class="o">/</span><span class="m">1998</span><span class="o">/</span><span class="m">9</span><span class="o">/</span><span class="m">2</span><span class="o">:</span><span class="m">2</span><span class="o">:</span><span class="m">7</span><span class="o">:</span><span class="m">16</span><span class="p">,</span>G<span class="m">4.7</span><span class="p">,</span><span class="s">&#39;blue&#39;</span><span class="p">}</span>
+This is some more text<span class="o">.</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_rename">Rename</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">Rename</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">theFile</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">name</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Renames the specified file. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theFile</span><span class="description"><p>Either a File, as returned
+            by <a class="interdoc" href="#cm_file_stringtofile">File.StringToFile()</a>, or a String specifying the name
+            of the file to rename.</p></span></div>
+											<div class="Parameter"><span class="name">name</span><span class="description"><p>Either a File, as returned
+            by the <a class="interdoc" href="#cm_file_stringtofile">File.StringToFile</a> function, or a String specifying the new
+            file name.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A Boolean value where TRUE indicates
+      that the file was successfully renamed.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>A full path for the file to be renamed can be specified, but the same path
+    must be specified in the new file name. This function cannot be used to move
+    a file from one directory to another. This function will fail if the name
+    parameter specifies an existing file.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_rewind">Rewind</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">Rewind</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">File</span> <span class="PrototypeArgumentName">theFile</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sets the file read/write pointer back
+    to the start of the file. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theFile</span><span class="description"><p>Specifies a File, as returned by
+            <a class="interdoc" href="#cm_file_open">File.Open()</a>, indicating the File to rewind.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A Boolean value where TRUE indicates
+      that the pointer was successfully moved to the start of the file.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>If a File that has already been written to is rewound, the next write operation
+    is performed at the beginning of the File, thus overwriting any previously written
+    text.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_seek">Seek</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Seek</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">File</span> <span class="PrototypeArgumentName">theFile</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">newPosition</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Set the file position pointer to a new position.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theFile</span><span class="description"><p>A File, as returned by
+            <a class="interdoc" href="#cm_file_open">File.Open()</a> with mode
+            <a class="interdoc" href="#ca_file_readbinmode">File.ReadBinMode</a>.</p></span></div>
+											<div class="Parameter"><span class="name">newPosition</span><span class="description"><p>The new position that the
+            read/write position pointer should be set to.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The new position of the file
+      position pointer, or an error if the file was not opened, or the
+      mode is not <a class="interdoc" href="#ca_file_readbinmode">File.ReadBinMode</a>, or the file is a stream file.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_separator">Separator</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">Separator</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the operating system-dependent character
+    used to separate directories in a path specification. </p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The system-dependent directory separator
+      character.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_setfilepermission">SetFilePermission</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">SetFilePermission</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">filePath</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">permSettings</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sets the specified file permission to the specified file.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">filePath</span><span class="description"><p>The file path.</p></span></div>
+											<div class="Parameter"><span class="name">permSettings</span><span class="description"><p>Permission setting for the file.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>true if successful, false else.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_setname">SetName</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">File</span> 
+						<span class="PrototypeselfName">SetName</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">File</span> <span class="PrototypeArgumentName">theFile</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">newName</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sets the name of a file (but not the extension).</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theFile</span><span class="description"><p>A File, as returned by
+            <a class="interdoc" href="#cm_file_stringtofile">File.StringToFile()</a>, of the file to be named.</p></span></div>
+											<div class="Parameter"><span class="name">newName</span><span class="description"><p>A String indicating the new
+            name of the file.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A File reference to the modified
+      file if successful; Error otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_startupdir">StartupDir</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">StartupDir</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the full path of the Livelink start-up
+    directory.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String indicating the directory
+      from which the currently executing process was started.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_stat">Stat</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Assoc</span> 
+						<span class="PrototypeselfName">Stat</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">statFile </span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the status of the specified file or directory.
+    This is intended to be used by those who are familiar with the ANSI
+    stat function. It will return an Assoc of values for platform-specific status
+    information. Constants are available to use as keys into the returned Assoc (see below).</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">statFile </span><span class="description"><p>Either a File, as returned by <a class="interdoc" href="#cm_file_stringtofile">File.StringToFile()</a>,
+            referencing the desired file, or a String indicating the file or directory.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An Assoc of the status values on
+      success; undefined otherwise.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>The valid key values are <a class="interdoc" href="#ca_file_statfilemode">StatFileMode</a>,
+      <a class="interdoc" href="#ca_file_statinodenumber">StatInodeNumber</a>, <a class="interdoc" href="#ca_file_statdeviceid">StatDeviceID</a>,
+      <a class="interdoc" href="#ca_file_statrdevice">StatRDevice</a>, <a class="interdoc" href="#ca_file_statnumberlinks">StatNumberLinks</a>,
+      <a class="interdoc" href="#ca_file_statuserid">StatUserID</a>, <a class="interdoc" href="#ca_file_statgroupid">StatGroupID</a>,
+      <a class="interdoc" href="#ca_file_statsize">StatSize</a>, <a class="interdoc" href="#ca_file_statlastaccesstime">StatLastAccessTime</a>,
+      <a class="interdoc" href="#ca_file_statlastmodifytime">StatLastModifyTime</a>, and <a class="interdoc" href="#ca_file_statlastchangetime">StatLastChangeTime</a>.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_stringtofile">StringToFile</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">File</span> 
+						<span class="PrototypeselfName">StringToFile</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">fileSpec</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts a file specification String to an OScript
+    file reference.  See <a class="interdoc" href="#cm_file_filetostring">File.FileToString()</a>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">fileSpec</span><span class="description"><p>Specifies a String file specification
+            that can optionally contain path information.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A File referencing the specified
+      file.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_systemdir">SystemDir</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">SystemDir</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the name of the System directory.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The operating system-dependent system
+      directory.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>The directory returns depends upon the current platform:</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_threaddir">ThreadDir</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">ThreadDir</span><span class="PrototypePunctuation">(</span> <span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">directory</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sets or queries the current working directory for the this thread. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">directory</span><span class="description"><p>Specifies an optional String identifying
+            the desired working directory. Defaults to the working directory of
+            the currently executing thread if not specified.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String indicating the current
+      thread directory. If the directory parameter was specified, the String returned
+      indicates the previous thread directory before execution of this function.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Note: different threads can have different working directories. </p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_write">Write</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">Write</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">File</span> <span class="PrototypeArgumentName">theFile</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">text</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Writes the specified text to a text file. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theFile</span><span class="description"><p>Specifies a File, as returned by either
+            <a class="interdoc" href="#cm_file_open">File.Open()</a> or
+            <a class="interdoc" href="#cm_file_openstream">File.OpenStream()</a>, referencing a file that
+            is open for write or append in either
+            <a class="interdoc" href="#ca_file_writemode">File.WriteMode</a> or
+            <a class="interdoc" href="#ca_file_writebinmode">File.WriteBinMode</a>.</p></span></div>
+											<div class="Parameter"><span class="name">text</span><span class="description"><p>Specifies the String to be written
+            to the file. It can contain multiple line delimiters if multiple lines
+            are to be written. Once written, an operating system-specific line
+            delimiter is automatically appended to the end of the specified String.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A Boolean value where TRUE indicates
+      that the text was successfully written.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_writebytes">WriteBytes</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">WriteBytes</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">File</span> <span class="PrototypeArgumentName">theFile</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">value</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Writes the contents of Bytes to the specified
+    file and returns the number of bytes written.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theFile</span><span class="description"><p>A File, opened with either
+            <a class="interdoc" href="#cm_file_open">File.Open()</a> or
+            <a class="interdoc" href="#cm_file_openstream">File.OpenStream()</a> with mode
+            <a class="interdoc" href="#ca_file_writebinmode">File.WriteBinMode</a>,
+            to which the Bytes are to be written.</p></span></div>
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>A Bytes value indicating the binary
+            data to be written to the file.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The number of bytes written; Error
+      otherwise.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>The specified File may be a stream file, but it must be opened with mode
+    <a class="interdoc" href="#ca_file_writebinmode">File.WriteBinMode</a>. The function can return the error
+    <a class="interdoc" href="#ca_file_e_notopenforbinaryaccess">File.E_NotOpenForBinaryAccess</a>
+    if specified file is open but not in <a class="interdoc" href="#ca_file_writebinmode">File.WriteBinMode</a>,
+    or <a class="interdoc" href="#ca_file_e_notopen">File.E_NotOpen</a> if specified file is not
+    open.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_file_writevalue">WriteValue</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Dynamic</span> 
+						<span class="PrototypeselfName">WriteValue</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">File</span> <span class="PrototypeArgumentName">theFile</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">value</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Writes an OScript Value to the specified stream File.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theFile</span><span class="description"><p>A stream file, as opened with
+            <a class="interdoc" href="#cm_file_openstream">File.OpenStream()</a> and either mode
+            <a class="interdoc" href="#ca_file_writemode">File.WriteMode</a> or
+            <a class="interdoc" href="#ca_file_writebinmode">File.WriteBinMode</a>, to which the
+            specified value will be written.</p></span></div>
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>An OScript value which will
+            be written to the File for later reading with
+            <a class="interdoc" href="#cm_file_readvalue">File.ReadValue()</a>.  </p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Undefined if successful;
+      Error otherwise.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>For an example, see <a class="interdoc" href="#cm_file_readvalue">File.ReadValue()</a>.</p></div>
+							</div>
+						</div>
+				</div>
+		
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2018 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+
+
+
+</div>
+	</div>						
+						
+
+</div>
+
+</body></html>

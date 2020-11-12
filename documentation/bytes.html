@@ -1,0 +1,1324 @@
+
+<meta charset="UTF-8">
+<html>
+<head><title>Class: Bytes</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../syntax.css" type="text/css">
+<link rel="stylesheet" href="builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td  align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody></table>
+
+<div id="document">
+	
+<div class="sidebar_container">
+		
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink"><a href="assoc.html">Assoc</a></div>
+				<div class="packagelink"><a href="boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="builder.html">Builder</a></div>
+				<div class="packagelink curPage">Bytes</div>
+				<div class="packagelink"><a href="capi.html">CAPI</a></div>
+				<div class="packagelink"><a href="capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink"><a href="cachetree.html">CacheTree</a></div>
+				<div class="packagelink"><a href="compiler.html">Compiler</a></div>
+				<div class="packagelink"><a href="core.html">Core</a></div>
+				<div class="packagelink"><a href="dapi.html">DAPI</a></div>
+				<div class="packagelink"><a href="dapinode.html">DAPINODE</a></div>
+				<div class="packagelink"><a href="dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink"><a href="dapiversion.html">DAPIVERSION</a></div>
+				<div class="packagelink"><a href="domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="domcomment.html">DOMComment</a></div>
+				<div class="packagelink"><a href="domdocument.html">DOMDocument</a></div>
+				<div class="packagelink"><a href="domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink"><a href="domelement.html">DOMElement</a></div>
+				<div class="packagelink"><a href="domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink"><a href="domnamednodemap.html">DOMNamedNodeMap</a></div>
+				<div class="packagelink"><a href="domnode.html">DOMNode</a></div>
+				<div class="packagelink"><a href="domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="domtext.html">DOMText</a></div>
+				<div class="packagelink"><a href="date.html">Date</a></div>
+				<div class="packagelink"><a href="dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="env.html">Env</a></div>
+				<div class="packagelink"><a href="error.html">Error</a></div>
+				<div class="packagelink"><a href="file.html">File</a></div>
+				<div class="packagelink"><a href="filecopy.html">FileCopy</a></div>
+				<div class="packagelink"><a href="fileprefs.html">Fileprefs</a></div>
+				<div class="packagelink"><a href="frame.html">Frame</a></div>
+				<div class="packagelink"><a href="global.html">Global</a></div>
+				<div class="packagelink"><a href="integer.html">Integer</a></div>
+				<div class="packagelink"><a href="javaobject.html">JavaObject</a></div>
+				<div class="packagelink"><a href="language.html">Language</a></div>
+				<div class="packagelink"><a href="license.html">License</a></div>
+				<div class="packagelink"><a href="list.html">List</a></div>
+				<div class="packagelink"><a href="logging.html">Logging</a></div>
+				<div class="packagelink"><a href="long.html">Long</a></div>
+				<div class="packagelink"><a href="mailmessage.html">MailMessage</a></div>
+				<div class="packagelink"><a href="math.html">Math</a></div>
+				<div class="packagelink"><a href="memcached.html">Memcached</a></div>
+				<div class="packagelink"><a href="notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="object.html">Object</a></div>
+				<div class="packagelink"><a href="pop3session.html">POP3Session</a></div>
+				<div class="packagelink"><a href="patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="patfind.html">PatFind</a></div>
+				<div class="packagelink"><a href="pattern.html">Pattern</a></div>
+				<div class="packagelink"><a href="point.html">Point</a></div>
+				<div class="packagelink"><a href="profiler.html">Profiler</a></div>
+				<div class="packagelink"><a href="real.html">Real</a></div>
+				<div class="packagelink"><a href="recarray.html">RecArray</a></div>
+				<div class="packagelink"><a href="record.html">Record</a></div>
+				<div class="packagelink"><a href="regex.html">Regex</a></div>
+				<div class="packagelink"><a href="restclient.html">RestClient</a></div>
+				<div class="packagelink"><a href="saxparser.html">SAXParser</a></div>
+				<div class="packagelink"><a href="smtpsession.html">SMTPSession</a></div>
+				<div class="packagelink"><a href="ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="script.html">Script</a></div>
+				<div class="packagelink"><a href="security.html">Security</a></div>
+				<div class="packagelink"><a href="set.html">Set</a></div>
+				<div class="packagelink"><a href="socket.html">Socket</a></div>
+				<div class="packagelink"><a href="sql.html">Sql</a></div>
+				<div class="packagelink"><a href="sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink"><a href="str.html">Str</a></div>
+				<div class="packagelink"><a href="string.html">String</a></div>
+				<div class="packagelink"><a href="system.html">System</a></div>
+				<div class="packagelink"><a href="uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="void.html">Void</a></div>
+				<div class="packagelink"><a href="wapi.html">WAPI</a></div>
+				<div class="packagelink"><a href="wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink"><a href="web.html">Web</a></div>
+				<div class="packagelink"><a href="xslprocessor.html">XSLProcessor</a></div>
+				<div class="packagelink"><a href="zip.html">Zip</a></div>
+		</div>
+</div>
+
+	<div class="content_container">
+		<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+		<h1>Class: Bytes</h1><div class="ClassDescription"><p>The Bytes Package provides a set of functions for creating, inserting data into, and extracting data from instances of the Bytes datatype.</p>
+<p>The functions offered here support the creation of a Bytes (<a class="interdoc" href="#cm_bytes_allocate">Allocate()</a> and <a class="interdoc" href="#cm_bytes_newfromstring">NewFromString()</a>), storing values into a Bytes (various Put functions), and retrieving values from a Bytes (various Get functions).  The values supported are the following: </p>
+<ul>
+<li>Integers as signed or unsigned
+    values occupying 1, 2, or 4 bytes.</li>
+<li>Reals occupying either 4
+    or 8 bytes.</li>
+<li>Points.</li>
+<li>Bytes, which may be prepended
+    with a signed or unsigned 4-byte length indication.</li>
+<li>Strings either explicitly,
+    null-terminated (C-style), or prepended with a signed
+    or unsigned (Pascal-style) 4-byte length indication.</li>
+</ul></div>
+			<h2>Class Attributes</h2>
+			<div class="ClassAttributesShort">
+				
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_bytes_inplace">InPlace</a></div>
+					<div class="Description"><p>The flag constant indicating
+that Put operations should modify the passed Bytes instead of a returned copy.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_bytes_swap">Swap</a></div>
+					<div class="Description"><p>The flag constant indicating
+that Put and Get operations should swap bytes, if necessary, to maintain PC byte-order
+(little endian) compatibility.</p></div>
+				</div>
+				
+			</div>
+
+
+			<h2>Class Methods</h2>
+			<div class="ClassMethodsShort">
+				<div class="Method">
+					<div class="Name"><a href="#cm_bytes_allocate" class="IndexMethodName">Allocate</a>(
+					 Integer size )
+					</div>
+					<div class="Description"><p>Allocates a new Bytes of the given size.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_bytes_frombase64" class="IndexMethodName">FromBase64</a>(
+					 String inputString  )
+					</div>
+					<div class="Description"><p>Congerts base64 encoded string to a byte array.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_bytes_getbytes" class="IndexMethodName">GetBytes</a>(
+					 Bytes b, Integer startidx, Integer len )
+					</div>
+					<div class="Description"><p>Returns a subrange of the specified Bytes.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_bytes_getcstring" class="IndexMethodName">GetCString</a>(
+					 Bytes b, Integer startIdx, [Integer flags] )
+					</div>
+					<div class="Description"><p>Returns a String stored in the Bytes as a null-terminated string.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_bytes_geti1" class="IndexMethodName">GetI1</a>(
+					 Bytes b, Integer startidx, [Integer flags] )
+					</div>
+					<div class="Description"><p>Returns the Integer value of a signed byte in a Bytes.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_bytes_geti2" class="IndexMethodName">GetI2</a>(
+					 Bytes b, Integer startidx, [Integer flags] )
+					</div>
+					<div class="Description"><p>Returns an Integer from a signed, 2-byte value in a Bytes.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_bytes_geti4" class="IndexMethodName">GetI4</a>(
+					 Bytes b, Integer startidx, [Integer flags] )
+					</div>
+					<div class="Description"><p>Returns an Integer from a signed, 4-byte value in a Bytes.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_bytes_geti8" class="IndexMethodName">GetI8</a>(
+					 Bytes b, Integer startidx, [Integer flags] )
+					</div>
+					<div class="Description"><p>Returns an Integer from a signed, 8-byte value in a Bytes.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_bytes_getlbytes" class="IndexMethodName">GetLBytes</a>(
+					 Bytes b, Integer startidx, [Integer flags] )
+					</div>
+					<div class="Description"><p>Returns a subrange of Bytes from a Bytes as prepended by a signed length indication.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_bytes_getlstring" class="IndexMethodName">GetLString</a>(
+					 Bytes b, Integer startidx, [Integer flags] )
+					</div>
+					<div class="Description"><p>Returns a String from a Bytes as prepended by a signed length indication.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_bytes_getpbytes" class="IndexMethodName">GetPBytes</a>(
+					 Bytes b, Integer startidx, [Integer flags] )
+					</div>
+					<div class="Description"><p>Returns a subrange of Bytes from a Bytes as prepended by an unsigned length indication.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_bytes_getpoint" class="IndexMethodName">GetPoint</a>(
+					 Bytes b, Integer startidx, [Integer flags] )
+					</div>
+					<div class="Description"><p>Returns a Point from a Bytes.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_bytes_getpstring" class="IndexMethodName">GetPString</a>(
+					 Bytes b, Integer startidx, [Integer flags] )
+					</div>
+					<div class="Description"><p>Returns a String from a Bytes as prepended by an unsigned length indication (a Pascal String).</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_bytes_getr4" class="IndexMethodName">GetR4</a>(
+					 Bytes b, Integer startidx, [Integer flags] )
+					</div>
+					<div class="Description"><p>Returns a Real from a 4-byte value in a Bytes.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_bytes_getr8" class="IndexMethodName">GetR8</a>(
+					 Bytes b, Integer startidx, [Integer flags] )
+					</div>
+					<div class="Description"><p>Returns a Real from a 8-byte value in a Bytes.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_bytes_getstring" class="IndexMethodName">GetString</a>(
+					 Bytes b, Integer startidx, [Integer maxlen], [Integer flags] )
+					</div>
+					<div class="Description"><p>Returns a String extracted from the Bytes at the given index.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_bytes_getu1" class="IndexMethodName">GetU1</a>(
+					 Bytes b, Integer startidx, [Integer flags] )
+					</div>
+					<div class="Description"><p>Returns an Integer from a single byte unsigned value in a Bytes.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_bytes_getu2" class="IndexMethodName">GetU2</a>(
+					 Bytes b, Integer startidx, [Integer flags] )
+					</div>
+					<div class="Description"><p>Returns an Integer from a 2-byte unsigned value in a Bytes.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_bytes_getu4" class="IndexMethodName">GetU4</a>(
+					 Bytes b, Integer startidx, [Integer flags] )
+					</div>
+					<div class="Description"><p>Returns an Integer from a 4-byte unsigned value in a Bytes.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_bytes_newfromstring" class="IndexMethodName">NewFromString</a>(
+					 String s )
+					</div>
+					<div class="Description"><p>Returns a new Bytes containing the given String.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_bytes_putbytes" class="IndexMethodName">PutBytes</a>(
+					 Bytes b, Integer startidx, Bytes val, [Integer flags] )
+					</div>
+					<div class="Description"><p>Puts the contents of a Bytes into a Bytes.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_bytes_putcstring" class="IndexMethodName">PutCString</a>(
+					 Bytes b, Integer startidx, String val, [Integer flags] )
+					</div>
+					<div class="Description"><p>Puts a String into a Bytes terminating it with a null byte (as a C language String).</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_bytes_puti1" class="IndexMethodName">PutI1</a>(
+					 Bytes b, Integer startidx, Integer val, [Integer flags] )
+					</div>
+					<div class="Description"><p>Puts an Integer into a Bytes as a single byte signed value.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_bytes_puti2" class="IndexMethodName">PutI2</a>(
+					 Bytes b, Integer startidx, Integer val, [Integer flags] )
+					</div>
+					<div class="Description"><p>Puts an Integer into a Bytes as a 2-byte signed value.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_bytes_puti4" class="IndexMethodName">PutI4</a>(
+					 Bytes b, Integer startidx, Integer val, [Integer flags] )
+					</div>
+					<div class="Description"><p>Puts an Integer into a Bytes as a 4-byte signed value.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_bytes_puti8" class="IndexMethodName">PutI8</a>(
+					 Bytes b, Integer startidx, Integer val, [Integer flags] )
+					</div>
+					<div class="Description"><p>Puts an Integer into a Bytes as a 8-byte signed value.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_bytes_putlbytes" class="IndexMethodName">PutLBytes</a>(
+					 Bytes b, Integer startidx, Bytes val, [Integer flags] )
+					</div>
+					<div class="Description"><p>Puts the contents of a Bytes into a Bytes, prepended by a signed 4-byte length indication.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_bytes_putlstring" class="IndexMethodName">PutLString</a>(
+					 Bytes b, Integer startidx, String val, [Integer flags] )
+					</div>
+					<div class="Description"><p>Puts a String into a bytes, prepended by a 4-byte signed length indication.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_bytes_putpbytes" class="IndexMethodName">PutPBytes</a>(
+					 Bytes b, Integer startidx, Bytes val, [Integer flags] )
+					</div>
+					<div class="Description"><p>Puts the contents of a Bytes into a Bytes, prepended by an unsigned 4-byte length indication.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_bytes_putpoint" class="IndexMethodName">PutPoint</a>(
+					 Bytes b, Integer startidx, Point val, [Integer flags] )
+					</div>
+					<div class="Description"><p>Puts a Point into a Bytes.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_bytes_putpstring" class="IndexMethodName">PutPString</a>(
+					 Bytes b, Integer startidx, String val, [Integer flags] )
+					</div>
+					<div class="Description"><p>Puts a String into a bytes, prepended by a 4-byte unsigned length indication (as a Pascal String).</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_bytes_putr4" class="IndexMethodName">PutR4</a>(
+					 Bytes b, Integer startidx, Real val, [Integer flags] )
+					</div>
+					<div class="Description"><p>Puts a Real into a Bytes as a 4-byte value.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_bytes_putr8" class="IndexMethodName">PutR8</a>(
+					 Bytes b, Integer startidx, Real val, [Integer flags] )
+					</div>
+					<div class="Description"><p>Puts a Real into a Bytes as an 8-byte value.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_bytes_putstring" class="IndexMethodName">PutString</a>(
+					 Bytes b, Integer startidx, String val, [Integer flags] )
+					</div>
+					<div class="Description"><p>Puts a String into a Bytes.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_bytes_putu1" class="IndexMethodName">PutU1</a>(
+					 Bytes b, Integer startidx, Integer val, [Integer flags] )
+					</div>
+					<div class="Description"><p>Puts an Integer into a Bytes as a single byte unsigned value.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_bytes_putu2" class="IndexMethodName">PutU2</a>(
+					 Bytes b, Integer startidx, Integer val, [Integer flags] )
+					</div>
+					<div class="Description"><p>Puts an Integer into a Bytes as a 2-byte unsigned value.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_bytes_putu4" class="IndexMethodName">PutU4</a>(
+					 Bytes b, Integer startidx, Integer val, [Integer flags] )
+					</div>
+					<div class="Description"><p>Puts an Integer into a Bytes as a 4-byte unsigned value.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_bytes_tobase64" class="IndexMethodName">ToBase64</a>(
+					 Bytes b )
+					</div>
+					<div class="Description"><p>Converts a byte array into a base64 encoded string.</p></div>
+				</div>
+			</div>
+
+
+				<h2>Class Attributes</h2>
+				<div class="ClassAttributes">
+					
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_bytes_inplace">InPlace</a></div>
+						<div class="Description"><p>The flag constant indicating that Put
+operations should modify the passed Bytes instead of a returned copy.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_bytes_swap">Swap</a></div>
+						<div class="Description"><p>The flag constant indicating
+that Put and Get operations should swap bytes, if necessary, to maintain PC byte-order
+(little endian) compatibility.</p></div>
+					</div>
+				
+				</div>
+
+		
+				<h2>Class Methods</h2>
+				<div class="ClassMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_bytes_allocate">Allocate</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Bytes</span> 
+						<span class="PrototypeselfName">Allocate</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">size</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Allocates a new Bytes of the specified size. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">size</span><span class="description"><p>The size, in bytes,</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A new Bytes of size <em>size</em>. </p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>The Bytes allocated will be filled with zero
+    values.  See <a class="interdoc" href="#cm_bytes_getbytes">Bytes.GetBytes()</a> for an
+    example.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_bytes_frombase64">FromBase64</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Bytes</span> 
+						<span class="PrototypeselfName">FromBase64</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">inputString </span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Congerts a base64 encoded string to a byte array. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">inputString </span><span class="description"><p>A base64 encoded string</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A new Bytes converted from a string.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>The Bytes allocated will be filled with zero
+    values.  See <a class="interdoc" href="#cm_bytes_getbytes">Bytes.GetBytes()</a> for an
+    example.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_bytes_getbytes">GetBytes</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Bytes</span> 
+						<span class="PrototypeselfName">GetBytes</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">b</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">startidx</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">len</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a subrange of the bytes in <em>b</em>
+  from index <em>startidx</em> of length <em>len</em> as a new Bytes.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">b</span><span class="description"><p>The Bytes from which a subrange is extracted.</p></span></div>
+											<div class="Parameter"><span class="name">startidx</span><span class="description"><p>The starting index from which to extract the subrange.</p></span></div>
+											<div class="Parameter"><span class="name">len</span><span class="description"><p>The length of the subrange to extract.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A new Bytes which is the specified</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Note that <em>startidx</em>
+    and <em>len</em> are not necessarily bounds-checked,
+    meaning that it is the responsibility of the caller to ensure that a valid
+    subrange is specified.  See <a class="interdoc" href="#cm_bytes_getlbytes">Bytes.GetLBytes()</a> and
+    <a class="interdoc" href="#cm_bytes_getpbytes">Bytes.GetPBytes()</a>.  Here is a short example:</p>
+<div class="codehilite"><pre>Bytes   b <span class="o">=</span> Bytes<span class="o">.</span>Allocate<span class="p">(</span> <span class="m">10</span> <span class="p">)</span>
+<span class="kt">Integer</span> i
+
+<span class="k">for</span> <span class="p">(</span> i <span class="o">=</span> <span class="m">0</span><span class="p">;</span> i <span class="o">&lt;</span> <span class="m">10</span><span class="p">;</span> i <span class="o">+=</span> <span class="m">1</span> <span class="p">)</span>
+    Bytes<span class="o">.</span>PutI<span class="m">1</span><span class="p">(</span> b<span class="p">,</span> i<span class="p">,</span> i<span class="p">,</span> Bytes<span class="o">.</span>InPlace <span class="p">)</span>
+<span class="k">end</span>
+
+Echo<span class="p">(</span> <span class="s">&quot;b = &quot;</span><span class="p">,</span> b<span class="p">,</span> <span class="s">&quot;; b[2..4] = &quot;</span><span class="p">,</span> Bytes<span class="o">.</span>GetBytes<span class="p">(</span> b<span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">4</span> <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre>b <span class="o">=</span> <span class="p">[</span><span class="m">00010203040506070809</span><span class="p">];</span> b<span class="p">[</span><span class="m">2.</span><span class="o">.</span><span class="m">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="m">02030405</span><span class="p">]</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_bytes_getcstring">GetCString</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">GetCString</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">b</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">startIdx</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Extracts a C-style null-terminated String
+from the Bytes at the specified index.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">b</span><span class="description"><p>The Bytes from which the value is extracted.</p></span></div>
+											<div class="Parameter"><span class="name">startIdx</span><span class="description"><p>The index in the Bytes of the value to extract.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>If specified, <a class="interdoc" href="#ca_bytes_swap">Bytes.Swap</a> to retrieve the value maintaining PC byte-compatible format (which currently has no effect). </p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The extracted String value.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_bytes_geti1">GetI1</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">GetI1</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">b</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">startidx</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a single byte signed integer from the specified Bytes at the specified index.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">b</span><span class="description"><p>The Bytes from which the value is extracted.</p></span></div>
+											<div class="Parameter"><span class="name">startidx</span><span class="description"><p>The index in the Bytes of the value to extract.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>If specified, <a class="interdoc" href="#ca_bytes_swap">Bytes.Swap</a> to retrieve the value maintaining PC byte-compatible format. </p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The extracted Integer value.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>See <a class="interdoc" href="#cm_bytes_puti1">Bytes.PutI1()</a> for an example. </p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_bytes_geti2">GetI2</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">GetI2</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">b</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">startidx</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a 2-byte signed integer from the specified Bytes at the specified index.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">b</span><span class="description"><p>The Bytes from which the value is extracted.</p></span></div>
+											<div class="Parameter"><span class="name">startidx</span><span class="description"><p>The index in the Bytes of the value to extract.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>If specified, <a class="interdoc" href="#ca_bytes_swap">Bytes.Swap</a> to retrieve the value maintaining PC byte-compatible format. </p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The extracted Integer value.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_bytes_geti4">GetI4</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">GetI4</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">b</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">startidx</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a 4-byte signed integer from the specified Bytes at the specified index.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">b</span><span class="description"><p>The Bytes from which the value is extracted.</p></span></div>
+											<div class="Parameter"><span class="name">startidx</span><span class="description"><p>The index in the Bytes of the value to extract.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>If specified, <a class="interdoc" href="#ca_bytes_swap">Bytes.Swap</a> to retrieve the value maintaining PC byte-compatible format. </p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The extracted Integer value.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_bytes_geti8">GetI8</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">GetI8</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">b</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">startidx</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a 8-byte signed integer from the specified Bytes at the specified index.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">b</span><span class="description"><p>The Bytes from which the value is extracted.</p></span></div>
+											<div class="Parameter"><span class="name">startidx</span><span class="description"><p>The index in the Bytes of the value to extract.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>If specified, <a class="interdoc" href="#ca_bytes_swap">Bytes.Swap</a> to retrieve the value maintaining PC byte-compatible format. </p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The extracted Integer value.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_bytes_getlbytes">GetLBytes</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Bytes</span> 
+						<span class="PrototypeselfName">GetLBytes</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">b</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">startidx</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a new Bytes extracted from the specified
+Bytes at index <em>startidx</em>, which points
+to a 4-byte signed integer indicating the number of following bytes to extract.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">b</span><span class="description"><p>The Bytes from which the value is extracted.</p></span></div>
+											<div class="Parameter"><span class="name">startidx</span><span class="description"><p>The index in the Bytes of the value to extract.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>If specified, <a class="interdoc" href="#ca_bytes_swap">Bytes.Swap</a> to retrieve the value maintaining PC byte-compatible format. </p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The extracted Bytes.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_bytes_getlstring">GetLString</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">GetLString</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">b</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">startidx</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a new String extracted from the specified
+Bytes at index <em>startidx</em>, which points
+to a 4-byte signed integer indicating the number of following bytes to extract
+as the String.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">b</span><span class="description"><p>The Bytes from which the value is extracted.</p></span></div>
+											<div class="Parameter"><span class="name">startidx</span><span class="description"><p>The index in the Bytes of the value to extract.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>If specified, <a class="interdoc" href="#ca_bytes_swap">Bytes.Swap</a> to retrieve the value maintaining PC byte-compatible format. </p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The extracted String value.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_bytes_getpbytes">GetPBytes</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Bytes</span> 
+						<span class="PrototypeselfName">GetPBytes</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">b</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">startidx</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a new Bytes extracted from the specified
+Bytes as Pascal bytes at index
+<em>startidx</em>, which points to a 4-byte unsigned
+integer indicating the number of following bytes to extract.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">b</span><span class="description"><p>The Bytes from which the value is extracted.</p></span></div>
+											<div class="Parameter"><span class="name">startidx</span><span class="description"><p>The index in the Bytes of the value to extract.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>If specified, <a class="interdoc" href="#ca_bytes_swap">Bytes.Swap</a> to retrieve the value maintaining PC byte-compatible format. </p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The extracted Bytes.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_bytes_getpoint">GetPoint</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Point</span> 
+						<span class="PrototypeselfName">GetPoint</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">b</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">startidx</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a new Point extracted from the Bytes at the
+specified index.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">b</span><span class="description"><p>The Bytes from which the value is extracted.</p></span></div>
+											<div class="Parameter"><span class="name">startidx</span><span class="description"><p>The index in the Bytes of the value to extract.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>If specified, <a class="interdoc" href="#ca_bytes_swap">Bytes.Swap</a> to retrieve the value maintaining PC byte-compatible format. </p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The extracted Point value.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_bytes_getpstring">GetPString</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">GetPString</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">b</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">startidx</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a new String extracted from the specified
+Bytes as a Pascal String at index
+<em>startidx</em>, which points to a 4-byte unsigned
+integer indicating the number of following bytes to extract as the String.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">b</span><span class="description"><p>The Bytes from which the value is extracted.</p></span></div>
+											<div class="Parameter"><span class="name">startidx</span><span class="description"><p>The index in the Bytes of the value to extract.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>If specified, <a class="interdoc" href="#ca_bytes_swap">Bytes.Swap</a> to retrieve the value maintaining PC byte-compatible format. </p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The extracted String value.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_bytes_getr4">GetR4</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Real</span> 
+						<span class="PrototypeselfName">GetR4</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">b</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">startidx</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a 4-byte real (floating point value) from the specified Bytes at the specified index.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">b</span><span class="description"><p>The Bytes from which the value is extracted.</p></span></div>
+											<div class="Parameter"><span class="name">startidx</span><span class="description"><p>The index in the Bytes of the value to extract.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>If specified, <a class="interdoc" href="#ca_bytes_swap">Bytes.Swap</a> to retrieve the value maintaining PC byte-compatible format. </p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The extracted Real value.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_bytes_getr8">GetR8</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Real</span> 
+						<span class="PrototypeselfName">GetR8</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">b</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">startidx</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns an 8-byte real (floating point value) from the specified Bytes at the specified index.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">b</span><span class="description"><p>The Bytes from which the value is extracted.</p></span></div>
+											<div class="Parameter"><span class="name">startidx</span><span class="description"><p>The index in the Bytes of the value to extract.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>If specified, <a class="interdoc" href="#ca_bytes_swap">Bytes.Swap</a> to retrieve the value maintaining PC byte-compatible format. </p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The extracted Real value.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_bytes_getstring">GetString</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">GetString</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">b</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">startidx</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">maxlen</span><span class="PrototypePunctuation">]</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a String extracted from the Bytes at the given
+index.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">b</span><span class="description"><p>The Bytes from which the value is extracted.</p></span></div>
+											<div class="Parameter"><span class="name">startidx</span><span class="description"><p>The index in the Bytes of the value to extract.</p></span></div>
+											<div class="Parameter"><span class="name">maxlen</span><span class="description"><p>If specified, the maximum String length to return.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>Not used.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The extracted String value.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_bytes_getu1">GetU1</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">GetU1</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">b</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">startidx</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a single byte unsigned integer from the specified Bytes at the specified index.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">b</span><span class="description"><p>The Bytes from which the value is extracted.</p></span></div>
+											<div class="Parameter"><span class="name">startidx</span><span class="description"><p>The index in the Bytes of the value to extract.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>If specified, <a class="interdoc" href="#ca_bytes_swap">Bytes.Swap</a> to retrieve the value maintaining PC byte-compatible format. </p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The extracted Integer value.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_bytes_getu2">GetU2</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">GetU2</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">b</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">startidx</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a 2-byte unsigned integer from the specified Bytes at the specified index.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">b</span><span class="description"><p>The Bytes from which the value is extracted.</p></span></div>
+											<div class="Parameter"><span class="name">startidx</span><span class="description"><p>The index in the Bytes of the value to extract.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>If specified, <a class="interdoc" href="#ca_bytes_swap">Bytes.Swap</a> to retrieve the value maintaining PC byte-compatible format. </p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The extracted Integer value.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_bytes_getu4">GetU4</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">GetU4</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">b</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">startidx</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a 4-byte unsigned integer from the specified Bytes at the specified index.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">b</span><span class="description"><p>The Bytes from which the value is extracted.</p></span></div>
+											<div class="Parameter"><span class="name">startidx</span><span class="description"><p>The index in the Bytes of the value to extract.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>If specified, <a class="interdoc" href="#ca_bytes_swap">Bytes.Swap</a> to retrieve the value maintaining PC byte-compatible format. </p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The extracted Integer value.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Note OScript's Integer values are always signed, so
+on platforms where integer values are 32-bits native, Bytes.GetU4() will
+return the same value as <a class="interdoc" href="#cm_bytes_geti4">Bytes.GetI4()</a>.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_bytes_newfromstring">NewFromString</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Bytes</span> 
+						<span class="PrototypeselfName">NewFromString</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">s</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Creates and returns a new Bytes containing the given String. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">s</span><span class="description"><p>The String to add to the new Bytes.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A new Bytes the size of the given String and containing exactly that String.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_bytes_putbytes">PutBytes</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Bytes</span> 
+						<span class="PrototypeselfName">PutBytes</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">b</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">startidx</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">val</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Puts the entire, exact contents of the specified Bytes,
+  <em>val</em>, into <em>b</em>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">b</span><span class="description"><p>The Bytes, or a copy of this Bytes, into which the value is put.</p></span></div>
+											<div class="Parameter"><span class="name">startidx</span><span class="description"><p>The index in the Bytes of where to put the value.</p></span></div>
+											<div class="Parameter"><span class="name">val</span><span class="description"><p>The Bytes value to put.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>If specified, <a class="interdoc" href="#ca_bytes_inplace">Bytes.InPlace</a> if the value should
+   be put into the original Bytes instead of a copy, and/or <a class="interdoc" href="#ca_bytes_swap">Bytes.Swap</a> if
+   PC-compatible byte-order should be maintained (use bitwise or to combine the two flags).  By
+   default, the value is put into a copy, and the byte-order maintained is that native to the
+   platform running the server.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The Bytes into which the value was put, which will be a
+   copy of <em>b</em> unless Bytes.InPlace was specified as a flag.  </p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>See <a class="interdoc" href="#cm_bytes_putlbytes">Bytes.PutLBytes()</a> and
+    <a class="interdoc" href="#cm_bytes_putpbytes">Bytes.PutPBytes()</a>.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_bytes_putcstring">PutCString</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Bytes</span> 
+						<span class="PrototypeselfName">PutCString</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">b</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">startidx</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">val</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Puts the specified String into the specified Bytes,
+  terminating the String with a single null byte as is commonly done with C language strings.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">b</span><span class="description"><p>The Bytes, or a copy of this Bytes, into which the value is put.</p></span></div>
+											<div class="Parameter"><span class="name">startidx</span><span class="description"><p>The index in the Bytes of where to put the value.</p></span></div>
+											<div class="Parameter"><span class="name">val</span><span class="description"><p>The value to put.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>If specified, <a class="interdoc" href="#ca_bytes_inplace">Bytes.InPlace</a> if the value should
+   be put into the original Bytes instead of a copy, and/or <a class="interdoc" href="#ca_bytes_swap">Bytes.Swap</a> if
+   PC-compatible byte-order should be maintained (use bitwise or to combine the two flags).  By
+   default, the value is put into a copy, and the byte-order maintained is that native to the
+   platform running the server.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The Bytes into which the value was put, which will be a
+   copy of <em>b</em> unless Bytes.InPlace was specified as a flag.  </p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_bytes_puti1">PutI1</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Bytes</span> 
+						<span class="PrototypeselfName">PutI1</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">b</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">startidx</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">val</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Puts the given Integer into the Bytes as a signed,
+  single-byte value.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">b</span><span class="description"><p>The Bytes, or a copy of this Bytes, into which the value is put.</p></span></div>
+											<div class="Parameter"><span class="name">startidx</span><span class="description"><p>The index in the Bytes of where to put the value.</p></span></div>
+											<div class="Parameter"><span class="name">val</span><span class="description"><p>The value to put.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>If specified, <a class="interdoc" href="#ca_bytes_inplace">Bytes.InPlace</a> if the value should
+   be put into the original Bytes instead of a copy, and/or <a class="interdoc" href="#ca_bytes_swap">Bytes.Swap</a> if
+   PC-compatible byte-order should be maintained (use bitwise or to combine the two flags).  By
+   default, the value is put into a copy, and the byte-order maintained is that native to the
+   platform running the server.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The Bytes into which the value was put, which will be a
+   copy of <em>b</em> unless Bytes.InPlace was specified as a flag.  </p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is a short example:</p>
+<div class="codehilite"><pre>Bytes   b <span class="o">=</span> Bytes<span class="o">.</span>Allocate<span class="p">(</span> <span class="m">10</span> <span class="p">)</span>
+
+Bytes<span class="o">.</span>PutI<span class="m">1</span><span class="p">(</span> b<span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> Bytes<span class="o">.</span>InPlace <span class="p">)</span>
+
+Echo<span class="p">(</span> <span class="s">&quot;b = &quot;</span><span class="p">,</span> b<span class="p">,</span> <span class="s">&quot;; b[3] = &quot;</span><span class="p">,</span> Bytes<span class="o">.</span>GetI<span class="m">1</span><span class="p">(</span> b<span class="p">,</span> <span class="m">3</span> <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre>b <span class="o">=</span> <span class="p">[</span><span class="m">00000002000000000000</span><span class="p">];</span> b<span class="p">[</span><span class="m">3</span><span class="p">]</span> <span class="o">=</span> <span class="m">2</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_bytes_puti2">PutI2</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Bytes</span> 
+						<span class="PrototypeselfName">PutI2</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">b</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">startidx</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">val</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Puts the given Integer into the Bytes as a signed, 2-byte value.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">b</span><span class="description"><p>The Bytes, or a copy of this Bytes, into which the value is put.</p></span></div>
+											<div class="Parameter"><span class="name">startidx</span><span class="description"><p>The index in the Bytes of where to put the value.</p></span></div>
+											<div class="Parameter"><span class="name">val</span><span class="description"><p>The value to put.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>If specified, <a class="interdoc" href="#ca_bytes_inplace">Bytes.InPlace</a> if the value should
+   be put into the original Bytes instead of a copy, and/or <a class="interdoc" href="#ca_bytes_swap">Bytes.Swap</a> if
+   PC-compatible byte-order should be maintained (use bitwise or to combine the two flags).  By
+   default, the value is put into a copy, and the byte-order maintained is that native to the
+   platform running the server.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The Bytes into which the value was put, which will be a
+   copy of <em>b</em> unless Bytes.InPlace was specified as a flag.  </p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_bytes_puti4">PutI4</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Bytes</span> 
+						<span class="PrototypeselfName">PutI4</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">b</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">startidx</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">val</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Puts the given Integer into the Bytes as a signed, 4-byte value.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">b</span><span class="description"><p>The Bytes, or a copy of this Bytes, into which the value is put.</p></span></div>
+											<div class="Parameter"><span class="name">startidx</span><span class="description"><p>The index in the Bytes of where to put the value.</p></span></div>
+											<div class="Parameter"><span class="name">val</span><span class="description"><p>The value to put.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>If specified, <a class="interdoc" href="#ca_bytes_inplace">Bytes.InPlace</a> if the value should
+   be put into the original Bytes instead of a copy, and/or <a class="interdoc" href="#ca_bytes_swap">Bytes.Swap</a> if
+   PC-compatible byte-order should be maintained (use bitwise or to combine the two flags).  By
+   default, the value is put into a copy, and the byte-order maintained is that native to the
+   platform running the server.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The Bytes into which the value was put, which will be a
+   copy of <em>b</em> unless Bytes.InPlace was specified as a flag.  </p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_bytes_puti8">PutI8</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Bytes</span> 
+						<span class="PrototypeselfName">PutI8</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">b</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">startidx</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">val</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Puts the given Integer into the Bytes as a signed, 8-byte value.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">b</span><span class="description"><p>The Bytes, or a copy of this Bytes, into which the value is put.</p></span></div>
+											<div class="Parameter"><span class="name">startidx</span><span class="description"><p>The index in the Bytes of where to put the value.</p></span></div>
+											<div class="Parameter"><span class="name">val</span><span class="description"><p>The value to put.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>If specified, <a class="interdoc" href="#ca_bytes_inplace">Bytes.InPlace</a> if the value should
+   be put into the original Bytes instead of a copy, and/or <a class="interdoc" href="#ca_bytes_swap">Bytes.Swap</a> if
+   PC-compatible byte-order should be maintained (use bitwise or to combine the two flags).  By
+   default, the value is put into a copy, and the byte-order maintained is that native to the
+   platform running the server.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The Bytes into which the value was put, which will be a
+   copy of <em>b</em> unless Bytes.InPlace was specified as a flag.  </p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_bytes_putlbytes">PutLBytes</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Bytes</span> 
+						<span class="PrototypeselfName">PutLBytes</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">b</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">startidx</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">val</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Puts the entire contents of the Bytes, <em>val</em>,
+  into the given Bytes, <em>b</em>, prepending the
+  value inserted with a 4-byte, signed integer length indicator.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">b</span><span class="description"><p>The Bytes, or a copy of this Bytes, into which the value is put.</p></span></div>
+											<div class="Parameter"><span class="name">startidx</span><span class="description"><p>The index in the Bytes of where to put the value.</p></span></div>
+											<div class="Parameter"><span class="name">val</span><span class="description"><p>The value to put.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>If specified, <a class="interdoc" href="#ca_bytes_inplace">Bytes.InPlace</a> if the value should
+   be put into the original Bytes instead of a copy, and/or <a class="interdoc" href="#ca_bytes_swap">Bytes.Swap</a> if
+   PC-compatible byte-order should be maintained (use bitwise or to combine the two flags).  By
+   default, the value is put into a copy, and the byte-order maintained is that native to the
+   platform running the server.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The Bytes into which the value was put, which will be a
+   copy of <em>b</em> unless Bytes.InPlace was specified as a flag.  </p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>See <a class="interdoc" href="#cm_bytes_putpbytes">Bytes.PutPBytes()</a> and
+    <a class="interdoc" href="#cm_bytes_putbytes">Bytes.PutBytes()</a>.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_bytes_putlstring">PutLString</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Bytes</span> 
+						<span class="PrototypeselfName">PutLString</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">b</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">startidx</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">val</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Puts the given String into the Bytes, prepending it with
+  a 4-byte signed integer length indicator.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">b</span><span class="description"><p>The Bytes, or a copy of this Bytes, into which the value is put.</p></span></div>
+											<div class="Parameter"><span class="name">startidx</span><span class="description"><p>The index in the Bytes of where to put the value.</p></span></div>
+											<div class="Parameter"><span class="name">val</span><span class="description"><p>The value to put.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>If specified, <a class="interdoc" href="#ca_bytes_inplace">Bytes.InPlace</a> if the value should
+   be put into the original Bytes instead of a copy, and/or <a class="interdoc" href="#ca_bytes_swap">Bytes.Swap</a> if
+   PC-compatible byte-order should be maintained (use bitwise or to combine the two flags).  By
+   default, the value is put into a copy, and the byte-order maintained is that native to the
+   platform running the server.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The Bytes into which the value was put, which will be a
+   copy of <em>b</em> unless Bytes.InPlace was specified as a flag.  </p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_bytes_putpbytes">PutPBytes</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Bytes</span> 
+						<span class="PrototypeselfName">PutPBytes</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">b</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">startidx</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">val</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Puts the contents of the given Bytes into the Bytes, prepending
+  it with a 4-byte, unsigned integer length indicator (see <a class="interdoc" href="#cm_bytes_putpstring">Bytes.PutPString()</a>).</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">b</span><span class="description"><p>The Bytes, or a copy of this Bytes, into which the value is put.</p></span></div>
+											<div class="Parameter"><span class="name">startidx</span><span class="description"><p>The index in the Bytes of where to put the value.</p></span></div>
+											<div class="Parameter"><span class="name">val</span><span class="description"><p>The value to put.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>If specified, <a class="interdoc" href="#ca_bytes_inplace">Bytes.InPlace</a> if the value should
+   be put into the original Bytes instead of a copy, and/or <a class="interdoc" href="#ca_bytes_swap">Bytes.Swap</a> if
+   PC-compatible byte-order should be maintained (use bitwise or to combine the two flags).  By
+   default, the value is put into a copy, and the byte-order maintained is that native to the
+   platform running the server.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The Bytes into which the value was put, which will be a
+   copy of <em>b</em> unless Bytes.InPlace was specified as a flag.  </p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_bytes_putpoint">PutPoint</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Bytes</span> 
+						<span class="PrototypeselfName">PutPoint</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">b</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">startidx</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Point</span> <span class="PrototypeArgumentName">val</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Puts the given Point into the Bytes as two, signed, 4-byte values.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">b</span><span class="description"><p>The Bytes, or a copy of this Bytes, into which the value is put.</p></span></div>
+											<div class="Parameter"><span class="name">startidx</span><span class="description"><p>The index in the Bytes of where to put the value.</p></span></div>
+											<div class="Parameter"><span class="name">val</span><span class="description"><p>The value to put.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>If specified, <a class="interdoc" href="#ca_bytes_inplace">Bytes.InPlace</a> if the value should
+   be put into the original Bytes instead of a copy, and/or <a class="interdoc" href="#ca_bytes_swap">Bytes.Swap</a> if
+   PC-compatible byte-order should be maintained (use bitwise or to combine the two flags).  By
+   default, the value is put into a copy, and the byte-order maintained is that native to the
+   platform running the server.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The Bytes into which the value was put, which will be a
+   copy of <em>b</em> unless Bytes.InPlace was specified as a flag.  </p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_bytes_putpstring">PutPString</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Bytes</span> 
+						<span class="PrototypeselfName">PutPString</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">b</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">startidx</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">val</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Puts the given String into the Bytes, prepending the
+  String with a 4-byte, unsigned integer length indicator, as is commonly done with Pascal strings.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">b</span><span class="description"><p>The Bytes, or a copy of this Bytes, into which the value is put.</p></span></div>
+											<div class="Parameter"><span class="name">startidx</span><span class="description"><p>The index in the Bytes of where to put the value.</p></span></div>
+											<div class="Parameter"><span class="name">val</span><span class="description"><p>The value to put.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>If specified, <a class="interdoc" href="#ca_bytes_inplace">Bytes.InPlace</a> if the value should
+   be put into the original Bytes instead of a copy, and/or <a class="interdoc" href="#ca_bytes_swap">Bytes.Swap</a> if
+   PC-compatible byte-order should be maintained (use bitwise or to combine the two flags).  By
+   default, the value is put into a copy, and the byte-order maintained is that native to the
+   platform running the server.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The Bytes into which the value was put, which will be a
+   copy of <em>b</em> unless Bytes.InPlace was specified as a flag.  </p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_bytes_putr4">PutR4</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Bytes</span> 
+						<span class="PrototypeselfName">PutR4</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">b</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">startidx</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Real</span> <span class="PrototypeArgumentName">val</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Puts the given Real into the Bytes as a 4-byte value.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">b</span><span class="description"><p>The Bytes, or a copy of this Bytes, into which the value is put.</p></span></div>
+											<div class="Parameter"><span class="name">startidx</span><span class="description"><p>The index in the Bytes of where to put the value.</p></span></div>
+											<div class="Parameter"><span class="name">val</span><span class="description"><p>The value to put.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>If specified, <a class="interdoc" href="#ca_bytes_inplace">Bytes.InPlace</a> if the value should
+   be put into the original Bytes instead of a copy, and/or <a class="interdoc" href="#ca_bytes_swap">Bytes.Swap</a> if
+   PC-compatible byte-order should be maintained (use bitwise or to combine the two flags).  By
+   default, the value is put into a copy, and the byte-order maintained is that native to the
+   platform running the server.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The Bytes into which the value was put, which will be a
+   copy of <em>b</em> unless Bytes.InPlace was specified as a flag.  </p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_bytes_putr8">PutR8</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Bytes</span> 
+						<span class="PrototypeselfName">PutR8</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">b</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">startidx</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Real</span> <span class="PrototypeArgumentName">val</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Puts the given Real into the Bytes as an 8-byte value.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">b</span><span class="description"><p>The Bytes, or a copy of this Bytes, into which the value is put.</p></span></div>
+											<div class="Parameter"><span class="name">startidx</span><span class="description"><p>The index in the Bytes of where to put the value.</p></span></div>
+											<div class="Parameter"><span class="name">val</span><span class="description"><p>The value to put.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>If specified, <a class="interdoc" href="#ca_bytes_inplace">Bytes.InPlace</a> if the value should
+   be put into the original Bytes instead of a copy, and/or <a class="interdoc" href="#ca_bytes_swap">Bytes.Swap</a> if
+   PC-compatible byte-order should be maintained (use bitwise or to combine the two flags).  By
+   default, the value is put into a copy, and the byte-order maintained is that native to the
+   platform running the server.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The Bytes into which the value was put, which will be a
+   copy of <em>b</em> unless Bytes.InPlace was specified as a flag.  </p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_bytes_putstring">PutString</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Bytes</span> 
+						<span class="PrototypeselfName">PutString</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">b</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">startidx</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">val</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Puts the given Integer into the Bytes as a signed, 4-byte value.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">b</span><span class="description"><p>The Bytes, or a copy of this Bytes, into which the value is put.</p></span></div>
+											<div class="Parameter"><span class="name">startidx</span><span class="description"><p>The index in the Bytes of where to put the value.</p></span></div>
+											<div class="Parameter"><span class="name">val</span><span class="description"><p>The value to put.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>If specified, <a class="interdoc" href="#ca_bytes_inplace">Bytes.InPlace</a> if the value should
+   be put into the original Bytes instead of a copy, and/or <a class="interdoc" href="#ca_bytes_swap">Bytes.Swap</a> if
+   PC-compatible byte-order should be maintained (use bitwise or to combine the two flags).  By
+   default, the value is put into a copy, and the byte-order maintained is that native to the
+   platform running the server.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The Bytes into which the value was put, which will be a
+   copy of <em>b</em> unless Bytes.InPlace was specified as a flag.  </p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_bytes_putu1">PutU1</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Bytes</span> 
+						<span class="PrototypeselfName">PutU1</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">b</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">startidx</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">val</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Puts the given Integer into the Bytes as an unsigned, 4-byte value.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">b</span><span class="description"><p>The Bytes, or a copy of this Bytes, into which the value is put.</p></span></div>
+											<div class="Parameter"><span class="name">startidx</span><span class="description"><p>The index in the Bytes of where to put the value.</p></span></div>
+											<div class="Parameter"><span class="name">val</span><span class="description"><p>The value to put.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>If specified, <a class="interdoc" href="#ca_bytes_inplace">Bytes.InPlace</a> if the value should
+   be put into the original Bytes instead of a copy, and/or <a class="interdoc" href="#ca_bytes_swap">Bytes.Swap</a> if
+   PC-compatible byte-order should be maintained (use bitwise or to combine the two flags).  By
+   default, the value is put into a copy, and the byte-order maintained is that native to the
+   platform running the server.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The Bytes into which the value was put, which will be a
+   copy of <em>b</em> unless Bytes.InPlace was specified as a flag.  </p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_bytes_putu2">PutU2</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Bytes</span> 
+						<span class="PrototypeselfName">PutU2</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">b</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">startidx</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">val</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Puts the given Integer into the Bytes as an unsigned, 4-byte value.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">b</span><span class="description"><p>The Bytes, or a copy of this Bytes, into which the value is put.</p></span></div>
+											<div class="Parameter"><span class="name">startidx</span><span class="description"><p>The index in the Bytes of where to put the value.</p></span></div>
+											<div class="Parameter"><span class="name">val</span><span class="description"><p>The value to put.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>If specified, <a class="interdoc" href="#ca_bytes_inplace">Bytes.InPlace</a> if the value should
+   be put into the original Bytes instead of a copy, and/or <a class="interdoc" href="#ca_bytes_swap">Bytes.Swap</a> if
+   PC-compatible byte-order should be maintained (use bitwise or to combine the two flags).  By
+   default, the value is put into a copy, and the byte-order maintained is that native to the
+   platform running the server.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The Bytes into which the value was put, which will be a
+   copy of <em>b</em> unless Bytes.InPlace was specified as a flag.  </p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_bytes_putu4">PutU4</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Bytes</span> 
+						<span class="PrototypeselfName">PutU4</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">b</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">startidx</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">val</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Puts the given Integer into the Bytes as an unsigned, 4-byte value.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">b</span><span class="description"><p>The Bytes, or a copy of this Bytes, into which the value is put.</p></span></div>
+											<div class="Parameter"><span class="name">startidx</span><span class="description"><p>The index in the Bytes of where to put the value.</p></span></div>
+											<div class="Parameter"><span class="name">val</span><span class="description"><p>The value to put.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>If specified, <a class="interdoc" href="#ca_bytes_inplace">Bytes.InPlace</a> if the value should
+   be put into the original Bytes instead of a copy, and/or <a class="interdoc" href="#ca_bytes_swap">Bytes.Swap</a> if
+   PC-compatible byte-order should be maintained (use bitwise or to combine the two flags).  By
+   default, the value is put into a copy, and the byte-order maintained is that native to the
+   platform running the server.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The Bytes into which the value was put, which will be a
+   copy of <em>b</em> unless Bytes.InPlace was specified as a flag.  </p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_bytes_tobase64">ToBase64</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">ToBase64</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Bytes</span> <span class="PrototypeArgumentName">b</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts a byte array into a base64 encoded string.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">b</span><span class="description"><p>The Bytes to be converted.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>a string converted from the input Byte array.</p></div>
+							</div>
+						</div>
+				</div>
+		
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2018 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+
+
+
+</div>
+	</div>						
+						
+
+</div>
+
+</body></html>

@@ -1,0 +1,126 @@
+<HTML>
+<HEAD>
+<TITLE>projectpane.html</TITLE>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<script language="JavaScript">updateParentHeader( 'Code' );</script>
+<script language="JavaScript">includeContentContainer( 'wfbuilder', true );</script>
+
+<p class="body">
+
+<p class="title">projectpane.html</p>
+<p class="body">This HTML file sets up the information required to display the Project page
+when a workflow participant clicks the Project tab on the Table Values page in the work
+package for an executing workflow.</p>
+<pre class="code">
+;;webscript projectpane( Assoc a )
+&lt;!-- File: projectpane.html -->
+;String selected
+;Assoc data = a.Data.Fields
+&lt;TABLE BORDER=&quot;0&quot; CELLPADDING=&quot;2&quot; CELLSPACING=&quot;1&quot; WIDTH=&quot;100%&quot;>
+//Set up the Project Name row.
+&lt;TR>
+&lt;TD bgcolor=&quot;#CCCCCC&quot; NOWRAP>&lt;FONT
+FACE=&quot;`[WebDsp_Font.SansSerif]`&quot; size=&quot;2&quot;>&nbsp;Project
+Name:&nbsp;&lt;/FONT>&lt;/TD>
+;if ( a.IsEditable && !( 'Project_Name' in a.Data.NonEditable
+) )
+&lt;TD NOWRAP>
+&lt;INPUT TYPE=&quot;TEXT&quot; SIZE=&quot;40&quot; NAME=&quot;project_name&quot;
+VALUE=&quot;`data.project_name`&quot; ONCHANGE=&quot;markTaskEditDirty();&quot;>
+&lt;/TD>
+;else
+&lt;TD>`data.project_name`&lt;/TD>
+;end
+&lt;/TR>
+//Set up the Project Code row.
+&lt;TR>
+&lt;TD bgcolor=&quot;#CCCCCC&quot; NOWRAP>&lt;FONT
+FACE=&quot;`[WebDsp_Font.SansSerif]`&quot; size=&quot;2&quot;>&nbsp;Project
+Code:&nbsp;&lt;/FONT>&lt;/TD>
+;if ( a.IsEditable && !( 'ID_Code' in a.Data.NonEditable ) )
+&lt;TD NOWRAP>
+&lt;INPUT TYPE=&quot;TEXT&quot; SIZE=&quot;10&quot; MAXLENGTH=&quot;5&quot;
+NAME=&quot;ID_Code&quot; VALUE=&quot;`data.ID_Code`&quot;
+ONCHANGE=&quot;markTaskEditDirty();&quot;>
+&lt;/TD>
+;else
+&lt;TD>`data.id_code`&lt;/TD>
+;end
+&lt;/TR>
+//Set up the Due Date row.
+&lt;TR>
+&lt;TD bgcolor=&quot;#CCCCCC&quot; NOWRAP>&lt;FONT
+FACE=&quot;`[WebDsp_Font.SansSerif]`&quot; size=&quot;2&quot;>&nbsp;Due
+Date:&nbsp;&lt;/FONT>&lt;/TD>
+;if ( a.IsEditable && !( 'DueDate' in a.Data.NonEditable ) )
+&lt;TD NOWRAP>
+;;call &lt;.htmlPrefix() + 'datefield.html'>( &quot;duedate&quot;,
+data.duedate, TRUE, TRUE )
+&lt;/TD>
+;else
+&lt;TD NOWRAP>`.FmtDate( data.duedate, True )`&lt;/TD>
+;end
+&lt;/TR>
+//Set up the Priority row. Then set up the values that can be
+//selected from the Priority list box (that is, High, Medium,
+//or Low).
+&lt;TR>
+&lt;TD bgcolor=&quot;#CCCCCC&quot; NOWRAP>&lt;FONT
+FACE=&quot;`[WebDsp_Font.SansSerif]`&quot;
+size=&quot;2&quot;>&nbsp;Priority:&nbsp;&lt;/FONT>&lt;/TD>
+;if ( a.IsEditable && !( 'Priority' in a.Data.NonEditable ) )
+&lt;TD NOWRAP>
+&lt;SELECT NAME=&quot;priority&quot; ONCHANGE=&quot;markTaskEditDirty();&quot;>
+;selected = ( data.priority == 1 ) ? 'SELECTED' : ''
+&lt;OPTION `selected` VALUE=&quot;1&quot;>High
+;selected = ( data.priority == 2 ) ? 'SELECTED' : ''
+&lt;OPTION `selected` VALUE=&quot;2&quot;>Medium
+;selected = ( ( data.priority == 3 ) || !IsDefined(
+data.priority ) ) ? 'SELECTED' : ''
+&lt;OPTION `selected` VALUE=&quot;3&quot;>Low
+&lt;/SELECT>
+&lt;/TD>
+;else
+&lt;TD NOWRAP>
+;switch( data.priority )
+; case 1
+High
+;end
+; case 2
+Medium
+;end
+; default
+Low
+;end
+;end
+&lt;/TD>
+;end
+&lt;/TR>
+;if ( a.IsEditable )
+//Set up the Action row, which contains the Update and Reset
+//buttons.
+&lt;TR>
+&lt;TD bgcolor=&quot;#CCCCCC&quot; NOWRAP>&lt;FONT
+FACE=&quot;`[WebDsp_Font.SansSerif]`&quot;
+size=&quot;2&quot;>&nbsp;`[WebDoc_HTMLLabel.Action_]`&nbsp;&lt;/FONT>&lt;/TD>
+&lt;TD>
+&lt;INPUT TYPE=&quot;BUTTON&quot;
+VALUE=&quot;`[WebDoc_HTMLLabel.UpdateButtonLabel]`&quot; NAME=&quot;IgnoreMe&quot;
+ONCLICK=&quot;SubmitMyPage();&quot;>
+&lt;INPUT TYPE=&quot;RESET&quot; VALUE=&quot;`[WebDoc_HTMLLabel.Reset]`&quot;>
+&lt;/TD>
+&lt;/TR>
+;end
+&lt;/TABLE>
+;;end</pre>
+
+
+<script language="JavaScript">IncludeFooter();</script>
+
+</BODY>
+</html>

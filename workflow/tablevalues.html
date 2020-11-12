@@ -1,0 +1,49 @@
+<HTML>
+<HEAD>
+<TITLE>tablevalues.html</TITLE>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<script language="JavaScript">updateParentHeader( 'Code' );</script>
+<script language="JavaScript">includeContentContainer( 'wfbuilder', true );</script>
+<p class="body">
+<p class="title">tablevalues.html</p>
+<p class="body">This HTML file sets up the tabs that are 
+displayed when a workflow participant
+clicks the Table Values tab in the work package 
+of an executing workflow. This HTML
+page sets up the Project and Customer pages.</p>
+<pre class="code">
+;;webscript tablevalues( Assoc a )
+&lt;!-- File: tablevalues.html -->
+;Assoc tabInfo = a.TabInfo
+;Assoc paneInfo = tabInfo.PaneList[ a.Tab ]
+;String thisURL = $WebDSP.HTMLPkg.ArgsToURL( .fArgs )
+&lt;INPUT TYPE=&quot;HIDDEN&quot; NAME=&quot;custPaneIndex&quot; VALUE=&quot;1&quot;>
+&lt;SCRIPT LANGUAGE=&quot;JavaScript&quot;>
+&lt;!--
+function SubmitMyPage()
+{if ( document.myForm.xAction != null )
+{document.myForm.xAction.value = 'Update';}
+document.myForm.NextURL.value = &quot;`%LthisURL`&quot;;
+document.myForm.paneIndex.value = '`.fArgs.PaneIndex`';
+document.myForm.custPaneIndex.value =
+'`.fArgs.custPaneIndex`';
+document.myForm.submit();}
+%// -->
+&lt;/SCRIPT>
+;paneInfo.IsEditable = a.IsEditable
+;;call &lt;.HTMLPrefix() + 'tabber.html'>( 1, '#666666',
+tabInfo.TabList, Undefined, 'istedirty' )
+;;call &lt;.ModHTMLPrefix( a.ModuleName ) + paneInfo.HTMLFile>(
+paneInfo )
+;;call &lt;.HTMLPrefix() + 'tabber.html'>( 0, '#666666' )
+;;end</pre>
+
+<script language="JavaScript">IncludeFooter();</script>
+
+</BODY>
+</html>

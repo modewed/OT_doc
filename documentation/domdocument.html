@@ -1,0 +1,605 @@
+
+<meta charset="UTF-8">
+<html>
+<head><title>Class: DOMDocument</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../syntax.css" type="text/css">
+<link rel="stylesheet" href="builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td  align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody></table>
+
+<div id="document">
+	
+<div class="sidebar_container">
+		
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink"><a href="assoc.html">Assoc</a></div>
+				<div class="packagelink"><a href="boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="builder.html">Builder</a></div>
+				<div class="packagelink"><a href="bytes.html">Bytes</a></div>
+				<div class="packagelink"><a href="capi.html">CAPI</a></div>
+				<div class="packagelink"><a href="capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink"><a href="cachetree.html">CacheTree</a></div>
+				<div class="packagelink"><a href="compiler.html">Compiler</a></div>
+				<div class="packagelink"><a href="core.html">Core</a></div>
+				<div class="packagelink"><a href="dapi.html">DAPI</a></div>
+				<div class="packagelink"><a href="dapinode.html">DAPINODE</a></div>
+				<div class="packagelink"><a href="dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink"><a href="dapiversion.html">DAPIVERSION</a></div>
+				<div class="packagelink"><a href="domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="domcomment.html">DOMComment</a></div>
+				<div class="packagelink curPage">DOMDocument</div>
+				<div class="packagelink"><a href="domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink"><a href="domelement.html">DOMElement</a></div>
+				<div class="packagelink"><a href="domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink"><a href="domnamednodemap.html">DOMNamedNodeMap</a></div>
+				<div class="packagelink"><a href="domnode.html">DOMNode</a></div>
+				<div class="packagelink"><a href="domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="domtext.html">DOMText</a></div>
+				<div class="packagelink"><a href="date.html">Date</a></div>
+				<div class="packagelink"><a href="dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="env.html">Env</a></div>
+				<div class="packagelink"><a href="error.html">Error</a></div>
+				<div class="packagelink"><a href="file.html">File</a></div>
+				<div class="packagelink"><a href="filecopy.html">FileCopy</a></div>
+				<div class="packagelink"><a href="fileprefs.html">Fileprefs</a></div>
+				<div class="packagelink"><a href="frame.html">Frame</a></div>
+				<div class="packagelink"><a href="global.html">Global</a></div>
+				<div class="packagelink"><a href="integer.html">Integer</a></div>
+				<div class="packagelink"><a href="javaobject.html">JavaObject</a></div>
+				<div class="packagelink"><a href="language.html">Language</a></div>
+				<div class="packagelink"><a href="license.html">License</a></div>
+				<div class="packagelink"><a href="list.html">List</a></div>
+				<div class="packagelink"><a href="logging.html">Logging</a></div>
+				<div class="packagelink"><a href="long.html">Long</a></div>
+				<div class="packagelink"><a href="mailmessage.html">MailMessage</a></div>
+				<div class="packagelink"><a href="math.html">Math</a></div>
+				<div class="packagelink"><a href="memcached.html">Memcached</a></div>
+				<div class="packagelink"><a href="notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="object.html">Object</a></div>
+				<div class="packagelink"><a href="pop3session.html">POP3Session</a></div>
+				<div class="packagelink"><a href="patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="patfind.html">PatFind</a></div>
+				<div class="packagelink"><a href="pattern.html">Pattern</a></div>
+				<div class="packagelink"><a href="point.html">Point</a></div>
+				<div class="packagelink"><a href="profiler.html">Profiler</a></div>
+				<div class="packagelink"><a href="real.html">Real</a></div>
+				<div class="packagelink"><a href="recarray.html">RecArray</a></div>
+				<div class="packagelink"><a href="record.html">Record</a></div>
+				<div class="packagelink"><a href="regex.html">Regex</a></div>
+				<div class="packagelink"><a href="restclient.html">RestClient</a></div>
+				<div class="packagelink"><a href="saxparser.html">SAXParser</a></div>
+				<div class="packagelink"><a href="smtpsession.html">SMTPSession</a></div>
+				<div class="packagelink"><a href="ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="script.html">Script</a></div>
+				<div class="packagelink"><a href="security.html">Security</a></div>
+				<div class="packagelink"><a href="set.html">Set</a></div>
+				<div class="packagelink"><a href="socket.html">Socket</a></div>
+				<div class="packagelink"><a href="sql.html">Sql</a></div>
+				<div class="packagelink"><a href="sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink"><a href="str.html">Str</a></div>
+				<div class="packagelink"><a href="string.html">String</a></div>
+				<div class="packagelink"><a href="system.html">System</a></div>
+				<div class="packagelink"><a href="uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="void.html">Void</a></div>
+				<div class="packagelink"><a href="wapi.html">WAPI</a></div>
+				<div class="packagelink"><a href="wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink"><a href="web.html">Web</a></div>
+				<div class="packagelink"><a href="xslprocessor.html">XSLProcessor</a></div>
+				<div class="packagelink"><a href="zip.html">Zip</a></div>
+		</div>
+</div>
+
+	<div class="content_container">
+		<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+		<h1>Class: DOMDocument</h1><div class="ClassDescription"><p>The Document interface represents the entire HTML    or XML document. Conceptually, it is the root of the document tree, and provides    the primary access to the document's data.</p>
+<p>Since elements, text nodes, comments, processing    instructions, etc. cannot exist outside the context of a Document, the Document    interface also contains the factory methods needed to create these objects.    The Node objects created have a ownerDocument attribute which associates them    with the Document within whose context they were created. </p></div>
+
+
+			<h2>Class Methods</h2>
+			<div class="ClassMethodsShort">
+				<div class="Method">
+					<div class="Name"><a href="#cm_domdocument_new" class="IndexMethodName">New</a>(
+					)
+					</div>
+					<div class="Description"><p>Create a new DOMDocument node.</p></div>
+				</div>
+			</div>
+
+			<h2>Instance Methods</h2>
+			<div class="InstanceMethodsShort">
+				<div class="Method">					
+					<div class="Name"><a href="#im_domdocument_createattribute" class="IndexMethodName">CreateAttribute</a>(
+					 String name )
+					</div>
+					<div class="Description"><p>Creates an Attr of the given name.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domdocument_createattributens" class="IndexMethodName">CreateAttributeNS</a>(
+					 String namespaceURI, String qualifiedName )
+					</div>
+					<div class="Description"><p>Creates an attribute of the given qualified name and namespace URI.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domdocument_createcdatasection" class="IndexMethodName">CreateCDATASection</a>(
+					 String data )
+					</div>
+					<div class="Description"><p>Creates a CDATASection node whose 
+    value is the specified string.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domdocument_createcomment" class="IndexMethodName">CreateComment</a>(
+					 String data )
+					</div>
+					<div class="Description"><p>Creates a Comment node given the 
+    specified string.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domdocument_createdocumentfragment" class="IndexMethodName">CreateDocumentFragment</a>(
+					)
+					</div>
+					<div class="Description"><p>Creates an empty DocumentFragment 
+    object.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domdocument_createelement" class="IndexMethodName">CreateElement</a>(
+					 String tagName )
+					</div>
+					<div class="Description"><p>Creates an element of the type 
+    specified.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domdocument_createelementns" class="IndexMethodName">CreateElementNS</a>(
+					 String namespaceURI, String qualifiedName )
+					</div>
+					<div class="Description"><p>Creates an element of the given qualified name and namespace URI.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domdocument_createentityreference" class="IndexMethodName">CreateEntityReference</a>(
+					 String name )
+					</div>
+					<div class="Description"><p>Creates an EntityReference object.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domdocument_createprocessinginstruction" class="IndexMethodName">CreateProcessingInstruction</a>(
+					 String target, String data )
+					</div>
+					<div class="Description"><p>Creates a ProcessingInstruction 
+    node given the specified name and data strings.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domdocument_createtextnode" class="IndexMethodName">CreateTextNode</a>(
+					 String data )
+					</div>
+					<div class="Description"><p>Creates a Text node given the specified 
+    string.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domdocument_getdoctype" class="IndexMethodName">GetDoctype</a>(
+					)
+					</div>
+					<div class="Description"><p>The Document Type Declaration (see 
+    DocumentType) associated with this document.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domdocument_getdocumentelement" class="IndexMethodName">GetDocumentElement</a>(
+					)
+					</div>
+					<div class="Description"><p>This is a convenience attribute 
+    that allows direct access to the child node that is the root element of the 
+    document.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domdocument_getelementbyid" class="IndexMethodName">GetElementById</a>(
+					 String elementId )
+					</div>
+					<div class="Description"><p>Returns the DOMElement whose ID is given by elementId. If no such element exists, returns undefined.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domdocument_getelementsbytagname" class="IndexMethodName">GetElementsByTagName</a>(
+					 String tagName )
+					</div>
+					<div class="Description"><p>Returns a NodeList of all the Elements 
+    with a given tag name in the order in which they would be encountered in a 
+    preorder traversal of the Document tree.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domdocument_getelementsbytagnamens" class="IndexMethodName">GetElementsByTagNameNS</a>(
+					 String namespaceURI, String localName )
+					</div>
+					<div class="Description"><p>Returns a DOMNodeList of all the DOMElement(s) with a
+        given local name and namespace URI.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domdocument_getimplementation" class="IndexMethodName">GetImplementation</a>(
+					)
+					</div>
+					<div class="Description"><p>The DOMImplementation object that 
+    handles this document.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_domdocument_importnode" class="IndexMethodName">ImportNode</a>(
+					 DOMNode importedNode, Boolean deep )
+					</div>
+					<div class="Description"><p>Imports importedNode from another document to this document</p></div>
+				</div>
+			</div>
+
+
+		
+				<h2>Class Methods</h2>
+				<div class="ClassMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_domdocument_new">New</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMDocument</span> 
+						<span class="PrototypeselfName">New</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Create a new DOMDocument node, to be used to build 
+    a DOM tree in memory.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The new DOMDocument node.</p></div>
+							</div>
+						</div>
+				</div>
+				<h2>Instance Methods</h2>
+				<div class="InstanceMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domdocument_createattribute">CreateAttribute</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMAttr</span> 
+						<span class="PrototypeselfName">CreateAttribute</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">name</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Creates an Attr of the given name. Note that the 
+    Attr instance can then be set on an Element using the setAttribute method. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">name</span><span class="description"><p>The name of the attribute.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A new DOMAttr object.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domdocument_createattributens">CreateAttributeNS</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMAttr</span> 
+						<span class="PrototypeselfName">CreateAttributeNS</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">namespaceURI</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">qualifiedName</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Creates an attribute of the given qualified name and namespace URI.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">namespaceURI</span><span class="description"><p>The namespace URI of the attribute to create.</p></span></div>
+											<div class="Parameter"><span class="name">qualifiedName</span><span class="description"><p>The qualified name of the attribute to instantiate.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A new DOMAttr object.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domdocument_createcdatasection">CreateCDATASection</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMCDATASection</span> 
+						<span class="PrototypeselfName">CreateCDATASection</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">data</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Creates a CDATASection node whose value is the 
+    specified string.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">data</span><span class="description"><p>The data for the CDATASection node.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A new DOMCDATASection object.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domdocument_createcomment">CreateComment</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMComment</span> 
+						<span class="PrototypeselfName">CreateComment</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">data</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Creates a Comment node given the specified string. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">data</span><span class="description"><p>The data for the comment node.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A new DOMComment object.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domdocument_createdocumentfragment">CreateDocumentFragment</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMDocumentFragment</span> 
+						<span class="PrototypeselfName">CreateDocumentFragment</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Creates an empty DocumentFragment object. </p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A new DOMDocumentFragment object.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domdocument_createelement">CreateElement</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMElement</span> 
+						<span class="PrototypeselfName">CreateElement</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">tagName</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Creates an element of the type specified. Note 
+    that the instance returned implements the Element interface, so attributes 
+    can be specified directly on the returned object. In addition, if there are 
+    known attributes with default values, Attr nodes representing them are automatically 
+    created and attached to the element. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">tagName</span><span class="description"><p>The name of the element.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A new DOMElement object with the 
+      nodeName attribute set to tagName.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domdocument_createelementns">CreateElementNS</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMElement</span> 
+						<span class="PrototypeselfName">CreateElementNS</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">namespaceURI</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">qualifiedName</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Creates an element of the given qualified name and namespace URI. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">namespaceURI</span><span class="description"><p>The namespace URI of the element to be created.</p></span></div>
+											<div class="Parameter"><span class="name">qualifiedName</span><span class="description"><p>The qualified name of the element type to instantiate.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The newly created DOMElement object.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domdocument_createentityreference">CreateEntityReference</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMEntityReference</span> 
+						<span class="PrototypeselfName">CreateEntityReference</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">name</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Creates an EntityReference object. In addition, 
+    if the referenced entity is known, the child list of the EntityReference node 
+    is made the same as that of the corresponding Entity node. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">name</span><span class="description"><p>The name of the entity to reference.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A new DOMEntityReference object.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domdocument_createprocessinginstruction">CreateProcessingInstruction</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMProcessingInstruction</span> 
+						<span class="PrototypeselfName">CreateProcessingInstruction</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">target</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">data</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Creates a ProcessingInstruction node given the 
+    specified name and data strings. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">target</span><span class="description"><p>The target part of the processing instruction.</p></span></div>
+											<div class="Parameter"><span class="name">data</span><span class="description"><p>The data for the node.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A new DOMProcessingInstruction object.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domdocument_createtextnode">CreateTextNode</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMText</span> 
+						<span class="PrototypeselfName">CreateTextNode</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">data</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Creates a Text node given the specified string. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">data</span><span class="description"><p>The data for the text node.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A new DOMText object.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domdocument_getdoctype">GetDoctype</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMDocumentType</span> 
+						<span class="PrototypeselfName">GetDoctype</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>The Document Type Declaration (see DocumentType) 
+    associated with this document. For HTML documents as well as XML documents 
+    without a document type declaration this returns null. The DOM Level 2 does 
+    not support editing the Document Type Declaration, therefore docType cannot 
+    be altered in any way, including through the use of methods, such as insertNode 
+    or removeNode, inherited from Node. <span class="InternalUseOnly">Not implemented.</span></p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The DOMDocumentType node representing 
+      the DTD.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domdocument_getdocumentelement">GetDocumentElement</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMElement</span> 
+						<span class="PrototypeselfName">GetDocumentElement</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>This is a convenience attribute that allows direct 
+    access to the child node that is the root element of the document. </p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The DOMElement that represents the 
+      root node.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domdocument_getelementbyid">GetElementById</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMElement</span> 
+						<span class="PrototypeselfName">GetElementById</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">elementId</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the DOMElement whose ID is given by elementId. If no such element exists, returns undefined.  </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">elementId</span><span class="description"><p>The element ID string.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The DOMElement specified by elementID.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domdocument_getelementsbytagname">GetElementsByTagName</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMNodeList</span> 
+						<span class="PrototypeselfName">GetElementsByTagName</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">tagName</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a NodeList of all the Elements with a 
+    given tag name in the order in which they would be encountered in a preorder 
+    traversal of the Document tree. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">tagName</span><span class="description"><p>The name of the tag to match on. The 
+            special value "*" matches all tags.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A new NodeList object containing 
+      all the matched Elements.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domdocument_getelementsbytagnamens">GetElementsByTagNameNS</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMElement</span> 
+						<span class="PrototypeselfName">GetElementsByTagNameNS</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">namespaceURI</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">localName</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a DOMNodeList of all the DOMElement(s) with a
+        given local name and namespace URI in the order in which they are
+        encountered in a preorder traversal of the DOMDocument tree. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">namespaceURI</span><span class="description"><p>The namespace URI of the elements to match on. The special value "*" matches all namespaces.</p></span></div>
+											<div class="Parameter"><span class="name">localName</span><span class="description"><p>The local name of the elements to match on. The special value "*" matches all local names.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The DOMNodeList of all DOMNodes specified by the namespace URI and the local name.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domdocument_getimplementation">GetImplementation</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMImplementation</span> 
+						<span class="PrototypeselfName">GetImplementation</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>The DOMImplementation object that handles this 
+    document. A DOM application may use objects from multiple implementations. </p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The DOMImplementation object that 
+      handles this document.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_domdocument_importnode">ImportNode</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">DOMNode</span> 
+						<span class="PrototypeselfName">ImportNode</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">DOMNode</span> <span class="PrototypeArgumentName">importedNode</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Boolean</span> <span class="PrototypeArgumentName">deep</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Imports importedNode from another document to this document
+    If deep is set to TRUE then all children nodes are also imported </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">importedNode</span><span class="description"><p>The DOMNode to be imported</p></span></div>
+											<div class="Parameter"><span class="name">deep</span><span class="description"><p>If TRUE then import all sub nodes</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The imported node</p></div>
+							</div>
+						</div>
+				</div>
+		
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2018 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+
+
+
+</div>
+	</div>						
+						
+
+</div>
+
+</body></html>

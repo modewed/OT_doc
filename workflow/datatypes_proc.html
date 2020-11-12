@@ -1,0 +1,299 @@
+<HTML>
+<HEAD>
+<TITLE>Adding New Data Types: Procedure</TITLE>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<script language="JavaScript">updateParentHeader( 'Data Types' );</script>
+<script language="JavaScript">includeContentContainer( 'wfbuilder', true );</script>
+<p class="body">
+<p class="title">Adding New Data Types: Procedure</p>
+
+
+<p class="body">
+This example describes how to create a new data type called Table Values. The Table
+Values data type organizes many workflow attributes into logical groups 
+and displays them on a series of custom tabs. The Project tab contains 
+workflow attributes that define the name, code, due date, and priority 
+of a project. The Customer tab contains workflow attributes that define 
+the name and contact information of a customer that is related to
+the project. The Project and Customer tabs are contained within the Table Values tab,
+which is created for the Table Values data type and contained in the work packages of
+workflows to which the Table Values data type has been added.</p>
+
+<p class="body">
+The organization that the Table Values data type provides makes it easy for workflow
+participants to locate and use the workflow attributes that they 
+must modify throughout the execution of a workflow.</p>
+<p class="body">
+To use the Table Values data type, the creator of a workflow map 
+must first attach the Table Values data type to the workflow map 
+definition, and then define whether each workflow attribute is editable, 
+required, or read-only for each task in the workflow map.
+The Table Values data type is added to a workflow map definition by 
+selecting the Table Values check box on the workflow map's General
+Properties page. The workflow attributes are then defined on the 
+Table Values tab on the Step Definition page for each task in the
+workflow map.</p>
+
+<span class="title3">The Table Values Data Type Tab in the Workflow Designer</span>
+
+
+<p class="body">When a workflow map that contains the Table Values data 
+type is initiated in Content Server, the Table Values tab (containing the 
+Project and Customer tabs) is added to the work package and routed 
+to each workflow participant when their steps become ready. As
+workflow participants work on steps, they specify values for the workflow 
+attribute fields on the Project and Customer pages. The information that 
+each workflow participant provides is saved and updated as the work package 
+is routed from one participant to 
+another. Each workflow participant can view the information
+provided by the workflow participant who completed the preceding task.</p>
+
+<span class="title2">Creating the Database Tables</span>
+<p class="body">
+The values that workflow participants provide for the workflow attribute 
+fields that are listed on the Project and Customer pages are stored in 
+database tables that reside outside of the Content Server database. Before 
+you create the Table Values data type, you must create these external tables.</p>
+
+
+<span class="infin">To create the Cust_Project and Cust_Customers database tables:</span>
+<ol>
+<li class="body">Orphan <span class="code">DBWizAPI:DBWizAPIRoot:ExecPkg</span> in 
+your custom module's OSpace, and name it 
+<span class="codevar">modulename</span><span class="code">ExecPkg</span>.<p></li>
+<li class="body">Orphan <span class="code">DBWizAPI:DBWizAPIRoot:ModuleDBObject</span>
+in your custom module's OSpace, and name it 
+<span class="codevar">Module</span><span class="code">DBObject</span>.<p></li>
+<li class="body">Create a child of your custom module's root object, and
+name it <span class="codevar">modulename</span><span class="code">DBScripts</span>.<p></li>
+<li class="body"> Create a child of the 
+<span class="code">DBScripts</span> object, and name it 
+<span class="code">MSSQL</span> or <span class="code">Oracle</span>, depending on
+which RDMBS your organization uses for Content Server.<p>
+The names of these child objects are case-sensitive-- type them exactly as they appear
+in step 4.<p></li>
+<li class="body"> In the <span class="code">DBScripts</span> object, create a Dynamic feature, 
+and name it <span class="code">MSSQL</span> or <span class="code">Oracle</span>, depending on 
+the choice in step 4.<p></li>
+<li class="body"> In the <span class="code">DBScripts</span> 
+object, set the value of the feature you created in step 5 to the object
+reference number of the object that you created in step 4.<p></li>
+<li class="body"> In the <span class="code">ModuleDBObject</span>, do the following:</p>
+<ul type="disc">
+<li class="body"> Ensure that the <span class="code">fDBVersion</span> feature 
+is a list, and set its value to a list similar to <span class="code">{1, 0, 0}</span>.
+This list represents the version of the database in which you are creating the
+tables.</p>
+<li class="body"> Set the value of the <span class="code">fEnabled</span> feature to TRUE.</p>
+<li class="body"> Set the value of the <span class="code">fExecPkg</span> 
+feature to the object reference number of the
+<span class="code">ExecPkg</span> object that you created in step 1.</p>
+<li class="body"> Ensure that the <span class="code">fInstallScripts</span>
+feature is a List type, and set its value to <span class="code">{'cust_sql'}</span>.</p>
+<li class="body"> Set the value of the <span class="code">fModuleName</span> 
+feature to <span class="codevar">modulename</span>.</p>
+<li class="body"> Set the value of the <span class="code">fName</span> feature to 
+<span class="codevar">Module Name</span>.</p>
+<li class="body"> Set the value of the <span class="code">fScripts</span> 
+feature to the object reference number of the
+<span class="codevar">modulename</span><span class="code">DBScripts</span> object that 
+you created in step 3.</p>
+<li class="body"> Ensure that the <span class="code">fUninstallScripts</span> 
+feature is a List type, and set its value to
+<span class="code">{'cust_drop'}</span>.</ul><p>
+<li class="body"> In the <span class="codevar">modulename</span>&nbsp;
+<span class="code">Globals</span> object, run the 
+<span class="code">BuildOSpace()</span> script.<p></li>
+<li class="body"> In the 
+<span class="codevar">modulename</span><span class="code">DBScripts</span> 
+object, create a script and name it 
+<a href="cust_sql.html"><span class="code">cust_sql</span></a>.<p>
+This script is used to create the tables when you install your custom module.<p></li>
+<li class="body"> In the 
+<span class="codevar">modulename</span><span class="code">DBScripts</span> 
+object, create a script and name it 
+<a href="cust_drop.html"><span class="code">cust_drop</span></a>.<p>
+This script is used to delete the tables from the database when you uninstall your
+custom module.<p></li>
+<li class="body"> In the <span class="code">Configure</span> object, 
+set the value of the <span class="code">fHasDBSchema</span> feature to TRUE.<p></li>
+<li class="body"> Uninstall and reinstall the custom module.</li></ol>
+
+<p class="title">Creating a Utility Script</p>
+<p class="body">
+The Table Values data type requires a utility script that you must 
+create before you can implement the new data type. This script can 
+be created at any point throughout the implementation of the data type.</p>
+
+<span class="infin">To create the utility script:</span>
+<ol>
+<li class="body"> Create a child object of the <span class="codevar">modulename</span>&nbsp; 
+<span class="code">Root</span> object, and name it 
+<span class="codevar">modulename</span><span class="code">Pkg</span>.</li></p>
+<li class="body"> Right click the 
+<span class="codevar">modulename</span><span class="code">Pkg</span> object, 
+and click <span class="gui">Add To Globals</span>.</li></p>
+<li class="body"> In the 
+<span class="codevar">modulename</span><span class="code">Pkg</span> object, 
+create a script named 
+<a href="setsubpane.html"><span class="code">SetSubPaneIndexArg</span></a>.</li></p>
+<li class="body"> In the <span class="codevar">modulename</span>&nbsp; 
+<span class="code">Globals</span> object, run the 
+<span class="code">BuildOSpace()</span> script.</li></ol>
+
+
+
+<span class="title2">Defining the Data Type's API Object</span>
+<p class="body">You begin adding the Table Values data type to Content Server 
+by defining the data type's API object.</p>
+
+<span class="infin">To define the data type's API object:</span>
+<ol>
+<li class="body"> Orphan 
+<span class="code">WFMain:WFRoot:WFObjectTypes:WFDataTypes</span> in 
+your custom module's OSpace, and name it <span class="code">WFDataTypes</span>.<p></li>
+<li class="body"> Create a child of the 
+<span class="code">WFDataTypes</span> object, and name it 
+<span class="code">TableValues</span>.<p></li>
+<li class="body"> In the <span class="code">TableValues</span> object, change the 
+<span class="code">fSubType</span> feature to an Integer/Real type, and
+set its value to 1.<p>
+The <span class="code">fSubType</span> feature stores a unique integer that 
+works with the <span class="code">fType</span> feature to identify the API object.<p></li>
+<li class="body"> Change the <span class="code">fType</span> feature to an 
+Integer/Real type, and set its value to 11.<p>
+The <span class="code">fType</span> feature stores a unique integer 
+that works with the <span class="code">fSubType</span> feature to
+identify the object.<p></li>
+<li class="body"> Ensure that the <span class="code">fDataName</span> feature 
+is a String type, and set its value to <span class="code">Table Values</span>.<p>
+The <span class="code">fDataName</span> feature stores the text that 
+appears on the custom data type tab
+in the Content Server interface.<p></li>
+<li class="body"> Override the following scripts:</p>
+<ul type="disc">
+	<li class="body"><a href="checktaskdone.html"><span class="code">CheckTaskDone()</span></a></p>
+	<li class="body"><a href="createnewinstance.html"><span class="code">CreateNewInstance()</span></a></p>
+	<li class="body"><a href="createworkdata.html"><span class="code">CreateWorkData()</span></a></p>
+	<li class="body"><a href="deleteworkdata.html"><span class="code">DeleteWorkData()</span></a></p>
+	<li class="body"><a href="loadstarttask.html"><span class="code">LoadStartTaskWorkData()</span></a></p>
+	<li class="body"><a href="loadtaskwork.html"><span class="code">LoadTaskWorkData()</span></a></p>
+	<li class="body"><a href="loadworkdata.html"><span class="code">LoadWorkData()</span></a></p>
+	<li class="body"><a href="removeworkdata.html"><span class="code">RemoveWorkData()</span></a></p>
+	<li class="body"><a href="saveworkdata.html"><span class="code">SaveWorkData()</span></a></p>
+	<li class="body"><a href="setreviewdata.html"><span class="code">SetReviewData()</span></a></p>
+	<li class="body"><a href="setsubworkdata.html"><span class="code">SetSubWorkData()</span></a></p>
+	<li class="body"><a href="setsubworkreturn.html"><span class="code">SetSubWorkReturnData()</span></a></p>
+</ul>
+
+<li class="body"> Create a script, and name it 
+<a href="loadtablevalues.html"><span class="code">LoadTableValues</span></a>.<p></li>
+<li class="body"> Create a script, and name it 
+<a href="savetablevalues.html"><span class="code">SaveTableValues</span></a>.<p></li>
+<li class="body"> Create a script, and name it 
+<a href="updatesubwork.html"><span class="code">UpdateSubWorkData</span></a>.<p></li>
+<li class="body"> Create a script, and name it 
+<a href="updatetablevalues.html"><span class="code">UpdateTableValues</span></a>.</li>
+</ol>
+
+<p class="body">You have created a data type's API object. Now you 
+must provide the code required to customize the API object for the Table Values 
+data type.</p>
+
+<p class="title">Defining the Data Type's Workflow Designer Information</p>
+
+<p class="body">After you define the API object for the data type that 
+you are creating, you must provide the Workflow Designer with the 
+information it requires to add the data type to a workflow
+map.</p>
+
+<span class="infin">To define the data type's Workflow Designer information:</span>
+<ol>
+<li class="body"> <span class="code">Orphan WebWFP:WebWFPRoot:WFPackage</span> in 
+your custom module's OSpace, and name it <span class="code">WFPTableValues</span>.<p></li>
+<li class="body"> In the <span class="code">WFPTableValues</span> object, 
+change the <span class="code">fSubType</span> feature to an Integer/Real type
+and set its value to 1.<p>
+The <span class="code">fSubType</span> feature stores a unique integer 
+that works with the <span class="code">fType</span> feature to
+identify this object.<p></li>
+<li class="body"> Change the <span class="code">fType</span> feature to 
+an Integer/Real type and set its value to 11.<p>
+The <span class="code">fType</span> feature stores a unique integer 
+that works with the <span class="code">fSubType</span> feature to
+identify this object.<p></li>
+<li class="body"> Override the following scripts:</p>
+<ul type="disc">
+<li class="body"><a href="getmapdatadata.html"><span class="code">GetMapData()</span></a></p>
+<li class="body"><a href="putmapdatadata.html"><span class="code">PutMapData()</span></a></ul>
+</p>
+<li class="body"> Create an HTML file in your <span class="var">modulename</span>/html 
+directory, and name it 
+<a href="t_tablevalues.html">t_tablevalues.html</a>.</li>
+</ol>
+
+<p class="body">You have created the object necessary to define a 
+data type's Workflow Designer information. Now you must provide the 
+code required to customize the object for the
+Table Values data type.</p>
+
+<p class="title">Defining the Data Type's Web Object</p>
+<p class="body">
+After you define the API object and the Workflow Designer information for the 
+data type that you are creating, you must define the data type's Web object.</p>
+
+<span class="infin">To define the data type's Web object:</span>
+<ol>
+<li class="body">Orphan <span class="code">WebWork:WebWorkRoot:WFPackage</span> 
+in your custom module's OSpace, and name it <span class="code">WorkTableValues</span>.</p>
+<li class="body"> In the <span class="code">WorkTableValues</span> object, 
+change the <span class="code">fSubType</span> feature to an Integer/Real
+type, and set it to 1.
+The <span class="code">fSubType</span> feature stores a unique integer that works with the 
+<span class="code">fType</span> feature to identify this object.</p>
+<li class="body"> Change the <span class="code">fType</span> feature to 
+an Integer/Real type, and set its value to 11.
+The <span class="code">fType</span> feature stores a unique integer 
+that works with the <span class="code">fSubType</span> feature to
+identify this object.</p>
+<li class="body"> In the <span class="codevar">modulename</span>&nbsp;
+ <span class="code">Globals</span> object, run the <span class="code">BuildOSpace()</span> 
+ script.</p>
+<li class="body"> Override the following scripts:</p>
+<ul type="disc">
+	<li class="body"><a href="getdata.html"><span class="code">GetData()</span></a></p>
+	<li class="body"><a href="getsubmapdata.html"><span class="code">GetSubmapData()</span></a></p>
+	<li class="body"><a href="gettabinfo.html"><span class="code">GetTabInfo()</span></a></p>
+	<li class="body"><a href="putsubmap.html"><span class="code">PutSubmapData()</span></a></p>
+	<li class="body"><a href="savedata.html"><span class="code">SaveData()</span></a></p>
+</ul>
+<li class="body">Create an HTML file in your <span class="var">modulename</span>/html 
+directory, and name it <a href="submap_table.html">submap_tablevalues.html</a>.</p>
+<li class="body">Create an HTML file in your <span class="var">modulename</span>/html 
+directory, and name it <a href="tablevalues.html">tablevalues.html</a>.</p>
+<li class="body">Create an HTML file in your <span class="var">modulename</span>/html 
+directory, and name it <a href="projectpane.html">projectpane.html</a>.</p>
+<li class="body">Create an HTML file in your <span class="var">modulename</span>/html 
+directory, and name it <a href="customerpane.html">customerpane.html</a>.
+</ol>
+
+<p class="body">You have created the object that is used to control a 
+data type when it is manipulated in a workflow by workflow participants. 
+Now you must provide the code required to
+customize the object for the Table Values data type.</p>
+
+
+
+
+
+
+<script language="JavaScript">IncludeFooter( '' );</script>
+
+</BODY>
+</html>

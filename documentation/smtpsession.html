@@ -1,0 +1,495 @@
+
+<meta charset="UTF-8">
+<html>
+<head><title>Class: SMTPSession</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../syntax.css" type="text/css">
+<link rel="stylesheet" href="builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td  align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody></table>
+
+<div id="document">
+	
+<div class="sidebar_container">
+		
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink"><a href="assoc.html">Assoc</a></div>
+				<div class="packagelink"><a href="boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="builder.html">Builder</a></div>
+				<div class="packagelink"><a href="bytes.html">Bytes</a></div>
+				<div class="packagelink"><a href="capi.html">CAPI</a></div>
+				<div class="packagelink"><a href="capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink"><a href="cachetree.html">CacheTree</a></div>
+				<div class="packagelink"><a href="compiler.html">Compiler</a></div>
+				<div class="packagelink"><a href="core.html">Core</a></div>
+				<div class="packagelink"><a href="dapi.html">DAPI</a></div>
+				<div class="packagelink"><a href="dapinode.html">DAPINODE</a></div>
+				<div class="packagelink"><a href="dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink"><a href="dapiversion.html">DAPIVERSION</a></div>
+				<div class="packagelink"><a href="domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="domcomment.html">DOMComment</a></div>
+				<div class="packagelink"><a href="domdocument.html">DOMDocument</a></div>
+				<div class="packagelink"><a href="domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink"><a href="domelement.html">DOMElement</a></div>
+				<div class="packagelink"><a href="domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink"><a href="domnamednodemap.html">DOMNamedNodeMap</a></div>
+				<div class="packagelink"><a href="domnode.html">DOMNode</a></div>
+				<div class="packagelink"><a href="domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="domtext.html">DOMText</a></div>
+				<div class="packagelink"><a href="date.html">Date</a></div>
+				<div class="packagelink"><a href="dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="env.html">Env</a></div>
+				<div class="packagelink"><a href="error.html">Error</a></div>
+				<div class="packagelink"><a href="file.html">File</a></div>
+				<div class="packagelink"><a href="filecopy.html">FileCopy</a></div>
+				<div class="packagelink"><a href="fileprefs.html">Fileprefs</a></div>
+				<div class="packagelink"><a href="frame.html">Frame</a></div>
+				<div class="packagelink"><a href="global.html">Global</a></div>
+				<div class="packagelink"><a href="integer.html">Integer</a></div>
+				<div class="packagelink"><a href="javaobject.html">JavaObject</a></div>
+				<div class="packagelink"><a href="language.html">Language</a></div>
+				<div class="packagelink"><a href="license.html">License</a></div>
+				<div class="packagelink"><a href="list.html">List</a></div>
+				<div class="packagelink"><a href="logging.html">Logging</a></div>
+				<div class="packagelink"><a href="long.html">Long</a></div>
+				<div class="packagelink"><a href="mailmessage.html">MailMessage</a></div>
+				<div class="packagelink"><a href="math.html">Math</a></div>
+				<div class="packagelink"><a href="memcached.html">Memcached</a></div>
+				<div class="packagelink"><a href="notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="object.html">Object</a></div>
+				<div class="packagelink"><a href="pop3session.html">POP3Session</a></div>
+				<div class="packagelink"><a href="patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="patfind.html">PatFind</a></div>
+				<div class="packagelink"><a href="pattern.html">Pattern</a></div>
+				<div class="packagelink"><a href="point.html">Point</a></div>
+				<div class="packagelink"><a href="profiler.html">Profiler</a></div>
+				<div class="packagelink"><a href="real.html">Real</a></div>
+				<div class="packagelink"><a href="recarray.html">RecArray</a></div>
+				<div class="packagelink"><a href="record.html">Record</a></div>
+				<div class="packagelink"><a href="regex.html">Regex</a></div>
+				<div class="packagelink"><a href="restclient.html">RestClient</a></div>
+				<div class="packagelink"><a href="saxparser.html">SAXParser</a></div>
+				<div class="packagelink curPage">SMTPSession</div>
+				<div class="packagelink"><a href="ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="script.html">Script</a></div>
+				<div class="packagelink"><a href="security.html">Security</a></div>
+				<div class="packagelink"><a href="set.html">Set</a></div>
+				<div class="packagelink"><a href="socket.html">Socket</a></div>
+				<div class="packagelink"><a href="sql.html">Sql</a></div>
+				<div class="packagelink"><a href="sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink"><a href="str.html">Str</a></div>
+				<div class="packagelink"><a href="string.html">String</a></div>
+				<div class="packagelink"><a href="system.html">System</a></div>
+				<div class="packagelink"><a href="uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="void.html">Void</a></div>
+				<div class="packagelink"><a href="wapi.html">WAPI</a></div>
+				<div class="packagelink"><a href="wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink"><a href="web.html">Web</a></div>
+				<div class="packagelink"><a href="xslprocessor.html">XSLProcessor</a></div>
+				<div class="packagelink"><a href="zip.html">Zip</a></div>
+		</div>
+</div>
+
+	<div class="content_container">
+		<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+		<h1>Class: SMTPSession</h1><div class="ClassDescription"><p>The built-in functions in the SMTPSession class provide the ability to connect to an SMTP server with a variety of methods and send email and SMTP commands.</p>
+<p>The SMTPSession class offers the following functionality:</p>
+<ul>
+<li><a class="interdoc" href="#cm_smtpsession_new">New()</a> and <a class="interdoc" href="#cm_smtpsession_newssl">NewSSL()</a> Create a new SMTP session object. </li>
+<li><a class="interdoc" href="#im_smtpsession_settimeout">SetTimeout()</a> and <a class="interdoc" href="#im_smtpsession_gettimeout">GetTimeout()</a> to get or set the SMTP command timeout value.</li>
+<li><a class="interdoc" href="#im_smtpsession_connect">Connect()</a> to connect to an SMTP host.</li>
+<li><a class="interdoc" href="#im_smtpsession_initcontext">InitContext()</a> to initialize an SSL context for secure connections.</li>
+<li><a class="interdoc" href="#im_smtpsession_securelogin">SecureLogin()</a> and
+    <a class="interdoc" href="#im_smtpsession_login">Login()</a> to login to the SMTP server.</li>
+<li><a class="interdoc" href="#im_smtpsession_close">Close()</a> to close an SMTP connection.</li>
+<li><a class="interdoc" href="#im_smtpsession_sendmessage">SendMessage()</a> and
+    <a class="interdoc" href="#im_smtpsession_sendcommand">SendCommand()</a> to interact with the SMTP server.</li>
+<li><a class="interdoc" href="#im_smtpsession_getlasterror">GetLastError()</a> to return a string for the last error that occured. </li>
+</ul></div>
+			<h2>Class Attributes</h2>
+			<div class="ClassAttributesShort">
+				
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_smtpsession_login_clear">LOGIN_CLEAR</a></div>
+					<div class="Description"><p>Login using clear text </p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_smtpsession_login_cram_md5">LOGIN_CRAM_MD5</a></div>
+					<div class="Description"><p>Login using CRAM_MD5</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_smtpsession_secure_smtp_port">SECURE_SMTP_PORT</a></div>
+					<div class="Description"><p>The standard Secure SMTP port, 465</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_smtpsession_smtp_port">SMTP_PORT</a></div>
+					<div class="Description"><p>The standard SMTP port, 25</p></div>
+				</div>
+				
+			</div>
+
+
+			<h2>Class Methods</h2>
+			<div class="ClassMethodsShort">
+				<div class="Method">
+					<div class="Name"><a href="#cm_smtpsession_new" class="IndexMethodName">New</a>(
+					 String host, [Integer port] )
+					</div>
+					<div class="Description"><p>Returns a new SMTPSession instance, or undefined if an error occured.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_smtpsession_newssl" class="IndexMethodName">NewSSL</a>(
+					 String host, Integer port, SSLOptions options )
+					</div>
+					<div class="Description"><p>Returns a new SMTPSession instance using a SSL socket, or undefined if an error occured.</p></div>
+				</div>
+			</div>
+
+			<h2>Instance Methods</h2>
+			<div class="InstanceMethodsShort">
+				<div class="Method">					
+					<div class="Name"><a href="#im_smtpsession_close" class="IndexMethodName">Close</a>(
+					)
+					</div>
+					<div class="Description"><p>Close a connection to an SMTP server.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_smtpsession_connect" class="IndexMethodName">Connect</a>(
+					 String host )
+					</div>
+					<div class="Description"><p>Connect to an SMTP server.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_smtpsession_getlasterror" class="IndexMethodName">GetLastError</a>(
+					)
+					</div>
+					<div class="Description"><p>Retrieve the string for the last error code.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_smtpsession_gettimeout" class="IndexMethodName">GetTimeout</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns the SMTP timeout in milliseconds.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_smtpsession_initcontext" class="IndexMethodName">InitContext</a>(
+					 SSLOptions options )
+					</div>
+					<div class="Description"><p>Used to initialize a security context for SecureLogin().</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_smtpsession_login" class="IndexMethodName">Login</a>(
+					 String username, String password, [Integer loginMethod] )
+					</div>
+					<div class="Description"><p>Initiate a connection to an SMTP server.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_smtpsession_securelogin" class="IndexMethodName">SecureLogin</a>(
+					 String hostname, [String username], [String password] )
+					</div>
+					<div class="Description"><p>Initiate a secure connection to an SMTP server.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_smtpsession_sendcommand" class="IndexMethodName">SendCommand</a>(
+					 String command, String arguments )
+					</div>
+					<div class="Description"><p>Sends raw SMTP commands.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_smtpsession_sendmessage" class="IndexMethodName">SendMessage</a>(
+					 MailMessage message )
+					</div>
+					<div class="Description"><p>Sends a mail message.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_smtpsession_settimeout" class="IndexMethodName">SetTimeout</a>(
+					 Integer timeout )
+					</div>
+					<div class="Description"><p>Set SMTP timeout in milliseconds.</p></div>
+				</div>
+			</div>
+
+				<h2>Class Attributes</h2>
+				<div class="ClassAttributes">
+					
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_smtpsession_login_clear">LOGIN_CLEAR</a></div>
+						<div class="Description"><p>Login using clear text </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_smtpsession_login_cram_md5">LOGIN_CRAM_MD5</a></div>
+						<div class="Description"><p>Login using CRAM_MD5</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_smtpsession_secure_smtp_port">SECURE_SMTP_PORT</a></div>
+						<div class="Description"><p>The standard Secure SMTP port, 465</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_smtpsession_smtp_port">SMTP_PORT</a></div>
+						<div class="Description"><p>The standard SMTP port, 25</p></div>
+					</div>
+				
+				</div>
+
+		
+				<h2>Class Methods</h2>
+				<div class="ClassMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_smtpsession_new">New</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">SMTPSession</span> 
+						<span class="PrototypeselfName">New</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">host</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">port</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a new SMTPSession object</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">host</span><span class="description"><p>IP address or domain name of SMTP host.</p></span></div>
+											<div class="Parameter"><span class="name">port</span><span class="description"><p>SMTP connection port; default value is 25.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A new SMTPSession object or undefined if there was an error constructing the object.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_smtpsession_newssl">NewSSL</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">SMTPSession</span> 
+						<span class="PrototypeselfName">NewSSL</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">host</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">port</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">SSLOptions</span> <span class="PrototypeArgumentName">options</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a new SMTPSession object using a SSL socket.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">host</span><span class="description"><p>IP address or domain name of SMTP host.</p></span></div>
+											<div class="Parameter"><span class="name">port</span><span class="description"><p>SMTP connection port</p></span></div>
+											<div class="Parameter"><span class="name">options</span><span class="description"><p>SSL options</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A new SMTPSession object using a SSL socket or undefined if there was an error constructing the object.</p></div>
+							</div>
+						</div>
+				</div>
+				<h2>Instance Methods</h2>
+				<div class="InstanceMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_smtpsession_close">Close</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Close</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>No parameters.  Closes the session.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns 0 for success and -1 if an error occurred.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_smtpsession_connect">Connect</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Connect</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">host</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>The host parameter is optional and if not specified, will connect to the host as specified in the New() function.<br />
+Otherwise, this host parameter will override whatever host param was used in the New() function.<br />
+Use this if you do not require authentication to connect to your smtp server.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">host</span><span class="description"><p>IP address or domain name of SMTP server.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns 0 for success and -1 if an error occurred.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_smtpsession_getlasterror">GetLastError</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">GetLastError</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>No parameters.  Returns an error string for the last error that occured.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns an error string for the last error that occured.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_smtpsession_gettimeout">GetTimeout</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">GetTimeout</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Gets the timeout value for SMTP commands.  The timeout is in milliseconds.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns the timeout in milliseconds, -1 if an error occured.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_smtpsession_initcontext">InitContext</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">InitContext</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">SSLOptions</span> <span class="PrototypeArgumentName">options</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sets the SSL options for a secure connection.  You must call this before attempting to do a SecureLogin() call.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">options</span><span class="description"><p>an instance of SSLOptions.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns 0 for success and -1 if an error occurred.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_smtpsession_login">Login</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Login</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">username</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">password</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">loginMethod</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>This function allows authenticated login to an smtp server, with two different methods available, 
+LOGIN_CRAM_MD5 and LOGIN_CLEAR.  The loginMethod param is optional and the default is LOGIN_CLEAR.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">username</span><span class="description"><p>username used to login to SMTP server.</p></span></div>
+											<div class="Parameter"><span class="name">password</span><span class="description"><p>password used to login to SMTP server.</p></span></div>
+											<div class="Parameter"><span class="name">loginMethod</span><span class="description"><p>type of login authentication to use.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns 0 for success and -1 if an error occurred.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_smtpsession_securelogin">SecureLogin</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">SecureLogin</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">hostname</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">username</span><span class="PrototypePunctuation">]</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">password</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>The username/password parameters are optional, use them if your server also requires authentication as well as TLS/SSL.<br />
+You must have called InitContext() before this.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">hostname</span><span class="description"><p>IP address or domain name of SMTP server.</p></span></div>
+											<div class="Parameter"><span class="name">username</span><span class="description"><p>user login on SMTP server</p></span></div>
+											<div class="Parameter"><span class="name">password</span><span class="description"><p>user password for SMTP server</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns 0 for success and -1 if an error occurred.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_smtpsession_sendcommand">SendCommand</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">SendCommand</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">command</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">arguments</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Use this to send other raw SMTP commands.  The arguments param is optional.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">command</span><span class="description"><p>command to send</p></span></div>
+											<div class="Parameter"><span class="name">arguments</span><span class="description"><p>arguments to include with the command</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns 0 for success and -1 if an error occurred.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_smtpsession_sendmessage">SendMessage</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">SendMessage</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">MailMessage</span> <span class="PrototypeArgumentName">message</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sends a previously created MailMessage.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">message</span><span class="description"><p>MailMessage to send</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns 0 for success and -1 if an error occurred.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_smtpsession_settimeout">SetTimeout</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">SetTimeout</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">timeout</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sets the timeout value for SMTP commands.  The timeout is in milliseconds.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">timeout</span><span class="description"><p>timeout in milliseconds.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Returns 0 for success and -1 if an error occurred.</p></div>
+							</div>
+						</div>
+				</div>
+		
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2018 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+
+
+
+</div>
+	</div>						
+						
+
+</div>
+
+</body></html>

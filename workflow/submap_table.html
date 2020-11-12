@@ -1,0 +1,160 @@
+<HTML>
+<HEAD>
+<TITLE>submap_tablevalues.html</TITLE>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<script language="JavaScript">updateParentHeader( 'Code' );</script>
+<script language="JavaScript">includeContentContainer( 'wfbuilder', true );</script>
+<p class="body">
+<p class="title">submap_tablevalues.html</p>
+<p class="body">This HTML file is displayed when the 
+creator of a workflow map defines a Sub-workflow task that contains 
+the Table Values data type in a workflow that also contains
+the Table Values data type (by clicking the Table Values tab on 
+the Sub-Map Step Definition page). It lets the creator of a workflow map 
+specify the type of data that is passed between the main workflow and 
+the Sub-workflow.</p>
+
+<pre class="code">
+;;webscript submap_tablevalues( Dynamic data )
+&lt;!-- File: custmod/submap_tablevalues.html -->
+//Edit table values for a Sub-workflow map. This file assumes that
+//you are already in the context of an HTML form.
+;Boolean noValues = !IsDefined( data.PassedValues )
+;List vals = data.PassedValues
+&lt;TABLE BORDER=&quot;0&quot; CELLPADDING=&quot;2&quot; CELLSPACING=&quot;1&quot;>
+//Set up the Table Values row.
+&lt;TR>
+&lt;TD bgcolor=&quot;#CCCCCC&quot; NOWRAP VALIGN=&quot;TOP&quot;>&lt;FONT
+FACE=&quot;`[WebDsp_Font.SansSerif]`&quot; size=&quot;2&quot;>&nbsp;Table
+Values:&nbsp;&lt;/FONT>&lt;/TD>
+//Create the Table Values (data exchange) heading in the
+//Table Values row.
+&lt;TD>
+&lt;TABLE BORDER=&quot;0&quot; CELLPADDING=&quot;0&quot; CELLSPACING=&quot;0&quot;>
+&lt;TR>
+&lt;TD>&lt;STRONG>Table Values (data
+exchange)&lt;/STRONG>&lt;/TD>
+&lt;/TR>
+&lt;TR>
+&lt;TD HEIGHT=&quot;12&quot;>&nbsp;&lt;/TD>
+&lt;/TR>
+//Set up a check box to specify whether the project
+//name passes between the main workflow and the
+//Sub-workflow.
+;if ( data.Found )
+&lt;TR>
+;if ( noValues || ( 'Project_Name' in vals ) )
+; checked = &quot;CHECKED&quot;
+;else
+; checked = &quot;&quot;
+;end
+&lt;TD HEIGHT=&quot;20&quot;>
+&lt;INPUT TYPE=&quot;CHECKBOX&quot; `checked`
+NAME=&quot;Project_Name&quot; ONCLICK=&quot;markTaskEditDirty();&quot;>
+Project Name passes between main
+workflow and Sub-workflow
+&lt;/TD>
+&lt;/TR>
+//Set up a check box to specify whether the priority
+//values pass between the main workflow and the
+//Sub-workflow.
+&lt;TR>
+;if ( noValues || ( 'Priority' in vals ) )
+; checked = &quot;CHECKED&quot;
+;else
+; checked = &quot;&quot;
+;end
+&lt;TD HEIGHT=&quot;20&quot;>
+&lt;INPUT TYPE=&quot;CHECKBOX&quot; `checked`
+NAME=&quot;Priority&quot; ONCLICK=&quot;markTaskEditDirty();&quot;>
+Priority passes between main
+workflow and Sub-workflow
+&lt;/TD>
+&lt;/TR>
+//Set up a check box to specify whether the due date
+//passes between the main workflow and the sub-//
+workflow.
+&lt;TR>
+;if ( noValues || ( 'DueDate' in vals ) )
+; checked = &quot;CHECKED&quot;
+;else
+; checked = &quot;&quot;
+;end
+&lt;TD HEIGHT=&quot;20&quot;>
+&lt;INPUT TYPE=&quot;CHECKBOX&quot; `checked`
+NAME=&quot;DueDate&quot; ONCLICK=&quot;markTaskEditDirty();&quot;>
+Due Date passes between main
+workflow and Sub-workflow
+&lt;/TD>
+&lt;/TR>
+//Set up a check box to specify whether the project
+//code passes between the main workflow and the
+//Sub-workflow.
+&lt;TR>
+;if ( noValues || ( 'ID_Code' in vals ) )
+; checked = &quot;CHECKED&quot;
+;else
+; checked = &quot;&quot;
+;end
+&lt;TD HEIGHT=&quot;20&quot;>
+&lt;INPUT TYPE=&quot;CHECKBOX&quot; `checked`
+NAME=&quot;ID_Code&quot; ONCLICK=&quot;markTaskEditDirty();&quot;>
+Project Code passes between main
+workflow and Sub-workflow
+&lt;/TD>
+&lt;/TR>
+//Set up a check box to specify whether the customer
+//information passes between the main workflow and the
+//Sub-workflow.
+&lt;TR>
+;if ( noValues || ( 'Customer' in vals ) )
+; checked = &quot;CHECKED&quot;
+;else
+; checked = &quot;&quot;
+;end
+&lt;TD HEIGHT=&quot;20&quot;>
+&lt;INPUT TYPE=&quot;CHECKBOX&quot; `checked`
+NAME=&quot;Customer&quot; ONCLICK=&quot;markTaskEditDirty();&quot;>
+Customer Information passes
+between main workflow and Sub-workflow
+&lt;/TD>
+&lt;/TR>
+;else
+//If the Table Values data type is not attached to
+//the Sub-workflow task, return a message to the
+//creator of the workflow map.
+&lt;TR>
+&lt;TD>The selected sub-map does not use the
+Table Values data type.&lt;/TD>
+&lt;/TR>
+;end
+&lt;TR>
+&lt;TD>&nbsp;&lt;/TD>
+&lt;/TR>
+&lt;/TABLE>
+&lt;/TD>
+&lt;/TR>
+//Set up the Action row, which contains the Add to Workflow
+//Definition button.
+&lt;TR>
+&lt;TD bgcolor=&quot;#CCCCCC&quot; NOWRAP>&lt;FONT
+FACE=&quot;`[WebDsp_Font.SansSerif]`&quot;
+size=&quot;2&quot;>&nbsp;`[WebDoc_HTMLLabel.Action_]`&nbsp;&lt;/FONT>&lt;/TD>
+&lt;TD>
+&lt;INPUT TYPE=&quot;Submit&quot;
+VALUE=&quot;`[WebWFP_HTMLLabel.AddToWorkflowDefinitionButtonLabel]`&quot;>
+&lt;/TD>
+&lt;/TR>
+&lt;/TABLE>
+;;end</pre>
+
+
+<script language="JavaScript">IncludeFooter();</script>
+
+</BODY>
+</html>

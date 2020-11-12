@@ -1,0 +1,610 @@
+<HTML>
+<HEAD>
+<TITLE>Operators</TITLE>
+
+<link rel="stylesheet" href="../llhelp2000.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<SCRIPT language=JavaScript>IncludeHeader( 'olang2', 'Operators' )</SCRIPT>
+
+
+<p class="title">Operators</p>
+
+<p class="body">Operators are used to combine values to create expressions. The OScript language 
+contains many of the standard programming operators with which you are probably familiar, and also 
+includes several additional operators created to manipulate Livelink-specific data types. OScript includes 
+the following types of operators:</P>
+<ul class="body">
+<li><a href="#assign">Assignment</a></li></p>
+<li><a href="#arith">Arithmetic</a></li></p>
+<li><a href="#relational">Relational and Logical</a></li></p>
+<li><a href="#bitwise">Bitwise</a> </li></p>
+<li><a href="#index">Index</a></li></p>
+<li><a href="#range">Range</a></li></p>
+<li><a href="#dot">Dot</a></li></p>
+<li><a href="#cond">Conditional</a></li></ul>
+
+<p class="body">Also included in this chapter is a table listing 
+<a href="#precedence">Operator precedence</a>.</p>
+
+<p class="subh2"><a name="assign">Assignment</a></P>
+<p class="body">The assignment operator is used to store values in variables or other types of 
+expressions. The assignment operator is the single equals sign (=). It assigns the value of the expression 
+on the right of the operator to the operand on the left. For example:</P>
+
+<pre>
+		myName = &quot;Arnold Wilson&quot;
+		theFile = File.Open( &quot;C:\DATA.TXT&quot; )
+		area = length * width
+		myObject.nameFeature = 'newNode'
+		myRecArray[ 5 ] = copied Record
+		$globalDBName = &quot;OracleDocs&quot;</pre>
+
+<p class="body">Declared variables that have a type other than Dynamic can only hold 
+values of that variable's declared type. However, a value of any type can hold an Error or Undefined.</P>
+<p class="body">The arithmetic ( +, -, *, /, % ) and bitwise ( &amp;, |, and ^ ) operators can be 
+added before the assignment operator to perform an operation and an assignment in one step. 
+Doing so performs the operation and then assigns the result of the operation to the operand.</P>
+
+<pre>	
+		counter += 1</pre>
+
+<p class="body">In this example, 1 is added to the current value of <span class="code">counter</span>
+ and then assigned to <span class="code">counter</span>. It is equivalent to the following:</P>
+
+<pre>	
+		counter = counter + 1</pre>
+
+<p class="body">Although these types of assignments are most commonly made using += and -= to increment 
+and decrement an operand, any of the operators listed above can be used.</P>
+<p class="body">The += syntax can also be used to make a concatenation assignment to a String.</P>
+
+<pre>
+		myString += nextWord</pre>
+
+<p class="body">In this example, the current contents of <span class="code">nextWord</span> 
+are concatenated to <span class="code">myString</span> and the resulting value is stored 
+in <span class="code">myString</span>.</P>
+
+<p class="subh2"><a name="arith">Arithmetic</a></p>
+<p class="body">The arithmetic operators are used to perform mathematical operations upon Integer 
+and Real values. OScript supports the following binary arithmetic operators:</P>
+<ul class="body">
+<li>+addition</li></p>
+<li>-subtraction</li></p>
+<li>*multiplication</li></p>
+<li>/division</li></p>
+<li>%modulus</li></ul>
+
+
+<p class="body">And the following unary arithmetic operators: </P>
+<ul class="body">
+<li>+unary plus</li></p>
+<li>-unary minus</li></ul>
+
+<p class="body">Any of these operators, except the modulus operator, can be used on Integers and Reals; 
+the modulus operator can only be used on Integers. The addition and subtraction operators can also be used 
+with Strings.</P>
+<p class="body">The type of value resulting from an arithmetic operation depends on the data types of 
+the values operated on. The following table summarizes the resulting value type:</P>
+
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=590>
+<TR>
+<TD class="gui" VALIGN="TOP">
+Operator</TD>
+<TD class="gui" VALIGN="TOP">
+Integer...Integer</TD>
+<TD class="gui" VALIGN="TOP">
+Integer...Real</TD>
+<TD class="gui" VALIGN="TOP">
+Real...Real</TD>
+<TD class="gui" VALIGN="TOP">
+String...String</TD>
+</TR>
+<TR>
+<TD class="body" VALIGN="TOP">
++</TD>
+<TD class="body" VALIGN="TOP">
+Integer</TD>
+<TD class="body" VALIGN="TOP">
+Real</TD>
+<TD class="body" VALIGN="TOP">
+Real</TD>
+<TD class="body" VALIGN="TOP">
+String</TD>
+</TR>
+<TR>
+<TD class="body" VALIGN="TOP">
+-</TD>
+<TD class="body" VALIGN="TOP">
+Integer</TD>
+<TD class="body" VALIGN="TOP">
+Real</TD>
+<TD class="body" VALIGN="TOP">
+Real</TD>
+<TD class="body" VALIGN="TOP">
+String</TD>
+</TR>
+<TR>
+<TD class="body" VALIGN="TOP">
+*</TD>
+<TD class="body" VALIGN="TOP">
+Integer</TD>
+<TD class="body" VALIGN="TOP">
+Real</TD>
+<TD class="body" VALIGN="TOP">
+Real</TD>
+<TD class="body" VALIGN="TOP">
+-- </TD>
+</TR>
+<TR>
+<TD class="body" VALIGN="TOP">
+/</TD>
+<TD class="body" VALIGN="TOP">
+Integer*</TD>
+<TD class="body" VALIGN="TOP">
+Real*</TD>
+<TD class="body" VALIGN="TOP">
+Real*</TD>
+<TD class="body" VALIGN="TOP"> -- </TD>
+</TR>
+<TR>
+<TD class="body" VALIGN="TOP">
+%</TD>
+<TD class="body" VALIGN="TOP">
+Integer</TD>
+<TD class="body" VALIGN="TOP">
+--</TD>
+<TD class="body" VALIGN="TOP">
+--</TD>
+<TD class="body" VALIGN="TOP">
+--</TD>
+</TR>
+</TABLE>
+
+
+<p class="body">* if the divisor is not zero; Error otherwise.</P>
+<p class="body">The result of Integer division is an Integer, where any decimal portion that might 
+result from a division operation on equivalent Reals is <span class="emph">truncated</span>, not rounded.</P>
+<p class="body">The result of the unary operator is the same as the data type to which it is applied.</P>
+
+<p class="subh2"><a name="relational">Relational and Logical</a></p>
+<p class="body">The relational and logical operators are used to create expressions containing 
+various data types that evaluate to a Boolean value -- TRUE or FALSE.</P>
+<p class="body">OScript includes the following relational operators:</P>
+<ul class="body">
+<li>&gt;(or GT)greater than</li></p>
+<li>&gt;= (or GE)greater than or equal to</li></p>
+<li>&lt; (or LT)less than</li></p>
+<li>&lt;= (or LE)less than or equal to</li></p>
+<li>== (or EQ)equivalence</li></p>
+<li>!= (or NE)non-equivalence</li></ul>
+
+<p class="body">And the following binary logical operators:</P>
+<ul class="body">
+<li>&amp;&amp;(or AND)logical AND</li></p>
+<li>||(or OR)logical OR</li></p>
+<li>^^(or XOR)logical exclusive OR</li></ul>
+
+<p class="body">And the following unary logical operator:</P>
+
+<p class="body">!(or NOT)negation</P>
+
+<p class="body">Any of these operators can be used to join two or more Boolean values to form an 
+expression that evaluates to another Boolean -- TRUE or FALSE. Expressions containing these operators are 
+evaluated from left to right, and evaluation stops as soon as the truth or falsehood of the expression can 
+be determined. For example:</P>
+
+<pre>
+		myValue &lt;= maxValue
+		enteredValue != &quot;&quot;
+		Length( theList ) &gt;= 1
+		( theValue &gt; 100 ) || ( theIdentifier == &quot;new&quot; )
+		userType == &quot;admin&quot; ) &amp;&amp; ( fileName != &quot;&quot; ) &amp;&amp; ( space &gt;= 10000 )</pre>
+
+<p class="body">In the above example, the expressions 
+<span class="code">( fileName != &quot;&quot; )</span>
+ and <span class="code">( space &gt;= 10000 )</span> are not evaluated if 
+ <span class="code">( userType == &quot;admin&quot;)</span> evaluates to FALSE.</P>
+
+
+<p class="subh2"><a name="bitwise">Bitwise</a></P>
+<p class="body">The bitwise operators are used to perform bit manipulation on Integers, resulting in an 
+Integer value.</P>
+<p class="body">OScript includes the following bitwise operators:</P>
+<ul class="body">
+<li>&amp;bitwise AND</li></p>
+<li>|bitwise OR</li></p>
+<li>^bitwise exclusive OR</li></p>
+<li>&lt;&lt;shift left</li></p>
+<li>&gt;&gt;shift right</li></p>
+<li>~one's complement</li></ul>
+
+<p class="body">The bitwise operators &amp;, |, and ^ should not be confused with their logical 
+counterparts &amp;&amp;, ||, and ^^.</P>
+<p class="body">The &lt;&lt; and &gt;&gt; operators perform left or right shifts on the value to the 
+left of the operator by the number of bit positions specified by the value to the right of the operator.</P>
+
+<pre>
+		Integer x = 1
+		x = x &lt;&lt; 2</pre>
+
+<p class="body">In this example, the result <span class="code">4</span> is 
+stored in <span class="code">x</span>.</P>
+<p class="body">The ~ operator performs a bitwise complement on the specified value by converting 
+each 1-bit to a 0-bit, and vice versa.</P>
+
+<p class="subh2"><a name="index">Index Operator</a></P>
+<p class="body">The index operator (&nbsp;[&nbsp;]&nbsp;) can be used with Strings, Lists, 
+RecArrays, and Records to access a particular data item within the specified value. The index operator 
+must be used with an Integer specifying a valid data item index. A valid data item index is defined as a 
+<span class="emph">positive </span>or <span class="emph">negative </span>Integer less than or equal to the number of items in the value, where 
+positive values instruct the compiler to index from left to right, and negative values instruct the compiler 
+to index from right to left. Indexes in OScript are 1-based, which means that the first element is [1]. Note 
+that [0] returns Undefined.</P>
+
+<pre>
+		String myString = &quot;the quick brown fox&quot;
+		String oneCharacter = myString[ 5 ]</pre>
+
+<p class="body">In the example above, the index operator is used to obtain the fifth letter of 
+<span class="code">myString</span> (the letter 
+<span class="code">q</span>) and store it in 
+<span class="code">oneCharacter</span>.</P>
+
+<pre>
+		List nameList = { &quot;arnold&quot;, &quot;amy&quot;, &quot;naomi&quot;, &quot;otto&quot; }
+		String myName = nameList[ -3 ]</pre>
+
+<p class="body">In the example above, the index operator is used to obtain the third 
+from right name (<span class="code">amy</span>) listed in the 
+List <span class="code">nameList</span>.</P>
+
+<pre>
+		RecArray myRecArray = RecArray.Create( { &quot;fld1&quot;, 
+		&quot;fld2&quot;, &quot;fld3&quot; } )
+		RecArray.AddRecord( myRecArray, { 11, 22, 33 } )
+		Record firstRecord = myRecArray[ 1 ]
+		Integer thirdField = firstRecord [ 3 ]</pre>
+
+<p class="body">In the example above, <span class="code">firstRecord</span> contains 
+the entire first Record of values in <span class="code">myRecArray</span>, and 
+<span class="code">thirdField</span> contains the value in the third field of 
+<span class="code">firstRecord</span>.</P>
+<p class="body">You can use the Index operator on the left side of the assignment operator. 
+For example:</P>
+
+<pre>
+		List myFruit = { &quot;Apple&quot;, &quot;Celery&quot;, 
+		&quot;Bean&quot;, &quot;Beet&quot; }
+		myFruit[ 2 ] = &quot;Pear&quot;
+		Echo( myFruit )// displays { 'Apple', 'Pear', 'Bean', 'Beet' }
+		myFruit[ 3 ] = &quot;Cherry&quot;
+		Echo( myFruit )//displays { 'Apple', 'Pear', 'Cherry'}</pre>
+
+<p class="body">Specifying an invalid index returns an empty value of the appropriate type.</P>
+<p class="body">The type of value resulting from a valid index operation depends upon the type of the 
+indexed value and the form of the indexing expression. The following table summarizes: </P>
+
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=590>
+<TR>
+<TD class="gui" VALIGN="TOP">
+Indexed value</TD>
+<TD class="gui" VALIGN="TOP">
+Result</TD>
+</TR>
+<TR>
+<TD class="body" VALIGN="TOP">
+String</TD>
+<TD class="body" VALIGN="TOP">
+String containing a single character</TD>
+</TR>
+<TR>
+<TD class="body" VALIGN="TOP">
+List</TD>
+<TD class="body" VALIGN="TOP">
+A value of the same type as the specified element</TD>
+</TR>
+<TR>
+<TD class="body" VALIGN="TOP">
+RecArray</TD>
+<TD class="body" VALIGN="TOP">
+Record</TD>
+</TR>
+<TR>
+<TD class="body" VALIGN="TOP">
+Record</TD>
+<TD class="body" VALIGN="TOP">
+A value of the same type as the specified field</TD>
+</TR>
+</TABLE>
+
+<p class="subh2"><a name="range">Range Operator</a></P>
+<p class="body">The range operator ( : ) can be used with Strings, Lists, and Records to access a 
+particular range of data items within the specified value. The range operator must be used with two 
+Integers specifying a valid data item index range. A range is valid if:</P>
+<ul class="body">
+<li>It includes only positive or negative Integers</li></P>
+<li>The absolute value of each Integer is less than or equal to the number of items in the value </li></P>
+<li>The first Integer specified is smaller than or equal to the second Integer, once translated 
+(the compiler first translates any negative Integers to their positive counterparts, for example, in a 
+six-item List, <span class="code">-4</span> is first translated to 
+<span class="code">2</span>)</li></ul>
+
+<p class="body">The defined range is <span class="emph">inclusive</span> -- the range 
+<span class="code">[ 1:7 ]</span> includes value 1, value 7, 
+and all the values in between.</P>
+
+<pre>
+		String myString = 'the quick brown fox'
+		String subString = myString[ 5:9 ] </pre>
+
+<p class="body">In the example above, <span class="code">subString</span> 
+contains <span class="code">quick</span> -- the characters in 
+positions five through nine of the String <span class="code">myString</span>.</P>
+
+<pre>
+		List nameList = { 'arnold', 'amy', 'naomi', 'otto' }
+		List femaleNames = nameList[ 2:3 ]</pre>
+
+<p class="body">In the example above, <span class="code">femaleNames</span> 
+contains <span class="code">amy</span>> and <span class="code">naomi</span>
+ -- the List values two and three in List <span class="code">nameList</span>.</P>
+
+<pre>
+		RecArray myRecArray = RecArray.Create( {'fld1', 'fld2', 'fld3', \'fld4', 'fld5', 'fld6' } )
+		RecArray.AddRecord ( myRecArray { 11, 22, 33, 44, 55, 66 } )
+		Record firstRecord = myRecArray[ 1 ]
+		List someFields = firstRecord[ 3:6 ]</pre>
+
+<p class="body">In the example above, <span class="code">someFields</span> 
+contains the values stored in the third through sixth fields of the Record 
+<span class="code">firstRecord</span>.</P>
+<p class="body">Specifying an invalid range returns an empty value of the appropriate type. The type 
+of value resulting from a valid range operation depends upon the type of the input value. The following 
+table summarizes: </P>
+
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=463>
+<TR>
+<TD class="gui" VALIGN="TOP">
+Input value</TD>
+<TD class="gui" VALIGN="TOP">
+Result</TD>
+</TR>
+<TR>
+<TD class="body" VALIGN="TOP">
+String</TD>
+<TD class="body" VALIGN="TOP">
+String containing one or more characters</TD>
+</TR>
+<TR>
+<TD class="body" VALIGN="TOP">
+List</TD>
+<TD class="body" VALIGN="TOP">
+List containing the specified elements</TD>
+</TR>
+<TR>
+<TD class="body" VALIGN="TOP">
+Record</TD>
+<TD class="body" VALIGN="TOP">
+List containing one element for each specified field</TD>
+</TR>
+</TABLE>
+
+
+<p class="subh2"><a name="dot">Dot</a></p>
+<p class="body">The dot operator ( . ) references a feature of a Record, Assoc, Object, or File 
+by name. It can be used to reference a data member or property of the specified value.</P>
+<p class="body">The type of value resulting from a dot operation depends upon the operands.</P>
+
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=463>
+<TR>
+<TD class="gui" VALIGN="TOP">
+Value</TD>
+<TD class="gui" VALIGN="TOP">
+Feature</TD>
+<TD class="gui" VALIGN="TOP">
+Result</TD>
+</TR>
+<TR>
+<TD class="body" VALIGN="TOP">
+Record</TD>
+<TD class="body" VALIGN="TOP">
+field</TD>
+<TD class="body" VALIGN="TOP">
+the value stored in the specified field</TD>
+</TR>
+<TR>
+<TD class="body" VALIGN="TOP">
+Assoc</TD>
+<TD class="body" VALIGN="TOP">
+key</TD>
+<TD class="body" VALIGN="TOP">
+the value associated with the specified key</TD>
+</TR>
+<TR>
+<TD class="body" VALIGN="TOP">
+Object</TD>
+<TD class="body" VALIGN="TOP">
+feature</TD>
+<TD class="body" VALIGN="TOP">
+the data (value or method) stored in the specified Object feature</TD>
+</TR>
+<TR>
+<TD class="body" VALIGN="TOP">
+File</TD>
+<TD class="body" VALIGN="TOP">
+property</TD>
+<TD class="body" VALIGN="TOP">
+the value stored in the specified property of the File</TD>
+</TR>
+</TABLE>
+
+<p class="body">The dot operator must be followed by a valid feature name.</P>
+
+<pre>
+		String theName = myRecord.name</pre>
+
+<p class="body">In the above example, the dot operator is used to retrieve the String stored in 
+the <span class="code">name</span> field of the Record 
+<span class="code">myRecord</span>.</P>
+
+<pre>
+		Assoc ages
+		ages.Joe = 35</pre>
+
+<p class="body">In the above example, the dot operator is used to set the value associated with 
+the key <span class="code">Joe</span>.</P>
+
+<pre>
+		String theName = $NodeObject.getName()</pre>
+
+<p class="body">In the above example, the dot operator is used to reference the 
+<span class="code">getName</span> method which is a feature 
+of the <span class="code">NodeObject</span> object.</P>
+
+<PRE>
+Function ListGetFileProperties( File c )
+         ListfileProps
+         Dynamicval
+         val = c.pName
+         fileProps = { @fileProps, val }
+         val = c.pSize
+         fileProps = { @fileProps, val }
+         return( fileProps )
+end</Pre>
+
+<p class="body">In the above example, the dot operator is used to retrieve various properties of a 
+File and store them in a List.</P>
+<p class="body">A String expression can be used to specify a field reference when placed inside 
+parentheses. This can be useful in looping constructs.</P>
+
+<PRE>
+		String a
+		List fields = RecArray.FieldNames( b )
+		Record myRecord = b[ 1 ]
+		for a in fields
+		    Echo( a, &quot; is: &quot;, myRecord.( a ) )
+		end</pre>
+
+<p class="subh2"><a name="cond">Conditional</a></P>
+
+<p class="body"> The conditional operator (? :) returns one of two different values depending on the 
+value of a condition. This operator performs a function similar to an <code>if-else</code> statement, but 
+is much more compact. Conditional operators use the following syntax:</p>
+
+<pre>
+		conditional_expression ? expression1 : expression2</pre>
+
+<p class="body">In the following example, <code>expression1</code> resolves when <code>y</code> is 
+<code>True</code>, and <code>expression2</code> resolves when <code>y</code> is <code>False</code>.</p>
+
+<pre>
+		string x
+		boolean y = True
+		string expression1 = &quot;Red&quot;
+		string expression2 = &quot;Blue&quot;
+		x = y ? expression1 : expression2
+		echo( x )</pre>
+
+<p class="body">Conditonal operators can also be used inside an expression, and can be recursive. 
+For example:</p>
+
+<pre>
+		boolean defined = False
+		boolean alsoDefined = True
+		string myString = &quot;The user name is &quot; + \
+		(defined ? &quot;defined&quot; : (alsoDefined ? &quot;not known&quot; : &quot;undefined&quot;))</pre>
+
+<p class="subh2"><a name="precedence">Operator Precedence</a></P>
+<p class="body">Operator precedence describes the default hierarchy of evaluation of expressions 
+containing multiple operators. The table below summarizes the rules of precedence and states the order 
+of evaluation for all OScript operators. Operators on the same line have the same precedence, and the 
+lines are listed in order of decreasing precedence.</P>
+
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=409>
+<TR><TD class="gui" VALIGN="TOP">
+Operator</TD>
+<TD class="gui" VALIGN="TOP">
+Order of Evaluation</TD>
+</TR>
+<TR><TD class="body" VALIGN="TOP">
+!  ~  +(unary)  -(unary)</TD>
+<TD class="body" VALIGN="TOP">
+right to left</TD>
+</TR>
+<TR><TD class="body" VALIGN="TOP">
+*   /  %</TD>
+<TD class="body" VALIGN="TOP">
+left to right</TD>
+</TR>
+<TR><TD class="body" VALIGN="TOP">
++  -</TD>
+<TD class="body" VALIGN="TOP">
+left to right</TD>
+</TR>
+<TR><TD class="body" VALIGN="TOP">
+&lt;&lt;  &gt;&gt;</TD>
+<TD class="body" VALIGN="TOP">
+left to right</TD>
+</TR>
+<TR><TD class="body" VALIGN="TOP">
+==  !=</TD>
+<TD class="body" VALIGN="TOP">
+left to right</TD>
+</TR>
+<TR><TD class="body" VALIGN="TOP">
+&amp;</TD>
+<TD class="body" VALIGN="TOP">
+left to right</TD>
+</TR>
+<TR><TD class="body" VALIGN="TOP">
+^</TD>
+<TD class="body" VALIGN="TOP">
+left to right</TD>
+</TR>
+<TR><TD class="body" VALIGN="TOP">
+|</TD>
+<TD class="body" VALIGN="TOP">
+left to right</TD>
+</TR>
+<TR><TD class="body" VALIGN="TOP">
+&amp;&amp;</TD>
+<TD class="body" VALIGN="TOP">
+left to right</TD>
+</TR>
+<TR><TD class="body" VALIGN="TOP">
+^^</TD>
+<TD class="body" VALIGN="TOP">
+left to right</TD>
+</TR>
+<TR><TD class="body" VALIGN="TOP">
+||</TD>
+<TD class="body" VALIGN="TOP">
+left to right</TD>
+</TR>
+<TR><TD class="body" VALIGN="TOP">
+?:</TD>
+<TD class="body" VALIGN="TOP">
+right to left</TD></tr>
+<TR><TD class="body" VALIGN="TOP">
+=  +=  -=  (and so on)</TD>
+<TD class="body" VALIGN="TOP">
+right to left</TD>
+</TR>
+</TABLE>
+
+<p class="body">Parentheses ( ) can be used to alter this precedence when needed. Although it is 
+necessary to know the operators' precedence rules, in general, it is bad programming practice to rely 
+solely on this order of evaluation when writing scripts. The careful use of parentheses can help 
+ensure that expressions are evaluated as you intend and makes your script easier to read.</P>
+
+
+<script language="JavaScript">
+IncludeFooter( '' )
+</script>
+
+</BODY>
+</HTML>

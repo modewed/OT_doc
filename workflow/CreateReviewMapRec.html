@@ -1,0 +1,173 @@
+<HTML>
+<HEAD>
+<TITLE>CreateReviewMapRec()</TITLE>
+
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<script language="JavaScript">updateParentHeader( 'Code' );</script>
+<script language="JavaScript">includeContentContainer( 'wfbuilder', true );</script>
+<p>
+<p class="title">CreateReviewMapRec()</p>
+
+<p class="body">This code sample returns the workflow map definition 
+that is used when a step is sent to a Livelink user or group for review. 
+This workflow map definition is created on-the-fly and is initiated as a 
+Sub-workflow step.</p>
+<pre class="code">
+	Function Record CreateReviewMapRec( \
+		Object 		prgCtx, \
+		Record  	user, \
+		Integer 	groupFlags, \
+		Assoc 		taskData, \
+		RecArray 	packages )
+
+		Boolean 	expandFlag
+		Dynamic 	userRecords
+		List 		fields
+		Integer 	i
+		Record 		r
+		Record 		newTask
+		String 		fieldName
+		
+		Integer 	taskID = 1
+		Point 		pos = Point( 100, 50 )
+
+		//Create a generic map record that contains all of the workflow
+		//map information.
+		
+		Record 		mapRec = $WFMain.WFMapPkg.CreateMapRec()
+
+		//Add a Start step and a User step to the workflow map
+		//definition.
+		
+		AddNewTask( \
+			prgCtx, \
+			mapRec, \
+			$WFMain.WFTaskSubsystem.GetItemByName( 'WFStartTask' ), \
+			Undefined, \
+			Point( 20, 50 ) )
+
+		//Determine whether this step is assigned to a group. If it is,
+		//determine whether the step should be assigned to each member of
+		//the group or to the group as a whole. If the step is assigned
+		//to the group as a whole, the first group member to accept the
+		//step is responsible for completing it.
+
+		if ( ( user.TYPE != UAPI.USER ) && ( IsSet( groupFlags ) ) && \
+			( IsDefined( groupFlags ) ) && ( groupFlags != \
+			$WFMain.WFConst.kWFGroupStandard ) )
+			expandFlag = ( groupFlags == \
+			$WFMain.WFConst.kWFGroupExpandFull )
+			userRecords = $LLIAPI.UsersPkg.ExpandGroup( prgCtx, user, \
+			expandFlag )
+			if ( userRecords.OK )
+				userRecords = userRecords.Members
+			else
+				userRecords = { user }
+			end
+			else
+				userRecords = { user }
+			end
+
+			if ( Length( userRecords ) &gt; 1 )
+				newTask = user
+			else
+				newTask = userRecords[ 1 ]
+			end
+
+			//Assign a custom display step to each workflow participant to
+			//which the information must be sent for review.
+
+			newTask = AddNewTask( \
+				prgCtx, \
+				mapRec, \
+				$WFMain.WFTaskSubsystem.GetItemByname( \
+				'CustomDisplay' ), \
+				newTask, \
+				pos )
+		
+			//Set the Group Options value to Member Accept (standard).
+
+			taskData.EXATTS.GroupFlags = $WFMain.WFConst.kWFGroupStandard
+
+			//Copy the data fields from the original step to the new sub-
+			//workflow step. The allows the Sub-workflow step to be able to
+			//modify the data in the same way that the original step could
+			//modify the data.
+
+			fields = { 'PAINTER', 'USERDATA' }
+			
+			for fieldName in Assoc.Keys( taskData )
+				if ( RecArray.IsColumn( newTask, fieldName ) && !( Str.Upper( \
+				fieldName ) in fields ) )
+					newTask.( fieldName ) = taskData.( fieldName )
+				end
+			end
+
+			newTask.PERFORMERID = userRecords[ 1 ].ID
+
+			for i = 2 to Length( userRecords )
+				newTask = $LLIAPI.RecArrayPkg.CopyRec( mapRec.TASKS[ 2 ] )
+
+				//Generate a new position for the next step.
+
+				pos += Point( 0, 75 )
+
+				newTask.PAINTER = { pos, newTask.PAINTER[ 2 ] }
+				
+				newTask.PERFORMERID = userRecords[ i ].ID
+
+				RecArray.AddRecord( mapRec.TASKS, \
+				RecArray.GetRecord( newTask ) )
+			end
+
+			//Add a link between the two tasks.
+
+			for r in mapRec.TASKS
+				if ( taskID > 1 )
+					$WFMain.WFMapPkg.AddLinkRecord( \
+						mapRec.TASKS, \
+						mapRec.LINKS, \
+						mapRec.TASKS[ 1 ], \
+						mapRec.TASKS[ taskID ], \
+						0 )
+				end
+				taskID += 1
+			end
+
+			//Add the work package from the main workflow to the sub-
+			//workflow.
+
+			for r in packages
+				RecArray.AddRecord( mapRec.WORK_PACKAGES, \
+				RecArray.GetRecord( r ) )
+			end
+			return( mapRec )
+		end
+
+		Function Record AddNewTask( \
+			Object  prgCtx, \
+			Record  mapRec , \
+			Object 	taskType, \
+			Dynamic context, \
+			Point iconPos )
+
+			Dynamic val
+			List data
+			Record taskRec
+
+			//Add a new Record to the tasks RecArray.
+			taskRec = $LLIAPI.RecArrayPkg.NewRecord( mapRec.TASKS )
+			taskType.SetTaskDefaults( prgCtx, taskRec, context )
+			val = taskType.GetPainterInfo( prgCtx, taskRec, context )
+			taskRec.PAINTER = { iconPos, val }
+			return( taskRec )
+		end</pre>
+
+<script language="JavaScript">IncludeFooter();</script>
+</body>
+</html>

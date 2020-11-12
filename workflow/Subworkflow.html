@@ -1,0 +1,361 @@
+<HTML>
+<HEAD>
+<TITLE>subworkflow()</TITLE>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<script language="JavaScript">updateParentHeader( 'Code' );</script>
+<script language="JavaScript">includeContentContainer( 'wfbuilder', true );</script>
+<p class="body">
+<p class="title">subworkflow()</p>
+<p class="body">
+This code sample describes how to define a Sub-workflow map on-the-fly and
+save the map definition in WAPI.</p>
+<pre class="code">
+	Function Integer subworkflow( \
+		Object prgCtx, \
+		WAPIWORK work, \
+		Integer workID, \
+		Integer subWorkID, \
+		Integer taskID, \
+		Integer returnSubWorkID, \
+		Integer returnTaskID, \
+		Dynamic extraData = Undefined )
+
+		//The following variable declarations are taken from the
+		//prototype for submap event trigger scripts. This information
+		//is stored in the ODocumentation() script associated with the
+		//SubmapCallbackScripts object in your custom module.
+	
+		Assoc taskData
+		Dynamic user
+		Dynamic mapID
+		Integer flags
+		List dispositions
+		RecArray attrRec
+		Record mapRec
+		Record newTask
+
+		Boolean ok = True
+		Object mapPkg = $WFMain.WFMapPkg
+		Object pkgSubSystem = $WFMain.WFPackageSubsystem
+		Object recArrayPkg = $LLIAPI.RecArrayPkg
+		Object taskSubSystem = $WFMain.WFTaskSubsystem
+		Object uSession = prgCtx.USession()
+		Object wSession = prgCtx.WSession()
+
+		//Set the position of the first step in the Sub-workflow map.
+		//Because the Start step is just a placeholder step, it is not
+		//counted as the first step in a Sub-workflow.
+
+		Point pos = Point( 100, 50 )
+		
+		//Retrieve a generic map record to use as the base for the sub-
+		//workflow map. You can also retrieve a standard, empty map that
+		//has the Start step, Attributes, Attachments, and Comments data
+		//types added by calling
+		//mapRec = mapPkg.VFMakeNewFreshMap( prgCtx, \
+		//Assoc.CreateAssoc() )
+
+		mapRec = mapPkg.CreateMapRec()
+
+		//Specify a title for the Sub-workflow map.
+
+		mapRec.MAPINFO.TITLE = 'The on-the-fly Sub-workflow'
+
+		//Add a Start step to the Sub-workflow map.
+		
+		mapPkg.VFAddNewTask( \
+			prgCtx, \
+			taskSubsystem.GetItemByName( 'WFStartTask' ), \
+			mapRec, \
+			Undefined, \
+			Point( 20, 50 ) )
+
+		//Add the Attributes and Comments data types to the Sub-workflow
+		//map.
+
+		mapPkg.VFAddPackage( \
+			prgCtx, \
+			pkgSubsystem.GetItemByName( 'WFComments' ), \
+			mapRec, \
+			Undefined )
+
+		mapPkg.VFAddPackage( \
+			prgCtx, \
+			pkgSubsystem.GetItemByName( 'WFAttributes' ), \
+			mapRec, \
+			Undefined )
+
+		//Add attributes to the Attribute data type.
+		attrRec = mapRec.WORK_PACKAGES[ 2 ].USERDATA
+
+		//attrRec is a RecArray that stores the attributes. There are
+		//five columns in attrRec: Name, DataType, DisplayType,
+		//ValidValues, and Value.
+
+		RecArray.AddRecord( attrRec, { 'Name', StringType, 'Field', {}, \
+		Undefined } )
+		RecArray.AddRecord( attrRec, { 'Due Date', DateType, 'Field', \
+		{}, Undefined } )
+		RecArray.AddRecord( attrRec, { 'Country', StringType, 'Popup', \
+		{'Canada','Germany','USA'}, 'USA' } )
+		RecArray.AddRecord( attrRec, { 'Critical Report?', BooleanType, \
+		'Checkbox', {}, 0 } )
+
+		//Add a step for each user to whom the data should be sent. The
+		//first step is assigned to the Admin user.
+
+		user = UAPI.GetUser( uSession.fSession, 'Admin' )
+
+		if ( !IsError( user ) )
+			user = user[ 1 ]
+			newTask = mapPkg.VFAddNewTask( \
+				prgCtx, \
+				taskSubsystem.GetItemByname( 'GenericUserTask' ), \
+				mapRec, \
+				user, \
+				pos )
+
+			//Set any additional information for the step.
+			
+			//Specify the title of the step.
+
+			taskData.TITLE = 'Step for Admin'
+
+			//Specify the duration of the step in seconds (for example, one
+			//day is 86400 seconds.
+
+			taskData.DUEDURATION = 86400
+
+			//Specify the instructions for the step.
+
+			taskData.INSTRUCTIONS = 'Work on this step'
+
+			//Specify the options associated with the step. In this case
+			//give the user permission to see all comments, to send the
+			//task for review, to delegate permissions, and to require
+			//dispositions.
+
+			flags |= $WFPComments
+			flags |= $WFPReview
+			flags |= $WFPDelegate
+			flags |= $WFPDisposition
+
+			dispositions = { 'Approve', 'Reject' }
+			taskData.USERFLAGS = { flags, { dispositions, 1 } }
+			
+			//taskData.USERFLAGS[1] contains the permission flags.
+			//USERFLAGS[2][1] contains a list of string dispositions.
+			//USERFLAGS[2][2] contains the ordinal number of the
+			//defaulted disposition.
+
+			//Specify the attribute data.
+			
+			Assoc formData
+			List visibleAttrs = { 'Name', 'Due Date', 'Country', \
+			'Critical Report?' }
+			List requiredAttrs = { 'Name', 'Country' }
+			List nonEditableAttrs = {}
+
+			formData.VISIBLE_ATTRIBS = visibleAttrs
+			formData.REQUIRED_ATTRIBS = requiredAttrs
+			formData.NONEDITABLE_ATTRIBS = nonEditableAttrs
+
+			taskData.FORM = formData
+
+			//Specify all remaining data for the step.
+
+			SetTaskData( newTask, taskData )
+
+			//Add a link between the Start step and this step.
+
+			mapPkg.AddLinkRecord( \
+					mapRec.TASKS, \
+					mapRec.LINKS, \
+					mapRec.TASKS[ 1 ], \
+					mapRec.TASKS[ 2 ], \
+					0 )
+
+		else
+			ok = False
+			//Specify the error message that is displayed if the userID
+			//value is not found.
+			
+			wSession.fErrorMsg = 'Could not find Admin user.'
+		end
+
+		if ( ok )
+			
+			//Generate a new position for the next step in the sub-
+			//workflow.
+			
+			pos += Point( 75, 0 )
+
+			//Add an Initiator step to the Sub-workflow map.
+
+			newTask = mapPkg.VFAddNewTask( \
+						prgCtx, \
+						taskSubsystem.GetItemByname( 'InitiatorTask' ), \
+						mapRec, \
+						Undefined, \
+						pos )
+
+			//Specify the title of the step.
+
+			taskData.TITLE = 'Step for Initiator'
+
+			//Specify all the data required for the step.
+
+			SetTaskData( newTask, taskData )
+
+			//Add a link between the User step and this step.
+
+			mapPkg.AddLinkRecord( \
+					mapRec.TASKS, \
+					mapRec.LINKS, \
+					mapRec.TASKS[ 2 ], \
+					mapRec.TASKS[ 3 ], \
+					0 )
+		end
+
+		if ( ok )
+			RecArray array
+			//Generate a new position for the next step in the sub-
+			//workflow.
+
+			pos += Point( 75, 0 )
+
+			//Add an Evaluate step to the Sub-workflow map.
+			
+			newTask = mapPkg.VFAddNewTask( \
+						prgCtx, \
+						taskSubsystem.GetItemByname( 'Conditional' ), \
+						mapRec, \
+						Undefined, \
+						pos )
+						
+			//Specify the title of the step.
+
+			newTask.TITLE = 'Evaluate'
+
+			array = newTask.CONDITIONCB
+
+			//array is a RecArray that stores the evaluation information.
+			//There are six columns in the RecArray: Type, Name, Condition,
+			//Value, Display, and Conjunction.
+
+			RecArray.AddRecord( array, \
+			{ 2, 'Step for Initiator', '=', 'Approve', \
+			'Step for Initiator = Approve', ' and' } )
+			RecArray.AddRecord( array, { { 1, 3 }, 'Country', '=', \
+			'USA', 'Country = USA', Undefined } )
+
+			//Specify all the data required for the step.
+
+			SetTaskData( newTask, taskData )
+			
+			//Add a link between the Initiator step and this step.
+
+			mapPkg.AddLinkRecord( \
+					mapRec.TASKS, \
+					mapRec.LINKS, \
+					mapRec.TASKS[ 3 ], \
+					mapRec.TASKS[ 4 ], \
+					0 )
+		end
+		
+		if ( ok )
+		
+		//Generate a new position for the next step in the sub-
+		//workflow.
+		
+		pos += Point( 75, -30 )
+		
+		//Add a MileStone step to the Sub-workflow map.
+
+		newTask = mapPkg.VFAddNewTask( \
+					prgCtx, \
+					taskSubsystem.GetItemByname( 'MileStone' ), \
+					mapRec, \
+					Undefined, \
+					pos )
+
+		//Specify the title of the step.
+		
+		newTask.TITLE = 'True Branch'
+
+		//Specify the duration of the step in seconds (for example, one
+		//day is 86400 seconds).
+
+		newTask.DUEDURATION = 86400
+
+		//Add a link between the Evaluate step and this workflow step.
+
+		mapPkg.AddLinkRecord( \
+				mapRec.TASKS, \
+				mapRec.LINKS, \
+				mapRec.TASKS[ 4 ], \
+				mapRec.TASKS[ 5 ], \
+				WAPI.MAPTASK_TRUELINKS )
+	end
+
+	if ( ok )
+		//Generate a new position for the next step in the sub-
+		//workflow.
+		
+		pos += Point( 0, 75 )
+
+		//Add a MileStone step to the Sub-workflow map.
+
+		newTask = mapPkg.VFAddNewTask( \
+					prgCtx, \
+					taskSubsystem.GetItemByname( 'MileStone' ), \
+					mapRec, \
+					Undefined, \
+					pos )
+
+		//Specify the title of the step.
+		
+		newTask.TITLE = 'False Branch'
+		newTask.DUEDURATION = 86400
+
+		//Add a link between the Evaluate step and this step.
+
+		mapPkg.AddLinkRecord( \
+				mapRec.TASKS, \
+				mapRec.LINKS, \
+				mapRec.TASKS[ 4 ],\
+				mapRec.TASKS[ 6 ], \
+				WAPI.MAPTASK_FALSELINKS )
+		end
+
+		if ( ok )
+			
+			//Save the Sub-workflow map definition to WAPI.
+			
+			mapID = $WFMain.WAPIPkg.SaveSubMap( prgCtx, mapRec )
+		end
+		if ( !ok )
+			mapID = Error.Get( 600 )
+		end
+		return( mapID )
+	end
+
+	Function Void SetTaskData( \
+		Record task, \
+		Assoc data )
+		String key
+		for key in Assoc.Keys( data )
+			task.( key ) = data.( key )
+		end
+	end</pre>
+
+
+<script language="JavaScript">IncludeFooter();</script>
+
+</BODY>
+</html>

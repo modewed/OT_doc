@@ -1,0 +1,583 @@
+
+<meta charset="UTF-8">
+<html>
+<head><title>Class: List</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../syntax.css" type="text/css">
+<link rel="stylesheet" href="builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td  align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody></table>
+
+<div id="document">
+	
+<div class="sidebar_container">
+		
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink"><a href="assoc.html">Assoc</a></div>
+				<div class="packagelink"><a href="boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="builder.html">Builder</a></div>
+				<div class="packagelink"><a href="bytes.html">Bytes</a></div>
+				<div class="packagelink"><a href="capi.html">CAPI</a></div>
+				<div class="packagelink"><a href="capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink"><a href="cachetree.html">CacheTree</a></div>
+				<div class="packagelink"><a href="compiler.html">Compiler</a></div>
+				<div class="packagelink"><a href="core.html">Core</a></div>
+				<div class="packagelink"><a href="dapi.html">DAPI</a></div>
+				<div class="packagelink"><a href="dapinode.html">DAPINODE</a></div>
+				<div class="packagelink"><a href="dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink"><a href="dapiversion.html">DAPIVERSION</a></div>
+				<div class="packagelink"><a href="domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="domcomment.html">DOMComment</a></div>
+				<div class="packagelink"><a href="domdocument.html">DOMDocument</a></div>
+				<div class="packagelink"><a href="domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink"><a href="domelement.html">DOMElement</a></div>
+				<div class="packagelink"><a href="domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink"><a href="domnamednodemap.html">DOMNamedNodeMap</a></div>
+				<div class="packagelink"><a href="domnode.html">DOMNode</a></div>
+				<div class="packagelink"><a href="domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="domtext.html">DOMText</a></div>
+				<div class="packagelink"><a href="date.html">Date</a></div>
+				<div class="packagelink"><a href="dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="env.html">Env</a></div>
+				<div class="packagelink"><a href="error.html">Error</a></div>
+				<div class="packagelink"><a href="file.html">File</a></div>
+				<div class="packagelink"><a href="filecopy.html">FileCopy</a></div>
+				<div class="packagelink"><a href="fileprefs.html">Fileprefs</a></div>
+				<div class="packagelink"><a href="frame.html">Frame</a></div>
+				<div class="packagelink"><a href="global.html">Global</a></div>
+				<div class="packagelink"><a href="integer.html">Integer</a></div>
+				<div class="packagelink"><a href="javaobject.html">JavaObject</a></div>
+				<div class="packagelink"><a href="language.html">Language</a></div>
+				<div class="packagelink"><a href="license.html">License</a></div>
+				<div class="packagelink curPage">List</div>
+				<div class="packagelink"><a href="logging.html">Logging</a></div>
+				<div class="packagelink"><a href="long.html">Long</a></div>
+				<div class="packagelink"><a href="mailmessage.html">MailMessage</a></div>
+				<div class="packagelink"><a href="math.html">Math</a></div>
+				<div class="packagelink"><a href="memcached.html">Memcached</a></div>
+				<div class="packagelink"><a href="notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="object.html">Object</a></div>
+				<div class="packagelink"><a href="pop3session.html">POP3Session</a></div>
+				<div class="packagelink"><a href="patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="patfind.html">PatFind</a></div>
+				<div class="packagelink"><a href="pattern.html">Pattern</a></div>
+				<div class="packagelink"><a href="point.html">Point</a></div>
+				<div class="packagelink"><a href="profiler.html">Profiler</a></div>
+				<div class="packagelink"><a href="real.html">Real</a></div>
+				<div class="packagelink"><a href="recarray.html">RecArray</a></div>
+				<div class="packagelink"><a href="record.html">Record</a></div>
+				<div class="packagelink"><a href="regex.html">Regex</a></div>
+				<div class="packagelink"><a href="restclient.html">RestClient</a></div>
+				<div class="packagelink"><a href="saxparser.html">SAXParser</a></div>
+				<div class="packagelink"><a href="smtpsession.html">SMTPSession</a></div>
+				<div class="packagelink"><a href="ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="script.html">Script</a></div>
+				<div class="packagelink"><a href="security.html">Security</a></div>
+				<div class="packagelink"><a href="set.html">Set</a></div>
+				<div class="packagelink"><a href="socket.html">Socket</a></div>
+				<div class="packagelink"><a href="sql.html">Sql</a></div>
+				<div class="packagelink"><a href="sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink"><a href="str.html">Str</a></div>
+				<div class="packagelink"><a href="string.html">String</a></div>
+				<div class="packagelink"><a href="system.html">System</a></div>
+				<div class="packagelink"><a href="uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="void.html">Void</a></div>
+				<div class="packagelink"><a href="wapi.html">WAPI</a></div>
+				<div class="packagelink"><a href="wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink"><a href="web.html">Web</a></div>
+				<div class="packagelink"><a href="xslprocessor.html">XSLProcessor</a></div>
+				<div class="packagelink"><a href="zip.html">Zip</a></div>
+		</div>
+</div>
+
+	<div class="content_container">
+		<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+		<h1>Class: List</h1><div class="ClassDescription"><p>The List Package offers a small set of functions for performing simple operations on values of the core OScript datatype List. It is important to note that none of the functions alter List(s) passed to them.  Rather, those which manipulate a List's contents do so only by altering the copies of input List(s) they return. The major functionalities offered in the List Package are the following:</p>
+<ul>
+<li><a class="interdoc" href="#cm_list_allocate">Allocate()</a> to create
+    an empty list of a given preallocated length.</li>
+<li><a class="interdoc" href="#cm_list_min">Min()</a> and <a class="interdoc" href="#cm_list_max">Max()</a> to return the minimum or maximum numerical value in a List.</li>
+<li><a class="interdoc" href="#cm_list_setadd">SetAdd()</a>, <a class="interdoc" href="#cm_list_setremove">SetRemove()</a>, and <a class="interdoc" href="#cm_list_setunion">SetUnion()</a> to treat a List as a set and add or remove unique values, or create a union of unique values.</li>
+<li><a class="interdoc" href="#cm_list_sort">Sort()</a> to sort a list in ascending or descending order</li>
+</ul></div>
+			<h2>Class Attributes</h2>
+			<div class="ClassAttributesShort">
+				
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_list_ascending">Ascending</a></div>
+					<div class="Description"><p>Used with <a class="interdoc" href="#cm_list_sort">Sort()</a>
+    to specify ascending sort order.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_list_descending">Descending</a></div>
+					<div class="Description"><p>Used with <a class="interdoc" href="#cm_list_sort">Sort()</a>
+    to specify descending sort order.</p></div>
+				</div>
+				
+			</div>
+
+
+			<h2>Class Methods</h2>
+			<div class="ClassMethodsShort">
+				<div class="Method">
+					<div class="Name"><a href="#cm_list_allocate" class="IndexMethodName">Allocate</a>(
+					 Integer allocSize )
+					</div>
+					<div class="Description"><p>Returns a new List of
+    size <em>allocSize</em>. </p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_list_create" class="IndexMethodName">Create</a>(
+					 Dynamic e1, Dynamic e2 )
+					</div>
+					<div class="Description"><p>Creates a list from the values in the argument list.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_list_max" class="IndexMethodName">Max</a>(
+					 List theList )
+					</div>
+					<div class="Description"><p>Returns the largest
+    numerical value in the specified List.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_list_min" class="IndexMethodName">Min</a>(
+					 List theList )
+					</div>
+					<div class="Description"><p>Returns the smallest
+    numerical value in the specified List.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_list_setadd" class="IndexMethodName">SetAdd</a>(
+					 List theList, Dynamic element )
+					</div>
+					<div class="Description"><p>Adds the specified element
+    to a List only if it is not already in the List.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_list_setremove" class="IndexMethodName">SetRemove</a>(
+					 List theList, Dynamic element )
+					</div>
+					<div class="Description"><p>Removes the specified
+    element from a List if it is currently in the List.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_list_setunion" class="IndexMethodName">SetUnion</a>(
+					 List list1, List list2 )
+					</div>
+					<div class="Description"><p>Returns a new List which is a union of the two
+    specified Lists.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_list_sort" class="IndexMethodName">Sort</a>(
+					 List theList, [Integer order] )
+					</div>
+					<div class="Description"><p>Sorts the specified
+    List in either ascending or descending order.</p></div>
+				</div>
+			</div>
+
+
+				<h2>Class Attributes</h2>
+				<div class="ClassAttributes">
+					
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_list_ascending">Ascending</a></div>
+						<div class="Description"><p>Used with <a class="interdoc" href="#cm_list_sort">Sort()</a>
+    to specify ascending sort order.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_list_descending">Descending</a></div>
+						<div class="Description"><p>Used with <a class="interdoc" href="#cm_list_sort">Sort()</a>
+    to specify descending sort order.</p></div>
+					</div>
+				
+				</div>
+
+		
+				<h2>Class Methods</h2>
+				<div class="ClassMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_list_allocate">Allocate</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">List</span> 
+						<span class="PrototypeselfName">Allocate</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">allocSize</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a new List containing <em>allocSize</em> number of elements, each of which is set to Undefined.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">allocSize</span><span class="description"><p>The length of the new List returned.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A new List of
+      length <em>allocSize</em>.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>A short example:</p>
+<div class="codehilite"><pre>List    a <span class="o">=</span> List<span class="o">.</span>Allocate<span class="p">(</span> <span class="m">6</span> <span class="p">)</span>
+
+Echo<span class="p">(</span> <span class="s">&quot;List &quot;</span><span class="p">,</span> a<span class="p">,</span> <span class="s">&quot; has length &quot;</span><span class="p">,</span> Length<span class="p">(</span> a <span class="p">),</span> <span class="s">&quot;.&quot;</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre>List <span class="p">{</span><span class="o">?</span><span class="p">,</span><span class="o">?</span><span class="p">,</span><span class="o">?</span><span class="p">,</span><span class="o">?</span><span class="p">,</span><span class="o">?</span><span class="p">,</span><span class="o">?</span><span class="p">}</span> has length <span class="m">6.</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_list_create">Create</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">List</span> 
+						<span class="PrototypeselfName">Create</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">e1</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">e2</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a new List containing <em>allocSize</em> number of elements, each of which is set to Undefined.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">e1</span><span class="description"><p>First element.</p></span></div>
+											<div class="Parameter"><span class="name">e2</span><span class="description"><p>Second element.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A new List of
+      elements specified in the argument list.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>A short example:</p>
+<div class="codehilite"><pre>List    a <span class="o">=</span> List<span class="o">.</span>Create<span class="p">(</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">4</span> <span class="p">)</span>
+
+Echo<span class="p">(</span> <span class="s">&quot;List &quot;</span><span class="p">,</span> a<span class="p">,</span> <span class="s">&quot; has length &quot;</span><span class="p">,</span> Length<span class="p">(</span> a <span class="p">),</span> <span class="s">&quot;.&quot;</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre>List <span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">}</span> has length <span class="m">4.</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_list_max">Max</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Dynamic</span> 
+						<span class="PrototypeselfName">Max</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">List</span> <span class="PrototypeArgumentName">theList</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the largest numerical value
+    in the specified List.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theList</span><span class="description"><p>A List whose maximum numeric
+            value is returned.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>One of the
+      following data types and the maximum numerical
+      value in the List if not Undefined: </p>
+
+<table border="0" class="MethodReturnValueDescription" width="98%">
+<tr>
+<td><u>Return Value</u>.</td>
+<td><u>Numeric List Values</u></td>
+</tr>
+<tr>
+<td>Integer</td>
+<td>Integers</td>
+</tr>
+<tr>
+<td>Real</td>
+<td>Reals or a combination of integers and Reals</td>
+</tr>
+<tr>
+<td>Undefined</td>
+<td>If the List does not contain any Integers or Reals</td>
+</tr>
+</table></div>
+									<h4>Example</h4>
+									<div class="Example"><p>See <a class="interdoc" href="#cm_list_min">Min</a>. Here is a short example:</p>
+<div class="codehilite"><pre>List    a <span class="o">=</span> <span class="p">{</span> <span class="m">4</span><span class="p">,</span> <span class="s">&quot;Hello&quot;</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">9</span><span class="p">,</span> <span class="o">-</span><span class="m">47</span> <span class="p">}</span>
+List    b <span class="o">=</span> <span class="p">{</span> <span class="m">3.2</span><span class="p">,</span> <span class="m">8</span><span class="p">,</span> <span class="o">-</span><span class="m">27.98</span><span class="p">,</span> <span class="s">&quot;Goodbye&quot;</span><span class="p">,</span> <span class="m">300</span> <span class="p">}</span>
+List    c <span class="o">=</span> <span class="p">{</span> <span class="s">&quot;one&quot;</span><span class="p">,</span> <span class="s">&quot;two&quot;</span><span class="p">,</span> <span class="s">&quot;three&quot;</span> <span class="p">}</span>
+
+Echo<span class="p">(</span> <span class="s">&quot;List.Max( &quot;</span><span class="p">,</span> a<span class="p">,</span> <span class="s">&quot; ) is &quot;</span><span class="p">,</span> Str<span class="o">.</span>ValueToString<span class="p">(</span> List<span class="o">.</span>Max<span class="p">(</span> a <span class="p">)</span> <span class="p">),</span> <span class="s">&quot;.&quot;</span> <span class="p">)</span>
+Echo<span class="p">(</span> <span class="s">&quot;List.Max( &quot;</span><span class="p">,</span> b<span class="p">,</span> <span class="s">&quot; ) is &quot;</span><span class="p">,</span> Str<span class="o">.</span>ValueToString<span class="p">(</span> List<span class="o">.</span>Max<span class="p">(</span> b <span class="p">)</span> <span class="p">),</span> <span class="s">&quot;.&quot;</span> <span class="p">)</span>
+Echo<span class="p">(</span> <span class="s">&quot;List.Max( &quot;</span><span class="p">,</span> c<span class="p">,</span> <span class="s">&quot; ) is &quot;</span><span class="p">,</span> Str<span class="o">.</span>ValueToString<span class="p">(</span> List<span class="o">.</span>Max<span class="p">(</span> c <span class="p">)</span> <span class="p">),</span> <span class="s">&quot;.&quot;</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of the example is (note that the result
+    of the second value is a Real, even thought the maximum value was an Integer):</p>
+<div class="codehilite"><pre>List<span class="o">.</span>Max<span class="p">(</span> <span class="p">{</span><span class="m">4</span><span class="p">,</span><span class="s">&#39;Hello&#39;</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">9</span><span class="p">,</span><span class="o">-</span><span class="m">47</span><span class="p">}</span> <span class="p">)</span> is <span class="m">9.</span>
+List<span class="o">.</span>Max<span class="p">(</span> <span class="p">{</span>G<span class="m">3.2</span><span class="p">,</span><span class="m">8</span><span class="p">,</span>G<span class="o">-</span><span class="m">27.98</span><span class="p">,</span><span class="s">&#39;Goodbye&#39;</span><span class="p">,</span><span class="m">300</span><span class="p">}</span> <span class="p">)</span> is G<span class="m">300.</span>
+List<span class="o">.</span>Max<span class="p">(</span> <span class="p">{</span><span class="s">&#39;one&#39;</span><span class="p">,</span><span class="s">&#39;two&#39;</span><span class="p">,</span><span class="s">&#39;three&#39;</span><span class="p">}</span> <span class="p">)</span> is <span class="o">?.</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_list_min">Min</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Dynamic</span> 
+						<span class="PrototypeselfName">Min</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">List</span> <span class="PrototypeArgumentName">theList</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the smallest numerical value
+    in the specified List.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theList</span><span class="description"><p>A List whose minimum
+            numeric value is returned.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>One of the
+      following data types, and the minimum numerical
+      value in the List if not Undefined:</p>
+
+<table border="0" class="MethodReturnValueDescription" width="98%">
+<tr>
+<td><u>Return Value</u>.</td>
+<td><u>Numeric List Values</u></td>
+</tr>
+<tr>
+<td>Integer</td>
+<td>Integers</td>
+</tr>
+<tr>
+<td>Real</td>
+<td>Reals or a combination of integers and Reals</td>
+</tr>
+<tr>
+<td>Undefined</td>
+<td>If the List does not contain any Integers or Reals</td>
+</tr>
+</table></div>
+									<h4>Example</h4>
+									<div class="Example"><p>See <a class="interdoc" href="#cm_list_max">Max</a> which
+has an example as well.  The results of the example for Minimum() are be
+similar, except the minimum value is returned instead of the
+maximum.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_list_setadd">SetAdd</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">List</span> 
+						<span class="PrototypeselfName">SetAdd</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">List</span> <span class="PrototypeArgumentName">theList</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">element</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a new List with the element added
+    to the specified List if it is not already in that List.  This causes the List
+    to behave as a set would, ensuring that only unique items are added.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theList</span><span class="description"><p>The List set to add
+            the element to.</p></span></div>
+											<div class="Parameter"><span class="name">element</span><span class="description"><p>A value (of any data type)
+            to add.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A new List copy of
+      <em>theList</em> containing the additional
+      element at the end only if the element was found
+      in <em>theList</em>. Otherwise,
+      if the element was not found,
+      <em>theList</em> is returned.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Assumes that the List passed it is a set and
+    contains only unique values, meaning that behavior on Lists which
+    contain duplicate values is undefined.  Use
+    <a class="interdoc" href="#cm_list_setremove">SetRemove</a> to remove values added
+    with SetAdd().  Remember that SetAdd() never modifies the List
+    passed it, it only adds the element to a copy of the original list if
+    the element is not already present (the copying process follows
+    Oscript's parameter passing conventions, see
+    <a class="interdoc" href="assoc.html#cm_assoc_copy">Assoc.Copy()</a> for an
+    explanation). Here is a short example:</p>
+<div class="codehilite"><pre>List    a <span class="o">=</span> <span class="p">{</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span> <span class="p">}</span>
+
+Echo<span class="p">(</span> <span class="s">&quot;List.SetAdd( &quot;</span><span class="p">,</span> a<span class="p">,</span> <span class="s">&quot;, &quot;</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="s">&quot; ) = &quot;</span><span class="p">,</span> List<span class="o">.</span>SetAdd<span class="p">(</span> a<span class="p">,</span> <span class="m">3</span> <span class="p">),</span> <span class="s">&quot;.&quot;</span> <span class="p">)</span>
+Echo<span class="p">(</span> <span class="s">&quot;List.SetAdd( &quot;</span><span class="p">,</span> a<span class="p">,</span> <span class="s">&quot;, &quot;</span><span class="p">,</span> <span class="m">4</span><span class="p">,</span> <span class="s">&quot; ) = &quot;</span><span class="p">,</span> List<span class="o">.</span>SetAdd<span class="p">(</span> a<span class="p">,</span> <span class="m">4</span> <span class="p">),</span> <span class="s">&quot;.&quot;</span> <span class="p">)</span>
+Echo<span class="p">(</span> <span class="s">&quot;{ @&quot;</span><span class="p">,</span> a<span class="p">,</span> <span class="s">&quot;, 3 } = &quot;</span><span class="p">,</span> <span class="p">{</span> <span class="o">@</span>a<span class="p">,</span> <span class="m">3</span> <span class="p">},</span> <span class="s">&quot;.&quot;</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre>List<span class="o">.</span>SetAdd<span class="p">(</span> <span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">},</span> <span class="m">4</span> <span class="p">)</span> <span class="o">=</span> <span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">}</span><span class="o">.</span>
+List<span class="o">.</span>SetAdd<span class="p">(</span> <span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">},</span> <span class="m">3</span> <span class="p">)</span> <span class="o">=</span> <span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">}</span><span class="o">.</span>
+<span class="p">{</span> <span class="o">@</span><span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">},</span> <span class="m">3</span> <span class="p">}</span> <span class="o">=</span> <span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">3</span><span class="p">}</span><span class="o">.</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_list_setremove">SetRemove</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">List</span> 
+						<span class="PrototypeselfName">SetRemove</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">List</span> <span class="PrototypeArgumentName">theList</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">element</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>If the element is in the List, then a copy of the List is returned which does not contain the element.  Otherwise, the original List is returned.  SetRemove() effectively treats the List as a set.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theList</span><span class="description"><p>The List set to remove
+            the element from.</p></span></div>
+											<div class="Parameter"><span class="name">element</span><span class="description"><p>A value (of any data type),
+            which is the element to be removed.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A new List copy of
+      <em>theList</em> minus the
+      element if the element was found in
+      in <em>theList</em>. Otherwise,
+      if the element was not found,
+      <em>theList</em> is returned.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Assumes that the List passed it is a set and
+    contains only unique values, meaning that behavior on Lists which
+    contain duplicate values is undefined.  Thus SetRemove() should be
+    used in conjunction with <a class="interdoc" href="#cm_list_setadd">SetAdd()</a>.
+    Remember that SetRemove() never modifies the List
+    passed it, it only removes the element from a copy of the original list if
+    the element is present (the copying process follows
+    Oscript's parameter passing conventions, see
+    <a class="interdoc" href="assoc.html#cm_assoc_copy">Assoc.Copy()</a> for an
+    explanation). Here is a short example:</p>
+<div class="codehilite"><pre>List    a <span class="o">=</span> <span class="p">{</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span> <span class="p">}</span>
+
+Echo<span class="p">(</span> <span class="s">&quot;List.SetRemove( &quot;</span><span class="p">,</span> a<span class="p">,</span> <span class="s">&quot;, &quot;</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="s">&quot; ) = &quot;</span><span class="p">,</span> List<span class="o">.</span>SetRemove<span class="p">(</span> a<span class="p">,</span> <span class="m">3</span> <span class="p">),</span> <span class="s">&quot;.&quot;</span> <span class="p">)</span>
+Echo<span class="p">(</span> <span class="s">&quot;List.SetRemove( &quot;</span><span class="p">,</span> a<span class="p">,</span> <span class="s">&quot;, &quot;</span><span class="p">,</span> <span class="m">4</span><span class="p">,</span> <span class="s">&quot; ) = &quot;</span><span class="p">,</span> List<span class="o">.</span>SetRemove<span class="p">(</span> a<span class="p">,</span> <span class="m">4</span> <span class="p">),</span> <span class="s">&quot;.&quot;</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre>List<span class="o">.</span>SetRemove<span class="p">(</span> <span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">},</span> <span class="m">3</span> <span class="p">)</span> <span class="o">=</span> <span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">}</span><span class="o">.</span>
+List<span class="o">.</span>SetRemove<span class="p">(</span> <span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">},</span> <span class="m">4</span> <span class="p">)</span> <span class="o">=</span> <span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">}</span><span class="o">.</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_list_setunion">SetUnion</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">List</span> 
+						<span class="PrototypeselfName">SetUnion</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">List</span> <span class="PrototypeArgumentName">list1</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">List</span> <span class="PrototypeArgumentName">list2</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a new List which is a union of the two specified lists.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">list1</span><span class="description"><p>The first list that will compose the union.</p></span></div>
+											<div class="Parameter"><span class="name">list2</span><span class="description"><p>The second list that will compose the union.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A new List which
+      is a union of <em>list1</em> and <em>list2</em>.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Assumes that the List passed it is a set thus SetUnion() should be
+    used in conjunction with <a class="interdoc" href="#cm_list_setadd">SetAdd()</a>.
+    Remember that SetUnion() never modifies the Lists
+    passed it, it creates a new list which is the union of the two lists passed in as parameters.
+    Here is a short example:</p>
+<div class="codehilite"><pre>List    a <span class="o">=</span> <span class="p">{</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span> <span class="p">}</span>
+List    b <span class="o">=</span> <span class="p">{</span> <span class="m">1</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">5</span><span class="p">,</span> <span class="m">7</span> <span class="p">}</span>
+
+Echo<span class="p">(</span> <span class="s">&quot;List.SetUnion( &quot;</span><span class="p">,</span> a<span class="p">,</span> <span class="s">&quot;, &quot;</span><span class="p">,</span> b<span class="p">,</span> <span class="s">&quot; ) = &quot;</span><span class="p">,</span> List<span class="o">.</span>SetUnion<span class="p">(</span> a<span class="p">,</span> b <span class="p">),</span> <span class="s">&quot;.&quot;</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre>List<span class="o">.</span>SetUnion<span class="p">(</span> <span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">},</span> <span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">7</span><span class="p">}</span> <span class="p">)</span> <span class="o">=</span> <span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">7</span><span class="p">}</span><span class="o">.</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_list_sort">Sort</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">List</span> 
+						<span class="PrototypeselfName">Sort</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">List</span> <span class="PrototypeArgumentName">theList</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">order</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a new List which is a copy of
+    specified List sorted in either ascending or descending order. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theList</span><span class="description"><p>The List to be sorted.</p></span></div>
+											<div class="Parameter"><span class="name">order</span><span class="description"><p>Either <a class="interdoc" href="#ca_list_ascending">List.Ascending</a> or <a class="interdoc" href="#ca_list_descending">List.Descending</a>
+            indicating the order in which to sort the List. Ascending order is assumed if <em>order</em> is not specified.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A sorted copy of the List.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>List contents are sorted in the following fashion by
+    datatype:</p>
+<p>Sorting a List containing elements of datatypes other than the ones listed
+  above yields unpredictable results. Results are also unpredictable if
+  the elements in the List are not of the same datatype (aside
+  from mixing Integers and Reals).  The copying process follows OScript's
+  parameter passing conventions (see <a class="interdoc" href="assoc.html#cm_assoc_copy">Assoc.Copy()</a>
+  for an explanation). A short example of Sort() is:</p>
+<div class="codehilite"><pre>List    a <span class="o">=</span> <span class="p">{</span> <span class="m">1</span><span class="p">,</span> <span class="m">200</span><span class="p">,</span> <span class="m">40</span><span class="p">,</span> <span class="m">90</span><span class="p">,</span> <span class="o">-</span><span class="m">67</span><span class="p">,</span> <span class="m">32.6</span> <span class="p">}</span>
+
+Echo<span class="p">(</span> <span class="s">&quot;List.Sort( &quot;</span><span class="p">,</span> a<span class="p">,</span> <span class="s">&quot; ) = &quot;</span><span class="p">,</span> List<span class="o">.</span>Sort<span class="p">(</span> a <span class="p">),</span> <span class="s">&quot;.&quot;</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre>List<span class="o">.</span>Sort<span class="p">(</span> <span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="m">200</span><span class="p">,</span><span class="m">40</span><span class="p">,</span><span class="m">90</span><span class="p">,</span><span class="o">-</span><span class="m">67</span><span class="p">,</span>G<span class="m">32.6</span><span class="p">}</span> <span class="p">)</span> <span class="o">=</span> <span class="p">{</span><span class="o">-</span><span class="m">67</span><span class="p">,</span><span class="m">1</span><span class="p">,</span>G<span class="m">32.6</span><span class="p">,</span><span class="m">40</span><span class="p">,</span><span class="m">90</span><span class="p">,</span><span class="m">200</span><span class="p">}</span><span class="o">.</span>
+</pre></div></div>
+							</div>
+						</div>
+				</div>
+		
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2018 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+
+
+
+</div>
+	</div>						
+						
+
+</div>
+
+</body></html>

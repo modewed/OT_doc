@@ -1,0 +1,670 @@
+
+<meta charset="UTF-8">
+<html>
+<head><title>Class: DAPINODE</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../syntax.css" type="text/css">
+<link rel="stylesheet" href="builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td  align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody></table>
+
+<div id="document">
+	
+<div class="sidebar_container">
+		
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink"><a href="assoc.html">Assoc</a></div>
+				<div class="packagelink"><a href="boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="builder.html">Builder</a></div>
+				<div class="packagelink"><a href="bytes.html">Bytes</a></div>
+				<div class="packagelink"><a href="capi.html">CAPI</a></div>
+				<div class="packagelink"><a href="capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink"><a href="cachetree.html">CacheTree</a></div>
+				<div class="packagelink"><a href="compiler.html">Compiler</a></div>
+				<div class="packagelink"><a href="core.html">Core</a></div>
+				<div class="packagelink"><a href="dapi.html">DAPI</a></div>
+				<div class="packagelink curPage">DAPINODE</div>
+				<div class="packagelink"><a href="dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink"><a href="dapiversion.html">DAPIVERSION</a></div>
+				<div class="packagelink"><a href="domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="domcomment.html">DOMComment</a></div>
+				<div class="packagelink"><a href="domdocument.html">DOMDocument</a></div>
+				<div class="packagelink"><a href="domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink"><a href="domelement.html">DOMElement</a></div>
+				<div class="packagelink"><a href="domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink"><a href="domnamednodemap.html">DOMNamedNodeMap</a></div>
+				<div class="packagelink"><a href="domnode.html">DOMNode</a></div>
+				<div class="packagelink"><a href="domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="domtext.html">DOMText</a></div>
+				<div class="packagelink"><a href="date.html">Date</a></div>
+				<div class="packagelink"><a href="dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="env.html">Env</a></div>
+				<div class="packagelink"><a href="error.html">Error</a></div>
+				<div class="packagelink"><a href="file.html">File</a></div>
+				<div class="packagelink"><a href="filecopy.html">FileCopy</a></div>
+				<div class="packagelink"><a href="fileprefs.html">Fileprefs</a></div>
+				<div class="packagelink"><a href="frame.html">Frame</a></div>
+				<div class="packagelink"><a href="global.html">Global</a></div>
+				<div class="packagelink"><a href="integer.html">Integer</a></div>
+				<div class="packagelink"><a href="javaobject.html">JavaObject</a></div>
+				<div class="packagelink"><a href="language.html">Language</a></div>
+				<div class="packagelink"><a href="license.html">License</a></div>
+				<div class="packagelink"><a href="list.html">List</a></div>
+				<div class="packagelink"><a href="logging.html">Logging</a></div>
+				<div class="packagelink"><a href="long.html">Long</a></div>
+				<div class="packagelink"><a href="mailmessage.html">MailMessage</a></div>
+				<div class="packagelink"><a href="math.html">Math</a></div>
+				<div class="packagelink"><a href="memcached.html">Memcached</a></div>
+				<div class="packagelink"><a href="notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="object.html">Object</a></div>
+				<div class="packagelink"><a href="pop3session.html">POP3Session</a></div>
+				<div class="packagelink"><a href="patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="patfind.html">PatFind</a></div>
+				<div class="packagelink"><a href="pattern.html">Pattern</a></div>
+				<div class="packagelink"><a href="point.html">Point</a></div>
+				<div class="packagelink"><a href="profiler.html">Profiler</a></div>
+				<div class="packagelink"><a href="real.html">Real</a></div>
+				<div class="packagelink"><a href="recarray.html">RecArray</a></div>
+				<div class="packagelink"><a href="record.html">Record</a></div>
+				<div class="packagelink"><a href="regex.html">Regex</a></div>
+				<div class="packagelink"><a href="restclient.html">RestClient</a></div>
+				<div class="packagelink"><a href="saxparser.html">SAXParser</a></div>
+				<div class="packagelink"><a href="smtpsession.html">SMTPSession</a></div>
+				<div class="packagelink"><a href="ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="script.html">Script</a></div>
+				<div class="packagelink"><a href="security.html">Security</a></div>
+				<div class="packagelink"><a href="set.html">Set</a></div>
+				<div class="packagelink"><a href="socket.html">Socket</a></div>
+				<div class="packagelink"><a href="sql.html">Sql</a></div>
+				<div class="packagelink"><a href="sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink"><a href="str.html">Str</a></div>
+				<div class="packagelink"><a href="string.html">String</a></div>
+				<div class="packagelink"><a href="system.html">System</a></div>
+				<div class="packagelink"><a href="uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="void.html">Void</a></div>
+				<div class="packagelink"><a href="wapi.html">WAPI</a></div>
+				<div class="packagelink"><a href="wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink"><a href="web.html">Web</a></div>
+				<div class="packagelink"><a href="xslprocessor.html">XSLProcessor</a></div>
+				<div class="packagelink"><a href="zip.html">Zip</a></div>
+		</div>
+</div>
+
+	<div class="content_container">
+		<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+		<h1>Class: DAPINODE</h1><div class="ClassDescription"><p>DAPINODE is the object handle of a node stored
+in the DAPI database. It is used in the <a class="interdoc" href="dapi.html">DAPI</a> functions
+for all node manipulation operations.</p>
+<p>The attributes of a node can be pre-assigned
+before creation using the <a class="interdoc" href="dapi.html#cm_dapi_allocnode">DAPI.AllocNode</a>
+and <a class="interdoc" href="dapi.html#cm_dapi_createnode">DAPI.CreateNode</a> functions. The attributes
+of a node stored in the database are retrieved with the oft-used
+<a class="interdoc" href="dapi.html#cm_dapi_getnodebyid">DAPI.GetNodeByID</a> function. Note that
+all nodes have unique IDs.</p>
+<p>The DAPI package provides automatic security checking when
+certain operations are performed on a node retrieved by a user. For example, an <br />
+error occurs when a user tries to delete a node that does not have delete permissions.</p></div>
+
+			<h2>Instance Attributes</h2>
+			<div class="InstanceAttributesShort">
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_passignedto">pAssignedTo</a></div>
+					<div class="Description"><p>The ID of the user who is
+    involved in any assignment.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pcacheexpiration">pCacheExpiration</a></div>
+					<div class="Description"><p>The time interval value
+    before the cache is expired.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pcatalog">pCatalog</a></div>
+					<div class="Description"><p>The catalog representation
+    flag.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pcategory">pCategory</a></div>
+					<div class="Description"><p>Unused.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pchildcount">pChildCount</a></div>
+					<div class="Description"><p>The number of children nodes.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pcomment">pComment</a></div>
+					<div class="Description"><p>The comment field in the user's preferred language.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pcreatedate">pCreateDate</a></div>
+					<div class="Description"><p>The creation date and time
+    of this node.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pcreatedby">pCreatedBy</a></div>
+					<div class="Description"><p>The ID of the user who created
+    this node.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pdateassigned">pDateAssigned</a></div>
+					<div class="Description"><p>The assignment date and time.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pdatecompleted">pDateCompleted</a></div>
+					<div class="Description"><p>The completion date and time.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pdatedue">pDateDue</a></div>
+					<div class="Description"><p>The due date and time.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pdateeffective">pDateEffective</a></div>
+					<div class="Description"><p>The effective date and time.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pdateexpiration">pDateExpiration</a></div>
+					<div class="Description"><p>The expiration date and time.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pdatestarted">pDateStarted</a></div>
+					<div class="Description"><p>The start date and time.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pdeleted">pDeleted</a></div>
+					<div class="Description"><p>The delete status of this node.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pexatt1">pExAtt1</a></div>
+					<div class="Description"><p>A string field which is
+    reserved for internal use.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pexatt2">pExAtt2</a></div>
+					<div class="Description"><p>A string field which is reserved for internal use.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pextendeddata">pExtendedData</a></div>
+					<div class="Description"><p>The long text storage for binary data.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pexternalcreatedate">pExternalCreateDate</a></div>
+					<div class="Description"><p>The external system creation date.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pexternalcreatorid">pExternalCreatorID</a></div>
+					<div class="Description"><p>ID of the entity that created the item externally.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pexternalmodifydate">pExternalModifyDate</a></div>
+					<div class="Description"><p>The external system modification date.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pexternalsourceid">pExternalSourceID</a></div>
+					<div class="Description"><p>ID of the external source for this item.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pgif">pGIF</a></div>
+					<div class="Description"><p>The relative path to the
+    gif file which is the custom icon of this node.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pgroupid">pGroupID</a></div>
+					<div class="Description"><p>The ID of the group who is the group owner of the node.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pgroupperm">pGroupPerm</a></div>
+					<div class="Description"><p>The group access permission bit mask.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pguid">pGUID</a></div>
+					<div class="Description"><p>Globally unique identifier(GUID) for this node</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pid">pID</a></div>
+					<div class="Description"><p>The unique ID.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pmajor">pMajor</a></div>
+					<div class="Description"><p>The major release number.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pmaxversion">pMaxVersion</a></div>
+					<div class="Description"><p>The maximum number of versions
+    that this node can contain.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pminor">pMinor</a></div>
+					<div class="Description"><p>The minor release number.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pmodifiedby">pModifiedBy</a></div>
+					<div class="Description"><p>The ID of the user who last
+    modified this node.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pmodifydate">pModifyDate</a></div>
+					<div class="Description"><p>The modification date and time of this node.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pmultilingual">pMultilingual</a></div>
+					<div class="Description"><p>A RecArray containing the multilingual data for this node</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pname">pName</a></div>
+					<div class="Description"><p>The name of the node in the user's preferred language.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pordering">pOrdering</a></div>
+					<div class="Description"><p>The ordering position number
+    of a compound document child node.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_poriginalid">pOriginalID</a></div>
+					<div class="Description"><p>The ID of the original node.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_poriginalvolid">pOriginalVolID</a></div>
+					<div class="Description"><p>The volume ID of the original node.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pparentid">pParentID</a></div>
+					<div class="Description"><p>The ID of the parent node.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_ppermid">pPermID</a></div>
+					<div class="Description"><p>The ID of the node which
+    controls the permissions of this node.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_ppriority">pPriority</a></div>
+					<div class="Description"><p>The priority of the node.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_preleaseref">pReleaseRef</a></div>
+					<div class="Description"><p>The link type of a compound document alias.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_preserved">pReserved</a></div>
+					<div class="Description"><p>An integer indicating reserved status.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_preservedby">pReservedBy</a></div>
+					<div class="Description"><p>The ID of the user who is reserving this node.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_preserveddate">pReservedDate</a></div>
+					<div class="Description"><p>The date and time when the node is reserved.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pstatus">pStatus</a></div>
+					<div class="Description"><p>The status of the node.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_psubtype">pSubType</a></div>
+					<div class="Description"><p>The unique type of this node.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_psystemperm">pSystemPerm</a></div>
+					<div class="Description"><p>The system access permission
+    bit mask.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_ptype">pType</a></div>
+					<div class="Description"><p>The subtype of the original node.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_puserid">pUserID</a></div>
+					<div class="Description"><p>The ID of the user who is
+    the owner of the node.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_puserperm">pUserPerm</a></div>
+					<div class="Description"><p>The user access permission bit mask.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pversionnum">pVersionNum</a></div>
+					<div class="Description"><p>The current version number.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pvolumeid">pVolumeID</a></div>
+					<div class="Description"><p>The volume ID.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ia_dapinode_pworldperm">pWorldPerm</a></div>
+					<div class="Description"><p>The world access permission bit mask.</p></div>
+				</div>
+			</div>
+
+
+
+				<h2>Instance Attributes</h2>
+				<div class="InstanceAttributes">
+					
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapinode_passignedto">pAssignedTo</a></div>
+						<div class="Description"><p>The ID of the user who is involved
+    in the assignment. The column in the DTreeCore table is AssignedTo.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapinode_pcacheexpiration">pCacheExpiration</a></div>
+						<div class="Description"><p>The time interval value before
+    the cache is expired. It is used by the remote client. The column in the DTreeCore
+    table is CacheExpiration.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapinode_pcatalog">pCatalog</a></div>
+						<div class="Description"><p>The catalog representation. The column in the DTreeCore
+    table is Catalog.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ia_dapinode_pcategory">pCategory</a></div>
+						<div class="Description"><p>Unused. The column in the DTreeCore table is DCategory.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapinode_pchildcount">pChildCount</a></div>
+						<div class="Description"><p>The number of children nodes.
+    The column in the DTreeCore table is ChildCount.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ia_dapinode_pcomment">pComment</a></div>
+						<div class="Description"><p>The comment field. In a multilingual system, the value
+    will be in the user's preferred language (if available).</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Date <a name="ia_dapinode_pcreatedate">pCreateDate</a></div>
+						<div class="Description"><p>The creation date and time of this node. The 
+    column in the DTreeCore table is CreateDate.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapinode_pcreatedby">pCreatedBy</a></div>
+						<div class="Description"><p>The ID of the user who created this node. The
+    column in the DTreeCore table is CreatedBy.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Date <a name="ia_dapinode_pdateassigned">pDateAssigned</a></div>
+						<div class="Description"><p>The assignment date and time. The column in
+    the DTreeCore table is DateAssigned.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Date <a name="ia_dapinode_pdatecompleted">pDateCompleted</a></div>
+						<div class="Description"><p>The completion date and time. The column in
+    the DTreeCore table is DateCompleted.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Date <a name="ia_dapinode_pdatedue">pDateDue</a></div>
+						<div class="Description"><p>The due date and time. The column in
+    the DTreeCore table is DateDue.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Date <a name="ia_dapinode_pdateeffective">pDateEffective</a></div>
+						<div class="Description"><p>The effective date and time.
+    The column in the DTreeCore table is DateEffective.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Date <a name="ia_dapinode_pdateexpiration">pDateExpiration</a></div>
+						<div class="Description"><p>The expiration date and time.
+    The column in the DTreeCore table is DateExpiration.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Date <a name="ia_dapinode_pdatestarted">pDateStarted</a></div>
+						<div class="Description"><p>The start date and time. The
+    column in the DTreeCore table is DateStarted.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapinode_pdeleted">pDeleted</a></div>
+						<div class="Description"><p>The delete status. Any non-zero value 
+    means that the node has been deleted logically. The column in 
+    the DTreeCore table is Deleted.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ia_dapinode_pexatt1">pExAtt1</a></div>
+						<div class="Description"><p>A string field which is reserved
+    for internal use. The column in the DTreeCore table is ExAtt1.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ia_dapinode_pexatt2">pExAtt2</a></div>
+						<div class="Description"><p>A string field which is reserved
+    for internal use. The column in the DTreeCore table is ExAtt2.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ia_dapinode_pextendeddata">pExtendedData</a></div>
+						<div class="Description"><p>The long text storage for binary
+    data. The column in the DTreeCore table is ExtendedData.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Date <a name="ia_dapinode_pexternalcreatedate">pExternalCreateDate</a></div>
+						<div class="Description"><p>If available, this is the original creation
+    date and time for the item in an external system. The column in the 
+    DTreeCoreExternalData table is ExternalCreateDate.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapinode_pexternalcreatorid">pExternalCreatorID</a></div>
+						<div class="Description"><p>If available, this is the ID of the entity
+    that created the item in an external system. The column in the 
+    DTreeCoreExternalData table is ExternalCreatorID.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Date <a name="ia_dapinode_pexternalmodifydate">pExternalModifyDate</a></div>
+						<div class="Description"><p>If available, this is the modification
+    date and time for the item in an external system. The column in the 
+    DTreeCoreExternalData table is ExternalModifyDate.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapinode_pexternalsourceid">pExternalSourceID</a></div>
+						<div class="Description"><p>If available, this is the ID of the external
+    system where this item originated. The column in the DTreeCoreExternalData 
+    table is ExternalSourceID.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ia_dapinode_pgif">pGIF</a></div>
+						<div class="Description"><p>The relative path to the
+    gif file which is the custom icon of this node. The column
+    in the DTreeCore table is GIF.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapinode_pgroupid">pGroupID</a></div>
+						<div class="Description"><p>The ID of the group who is the
+    group owner of the node. The column in the DTreeCore table is GroupID.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapinode_pgroupperm">pGroupPerm</a></div>
+						<div class="Description"><p>The group access permission bit
+    mask. The column in the DTreeCore table is GPermissions.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">GUID <a name="ia_dapinode_pguid">pGUID</a></div>
+						<div class="Description"><p>Globally unique ientifier(GUID).
+    The column in the DTreeCore table is GUID.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapinode_pid">pID</a></div>
+						<div class="Description"><p>The unique ID. The column in the
+    DTreeCore table is DataID.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapinode_pmajor">pMajor</a></div>
+						<div class="Description"><p>The major release number. The
+    column in the DTreeCore table is Major.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapinode_pmaxversion">pMaxVersion</a></div>
+						<div class="Description"><p>The maximum number of versions
+    that this node can contain. The column in the DTreeCore table is MaxVers.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapinode_pminor">pMinor</a></div>
+						<div class="Description"><p>The minor release number. The
+    column in the DTreeCore table is Minor.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapinode_pmodifiedby">pModifiedBy</a></div>
+						<div class="Description"><p>The ID of the user who last modified this
+    node. The column in the DTreeCore table is ModifiedBy.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Date <a name="ia_dapinode_pmodifydate">pModifyDate</a></div>
+						<div class="Description"><p>The modification date and time
+    of this node. The column in the DTreeCore table is ModifyDate.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">RecArray <a name="ia_dapinode_pmultilingual">pMultilingual</a></div>
+						<div class="Description"><p>A RecArray containing the multilingual data for this 
+    node. This data is stored in the DTreeCoreMultilingual table.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ia_dapinode_pname">pName</a></div>
+						<div class="Description"><p>The name field. In a multilingual system, the value
+    will be in the user's preferred language (if available).</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapinode_pordering">pOrdering</a></div>
+						<div class="Description"><p>The ordering position number
+    of a compound document child node. The column in the DTreeCore table is Ordering.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapinode_poriginalid">pOriginalID</a></div>
+						<div class="Description"><p>If this node is a reference, then the value will be
+    the ID of the original node that is referenced. The column in the DTreeCore table
+    is OriginDataID.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapinode_poriginalvolid">pOriginalVolID</a></div>
+						<div class="Description"><p>If this node is a reference, then the value will be
+    the volume ID of the original node that is referenced. The column in the DTreeCore table
+    is OriginOwnerID.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapinode_pparentid">pParentID</a></div>
+						<div class="Description"><p>The ID of the parent node. The
+    column in the DTreeCore table is ParentID.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapinode_ppermid">pPermID</a></div>
+						<div class="Description"><p>The ID of the node which controls the permissions
+    of this node. The column in the DTreeCore table is PermID.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapinode_ppriority">pPriority</a></div>
+						<div class="Description"><p>The priority of the node. The
+    column in the DTreeCore table is Priority.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ia_dapinode_preleaseref">pReleaseRef</a></div>
+						<div class="Description"><p>The link type of a compound document alias.
+    The column in the DTreeCore table is ReleaseRef.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapinode_preserved">pReserved</a></div>
+						<div class="Description"><p>An integer indicating reserved status. The column
+    in the DTreeCore table is Reserved.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapinode_preservedby">pReservedBy</a></div>
+						<div class="Description"><p>The ID of the user who is reserving
+    this node. The column in the DTreeCore table is ReservedBy.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Date <a name="ia_dapinode_preserveddate">pReservedDate</a></div>
+						<div class="Description"><p>The date and time when the node is reserved.
+    The column in the DTreeCore table is ReservedDate.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ia_dapinode_pstatus">pStatus</a></div>
+						<div class="Description"><p>The status of the node. The column in the
+    DTreeCore table is Status.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapinode_psubtype">pSubType</a></div>
+						<div class="Description"><p>The unique type of this node.
+    The column in the DTreeCore table is SubType.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapinode_psystemperm">pSystemPerm</a></div>
+						<div class="Description"><p>The system access permission
+    bit mask. The column in the DTreeCore table is SPermissions.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapinode_ptype">pType</a></div>
+						<div class="Description"><p>If this node is a reference, then the value will be
+    the subtype of the original node that is referenced. The column in the DTreeCore table
+    is DataType.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapinode_puserid">pUserID</a></div>
+						<div class="Description"><p>The ID of the user who is the owner of the node.
+    The column in the DTreeCore table is UserID.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapinode_puserperm">pUserPerm</a></div>
+						<div class="Description"><p>The user access permission bit mask.
+    The column in the DTreeCore table is UPermissions.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapinode_pversionnum">pVersionNum</a></div>
+						<div class="Description"><p>The current version number. The column in the
+    DTreeCore table is VersionNum.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapinode_pvolumeid">pVolumeID</a></div>
+						<div class="Description"><p>The volume ID. The column in
+    the DTreeCore table is OwnerID.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ia_dapinode_pworldperm">pWorldPerm</a></div>
+						<div class="Description"><p>The world access permission bit mask.
+    The column in the DTreeCore table is WPermissions.</p></div>
+					</div>
+				
+				</div>
+
+		
+		
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2018 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+
+
+
+</div>
+	</div>						
+						
+
+</div>
+
+</body></html>

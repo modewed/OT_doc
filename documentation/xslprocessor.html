@@ -1,0 +1,454 @@
+
+<meta charset="UTF-8">
+<html>
+<head><title>Class: XSLProcessor</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../syntax.css" type="text/css">
+<link rel="stylesheet" href="builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td  align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody></table>
+
+<div id="document">
+	
+<div class="sidebar_container">
+		
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink"><a href="assoc.html">Assoc</a></div>
+				<div class="packagelink"><a href="boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="builder.html">Builder</a></div>
+				<div class="packagelink"><a href="bytes.html">Bytes</a></div>
+				<div class="packagelink"><a href="capi.html">CAPI</a></div>
+				<div class="packagelink"><a href="capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink"><a href="cachetree.html">CacheTree</a></div>
+				<div class="packagelink"><a href="compiler.html">Compiler</a></div>
+				<div class="packagelink"><a href="core.html">Core</a></div>
+				<div class="packagelink"><a href="dapi.html">DAPI</a></div>
+				<div class="packagelink"><a href="dapinode.html">DAPINODE</a></div>
+				<div class="packagelink"><a href="dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink"><a href="dapiversion.html">DAPIVERSION</a></div>
+				<div class="packagelink"><a href="domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="domcomment.html">DOMComment</a></div>
+				<div class="packagelink"><a href="domdocument.html">DOMDocument</a></div>
+				<div class="packagelink"><a href="domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink"><a href="domelement.html">DOMElement</a></div>
+				<div class="packagelink"><a href="domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink"><a href="domnamednodemap.html">DOMNamedNodeMap</a></div>
+				<div class="packagelink"><a href="domnode.html">DOMNode</a></div>
+				<div class="packagelink"><a href="domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="domtext.html">DOMText</a></div>
+				<div class="packagelink"><a href="date.html">Date</a></div>
+				<div class="packagelink"><a href="dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="env.html">Env</a></div>
+				<div class="packagelink"><a href="error.html">Error</a></div>
+				<div class="packagelink"><a href="file.html">File</a></div>
+				<div class="packagelink"><a href="filecopy.html">FileCopy</a></div>
+				<div class="packagelink"><a href="fileprefs.html">Fileprefs</a></div>
+				<div class="packagelink"><a href="frame.html">Frame</a></div>
+				<div class="packagelink"><a href="global.html">Global</a></div>
+				<div class="packagelink"><a href="integer.html">Integer</a></div>
+				<div class="packagelink"><a href="javaobject.html">JavaObject</a></div>
+				<div class="packagelink"><a href="language.html">Language</a></div>
+				<div class="packagelink"><a href="license.html">License</a></div>
+				<div class="packagelink"><a href="list.html">List</a></div>
+				<div class="packagelink"><a href="logging.html">Logging</a></div>
+				<div class="packagelink"><a href="long.html">Long</a></div>
+				<div class="packagelink"><a href="mailmessage.html">MailMessage</a></div>
+				<div class="packagelink"><a href="math.html">Math</a></div>
+				<div class="packagelink"><a href="memcached.html">Memcached</a></div>
+				<div class="packagelink"><a href="notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="object.html">Object</a></div>
+				<div class="packagelink"><a href="pop3session.html">POP3Session</a></div>
+				<div class="packagelink"><a href="patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="patfind.html">PatFind</a></div>
+				<div class="packagelink"><a href="pattern.html">Pattern</a></div>
+				<div class="packagelink"><a href="point.html">Point</a></div>
+				<div class="packagelink"><a href="profiler.html">Profiler</a></div>
+				<div class="packagelink"><a href="real.html">Real</a></div>
+				<div class="packagelink"><a href="recarray.html">RecArray</a></div>
+				<div class="packagelink"><a href="record.html">Record</a></div>
+				<div class="packagelink"><a href="regex.html">Regex</a></div>
+				<div class="packagelink"><a href="restclient.html">RestClient</a></div>
+				<div class="packagelink"><a href="saxparser.html">SAXParser</a></div>
+				<div class="packagelink"><a href="smtpsession.html">SMTPSession</a></div>
+				<div class="packagelink"><a href="ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="script.html">Script</a></div>
+				<div class="packagelink"><a href="security.html">Security</a></div>
+				<div class="packagelink"><a href="set.html">Set</a></div>
+				<div class="packagelink"><a href="socket.html">Socket</a></div>
+				<div class="packagelink"><a href="sql.html">Sql</a></div>
+				<div class="packagelink"><a href="sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink"><a href="str.html">Str</a></div>
+				<div class="packagelink"><a href="string.html">String</a></div>
+				<div class="packagelink"><a href="system.html">System</a></div>
+				<div class="packagelink"><a href="uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="void.html">Void</a></div>
+				<div class="packagelink"><a href="wapi.html">WAPI</a></div>
+				<div class="packagelink"><a href="wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink"><a href="web.html">Web</a></div>
+				<div class="packagelink curPage">XSLProcessor</div>
+				<div class="packagelink"><a href="zip.html">Zip</a></div>
+		</div>
+</div>
+
+	<div class="content_container">
+		<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+		<h1>Class: XSLProcessor</h1><div class="ClassDescription"><p>The XSLProcessor class provides an API to perform XSL    transformations on XML documents.</p></div>
+			<h2>Class Attributes</h2>
+			<div class="ClassAttributesShort">
+				
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_xslprocessor_error">Error</a></div>
+					<div class="Description"><p>Recoverable error.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_xslprocessor_fatalerror">FatalError</a></div>
+					<div class="Description"><p>Error that will stop processing.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_xslprocessor_fragment">Fragment</a></div>
+					<div class="Description"><p>XML output style without the XML 
+    declaration.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_xslprocessor_guess">Guess</a></div>
+					<div class="Description"><p>Output style - It will guess either 
+    XML, Fragment, HTML, or Text</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_xslprocessor_html">HTML</a></div>
+					<div class="Description"><p>HTML output style.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_xslprocessor_message">Message</a></div>
+					<div class="Description"><p>Informational status or message.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_xslprocessor_text">Text</a></div>
+					<div class="Description"><p>Plain text output style.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_xslprocessor_warning">Warning</a></div>
+					<div class="Description"><p>Warning message.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_xslprocessor_xml">XML</a></div>
+					<div class="Description"><p>XML output style.</p></div>
+				</div>
+				
+			</div>
+
+
+			<h2>Class Methods</h2>
+			<div class="ClassMethodsShort">
+				<div class="Method">
+					<div class="Name"><a href="#cm_xslprocessor_new" class="IndexMethodName">New</a>(
+					)
+					</div>
+					<div class="Description"><p>Create a new XSLProcessor instance.</p></div>
+				</div>
+			</div>
+
+			<h2>Instance Methods</h2>
+			<div class="InstanceMethodsShort">
+				<div class="Method">					
+					<div class="Name"><a href="#im_xslprocessor_setentityresolver" class="IndexMethodName">SetEntityResolver</a>(
+					 Dynamic objref, Dynamic entryName )
+					</div>
+					<div class="Description"><p>Sets the object reference and entry point name for the resolve 
+    entity reference callback.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_xslprocessor_setinput" class="IndexMethodName">SetInput</a>(
+					 Dynamic xmlInput, [String relativeUrl] )
+					</div>
+					<div class="Description"><p>Sets the input file or input DOMNode.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_xslprocessor_setoutput" class="IndexMethodName">SetOutput</a>(
+					 Dynamic xmlOutput, [Integer writeStyle] )
+					</div>
+					<div class="Description"><p>Sets the output file or output 
+    DOMNode.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_xslprocessor_setparameter" class="IndexMethodName">SetParameter</a>(
+					 String name, String value )
+					</div>
+					<div class="Description"><p>Sets the value of a parameter that 
+    will be referenced by the XSL stylesheet.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_xslprocessor_setstylesheet" class="IndexMethodName">SetStylesheet</a>(
+					 Dynamic xslInput, [String relativeUrl] )
+					</div>
+					<div class="Description"><p>Sets the XSL stylesheet that will 
+    be used to perform the transformation.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_xslprocessor_transform" class="IndexMethodName">Transform</a>(
+					)
+					</div>
+					<div class="Description"><p>Perform the XSL transformation.</p></div>
+				</div>
+			</div>
+
+				<h2>Class Attributes</h2>
+				<div class="ClassAttributes">
+					
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_xslprocessor_error">Error</a></div>
+						<div class="Description"><p>Recoverable error.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_xslprocessor_fatalerror">FatalError</a></div>
+						<div class="Description"><p>Error that will stop processing.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_xslprocessor_fragment">Fragment</a></div>
+						<div class="Description"><p>XML output style without the XML declaration.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_xslprocessor_guess">Guess</a></div>
+						<div class="Description"><p>Output style - It will guess either XML, 
+  Fragment, HTML, or Text</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_xslprocessor_html">HTML</a></div>
+						<div class="Description"><p>HTML output style.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_xslprocessor_message">Message</a></div>
+						<div class="Description"><p>Informational status or message.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_xslprocessor_text">Text</a></div>
+						<div class="Description"><p>Plain text output style.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_xslprocessor_warning">Warning</a></div>
+						<div class="Description"><p>Warning message.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_xslprocessor_xml">XML</a></div>
+						<div class="Description"><p>XML output style.</p></div>
+					</div>
+				
+				</div>
+
+		
+				<h2>Class Methods</h2>
+				<div class="ClassMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_xslprocessor_new">New</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">XSLProcessor</span> 
+						<span class="PrototypeselfName">New</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Create a new XSLProcessor instance.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A new XSLProcessor.</p></div>
+							</div>
+						</div>
+				</div>
+				<h2>Instance Methods</h2>
+				<div class="InstanceMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_xslprocessor_setentityresolver">SetEntityResolver</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Void</span> 
+						<span class="PrototypeselfName">SetEntityResolver</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">objref</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">entryName</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sets the object reference and entry point name for the resolve entity
+    callback.</p>
+<p>The return value is a string to the resolved entity.  An undefined return value indicates
+    to the parser that it should use its default internal entity resolution.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">objref</span><span class="description"><p>The reference to the object that has the script to be used in the callback.</p></span></div>
+											<div class="Parameter"><span class="name">entryName</span><span class="description"><p>The script name of the callback that will be
+            executed on callback.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_xslprocessor_setinput">SetInput</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">SetInput</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">xmlInput</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">relativeUrl</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sets the input file or input DOMNode. When the 
+    xmlInput is a DOMNode, the relativeUrl is used to resolve any relative URIs 
+    found and for error reporting.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">xmlInput</span><span class="description"><p>The name of the file or DOMNode.</p></span></div>
+											<div class="Parameter"><span class="name">relativeUrl</span><span class="description"><p>Used for resolving relative URIs and 
+            for error reporting.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>True if the method succeeds, false 
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_xslprocessor_setoutput">SetOutput</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">SetOutput</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">xmlOutput</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">writeStyle</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sets the output file or output DOMNode. When the 
+    xmlOutput is a file, the writeStyle parameter can be specified to determine 
+    the type of output desired (XML, XML Fragment, HTML, or Text).</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">xmlOutput</span><span class="description"><p>The name of a file or a DOMNode.</p></span></div>
+											<div class="Parameter"><span class="name">writeStyle</span><span class="description"><p>The style of output desired.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>True if the method succeeds, false 
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_xslprocessor_setparameter">SetParameter</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Void</span> 
+						<span class="PrototypeselfName">SetParameter</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">name</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">value</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sets the value of a parameter that will be referenced 
+    by the XSL stylesheet.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">name</span><span class="description"><p>The name of an XSL parameter to set.</p></span></div>
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>The value that the parameter should 
+            be set to.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_xslprocessor_setstylesheet">SetStylesheet</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">SetStylesheet</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">xslInput</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">relativeUrl</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sets the XSL stylesheet that will be used to perform 
+    the transformation.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">xslInput</span><span class="description"><p>The name of a file or DOMNode.</p></span></div>
+											<div class="Parameter"><span class="name">relativeUrl</span><span class="description"><p>Used for resolving relative URIs and 
+            for error reporting.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>True if the method succeeds, false 
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_xslprocessor_transform">Transform</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Assoc</span> 
+						<span class="PrototypeselfName">Transform</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Perform the XSL transformation.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An Assoc that contains:</p>
+<table border="0">
+    <tr valign="top">
+        <td class="ParameterType"><a href="boolean.html"><span class="ParameterType">Boolean</span></a></td>
+        <td class="ParameterName">OK</td>
+        <td class="ParameterDescription">Status of the parse.</td>
+    </tr>
+    <tr valign="top">
+        <td class="ParameterType"><a href="recarray.html"><span class="ParameterType">RecArray</span></a></td>
+        <td class="ParameterName">Error</td>
+        <td class="ParameterDescription">Errors that occurred during parsing.</td>
+    </tr>
+</table>
+
+<p>If the status of the parse is false, then the error RecArray contains:</p>
+<table border="0">
+    <tr valign="top">
+        <td class="ParameterType"><a href="string.html"><span class="ParameterType">String</span></a></td>
+        <td class="ParameterName">ErrType</td>
+        <td class="ParameterDescription">The type of error: warning, error or 
+                fatal. </td>
+    </tr>
+    <tr valign="top">
+        <td class="ParameterType"><a href="string.html"><span class="ParameterType">String</span></a></td>
+        <td class="ParameterName">ErrMsg</td>
+        <td class="ParameterDescription">XSL Processor generated error message.</td>
+    </tr>
+</table></div>
+							</div>
+						</div>
+				</div>
+		
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2018 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+
+
+
+</div>
+	</div>						
+						
+
+</div>
+
+</body></html>

@@ -1,0 +1,72 @@
+<HTML>
+<HEAD>
+<TITLE>CreateNewInstance()</TITLE>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<script language="JavaScript">updateParentHeader( 'Code' );</script>
+<script language="JavaScript">includeContentContainer( 'wfbuilder', true );</script>
+
+
+<p class="body">
+<p class="title">CreateNewInstance()</p>
+<p class="body">This code sample describes how to create a new 
+instance of the Table Values data type when it is attached to a workflow 
+map in the Workflow Designer.</p>
+
+<pre class="code">
+	Function Dynamic CreateNewInstance( \
+		Object 		prgCtx, \
+		Dynamic 	map = Undefined, \
+		Dynamic 	info = Undefined )
+		Assoc 		retVal
+		String 		name
+	
+		//Create a list named fields, which stores the names of the
+		//fields that are displayed on the Table Values tab when the
+		//creator of the workflow map edits a step in the Workflow
+		//Painter. Then create a list named cust_fields that stores the
+		//names of the fields that are displayed on the Customer tab.
+
+	List 		fields = { 'Project_Name', 'Priority', 'DueDate', \
+							'Customer', 'ID_Code' }
+	List 		cust_fields = { 'Name', 'Addr1', 'Addr2', 'City', \
+							'State', 'Zip', 'Phone', 'Fax' }
+							
+		//Create an Assoc that stores all the field names. Then set all
+		//field values to Undefined.
+
+	retVal.Fields = Assoc.CreateAssoc()
+	
+	for name in fields
+	retVal.Fields.( name ) = Undefined
+	end
+	
+		//Set the default value of the Priority field to 3, which is
+		//low priority.
+
+	retVal.Fields.Priority = 3
+	
+		//Create an Assoc that stores the field names for the Customer
+		//tab (Customer Name, Address 1, Address 2, City, State, Zip
+		//Code, Phone, and Fax). Then set all field values to Undefined.
+
+	retVal.Fields.Customer = Assoc.CreateAssoc()
+	
+	for name in cust_fields
+	retVal.Fields.Customer.( name ) = Undefined
+	end
+	
+	retVal.Required = {}
+	retVal.NonEditable = {}
+	return( retVal )
+	end</pre>
+
+
+<script language="JavaScript">IncludeFooter();</script>
+
+</body>
+</html>

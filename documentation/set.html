@@ -1,0 +1,778 @@
+
+<meta charset="UTF-8">
+<html>
+<head><title>Class: Set</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../syntax.css" type="text/css">
+<link rel="stylesheet" href="builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td  align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody></table>
+
+<div id="document">
+	
+<div class="sidebar_container">
+		
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink"><a href="assoc.html">Assoc</a></div>
+				<div class="packagelink"><a href="boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="builder.html">Builder</a></div>
+				<div class="packagelink"><a href="bytes.html">Bytes</a></div>
+				<div class="packagelink"><a href="capi.html">CAPI</a></div>
+				<div class="packagelink"><a href="capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink"><a href="cachetree.html">CacheTree</a></div>
+				<div class="packagelink"><a href="compiler.html">Compiler</a></div>
+				<div class="packagelink"><a href="core.html">Core</a></div>
+				<div class="packagelink"><a href="dapi.html">DAPI</a></div>
+				<div class="packagelink"><a href="dapinode.html">DAPINODE</a></div>
+				<div class="packagelink"><a href="dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink"><a href="dapiversion.html">DAPIVERSION</a></div>
+				<div class="packagelink"><a href="domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="domcomment.html">DOMComment</a></div>
+				<div class="packagelink"><a href="domdocument.html">DOMDocument</a></div>
+				<div class="packagelink"><a href="domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink"><a href="domelement.html">DOMElement</a></div>
+				<div class="packagelink"><a href="domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink"><a href="domnamednodemap.html">DOMNamedNodeMap</a></div>
+				<div class="packagelink"><a href="domnode.html">DOMNode</a></div>
+				<div class="packagelink"><a href="domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="domtext.html">DOMText</a></div>
+				<div class="packagelink"><a href="date.html">Date</a></div>
+				<div class="packagelink"><a href="dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="env.html">Env</a></div>
+				<div class="packagelink"><a href="error.html">Error</a></div>
+				<div class="packagelink"><a href="file.html">File</a></div>
+				<div class="packagelink"><a href="filecopy.html">FileCopy</a></div>
+				<div class="packagelink"><a href="fileprefs.html">Fileprefs</a></div>
+				<div class="packagelink"><a href="frame.html">Frame</a></div>
+				<div class="packagelink"><a href="global.html">Global</a></div>
+				<div class="packagelink"><a href="integer.html">Integer</a></div>
+				<div class="packagelink"><a href="javaobject.html">JavaObject</a></div>
+				<div class="packagelink"><a href="language.html">Language</a></div>
+				<div class="packagelink"><a href="license.html">License</a></div>
+				<div class="packagelink"><a href="list.html">List</a></div>
+				<div class="packagelink"><a href="logging.html">Logging</a></div>
+				<div class="packagelink"><a href="long.html">Long</a></div>
+				<div class="packagelink"><a href="mailmessage.html">MailMessage</a></div>
+				<div class="packagelink"><a href="math.html">Math</a></div>
+				<div class="packagelink"><a href="memcached.html">Memcached</a></div>
+				<div class="packagelink"><a href="notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="object.html">Object</a></div>
+				<div class="packagelink"><a href="pop3session.html">POP3Session</a></div>
+				<div class="packagelink"><a href="patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="patfind.html">PatFind</a></div>
+				<div class="packagelink"><a href="pattern.html">Pattern</a></div>
+				<div class="packagelink"><a href="point.html">Point</a></div>
+				<div class="packagelink"><a href="profiler.html">Profiler</a></div>
+				<div class="packagelink"><a href="real.html">Real</a></div>
+				<div class="packagelink"><a href="recarray.html">RecArray</a></div>
+				<div class="packagelink"><a href="record.html">Record</a></div>
+				<div class="packagelink"><a href="regex.html">Regex</a></div>
+				<div class="packagelink"><a href="restclient.html">RestClient</a></div>
+				<div class="packagelink"><a href="saxparser.html">SAXParser</a></div>
+				<div class="packagelink"><a href="smtpsession.html">SMTPSession</a></div>
+				<div class="packagelink"><a href="ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="script.html">Script</a></div>
+				<div class="packagelink"><a href="security.html">Security</a></div>
+				<div class="packagelink curPage">Set</div>
+				<div class="packagelink"><a href="socket.html">Socket</a></div>
+				<div class="packagelink"><a href="sql.html">Sql</a></div>
+				<div class="packagelink"><a href="sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink"><a href="str.html">Str</a></div>
+				<div class="packagelink"><a href="string.html">String</a></div>
+				<div class="packagelink"><a href="system.html">System</a></div>
+				<div class="packagelink"><a href="uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="void.html">Void</a></div>
+				<div class="packagelink"><a href="wapi.html">WAPI</a></div>
+				<div class="packagelink"><a href="wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink"><a href="web.html">Web</a></div>
+				<div class="packagelink"><a href="xslprocessor.html">XSLProcessor</a></div>
+				<div class="packagelink"><a href="zip.html">Zip</a></div>
+		</div>
+</div>
+
+	<div class="content_container">
+		<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+		<h1>Class: Set</h1><div class="ClassDescription"><p>The Set built-in provides a <a href="https://en.wikipedia.org/wiki/Set_%28abstract_data_type%29">set</a> datatype with fast membership checks, and support for common set operations like union, intersection and difference. </p>
+<p>Unlike a <a class="interdoc" href="list.html">List</a>, Sets contain each element only once, and have no defined order.</p></div>
+
+
+			<h2>Class Methods</h2>
+			<div class="ClassMethodsShort">
+				<div class="Method">
+					<div class="Name"><a href="#cm_set_fromlist" class="IndexMethodName">FromList</a>(
+					 List theList )
+					</div>
+					<div class="Description"><p>Generates a Set from a List</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_set_insert" class="IndexMethodName">Insert</a>(
+					 Set theSet, Dynamic element )
+					</div>
+					<div class="Description"><p>Inserts a new element into a Set.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_set_intersect" class="IndexMethodName">Intersect</a>(
+					 Set first, Set second )
+					</div>
+					<div class="Description"><p>Computes the intersection of two sets</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_set_max" class="IndexMethodName">Max</a>(
+					 Set theSet )
+					</div>
+					<div class="Description"><p>Returns the largest numerical element in the set.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_set_min" class="IndexMethodName">Min</a>(
+					 Set theSet )
+					</div>
+					<div class="Description"><p>Returns the smallest numerical element in the set.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_set_remove" class="IndexMethodName">Remove</a>(
+					 Set theSet, Dynamic element )
+					</div>
+					<div class="Description"><p>Removes an element from the Set.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_set_subtract" class="IndexMethodName">Subtract</a>(
+					 Set first, Set second )
+					</div>
+					<div class="Description"><p>Subtracts the contents of one set from another</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_set_symmetricdifference" class="IndexMethodName">SymmetricDifference</a>(
+					 Set first, Set second )
+					</div>
+					<div class="Description"><p>Computes the symmetric difference of two sets</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_set_tolist" class="IndexMethodName">ToList</a>(
+					 Set theSet )
+					</div>
+					<div class="Description"><p>Generates a List from a Set</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_set_union" class="IndexMethodName">Union</a>(
+					 Set first, Set second )
+					</div>
+					<div class="Description"><p>Computes the union of two sets</p></div>
+				</div>
+			</div>
+
+			<h2>Instance Methods</h2>
+			<div class="InstanceMethodsShort">
+				<div class="Method">					
+					<div class="Name"><a href="#im_set_insert" class="IndexMethodName">Insert</a>(
+					 Dynamic element )
+					</div>
+					<div class="Description"><p>Inserts an element into this Set.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_set_intersect" class="IndexMethodName">Intersect</a>(
+					 Set otherSet )
+					</div>
+					<div class="Description"><p>Computes the intersection of this and another set</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_set_max" class="IndexMethodName">Max</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns the largest numerical element in the set.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_set_min" class="IndexMethodName">Min</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns the smallest numerical element in the set.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_set_remove" class="IndexMethodName">Remove</a>(
+					 Dynamic element )
+					</div>
+					<div class="Description"><p>Removes an element from this Set.</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_set_subtract" class="IndexMethodName">Subtract</a>(
+					 Set otherSet )
+					</div>
+					<div class="Description"><p>Subtracts the contents of another set from this one</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_set_symmetricdifference" class="IndexMethodName">SymmetricDifference</a>(
+					 Set otherSet )
+					</div>
+					<div class="Description"><p>Computes the symmetric difference of this and another set</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_set_tolist" class="IndexMethodName">ToList</a>(
+					)
+					</div>
+					<div class="Description"><p>Generates a List from this Set</p></div>
+				</div>
+				<div class="Method">					
+					<div class="Name"><a href="#im_set_union" class="IndexMethodName">Union</a>(
+					 Set otherSet )
+					</div>
+					<div class="Description"><p>Computes the union of this and another set</p></div>
+				</div>
+			</div>
+
+
+		
+				<h2>Class Methods</h2>
+				<div class="ClassMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_set_fromlist">FromList</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Set</span> 
+						<span class="PrototypeselfName">FromList</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">List</span> <span class="PrototypeArgumentName">theList</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts a <a class="interdoc" href="list.html">List</a> into a Set.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theList</span><span class="description"><p>The List to convert.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The Set generated from the List.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><div class="codehilite"><pre>List myList <span class="o">=</span> <span class="p">{</span> <span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;b&#39;</span><span class="p">,</span> <span class="s">&#39;c&#39;</span><span class="p">,</span> <span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span> <span class="p">}</span>
+Set mySet <span class="o">=</span> Set<span class="o">.</span>FromList<span class="p">(</span> myList <span class="p">)</span>
+echo<span class="p">(</span> mySet <span class="p">)</span>
+</pre></div>
+
+
+<p>results in</p>
+<div class="codehilite"><pre>set<span class="p">{</span><span class="s">&#39;a&#39;</span><span class="p">,</span><span class="s">&#39;b&#39;</span><span class="p">,</span><span class="s">&#39;c&#39;</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">}</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_set_insert">Insert</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Set</span> 
+						<span class="PrototypeselfName">Insert</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Set</span> <span class="PrototypeArgumentName">theSet</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">element</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Adds an element to the Set.  Unlike Lists, Sets are mutable, so the this set is modified.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theSet</span><span class="description"><p>The set to add the element to.</p></span></div>
+											<div class="Parameter"><span class="name">element</span><span class="description"><p>The element to add to the set.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The Set, with the element added.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><div class="codehilite"><pre>Set mySet <span class="o">=</span> Set<span class="o">.</span>FromList<span class="p">({</span><span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;b&#39;</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">3</span><span class="p">})</span>
+Set myOtherSet <span class="o">=</span> Set<span class="o">.</span>Insert<span class="p">(</span> mySet<span class="p">,</span> <span class="s">&#39;c&#39;</span> <span class="p">)</span>
+echo<span class="p">(</span> mySet <span class="p">)</span>
+echo<span class="p">(</span> myOtherSet <span class="p">)</span>
+</pre></div>
+
+
+<p>results in</p>
+<div class="codehilite"><pre><span class="p">{</span><span class="s">&#39;a&#39;</span><span class="p">,</span><span class="s">&#39;b&#39;</span><span class="p">,</span><span class="s">&#39;c&#39;</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">}</span>
+<span class="p">{</span><span class="s">&#39;a&#39;</span><span class="p">,</span><span class="s">&#39;b&#39;</span><span class="p">,</span><span class="s">&#39;c&#39;</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">}</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_set_intersect">Intersect</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Set</span> 
+						<span class="PrototypeselfName">Intersect</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Set</span> <span class="PrototypeArgumentName">first</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Set</span> <span class="PrototypeArgumentName">second</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Computes the intersection of two sets - the set will contain an element if and only if it was contained in both of the source sets.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">first</span><span class="description"><p>First set in the intersection.</p></span></div>
+											<div class="Parameter"><span class="name">second</span><span class="description"><p>Second set in the intersection.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The intersection of the two sets.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><div class="codehilite"><pre>Set first <span class="o">=</span> Set<span class="o">.</span>FromList<span class="p">({</span><span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;b&#39;</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">3</span><span class="p">})</span>
+Set second <span class="o">=</span> Set<span class="o">.</span>FromList<span class="p">({</span><span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;c&#39;</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">})</span>
+Set intersection <span class="o">=</span> Set<span class="o">.</span>Intersect<span class="p">(</span> first<span class="p">,</span> second <span class="p">)</span>
+echo<span class="p">(</span> intersection <span class="p">)</span>
+</pre></div>
+
+
+<p>results in</p>
+<div class="codehilite"><pre>set<span class="p">{</span><span class="s">&#39;a&#39;</span><span class="p">,</span><span class="m">1</span><span class="p">}</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_set_max">Max</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer or Real</span> 
+						<span class="PrototypeselfName">Max</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Set</span> <span class="PrototypeArgumentName">theSet</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the largest numerical element in the set. See <a class="interdoc" href="list.html#cm_list_max">List.Max()</a>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theSet</span><span class="description"><p>Set to find the largest numerical value from.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Largest numerical element in the set.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_set_min">Min</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer or Real</span> 
+						<span class="PrototypeselfName">Min</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Set</span> <span class="PrototypeArgumentName">theSet</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the smallest numerical element in the set. See <a class="interdoc" href="list.html#cm_list_min">List.Min()</a>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theSet</span><span class="description"><p>Set to find the smallest numerical value from.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Smallest numerical element in the set.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_set_remove">Remove</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Set</span> 
+						<span class="PrototypeselfName">Remove</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Set</span> <span class="PrototypeArgumentName">theSet</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">element</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Removes an element from the Set.  Unlike Lists, Sets are mutable, so the this set is modified.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theSet</span><span class="description"><p>The set to remove the element from.</p></span></div>
+											<div class="Parameter"><span class="name">element</span><span class="description"><p>The element to remove from the set.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The Set, with the element removed.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><div class="codehilite"><pre>Set mySet <span class="o">=</span> Set<span class="o">.</span>FromList<span class="p">({</span><span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;b&#39;</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">3</span><span class="p">})</span>
+Set myOtherSet <span class="o">=</span> Set<span class="o">.</span>Remove<span class="p">(</span> mySet<span class="p">,</span> <span class="s">&#39;a&#39;</span> <span class="p">)</span>
+echo<span class="p">(</span> mySet <span class="p">)</span>
+echo<span class="p">(</span> myOtherSet <span class="p">)</span>
+</pre></div>
+
+
+<p>results in</p>
+<div class="codehilite"><pre><span class="p">{</span><span class="s">&#39;b&#39;</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">}</span>
+<span class="p">{</span><span class="s">&#39;b&#39;</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">}</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_set_subtract">Subtract</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Set</span> 
+						<span class="PrototypeselfName">Subtract</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Set</span> <span class="PrototypeArgumentName">first</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Set</span> <span class="PrototypeArgumentName">second</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Subtracts the contents of the second set from the first. The set will contain an element if and only if it was contained in the first set and not in the second.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">first</span><span class="description"><p>The set being subtracted from.</p></span></div>
+											<div class="Parameter"><span class="name">second</span><span class="description"><p>The set being subtracted.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The difference of the two sets.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><div class="codehilite"><pre>Set first <span class="o">=</span> Set<span class="o">.</span>FromList<span class="p">({</span><span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;b&#39;</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">3</span><span class="p">})</span>
+Set second <span class="o">=</span> Set<span class="o">.</span>FromList<span class="p">({</span><span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;c&#39;</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">})</span>
+Set difference <span class="o">=</span> Set<span class="o">.</span>Subtract<span class="p">(</span> first<span class="p">,</span> second <span class="p">)</span>
+echo<span class="p">(</span> difference <span class="p">)</span>
+</pre></div>
+
+
+<p>results in</p>
+<div class="codehilite"><pre>set<span class="p">{</span><span class="s">&#39;b&#39;</span><span class="p">,</span><span class="m">3</span><span class="p">}</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_set_symmetricdifference">SymmetricDifference</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Set</span> 
+						<span class="PrototypeselfName">SymmetricDifference</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Set</span> <span class="PrototypeArgumentName">first</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Set</span> <span class="PrototypeArgumentName">second</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Computes the symmetric difference of two sets - the set will contain an element if and only if it was contained in only one of the source sets.</p>
+<div class="codehilite"><pre>Set<span class="o">.</span>SymmetricDifference<span class="p">(</span> a<span class="p">,</span> b <span class="p">)</span>
+</pre></div>
+
+
+<p>is equivalent to</p>
+<div class="codehilite"><pre>Set<span class="o">.</span>Union<span class="p">(</span> Set<span class="o">.</span>Subtract<span class="p">(</span> a<span class="p">,</span> b <span class="p">),</span> Set<span class="o">.</span>Subtract<span class="p">(</span> b<span class="p">,</span> a <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">first</span><span class="description"><p>First set in the symmetric difference.</p></span></div>
+											<div class="Parameter"><span class="name">second</span><span class="description"><p>Second set in the symmetric difference.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The symmetric difference of the two sets.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><div class="codehilite"><pre>Set first <span class="o">=</span> Set<span class="o">.</span>FromList<span class="p">({</span><span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;b&#39;</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">3</span><span class="p">})</span>
+Set second <span class="o">=</span> Set<span class="o">.</span>FromList<span class="p">({</span><span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;c&#39;</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">})</span>
+Set symdiff <span class="o">=</span> Set<span class="o">.</span>SymmetricDifference<span class="p">(</span> first<span class="p">,</span> second <span class="p">)</span>
+echo<span class="p">(</span> symdiff <span class="p">)</span>
+</pre></div>
+
+
+<p>results in</p>
+<div class="codehilite"><pre>set<span class="p">{</span><span class="s">&#39;b&#39;</span><span class="p">,</span><span class="s">&#39;c&#39;</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">}</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_set_tolist">ToList</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">List</span> 
+						<span class="PrototypeselfName">ToList</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Set</span> <span class="PrototypeArgumentName">theSet</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts a Set into a <a class="interdoc" href="list.html">List</a>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theSet</span><span class="description"><p>The Set to convert.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The List generated from the Set.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><div class="codehilite"><pre>Set first <span class="o">=</span> Set<span class="o">.</span>FromList<span class="p">({</span><span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;b&#39;</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">3</span><span class="p">})</span>
+Set second <span class="o">=</span> Set<span class="o">.</span>FromList<span class="p">({</span><span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;c&#39;</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">})</span>
+Set symdiff <span class="o">=</span> Set<span class="o">.</span>SymmetricDifference<span class="p">(</span> first<span class="p">,</span> second <span class="p">)</span>
+echo<span class="p">(</span> Set<span class="o">.</span>ToList<span class="p">(</span> symdiff <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>results in</p>
+<div class="codehilite"><pre><span class="p">{</span><span class="s">&#39;a&#39;</span><span class="p">,</span><span class="s">&#39;b&#39;</span><span class="p">,</span><span class="s">&#39;c&#39;</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">}</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_set_union">Union</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Set</span> 
+						<span class="PrototypeselfName">Union</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Set</span> <span class="PrototypeArgumentName">first</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Set</span> <span class="PrototypeArgumentName">second</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Computes the union of two sets - the set will contain an element if and only if it was contained in at least one of the source sets.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">first</span><span class="description"><p>First set in the union.</p></span></div>
+											<div class="Parameter"><span class="name">second</span><span class="description"><p>Second set in the union.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The union of the two sets.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><div class="codehilite"><pre>Set first <span class="o">=</span> Set<span class="o">.</span>FromList<span class="p">({</span><span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;b&#39;</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">3</span><span class="p">})</span>
+Set second <span class="o">=</span> Set<span class="o">.</span>FromList<span class="p">({</span><span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;c&#39;</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">})</span>
+Set union <span class="o">=</span> Set<span class="o">.</span>Union<span class="p">(</span> first<span class="p">,</span> second <span class="p">)</span>
+echo<span class="p">(</span> union <span class="p">)</span>
+</pre></div>
+
+
+<p>results in</p>
+<div class="codehilite"><pre>set<span class="p">{</span><span class="s">&#39;a&#39;</span><span class="p">,</span><span class="s">&#39;b&#39;</span><span class="p">,</span><span class="s">&#39;c&#39;</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">}</span>
+</pre></div></div>
+							</div>
+						</div>
+				</div>
+				<h2>Instance Methods</h2>
+				<div class="InstanceMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_set_insert">Insert</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Set</span> 
+						<span class="PrototypeselfName">Insert</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">element</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Adds an element to this Set. Unlike Lists, Sets are mutable, so the this set is modified.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">element</span><span class="description"><p>The element to add to this set.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>This Set, with the element added.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><div class="codehilite"><pre>Set mySet <span class="o">=</span> Set<span class="o">.</span>FromList<span class="p">({</span><span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;b&#39;</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">3</span><span class="p">})</span>
+Set myOtherSet <span class="o">=</span> mySet<span class="o">.</span>Insert<span class="p">(</span> mySet<span class="p">,</span> <span class="s">&#39;c&#39;</span> <span class="p">)</span>
+echo<span class="p">(</span> mySet <span class="p">)</span>
+echo<span class="p">(</span> myOtherSet <span class="p">)</span>
+</pre></div>
+
+
+<p>results in</p>
+<div class="codehilite"><pre><span class="p">{</span><span class="s">&#39;a&#39;</span><span class="p">,</span><span class="s">&#39;b&#39;</span><span class="p">,</span><span class="s">&#39;c&#39;</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">}</span>
+<span class="p">{</span><span class="s">&#39;a&#39;</span><span class="p">,</span><span class="s">&#39;b&#39;</span><span class="p">,</span><span class="s">&#39;c&#39;</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">}</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_set_intersect">Intersect</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Set</span> 
+						<span class="PrototypeselfName">Intersect</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Set</span> <span class="PrototypeArgumentName">otherSet</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Computes the intersection of this and another set - the resulting set will contain an element if and only if it was contained in both of the source sets.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">otherSet</span><span class="description"><p>The other set in the intersection.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The intersection of this and another set.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><div class="codehilite"><pre>Set first <span class="o">=</span> Set<span class="o">.</span>FromList<span class="p">({</span><span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;b&#39;</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">3</span><span class="p">})</span>
+Set second <span class="o">=</span> Set<span class="o">.</span>FromList<span class="p">({</span><span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;c&#39;</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">})</span>
+Set intersection <span class="o">=</span> first<span class="o">.</span>Intersect<span class="p">(</span> second <span class="p">)</span>
+echo<span class="p">(</span> intersection <span class="p">)</span>
+</pre></div>
+
+
+<p>results in</p>
+<div class="codehilite"><pre>set<span class="p">{</span><span class="s">&#39;a&#39;</span><span class="p">,</span><span class="m">1</span><span class="p">}</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_set_max">Max</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer or Real</span> 
+						<span class="PrototypeselfName">Max</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the largest numerical element in the set. See <a class="interdoc" href="list.html#cm_list_max">List.Max()</a>.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Largest numerical element in the set.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_set_min">Min</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer or Real</span> 
+						<span class="PrototypeselfName">Min</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the smallest numerical element in the set. See <a class="interdoc" href="list.html#cm_list_min">List.Min()</a>.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Smallest numerical element in the set.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_set_remove">Remove</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Set</span> 
+						<span class="PrototypeselfName">Remove</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">element</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Removes an element from this Set. Unlike Lists, Sets are mutable, so the this set is modified.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">element</span><span class="description"><p>The element to remove from this set.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>This Set, with the element removed.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><div class="codehilite"><pre>Set mySet <span class="o">=</span> Set<span class="o">.</span>FromList<span class="p">({</span><span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;b&#39;</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">3</span><span class="p">})</span>
+Set myOtherSet <span class="o">=</span> mySet<span class="o">.</span>Remove<span class="p">(</span> mySet<span class="p">,</span> <span class="s">&#39;a&#39;</span> <span class="p">)</span>
+echo<span class="p">(</span> mySet <span class="p">)</span>
+echo<span class="p">(</span> myOtherSet <span class="p">)</span>
+</pre></div>
+
+
+<p>results in</p>
+<div class="codehilite"><pre><span class="p">{</span><span class="s">&#39;b&#39;</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">}</span>
+<span class="p">{</span><span class="s">&#39;b&#39;</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">}</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_set_subtract">Subtract</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Set</span> 
+						<span class="PrototypeselfName">Subtract</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Set</span> <span class="PrototypeArgumentName">otherSet</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Subtracts the contents of another set from this one. The resulting set will contain an element if and only if it was contained in the first set and not in the second.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">otherSet</span><span class="description"><p>The set being subtracted.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The difference of this and another set.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><div class="codehilite"><pre>Set first <span class="o">=</span> Set<span class="o">.</span>FromList<span class="p">({</span><span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;b&#39;</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">3</span><span class="p">})</span>
+Set second <span class="o">=</span> Set<span class="o">.</span>FromList<span class="p">({</span><span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;c&#39;</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">})</span>
+Set difference <span class="o">=</span> first<span class="o">.</span>Subtract<span class="p">(</span> second <span class="p">)</span>
+echo<span class="p">(</span> difference <span class="p">)</span>
+</pre></div>
+
+
+<p>results in</p>
+<div class="codehilite"><pre>set<span class="p">{</span><span class="s">&#39;b&#39;</span><span class="p">,</span><span class="m">3</span><span class="p">}</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_set_symmetricdifference">SymmetricDifference</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Set</span> 
+						<span class="PrototypeselfName">SymmetricDifference</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Set</span> <span class="PrototypeArgumentName">otherSet</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Computes the symmetric difference of this and another set - the resulting set will contain an element if and only if it was contained in only one of the source sets.</p>
+<div class="codehilite"><pre>a<span class="o">.</span>SymmetricDifference<span class="p">(</span> b <span class="p">)</span>
+</pre></div>
+
+
+<p>is equivalent to</p>
+<div class="codehilite"><pre>a<span class="o">.</span>Subtract<span class="p">(</span> b <span class="p">)</span><span class="o">.</span>Union<span class="p">(</span> b<span class="o">.</span>Subtract<span class="p">(</span> a <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">otherSet</span><span class="description"><p>The other set in the symmetric difference.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The symmetric difference of this and the other set.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><div class="codehilite"><pre>Set first <span class="o">=</span> Set<span class="o">.</span>FromList<span class="p">({</span><span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;b&#39;</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">3</span><span class="p">})</span>
+Set second <span class="o">=</span> Set<span class="o">.</span>FromList<span class="p">({</span><span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;c&#39;</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">})</span>
+Set symdiff <span class="o">=</span> first<span class="o">.</span>SymmetricDifference<span class="p">(</span> second <span class="p">)</span>
+echo<span class="p">(</span> symdiff <span class="p">)</span>
+</pre></div>
+
+
+<p>results in</p>
+<div class="codehilite"><pre>set<span class="p">{</span><span class="s">&#39;b&#39;</span><span class="p">,</span><span class="s">&#39;c&#39;</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">}</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_set_tolist">ToList</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">List</span> 
+						<span class="PrototypeselfName">ToList</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts this Set into a <a class="interdoc" href="list.html">List</a>.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The List generated from this Set.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><div class="codehilite"><pre>Set first <span class="o">=</span> Set<span class="o">.</span>FromList<span class="p">({</span><span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;b&#39;</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">3</span><span class="p">})</span>
+Set second <span class="o">=</span> Set<span class="o">.</span>FromList<span class="p">({</span><span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;c&#39;</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">})</span>
+Set symdiff <span class="o">=</span> Set<span class="o">.</span>SymmetricDifference<span class="p">(</span> first<span class="p">,</span> second <span class="p">)</span>
+echo<span class="p">(</span> symdiff<span class="o">.</span>ToList<span class="p">()</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>results in</p>
+<div class="codehilite"><pre><span class="p">{</span><span class="s">&#39;a&#39;</span><span class="p">,</span><span class="s">&#39;b&#39;</span><span class="p">,</span><span class="s">&#39;c&#39;</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">}</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="im_set_union">Union</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Set</span> 
+						<span class="PrototypeselfName">Union</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Set</span> <span class="PrototypeArgumentName">otherSet</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Computes the union of this and another set - the resulting set will contain an element if and only if it was contained in at least one of the source sets.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">otherSet</span><span class="description"><p>The other set in the union.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The union of the two sets.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><div class="codehilite"><pre>Set first <span class="o">=</span> Set<span class="o">.</span>FromList<span class="p">({</span><span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;b&#39;</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">3</span><span class="p">})</span>
+Set second <span class="o">=</span> Set<span class="o">.</span>FromList<span class="p">({</span><span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;c&#39;</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">})</span>
+Set union <span class="o">=</span> first<span class="o">.</span>Union<span class="p">(</span> second <span class="p">)</span>
+echo<span class="p">(</span> union <span class="p">)</span>
+</pre></div>
+
+
+<p>results in</p>
+<div class="codehilite"><pre>set<span class="p">{</span><span class="s">&#39;a&#39;</span><span class="p">,</span><span class="s">&#39;b&#39;</span><span class="p">,</span><span class="s">&#39;c&#39;</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">}</span>
+</pre></div></div>
+							</div>
+						</div>
+				</div>
+		
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2018 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+
+
+
+</div>
+	</div>						
+						
+
+</div>
+
+</body></html>

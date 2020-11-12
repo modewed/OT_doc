@@ -1,0 +1,2862 @@
+
+<meta charset="UTF-8">
+<html>
+<head><title>Class: WAPI</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../syntax.css" type="text/css">
+<link rel="stylesheet" href="builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td  align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody></table>
+
+<div id="document">
+	
+<div class="sidebar_container">
+		
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink"><a href="assoc.html">Assoc</a></div>
+				<div class="packagelink"><a href="boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="builder.html">Builder</a></div>
+				<div class="packagelink"><a href="bytes.html">Bytes</a></div>
+				<div class="packagelink"><a href="capi.html">CAPI</a></div>
+				<div class="packagelink"><a href="capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink"><a href="cachetree.html">CacheTree</a></div>
+				<div class="packagelink"><a href="compiler.html">Compiler</a></div>
+				<div class="packagelink"><a href="core.html">Core</a></div>
+				<div class="packagelink"><a href="dapi.html">DAPI</a></div>
+				<div class="packagelink"><a href="dapinode.html">DAPINODE</a></div>
+				<div class="packagelink"><a href="dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink"><a href="dapiversion.html">DAPIVERSION</a></div>
+				<div class="packagelink"><a href="domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="domcomment.html">DOMComment</a></div>
+				<div class="packagelink"><a href="domdocument.html">DOMDocument</a></div>
+				<div class="packagelink"><a href="domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink"><a href="domelement.html">DOMElement</a></div>
+				<div class="packagelink"><a href="domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink"><a href="domnamednodemap.html">DOMNamedNodeMap</a></div>
+				<div class="packagelink"><a href="domnode.html">DOMNode</a></div>
+				<div class="packagelink"><a href="domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="domtext.html">DOMText</a></div>
+				<div class="packagelink"><a href="date.html">Date</a></div>
+				<div class="packagelink"><a href="dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="env.html">Env</a></div>
+				<div class="packagelink"><a href="error.html">Error</a></div>
+				<div class="packagelink"><a href="file.html">File</a></div>
+				<div class="packagelink"><a href="filecopy.html">FileCopy</a></div>
+				<div class="packagelink"><a href="fileprefs.html">Fileprefs</a></div>
+				<div class="packagelink"><a href="frame.html">Frame</a></div>
+				<div class="packagelink"><a href="global.html">Global</a></div>
+				<div class="packagelink"><a href="integer.html">Integer</a></div>
+				<div class="packagelink"><a href="javaobject.html">JavaObject</a></div>
+				<div class="packagelink"><a href="language.html">Language</a></div>
+				<div class="packagelink"><a href="license.html">License</a></div>
+				<div class="packagelink"><a href="list.html">List</a></div>
+				<div class="packagelink"><a href="logging.html">Logging</a></div>
+				<div class="packagelink"><a href="long.html">Long</a></div>
+				<div class="packagelink"><a href="mailmessage.html">MailMessage</a></div>
+				<div class="packagelink"><a href="math.html">Math</a></div>
+				<div class="packagelink"><a href="memcached.html">Memcached</a></div>
+				<div class="packagelink"><a href="notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="object.html">Object</a></div>
+				<div class="packagelink"><a href="pop3session.html">POP3Session</a></div>
+				<div class="packagelink"><a href="patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="patfind.html">PatFind</a></div>
+				<div class="packagelink"><a href="pattern.html">Pattern</a></div>
+				<div class="packagelink"><a href="point.html">Point</a></div>
+				<div class="packagelink"><a href="profiler.html">Profiler</a></div>
+				<div class="packagelink"><a href="real.html">Real</a></div>
+				<div class="packagelink"><a href="recarray.html">RecArray</a></div>
+				<div class="packagelink"><a href="record.html">Record</a></div>
+				<div class="packagelink"><a href="regex.html">Regex</a></div>
+				<div class="packagelink"><a href="restclient.html">RestClient</a></div>
+				<div class="packagelink"><a href="saxparser.html">SAXParser</a></div>
+				<div class="packagelink"><a href="smtpsession.html">SMTPSession</a></div>
+				<div class="packagelink"><a href="ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="script.html">Script</a></div>
+				<div class="packagelink"><a href="security.html">Security</a></div>
+				<div class="packagelink"><a href="set.html">Set</a></div>
+				<div class="packagelink"><a href="socket.html">Socket</a></div>
+				<div class="packagelink"><a href="sql.html">Sql</a></div>
+				<div class="packagelink"><a href="sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink"><a href="str.html">Str</a></div>
+				<div class="packagelink"><a href="string.html">String</a></div>
+				<div class="packagelink"><a href="system.html">System</a></div>
+				<div class="packagelink"><a href="uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="void.html">Void</a></div>
+				<div class="packagelink curPage">WAPI</div>
+				<div class="packagelink"><a href="wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink"><a href="web.html">Web</a></div>
+				<div class="packagelink"><a href="xslprocessor.html">XSLProcessor</a></div>
+				<div class="packagelink"><a href="zip.html">Zip</a></div>
+		</div>
+</div>
+
+	<div class="content_container">
+		<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+		<h1>Class: WAPI</h1><div class="ClassDescription"><p>WAPI ( Workflow Application Programming Interface)
+ maintains a database of Maps, and Work along with providing functions to query
+ the Work database in order to retrieve specified lists. </p>
+<p>Maps define the Tasks and Links between the tasks.
+When a Map is Initiated Work is created. Map definitions may either be saved
+in the database or Initiated directly from the definition. </p>
+<p>The Work database represents the current status of
+all Work in progress. The Work database refers to the Map database for all execution
+information.</p>
+<p>The followings are types of WAPI object handles used
+with the WAPI functions:</p>
+<ul>
+<li><a class="interdoc" href="wapimap.html">WAPIMAP</a></li>
+<li><a class="interdoc" href="wapimaptask.html">WAPIMAPTASK</a></li>
+<li><a class="interdoc" href="wapiwork.html">WAPIWORK</a></li>
+<li><a class="interdoc" href="wapisubwork.html">WAPISUBWORK</a></li>
+</ul></div>
+			<h2>Class Attributes</h2>
+			<div class="ClassAttributesShort">
+				
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_audit_subworkdone">AUDIT_SUBWORKDONE</a></div>
+					<div class="Description"><p>An audit trail constant specifying
+    that a sub-workflow finished.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_audit_subworkstarted">AUDIT_SUBWORKSTARTED</a></div>
+					<div class="Description"><p>An audit trail constant specifying
+    that a sub-workflow started.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_audit_subworkupdated">AUDIT_SUBWORKUPDATED</a></div>
+					<div class="Description"><p>An audit trail constant specifying
+    that a sub-workflow map definition was modified.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_audit_taskaccepted">AUDIT_TASKACCEPTED</a></div>
+					<div class="Description"><p>An audit trail constant specifying
+    that a task assigned to a group was accepted by a member of the group.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_audit_taskbkgnsendon">AUDIT_TASKBKGNSENDON</a></div>
+					<div class="Description"><p>An audit trail constant specifying that the task's send on \
+ processing has been completed in the background using the Workflow Agent.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_audit_taskbkgnstarted">AUDIT_TASKBKGNSTARTED</a></div>
+					<div class="Description"><p>An audit trail constant specifying that work on a
+ task (in the base system, this includes any automatically processed step or Item Handler step)
+ has been started in the background using the Workflow Agent.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_audit_taskcancelled">AUDIT_TASKCANCELLED</a></div>
+					<div class="Description"><p>An audit trail constant specifying that a task has been cancelled.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_audit_taskdone">AUDIT_TASKDONE</a></div>
+					<div class="Description"><p>An audit trail constant specifying
+    that work on a task had been completed and the task has been marked as done.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_audit_taskexecuting">AUDIT_TASKEXECUTING</a></div>
+					<div class="Description"><p>An audit trail constant that specifies that the task was
+    executing.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_audit_taskfinished">AUDIT_TASKFINISHED</a></div>
+					<div class="Description"><p>An audit trail constant specifying
+    that work on a task had been finished for the current work period, but the
+    task has not marked as done.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_audit_taskkilled">AUDIT_TASKKILLED</a></div>
+					<div class="Description"><p>An audit trail constant specifying
+    that a task was marked as killed.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_audit_taskready">AUDIT_TASKREADY</a></div>
+					<div class="Description"><p>An audit trail constant specifying
+    that a task has become ready.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_audit_taskreassigned">AUDIT_TASKREASSIGNED</a></div>
+					<div class="Description"><p>An audit trail constant specifying
+    that a task was reassigned to a different user.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_audit_taskresumed">AUDIT_TASKRESUMED</a></div>
+					<div class="Description"><p>An audit trail constant specifying
+    that a suspended task was resumed.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_audit_taskresurrected">AUDIT_TASKRESURRECTED</a></div>
+					<div class="Description"><p>An audit trail constant specifying
+    that a task was resurrected.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_audit_taskstarted">AUDIT_TASKSTARTED</a></div>
+					<div class="Description"><p>An audit trail constant specifying
+    that work on a task was started.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_audit_tasksuspended">AUDIT_TASKSUSPENDED</a></div>
+					<div class="Description"><p>An audit trail constant specifying
+    that a task was suspended.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_audit_userdata">AUDIT_USERDATA</a></div>
+					<div class="Description"><p>An audit trail constant specifying
+    that a custom event was added to the audit trail.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_audit_workarchived">AUDIT_WORKARCHIVED</a></div>
+					<div class="Description"><p>An audit trail constant specifying
+    that the workflow was Archived.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_audit_workdone">AUDIT_WORKDONE</a></div>
+					<div class="Description"><p>An audit trail constant specifying
+    that the workflow was completed.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_audit_workresumed">AUDIT_WORKRESUMED</a></div>
+					<div class="Description"><p>An audit trail constant specifying
+    that the suspended workflow was resumed.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_audit_workstarted">AUDIT_WORKSTARTED</a></div>
+					<div class="Description"><p>An audit trail constant specifying
+    that the workflow was started.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_audit_workstopped">AUDIT_WORKSTOPPED</a></div>
+					<div class="Description"><p>An audit trail constant specifying
+    that the workflow was stopped.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_audit_worksuspended">AUDIT_WORKSUSPENDED</a></div>
+					<div class="Description"><p>An audit trail constant specifying
+    that the workflow was suspended.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_false">FALSE</a></div>
+					<div class="Description"><p>A constant to specify that the False
+    links should be taken.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_list_ifinitiated">LIST_IFINITIATED</a></div>
+					<div class="Description"><p>A constant specifying that only
+    entries where the current user was the initiator should be returned.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_list_ifmanaged">LIST_IFMANAGED</a></div>
+					<div class="Description"><p>A constant specifying that only
+    entries where the current user is the manager should be returned.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_list_ifperformer">LIST_IFPERFORMER</a></div>
+					<div class="Description"><p>A constant specifying that only
+    entries where the current user is the task performer should be returned.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_loop">LOOP</a></div>
+					<div class="Description"><p>A constant specifying that the Loop
+    links should be taken.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_map_flag_archiveoncomplete">MAP_FLAG_ARCHIVEONCOMPLETE</a></div>
+					<div class="Description"><p>A constant specifying that the workflow
+    should automatically be Archived upon completion.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_map_flag_deleteoncomplete">MAP_FLAG_DELETEONCOMPLETE</a></div>
+					<div class="Description"><p>A constant specifying that the workflow
+    should automatically be Deleted upon completion.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_map_flag_emailattachmentasfile">MAP_FLAG_EMAILATTACHMENTASFILE</a></div>
+					<div class="Description"><p>A constant specifying that the e-mail sent by the workflow
+    will contain their attachments as files included with the e-mail.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_map_flag_emailattachmentaslink">MAP_FLAG_EMAILATTACHMENTASLINK</a></div>
+					<div class="Description"><p>A constant specifying that the e-mail sent by the workflow
+    will contain their attachments as HTML links back into Livelink.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_map_flag_resumeonreturn">MAP_FLAG_RESUMEONRETURN</a></div>
+					<div class="Description"><p>A constant specifying that when
+    this Map is used for a sub-workflow and the sub-workflow completes, the task
+    that started the sub-workflow should be marked as done and the workflow route
+    continued.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_map_flag_skipweekends">MAP_FLAG_SKIPWEEKENDS</a></div>
+					<div class="Description"><p>A constant specifying that the workflow
+    should skip weekends when calculating due date.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_map_flag_tempmap">MAP_FLAG_TEMPMAP</a></div>
+					<div class="Description"><p>A constant specifying that the Map
+    should automatically be Deleted when the workflow is deleted.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_maptask_falselinks">MAPTASK_FALSELINKS</a></div>
+					<div class="Description"><p>A constant specifying that the False
+    branches from a task should be taken.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_maptask_flag_autodone">MAPTASK_FLAG_AUTODONE</a></div>
+					<div class="Description"><p>A constant specifying that the task
+    should automatically become Done as soon as it becomes ready.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_maptask_flag_bkgnsendon">MAPTASK_FLAG_BKGNSENDON</a></div>
+					<div class="Description"><p>A constant specifying that the task's send on processing should
+  occur in the background (by the Workflow Agent as a separate process).</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_maptask_flag_emailenabled">MAPTASK_FLAG_EMAILENABLED</a></div>
+					<div class="Description"><p>A constant specifying that the task's has been e-mail enabled.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_maptask_flag_milestone">MAPTASK_FLAG_MILESTONE</a></div>
+					<div class="Description"><p>A constant specifying that the task
+    should be marked as a Milestone task and Milestone dates calculated and stored.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_maptask_flag_recalculate">MAPTASK_FLAG_RECALCULATE</a></div>
+					<div class="Description"><p>A constant specifying that the task should invoke the
+  recalculate due date processing when the task has been sent on.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_maptask_looplinks">MAPTASK_LOOPLINKS</a></div>
+					<div class="Description"><p>A constant specifying that the
+    Loopback branch from a task should be taken.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_maptask_truelinks">MAPTASK_TRUELINKS</a></div>
+					<div class="Description"><p>A constant specifying that the True
+    branches from a task should be taken.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_starttask_flag_noaudit">STARTTASK_FLAG_NOAUDIT</a></div>
+					<div class="Description"><p>A constant specifying that the <a class="interdoc" href="#cm_wapi_starttask">WAPI.StartTask()</a>
+    call should not add an event to the audit trail.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_starttask_flag_reexecute">STARTTASK_FLAG_REEXECUTE</a></div>
+					<div class="Description"><p>A constant specifying that the <a class="interdoc" href="#cm_wapi_starttask">WAPI.StartTask()</a>
+    call should mark the task as started even if it was already marked as started.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_subwork_customdata">SUBWORK_CUSTOMDATA</a></div>
+					<div class="Description"><p>A constant specifying the CustomData
+    for a subWork in an update call.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_subwork_flag_archiveoncomplete">SUBWORK_FLAG_ARCHIVEONCOMPLETE</a></div>
+					<div class="Description"><p>A constant specifying that the workflow
+    should automatically be Archived upon completion.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_subwork_flag_deleteoncomplete">SUBWORK_FLAG_DELETEONCOMPLETE</a></div>
+					<div class="Description"><p>A constant specifying that the workflow
+    should automatically be Deleted upon completion.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_subwork_flag_resumeonreturn">SUBWORK_FLAG_RESUMEONRETURN</a></div>
+					<div class="Description"><p>A constant specifying that when
+    this workflow is used for a sub-workflow and the sub-workflow completes, the
+    task that started the sub-workflow should be marked as done and the workflow
+    route continued.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_subwork_flag_skipweekends">SUBWORK_FLAG_SKIPWEEKENDS</a></div>
+					<div class="Description"><p>A constant specifying that the workflow
+    should skip weekends when calculating due dates.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_subwork_flag_tempmap">SUBWORK_FLAG_TEMPMAP</a></div>
+					<div class="Description"><p>A constant specifying that the Map
+    definition that is used by this workflow should be Deleted when the workflow
+    is deleted.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_subwork_flags">SUBWORK_FLAGS</a></div>
+					<div class="Description"><p>A constant specifying the Flags
+    for a subWorkflow in an update call.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_subwork_project">SUBWORK_PROJECT</a></div>
+					<div class="Description"><p>A constant specifying the Project
+    for a subWorkflow in an update call.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_subwork_status_done">SUBWORK_STATUS_DONE</a></div>
+					<div class="Description"><p>A status constant specifying that
+    the subwork has completed.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_subwork_status_executing">SUBWORK_STATUS_EXECUTING</a></div>
+					<div class="Description"><p>A status constant specifying that
+    the subwork has not yet completed.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_subwork_title">SUBWORK_TITLE</a></div>
+					<div class="Description"><p>A constant specifying the Title
+    for a subWorkflow in an update call.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_subwork_userdata">SUBWORK_USERDATA</a></div>
+					<div class="Description"><p>A constant specifying the UserData
+    for a subWorkflow in an update call.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_subworktask_customdata">SUBWORKTASK_CUSTOMDATA</a></div>
+					<div class="Description"><p>A constant specifying the CustomData
+    for a workflow task in an update call.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_subworktask_flag_autodone">SUBWORKTASK_FLAG_AUTODONE</a></div>
+					<div class="Description"><p>A constant specifying that the task
+    should automatically complete when it becomes ready.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_subworktask_flag_background">SUBWORKTASK_FLAG_BACKGROUND</a></div>
+					<div class="Description"><p>A constant specifying that the task should be performed in
+the background (by the Workflow Agent). The Item Handler step is the only step that supports this
+capability.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_subworktask_flag_bkgnsendon">SUBWORKTASK_FLAG_BKGNSENDON</a></div>
+					<div class="Description"><p>A constant specifying that the task's send on
+processing should occur in the background (by the Workflow Agent as a separate process).
+This is used to gain efficiencies and performance improvements especially if the steps
+proceeding this step are auto-done steps ( for example, Evaluate, Process, Subworkflow, Milestone, etc.).</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_subworktask_flag_milestone">SUBWORKTASK_FLAG_MILESTONE</a></div>
+					<div class="Description"><p>A constant specifying that the task
+    should be a Milestone task and store a Milestone due date.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_subworktask_flag_recalculate">SUBWORKTASK_FLAG_RECALCULATE</a></div>
+					<div class="Description"><p>A constant specifying that the task should invoke the
+recalculate due date processing when the task has been sent on.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_subworktask_flags">SUBWORKTASK_FLAGS</a></div>
+					<div class="Description"><p>A constant specifying the Flags
+    for a workflow task in an update call.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_subworktask_performerid">SUBWORKTASK_PERFORMERID</a></div>
+					<div class="Description"><p>A constant specifying the PerformerID
+    for a task in a workflow for an update call.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_subworktask_status_deleted">SUBWORKTASK_STATUS_DELETED</a></div>
+					<div class="Description"><p>A status constant specifying that
+    the task was deleted.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_subworktask_status_done">SUBWORKTASK_STATUS_DONE</a></div>
+					<div class="Description"><p>A status constant specifying that
+    the task is done.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_subworktask_status_executing">SUBWORKTASK_STATUS_EXECUTING</a></div>
+					<div class="Description"><p>A status constant specifying that
+    the task is executing.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_subworktask_status_finished">SUBWORKTASK_STATUS_FINISHED</a></div>
+					<div class="Description"><p>A status constant specifying that
+    the task is finished.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_subworktask_status_killed">SUBWORKTASK_STATUS_KILLED</a></div>
+					<div class="Description"><p>A status constant specifying that
+    the task was killed.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_subworktask_status_ready">SUBWORKTASK_STATUS_READY</a></div>
+					<div class="Description"><p>A status constant specifying that
+    the task is ready.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_subworktask_status_ready_bg">SUBWORKTASK_STATUS_READY_BG</a></div>
+					<div class="Description"><p>A status constant specifying that the task is ready in the
+background (only supported with the Item Handler step).</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_subworktask_status_sendingon">SUBWORKTASK_STATUS_SENDINGON</a></div>
+					<div class="Description"><p>A status constant specifying that the task's send on
+processing is being performed in the background by the Workflow Agent.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_subworktask_status_started">SUBWORKTASK_STATUS_STARTED</a></div>
+					<div class="Description"><p>A status constant specifying that
+    the task is started.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_subworktask_status_suspended">SUBWORKTASK_STATUS_SUSPENDED</a></div>
+					<div class="Description"><p>A status constant specifying that
+    the task is suspended.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_subworktask_status_waiting">SUBWORKTASK_STATUS_WAITING</a></div>
+					<div class="Description"><p>A status constant specifying that
+    the task is waiting to become ready.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_subworktask_title">SUBWORKTASK_TITLE</a></div>
+					<div class="Description"><p>A constant specifying the Title
+    for a task in a workflow for an update call.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_subworktask_type_milestone">SUBWORKTASK_TYPE_MILESTONE</a></div>
+					<div class="Description"><p>A constant specifying that the task
+    is a Milestone task.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_subworktask_type_normal">SUBWORKTASK_TYPE_NORMAL</a></div>
+					<div class="Description"><p>A constant specifying that the task
+    is a Normal task and not a Milestone task.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_subworktask_usercomment">SUBWORKTASK_USERCOMMENT</a></div>
+					<div class="Description"><p>A constant specifying the UserComment
+    for a task in a workflow for an update call.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_subworktask_userdata">SUBWORKTASK_USERDATA</a></div>
+					<div class="Description"><p>A constant specifying the UserData
+    for a task in a workflow for an update call.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_subworktask_userstatus">SUBWORKTASK_USERSTATUS</a></div>
+					<div class="Description"><p>A constant specifying the UserStatus
+    for a task in a workflow for an update call.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_true">TRUE</a></div>
+					<div class="Description"><p>A constant specifying that the True
+    links should be taken.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_work_customdata">WORK_CUSTOMDATA</a></div>
+					<div class="Description"><p>A constant specifying the CustomData
+    for a workflow in an update call.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_work_flags">WORK_FLAGS</a></div>
+					<div class="Description"><p>A constant specifying the Flags
+    for a workflow in an update call.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_work_managerid">WORK_MANAGERID</a></div>
+					<div class="Description"><p>A constant specifying the ManagerID
+    for a workflow in an update call.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_work_ownerid">WORK_OWNERID</a></div>
+					<div class="Description"><p>A constant specifying the OwnerID
+    for a workflow in an update call.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_work_project">WORK_PROJECT</a></div>
+					<div class="Description"><p>A constant specifying the Project
+    for a workflow in an update call.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_work_status_archived">WORK_STATUS_ARCHIVED</a></div>
+					<div class="Description"><p>A status constant specifying that
+    the workflow has been Archived.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_work_status_done">WORK_STATUS_DONE</a></div>
+					<div class="Description"><p>A status constant specifying that
+    the workflow has been Completed.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_work_status_executing">WORK_STATUS_EXECUTING</a></div>
+					<div class="Description"><p>A status constant specifying that
+    the workflow is still executing.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_work_status_stopped">WORK_STATUS_STOPPED</a></div>
+					<div class="Description"><p>A status constant specifying that
+    the workflow has been Stopped.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_work_status_suspended">WORK_STATUS_SUSPENDED</a></div>
+					<div class="Description"><p>A status constant specifying that
+    the workflow has been Suspended.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_work_title">WORK_TITLE</a></div>
+					<div class="Description"><p>A constant specifying the Title
+    for a workflow in an update call.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_wapi_work_userdata">WORK_USERDATA</a></div>
+					<div class="Description"><p>A constant specifying the UserData
+    for a workflow in an update call.</p></div>
+				</div>
+				
+			</div>
+
+
+			<h2>Class Methods</h2>
+			<div class="ClassMethodsShort">
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_accepttask" class="IndexMethodName">AcceptTask</a>(
+					 WAPIWORK work, Integer workID, Integer subworkID, Integer taskID )
+					</div>
+					<div class="Description"><p>Assigns a step, that was previously
+    assigned to a group, to the currently logged in user.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_accesswork" class="IndexMethodName">AccessWork</a>(
+					 WAPIWORK work, Integer workID, [Integer subworkID] )
+					</div>
+					<div class="Description"><p>Sets up a WAPIWORK object handle to
+    provide access to the data package of a workflow.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_addtasklink" class="IndexMethodName">AddTaskLink</a>(
+					 WAPIMAPTASK fromtask, Integer linktype, WAPIMAPTASK totask )
+					</div>
+					<div class="Description"><p>Adds a link of the specified type
+    between the specified tasks.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_addworkdata" class="IndexMethodName">AddWorkData</a>(
+					 WAPIWORK work, Integer type, Integer subtype, String description, Dynamic value )
+					</div>
+					<div class="Description"><p>Creates and sets data stored in a
+    data package.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_allocmap" class="IndexMethodName">AllocMap</a>(
+					 WAPISESSION session )
+					</div>
+					<div class="Description"><p>Allocates a WAPIMAP object handle.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_allocmaptask" class="IndexMethodName">AllocMapTask</a>(
+					 WAPIMAP map )
+					</div>
+					<div class="Description"><p>Allocates a WAPIMAPTASK object handle.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_allocnthmaptask" class="IndexMethodName">AllocNthMapTask</a>(
+					 WAPIMAP map, Integer taskID )
+					</div>
+					<div class="Description"><p>Allocate a WAPIMAPTASK object handle
+    for a particular task in a workflow map definition.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_allocsession" class="IndexMethodName">AllocSession</a>(
+					 CAPILOGIN login )
+					</div>
+					<div class="Description"><p>Allocates a WAPISESSION object for
+    a login user.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_allocsubwork" class="IndexMethodName">AllocSubWork</a>(
+					 WAPIWORK work )
+					</div>
+					<div class="Description"><p>Allocates a WAPISUBWORK object for
+    the specified WAPIWORK object.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_allocwork" class="IndexMethodName">AllocWork</a>(
+					 WAPISESSION session )
+					</div>
+					<div class="Description"><p>Allocates a WAPIWORK object.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_archivework" class="IndexMethodName">ArchiveWork</a>(
+					 WAPIWORK work, Integer workID )
+					</div>
+					<div class="Description"><p>Sets the status of a Stopped or Completed
+    workflow to Archived.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_callsubwork" class="IndexMethodName">CallSubWork</a>(
+					 WAPIWORK work )
+					</div>
+					<div class="Description"><p>Initiates a Sub-Workflow using the
+    information supplied in a previous call to <a class="interdoc" href="#cm_wapi_preparesubmap">WAPI.PrepareSubMap()</a> or <a class="interdoc" href="#cm_wapi_preparesubwork">WAPI.PrepareSubWork()</a>.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_columnstringtovalue" class="IndexMethodName">ColumnStringToValue</a>(
+					 WAPISESSION session, RecArray array, String colName )
+					</div>
+					<div class="Description"><p>Converts the values returned by a call
+    to <a class="interdoc" href="#cm_wapi_worklist">WAPI.WorkList()</a> from Strings to their true values.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_deletemapbyid" class="IndexMethodName">DeleteMapByID</a>(
+					 WAPISESSION session, Integer mapID )
+					</div>
+					<div class="Description"><p>Deletes the Map from the Map database
+    with the specified <em>mapID</em>. </p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_deletemaptask" class="IndexMethodName">DeleteMapTask</a>(
+					 WAPIMAPTASK task )
+					</div>
+					<div class="Description"><p>Deletes the task from the map definition.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_deletetasklink" class="IndexMethodName">DeleteTaskLink</a>(
+					 WAPIMAPTASK fromTask, Integer linkType, WAPIMAPTASK toTask )
+					</div>
+					<div class="Description"><p>Deletes the link from the specified
+    tasks.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_deletework" class="IndexMethodName">DeleteWork</a>(
+					 WAPIWORK work, Integer workID )
+					</div>
+					<div class="Description"><p>Deletes the specified Stopped or Completed
+    workflow.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_deleteworkdata" class="IndexMethodName">DeleteWorkData</a>(
+					 WAPIWORK work, Integer type, Integer subtype )
+					</div>
+					<div class="Description"><p>Deletes data from the Data Package
+    specified by <em>type</em> and
+    <em>subtype</em>. </p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_freemap" class="IndexMethodName">FreeMap</a>(
+					 WAPIMAP map )
+					</div>
+					<div class="Description"><p>Frees the memory held by the WAPIMAP
+    object.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_freemaptask" class="IndexMethodName">FreeMapTask</a>(
+					 WAPIMAPTASK task )
+					</div>
+					<div class="Description"><p>Frees the memory held by the WAPIMAPTASK
+    object.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_freesession" class="IndexMethodName">FreeSession</a>(
+					 WAPISESSION session )
+					</div>
+					<div class="Description"><p>Logs out the given WAPISESSION object
+    and frees the associated memory.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_freesubwork" class="IndexMethodName">FreeSubWork</a>(
+					 WAPISUBWORK subWork )
+					</div>
+					<div class="Description"><p>Frees the memory held by the WAPISUBWORK
+    object.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_freework" class="IndexMethodName">FreeWork</a>(
+					 WAPIWORK work )
+					</div>
+					<div class="Description"><p>Frees the memory held by the WAPIWORK
+    object.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_gettasklinks" class="IndexMethodName">GetTaskLinks</a>(
+					 WAPIMAPTASK task, Integer linkType )
+					</div>
+					<div class="Description"><p>Gets a List of the task ids for all
+    links of the specified type for the specified task.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_getworkdata" class="IndexMethodName">GetWorkData</a>(
+					 WAPIWORK work, Integer type, Integer subtype )
+					</div>
+					<div class="Description"><p>Gets the data specified by the given
+   <em>type</em> and <em>subtype</em>
+   stored in the data package. </p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_listworkdata" class="IndexMethodName">ListWorkData</a>(
+					 WAPIWORK work, Boolean allWork )
+					</div>
+					<div class="Description"><p>Returns the data that was stored for the specified work.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_llmaptowmap" class="IndexMethodName">LLMapToWMap</a>(
+					 WAPIMAP map, RecArray mapInfo, RecArray tasks, RecArray links )
+					</div>
+					<div class="Description"><p>Takes a map definition from Livelink
+    OScript and converts it to a WAPIMAP definition.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_loadmapbyid" class="IndexMethodName">LoadMapByID</a>(
+					 WAPIMAP map, Integer mapID )
+					</div>
+					<div class="Description"><p>Loads the map information from the
+    Map database for the map with the specified ID.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_loadtaskstatus" class="IndexMethodName">LoadTaskStatus</a>(
+					 WAPISESSION session, Integer workID, [Integer subWorkID], [Integer taskID] )
+					</div>
+					<div class="Description"><p>Loads the task information for the
+    specified <em>workID</em>,
+    <em>subWorkID</em>, and <em>taskID</em>. </p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_loadworkaudit" class="IndexMethodName">LoadWorkAudit</a>(
+					 WAPISESSION session, Integer workID, [Integer subWorkID], [Integer taskID] )
+					</div>
+					<div class="Description"><p>Loads the audit trail for the specified
+    <em>workID</em>,
+    <em>subWorkID</em>, and <em>taskID</em>. </p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_loadworkstatus" class="IndexMethodName">LoadWorkStatus</a>(
+					 WAPISESSION session, Integer workID, [Integer subWorkID], [Integer taskID] )
+					</div>
+					<div class="Description"><p>Loads the information about a workflow.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_preparemap" class="IndexMethodName">PrepareMap</a>(
+					 WAPIWORK work, WAPIMAP map, [Integer flags] )
+					</div>
+					<div class="Description"><p>Saves the map definition to the map
+    database and sets up the work object for workflow initiation.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_preparesubmap" class="IndexMethodName">PrepareSubMap</a>(
+					 WAPIWORK work, WAPIMAP map, [Integer flags] )
+					</div>
+					<div class="Description"><p>Saves the map definition to the map
+    database and sets up the work object to initiate the map as a sub-workflow.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_preparesubwork" class="IndexMethodName">PrepareSubWork</a>(
+					 WAPIWORK work, Integer mapID, [Integer flags] )
+					</div>
+					<div class="Description"><p>Sets up the work object to initiate
+    the specified map as a subworkflow.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_preparework" class="IndexMethodName">PrepareWork</a>(
+					 WAPIWORK work, Integer mapID, [Integer flags] )
+					</div>
+					<div class="Description"><p>Sets up the work object to initiate
+    the specified map as a workflow.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_reassigntask" class="IndexMethodName">ReassignTask</a>(
+					 WAPIWORK work, Integer workID, Integer subWorkID, Integer taskID, Integer userID )
+					</div>
+					<div class="Description"><p>Reassigns the task specified by the
+    <em>workID</em>, <em>subWorkID</em>,
+    and <em>taskID</em>
+    to the given <em>userID</em>. </p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_replacemap" class="IndexMethodName">ReplaceMap</a>(
+					 WAPIMAP map )
+					</div>
+					<div class="Description"><p>Saves the modified map definition to
+    the map database replacing the original.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_resumework" class="IndexMethodName">ResumeWork</a>(
+					 WAPIWORK work, Integer workID )
+					</div>
+					<div class="Description"><p>Sets the status of a suspended workflow
+    to Executing.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_savemap" class="IndexMethodName">SaveMap</a>(
+					 WAPIMAP map )
+					</div>
+					<div class="Description"><p>Saves a WAPIMAP map definition
+    to the map database.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_setcallback" class="IndexMethodName">SetCallback</a>(
+					 WAPISESSION session, Dynamic feature, [Dynamic object] )
+					</div>
+					<div class="Description"><p>Specifies the WAPI callback routine
+    and context argument that is passed to the callback.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_setworkdata" class="IndexMethodName">SetWorkData</a>(
+					 WAPIWORK work, Integer type, Integer subtype, [String description, Dynamic value )
+					</div>
+					<div class="Description"><p>Sets data stored in a data package.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_starttask" class="IndexMethodName">StartTask</a>(
+					 WAPIWORK work, Integer workID, Integer subWorkID, Integer taskID, Integer flags )
+					</div>
+					<div class="Description"><p>Marks the specified task as started
+    and sets up the given WAPIWORK object handle to be able to access the work package.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_startwork" class="IndexMethodName">StartWork</a>(
+					 WAPIWORK work, [String title )
+					</div>
+					<div class="Description"><p>Initiates a workflow that
+    was prepared with a call to <a class="interdoc" href="#cm_wapi_preparework">WAPI.PrepareWork()</a> and readies any initial tasks.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_stopwork" class="IndexMethodName">StopWork</a>(
+					 WAPIWORK work, Integer workID )
+					</div>
+					<div class="Description"><p>Sets the status of an Executing or
+    Suspended workflow to Stopped.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_suspendwork" class="IndexMethodName">SuspendWork</a>(
+					 WAPIWORK work, Integer workID )
+					</div>
+					<div class="Description"><p>Sets the status of an Executing workflow
+    to Suspended.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_taskaudituserdata" class="IndexMethodName">TaskAuditUserData</a>(
+					 WAPIWORK work, Integer workID, Integer subworkID, Integer taskID, Dynamic data, [Integer iterNum )
+					</div>
+					<div class="Description"><p>Adds a row to the audit trail and stores
+    the specified data.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_taskcancel" class="IndexMethodName">TaskCancel</a>(
+					 WAPIWORK work )
+					</div>
+					<div class="Description"><p>Notifies the workflow engine that work
+    on this task is completed for the time being but skip marking the task as
+    Done and send the workflow on to the next step.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_taskdone" class="IndexMethodName">TaskDone</a>(
+					 WAPIWORK work, [Dynamic linkType] )
+					</div>
+					<div class="Description"><p>Marks the task as Done and takes the
+    paths from the task that are of the specified link type.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_updatesubworkattribute" class="IndexMethodName">UpdateSubWorkAttribute</a>(
+					 WAPIWORK work, Integer workID, Integer subWorkID, Integer attribute, Dynamic value )
+					</div>
+					<div class="Description"><p>Updates the value of a subWork attribute
+    for a workflow.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_updatesubworkprepare" class="IndexMethodName">UpdateSubWorkPrepare</a>(
+					 WAPIWORK work, WAPIMAP map, Integer workID, Integer subWorkID )
+					</div>
+					<div class="Description"><p>Prepares the map and work object for
+    a workflow already in process for update.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_updatesubworkstart" class="IndexMethodName">UpdateSubWorkStart</a>(
+					 WAPIWORK work )
+					</div>
+					<div class="Description"><p>Updates the in-process workflow specified
+    by <em>work</em>. </p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_updatetaskattribute" class="IndexMethodName">UpdateTaskAttribute</a>(
+					 WAPIWORK work, Integer workID, Integer subWorkID, Integer taskID, Integer attribute, Dynamic value )
+					</div>
+					<div class="Description"><p>Updates the value of a task attribute
+    for a workflow.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_updateworkattribute" class="IndexMethodName">UpdateWorkAttribute</a>(
+					 WAPIWORK work, Integer workID, Integer attribute, Dynamic value )
+					</div>
+					<div class="Description"><p>Updates the value of a work attribute.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_worklist" class="IndexMethodName">WorkList</a>(
+					 WAPISESSION session, String viewName, Dynamic whereClause, Integer flags )
+					</div>
+					<div class="Description"><p>Returns workflow information using
+    the specified view, where clause, and flags.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_wapi_worklist2" class="IndexMethodName">WorkList2</a>(
+					 WAPISESSION session, String viewName, Dynamic whereClause, Dynamic orderby, Integer flags )
+					</div>
+					<div class="Description"><p>Returns workflow information using
+    the specified view, where clause, orderby clause, and flags.</p></div>
+				</div>
+			</div>
+
+
+				<h2>Class Attributes</h2>
+				<div class="ClassAttributes">
+					
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_audit_subworkdone">AUDIT_SUBWORKDONE</a></div>
+						<div class="Description"><p>An audit trail constant specifying that
+  a sub-workflow finished.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_audit_subworkstarted">AUDIT_SUBWORKSTARTED</a></div>
+						<div class="Description"><p>The constant is returned in the WorkAudit_Status
+  column of the RecArray returned by a call to <a class="interdoc" href="#cm_wapi_loadworkaudit">WAPI.LoadWorkAudit()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_audit_subworkupdated">AUDIT_SUBWORKUPDATED</a></div>
+						<div class="Description"><p>An audit trail constant specifying that
+  a sub-workflow started.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_audit_taskaccepted">AUDIT_TASKACCEPTED</a></div>
+						<div class="Description"><p>The constant is returned in the WorkAudit_Status
+  column of the RecArray returned by a call to <a class="interdoc" href="#cm_wapi_loadworkaudit">WAPI.LoadWorkAudit()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_audit_taskbkgnsendon">AUDIT_TASKBKGNSENDON</a></div>
+						<div class="Description"><p>An audit trail constant specifying that
+  a sub-workflow map definition was modified.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_audit_taskbkgnstarted">AUDIT_TASKBKGNSTARTED</a></div>
+						<div class="Description"><p>The constant is returned in the WorkAudit_Status
+  column of the RecArray returned by a call to <a class="interdoc" href="#cm_wapi_loadworkaudit">WAPI.LoadWorkAudit()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_audit_taskcancelled">AUDIT_TASKCANCELLED</a></div>
+						<div class="Description"><p>An audit trail constant specifying that
+  a task assigned to a group was accepted by a member of the group.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_audit_taskdone">AUDIT_TASKDONE</a></div>
+						<div class="Description"><p>The constant is returned in the WorkAudit_Status
+  column of the RecArray returned by a call to <a class="interdoc" href="#cm_wapi_loadworkaudit">WAPI.LoadWorkAudit()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_audit_taskexecuting">AUDIT_TASKEXECUTING</a></div>
+						<div class="Description"><p>An audit trail constant specifying that the task's send on
+processing has been done in the background using the Workflow Agent.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_audit_taskfinished">AUDIT_TASKFINISHED</a></div>
+						<div class="Description"><p>The constant is returned in the WorkAudit_Status
+  column of the RecArray returned by a call to <a class="interdoc" href="#cm_wapi_loadworkaudit">WAPI.LoadWorkAudit()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_audit_taskkilled">AUDIT_TASKKILLED</a></div>
+						<div class="Description"><p>An audit trail constant specifying that work on a task
+(in the base system this includes any auto done step or Item Handler step) has been started in the
+background using the Workflow Agent.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_audit_taskready">AUDIT_TASKREADY</a></div>
+						<div class="Description"><p>The constant is returned in the WorkAudit_Status
+  column of the RecArray returned by a call to <a class="interdoc" href="#cm_wapi_loadworkaudit">WAPI.LoadWorkAudit()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_audit_taskreassigned">AUDIT_TASKREASSIGNED</a></div>
+						<div class="Description"><p>An audit trail constant specifying that a task as been cancelled.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_audit_taskresumed">AUDIT_TASKRESUMED</a></div>
+						<div class="Description"><p>The constant is returned in the WorkAudit_Status
+  column of the RecArray returned by a call to <a class="interdoc" href="#cm_wapi_loadworkaudit">WAPI.LoadWorkAudit()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_audit_taskresurrected">AUDIT_TASKRESURRECTED</a></div>
+						<div class="Description"><p>An audit trail constant specifying that
+  work on a task had been completed and the task marked as done.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_audit_taskstarted">AUDIT_TASKSTARTED</a></div>
+						<div class="Description"><p>The constant is returned in the WorkAudit_Status
+  column of the RecArray returned by a call to <a class="interdoc" href="#cm_wapi_loadworkaudit">WAPI.LoadWorkAudit()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_audit_tasksuspended">AUDIT_TASKSUSPENDED</a></div>
+						<div class="Description"><p>An audit trail constant specifying that the task was executing.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_audit_userdata">AUDIT_USERDATA</a></div>
+						<div class="Description"><p>The constant is returned in the WorkAudit_Status
+  column of the RecArray returned by a call to <a class="interdoc" href="#cm_wapi_loadworkaudit">WAPI.LoadWorkAudit()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_audit_workarchived">AUDIT_WORKARCHIVED</a></div>
+						<div class="Description"><p>An audit trail constant specifying that
+  work on a task had been finished for the current work period, but the task was
+  not marked as done.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_audit_workdone">AUDIT_WORKDONE</a></div>
+						<div class="Description"><p>The constant is returned in the WorkAudit_Status
+  column of the RecArray returned by a call to <a class="interdoc" href="#cm_wapi_loadworkaudit">WAPI.LoadWorkAudit()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_audit_workresumed">AUDIT_WORKRESUMED</a></div>
+						<div class="Description"><p>An audit trail constant specifying that
+  a task was marked as killed.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_audit_workstarted">AUDIT_WORKSTARTED</a></div>
+						<div class="Description"><p>This indicates that the path containing the
+  task was not taken as the result of an evaluation. The constant is returned
+  in the WorkAudit_Status column of the RecArray returned by a call to <a class="interdoc" href="#cm_wapi_loadworkaudit">WAPI.LoadWorkAudit()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_audit_workstopped">AUDIT_WORKSTOPPED</a></div>
+						<div class="Description"><p>An audit trail constant specifying that
+  a task became ready.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_audit_worksuspended">AUDIT_WORKSUSPENDED</a></div>
+						<div class="Description"><p>The constant is returned in the WorkAudit_Status
+  column of the RecArray returned by a call to <a class="interdoc" href="#cm_wapi_loadworkaudit">WAPI.LoadWorkAudit()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_false">FALSE</a></div>
+						<div class="Description"><p>An audit trail constant specifying that
+  a task was reassigned to a different user.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_list_ifinitiated">LIST_IFINITIATED</a></div>
+						<div class="Description"><p>The constant is returned in the WorkAudit_Status
+  column of the RecArray returned by a call to <a class="interdoc" href="#cm_wapi_loadworkaudit">WAPI.LoadWorkAudit()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_list_ifmanaged">LIST_IFMANAGED</a></div>
+						<div class="Description"><p>An audit trail constant specifying that
+  a suspended task was resumed.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_list_ifperformer">LIST_IFPERFORMER</a></div>
+						<div class="Description"><p>The constant is returned in the WorkAudit_Status
+  column of the RecArray returned by a call to <a class="interdoc" href="#cm_wapi_loadworkaudit">WAPI.LoadWorkAudit()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_loop">LOOP</a></div>
+						<div class="Description"><p>An audit trail constant specifying that
+  a task was resurrected.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_map_flag_archiveoncomplete">MAP_FLAG_ARCHIVEONCOMPLETE</a></div>
+						<div class="Description"><p>This indicates that a loopback occurred and
+  the path containing the task is once again available. The constant is returned
+  in the WorkAudit_Status column of the RecArray returned by a call to <a class="interdoc" href="#cm_wapi_loadworkaudit">WAPI.LoadWorkAudit()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_map_flag_deleteoncomplete">MAP_FLAG_DELETEONCOMPLETE</a></div>
+						<div class="Description"><p>An audit trail constant specifying that
+  work on a task was started.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_map_flag_emailattachmentasfile">MAP_FLAG_EMAILATTACHMENTASFILE</a></div>
+						<div class="Description"><p>The constant is returned in the WorkAudit_Status
+  column of the RecArray returned by a call to <a class="interdoc" href="#cm_wapi_loadworkaudit">WAPI.LoadWorkAudit()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_map_flag_emailattachmentaslink">MAP_FLAG_EMAILATTACHMENTASLINK</a></div>
+						<div class="Description"><p>An audit trail constant specifying that
+  a task was suspended.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_map_flag_resumeonreturn">MAP_FLAG_RESUMEONRETURN</a></div>
+						<div class="Description"><p>The constant is returned in the WorkAudit_Status
+  column of the RecArray returned by a call to <a class="interdoc" href="#cm_wapi_loadworkaudit">WAPI.LoadWorkAudit()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_map_flag_skipweekends">MAP_FLAG_SKIPWEEKENDS</a></div>
+						<div class="Description"><p>An audit trail constant specifying that
+  a custom event was added to the audit trail.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_map_flag_tempmap">MAP_FLAG_TEMPMAP</a></div>
+						<div class="Description"><p>The constant is returned in the WorkAudit_Status
+  column of the RecArray returned by a call to <a class="interdoc" href="#cm_wapi_loadworkaudit">WAPI.LoadWorkAudit()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_maptask_falselinks">MAPTASK_FALSELINKS</a></div>
+						<div class="Description"><p>An audit trail constant specifying that
+  the workflow was archived.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_maptask_flag_autodone">MAPTASK_FLAG_AUTODONE</a></div>
+						<div class="Description"><p>The constant is returned in the WorkAudit_Status
+  column of the RecArray returned by a call to <a class="interdoc" href="#cm_wapi_loadworkaudit">WAPI.LoadWorkAudit()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_maptask_flag_bkgnsendon">MAPTASK_FLAG_BKGNSENDON</a></div>
+						<div class="Description"><p>An audit trail constant specifying that
+  the workflow was completed.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_maptask_flag_emailenabled">MAPTASK_FLAG_EMAILENABLED</a></div>
+						<div class="Description"><p>The constant is returned in the WorkAudit_Status
+  column of the RecArray returned by a call to <a class="interdoc" href="#cm_wapi_loadworkaudit">WAPI.LoadWorkAudit()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_maptask_flag_milestone">MAPTASK_FLAG_MILESTONE</a></div>
+						<div class="Description"><p>An audit trail constant specifying that
+  the suspended workflow was resumed.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_maptask_flag_recalculate">MAPTASK_FLAG_RECALCULATE</a></div>
+						<div class="Description"><p>The constant is returned in the WorkAudit_Status
+  column of the RecArray returned by a call to <a class="interdoc" href="#cm_wapi_loadworkaudit">WAPI.LoadWorkAudit()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_maptask_looplinks">MAPTASK_LOOPLINKS</a></div>
+						<div class="Description"><p>An audit trail constant specifying that
+  the workflow was started.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_maptask_truelinks">MAPTASK_TRUELINKS</a></div>
+						<div class="Description"><p>The constant is returned in the WorkAudit_Status
+  column of the RecArray returned by a call to <a class="interdoc" href="#cm_wapi_loadworkaudit">WAPI.LoadWorkAudit()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_starttask_flag_noaudit">STARTTASK_FLAG_NOAUDIT</a></div>
+						<div class="Description"><p>An audit trail constant specifying that
+  the workflow was stopped.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_starttask_flag_reexecute">STARTTASK_FLAG_REEXECUTE</a></div>
+						<div class="Description"><p>The constant is returned in the WorkAudit_Status
+  column of the RecArray returned by a call to <a class="interdoc" href="#cm_wapi_loadworkaudit">WAPI.LoadWorkAudit()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_subwork_customdata">SUBWORK_CUSTOMDATA</a></div>
+						<div class="Description"><p>This constant can be combined with other Map_Flag constants by Bitwise OR and used to set the Flag
+  field for a Map to control workflow actions.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_subwork_flag_archiveoncomplete">SUBWORK_FLAG_ARCHIVEONCOMPLETE</a></div>
+						<div class="Description"><p>A constant specifying that the task should
+  automatically become Done as soon as it becomes ready.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_subwork_flag_deleteoncomplete">SUBWORK_FLAG_DELETEONCOMPLETE</a></div>
+						<div class="Description"><p>A constant specifying that the task's send on processing
+should occur in the background (by the Workflow Agent as a separate process).  This is used to gain
+efficiencies and performance improvements especially if the steps proceeding this step are autodone
+steps ( for example, Evaluate, Process, Subworkflow, Milestone, etc.).</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_subwork_flag_resumeonreturn">SUBWORK_FLAG_RESUMEONRETURN</a></div>
+						<div class="Description"><p>A constant specifying that the task has been e-mail enabled.
+  When this task becomes ready, an e-mail will be sent to the Assignee(s) allowing the task to be completed through e-mail.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_subwork_flag_skipweekends">SUBWORK_FLAG_SKIPWEEKENDS</a></div>
+						<div class="Description"><p>A constant specifying that the task should
+  be marked as a Milestone task and Milestone dates should be calculated and stored.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_subwork_flag_tempmap">SUBWORK_FLAG_TEMPMAP</a></div>
+						<div class="Description"><p>A constant specifying that the task should invoke the
+recalculate due date processing when the task has been sent on.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_subwork_flags">SUBWORK_FLAGS</a></div>
+						<div class="Description"><p>A constant specifying that the False branches
+  from a task should be taken. This constant should be used as the linkType for
+  a call to <a class="interdoc" href="#cm_wapi_taskdone">WAPI.TaskDone()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_subwork_project">SUBWORK_PROJECT</a></div>
+						<div class="Description"><p>A constant specifying that the Loopback
+  branch from a task should be taken. This constant should be used as the linkType
+  for a call to <a class="interdoc" href="#cm_wapi_taskdone">WAPI.TaskDone()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_subwork_status_done">SUBWORK_STATUS_DONE</a></div>
+						<div class="Description"><p>A constant specifying that the True branches
+  from a task should be taken. This constant should be used as the linkType for
+  a call to <a class="interdoc" href="#cm_wapi_taskdone">WAPI.TaskDone()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_subwork_status_executing">SUBWORK_STATUS_EXECUTING</a></div>
+						<div class="Description"><p>A constant specifying that the <a class="interdoc" href="#cm_wapi_starttask">WAPI.StartTask()</a>
+  call should not add an event to the audit trail.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_subwork_title">SUBWORK_TITLE</a></div>
+						<div class="Description"><p>A constant specifying that the <a class="interdoc" href="#cm_wapi_starttask">WAPI.StartTask()</a>
+  call should mark the task as started even if it was already marked as started.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_subwork_userdata">SUBWORK_USERDATA</a></div>
+						<div class="Description"><p>A constant specifying the CustomData for
+  a workflow task in an update call.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_subworktask_customdata">SUBWORKTASK_CUSTOMDATA</a></div>
+						<div class="Description"><p>An audit trail constant specifying that
+  the workflow was suspended.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_subworktask_flag_autodone">SUBWORKTASK_FLAG_AUTODONE</a></div>
+						<div class="Description"><p>A constant specifying that the False links
+  should be taken.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_subworktask_flag_background">SUBWORKTASK_FLAG_BACKGROUND</a></div>
+						<div class="Description"><p>This constant is used by the <a class="interdoc" href="#cm_wapi_taskdone">WAPI.TaskDone()</a>
+  function as the flag indicating which link types should be taken coming from
+  the task.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_subworktask_flag_bkgnsendon">SUBWORKTASK_FLAG_BKGNSENDON</a></div>
+						<div class="Description"><p>A constant specifying that only entries
+  where the current user was the initiator should be returned.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_subworktask_flag_milestone">SUBWORKTASK_FLAG_MILESTONE</a></div>
+						<div class="Description"><p>This constant is used as a bit-mask flag
+  for the call <a class="interdoc" href="#cm_wapi_worklist">WAPI.WorkList()</a>. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_subworktask_flag_recalculate">SUBWORKTASK_FLAG_RECALCULATE</a></div>
+						<div class="Description"><p>A constant specifying that only entries
+  where the current user is the manager should be returned.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_subworktask_flags">SUBWORKTASK_FLAGS</a></div>
+						<div class="Description"><p>The constant is returned in the WorkAudit_Status
+  column of the RecArray returned by a call to <a class="interdoc" href="#cm_wapi_loadworkaudit">WAPI.LoadWorkAudit()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_subworktask_performerid">SUBWORKTASK_PERFORMERID</a></div>
+						<div class="Description"><p>This constant is used as a bit-mask flag
+  for the call <a class="interdoc" href="#cm_wapi_worklist">WAPI.WorkList()</a>. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_subworktask_status_deleted">SUBWORKTASK_STATUS_DELETED</a></div>
+						<div class="Description"><p>A constant specifying that only entries
+  where the current user is the task performer should be returned.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_subworktask_status_done">SUBWORKTASK_STATUS_DONE</a></div>
+						<div class="Description"><p>This constant is used as a bit-mask flag
+  for the call <a class="interdoc" href="#cm_wapi_worklist">WAPI.WorkList()</a>. This flag is used to
+  determine the ToDo list for a user.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_subworktask_status_executing">SUBWORKTASK_STATUS_EXECUTING</a></div>
+						<div class="Description"><p>A constant specifying that the Loop links
+  should be taken.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_subworktask_status_finished">SUBWORKTASK_STATUS_FINISHED</a></div>
+						<div class="Description"><p>This constant is used by the <a class="interdoc" href="#cm_wapi_taskdone">WAPI.TaskDone()</a>
+  function as the flag indicating which link types should be taken coming from
+  the task. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_subworktask_status_killed">SUBWORKTASK_STATUS_KILLED</a></div>
+						<div class="Description"><p>A constant specifying that the workflow
+  should automatically be Archived upon completion.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_subworktask_status_ready">SUBWORKTASK_STATUS_READY</a></div>
+						<div class="Description"><p>This constant can be combined with the other Map_Flag constants
+  by Bitwise OR and used to set the Flag
+  field for a Map to control workflow actions.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_subworktask_status_ready_bg">SUBWORKTASK_STATUS_READY_BG</a></div>
+						<div class="Description"><p>A constant specifying that the workflow
+  should automatically be Deleted upon completion.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_subworktask_status_sendingon">SUBWORKTASK_STATUS_SENDINGON</a></div>
+						<div class="Description"><p>This constant can be combined with other Map_Flag constants by Bitwise OR and used to set the Flag
+  field for a Map to control workflow actions.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_subworktask_status_started">SUBWORKTASK_STATUS_STARTED</a></div>
+						<div class="Description"><p>A constant specifying that the e-mail sent by the workflow
+    will contain their attachments as files included with the e-mail.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_subworktask_status_suspended">SUBWORKTASK_STATUS_SUSPENDED</a></div>
+						<div class="Description"><p>This constant can be combined with other Map_Flag constants by Bitwise OR and used to set the Flag
+  field for a Map to control workflow actions.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_subworktask_status_waiting">SUBWORKTASK_STATUS_WAITING</a></div>
+						<div class="Description"><p>A constant specifying that the e-mail sent by the workflow
+    will contain their attachments as HTML links back into Livelink.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_subworktask_title">SUBWORKTASK_TITLE</a></div>
+						<div class="Description"><p>This constant can be combined with other Map_Flag constants by Bitwise OR and used to set the Flag
+  field for a Map to control workflow actions.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_subworktask_type_milestone">SUBWORKTASK_TYPE_MILESTONE</a></div>
+						<div class="Description"><p>A constant specifying that when this Map
+  is used for a sub-workflow and the sub-workflow completes, the task that started
+  the sub-workflow should be marked as done and the workflow route continued.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_subworktask_type_normal">SUBWORKTASK_TYPE_NORMAL</a></div>
+						<div class="Description"><p>This constant can be combined with other Map_Flag constants by Bitwise OR and used to set the Flag
+  field for a Map to control workflow actions.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_subworktask_usercomment">SUBWORKTASK_USERCOMMENT</a></div>
+						<div class="Description"><p>A constant specifying that the workflow
+  should skip weekends when calculating due date.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_subworktask_userdata">SUBWORKTASK_USERDATA</a></div>
+						<div class="Description"><p>This constant can be combined with other Map_Flag constants by Bitwise OR and used to set the Flag
+  field for a Map to control workflow actions.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_subworktask_userstatus">SUBWORKTASK_USERSTATUS</a></div>
+						<div class="Description"><p>A constant specifying that the Map should
+  automatically be Deleted when the workflow is deleted.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_true">TRUE</a></div>
+						<div class="Description"><p>Use this constant with the call <a class="interdoc" href="#cm_wapi_updatetaskattribute">WAPI.UpdateTaskAttribute()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_work_customdata">WORK_CUSTOMDATA</a></div>
+						<div class="Description"><p>A constant specifying the Flags for a workflow
+  task in an update call.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_work_flags">WORK_FLAGS</a></div>
+						<div class="Description"><p>Use this constant with the call <a class="interdoc" href="#cm_wapi_updatetaskattribute">WAPI.UpdateTaskAttribute()</a>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_work_managerid">WORK_MANAGERID</a></div>
+						<div class="Description"><p>A constant specifying that the task should
+  automatically complete when it becomes ready.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_work_ownerid">WORK_OWNERID</a></div>
+						<div class="Description"><p>Use this constant with the call <a class="interdoc" href="#cm_wapi_updatetaskattribute">WAPI.UpdateTaskAttribute()</a>
+  when setting the task Flags with the <a class="interdoc" href="#ca_wapi_subworktask_flags">WAPI.SUBWORKTASK_FLAGS</a>
+  constant.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_work_project">WORK_PROJECT</a></div>
+						<div class="Description"><p>A constant specifying that the task should be performed in the
+background (by the Workflow Agent). The Item Handler step is the only step that supports this
+capability.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_work_status_archived">WORK_STATUS_ARCHIVED</a></div>
+						<div class="Description"><p>Use this constant with the call <a class="interdoc" href="#cm_wapi_updatetaskattribute">WAPI.UpdateTaskAttribute()</a>
+  when setting the task Flags with the <a class="interdoc" href="#ca_wapi_subworktask_flags">WAPI.SUBWORKTASK_FLAGS</a>
+  constant.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_work_status_done">WORK_STATUS_DONE</a></div>
+						<div class="Description"><p>A constant specifying that the task's send on processing should
+occur in the background (by the Workflow Agent as a separate process). This is used to gain
+efficiencies and performance improvements especially if the steps proceeding this step are autodone
+steps ( for example, Evaluate, Process, Subworkflow, Milestone, etc.).</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_work_status_executing">WORK_STATUS_EXECUTING</a></div>
+						<div class="Description"><p>Use this constant with the call <a class="interdoc" href="#cm_wapi_updatetaskattribute">WAPI.UpdateTaskAttribute()</a>
+  when setting the task Flags with the <a class="interdoc" href="#ca_wapi_subworktask_flags">WAPI.SUBWORKTASK_FLAGS</a>
+  constant.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_work_status_stopped">WORK_STATUS_STOPPED</a></div>
+						<div class="Description"><p>A constant specifying that the task should
+  be a Milestone task and store a Milestone due date.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_work_status_suspended">WORK_STATUS_SUSPENDED</a></div>
+						<div class="Description"><p>Use this constant with the call <a class="interdoc" href="#cm_wapi_updatetaskattribute">WAPI.UpdateTaskAttribute()</a>
+  when setting the task Flags with the <a class="interdoc" href="#ca_wapi_subworktask_flags">WAPI.SUBWORKTASK_FLAGS</a>
+  constant. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_work_title">WORK_TITLE</a></div>
+						<div class="Description"><p>A constant specifying that the task should invoke the
+recalculate due date processing when the task has been sent on.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_wapi_work_userdata">WORK_USERDATA</a></div>
+						<div class="Description"><p>Use this constant with the call <a class="interdoc" href="#cm_wapi_updatetaskattribute">WAPI.UpdateTaskAttribute()</a>
+  when setting the task Flags with the <a class="interdoc" href="#ca_wapi_subworktask_flags">WAPI.SUBWORKTASK_FLAGS</a>
+  constant. </p></div>
+					</div>
+				
+				</div>
+
+		
+				<h2>Class Methods</h2>
+				<div class="ClassMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_accepttask">AcceptTask</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">AcceptTask</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIWORK</span> <span class="PrototypeArgumentName">work</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">workID</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">subworkID</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">taskID</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Assigns a step that was previously assigned to
+    a group to the currently logged in user.</p>
+<p>This call changes the SubWorkTask_PerformerID column
+    in the WSubWorkTask table to the ID of the currently logged in user.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">work</span><span class="description"><p>The WAPIWORK object handle.</p></span></div>
+											<div class="Parameter"><span class="name">workID</span><span class="description"><p>The workID for the desired workflow.</p></span></div>
+											<div class="Parameter"><span class="name">subworkID</span><span class="description"><p>The subworkID for the desired sub-workflow.</p></span></div>
+											<div class="Parameter"><span class="name">taskID</span><span class="description"><p>The taskID for the desired step.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_accesswork">AccessWork</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">AccessWork</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIWORK</span> <span class="PrototypeArgumentName">work</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">workID</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">subworkID</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sets up a WAPIWORK object handle to provide access
+    to the data package of a workflow.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">work</span><span class="description"><p>The WAPIWORK object handle.</p></span></div>
+											<div class="Parameter"><span class="name">workID</span><span class="description"><p>The workID for the desired workflow.</p></span></div>
+											<div class="Parameter"><span class="name">subworkID</span><span class="description"><p>The optional subworkID for the desired
+            sub-workflow.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_addtasklink">AddTaskLink</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">AddTaskLink</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIMAPTASK</span> <span class="PrototypeArgumentName">fromtask</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">linktype</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">WAPIMAPTASK</span> <span class="PrototypeArgumentName">totask</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Adds a link, of the specified type, between the
+    specified tasks. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">fromtask</span><span class="description"><p>The WAPIMAPTASK handle specifying the
+            task the link should come from.</p></span></div>
+											<div class="Parameter"><span class="name">linktype</span><span class="description"><p>Specifies a constant indicating the link type, can be:</p>
+<ul>
+<li><a class="interdoc" href="#ca_wapi_maptask_falselinks">WAPI.MAPTASK_FALSELINKS</a></li>
+<li><a class="interdoc" href="#ca_wapi_maptask_looplinks">WAPI.MAPTASK_LOOPLINKS</a></li>
+<li><a class="interdoc" href="#ca_wapi_maptask_truelinks">WAPI.MAPTASK_TRUELINKS</a></li>
+</ul></span></div>
+											<div class="Parameter"><span class="name">totask</span><span class="description"><p>The WAPIMAPTASK handle specifying the
+            task the link should go to.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_addworkdata">AddWorkData</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">AddWorkData</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIWORK</span> <span class="PrototypeArgumentName">work</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">type</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">subtype</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">description</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">value</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Creates and sets data stored in a data package.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">work</span><span class="description"><p>The WAPIWORK object handle.</p></span></div>
+											<div class="Parameter"><span class="name">type</span><span class="description"><p>The data package type.</p></span></div>
+											<div class="Parameter"><span class="name">subtype</span><span class="description"><p>The data package subtype.</p></span></div>
+											<div class="Parameter"><span class="name">description</span><span class="description"><p>Optional description of the data.</p></span></div>
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>The data value to store.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_allocmap">AllocMap</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">WAPIMAP</span> 
+						<span class="PrototypeselfName">AllocMap</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPISESSION</span> <span class="PrototypeArgumentName">session</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Allocates a WAPIMAP object handle. This map handle
+    is used to define workflow maps.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">session</span><span class="description"><p>The WAPISESSION object handle.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The WAPIMAP object handle if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_allocmaptask">AllocMapTask</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">WAPIMAPTASK</span> 
+						<span class="PrototypeselfName">AllocMapTask</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIMAP</span> <span class="PrototypeArgumentName">map</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Allocates a WAPIMAPTASK object handle. This mapTask
+    handle is used to define a task for a workflow map.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">map</span><span class="description"><p>The WAPIMAP object handle for the desired
+            workflow map.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The WAPIMAPTASK object handle if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_allocnthmaptask">AllocNthMapTask</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">WAPIMAPTASK</span> 
+						<span class="PrototypeselfName">AllocNthMapTask</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIMAP</span> <span class="PrototypeArgumentName">map</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">taskID</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Allocates a WAPIMAPTASK object handle for a particular
+    task in a workflow map definition. This mapTask handle is used to define a
+    task for a workflow map.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">map</span><span class="description"><p>The WAPIMAP object handle for the desired
+            workflow map.</p></span></div>
+											<div class="Parameter"><span class="name">taskID</span><span class="description"><p>The id for the desired workflow task.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The WAPIMAPTASK object handle if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_allocsession">AllocSession</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">WAPISESSION</span> 
+						<span class="PrototypeselfName">AllocSession</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">CAPILOGIN</span> <span class="PrototypeArgumentName">login</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Allocates a WAPISESSION object for a login user.</p>
+<p>A WAPISESSION contains information pertaining to
+    workflow management. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">login</span><span class="description"><p>The CAPILOGIN object handle specifically
+            for the login user.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The WAPISESSION object handle if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_allocsubwork">AllocSubWork</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">WAPISUBWORK</span> 
+						<span class="PrototypeselfName">AllocSubWork</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIWORK</span> <span class="PrototypeArgumentName">work</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Allocates a WAPISUBWORK object for the specified
+    WAPIWORK object.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">work</span><span class="description"><p>The WAPIWORK object handle.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The WAPISUBWORK object handle if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_allocwork">AllocWork</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">WAPIWORK</span> 
+						<span class="PrototypeselfName">AllocWork</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPISESSION</span> <span class="PrototypeArgumentName">session</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Allocates a WAPIWORK object. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">session</span><span class="description"><p>The WAPISESSION object handle.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The WAPIWORK object handle if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_archivework">ArchiveWork</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">ArchiveWork</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIWORK</span> <span class="PrototypeArgumentName">work</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">workID</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sets the status of a Stopped or Completed workflow
+    to Archived.</p>
+<p>This changes the Work_Status field of the workflow
+    to <a class="interdoc" href="#ca_wapi_work_status_archived">WAPI.WORK_STATUS_ARCHIVED</a>.</p>
+<p>Use a WAPIWORK object returned from a previous
+    call to <a class="interdoc" href="#cm_wapi_allocwork">WAPI.AllocWork()</a>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">work</span><span class="description"><p>The WAPIWORK object handle.</p></span></div>
+											<div class="Parameter"><span class="name">workID</span><span class="description"><p>The workID for the desired workflow.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_callsubwork">CallSubWork</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">CallSubWork</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIWORK</span> <span class="PrototypeArgumentName">work</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Initiates a Sub-Workflow using the information
+    supplied in a previous call to <a class="interdoc" href="#cm_wapi_preparesubmap">WAPI.PrepareSubMap()</a>
+    or <a class="interdoc" href="#cm_wapi_preparesubwork">WAPI.PrepareSubWork()</a>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">work</span><span class="description"><p>The WAPIWORK object handle.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_columnstringtovalue">ColumnStringToValue</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">RecArray</span> 
+						<span class="PrototypeselfName">ColumnStringToValue</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPISESSION</span> <span class="PrototypeArgumentName">session</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">RecArray</span> <span class="PrototypeArgumentName">array</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">colName</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts the values returned by a call to <a class="interdoc" href="#cm_wapi_worklist">WAPI.WorkList()</a>
+    from Strings to their true values.</p>
+<p>Some pieces of data are stored as Strings or BLOBs
+    in the WAPI database. To improve performance these values are returned as
+    Strings and not their original type. If the original type of the data is required
+    this call is used to convert the data from a String back to the original type.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">session</span><span class="description"><p>The WAPISESSION object handle.</p></span></div>
+											<div class="Parameter"><span class="name">array</span><span class="description"><p>The returned RecArray.</p></span></div>
+											<div class="Parameter"><span class="name">colName</span><span class="description"><p>The name of the column whose values
+            should be converted.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A RecArray with the values of the
+      specified column name converted from a String to their original types.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_deletemapbyid">DeleteMapByID</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">DeleteMapByID</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPISESSION</span> <span class="PrototypeArgumentName">session</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">mapID</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Deletes the Map from the Map database with the
+    specified <em>mapID</em>. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">session</span><span class="description"><p>The WAPISESSION object handle.</p></span></div>
+											<div class="Parameter"><span class="name">mapID</span><span class="description"><p>The ID of the desired Map.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_deletemaptask">DeleteMapTask</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">DeleteMapTask</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIMAPTASK</span> <span class="PrototypeArgumentName">task</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Deletes the task from the map definition. This
+    task was determined using <a class="interdoc" href="#cm_wapi_allocmaptask">WAPI.AllocMapTask()</a> or
+    <a class="interdoc" href="#cm_wapi_allocnthmaptask">WAPI.AllocNthMapTask()</a>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">task</span><span class="description"><p>The WAPIMAPTASK object handle.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_deletetasklink">DeleteTaskLink</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">DeleteTaskLink</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIMAPTASK</span> <span class="PrototypeArgumentName">fromTask</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">linkType</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">WAPIMAPTASK</span> <span class="PrototypeArgumentName">toTask</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Deletes the link from the specified tasks.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">fromTask</span><span class="description"><p>The WAPIMAPTASK handle specifying the
+            task the link comes from.</p></span></div>
+											<div class="Parameter"><span class="name">linkType</span><span class="description"><p>Specifies a constant indicating the
+            link type, can be:</p>
+<ul>
+<li><a class="interdoc" href="#ca_wapi_maptask_falselinks">WAPI.MAPTASK_FALSELINKS</a></li>
+<li><a class="interdoc" href="#ca_wapi_maptask_looplinks">WAPI.MAPTASK_LOOPLINKS</a></li>
+<li><a class="interdoc" href="#ca_wapi_maptask_truelinks">WAPI.MAPTASK_TRUELINKS</a></li>
+</ul></span></div>
+											<div class="Parameter"><span class="name">toTask</span><span class="description"><p>The WAPIMAPTASK handle specifying the
+            task the link goes to.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_deletework">DeleteWork</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">DeleteWork</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIWORK</span> <span class="PrototypeArgumentName">work</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">workID</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Deletes the specified Stopped or Completed workflow.</p>
+<p>Use a WAPIWORK object returned from a previous
+    call to <a class="interdoc" href="#cm_wapi_allocwork">WAPI.AllocWork()</a>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">work</span><span class="description"><p>The WAPIWORK object handle.</p></span></div>
+											<div class="Parameter"><span class="name">workID</span><span class="description"><p>The workID for the desired workflow.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_deleteworkdata">DeleteWorkData</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">DeleteWorkData</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIWORK</span> <span class="PrototypeArgumentName">work</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">type</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">subtype</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Deletes data from the Data Package specified by
+    the <em>type</em> and <em>subtype</em>.</p>
+<p>Use a WAPIWORK object returned from a previous
+    call to <a class="interdoc" href="#cm_wapi_accesswork">WAPI.AccessWork()</a>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">work</span><span class="description"><p>The WAPIWORK object handle.</p></span></div>
+											<div class="Parameter"><span class="name">type</span><span class="description"><p>The type of data in the Data Package.</p></span></div>
+											<div class="Parameter"><span class="name">subtype</span><span class="description"><p>The subtype of data in the Data Package.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_freemap">FreeMap</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">FreeMap</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIMAP</span> <span class="PrototypeArgumentName">map</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Frees the memory held by the WAPIMAP object.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">map</span><span class="description"><p>The WAPIMAP object handle.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_freemaptask">FreeMapTask</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">FreeMapTask</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIMAPTASK</span> <span class="PrototypeArgumentName">task</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Frees the memory held by the WAPIMAPTASK object.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">task</span><span class="description"><p>The WAPIMAPTASK handle.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_freesession">FreeSession</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">FreeSession</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPISESSION</span> <span class="PrototypeArgumentName">session</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Logs out the WAPISESSION
+    object and frees any associated memory.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">session</span><span class="description"><p>The WAPISESSION object handle.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_freesubwork">FreeSubWork</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">FreeSubWork</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPISUBWORK</span> <span class="PrototypeArgumentName">subWork</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Frees the memory held by the WAPISUBWORK object.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">subWork</span><span class="description"><p>The WAPISUBWORK object handle.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_freework">FreeWork</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">FreeWork</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIWORK</span> <span class="PrototypeArgumentName">work</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Frees the memory held by the WAPIWORK object.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">work</span><span class="description"><p>The WAPIWORK object handle.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_gettasklinks">GetTaskLinks</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">List</span> 
+						<span class="PrototypeselfName">GetTaskLinks</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIMAPTASK</span> <span class="PrototypeArgumentName">task</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">linkType</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Gets a List of the task ids for all links of the
+    specified types for the specified task.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">task</span><span class="description"><p>The WAPIMAPTASK handle.</p></span></div>
+											<div class="Parameter"><span class="name">linkType</span><span class="description"><p>Specifies a constant indicating the
+            link type, can be:
+  * <a class="interdoc" href="#ca_wapi_maptask_falselinks">WAPI.MAPTASK_FALSELINKS</a>
+  * <a class="interdoc" href="#ca_wapi_maptask_looplinks">WAPI.MAPTASK_LOOPLINKS</a>
+  * <a class="interdoc" href="#ca_wapi_maptask_truelinks">WAPI.MAPTASK_TRUELINKS</a></p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A List of task ids if successful;
+      Error otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_getworkdata">GetWorkData</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Dynamic</span> 
+						<span class="PrototypeselfName">GetWorkData</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIWORK</span> <span class="PrototypeArgumentName">work</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">type</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">subtype</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Gets the data from the specified <em>type</em> and <em>subtype</em> stored
+    in the data package.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">work</span><span class="description"><p>The WAPIWORK object handle.</p></span></div>
+											<div class="Parameter"><span class="name">type</span><span class="description"><p>The type of data in the Data Package.</p></span></div>
+											<div class="Parameter"><span class="name">subtype</span><span class="description"><p>The subtype of data in the Data Package.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The data from the data package;
+      Error otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_listworkdata">ListWorkData</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">RecArray</span> 
+						<span class="PrototypeselfName">ListWorkData</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIWORK</span> <span class="PrototypeArgumentName">work</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Boolean</span> <span class="PrototypeArgumentName">allWork</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the data that was stored for the specified work.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">work</span><span class="description"><p>The WAPIWORK object handle.</p></span></div>
+											<div class="Parameter"><span class="name">allWork</span><span class="description"><p>Optional parameter used to specify whether all the data,
+          including any subworkflow data, should be returned. By default allWork is set to False.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A RecArray of work data if successful; error otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_llmaptowmap">LLMapToWMap</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">LLMapToWMap</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIMAP</span> <span class="PrototypeArgumentName">map</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">RecArray</span> <span class="PrototypeArgumentName">mapInfo</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">RecArray</span> <span class="PrototypeArgumentName">tasks</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">RecArray</span> <span class="PrototypeArgumentName">links</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Takes a map definition from Livelink OScript and
+    converts it to a WAPIMAP definition.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">map</span><span class="description"><p>The WAPIMAP object handle.</p></span></div>
+											<div class="Parameter"><span class="name">mapInfo</span><span class="description"><p>A RecArray with only one row which
+            describes various properties of the map.</p></span></div>
+											<div class="Parameter"><span class="name">tasks</span><span class="description"><p>A RecArray with one row for each task
+            to add to the map definition.</p></span></div>
+											<div class="Parameter"><span class="name">links</span><span class="description"><p>A RecArray with one row for each link
+            to add to the map definition.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_loadmapbyid">LoadMapByID</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">LoadMapByID</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIMAP</span> <span class="PrototypeArgumentName">map</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">mapID</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Loads the map information from the Map database
+    for the map with the specified ID.</p>
+<p>Allocate a WAPIMAP object then use this call to
+    populate the WAPIMAP data.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">map</span><span class="description"><p>The WAPIMAP object handle.</p></span></div>
+											<div class="Parameter"><span class="name">mapID</span><span class="description"><p>The ID for the desired map.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_loadtaskstatus">LoadTaskStatus</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">RecArray</span> 
+						<span class="PrototypeselfName">LoadTaskStatus</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPISESSION</span> <span class="PrototypeArgumentName">session</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">workID</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">subWorkID</span><span class="PrototypePunctuation">]</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">taskID</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Loads the task information for the specified <em>workID</em>,
+    <em>subWorkID</em>, and <em>taskID</em>.</p>
+<p>If only the <em>workID</em> is specified then the returned
+    RecArray will contain 1 row for every task in every subWork for the work with
+    the given <em>workID</em>. If the <em>workID</em> and <em>subWorkID</em> are specified then the RecArray
+    will contain 1 row for every task in the subWork for the given <em>workID</em> and
+    <em>subWorkID</em>. If the <em>workID</em>, <em>subWorkID</em>, and <em>taskID</em> are specified then only 1
+    row will be returned for the desired task.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">session</span><span class="description"><p>The WAPISESSION object handle.</p></span></div>
+											<div class="Parameter"><span class="name">workID</span><span class="description"><p>The workID for the desired workflow.</p></span></div>
+											<div class="Parameter"><span class="name">subWorkID</span><span class="description"><p>The optional subWorkID for the desired
+            sub-workflow.</p></span></div>
+											<div class="Parameter"><span class="name">taskID</span><span class="description"><p>The optional taskID for the desired
+            workflow task.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A RecArray of task information if
+      successful; Error otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_loadworkaudit">LoadWorkAudit</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">RecArray</span> 
+						<span class="PrototypeselfName">LoadWorkAudit</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPISESSION</span> <span class="PrototypeArgumentName">session</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">workID</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">subWorkID</span><span class="PrototypePunctuation">]</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">taskID</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Loads the audit trail for the specified <em>workID</em>,
+    <em>subWorkID</em>, and <em>taskID</em>.</p>
+<p>If only the <em>workID</em> is specified then the returned
+    RecArray will contain the audit information for every subWork and task for
+    the work with the given <em>workID</em>. If the <em>workID</em> and <em>subWorkID</em> are specified then
+    the RecArray will contain the audit information for the given <em>workID</em> and <em>subWorkID</em>.
+    If the <em>workID</em>, <em>subWorkID</em>, and <em>taskID</em> are specified then only the audit information
+    for the desired task will be returned.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">session</span><span class="description"><p>The WAPISESSION object handle.</p></span></div>
+											<div class="Parameter"><span class="name">workID</span><span class="description"><p>The workID for the desired workflow.</p></span></div>
+											<div class="Parameter"><span class="name">subWorkID</span><span class="description"><p>The optional subWorkID for the desired
+            sub-workflow.</p></span></div>
+											<div class="Parameter"><span class="name">taskID</span><span class="description"><p>The optional taskID for the desired
+            workflow task.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A RecArray of audit information
+      if successful; Error otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_loadworkstatus">LoadWorkStatus</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">List</span> 
+						<span class="PrototypeselfName">LoadWorkStatus</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPISESSION</span> <span class="PrototypeArgumentName">session</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">workID</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">subWorkID</span><span class="PrototypePunctuation">]</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">taskID</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Loads the information for a workflow. You can
+    optionally limit the amount of data returned by specifying a <em>subWorkID</em> and
+    a <em>taskID</em>. A <a class="interdoc" href="list.html">List</a> of 3 <a class="interdoc" href="recarray.html">RecArray</a>s
+    is returned where the first RecArray contains information about the workflow
+    as a whole, the second RecArray contains information
+    about the sub-workflows, and the third RecArray
+    contains information about the workflow tasks.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">session</span><span class="description"><p>The WAPISESSION object handle.</p></span></div>
+											<div class="Parameter"><span class="name">workID</span><span class="description"><p>The workID for the desired workflow.</p></span></div>
+											<div class="Parameter"><span class="name">subWorkID</span><span class="description"><p>The optional subWorkID for the desired
+            sub-workflow.</p></span></div>
+											<div class="Parameter"><span class="name">taskID</span><span class="description"><p>The optional taskID for the desired
+            workflow task.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A List of
+      3 RecArrays if successful; Error otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_preparemap">PrepareMap</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">PrepareMap</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIWORK</span> <span class="PrototypeArgumentName">work</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">WAPIMAP</span> <span class="PrototypeArgumentName">map</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Saves the map definition to the map database and
+    sets up the work object for workflow initiation.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">work</span><span class="description"><p>The WAPIWORK object handle.</p></span></div>
+											<div class="Parameter"><span class="name">map</span><span class="description"><p>The WAPIMAP object handle for the desired
+            map.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>Optional flag values to control the map. The available values are:</p>
+<ul>
+<li><a class="interdoc" href="#ca_wapi_map_flag_archiveoncomplete">WAPI.MAP_FLAG_ARCHIVEONCOMPLETE</a></li>
+<li><a class="interdoc" href="#ca_wapi_map_flag_deleteoncomplete">WAPI.MAP_FLAG_DELETEONCOMPLETE</a></li>
+<li><a class="interdoc" href="#ca_wapi_map_flag_emailattachmentasfile">WAPI.MAP_FLAG_EMAILATTACHMENTASFILE</a></li>
+<li><a class="interdoc" href="#ca_wapi_map_flag_emailattachmentaslink">WAPI.MAP_FLAG_EMAILATTACHMENTASLINK</a></li>
+<li><a class="interdoc" href="#ca_wapi_map_flag_resumeonreturn">WAPI.MAP_FLAG_RESUMEONRETURN</a></li>
+<li><a class="interdoc" href="#ca_wapi_map_flag_skipweekends">WAPI.MAP_FLAG_SKIPWEEKENDS</a> </li>
+<li><a class="interdoc" href="#ca_wapi_map_flag_tempmap">WAPI.MAP_FLAG_TEMPMAP</a></li>
+</ul></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_preparesubmap">PrepareSubMap</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">PrepareSubMap</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIWORK</span> <span class="PrototypeArgumentName">work</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">WAPIMAP</span> <span class="PrototypeArgumentName">map</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Saves the map definition to the map database and
+    sets up the work object to initiate the map as a sub-workflow.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">work</span><span class="description"><p>The WAPIWORK object handle.</p></span></div>
+											<div class="Parameter"><span class="name">map</span><span class="description"><p>The WAPIMAP object handle for the desired
+            map.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>Optional flag values to control the
+            map. The available values are:</p>
+<ul>
+<li><a class="interdoc" href="#ca_wapi_map_flag_archiveoncomplete">WAPI.MAP_FLAG_ARCHIVEONCOMPLETE</a></li>
+<li><a class="interdoc" href="#ca_wapi_map_flag_deleteoncomplete">WAPI.MAP_FLAG_DELETEONCOMPLETE</a></li>
+<li><a class="interdoc" href="#ca_wapi_map_flag_emailattachmentasfile">WAPI.MAP_FLAG_EMAILATTACHMENTASFILE</a></li>
+<li><a class="interdoc" href="#ca_wapi_map_flag_emailattachmentaslink">WAPI.MAP_FLAG_EMAILATTACHMENTASLINK</a></li>
+<li><a class="interdoc" href="#ca_wapi_map_flag_resumeonreturn">WAPI.MAP_FLAG_RESUMEONRETURN</a></li>
+<li><a class="interdoc" href="#ca_wapi_map_flag_skipweekends">WAPI.MAP_FLAG_SKIPWEEKENDS</a> </li>
+<li><a class="interdoc" href="#ca_wapi_map_flag_tempmap">WAPI.MAP_FLAG_TEMPMAP</a></li>
+</ul></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_preparesubwork">PrepareSubWork</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">PrepareSubWork</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIWORK</span> <span class="PrototypeArgumentName">work</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">mapID</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sets up the work object to initiate the specified
+    map as a subworkflow.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">work</span><span class="description"><p>The WAPIWORK object handle.</p></span></div>
+											<div class="Parameter"><span class="name">mapID</span><span class="description"><p>The ID of the desired Workflow Map.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>Optional flag values to control the
+            map. The available values are:</p>
+<ul>
+<li><a class="interdoc" href="#ca_wapi_map_flag_archiveoncomplete">WAPI.MAP_FLAG_ARCHIVEONCOMPLETE</a></li>
+<li><a class="interdoc" href="#ca_wapi_map_flag_deleteoncomplete">WAPI.MAP_FLAG_DELETEONCOMPLETE</a></li>
+<li><a class="interdoc" href="#ca_wapi_map_flag_emailattachmentasfile">WAPI.MAP_FLAG_EMAILATTACHMENTASFILE</a></li>
+<li><a class="interdoc" href="#ca_wapi_map_flag_emailattachmentaslink">WAPI.MAP_FLAG_EMAILATTACHMENTASLINK</a></li>
+<li><a class="interdoc" href="#ca_wapi_map_flag_resumeonreturn">WAPI.MAP_FLAG_RESUMEONRETURN</a></li>
+<li><a class="interdoc" href="#ca_wapi_map_flag_skipweekends">WAPI.MAP_FLAG_SKIPWEEKENDS</a> </li>
+<li><a class="interdoc" href="#ca_wapi_map_flag_tempmap">WAPI.MAP_FLAG_TEMPMAP</a></li>
+</ul></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_preparework">PrepareWork</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">PrepareWork</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIWORK</span> <span class="PrototypeArgumentName">work</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">mapID</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sets up the work object to initiate the specified
+    map as a workflow.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">work</span><span class="description"><p>The WAPIWORK object handle.</p></span></div>
+											<div class="Parameter"><span class="name">mapID</span><span class="description"><p>The ID of the desired Workflow Map.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>Optional flag values to control the
+            map. The available values are:</p>
+<ul>
+<li><a class="interdoc" href="#ca_wapi_map_flag_archiveoncomplete">WAPI.MAP_FLAG_ARCHIVEONCOMPLETE</a></li>
+<li><a class="interdoc" href="#ca_wapi_map_flag_deleteoncomplete">WAPI.MAP_FLAG_DELETEONCOMPLETE</a></li>
+<li><a class="interdoc" href="#ca_wapi_map_flag_emailattachmentasfile">WAPI.MAP_FLAG_EMAILATTACHMENTASFILE</a></li>
+<li><a class="interdoc" href="#ca_wapi_map_flag_emailattachmentaslink">WAPI.MAP_FLAG_EMAILATTACHMENTASLINK</a></li>
+<li><a class="interdoc" href="#ca_wapi_map_flag_resumeonreturn">WAPI.MAP_FLAG_RESUMEONRETURN</a></li>
+<li><a class="interdoc" href="#ca_wapi_map_flag_skipweekends">WAPI.MAP_FLAG_SKIPWEEKENDS</a> </li>
+<li><a class="interdoc" href="#ca_wapi_map_flag_tempmap">WAPI.MAP_FLAG_TEMPMAP</a></li>
+</ul></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_reassigntask">ReassignTask</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">ReassignTask</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIWORK</span> <span class="PrototypeArgumentName">work</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">workID</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">subWorkID</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">taskID</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">userID</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Reassigns the task specified by the <em>workID</em>, <em>subWorkID</em>,
+    and <em>taskID</em> to the given <em>userID</em>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">work</span><span class="description"><p>The WAPIWORK object handle.</p></span></div>
+											<div class="Parameter"><span class="name">workID</span><span class="description"><p>The workID for the desired workflow.</p></span></div>
+											<div class="Parameter"><span class="name">subWorkID</span><span class="description"><p>The subWorkID for the desired workflow.</p></span></div>
+											<div class="Parameter"><span class="name">taskID</span><span class="description"><p>The taskID for the desired workflow
+            task.</p></span></div>
+											<div class="Parameter"><span class="name">userID</span><span class="description"><p>The ID of the user to which the task
+            should be reassigned.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_replacemap">ReplaceMap</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">ReplaceMap</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIMAP</span> <span class="PrototypeArgumentName">map</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Saves the modified map definition to the map database
+    replacing the original.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">map</span><span class="description"><p>The WAPIMAP object handle.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_resumework">ResumeWork</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">ResumeWork</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIWORK</span> <span class="PrototypeArgumentName">work</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">workID</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sets the status of a suspended workflow to Executing.</p>
+<p>This changes the Work_Status field of the workflow
+    to <a class="interdoc" href="#ca_wapi_work_status_executing">WAPI.WORK_STATUS_EXECUTING</a>.</p>
+<p>Use a WAPIWORK object returned from a previous
+    call to <a class="interdoc" href="#cm_wapi_allocwork">WAPI.AllocWork()</a>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">work</span><span class="description"><p>The WAPIWORK object handle.</p></span></div>
+											<div class="Parameter"><span class="name">workID</span><span class="description"><p>The workID for the desired workflow.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_savemap">SaveMap</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">SaveMap</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIMAP</span> <span class="PrototypeArgumentName">map</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Saves a WAPIMAP map definition to the map
+    database.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">map</span><span class="description"><p>The WAPIMAP object handle.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The ID for the new map if successful;
+      Error otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_setcallback">SetCallback</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">SetCallback</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPISESSION</span> <span class="PrototypeArgumentName">session</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">feature</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">object</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Specifies the WAPI callback routine and context
+    argument that is passed to the callback.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">session</span><span class="description"><p>The WAPISESSION object handle.</p></span></div>
+											<div class="Parameter"><span class="name">feature</span><span class="description"><p>The name of the script to execute.</p></span></div>
+											<div class="Parameter"><span class="name">object</span><span class="description"><p>The optional object that contains the script.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_setworkdata">SetWorkData</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">SetWorkData</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIWORK</span> <span class="PrototypeArgumentName">work</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">type</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">subtype</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">[String</span> <span class="PrototypeArgumentName">description</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">value</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sets data stored in a data package.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">work</span><span class="description"><p>The WAPIWORK object handle.</p></span></div>
+											<div class="Parameter"><span class="name">type</span><span class="description"><p>The type of the data.</p></span></div>
+											<div class="Parameter"><span class="name">subtype</span><span class="description"><p>The subtype of the data.</p></span></div>
+											<div class="Parameter"><span class="name">description</span><span class="description"><p>The optional description of the data.</p></span></div>
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>The data to store.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_starttask">StartTask</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">StartTask</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIWORK</span> <span class="PrototypeArgumentName">work</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">workID</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">subWorkID</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">taskID</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Marks the specified task as started and sets up the
+    WAPIWORK object handle to be able to access the work package.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">work</span><span class="description"><p>The WAPIWORK object handle.</p></span></div>
+											<div class="Parameter"><span class="name">workID</span><span class="description"><p>The workID for the desired workflow.</p></span></div>
+											<div class="Parameter"><span class="name">subWorkID</span><span class="description"><p>The subWorkID for the desired workflow.</p></span></div>
+											<div class="Parameter"><span class="name">taskID</span><span class="description"><p>The taskID for the desired workflow
+            task.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>A flag for StartTask options. This
+            flag can be combined by Bitwise OR using the following constants:</p>
+<ul>
+<li><a class="interdoc" href="#ca_wapi_starttask_flag_reexecute">WAPI.STARTTASK_FLAG_REEXECUTE</a></li>
+<li><a class="interdoc" href="#ca_wapi_starttask_flag_noaudit">WAPI.STARTTASK_FLAG_NOAUDIT</a></li>
+</ul></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_startwork">StartWork</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">StartWork</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIWORK</span> <span class="PrototypeArgumentName">work</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">[String</span> <span class="PrototypeArgumentName">title</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Initiates a workflow that was prepared
+    with a call to <a class="interdoc" href="#cm_wapi_preparework">WAPI.PrepareWork()</a> and readies
+    any initial tasks.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">work</span><span class="description"><p>The WAPIWORK object handle.</p></span></div>
+											<div class="Parameter"><span class="name">title</span><span class="description"><p>The optional title of the Workflow.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_stopwork">StopWork</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">StopWork</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIWORK</span> <span class="PrototypeArgumentName">work</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">workID</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sets the status of an Executing or Suspended workflow
+    to Stopped.</p>
+<p>This changes the Work_Status field of the workflow
+    to <a class="interdoc" href="#ca_wapi_work_status_stopped">WAPI.WORK_STATUS_STOPPED</a>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">work</span><span class="description"><p>The WAPIWORK object handle.</p></span></div>
+											<div class="Parameter"><span class="name">workID</span><span class="description"><p>The workID for the desired workflow.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_suspendwork">SuspendWork</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">SuspendWork</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIWORK</span> <span class="PrototypeArgumentName">work</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">workID</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sets the status of an Executing workflow to Suspended.</p>
+<p>This changes the Work_Status field of the workflow
+    to <a class="interdoc" href="#ca_wapi_work_status_suspended">WAPI.WORK_STATUS_SUSPENDED</a>.</p>
+<p>Use a WAPIWORK object returned from a previous
+    call to <a class="interdoc" href="#cm_wapi_allocwork">WAPI.AllocWork()</a>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">work</span><span class="description"><p>The WAPIWORK object handle.</p></span></div>
+											<div class="Parameter"><span class="name">workID</span><span class="description"><p>The workID for the desired workflow.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_taskaudituserdata">TaskAuditUserData</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">TaskAuditUserData</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIWORK</span> <span class="PrototypeArgumentName">work</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">workID</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">subworkID</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">taskID</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">data</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">[Integer</span> <span class="PrototypeArgumentName">iterNum</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Adds a row to the audit trail and stores the specified data.
+  Even though the iterNum parameter is optional, if not specified the iternum will be accessed from
+  the appropriate Workflow database table by using the workID, subworkID and taskID. If you
+  already have the iterNum, it is more efficient to pass it in instead of having the function
+  access it.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">work</span><span class="description"><p>The WAPIWORK object handle.</p></span></div>
+											<div class="Parameter"><span class="name">workID</span><span class="description"><p>The work ID of the Workflow</p></span></div>
+											<div class="Parameter"><span class="name">subworkID</span><span class="description"><p>The subwork ID of the Workflow</p></span></div>
+											<div class="Parameter"><span class="name">taskID</span><span class="description"><p>The task ID of the task</p></span></div>
+											<div class="Parameter"><span class="name">data</span><span class="description"><p>The data to store.</p></span></div>
+											<div class="Parameter"><span class="name">iterNum</span><span class="description"><p>The optional iteration number for this specific task</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_taskcancel">TaskCancel</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">TaskCancel</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIWORK</span> <span class="PrototypeArgumentName">work</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Notifies the workflow engine that work on this task
+    is completed for the time being but skip marking the task as Done and send
+    the workflow on to the next step.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">work</span><span class="description"><p>The WAPIWORK object handle.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_taskdone">TaskDone</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">TaskDone</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIWORK</span> <span class="PrototypeArgumentName">work</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">linkType</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Marks the task as Done and takes the paths from
+    the task that are of the specified link type. If the <em>linkType</em> is not specified,
+    then the True/Normal paths will be taken.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">work</span><span class="description"><p>The WAPIWORK object handle.</p></span></div>
+											<div class="Parameter"><span class="name">linkType</span><span class="description"><p>The optional type of link paths that
+            should be taken from this step.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_updatesubworkattribute">UpdateSubWorkAttribute</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">UpdateSubWorkAttribute</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIWORK</span> <span class="PrototypeArgumentName">work</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">workID</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">subWorkID</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">attribute</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">value</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Updates the value of a subWork attribute for a
+    workflow. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">work</span><span class="description"><p>The WAPIWORK object handle.</p></span></div>
+											<div class="Parameter"><span class="name">workID</span><span class="description"><p>The workID for the desired workflow.</p></span></div>
+											<div class="Parameter"><span class="name">subWorkID</span><span class="description"><p>The subWorkID for the desired workflow.</p></span></div>
+											<div class="Parameter"><span class="name">attribute</span><span class="description"><p>Specifies a constant indicating
+            the subWork attribute. Acceptable values are:</p>
+<ul>
+<li><a class="interdoc" href="#ca_wapi_subwork_title">WAPI.SUBWORK_TITLE</a></li>
+<li><a class="interdoc" href="#ca_wapi_subwork_project">WAPI.SUBWORK_PROJECT</a></li>
+<li><a class="interdoc" href="#ca_wapi_subwork_flags">WAPI.SUBWORK_FLAGS</a></li>
+<li><a class="interdoc" href="#ca_wapi_subwork_userdata">WAPI.SUBWORK_USERDATA</a></li>
+<li><a class="interdoc" href="#ca_wapi_subwork_customdata">WAPI.SUBWORK_CUSTOMDATA</a></li>
+</ul></span></div>
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>The new value for the attribute.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_updatesubworkprepare">UpdateSubWorkPrepare</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">UpdateSubWorkPrepare</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIWORK</span> <span class="PrototypeArgumentName">work</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">WAPIMAP</span> <span class="PrototypeArgumentName">map</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">workID</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">subWorkID</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Prepares the map and work object for a workflow
+    already in-process for update.  The new map definition is saved to the map
+    database. The in-process workflow must be suspended in order for this call
+    to succeed.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">work</span><span class="description"><p>The WAPIWORK object handle.</p></span></div>
+											<div class="Parameter"><span class="name">map</span><span class="description"><p>The WAPIMAP object handle.</p></span></div>
+											<div class="Parameter"><span class="name">workID</span><span class="description"><p>The workID for the desired workflow.</p></span></div>
+											<div class="Parameter"><span class="name">subWorkID</span><span class="description"><p>The subWorkID for the desired workflow.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_updatesubworkstart">UpdateSubWorkStart</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">UpdateSubWorkStart</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIWORK</span> <span class="PrototypeArgumentName">work</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Updates the in-process workflow specified by <em>work</em>.
+    This is used after a call to <a class="interdoc" href="#cm_wapi_updatesubworkprepare">WAPI.UpdateSubWorkPrepare()</a>.
+    Here, the work information is updated, and the workflow is made to now point to the new map definition.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">work</span><span class="description"><p>The WAPIWORK object handle.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_updatetaskattribute">UpdateTaskAttribute</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">UpdateTaskAttribute</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIWORK</span> <span class="PrototypeArgumentName">work</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">workID</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">subWorkID</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">taskID</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">attribute</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">value</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Updates the value of a task attribute for a workflow.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">work</span><span class="description"><p>The WAPIWORK object handle.</p></span></div>
+											<div class="Parameter"><span class="name">workID</span><span class="description"><p>The workID for the desired workflow.</p></span></div>
+											<div class="Parameter"><span class="name">subWorkID</span><span class="description"><p>The subWorkID for the desired workflow.</p></span></div>
+											<div class="Parameter"><span class="name">taskID</span><span class="description"><p>The taskID for the desired task.</p></span></div>
+											<div class="Parameter"><span class="name">attribute</span><span class="description"><p>Specifies a constant indicating the
+            task attribute. Acceptable values are:</p>
+<ul>
+<li><a class="interdoc" href="#ca_wapi_subworktask_title">WAPI.SUBWORKTASK_TITLE</a> </li>
+<li><a class="interdoc" href="#ca_wapi_subworktask_usercomment">WAPI.SUBWORKTASK_USERCOMMENT</a></li>
+<li><a class="interdoc" href="#ca_wapi_subworktask_performerid">WAPI.SUBWORKTASK_PERFORMERID</a></li>
+<li><a class="interdoc" href="#ca_wapi_subworktask_userstatus">WAPI.SUBWORKTASK_USERSTATUS</a></li>
+<li><a class="interdoc" href="#ca_wapi_subworktask_flags">WAPI.SUBWORKTASK_FLAGS</a> </li>
+<li><a class="interdoc" href="#ca_wapi_subworktask_userdata">WAPI.SUBWORKTASK_USERDATA</a> </li>
+<li><a class="interdoc" href="#ca_wapi_subworktask_customdata">WAPI.SUBWORKTASK_CUSTOMDATA</a></li>
+</ul></span></div>
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>The new value for the attribute.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_updateworkattribute">UpdateWorkAttribute</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">UpdateWorkAttribute</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPIWORK</span> <span class="PrototypeArgumentName">work</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">workID</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">attribute</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">value</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Updates the value of a work attribute.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">work</span><span class="description"><p>The WAPIWORK object handle.</p></span></div>
+											<div class="Parameter"><span class="name">workID</span><span class="description"><p>The workID for the desired workflow.</p></span></div>
+											<div class="Parameter"><span class="name">attribute</span><span class="description"><p>Specifies a constant indicating the work attribute. Acceptable
+              values are:</p>
+<ul>
+<li><a class="interdoc" href="#ca_wapi_work_title">WAPI.WORK_TITLE</a> </li>
+<li><a class="interdoc" href="#ca_wapi_work_project">WAPI.WORK_PROJECT</a> </li>
+<li><a class="interdoc" href="#ca_wapi_work_managerid">WAPI.WORK_MANAGERID</a> </li>
+<li><a class="interdoc" href="#ca_wapi_work_flags">WAPI.WORK_FLAGS</a> </li>
+<li><a class="interdoc" href="#ca_wapi_work_userdata">WAPI.WORK_USERDATA</a> </li>
+<li><a class="interdoc" href="#ca_wapi_work_customdata">WAPI.WORK_CUSTOMDATA</a></li>
+</ul></span></div>
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>The new value for the attribute.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>(Integer 0) if successful; Error
+      otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_worklist">WorkList</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">RecArray</span> 
+						<span class="PrototypeselfName">WorkList</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPISESSION</span> <span class="PrototypeArgumentName">session</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">viewName</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">whereClause</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns workflow information using the specified
+    view, SQL "where" clause, and flags.  If specific workflow information is required,
+    a view can be constructed in the database schema, and this call can be used to select
+    rows from that view.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">session</span><span class="description"><p>The WAPISESSION object handle.</p></span></div>
+											<div class="Parameter"><span class="name">viewName</span><span class="description"><p>The view to do the select from</p></span></div>
+											<div class="Parameter"><span class="name">whereClause</span><span class="description"><p>An SQL "where" clause if one is desired, 0
+            or Undefined if not.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>Flag value for built-in "where" clauses.
+            These flags can be combined by Bitwise OR using the following
+            constants:</p>
+<ul>
+<li><a class="interdoc" href="#ca_wapi_list_ifinitiated">WAPI.LIST_IFINITIATED</a></li>
+<li><a class="interdoc" href="#ca_wapi_list_ifmanaged">WAPI.LIST_IFMANAGED</a></li>
+<li><a class="interdoc" href="#ca_wapi_list_ifperformer">WAPI.LIST_IFPERFORMER</a></li>
+</ul></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A RecArray of work information if
+      successful; Error otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_wapi_worklist2">WorkList2</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">RecArray</span> 
+						<span class="PrototypeselfName">WorkList2</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">WAPISESSION</span> <span class="PrototypeArgumentName">session</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">viewName</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">whereClause</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">orderby</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">flags</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns ordered Workflow information using the specified view,
+  SQL "where" clause, SQL "orderby" clause and flags. If specific Workflow information is required, a
+  view can be constructed in the database schema, and this call can be used to select rows from that
+  view.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">session</span><span class="description"><p>The WAPISESSION object handle.</p></span></div>
+											<div class="Parameter"><span class="name">viewName</span><span class="description"><p>The view to do the select from</p></span></div>
+											<div class="Parameter"><span class="name">whereClause</span><span class="description"><p>An SQL "where" clause if one is desired, 0
+            or Undefined if not.</p></span></div>
+											<div class="Parameter"><span class="name">orderby</span><span class="description"><p>An SQL "orderby" to order the results.</p></span></div>
+											<div class="Parameter"><span class="name">flags</span><span class="description"><p>Flag value for built-in "where" clauses.
+            These flags can be combined by Bitwise OR using the following
+            constants:</p>
+<ul>
+<li><a class="interdoc" href="#ca_wapi_list_ifinitiated">WAPI.LIST_IFINITIATED</a></li>
+<li><a class="interdoc" href="#ca_wapi_list_ifmanaged">WAPI.LIST_IFMANAGED</a></li>
+<li><a class="interdoc" href="#ca_wapi_list_ifperformer">WAPI.LIST_IFPERFORMER</a></li>
+</ul></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A RecArray of work information if
+      successful; Error otherwise.</p></div>
+							</div>
+						</div>
+				</div>
+		
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2018 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+
+
+
+</div>
+	</div>						
+						
+
+</div>
+
+</body></html>

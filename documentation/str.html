@@ -1,0 +1,2239 @@
+
+<meta charset="UTF-8">
+<html>
+<head><title>Class: Str</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../syntax.css" type="text/css">
+<link rel="stylesheet" href="builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td  align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody></table>
+
+<div id="document">
+	
+<div class="sidebar_container">
+		
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink"><a href="assoc.html">Assoc</a></div>
+				<div class="packagelink"><a href="boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="builder.html">Builder</a></div>
+				<div class="packagelink"><a href="bytes.html">Bytes</a></div>
+				<div class="packagelink"><a href="capi.html">CAPI</a></div>
+				<div class="packagelink"><a href="capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink"><a href="cachetree.html">CacheTree</a></div>
+				<div class="packagelink"><a href="compiler.html">Compiler</a></div>
+				<div class="packagelink"><a href="core.html">Core</a></div>
+				<div class="packagelink"><a href="dapi.html">DAPI</a></div>
+				<div class="packagelink"><a href="dapinode.html">DAPINODE</a></div>
+				<div class="packagelink"><a href="dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink"><a href="dapiversion.html">DAPIVERSION</a></div>
+				<div class="packagelink"><a href="domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="domcomment.html">DOMComment</a></div>
+				<div class="packagelink"><a href="domdocument.html">DOMDocument</a></div>
+				<div class="packagelink"><a href="domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink"><a href="domelement.html">DOMElement</a></div>
+				<div class="packagelink"><a href="domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink"><a href="domnamednodemap.html">DOMNamedNodeMap</a></div>
+				<div class="packagelink"><a href="domnode.html">DOMNode</a></div>
+				<div class="packagelink"><a href="domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="domtext.html">DOMText</a></div>
+				<div class="packagelink"><a href="date.html">Date</a></div>
+				<div class="packagelink"><a href="dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="env.html">Env</a></div>
+				<div class="packagelink"><a href="error.html">Error</a></div>
+				<div class="packagelink"><a href="file.html">File</a></div>
+				<div class="packagelink"><a href="filecopy.html">FileCopy</a></div>
+				<div class="packagelink"><a href="fileprefs.html">Fileprefs</a></div>
+				<div class="packagelink"><a href="frame.html">Frame</a></div>
+				<div class="packagelink"><a href="global.html">Global</a></div>
+				<div class="packagelink"><a href="integer.html">Integer</a></div>
+				<div class="packagelink"><a href="javaobject.html">JavaObject</a></div>
+				<div class="packagelink"><a href="language.html">Language</a></div>
+				<div class="packagelink"><a href="license.html">License</a></div>
+				<div class="packagelink"><a href="list.html">List</a></div>
+				<div class="packagelink"><a href="logging.html">Logging</a></div>
+				<div class="packagelink"><a href="long.html">Long</a></div>
+				<div class="packagelink"><a href="mailmessage.html">MailMessage</a></div>
+				<div class="packagelink"><a href="math.html">Math</a></div>
+				<div class="packagelink"><a href="memcached.html">Memcached</a></div>
+				<div class="packagelink"><a href="notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="object.html">Object</a></div>
+				<div class="packagelink"><a href="pop3session.html">POP3Session</a></div>
+				<div class="packagelink"><a href="patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="patfind.html">PatFind</a></div>
+				<div class="packagelink"><a href="pattern.html">Pattern</a></div>
+				<div class="packagelink"><a href="point.html">Point</a></div>
+				<div class="packagelink"><a href="profiler.html">Profiler</a></div>
+				<div class="packagelink"><a href="real.html">Real</a></div>
+				<div class="packagelink"><a href="recarray.html">RecArray</a></div>
+				<div class="packagelink"><a href="record.html">Record</a></div>
+				<div class="packagelink"><a href="regex.html">Regex</a></div>
+				<div class="packagelink"><a href="restclient.html">RestClient</a></div>
+				<div class="packagelink"><a href="saxparser.html">SAXParser</a></div>
+				<div class="packagelink"><a href="smtpsession.html">SMTPSession</a></div>
+				<div class="packagelink"><a href="ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="script.html">Script</a></div>
+				<div class="packagelink"><a href="security.html">Security</a></div>
+				<div class="packagelink"><a href="set.html">Set</a></div>
+				<div class="packagelink"><a href="socket.html">Socket</a></div>
+				<div class="packagelink"><a href="sql.html">Sql</a></div>
+				<div class="packagelink"><a href="sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink curPage">Str</div>
+				<div class="packagelink"><a href="string.html">String</a></div>
+				<div class="packagelink"><a href="system.html">System</a></div>
+				<div class="packagelink"><a href="uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="void.html">Void</a></div>
+				<div class="packagelink"><a href="wapi.html">WAPI</a></div>
+				<div class="packagelink"><a href="wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink"><a href="web.html">Web</a></div>
+				<div class="packagelink"><a href="xslprocessor.html">XSLProcessor</a></div>
+				<div class="packagelink"><a href="zip.html">Zip</a></div>
+		</div>
+</div>
+
+	<div class="content_container">
+		<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+		<h1>Class: Str</h1><div class="ClassDescription"><p>The Str package provides services for manipulating   Strings. The major functionalities offered in the Str Package are the following:</p>
+<ul>
+<li><a class="interdoc" href="#cm_str_format">Format()</a> to substitute values into a format String; similar to C's sprintf().</li>
+<li><a class="interdoc" href="#cm_str_quote">Quote()</a> to appropriately enclose a string in either single or double quotes.</li>
+<li><a class="interdoc" href="#cm_str_upper">Upper()</a>, <a class="interdoc" href="#cm_str_lower">Lower()</a>, and <a class="interdoc" href="#cm_str_capitalize">Capitalize()</a> to alter case.</li>
+<li><a class="interdoc" href="#cm_str_stringtovalue">StringToValue()</a> and <a class="interdoc" href="#cm_str_valuetostring">ValueToString()</a> to convert a value to and from a String, possibly for serialization or transmission.</li>
+<li><a class="interdoc" href="#cm_str_string">String()</a> to convert a value to a "pretty" or user-displayable String.</li>
+<li><a class="interdoc" href="#cm_str_stringtointeger">StringToInteger()</a> and <a class="interdoc" href="#cm_str_stringtoreal">StringToReal()</a> to convert Strings containing numerical content into numerical values.</li>
+<li><a class="interdoc" href="#cm_str_cstring">CString()</a> to appropriately backslash-escape a String following the conventions used in the C language.</li>
+<li><a class="interdoc" href="#cm_str_sqlstring">SQLString()</a> to convert a value to a form more appropriate for inclusion in an SQL query.</li>
+<li><a class="interdoc" href="#ca_str_tab">Tab()</a> and <a class="interdoc" href="#cm_str_eol">EOL()</a> to return cross-platform tab and line feed character repectively.</li>
+<li><a class="interdoc" href="#cm_str_ascii">Ascii()</a> to convert a character to or from an Ascii numerical value.</li>
+<li><a class="interdoc" href="#cm_str_chr">Chr()</a> and <a class="interdoc" href="#cm_str_rchr">RChr()</a> to locate a character within a String.</li>
+<li><a class="interdoc" href="#cm_str_locate">Locate()</a> and <a class="interdoc" href="#cm_str_locatei">LocateI()</a> to locate the index of a substring within a String.</li>
+<li><a class="interdoc" href="#cm_str_spn">Spn()</a> or <a class="interdoc" href="#cm_str_cspn">CSpn()</a> to find the length of a span of initial characters which are only in or not in a given set.</li>
+<li><a class="interdoc" href="#cm_str_cmp">Cmp()</a>, <a class="interdoc" href="#cm_str_cmpi">CmpI()</a>, <a class="interdoc" href="#cm_str_cmpbe">CmpBE()</a>, and <a class="interdoc" href="#cm_str_cmpibe">CmpIBE()</a> to compare two Strings.</li>
+<li><a class="interdoc" href="#cm_str_collapse">Collapse()</a>, <a class="interdoc" href="#cm_str_compress">Compress()</a>, and <a class="interdoc" href="#cm_str_trim">Trim()</a> to remove various types of white-space from a String.</li>
+<li><a class="interdoc" href="#cm_str_replace">Replace()</a> and <a class="interdoc" href="#cm_str_replaceall">ReplaceAll()</a> to replace one or many instances of a substring in a String with another substring.</li>
+<li><a class="interdoc" href="#cm_str_elements">Elements()</a>, <a class="interdoc" href="#cm_str_catenate">Catenate()</a>  and <a class="interdoc" href="#cm_str_join">Join()</a> to convert a String to and from a list of elements  given a delimiter character.</li>
+<li><a class="interdoc" href="#cm_str_strip">Strip()</a> to remove all occurrences of a given set of characters from a String.</li>
+<li><a class="interdoc" href="#cm_str_substitute">Substitute()</a> to perform formatted substitution, with input values from a List, RecArray or Record.</li>
+<li><a class="interdoc" href="#cm_str_encode">Encode()</a> and <a class="interdoc" href="#cm_str_decode">Decode()</a> to encrypt and decrypt a String.</li>
+<li><a class="interdoc" href="#cm_str_filetostring">FileToString()</a> to easily read a file in as a String.</li>
+<li><a class="interdoc" href="#cm_str_set">Set()</a> to create a String of one character repeated a given number of times.</li>
+<li><a class="interdoc" href="#cm_str_hyphenate">Hyphenate()</a> to break a string into a set of segments, as for line-wrapping.</li>
+<li><a class="interdoc" href="#cm_str_intlsort">IntlSort()</a> to query or set international sort mode.</li>
+<li><a class="interdoc" href="#cm_str_tobase64">ToBase64()</a> and <a class="interdoc" href="#cm_str_frombase64">FromBase64()</a> to encode and decode a String using the Base64 algorithm.</li>
+<li><a class="interdoc" href="#cm_str_bytelength">ByteLength()</a> to get the length of String in bytes.</li>
+</ul></div>
+			<h2>Class Attributes</h2>
+			<div class="ClassAttributesShort">
+				
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_str_cr">CR</a></div>
+					<div class="Description"><p>Carriage return character constant.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_str_crlf">CRLF</a></div>
+					<div class="Description"><p>Carriage return, linefeed constant.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_str_e_truncation">E_Truncation</a></div>
+					<div class="Description"><p>String truncation error constant.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_str_format_max_args">FORMAT_MAX_ARGS</a></div>
+					<div class="Description"><p>Maximum number of arguments the Format method can have.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_str_lf">LF</a></div>
+					<div class="Description"><p>Linefeed character constant.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_str_oldencoding">OldEncoding</a></div>
+					<div class="Description"><p>Old encoding algorithm constant.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_str_tab">TAB</a></div>
+					<div class="Description"><p>Tab character constant.</p></div>
+				</div>
+				
+			</div>
+
+
+			<h2>Class Methods</h2>
+			<div class="ClassMethodsShort">
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_ascii" class="IndexMethodName">Ascii</a>(
+					 Dynamic value )
+						<span class="Deprecated">Deprecated</span>
+					</div>
+					<div class="Description"><p>Converts an ASCII value to a String,
+    or converts a String to an ASCII value.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_bytelength" class="IndexMethodName">ByteLength</a>(
+					 String aString )
+					</div>
+					<div class="Description"><p>Returns the length of the aString in bytes. If the string contains any characters with codepoints greater than 127, this number will be greater than the value returned by <a class="interdoc" href="core.html#cm_core_length">Length</a>.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_capitalize" class="IndexMethodName">Capitalize</a>(
+					 String aString )
+					</div>
+					<div class="Description"><p>Converts the first letter of all words in <em>aString</em> to uppercase and all other letters to lowercase. </p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_catenate" class="IndexMethodName">Catenate</a>(
+					 List values, [String appendString] )
+					</div>
+					<div class="Description"><p>Concatenates each element of <em>values</em>
+    into a String, optionally adding the specified <em>appendString</em>
+    after each element. </p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_chr" class="IndexMethodName">Chr</a>(
+					 String aString, String ch )
+					</div>
+					<div class="Description"><p>Locates the first occurrence, from left to right, of the first character of <em>ch</em> within_ aString_. </p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_cmp" class="IndexMethodName">Cmp</a>(
+					 String string1, String string2, [Integer chars] )
+					</div>
+					<div class="Description"><p>Performs a case-sensitive ASCII value
+    comparison of <em>string1</em> to <em>string2</em>.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_cmpbe" class="IndexMethodName">CmpBE</a>(
+					 String string1, String string2 )
+					</div>
+					<div class="Description"><p>Performs a case-sensitive ASCII value
+    comparison of <em>string1</em> to <em>string2</em>,
+    where the shorter String is padded with trailing blanks ("Blank Extended")
+    in the comparison to make the strings equal in length. </p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_cmpi" class="IndexMethodName">CmpI</a>(
+					 String string1, String string2, [Integer chars] )
+					</div>
+					<div class="Description"><p>Performs a case-insensitive ASCII
+    value comparison of <em>string1</em> to <em>string2</em>.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_cmpibe" class="IndexMethodName">CmpIBE</a>(
+					 String string1, String string2 )
+					</div>
+					<div class="Description"><p>Performs a case-insensitive ASCII
+    value comparison of <em>string1</em> to <em>string2</em>,
+    where the shorter String is padded with trailing blanks ("Blank Extended")
+    in the comparison to make the strings equal in length. </p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_collapse" class="IndexMethodName">Collapse</a>(
+					 String aString )
+					</div>
+					<div class="Description"><p>Removes all spaces and horizontal tabs from the specified String.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_compress" class="IndexMethodName">Compress</a>(
+					 String aString )
+					</div>
+					<div class="Description"><p>Converts all sequences of one or more spaces or horizontal tabs to a single space character.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_cspn" class="IndexMethodName">CSpn</a>(
+					 String aString, String searchChars )
+					</div>
+					<div class="Description"><p>Returns the length of the maximum initial segment of <em>aString</em> that consists
+    solely of characters that are not in <em>searchChars</em>.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_cstring" class="IndexMethodName">CString</a>(
+					 String aString, [String quoteChar] )
+					</div>
+					<div class="Description"><p>Returns a C-escaped version of the
+    specified String.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_decode" class="IndexMethodName">Decode</a>(
+					 String aString, [Integer keyToEncode], [Integer version] )
+					</div>
+					<div class="Description"><p>Converts a String encoded by the <a class="interdoc" href="#cm_str_encode">Str.Encode()</a>
+    back to ASCII text.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_elements" class="IndexMethodName">Elements</a>(
+					 String aString, String delimiter )
+					</div>
+					<div class="Description"><p>Extracts each segment of <em>aString</em> delimited by the first character of <em>delimiter</em> and returns the segments as elements in a List. </p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_encode" class="IndexMethodName">Encode</a>(
+					 String aString, [Integer keyToEncode], [Integer version] )
+					</div>
+					<div class="Description"><p>Returns an encoded version of the
+    specified String.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_eol" class="IndexMethodName">EOL</a>(
+					)
+						<span class="Deprecated">Deprecated</span>
+					</div>
+					<div class="Description"><p>Use <a class="interdoc" href="system.html#cm_system_eol">System.EOL()</a>. </p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_filetostring" class="IndexMethodName">FileToString</a>(
+					 String filename )
+					</div>
+					<div class="Description"><p>Returns the contents of a text file as a String.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_format" class="IndexMethodName">Format</a>(
+					 String format, [Dynamic arg<1>] )
+					</div>
+					<div class="Description"><p>Returns a String formatted such that
+    each included substitution indicator (%1...%9) is replaced by the corresponding
+    argument.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_formatlist" class="IndexMethodName">FormatList</a>(
+					 String formatString, List formatList )
+					</div>
+					<div class="Description"><p>Returns a formatted string using the format string, formatString, and argument list, argList</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_frombase64" class="IndexMethodName">FromBase64</a>(
+					 String aString )
+					</div>
+					<div class="Description"><p>Decodes a String which was encoded
+    using Base64</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_fromunicode" class="IndexMethodName">FromUnicode</a>(
+					 String value )
+					</div>
+					<div class="Description"><p>Converts the initial character of a string to its Unicode codepoint. Returns undefined if the string is empty.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_hyphenate" class="IndexMethodName">Hyphenate</a>(
+					 String aString, Integer maxLength )
+					</div>
+					<div class="Description"><p>Breaks a String into multiple segments,
+    each of which is no longer than the number of characters specified in <em>maxLength</em>.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_intlsort" class="IndexMethodName">IntlSort</a>(
+					 [Boolean newValue] )
+					</div>
+					<div class="Description"><p>Returns and optionally sets the international
+    sorting mode.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_isutf8" class="IndexMethodName">IsUTF8</a>(
+					 String inputString )
+					</div>
+					<div class="Description"><p>Returns True if inputString contains non-english UTF8 characters, else False</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_join" class="IndexMethodName">Join</a>(
+					 List values, [String joinString] )
+					</div>
+					<div class="Description"><p>Concatenates each element of <em>values</em>
+    into a String like <a class="interdoc" href="#cm_str_catenate">Str.Catenate()</a>, but doesn't append the delimiting string after
+    the final element in the list.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_jstring" class="IndexMethodName">JString</a>(
+					 String stringToEscape, [String quoteChar] )
+					</div>
+					<div class="Description"><p>Escape a string for use in Javascript.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_locate" class="IndexMethodName">Locate</a>(
+					 String searchInStr, String searchForStr )
+					</div>
+					<div class="Description"><p>Performs a case-sensitive search for
+    the first occurrence of <em>searchForStr</em>
+    within <em>searchInStr</em>. </p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_locatei" class="IndexMethodName">LocateI</a>(
+					 String searchInStr, String searchForStr )
+					</div>
+					<div class="Description"><p>Performs a case-insensitive search
+    for the first occurrence of <em>searchForStr</em>
+    within <em>searchInStr</em>. </p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_lower" class="IndexMethodName">Lower</a>(
+					 String aString )
+					</div>
+					<div class="Description"><p>Converts all alphabetic characters
+    in the specified String to lowercase characters.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_quote" class="IndexMethodName">Quote</a>(
+					 String aString, [String quote] )
+					</div>
+					<div class="Description"><p>Adds either single or double quotation
+    marks to the specified String.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_rchr" class="IndexMethodName">RChr</a>(
+					 String aString, String ch )
+					</div>
+					<div class="Description"><p>Locates the rightmost occurrence of the first character of <em>string2</em> within <em>string1</em>. </p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_replace" class="IndexMethodName">Replace</a>(
+					 String aString, String find, String replace )
+					</div>
+					<div class="Description"><p>Performs a case-sensitive search and
+    replace operation on a String once. Returnes undefined if the string to be replaced can't be found.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_replaceall" class="IndexMethodName">ReplaceAll</a>(
+					 String aString, String find, String replace )
+					</div>
+					<div class="Description"><p>Performs a thorough case-sensitive search and replace operations on a String.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_set" class="IndexMethodName">Set</a>(
+					 Dynamic length, String value )
+					</div>
+					<div class="Description"><p>Returns a String of the specified length consisting solely of the first character in the specified String, as is useful for creating formatted columns of text.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_sjis2jis" class="IndexMethodName">SJis2Jis</a>(
+					 String aString )
+					</div>
+					<div class="Description"><p>Converts a Shift-JIS String to JIS
+    format.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_spn" class="IndexMethodName">Spn</a>(
+					 String aString, String searchChars )
+					</div>
+					<div class="Description"><p>Determines the length of the maximum
+    initial segment of <em>aString</em> that consists
+    solely of characters in <em>searchChars</em>.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_sqlstring" class="IndexMethodName">SQLString</a>(
+					 Dynamic value )
+					</div>
+					<div class="Description"><p>Converts the value to a string, similar to <a class="interdoc" href="#cm_str_string">Str.String()</a>, 
+    but returns a string that's designed to be included as part of an SQL statement.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_string" class="IndexMethodName">String</a>(
+					 Dynamic value, [Boolean displayString] )
+					</div>
+					<div class="Description"><p>Converts the specified value to a
+    user-displayable String.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_stringtointeger" class="IndexMethodName">StringToInteger</a>(
+					 String aString )
+					</div>
+					<div class="Description"><p>Converts the specified String to an
+    Integer.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_stringtoreal" class="IndexMethodName">StringToReal</a>(
+					 String aString )
+					</div>
+					<div class="Description"><p>Converts the specified String to a
+    real number.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_stringtovalue" class="IndexMethodName">StringToValue</a>(
+					 String aString )
+					</div>
+					<div class="Description"><p>Converts a String resulting from <a class="interdoc" href="#cm_str_valuetostring">Str.ValueToString()</a>
+    back to a value of its original type. </p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_strip" class="IndexMethodName">Strip</a>(
+					 String aString, String stripChars )
+					</div>
+					<div class="Description"><p>Removes all occurrences of the specified
+    characters from a String.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_substitute" class="IndexMethodName">Substitute</a>(
+					 String aString, Dynamic substitutions )
+					</div>
+					<div class="Description"><p>Returns a String with tokens in <em>aString</em>
+    replaced with values from <em>substitutions</em>.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_tab" class="IndexMethodName">Tab</a>(
+					)
+					</div>
+					<div class="Description"><p>Returns a tab character.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_tobase64" class="IndexMethodName">ToBase64</a>(
+					 String aString )
+					</div>
+					<div class="Description"><p>Encodes the specified String using
+    the Base64 encoding</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_tounicode" class="IndexMethodName">ToUnicode</a>(
+					 Integer codepoint )
+					</div>
+					<div class="Description"><p>Converts a Unicode codepoint to a string containing the corresponding character.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_trim" class="IndexMethodName">Trim</a>(
+					 String aString )
+					</div>
+					<div class="Description"><p>Removes leading and trailing white
+    space from the specified String.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_upper" class="IndexMethodName">Upper</a>(
+					 String aString )
+					</div>
+					<div class="Description"><p>Converts all alphabetic characters
+    in the specified String to uppercase.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_str_valuetostring" class="IndexMethodName">ValueToString</a>(
+					 Dynamic value )
+					</div>
+					<div class="Description"><p>Converts a value of any type to a
+    String as for storage or transmission.</p></div>
+				</div>
+			</div>
+
+
+				<h2>Class Attributes</h2>
+				<div class="ClassAttributes">
+					
+					<div class="Attribute">
+						<div class="Name">String <a name="ca_str_cr">CR</a></div>
+						<div class="Description"><p>Carriage return character constant.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ca_str_crlf">CRLF</a></div>
+						<div class="Description"><p>Carriage return, linefeed constant.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_str_e_truncation">E_Truncation</a></div>
+						<div class="Description"><p>String truncation error constant.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_str_format_max_args">FORMAT_MAX_ARGS</a></div>
+						<div class="Description"><p>Maximum number of arguments the Format method can have.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ca_str_lf">LF</a></div>
+						<div class="Description"><p>Linefeed character constant.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_str_oldencoding">OldEncoding</a></div>
+						<div class="Description"><p>Old encoding algorithm constant. When specified
+  as the optional third parameter to <a class="interdoc" href="#cm_str_encode">Encode()</a> and <a class="interdoc" href="#cm_str_decode">Decode()</a>, these functions
+  will use the old encoding algorithm (for backward compatibility only).</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">String <a name="ca_str_tab">TAB</a></div>
+						<div class="Description"><p>Tab character constant.</p></div>
+					</div>
+				
+				</div>
+
+		
+				<h2>Class Methods</h2>
+				<div class="ClassMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_ascii">Ascii</a></h3>
+
+								<span class="Deprecated">Deprecated</span>
+
+							<div class="signature"><span class="PrototypeReturnValueType">Dynamic</span> 
+						<span class="PrototypeselfName">Ascii</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">value</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts an ASCII value to a String, or converts
+    a String to an ASCII value. Use <a class="interdoc" href="#cm_str_tounicode">ToUnicode</a> and <a class="interdoc" href="#cm_str_fromunicode">FromUnicode</a> instead.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>Specifies either an Integer or a String.
+            If an Integer is specified, it is converted to a one-character String
+            corresponding to the specified ASCII value. If a String is specified,
+            the first character of the String is converted to an Integer corresponding
+            to the ASCII value of that character.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>If an Integer is specified, a String consisting of its Big-Endian representation, with leading 0 bytes removed. If a String is specified, its initial character's internal representation is converted to an Integer and returned.</p>
+<p>For Integer values from 0 to 127, this function safely converts between ASCII values and their corresponding characters. For values larger than 127, care must be taken that the Integer's representation corresponds to a valid UTF-8 encoding. </p>
+<p>This method has been deprecated in favour of <a class="interdoc" href="#cm_str_tounicode">ToUnicode</a> and <a class="interdoc" href="#cm_str_fromunicode">FromUnicode</a>, which convert to and from Unicode codepoints, and don't have the risk of generating invalid encodings.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is a short example:</p>
+<div class="codehilite"><pre><span class="kt">String</span> aString <span class="o">=</span> Str<span class="o">.</span>Ascii<span class="p">(</span> <span class="m">65</span> <span class="p">)</span> <span class="o">+</span> Str<span class="o">.</span>Ascii<span class="p">(</span> <span class="m">94</span> <span class="p">)</span> <span class="o">+</span> Str<span class="o">.</span>Ascii<span class="p">(</span> <span class="m">77</span> <span class="p">)</span>
+Echo<span class="p">(</span> aString <span class="p">)</span>
+
+<span class="kt">Integer</span> aNumber <span class="o">=</span> Str<span class="o">.</span>Ascii<span class="p">(</span> aString <span class="p">)</span>
+Echo<span class="p">(</span> aNumber <span class="p">)</span>
+
+<span class="c">// 50089 == 0xc3a9, so this will give us the character whose UTF-8 encoding is c3 a9.</span>
+<span class="c">// In binary, c3 a9 == 11000011 10101001, so it encodes codepoint 0b000011101001, or 233.</span>
+<span class="c">// &#39;é&#39; corresponds to unicode codepoint 233. The binary representation of 233 is 0b000011101001,</span>
+<span class="c">// which means its UTF-8 binary representation is 11000011 10101001, or the bytes c3 a9.</span>
+<span class="c">// 0xc3a9 = 50089, which is the value that Str.Ascii will return.</span>
+<span class="kt">Integer</span> anotherNumber <span class="o">=</span> Str<span class="o">.</span>Ascii<span class="p">(</span> <span class="s">&#39;é&#39;</span> <span class="p">)</span>
+echo<span class="p">(</span> anotherNumber <span class="p">)</span>
+
+<span class="c">// 1416151977 = 0x5468c3a9. 0x54 = &#39;T&#39;, 0x68 = &#39;h&#39;, and 0xc3a9 is &#39;é&#39;, as described above.</span>
+<span class="c">// This means that Str.Ascii will actually produce a string containing the word &#39;Thé&#39;</span>
+<span class="kt">String</span> anotherString <span class="o">=</span> Str<span class="o">.</span>Ascii<span class="p">(</span> <span class="m">1416151977</span> <span class="p">)</span> 
+echo<span class="p">(</span> anotherString <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre>A<span class="o">^</span>M
+<span class="m">65</span>
+<span class="m">50089</span>
+Thé
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_bytelength">ByteLength</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">ByteLength</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">aString</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the length of <em>aString</em> in bytes rather than length in characters. If the string contains any characters with codepoints greater than 127, this number will be greater than the number of characters, as returned by <a class="interdoc" href="core.html#cm_core_length">Length</a>. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">aString</span><span class="description"><p>A String whose length in bytes is returned.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An Integer specifying number of bytes used to represent aString in computer memory.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>In UTF-8, the character '∈' and 'ℝ' are both encoded using three bytes, while 'x' only takes one byte.</p>
+<div class="codehilite"><pre><span class="kt">String</span> aString <span class="o">=</span> <span class="s">&quot;x∈ℝ&quot;</span>
+echo<span class="p">(</span><span class="s">&#39;The command length( aString ) returns &#39;</span> <span class="p">,</span> length<span class="p">(</span> aString<span class="p">),</span> <span class="s">&#39;.&#39;</span> <span class="p">)</span>
+echo<span class="p">(</span><span class="s">&#39;The command Str.ByteLength( aString ) returns &#39;</span><span class="p">,</span> Str<span class="o">.</span>ByteLength<span class="p">(</span> aString <span class="p">),</span> <span class="s">&#39;.&#39;</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of the example is: </p>
+<div class="codehilite"><pre>The command length<span class="p">(</span> aString <span class="p">)</span> returns <span class="m">3.</span>
+The command Str<span class="o">.</span>ByteLength<span class="p">(</span> aString <span class="p">)</span> returns <span class="m">7.</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_capitalize">Capitalize</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">Capitalize</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">aString</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a new String which is a capatalized version
+    of <em>aString.</em>.  The first letter of each
+    word will be converted to uppercase, while following letters of each word will be
+    converted to lowercase.  See <a class="interdoc" href="#cm_str_upper">Str.Upper()</a>.</p>
+<p><strong class="note">Warning: This function does not work with non-ASCII characters.</strong></p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">aString</span><span class="description"><p>The String for which a capitalized version is returned.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A copy of <em>aString</em>,
+      but with the first letter of each word capitalized and all other letters
+      in lowercase.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is a short example:</p>
+<div class="codehilite"><pre><span class="kt">String</span>  s <span class="o">=</span> <span class="s">&#39;Call the FBI.&#39;</span>
+
+Echo<span class="p">(</span> <span class="s">&#39;&quot;&#39;</span><span class="p">,</span> s<span class="p">,</span> <span class="s">&#39;&quot;-&gt;&quot;&#39;</span><span class="p">,</span> Str<span class="o">.</span>Capitalize<span class="p">(</span> s <span class="p">),</span> <span class="s">&#39;&quot;&#39;</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre><span class="s">&quot;Call the FBI.&quot;</span><span class="o">-&gt;</span><span class="s">&quot;Call The Fbi.&quot;</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_catenate">Catenate</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">Catenate</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">List</span> <span class="PrototypeArgumentName">values</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">appendString</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a String which is a concatenation of each
+    element of <em>values</em>, appending
+    <em>appendString</em> after each element if
+    it is specified.  See <a class="interdoc" href="#cm_str_elements">Str.Elements()</a> for performing
+    the opposite function, and <a class="interdoc" href="#cm_str_join">Str.Join()</a> for version which places <em>appendString</em> only between elements, rather than after every element.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">values</span><span class="description"><p>A List containing the values
+            to concatenate. If any element of values is not of type String, a
+            String representation of the value is appended to the resulting String.</p></span></div>
+											<div class="Parameter"><span class="name">appendString</span><span class="description"><p>Specifies an optional String to be
+            appended after each element of the List in the return value.  If
+            not specified, the default value is the empty String ("").</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String concatenation,
+      if successful; Undefined otherwise.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Remember that
+    <em>appendString</em> is as a separator,
+     but instead it is appended to each value, including the last value.  Here
+     is a short example:</p>
+<div class="codehilite"><pre><span class="kt">String</span> s <span class="o">=</span> Str<span class="o">.</span>Catenate<span class="p">(</span> <span class="p">{</span> <span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;b&#39;</span><span class="p">,</span> <span class="s">&#39;c&#39;</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> Date<span class="o">.</span>Now<span class="p">()</span> <span class="p">},</span> <span class="s">&#39;+&#39;</span> <span class="p">)</span>
+Echo<span class="p">(</span> s <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre>a<span class="o">+</span>b<span class="o">+</span>c<span class="o">+</span><span class="m">1</span><span class="o">+</span>Mon Aug <span class="m">24</span> <span class="m">17</span><span class="o">:</span><span class="m">04</span><span class="o">:</span><span class="m">46</span> <span class="m">1998</span><span class="o">+</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_chr">Chr</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Chr</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">aString</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">ch</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the index of the first occurrence, from left to right, of the first character of <em>ch</em> within the <em>aString</em>.</p>
+<p>This function is most often used with a single character String specification for <em>ch</em>. 
+If the <em>ch</em> is longer than one character, all characters other than the first character are ignored. See <a class="interdoc" href="#cm_str_rchr">Str.RChr()</a> to search from the end of the String.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">aString</span><span class="description"><p>Specifies a String in which to search.</p></span></div>
+											<div class="Parameter"><span class="name">ch</span><span class="description"><p>Specifies a String whose first character
+            is to be located.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An Integer specifying the character
+      position (from 1 to n) of the first character of <em>ch</em>
+      if it is found within <em>aString</em>; Undefined
+      otherwise. </p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Note that Chr() is case-sensitive.  Here is a short example:</p>
+<div class="codehilite"><pre><span class="kt">String</span> s <span class="o">=</span> <span class="s">&#39;abcdefg&#39;</span>
+Echo<span class="p">(</span> <span class="s">&quot;Str.Chr( &#39;abcdefg&#39; ) for f = &quot;</span><span class="p">,</span> Str<span class="o">.</span>Chr<span class="p">(</span> s<span class="p">,</span> <span class="s">&#39;f&#39;</span> <span class="p">),</span> <span class="s">&quot;, k = &quot;</span><span class="p">,</span> Str<span class="o">.</span>Chr<span class="p">(</span> s<span class="p">,</span> <span class="s">&#39;k&#39;</span> <span class="p">),</span> <span class="s">&quot;, F = &quot;</span><span class="p">,</span> Str<span class="o">.</span>Chr<span class="p">(</span> s<span class="p">,</span> <span class="s">&#39;F&#39;</span> <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre>Str<span class="o">.</span>Chr<span class="p">(</span> <span class="s">&#39;abcdefg&#39;</span> <span class="p">)</span> <span class="k">for</span> f <span class="o">=</span> <span class="m">6</span><span class="p">,</span> k <span class="o">=</span> <span class="o">?</span><span class="p">,</span> F <span class="o">=</span> <span class="o">?</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_cmp">Cmp</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Cmp</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">string1</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">string2</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">chars</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Performs a case-sensitive ASCII value comparison of <em>string1</em> to <em>string2</em>.<br />
+        Str.Cmp() is the OScript equivalent of C's strcmp() and strncmp().  See <a class="interdoc" href="#cm_str_cmpi">Str.CmpI()</a> and <a class="interdoc" href="#cm_str_cmpbe">Str.CmpBE()</a>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">string1</span><span class="description"><p>The first String to compare.</p></span></div>
+											<div class="Parameter"><span class="name">string2</span><span class="description"><p>The second String to compare.</p></span></div>
+											<div class="Parameter"><span class="name">chars</span><span class="description"><p>Specifies an optional positive Integer indicating the maximum number of characters of <em>string1</em> and <em>string2</em> to compare. If not specified, both strings are compared in their entirety, or until a non-matching character is found.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><table>
+<thead>
+<tr>
+<th>Result</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt;0</td>
+<td><em>string1</em> is less than <em>string2</em>.</td>
+</tr>
+<tr>
+<td>0</td>
+<td><em>string1</em> is identical to <em>string2</em>.</td>
+</tr>
+<tr>
+<td>&gt;0</td>
+<td><em>string1</em> is greater than <em>string2</em>.</td>
+</tr>
+</tbody>
+</table></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_cmpbe">CmpBE</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">CmpBE</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">string1</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">string2</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Performs a case-sensitive ASCII value comparison
+    of <em>string1</em> to <em>string2</em>,
+    where the longer String is compared against the shorter as padded with
+    trailing blanks ("Blank Extended") to make the strings equal in length.
+    Note that this Blank Extension is only internal to the comparison,
+    and does not alter <em>string1</em> or
+    <em>strin2</em>.  See <a class="interdoc" href="#cm_str_cmp">Str.Cmp()</a> and <a class="interdoc" href="#cm_str_cmpibe">Str.CmpIBE()</a>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">string1</span><span class="description"><p>The first String to compare.</p></span></div>
+											<div class="Parameter"><span class="name">string2</span><span class="description"><p>the second String to compare.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><table>
+<thead>
+<tr>
+<th>Result</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt;0</td>
+<td><em>string1</em> is less than <em>string2</em>.</td>
+</tr>
+<tr>
+<td>0</td>
+<td><em>string1</em> is identical to <em>string2</em>.</td>
+</tr>
+<tr>
+<td>&gt;0</td>
+<td><em>string1</em> is greater than <em>string2</em>.</td>
+</tr>
+</tbody>
+</table></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_cmpi">CmpI</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">CmpI</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">string1</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">string2</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">chars</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Performs a case-insensitive ASCII value comparison
+    of <em>string1</em> to <em>string2</em>.  Str.CmpI() is the case-insensitive version of <a class="interdoc" href="#cm_str_cmp">Str.Cmp()</a>.  See <a class="interdoc" href="#cm_str_cmpibe">Str.CmpIBE()</a> as well.</p>
+<p><strong class="note">Warning: This method does not handle non-ASCII (codepoints 0-127) characters correctly.</strong></p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">string1</span><span class="description"><p>The first String to compare.</p></span></div>
+											<div class="Parameter"><span class="name">string2</span><span class="description"><p>The second String to compare.</p></span></div>
+											<div class="Parameter"><span class="name">chars</span><span class="description"><p>Specifies an optional positive Integer
+            indicating the maximum number of characters of <em>string1</em>
+            and <em>string2</em> to compare. If
+            not included, both strings are compared in their entirety, or until
+            a non-matching character is found.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><table>
+<thead>
+<tr>
+<th>Result</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt;0</td>
+<td><em>string1</em> is less than <em>string2</em>.</td>
+</tr>
+<tr>
+<td>0</td>
+<td><em>string1</em> is identical to <em>string2</em>.</td>
+</tr>
+<tr>
+<td>&gt;0</td>
+<td><em>string1</em> is greater than <em>string2</em>.</td>
+</tr>
+</tbody>
+</table></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_cmpibe">CmpIBE</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">CmpIBE</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">string1</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">string2</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Performs a case-insensitive ASCII value comparison of <em>string1</em> to <em>string2</em>, where the shorter String is padded with trailing blanks ("Blank Extended") to make the strings equal in length. Note that this Blank Extension is only internal, and neither <em>string1</em> nor <em>string2</em> are affected.  See <a class="interdoc" href="#cm_str_cmpi">Str.CmpI()</a> and <a class="interdoc" href="#cm_str_cmpbe">Str.CmpBE()</a>.</p>
+<p><strong class="note">Warning: This method does not handle non-ASCII (codepoints 0-127) characters correctly.</strong></p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">string1</span><span class="description"><p>The first String to compare.</p></span></div>
+											<div class="Parameter"><span class="name">string2</span><span class="description"><p>The second String to compare.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><table>
+<thead>
+<tr>
+<th>Result</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt;0</td>
+<td><em>string1</em> is less than <em>string2</em>.</td>
+</tr>
+<tr>
+<td>0</td>
+<td><em>string1</em> is identical to <em>string2</em>.</td>
+</tr>
+<tr>
+<td>&gt;0</td>
+<td><em>string1</em> is greater than <em>string2</em>.</td>
+</tr>
+</tbody>
+</table></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_collapse">Collapse</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">Collapse</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">aString</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Removes all spaces and tabs from a String. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">aString</span><span class="description"><p>The String for which a spaceless and tabless version is returned.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String, identical to the specified String, but with all spaces and horizontal tabs removed.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is a short example:</p>
+<div class="codehilite"><pre><span class="kt">String</span> myString <span class="o">=</span> <span class="s">&#39;Hi. How is&#39;</span> <span class="o">+</span> Str<span class="o">.</span>Tab<span class="p">()</span> <span class="o">+</span> <span class="s">&#39;Joe?&#39;</span>
+Echo<span class="p">(</span> myString <span class="p">)</span>
+Echo<span class="p">(</span> Str<span class="o">.</span>Collapse <span class="p">(</span> myString <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre>Hi<span class="o">.</span> How is  Joe<span class="o">?</span>
+Hi<span class="o">.</span>HowisJoe<span class="o">?</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_compress">Compress</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">Compress</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">aString</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts all sequences of one or more spaces or
+    horizontal tabs to a single space character. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">aString</span><span class="description"><p>The String for which a compressed version is returned.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String, identical to the specified
+      String, but with all sequences of one or more spaces or horizontal tabs
+      converted to a single space character.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is a short example:</p>
+<div class="codehilite"><pre><span class="kt">String</span> zString
+
+zString <span class="o">=</span> <span class="s">&#39; Abc &#39;</span> <span class="o">+</span> Str<span class="o">.</span>Tab<span class="p">()</span> <span class="o">+</span> <span class="s">&#39; Def &#39;</span> <span class="o">+</span> <span class="s">&#39; Ghi&#39;</span>
+Echo<span class="p">(</span> zString <span class="p">)</span>
+
+zString <span class="o">=</span> Str<span class="o">.</span>Compress<span class="p">(</span> zString <span class="p">)</span>
+Echo<span class="p">(</span> zString <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre> Abc     Def  Ghi
+ Abc Def Ghi
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_cspn">CSpn</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">CSpn</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">aString</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">searchChars</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the length of the longest initial segment of <em>aString</em> that consists of characters <strong>not</strong> in <em>searchChars</em>.  See <a class="interdoc" href="#cm_str_spn">Str.Spn()</a>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">aString</span><span class="description"><p>A String to search.</p></span></div>
+											<div class="Parameter"><span class="name">searchChars</span><span class="description"><p>A String containing the characters for which to search.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An Integer indicating the length of the segment of <em>aString</em> that contains no characters found in <em>searchChars</em>. If the first character of <em>aString</em> is a character in <em>searchChars</em>, the Integer value 0 is returned.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>The following table summarizes the result of the Str.CSpn
+function for various Strings:</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_cstring">CString</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">CString</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">aString</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">quoteChar</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a C-escaped version of the specified String. Newlines (\n), carriage returns (\r), tabs (\t), backslashes (\), and quotes (\' or \") are escaped.  <em>quoteChar</em> allows customization of the quote-escaping used.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">aString</span><span class="description"><p>The String for which a C-String is returned.</p></span></div>
+											<div class="Parameter"><span class="name">quoteChar</span><span class="description"><p>The quote character to escape; either a single (') or double (") quote. Double quote (") is the default.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A C-escaped version of the specified String.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><div class="codehilite"><pre>Echo<span class="p">(</span> Str<span class="o">.</span>CString<span class="p">(</span> <span class="s">&#39;&#39;&#39;Tis an example of:    &quot;Str.CString&quot;&#39;</span> <span class="p">)</span> <span class="p">)</span>
+Echo<span class="p">(</span> Str<span class="o">.</span>CString<span class="p">(</span> <span class="s">&#39;&#39;&#39;Tis an example of:    &quot;Str.CString&quot;&#39;</span><span class="p">,</span> <span class="s">&quot;&#39;&quot;</span> <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of the example is (note that the difference
+    in the outermost enclosing quotes is due to output through <a class="interdoc" href="#cm_str_valuetostring">Str.ValueToString()</a>):</p>
+<div class="codehilite"><pre><span class="s">&quot;&#39;Tis an example of:        \&quot;</span>Str<span class="o">.</span>CString\<span class="s">&quot;&quot;</span>
+<span class="s">&#39;\&#39;</span>Tis an example of<span class="o">:</span>        <span class="s">&quot;Str.CString&quot;</span>&#39;
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_decode">Decode</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">Decode</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">aString</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">keyToEncode</span><span class="PrototypePunctuation">]</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">version</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts a String encoded by <a class="interdoc" href="#cm_str_encode">Str.Encode()</a>
+    back to ASCII text. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">aString</span><span class="description"><p>An encoded String returned by the <a class="interdoc" href="#cm_str_encode">Str.Encode</a> function.</p></span></div>
+											<div class="Parameter"><span class="name">keyToEncode</span><span class="description"><p>An optional Integer corresponding to the <em>keyToEncode</em> value passed to the <a class="interdoc" href="#cm_str_encode">Str.Encode</a> function when the String was encoded. This parameter is only used if <em>version</em> is equal to <a class="interdoc" href="#ca_str_oldencoding">Str.OldEncoding</a>.</p></span></div>
+											<div class="Parameter"><span class="name">version</span><span class="description"><p>Specifies an optional version of the internal encoding algorithm used. Currently, <a class="interdoc" href="#ca_str_oldencoding">Str.OldEncoding</a> is the only meaningful value for this parameter.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The String originally passed to the <a class="interdoc" href="#cm_str_encode">Str.Encode</a> function.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_elements">Elements</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">List</span> 
+						<span class="PrototypeselfName">Elements</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">aString</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">delimiter</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Extracts the segments of <em>aString</em> delimited by the first character of <em>delimiter</em> and returns the segments as elements in a List. The order of the elements within the list reflects their occurrence in the String. See <a class="interdoc" href="#cm_str_catenate">Str.Catenate()</a> for performing the opposite function.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">aString</span><span class="description"><p>A String for which delimited elements are returned.</p></span></div>
+											<div class="Parameter"><span class="name">delimiter</span><span class="description"><p>A String whose first character
+            delimits the elements of <em>aString</em>.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A List containing String elements that consist of the delimited String segments of <em>aString</em>. The delimiter is not included in the returned List of elements. </p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is a short example:</p>
+<div class="codehilite"><pre>List thelist <span class="o">=</span> Str<span class="o">.</span>Elements<span class="p">(</span> <span class="s">&#39;a:b:c&#39;</span><span class="p">,</span> <span class="s">&#39;:&#39;</span> <span class="p">)</span>
+Echo<span class="p">(</span> thelist <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre><span class="p">{</span><span class="s">&#39;a&#39;</span><span class="p">,</span><span class="s">&#39;b&#39;</span><span class="p">,</span><span class="s">&#39;c&#39;</span><span class="p">}</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_encode">Encode</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">Encode</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">aString</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">keyToEncode</span><span class="PrototypePunctuation">]</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">version</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Encodes/encrypts a String. An encoded String can be converted back to its original value with <a class="interdoc" href="#cm_str_decode">Str.Decode()</a> using the same <em>keyToEncode</em> and <em>version</em> used to encode it.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">aString</span><span class="description"><p>The String for which an encoded version is returned.</p></span></div>
+											<div class="Parameter"><span class="name">keyToEncode</span><span class="description"><p>An optional Integer encoding key. This value is significant only in that the same value must be specified to decode the String. This parameter is ignored if <em>version</em> is not equal to <a class="interdoc" href="#ca_str_oldencoding">Str.OldEncoding</a>.</p></span></div>
+											<div class="Parameter"><span class="name">version</span><span class="description"><p>An optional version of the internal encoding algorithm used. Currently, <a class="interdoc" href="#ca_str_oldencoding">Str.OldEncoding</a> is the only meaningful value for this parameter.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An encoded version of the input String.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_eol">EOL</a></h3>
+
+								<span class="Deprecated">Deprecated</span>
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">EOL</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a line feed character.</p>
+<p>Use <a class="interdoc" href="system.html#cm_system_eol">System.EOL()</a>.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String containing the line feed character.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_filetostring">FileToString</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">FileToString</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">filename</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the contents of a text file as a String. When Str.FileToString is called, operating system-specific line termination is converted to <a class="interdoc" href="#ca_str_cr">Str.CR</a> line termination.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">filename</span><span class="description"><p>A String indicating the name of the file to convert, which should be the full file path if the file is not in the current working directory.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String containing the contents of the file, or if the file does not exist or cannot be read as text, Undefined.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is a short example:</p>
+<div class="codehilite"><pre><span class="kt">String</span> fileString <span class="o">=</span> Str<span class="o">.</span>FileToString<span class="p">(</span> <span class="s">&#39;c:\winnt\setuplog.txt&#39;</span> <span class="p">)</span>
+Echo<span class="p">(</span> fileString <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre>Information<span class="o">:</span>
+Setup configured the system to place a <span class="m">139</span> MB pagefile on drive C<span class="o">:.</span>
+
+<span class="o">***</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_format">Format</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">Format</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">format</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">arg<1></span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>This function returns a String formatted such that each included substitution indicator (%1...%9) is replaced by the corresponding substitution argument. </p>
+<p>Str.Format() is the OScript equivalent of the C language's sprintf() and printf().  However, numbers are used as format symbols instead of type identifiers since OScript is dynamically typed and numbers allow for alterations in substitution order as required for internationalization.</p>
+<p>The numbers can be wrapped in parentheses. This is necessary to access more than 9 substitution indicators.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">format</span><span class="description"><p>The format String for which a substituted
+            version is returned.</p></span></div>
+											<div class="Parameter"><span class="name">arg<1></span><span class="description"><p>Each <em>arg</em> specifies a String indicating the substitution to be made for the
+            corresponding substitution indicator. For example, if arg1 = 'Arnold', the String 'Arnold' will replace %1 each time it is located in <em>format</em>.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String identical to <em>format</em>,
+      but with the substitutions made, if successful; Undefined otherwise. </p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Note that <a class="interdoc" href="#cm_str_valuetostring">Str.ValueToString()</a>, not <a class="interdoc" href="#cm_str_string">Str.String()</a>, is called on all arguments which are not of type String.  Here is an example:</p>
+<div class="codehilite"><pre>Echo<span class="p">(</span> Str<span class="o">.</span>Format<span class="p">(</span> <span class="s">&quot;%4 has %1 %(2), not %(3) %2.&quot;</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="s">&quot;children&quot;</span><span class="p">,</span> Str<span class="o">.</span><span class="kt">String</span><span class="p">(</span> <span class="m">2.3</span> <span class="p">),</span> <span class="s">&quot;Dinosaur Jr.&quot;</span> <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre>Dinosaur Jr<span class="o">.</span> has <span class="m">2</span> children<span class="p">,</span> not <span class="m">2.3</span> children<span class="o">.</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_formatlist">FormatList</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">FormatList</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">formatString</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">List</span> <span class="PrototypeArgumentName">formatList</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a formatted string using the format string, formatString, and argument list, argList. This method is identical to <a class="interdoc" href="#cm_str_format">Str.Format()</a> except the arguments for the format string are contained in a List.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">formatString</span><span class="description"><p>The format String for which a substituted
+            version is returned.</p></span></div>
+											<div class="Parameter"><span class="name">formatList</span><span class="description"><p>A list containing the arguments for the format string.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String identical to <em>formatString</em>,
+      but with the substitutions made, if successful; Undefined otherwise. </p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_frombase64">FromBase64</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">FromBase64</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">aString</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Decodes a String which was encoded using Base64. Base64 is a standard encoding for MIME content, described in RFC 1341. The encoded String consists only of printable ASCII characters, making it useful for exchanging data across networks and between platforms.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">aString</span><span class="description"><p>A Base64-encoded String to decode.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The decoded contents of the specified
+      String.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_fromunicode">FromUnicode</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">FromUnicode</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">value</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts the initial character of a UTF-8 encoded string to its Unicode codepoint. Returns undefined if the string is empty. On characters with codepoints between 0 and 127, this function will behave identically to the deprecated <a class="interdoc" href="#cm_str_ascii">Str.Ascii</a> method. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>String containing character to convert to a unicode codepoint. If the string contains more than one character, only the first will be used.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Unicode codepoint corresponding to the first UTF-8 character in the provided string.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><div class="codehilite"><pre><span class="kt">Integer</span> i <span class="o">=</span> Str<span class="o">.</span>FromUnicode<span class="p">(</span> <span class="s">&#39;é&#39;</span> <span class="p">)</span>
+echo<span class="p">(</span> i <span class="p">)</span>
+
+i <span class="o">=</span> Str<span class="o">.</span>FromUnicode<span class="p">(</span> <span class="s">&#39;a&#39;</span> <span class="p">)</span>
+echo<span class="p">(</span> i <span class="p">)</span>
+</pre></div>
+
+
+<p>outputs</p>
+<div class="codehilite"><pre><span class="m">233</span>
+<span class="m">97</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_hyphenate">Hyphenate</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">List</span> 
+						<span class="PrototypeselfName">Hyphenate</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">aString</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">maxLength</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Breaks a String into multiple segments, each of which is no longer than the number of characters specified in <em>maxLength</em>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">aString</span><span class="description"><p>Specifies the String on which to operate.</p></span></div>
+											<div class="Parameter"><span class="name">maxLength</span><span class="description"><p>Specifies the maximum number of characters
+            to include in any segment, which is one minimum. Hyphenate works
+            heuristically, that is, it attempts to break on white space, but if
+            that cannot be done, then it breaks just after each vowel, unless
+            no vowels are found , in which case the segment is broken at
+            <em>maxLength</em>.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A List containing String elements,
+      each representing a segment of the input String appending a hyphen character
+      to the end of each segment.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Note that in current implementations, the hyphens generated
+    by Hyphenate() are counted outside of the String length, and thus Hyphenate may
+    returns a segment which is one character longer than
+    <em>maxLength</em>, and this character will be
+    the generated hyphen.  An example of this is:</p>
+<div class="codehilite"><pre>Echo<span class="p">(</span> Str<span class="o">.</span>Hyphenate<span class="p">(</span> <span class="s">&quot;significantly&quot;</span><span class="p">,</span> <span class="m">8</span> <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>Which produces:</p>
+<div class="codehilite"><pre><span class="p">{</span><span class="s">&#39;signific-&#39;</span><span class="p">,</span><span class="s">&#39;antly&#39;</span><span class="p">}</span>
+</pre></div>
+
+
+<p>Here is a more typical example of Str.Hyphenate():</p>
+<div class="codehilite"><pre><span class="kt">String</span>  sentence <span class="o">=</span> <span class="s">&quot;This sentence is disgustingly verbose, and it requires significant curtailing.&quot;</span>
+List    lines <span class="o">=</span> Str<span class="o">.</span>Hyphenate<span class="p">(</span> sentence<span class="p">,</span> <span class="m">10</span> <span class="p">)</span>
+<span class="kt">String</span>  line
+
+Echo<span class="p">(</span> sentence <span class="p">)</span>
+Echo<span class="p">(</span> lines <span class="p">)</span>
+<span class="k">for</span> line <span class="o">in</span> lines
+    Echo<span class="p">(</span> line <span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre>This sentence is disgustingly verbose<span class="p">,</span> <span class="o">and</span> it requires significant curtailing<span class="o">.</span>
+<span class="p">{</span><span class="s">&#39;This&#39;</span><span class="p">,</span><span class="s">&#39;sentence&#39;</span><span class="p">,</span><span class="s">&#39;is&#39;</span><span class="p">,</span><span class="s">&#39;disgust-&#39;</span><span class="p">,</span><span class="s">&#39;ingly&#39;</span><span class="p">,</span><span class="s">&#39;verbose,&#39;</span><span class="p">,</span><span class="s">&#39;and it&#39;</span><span class="p">,</span><span class="s">&#39;requires&#39;</span><span class="p">,</span><span class="s">&#39;signific-&#39;</span><span class="p">,</span><span class="s">&#39;ant&#39;</span><span class="p">,</span><span class="s">&#39;curtail-&#39;</span><span class="p">,</span><span class="s">&#39;ing.&#39;</span><span class="p">}</span>
+This
+sentence
+is
+disgust<span class="o">-</span>
+ingly
+verbose<span class="p">,</span>
+<span class="o">and</span> it
+requires
+signific<span class="o">-</span>
+ant
+curtail<span class="o">-</span>
+ing<span class="o">.</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_intlsort">IntlSort</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">IntlSort</span><span class="PrototypePunctuation">(</span> <span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Boolean</span> <span class="PrototypeArgumentName">newValue</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns and optionally sets the
+    international sorting mode. If international sorting is turned on, extended
+    characters will sort properly, since international sorting accounts for multi-byte
+    characters.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">newValue</span><span class="description"><p>Specifies an optional Boolean
+            which, if present, sets international sorting mode.  If present,
+            TRUE indicates that sorting mode should be international.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A Boolean where TRUE indicates that
+      the sort mode is international. If <em>newValue</em>
+      is specified, the function returns the previous sort setting; otherwise,
+      it returns the current setting. </p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_isutf8">IsUTF8</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">IsUTF8</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">inputString</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns True if inputString contains non-english UTF8 characters (i.e. those with codepoints greater than 127), else False.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">inputString</span><span class="description"><p>The string to be tested.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A Boolean where TRUE indicates that
+      <em>inputString</em>
+      contains non-english UTF8 characters, otherwise FALSE.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_join">Join</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">Join</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">List</span> <span class="PrototypeArgumentName">values</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">joinString</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a String which is a concatenation of each
+    element of <em>values</em>, inserting 
+    <em>joinString</em> between consecutive elements if
+    it is specified.  See <a class="interdoc" href="#cm_str_elements">Str.Elements()</a> for performing
+    the opposite function.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">values</span><span class="description"><p>A List containing the values
+            to concatenate. If any element of values is not of type String, a
+            String representation of the value is appended to the resulting String.</p></span></div>
+											<div class="Parameter"><span class="name">joinString</span><span class="description"><p>Specifies an optional String to be
+            inserted between elements of the List in the return value.  If
+            not specified, the default value is the empty String ("").</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String concatenation,
+      if successful; Undefined otherwise.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Remember that
+    <em>joinString</em> is as a separator,
+     and will not be included after the last value.  Here
+     is a short example:</p>
+<div class="codehilite"><pre><span class="kt">String</span> s <span class="o">=</span> Str<span class="o">.</span>Catenate<span class="p">(</span> <span class="p">{</span> <span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;b&#39;</span><span class="p">,</span> <span class="s">&#39;c&#39;</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> Date<span class="o">.</span>Now<span class="p">()</span> <span class="p">},</span> <span class="s">&#39;+&#39;</span> <span class="p">)</span>
+Echo<span class="p">(</span> s <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre>a<span class="o">+</span>b<span class="o">+</span>c<span class="o">+</span><span class="m">1</span><span class="o">+</span>Mon Aug <span class="m">24</span> <span class="m">17</span><span class="o">:</span><span class="m">04</span><span class="o">:</span><span class="m">46</span> <span class="m">1998</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_jstring">JString</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">JString</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">stringToEscape</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">quoteChar</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Escape a string for use in Javascript - non alphanumeric ascii characters are escaped using their hex code in the format \xHH. UTF8 characters are escaped using their code point value in the format \uHHHH.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">stringToEscape</span><span class="description"><p>String to escape for Javascript</p></span></div>
+											<div class="Parameter"><span class="name">quoteChar</span><span class="description"><p>Quote character to delimit the string with (' or ")</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The escaped string</p></div>
+									<h4>Example</h4>
+									<div class="Example"><div class="codehilite"><pre><span class="kt">String</span> s <span class="o">=</span> <span class="s">&quot;Bob O&#39;Connor said &quot;&quot;Hello&quot;&quot; to&quot;</span> <span class="o">+</span> Str<span class="o">.</span>CRLF <span class="o">+</span> <span class="s">&quot;the world.&quot;</span>
+echo<span class="p">(</span> Str<span class="o">.</span>JString<span class="p">(</span> s <span class="p">)</span> <span class="p">)</span>
+echo<span class="p">(</span> Str<span class="o">.</span>JString<span class="p">(</span> s<span class="p">,</span> <span class="s">&#39;&quot;&#39;</span> <span class="p">)</span> <span class="p">)</span>
+
+<span class="kt">String</span> s<span class="m">2</span> <span class="o">=</span> <span class="s">&quot;This is the greek character Sigma Σ&quot;</span>
+echo<span class="p">(</span> Str<span class="o">.</span>JString<span class="p">(</span> s<span class="m">2</span> <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>outputs</p>
+<div class="codehilite"><pre><span class="s">&#39;Bob\x20O\x27Connor\x20said\x20\x22Hello\x22\x20to\x0d\x0athe\x20world\x2e&#39;</span>
+<span class="s">&quot;Bob\x20O\x27Connor\x20said\x20\x22Hello\x22\x20to\x0d\x0athe\x20world\x2e&quot;</span>
+
+<span class="s">&#39;This\x20is\x20the\x20greek\x20character\x20Sigma\x20\u03a3&#39;</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_locate">Locate</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Locate</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">searchInStr</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">searchForStr</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Performs a case-sensitive search
+    for the first occurrence of <em>searchForStr</em>
+    within <em>searchInStr</em>. For a
+    case-insensitive search, see <a class="interdoc" href="#cm_str_locatei">Str.LocateI()</a>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">searchInStr</span><span class="description"><p>A String to search.</p></span></div>
+											<div class="Parameter"><span class="name">searchForStr</span><span class="description"><p>A String for which to search.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An Integer specifying the position
+      (from 1 to n) of the first character of <em>searchForStr</em>
+      within <em>searchInStr</em> if the <em>searchInStr</em>
+      contains the <em>searchForStr</em>; Undefined
+      otherwise. </p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_locatei">LocateI</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">LocateI</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">searchInStr</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">searchForStr</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Performs a case-insensitive search
+    for the first occurrence of <em>searchForStr</em>
+    within <em>searchInStr</em>. LocateI() ends in
+    "I" due to the case-insensitivity; for a case-sensitive
+    version, see <a class="interdoc" href="#cm_str_locate">Str.Locate()</a>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">searchInStr</span><span class="description"><p>The String to search.</p></span></div>
+											<div class="Parameter"><span class="name">searchForStr</span><span class="description"><p>The String for which to search.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An Integer specifying the position
+      (from 1 to n) of the first character of <em>searchForStr</em>
+      within <em>searchInStr</em> if <em>searchInStr</em>
+      contains <em>searchForStr</em>; Undefined
+      otherwise. </p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_lower">Lower</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">Lower</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">aString</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts all alphabetic characters
+    in the specified String to lowercase characters. See <a class="interdoc" href="#cm_str_upper">Str.Upper()</a>, as well as <a class="interdoc" href="#cm_str_capitalize">Str.Capitalize()</a>.</p>
+<p><strong class="note">Warning: This function does not work with non-ASCII characters.</strong></p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">aString</span><span class="description"><p>The String for which a lowercase version is returned.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String identical to the specified
+      String, with all alphabetic characters in lowercase.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is a short example:</p>
+<div class="codehilite"><pre><span class="kt">String</span>  s <span class="o">=</span> <span class="s">&#39;Call the FBI.&#39;</span>
+
+Echo<span class="p">(</span> <span class="s">&#39;&quot;&#39;</span><span class="p">,</span> s<span class="p">,</span> <span class="s">&#39;&quot;-&gt;&quot;&#39;</span><span class="p">,</span> Str<span class="o">.</span>Lower<span class="p">(</span> s <span class="p">),</span> <span class="s">&#39;&quot;&#39;</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre><span class="s">&quot;Call the FBI.&quot;</span><span class="o">-&gt;</span><span class="s">&quot;call the fbi.&quot;</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_quote">Quote</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">Quote</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">aString</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">quote</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>This function adds either single or double quotation
+    marks to the specified String. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">aString</span><span class="description"><p>Specifies the String on which to operate.</p></span></div>
+											<div class="Parameter"><span class="name">quote</span><span class="description"><p>a String containing the quotation
+            marks (either single or double) to add.  The default is a single quote.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String, identical to the original
+      String, but surrounded by quotation marks, with any matching embedded
+      quotation marks doubled.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is a short example:</p>
+<div class="codehilite"><pre><span class="kt">String</span> stringOne <span class="o">=</span> <span class="s">&quot;She can&#39;t remember&quot;</span>
+
+Echo<span class="p">(</span> stringOne <span class="p">)</span>
+Echo<span class="p">(</span> Str<span class="o">.</span>Quote<span class="p">(</span> stringOne <span class="p">)</span> <span class="p">)</span>
+Echo<span class="p">(</span> Str<span class="o">.</span>Quote<span class="p">(</span> stringOne<span class="p">,</span> <span class="s">&#39;&quot;&#39;</span> <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre>She can&#39;t remember
+<span class="s">&#39;She can&#39;&#39;t remember&#39;</span>
+<span class="s">&quot;She can&#39;t remember&quot;</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_rchr">RChr</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">RChr</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">aString</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">ch</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Locates the rightmost occurrence of the first character of <em>ch</em> within <em>aString</em>. See <a class="interdoc" href="#cm_str_chr">Str.Chr()</a> for searching from the beginning of the String.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">aString</span><span class="description"><p>The String to search.</p></span></div>
+											<div class="Parameter"><span class="name">ch</span><span class="description"><p>Specifies a String whose first character will be located from the right of <em>aString</em>.  This is usually a single character.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An Integer specifying the character position (from 1 to n) of the last occurrence of the first character of <em>ch</em> within <em>aString</em>, if found; Undefined otherwise. </p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is a short example:</p>
+<div class="codehilite"><pre>Echo<span class="p">(</span> <span class="s">&quot;Str.RChr( &#39;abcde&#39;, &#39;e&#39; ) = &quot;</span><span class="p">,</span> Str<span class="o">.</span>RChr<span class="p">(</span> <span class="s">&quot;abcde&quot;</span><span class="p">,</span> <span class="s">&quot;e&quot;</span> <span class="p">)</span> <span class="p">)</span>
+Echo<span class="p">(</span> <span class="s">&quot;Str.RChr( &#39;abcde&#39;, &#39;f&#39; ) = &quot;</span><span class="p">,</span> Str<span class="o">.</span>RChr<span class="p">(</span> <span class="s">&quot;abcde&quot;</span><span class="p">,</span> <span class="s">&quot;f&quot;</span> <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre>Str<span class="o">.</span>RChr<span class="p">(</span> <span class="s">&#39;abcde&#39;</span><span class="p">,</span> <span class="s">&#39;e&#39;</span> <span class="p">)</span> <span class="o">=</span> <span class="m">5</span>
+Str<span class="o">.</span>RChr<span class="p">(</span> <span class="s">&#39;abcde&#39;</span><span class="p">,</span> <span class="s">&#39;f&#39;</span> <span class="p">)</span> <span class="o">=</span> <span class="o">?</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_replace">Replace</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">Replace</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">aString</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">find</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">replace</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Performs a single case-sensitive search
+    and replace operation on a String.  For a thorough search and replace
+    see <a class="interdoc" href="#cm_str_replaceall">Str.ReplaceAll()</a>.  The Str.Replace function executes faster
+    than the Pattern.Change function when searching for and replacing simple Strings.</p>
+<p><strong class="note">If <em>find</em> can't be found in <em>aString</em>, Str.Replace will return Undefined.</strong></p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">aString</span><span class="description"><p>A String which is searched.</p></span></div>
+											<div class="Parameter"><span class="name">find</span><span class="description"><p>A String for which to search.</p></span></div>
+											<div class="Parameter"><span class="name">replace</span><span class="description"><p>A String which replaces
+            <em>find</em> when found in
+            <em>aString</em>.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String, identical to the specified
+      String, but with the first instance of <em>find</em>
+      replaced with <em>replace</em>, if found;
+      Undefined otherwise. </p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is a short example:</p>
+<div class="codehilite"><pre><span class="kt">String</span> replaceString <span class="o">=</span> <span class="s">&#39;A good apple is available.&#39;</span>
+Echo<span class="p">(</span> replaceString <span class="p">)</span>
+Echo<span class="p">(</span> Str<span class="o">.</span>Replace<span class="p">(</span> replaceString<span class="p">,</span> <span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;b&#39;</span> <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre>A good apple is available<span class="o">.</span>
+A good bpple is available<span class="o">.</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_replaceall">ReplaceAll</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">ReplaceAll</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">aString</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">find</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">replace</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Performs an exhaustive case-sensitive search and replace on a String, returning a new String copy with all instances of the String <em>find</em> replaced with <em>replace</em>. <a class="interdoc" href="#cm_str_replace">Str.Replace()</a> only replaces the first occurrence.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">aString</span><span class="description"><p>A String to search.</p></span></div>
+											<div class="Parameter"><span class="name">find</span><span class="description"><p>The String for which to search.</p></span></div>
+											<div class="Parameter"><span class="name">replace</span><span class="description"><p>The String which replaces <em>find</em>.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String, identical to the specified String, but with all instances of <em>find</em> replaced with <em>replace</em> if found.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is a short example:</p>
+<div class="codehilite"><pre><span class="kt">String</span>  s <span class="o">=</span> <span class="s">&quot;Even exercising weekly is energizing.&quot;</span>
+
+Echo<span class="p">(</span> s <span class="p">)</span>
+Echo<span class="p">(</span> Str<span class="o">.</span>ReplaceAll<span class="p">(</span> s<span class="p">,</span> <span class="s">&quot;e&quot;</span><span class="p">,</span> <span class="s">&quot;3&quot;</span> <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre>Even exercising weekly is energizing<span class="o">.</span>
+Ev<span class="m">3</span>n <span class="m">3</span>x<span class="m">3</span>rcising w<span class="m">33</span>kly is <span class="m">3</span>n<span class="m">3</span>rgizing<span class="o">.</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_set">Set</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">Set</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">length</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">value</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a String of the specified length consisting solely of the first character in the specified String. This function is useful for creating formatted columns of text. The strings this function produces have a limit of 2147483648 (2<sup>31</sup>) characters. </p>
+<p><strong class="note">This function is not safe for use with non-ASCII characters.</strong></p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">length</span><span class="description"><p>Specifies either an Integer or a String. If an Integer is specified, the resulting String is <em>length</em> characters long. If a String is specified, the resulting String is Length( <em>length</em> ) characters long. If a negative integer is provided, it is treated as though a length of 0 was passed in instead.</p></span></div>
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>A String whose first character is repeated <em>length</em> times in the resulting String.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String of the specified length consisting solely of the first character in <em>value</em>.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is a short example:</p>
+<div class="codehilite"><pre>Echo<span class="p">(</span> Str<span class="o">.</span>Set<span class="p">(</span> <span class="m">8</span><span class="p">,</span> <span class="s">&quot;*&quot;</span> <span class="p">),</span> <span class="s">&quot; Important Message &quot;</span><span class="p">,</span> Str<span class="o">.</span>Set<span class="p">(</span> <span class="m">8</span><span class="p">,</span> <span class="s">&quot;!&quot;</span> <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre><span class="o">********</span> Important Message <span class="o">!!!!!!!!</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_sjis2jis">SJis2Jis</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">SJis2Jis</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">aString</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts a Shift-JIS String to JIS format. Content Server
+    processes Japanese text as Shift-JIS internally, but JIS is often a more useful
+    format for exchanging textual data across networks and between platforms.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">aString</span><span class="description"><p>A string to convert.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String, identical to the specified
+      String, but converted from Shift-JIS format to JIS format. In addition,
+      half-width (hankaku) characters are converted to full-width (zenkaku).</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_spn">Spn</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Spn</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">aString</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">searchChars</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Determines the length of the maximum
+    initial segment of <em>aString</em> that consists
+    solely of characters that are in <em>searchChars</em>. See <a class="interdoc" href="#cm_str_cspn">Str.CSpn()</a>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">aString</span><span class="description"><p>A String in which to search.</p></span></div>
+											<div class="Parameter"><span class="name">searchChars</span><span class="description"><p>A String containing the characters
+            for which to search.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An Integer indicating the length of the segment of <em>aString</em> that contains only characters found in <em>searchChars</em>. Returns 0 if no <em>searchChars</em> characters are found. </p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>The following table demonstrates the use and output of Str.Spn() for various Strings:</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_sqlstring">SQLString</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">SQLString</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">value</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts the specified value to a String that can be 
+    used in a SQL statement. Unlike <a class="interdoc" href="#cm_str_string">Str.String()</a>, passing in a 
+    String value will return a different String. If an Error
+    is specified, the message associated with that Error is returned.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>A value of any type to be converted to a SQL friendly string.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String representation of the specified value intended for inclusion in a SQL statement.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Note that Str.SQLString() is meant for producing SQL usable strings. Cases where the value is being converted to a String for internal use such as storage or transmission, then <a class="interdoc" href="#cm_str_valuetostring">Str.ValueToString()</a> should be used instead.
+    Also, cases where a user-presentable string is required, <a class="interdoc" href="#cm_str_string">Str.String()</a> should be used instead.</p>
+<div class="codehilite"><pre>Here is an example demonstrating the difference between Str<span class="o">.</span>SQLString<span class="p">(),</span> <span class="p">[[</span>Str<span class="o">.</span><span class="kt">String</span><span class="p">]]</span> <span class="o">and</span> <span class="p">[[</span>Str<span class="o">.</span>ValueToString<span class="p">()]]</span> on several common data types<span class="o">:</span>
+
+List    values <span class="o">=</span> <span class="p">{</span> <span class="s">&quot;2 o&#39;clock&quot;</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">27.8</span><span class="p">,</span> Date<span class="o">.</span>Now<span class="p">(),</span> <span class="p">{</span><span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;b&#39;</span><span class="p">,</span> <span class="s">&#39;c&#39;</span><span class="p">},</span> <span class="p">{</span><span class="m">12</span><span class="p">,</span> <span class="m">3.14</span><span class="p">,</span> <span class="m">18008675309</span><span class="p">},</span> <span class="p">{</span> <span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">},</span> <span class="p">{</span><span class="m">4</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">6</span><span class="p">}</span> <span class="p">}</span> <span class="p">}</span>
+<span class="kt">Dynamic</span> val
+
+<span class="k">for</span> val <span class="o">in</span> values
+    Echo<span class="p">(</span> <span class="s">&#39;Str.SQLString() is &quot;&#39;</span><span class="p">,</span> \
+          Str<span class="o">.</span>SQLString<span class="p">(</span> val <span class="p">),</span> \
+          <span class="s">&#39;&quot; while Str.String() is &quot;&#39;</span><span class="p">,</span>\
+          Str<span class="o">.</span><span class="kt">String</span><span class="p">(</span> val <span class="p">),</span> \
+          <span class="s">&#39;&quot; and Str.ValueToString() is &quot;&#39;</span><span class="p">,</span> \
+          Str<span class="o">.</span>ValueToString<span class="p">(</span> val <span class="p">),</span> \
+          <span class="s">&#39;&quot;.&#39;</span> <span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre>Str<span class="o">.</span>SQLString<span class="p">()</span> is <span class="s">&quot;&#39;2 o&#39;&#39;clock&#39;&quot;</span> <span class="k">while</span> Str<span class="o">.</span><span class="kt">String</span><span class="p">()</span> is <span class="s">&quot;2 o&#39;clock&quot;</span> <span class="o">and</span> Str<span class="o">.</span>ValueToString<span class="p">()</span> is <span class="s">&quot;&#39;2 o\&#39;clock&#39;&quot;</span><span class="o">.</span>
+Str<span class="o">.</span>SQLString<span class="p">()</span> is <span class="s">&quot;1&quot;</span> <span class="k">while</span> Str<span class="o">.</span><span class="kt">String</span><span class="p">()</span> is <span class="s">&quot;1&quot;</span> <span class="o">and</span> Str<span class="o">.</span>ValueToString<span class="p">()</span> is <span class="s">&quot;1&quot;</span><span class="o">.</span>
+Str<span class="o">.</span>SQLString<span class="p">()</span> is <span class="s">&quot;27.8&quot;</span> <span class="k">while</span> Str<span class="o">.</span><span class="kt">String</span><span class="p">()</span> is <span class="s">&quot;27.8&quot;</span> <span class="o">and</span> Str<span class="o">.</span>ValueToString<span class="p">()</span> is <span class="s">&quot;G27.8&quot;</span><span class="o">.</span>
+Str<span class="o">.</span>SQLString<span class="p">()</span> is <span class="s">&quot;Thu May 10 11:33:12 2012&quot;</span> <span class="k">while</span> Str<span class="o">.</span><span class="kt">String</span><span class="p">()</span> is <span class="s">&quot;Thu May 10 11:33:12 2012&quot;</span> <span class="o">and</span> Str<span class="o">.</span>ValueToString<span class="p">()</span> is <span class="s">&quot;D/2012/5/10:11:33:12&quot;</span><span class="o">.</span>
+Str<span class="o">.</span>SQLString<span class="p">()</span> is <span class="s">&quot;(&#39;a&#39;,&#39;b&#39;,&#39;c&#39;)&quot;</span> <span class="k">while</span> Str<span class="o">.</span><span class="kt">String</span><span class="p">()</span> is <span class="s">&quot;{&#39;a&#39;,&#39;b&#39;,&#39;c&#39;}&quot;</span> <span class="o">and</span> Str<span class="o">.</span>ValueToString<span class="p">()</span> is <span class="s">&quot;{&#39;a&#39;,&#39;b&#39;,&#39;c&#39;}&quot;</span><span class="o">.</span>
+Str<span class="o">.</span>SQLString<span class="p">()</span> is <span class="s">&quot;(12,3.14,18008675309)&quot;</span> <span class="k">while</span> Str<span class="o">.</span><span class="kt">String</span><span class="p">()</span> is <span class="s">&quot;{12,G3.14,L18008675309}&quot;</span> <span class="o">and</span> Str<span class="o">.</span>ValueToString<span class="p">()</span> is <span class="s">&quot;{12,G3.14,L18008675309}&quot;</span><span class="o">.</span>
+Str<span class="o">.</span>SQLString<span class="p">()</span> is <span class="s">&quot;((1,2,3),(4,5,6))&quot;</span> <span class="k">while</span> Str<span class="o">.</span><span class="kt">String</span><span class="p">()</span> is <span class="s">&quot;{{1,2,3},{4,5,6}}&quot;</span> <span class="o">and</span> Str<span class="o">.</span>ValueToString<span class="p">()</span> is <span class="s">&quot;{{1,2,3},{4,5,6}}&quot;</span><span class="o">.</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_string">String</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">String</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">value</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Boolean</span> <span class="PrototypeArgumentName">displayString</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts the specified value to a presentable String. If a
+    String value is specified, that same String value is returned. If an Error
+    is specified, the message associated with that Error is returned.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>A value of any type to be
+            converted to a presentable String.</p></span></div>
+											<div class="Parameter"><span class="name">displayString</span><span class="description"><p>If FALSE (default), a display-friendly version
+            of <em>value</em> will be returned,
+            otherwise the result is equivalent to that returned by
+            <a class="interdoc" href="#cm_str_valuetostring">Str.ValueToString()</a>.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String representation of the specified
+      value.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Note that Str.String() is meant for producing
+    presentable, or "display-friendly", String representations of a value.
+    Cases where the value is being converted to a String for internal
+    use such as storage or transmission, then
+    <a class="interdoc" href="#cm_str_valuetostring">Str.ValueToString()</a> should be used instead.
+    Here is an example demonstrating the difference between Str.String()
+    and <a class="interdoc" href="#cm_str_valuetostring">Str.ValueToString()</a> on several common data types:</p>
+<div class="codehilite"><pre>List    values <span class="o">=</span> <span class="p">{</span> <span class="s">&quot;A String&quot;</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">27.8</span><span class="p">,</span> Date<span class="o">.</span>Now<span class="p">()</span> <span class="p">}</span>
+<span class="kt">Dynamic</span> val
+
+<span class="k">for</span> val <span class="o">in</span> values
+    Echo<span class="p">(</span> <span class="s">&#39;Str.String() is &quot;&#39;</span><span class="p">,</span> \
+          Str<span class="o">.</span><span class="kt">String</span><span class="p">(</span> val <span class="p">),</span> \
+          <span class="s">&#39;&quot; while Str.ValueToString() is &quot;&#39;</span><span class="p">,</span> \
+          Str<span class="o">.</span>ValueToString<span class="p">(</span> val <span class="p">),</span> \
+          <span class="s">&#39;&quot;.&#39;</span> <span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre>Str<span class="o">.</span><span class="kt">String</span><span class="p">()</span> is <span class="s">&quot;A String&quot;</span> <span class="k">while</span> Str<span class="o">.</span>ValueToString<span class="p">()</span> is <span class="s">&quot;&#39;A String&#39;&quot;</span><span class="o">.</span>
+Str<span class="o">.</span><span class="kt">String</span><span class="p">()</span> is <span class="s">&quot;1&quot;</span> <span class="k">while</span> Str<span class="o">.</span>ValueToString<span class="p">()</span> is <span class="s">&quot;1&quot;</span><span class="o">.</span>
+Str<span class="o">.</span><span class="kt">String</span><span class="p">()</span> is <span class="s">&quot;27.8&quot;</span> <span class="k">while</span> Str<span class="o">.</span>ValueToString<span class="p">()</span> is <span class="s">&quot;G27.8&quot;</span><span class="o">.</span>
+Str<span class="o">.</span><span class="kt">String</span><span class="p">()</span> is <span class="s">&quot;Wed Aug 26 19:46:23 1998&quot;</span> <span class="k">while</span> Str<span class="o">.</span>ValueToString<span class="p">()</span> is <span class="s">&quot;D/1998/8/26:19:46:23&quot;</span><span class="o">.</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_stringtointeger">StringToInteger</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">StringToInteger</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">aString</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts a String to an Integer. See
+    <a class="interdoc" href="#cm_str_stringtoreal">Str.StringToReal()</a> to convert a String
+    containing a numerical value into a Real.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">aString</span><span class="description"><p>Specifies a String representation of
+            an Integer.  It can only contain a leading +/- sign and digits, as
+            well as leading and/or trailing space.  However any unary +/- sign
+            should directly precede the first digit.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An Integer, if the specified String
+      can be interpreted as an Integer; Undefined otherwise.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is an example testing various Strings.</p>
+<div class="codehilite"><pre>List    values <span class="o">=</span> <span class="p">{</span> <span class="s">&#39;222.2345&#39;</span><span class="p">,</span> <span class="s">&#39;333&#39;</span><span class="p">,</span> <span class="s">&#39; 898&#39;</span><span class="p">,</span> <span class="s">&#39;222 &#39;</span><span class="p">,</span> <span class="s">&#39; -27 &#39;</span><span class="p">,</span> <span class="s">&#39; - 27&#39;</span><span class="p">,</span> <span class="s">&#39; +33 &#39;</span> <span class="p">}</span>
+<span class="kt">String</span>  s
+
+<span class="k">for</span> s <span class="o">in</span> values
+    Echo<span class="p">(</span> <span class="s">&#39;Str.StringToInteger( &quot;&#39;</span><span class="p">,</span> s<span class="p">,</span> <span class="s">&#39;&quot; ) = &quot;&#39;</span><span class="p">,</span> Str<span class="o">.</span>StringToInteger<span class="p">(</span> s <span class="p">),</span> <span class="s">&#39;&quot;.&#39;</span> <span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre>Str<span class="o">.</span>StringToInteger<span class="p">(</span> <span class="s">&quot;222.2345&quot;</span> <span class="p">)</span> <span class="o">=</span> <span class="s">&quot;?&quot;</span><span class="o">.</span>
+Str<span class="o">.</span>StringToInteger<span class="p">(</span> <span class="s">&quot;333&quot;</span> <span class="p">)</span> <span class="o">=</span> <span class="s">&quot;333&quot;</span><span class="o">.</span>
+Str<span class="o">.</span>StringToInteger<span class="p">(</span> <span class="s">&quot; 898&quot;</span> <span class="p">)</span> <span class="o">=</span> <span class="s">&quot;898&quot;</span><span class="o">.</span>
+Str<span class="o">.</span>StringToInteger<span class="p">(</span> <span class="s">&quot;222 &quot;</span> <span class="p">)</span> <span class="o">=</span> <span class="s">&quot;222&quot;</span><span class="o">.</span>
+Str<span class="o">.</span>StringToInteger<span class="p">(</span> <span class="s">&quot; -27 &quot;</span> <span class="p">)</span> <span class="o">=</span> <span class="s">&quot;-27&quot;</span><span class="o">.</span>
+Str<span class="o">.</span>StringToInteger<span class="p">(</span> <span class="s">&quot; - 27&quot;</span> <span class="p">)</span> <span class="o">=</span> <span class="s">&quot;?&quot;</span><span class="o">.</span>
+Str<span class="o">.</span>StringToInteger<span class="p">(</span> <span class="s">&quot; +33 &quot;</span> <span class="p">)</span> <span class="o">=</span> <span class="s">&quot;33&quot;</span><span class="o">.</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_stringtoreal">StringToReal</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Real</span> 
+						<span class="PrototypeselfName">StringToReal</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">aString</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts the specified String to a Real. See
+    <a class="interdoc" href="#cm_str_stringtointeger">Str.StringToInteger()</a> to convert a String
+    containing a numerical value into an Integer.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">aString</span><span class="description"><p>A String representation of a Real, in
+            basically the same format as is acceptable in the C programming language,
+            The format is "[+-]X[.Y[e[+-]Z]]" where optional parts are bracketed,
+            and the letters X, Y, and Z indicate any number of digits of the
+            number, decimal, and exponent parts, respectively.  It should be noted
+            that X is optional if Y is present, and the 'e' character which
+            prefixes the exponent part may be of any case.
+            The String may contain leading or trailing spaces, but no spaces within
+            the number text block.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A Real, if the specified String
+      can be interpreted as a real number; Undefined otherwise.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is an example demonstrating the flexibility
+    of Str.StringToReal():</p>
+<div class="codehilite"><pre>List    values <span class="o">=</span> <span class="p">{</span> <span class="s">&#39;222.2345&#39;</span><span class="p">,</span> <span class="s">&#39; -27 &#39;</span><span class="p">,</span> <span class="s">&#39; - 27&#39;</span><span class="p">,</span> <span class="s">&#39; +33 &#39;</span><span class="p">,</span> <span class="s">&#39; 4.2e-7 &#39;</span><span class="p">,</span> <span class="s">&#39;4.2e -7&#39;</span><span class="p">,</span> <span class="s">&#39;4.2E+7&#39;</span><span class="p">,</span> <span class="s">&#39;.004&#39;</span> <span class="p">}</span>
+<span class="kt">String</span>  s
+
+<span class="k">for</span> s <span class="o">in</span> values
+    Echo<span class="p">(</span> <span class="s">&#39;Str.StringToReal( &quot;&#39;</span><span class="p">,</span> s<span class="p">,</span> <span class="s">&#39;&quot; ) = &quot;&#39;</span><span class="p">,</span> Str<span class="o">.</span>StringToReal<span class="p">(</span> s <span class="p">),</span> <span class="s">&#39;&quot;.&#39;</span> <span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre>Str<span class="o">.</span>StringToReal<span class="p">(</span> <span class="s">&quot;222.2345&quot;</span> <span class="p">)</span> <span class="o">=</span> <span class="s">&quot;222.2345&quot;</span><span class="o">.</span>
+Str<span class="o">.</span>StringToReal<span class="p">(</span> <span class="s">&quot; -27 &quot;</span> <span class="p">)</span> <span class="o">=</span> <span class="s">&quot;-27&quot;</span><span class="o">.</span>
+Str<span class="o">.</span>StringToReal<span class="p">(</span> <span class="s">&quot; - 27&quot;</span> <span class="p">)</span> <span class="o">=</span> <span class="s">&quot;?&quot;</span><span class="o">.</span>
+Str<span class="o">.</span>StringToReal<span class="p">(</span> <span class="s">&quot; +33 &quot;</span> <span class="p">)</span> <span class="o">=</span> <span class="s">&quot;33&quot;</span><span class="o">.</span>
+Str<span class="o">.</span>StringToReal<span class="p">(</span> <span class="s">&quot; 4.2e-7 &quot;</span> <span class="p">)</span> <span class="o">=</span> <span class="s">&quot;4.2e-007&quot;</span><span class="o">.</span>
+Str<span class="o">.</span>StringToReal<span class="p">(</span> <span class="s">&quot;4.2e -7&quot;</span> <span class="p">)</span> <span class="o">=</span> <span class="s">&quot;?&quot;</span><span class="o">.</span>
+Str<span class="o">.</span>StringToReal<span class="p">(</span> <span class="s">&quot;4.2E+7&quot;</span> <span class="p">)</span> <span class="o">=</span> <span class="s">&quot;42000000&quot;</span><span class="o">.</span>
+Str<span class="o">.</span>StringToReal<span class="p">(</span> <span class="s">&quot;.004&quot;</span> <span class="p">)</span> <span class="o">=</span> <span class="s">&quot;0.004&quot;</span><span class="o">.</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_stringtovalue">StringToValue</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Dynamic</span> 
+						<span class="PrototypeselfName">StringToValue</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">aString</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts a String resulting from
+    the <a class="interdoc" href="#cm_str_valuetostring">Str.ValueToString()</a> back to a value of its original
+    type. Strings for <em>aString</em>
+    other than those created with ValueToString()
+    can yield unpredictable results.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">aString</span><span class="description"><p>A String value returned by
+            <a class="interdoc" href="#cm_str_valuetostring">Str.ValueToString()</a>.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A value of the appropriate type
+      as converted from <em>aString</em>.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_strip">Strip</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">Strip</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">aString</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">stripChars</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Removes all occurrences of the specified
+    characters from a String. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">aString</span><span class="description"><p>The String for which a stripped version is returned.</p></span></div>
+											<div class="Parameter"><span class="name">stripChars</span><span class="description"><p>The characters to strip from
+            <em>aString</em>. If <em>stripChars</em>
+            contains multiple characters, all of these characters are removed
+            from <em>aString</em>, regardless
+            of their order.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String, identical to <em>aString</em>,
+      but with all occurrences of the characters in <em>stripChars</em>
+      removed. </p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is a short example:</p>
+<div class="codehilite"><pre><span class="kt">String</span>  s <span class="o">=</span> <span class="s">&quot;No!  I&#39;m without space or punctuation.&quot;</span>
+
+Echo<span class="p">(</span> s <span class="p">)</span>
+Echo<span class="p">(</span> Str<span class="o">.</span>Strip<span class="p">(</span> s<span class="p">,</span> <span class="s">&quot;! .&#39;&quot;</span> <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre>No<span class="o">!</span>  I&#39;m without space <span class="o">or</span> punctuation<span class="o">.</span>
+NoImwithoutspaceorpunctuation
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_substitute">Substitute</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">Substitute</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">aString</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">substitutions</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>This function replaces tokens in <em>aString</em>
+    with values from <em>substitutions</em>. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">aString</span><span class="description"><p>The string for which a substituted
+            version will be returned. Tokens must be in the following format:
+            "%tokenName%".</p></span></div>
+											<div class="Parameter"><span class="name">substitutions</span><span class="description"><p>Specifies a List, Record, or RecArray
+            containing the values to substitute for each token. If <em>substitutions</em>
+            is a List, each element must be a List in the following format:
+            <pre class="ExampleCode">{ tokenName, value }</pre>
+            If <em>substitutions</em>
+            is a Record, the function substitutes the value in the field whose
+            field name corresponds to the token name for each token. If <em>substitutions</em>
+            is a RecArray, the function substitutes the value in the field of
+            the first Record whose field name corresponds to the token name for
+            each token.  Token comparison is not case-sensitive.  Note that the
+            substituted items must be Strings, or the substitution will resolve
+            to an error String ("!KOSValue error string!").</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String copy of the original, but with
+      substitutions made.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p><a class="interdoc" href="#cm_str_format">Str.Format()</a> is easier
+    to use for performing simple String substitution.  Substitute() is only used
+    when values are drawn directly from a RecArray or List, usually as the result
+    of data processing or some query. Here is a short example:</p>
+<div class="codehilite"><pre><span class="kt">String</span>  s <span class="o">=</span> <span class="s">&quot;The items are %1%, %two%, and %THREE%&quot;</span>
+List    values <span class="o">=</span> <span class="p">{</span> <span class="p">{</span> <span class="s">&quot;1&quot;</span><span class="p">,</span> <span class="s">&quot;cats&quot;</span> <span class="p">},</span> \
+                   <span class="p">{</span> <span class="s">&quot;two&quot;</span><span class="p">,</span> <span class="s">&quot;cows&quot;</span> <span class="p">},</span> \
+                   <span class="p">{</span> <span class="s">&quot;three&quot;</span><span class="p">,</span> Str<span class="o">.</span><span class="kt">String</span><span class="p">(</span> Date<span class="o">.</span>Now<span class="p">()</span> <span class="p">)</span> <span class="p">}</span> <span class="p">}</span>
+
+Echo<span class="p">(</span> <span class="s">&#39;Str.Substitute( &quot;&#39;</span><span class="p">,</span> s<span class="p">,</span> <span class="s">&#39;&quot; ) = &quot;&#39;</span><span class="p">,</span> Str<span class="o">.</span>Substitute<span class="p">(</span> s<span class="p">,</span> values <span class="p">),</span> <span class="s">&#39;&quot;.&#39;</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre>Str<span class="o">.</span>Substitute<span class="p">(</span> <span class="s">&quot;The items are %1%, %two%, and %THREE%&quot;</span> <span class="p">)</span> <span class="o">=</span> <span class="s">&quot;The items are cats, cows, and Tue Aug 25 21:24:37 1998&quot;</span><span class="o">.</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_tab">Tab</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">Tab</span><span class="PrototypePunctuation">(</span><span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>This function returns a tab character. Using the
+    Str.Tab function is preferable to using <a class="interdoc" href="#cm_str_ascii">Str.Ascii()</a> to generate
+    a tab character, allowing the script to be run on a machine that does not
+    use the ASCII character set.</p>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String containing the tab character.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_tobase64">ToBase64</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">ToBase64</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">aString</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Encodes the specified String using the Base64
+    encoding. Base64 is a standard encoding for MIME content, described in RFC
+    1341. The encoded String consists only of printable ASCII characters, making
+    it useful for exchanging data across networks and between platforms. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">aString</span><span class="description"><p>A String to be encoded.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The encoded version of the specified
+      String. Note that the result will be approximately 33% longer than the original
+      String.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_tounicode">ToUnicode</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">ToUnicode</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">codepoint</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts a Unicode codepoint to a string containing the corresponding character. On codepoints between 0 and 127, this function will behave identically to the deprecated <a class="interdoc" href="#cm_str_ascii">Str.Ascii</a> method.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">codepoint</span><span class="description"><p>Unicode codepoint</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>String containing character corresponding to provided Unicode codepoint.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><div class="codehilite"><pre><span class="kt">String</span> s <span class="o">=</span> Str<span class="o">.</span>ToUnicode<span class="p">(</span> <span class="m">233</span> <span class="p">)</span>
+echo<span class="p">(</span> s <span class="p">)</span>
+
+s <span class="o">=</span> Str<span class="o">.</span>ToUnicode<span class="p">(</span> <span class="m">97</span> <span class="p">)</span>
+echo<span class="p">(</span> s <span class="p">)</span>
+</pre></div>
+
+
+<p>outputs</p>
+<div class="codehilite"><pre>é
+a
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_trim">Trim</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">Trim</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">aString</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Removes all leading and trailing white
+    space from the specified String. White space is defined as any combination
+    of spaces, form feeds, new lines, carriage returns, and horizontal or vertical
+    tabs.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">aString</span><span class="description"><p>The String for which a trimmed version is returned.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String, identical to the specified
+      String, but with all leading and trailing white space removed.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>See <a class="interdoc" href="#cm_str_collapse">Str.Collapse()</a> for
+    a function which removes internal spaces as well.  Here is a short example:</p>
+<div class="codehilite"><pre><span class="kt">String</span>  s <span class="o">=</span> <span class="s">&quot;   &quot;</span> <span class="o">+</span> Str<span class="o">.</span>Tab<span class="p">()</span> <span class="o">+</span> <span class="s">&quot;This is a sentence.  &quot;</span> <span class="o">+</span> Str<span class="o">.</span>CRLF <span class="o">+</span> Str<span class="o">.</span>CRLF
+
+Echo<span class="p">(</span> <span class="s">&#39;Str.Trim( &quot;&#39;</span><span class="p">,</span> s<span class="p">,</span> <span class="s">&#39;&quot; ) = &quot;&#39;</span><span class="p">,</span> Str<span class="o">.</span>Trim<span class="p">(</span> s <span class="p">),</span> <span class="s">&#39;&quot;.&#39;</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre>Str<span class="o">.</span>Trim<span class="p">(</span> &quot;     This is a sentence<span class="o">.</span>
+
+<span class="s">&quot; ) = &quot;</span>This is a sentence<span class="o">.</span>&quot;<span class="o">.</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_upper">Upper</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">Upper</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">aString</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts all alphabetic characters
+    in the specified String to uppercase. See <a class="interdoc" href="#cm_str_lower">Str.Lower()</a>,
+    as well as <a class="interdoc" href="#cm_str_capitalize">Str.Capitalize()</a></p>
+<p><strong class="note">Warning: This function does not work with non-ASCII characters.</strong></p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">aString</span><span class="description"><p>The String for which an uppercase version is returned.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String, identical to the specified
+      String, but with all alphabetic characters converted to uppercase characters.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is a short example:</p>
+<div class="codehilite"><pre><span class="kt">String</span>  s <span class="o">=</span> <span class="s">&#39;Call the FBI.&#39;</span>
+
+Echo<span class="p">(</span> <span class="s">&#39;&quot;&#39;</span><span class="p">,</span> s<span class="p">,</span> <span class="s">&#39;&quot;-&gt;&quot;&#39;</span><span class="p">,</span> Str<span class="o">.</span>Upper<span class="p">(</span> s <span class="p">),</span> <span class="s">&#39;&quot;&#39;</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre><span class="s">&quot;Call the FBI.&quot;</span><span class="o">-&gt;</span><span class="s">&quot;CALL THE FBI.&quot;</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_str_valuetostring">ValueToString</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">ValueToString</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">value</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Converts a value of any type to a String. The
+    data type of the original value is retained in the String representation so
+    that the resulting String can be converted back to a value of its
+    original type with <a class="interdoc" href="#cm_str_stringtovalue">Str.StringToValue()</a>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">value</span><span class="description"><p>Specifies a value of any type to be
+            converted to a String. The result from passing values of data types
+            other than Error, Integer, Date, Boolean, Real, String, List, Assoc,
+            or RecArray can be unpredictable.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String representation of the specified
+      value.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Note that ValueToString() differs from
+    <a class="interdoc" href="#cm_str_string">Str.String()</a> in that it textually serializes
+    values, while <a class="interdoc" href="#cm_str_string">Str.String()</a> converts values to a user-presentable format.
+    The output of ValueToString() can be stored in a file, or sent across
+    a socket, and be reconstituted at a different time or location.</p></div>
+							</div>
+						</div>
+				</div>
+		
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2018 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+
+
+
+</div>
+	</div>						
+						
+
+</div>
+
+</body></html>

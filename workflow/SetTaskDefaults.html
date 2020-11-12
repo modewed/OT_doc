@@ -1,0 +1,62 @@
+<HTML>
+<HEAD>
+<TITLE>SetTaskDefaults()</TITLE>
+
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<script language="JavaScript">updateParentHeader( 'Code' );</script>
+<script language="JavaScript">includeContentContainer( 'wfbuilder', true );</script>
+<p>
+
+
+<p class="title">SetTaskDefaults()</p>
+<p class="body">This code sample describes how to specify the default information required by
+Livelink to recognize the custom display step type. This is also where you specify data that
+must be present if the creator of the workflow map does not edit the step before the
+workflow is initiated.</p>
+<pre class="code">
+	Function Void SetTaskDefaults( \
+		Object prgCtx, \
+		Record taskRec, \
+		Dynamic context = Undefined )
+
+		//Set values for the default information required by Livelink to
+		//recognize the custom display step type. The fType and fSubType
+		//values store unique integers that identify the step type.
+
+		taskRec.TYPE = .fType
+		taskRec.SUBTYPE = .fSubType
+		taskRec.EXATTS = Assoc.CreateAssoc( Assoc.NotSetValue() )
+		taskRec.CUSTOMDATA = Assoc.CreateAssoc( Assoc.NotSetValue() )
+		taskRec.FLAGS = 0
+
+		//Specify the name of the step and the performer ID associated
+		//with the step. These values are displayed as default values on
+		//the Custom Display Step Definition page when a custom display
+		//step is edited for the first time.
+
+		if ( !IsDefined( context ) )
+			taskRec.TITLE = Str.String( .fTaskName )
+			taskRec.PERFORMERID = Undefined
+		else
+			taskRec.TITLE = context.NAME
+			taskRec.PERFORMERID = context.ID
+		end
+
+		taskRec.EXATTS.GroupFlags = $WFMain.WFConst.kWFGroupStandard
+
+		//If the creator of the workflow map chose a script from the
+		//Script to run field on the Custom Display Step Definition page
+		//for this step, set the script to run when the step is ready, by
+		//default.
+
+		taskRec.EXATTS.RunScript = 'ReadyCB'
+	end</pre>
+
+<script language="JavaScript">IncludeFooter();</script>
+</body>
+</html>

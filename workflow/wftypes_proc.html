@@ -1,0 +1,60 @@
+<HTML>
+<HEAD>
+<TITLE>Adding New Workflow Types: Procedures</TITLE>
+
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<script language="JavaScript">updateParentHeader( 'Workflow Types' );</script>
+<script language="JavaScript">includeContentContainer( 'wfbuilder', true );</script>
+
+<p class="body">
+<p class="title">Adding New Workflow Types: Procedures</p>
+<p class="body">
+This example describes how to create a workflow type that adds the 
+current date to the end of a workflow name in the Content Server Title 
+bar and runs a callback script before the corresponding workflow 
+is initiated. </p>
+
+<p class="infin">To add a custom workflow type to the custom module:</p>
+<ol>
+	<li class="body">Orphan 
+	<span class="code">WFMain:WFRoot:WFCustomScriptPkg</span> 
+	in your custom module's OSpace, and name it 
+	<span class="code">WFCustomScriptPkg</span>.</p>
+	<li class="body"> Create a child of the 
+	<span class="code">WFCustomScriptPkg</span> object, and name it
+	<span class="code">CustomWorkflowTypes</span>.</p>
+	This object contains the information required to create custom workflow types.</p>
+	<li class="body">In the Globals object, run the BuildOSpace() script.</p>
+	<li class="body">Override the following scripts:</p>
+		<ul type="disc">
+			<li class="body"><a href="cbexecutewftypes.html">CBExecute()</a></p>
+			<li class="body"><a href="getwftypename.html">GetWFTypeName()</a></p>
+			<li class="body"><a href="getwftypes.html">GetWFTypes()</a></p>
+			<li class="body"><a href="startwf.html">StartWF()</a></li>
+		</ul>
+</ol>
+
+<p class="body">You have created the objects necessary to add a 
+workflow type to Content Server. Now you must provide the code required 
+to perform the custom operations.</p>
+
+<p class="body">Because the <span class="code">WFCustomScriptPkg</span> object is a 
+superclass object, it may contain many child objects. If you want 
+a particular custom operation to be performed by only one of those 
+child objects, you can use the <span class="code">handled</span>
+variable. When a custom operation needs to be performed, the child
+objects of the <span class="code">WFCustomScriptPkg</span> object are 
+passed the information in order. When the <span class="code">handled</span> 
+variable is set to <span class="code">TRUE</span>, the operation 
+was performed successfully; otherwise, the information is passed to the
+remaining child objects.</dl>
+        
+<script language="JavaScript">IncludeFooter();</script>
+
+</BODY>
+</html>

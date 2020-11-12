@@ -1,0 +1,646 @@
+
+<meta charset="UTF-8">
+<html>
+<head><title>Class: Frame</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../syntax.css" type="text/css">
+<link rel="stylesheet" href="builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td  align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody></table>
+
+<div id="document">
+	
+<div class="sidebar_container">
+		
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink"><a href="assoc.html">Assoc</a></div>
+				<div class="packagelink"><a href="boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="builder.html">Builder</a></div>
+				<div class="packagelink"><a href="bytes.html">Bytes</a></div>
+				<div class="packagelink"><a href="capi.html">CAPI</a></div>
+				<div class="packagelink"><a href="capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink"><a href="cachetree.html">CacheTree</a></div>
+				<div class="packagelink"><a href="compiler.html">Compiler</a></div>
+				<div class="packagelink"><a href="core.html">Core</a></div>
+				<div class="packagelink"><a href="dapi.html">DAPI</a></div>
+				<div class="packagelink"><a href="dapinode.html">DAPINODE</a></div>
+				<div class="packagelink"><a href="dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink"><a href="dapiversion.html">DAPIVERSION</a></div>
+				<div class="packagelink"><a href="domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="domcomment.html">DOMComment</a></div>
+				<div class="packagelink"><a href="domdocument.html">DOMDocument</a></div>
+				<div class="packagelink"><a href="domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink"><a href="domelement.html">DOMElement</a></div>
+				<div class="packagelink"><a href="domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink"><a href="domnamednodemap.html">DOMNamedNodeMap</a></div>
+				<div class="packagelink"><a href="domnode.html">DOMNode</a></div>
+				<div class="packagelink"><a href="domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="domtext.html">DOMText</a></div>
+				<div class="packagelink"><a href="date.html">Date</a></div>
+				<div class="packagelink"><a href="dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="env.html">Env</a></div>
+				<div class="packagelink"><a href="error.html">Error</a></div>
+				<div class="packagelink"><a href="file.html">File</a></div>
+				<div class="packagelink"><a href="filecopy.html">FileCopy</a></div>
+				<div class="packagelink"><a href="fileprefs.html">Fileprefs</a></div>
+				<div class="packagelink curPage">Frame</div>
+				<div class="packagelink"><a href="global.html">Global</a></div>
+				<div class="packagelink"><a href="integer.html">Integer</a></div>
+				<div class="packagelink"><a href="javaobject.html">JavaObject</a></div>
+				<div class="packagelink"><a href="language.html">Language</a></div>
+				<div class="packagelink"><a href="license.html">License</a></div>
+				<div class="packagelink"><a href="list.html">List</a></div>
+				<div class="packagelink"><a href="logging.html">Logging</a></div>
+				<div class="packagelink"><a href="long.html">Long</a></div>
+				<div class="packagelink"><a href="mailmessage.html">MailMessage</a></div>
+				<div class="packagelink"><a href="math.html">Math</a></div>
+				<div class="packagelink"><a href="memcached.html">Memcached</a></div>
+				<div class="packagelink"><a href="notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="object.html">Object</a></div>
+				<div class="packagelink"><a href="pop3session.html">POP3Session</a></div>
+				<div class="packagelink"><a href="patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="patfind.html">PatFind</a></div>
+				<div class="packagelink"><a href="pattern.html">Pattern</a></div>
+				<div class="packagelink"><a href="point.html">Point</a></div>
+				<div class="packagelink"><a href="profiler.html">Profiler</a></div>
+				<div class="packagelink"><a href="real.html">Real</a></div>
+				<div class="packagelink"><a href="recarray.html">RecArray</a></div>
+				<div class="packagelink"><a href="record.html">Record</a></div>
+				<div class="packagelink"><a href="regex.html">Regex</a></div>
+				<div class="packagelink"><a href="restclient.html">RestClient</a></div>
+				<div class="packagelink"><a href="saxparser.html">SAXParser</a></div>
+				<div class="packagelink"><a href="smtpsession.html">SMTPSession</a></div>
+				<div class="packagelink"><a href="ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="script.html">Script</a></div>
+				<div class="packagelink"><a href="security.html">Security</a></div>
+				<div class="packagelink"><a href="set.html">Set</a></div>
+				<div class="packagelink"><a href="socket.html">Socket</a></div>
+				<div class="packagelink"><a href="sql.html">Sql</a></div>
+				<div class="packagelink"><a href="sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink"><a href="str.html">Str</a></div>
+				<div class="packagelink"><a href="string.html">String</a></div>
+				<div class="packagelink"><a href="system.html">System</a></div>
+				<div class="packagelink"><a href="uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="void.html">Void</a></div>
+				<div class="packagelink"><a href="wapi.html">WAPI</a></div>
+				<div class="packagelink"><a href="wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink"><a href="web.html">Web</a></div>
+				<div class="packagelink"><a href="xslprocessor.html">XSLProcessor</a></div>
+				<div class="packagelink"><a href="zip.html">Zip</a></div>
+		</div>
+</div>
+
+	<div class="content_container">
+		<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+		<h1>Class: Frame</h1><div class="ClassDescription"><p>Frame provides two basic capabilities: structure    and inheritance. The synergy between these two features, as well as their use    within the Livelink Scripting Framework, provides developers with many powerful    capabilities.</p>
+<p>In its most basic form, a Frame consists of a set    of named slots. Each slot can contain a single value and can be referenced with    the dot operator. Thus, a Frame is the equivalent of a structure in most programming    languages. A frame's slots are identified with a String and cannot be accidentally    created (e.g., due to a typo) during an assignment. In addition, referencing    a slot that does not exist will produce a runtime exception, rather than returning    an Undefined value. There are operations in the Frame class that permit a Frame's    structure to be examined and even modified.</p>
+<p>In addition to the structuring mechanisms described    above, Frame has the additional ability to have special slots, <strong>parent</strong>    slots, which affect how slots are looked up within a Frame. A parent slot acts    like a normal slot, except that it cannot be assigned to. In addition, when    a Frame's slot is referenced with a dot operator (e.g., <span class="ExampleCode">myFrame.someSlot</span>),    the presence of one or more parent slots can affect how and where the slot is    used.</p>
+<p>When a frame dot expression occurs on the left side    of an assignment (i.e., an <strong>lvalue</strong>), then the following steps occur:</p>
+<ol>
+<li>If the slot exists in the Frame, then its value is replaced with the result 
+    of the assigned value.</li>
+<li>
+<p>If the slot does not exist in the Frame, then the parent slots are searched 
+    in definition order for the specified slot name. </p>
+<ol>
+<li>If not found, then an error is reported in the same way that any nonexistent 
+    slot would be handled.</li>
+<li>If the slot does exist in a parent frame, then a slot with the specified 
+    name is created in the lvalue frame and is assigned the value of the right-hand-side 
+    of the assignment expression.</li>
+</ol>
+</li>
+</ol>
+<p>When a frame dot expression occurs in any other context    where its value is desired (i.e., an <strong>rvalue</strong>), then the following steps    occur:</p>
+<ol>
+<li>If the slot exists in the Frame, then its value is returned as the result 
+    of the expression.</li>
+<li>
+<p>If the slot does not exist in the Frame, then the parent slots are searched 
+    in definition order for the specified slot name. </p>
+<ol>
+<li>If not found, then an error is reported in the same way that any nonexistent 
+    slot would be handled.</li>
+<li>If the slot does exist in a parent frame, then the value of the parent's 
+    is returned as the result of the expression.</li>
+</ol>
+</li>
+</ol>
+<p>In other words, Frame behaves as a prototype-based    object (similar to OSpace's ObjRef datatype). Frame has the following advantages    compared to ObjRef:</p>
+<ul>
+<li>The ability to have a Destructor slot which is executed prior to deleting 
+    the object.</li>
+<li>Multiple, ordered parents, instead of just a single one.</li>
+<li>More efficient at performing feature lookups.</li>
+<li>Parents can be any OScript datatype that can be dotted.</li>
+</ul>
+<p>Frame has some shortcomings with respect to ObjRef:</p>
+<ul>
+<li>Persistence is not built in.</li>
+<li>Circular references can possibly lead to memory leaks.</li>
+</ul>
+<p>If inheritance is ignored, both Frame and Assoc share    certain features that make them amenable to being used to build structures within    the OScript environment. Assoc values can have arbitrary keys of any datatype,    whereas Frames must have named slots of type String. In addition, Assoc is most    useful when the structure is extremely dynamic and where keys may need to be    added at any time. Frame is more useful for safety and debugging because references    to incorrectly typed slot names will be cause an error during testing and debugging,    rather than continuing with possibly erroneous results. Of course, Assoc is    also very useful when it is used for the purpose for which it was designed,    as an Associative array. Assoc can efficiently map between arbitrary keys (of    any datatype) and their associated values.</p>
+<h4 class="ClassDescription">Using Destructor</h4>
+
+<p>If a slot named "Destructor" is available on the Frame or its parents,    and that slot's value is executable, then the slot will be invoked when the    Frame is destroyed. Note that the Frame will still exist during the execution    of Destructor(), and if the refcount of the Frame has increased during Destructor(),    then the frame will NOT be deleted. Be careful with this feature.</p>
+<h4 class="ClassDescription">Circular References</h4>
+
+<p>Livelink values use a simple reference-counting scheme to determine when an    unused value can be deleted. Powerful datatypes such as Assoc and Frame both    share the unfortunate characteristic that it is possible to create cyclic data    structures whose values can never be deleted automatically. Please be careful,    as this can result in memory leaks and other even nastier side effects.</p>
+<h4 class="ClassDescription">Example</h4>
+
+<p><a name="__new_example"></a>
+Here is an example of using <a class="interdoc" href="#cm_frame_new">Frame.New()</a> to create        a frame representing a 3D coordinate:</p>
+<div class="codehilite"><pre>    Frame   coordinateProto <span class="o">=</span> Frame<span class="o">.</span>New<span class="p">(</span> <span class="p">{},</span> <span class="p">{</span> <span class="p">{</span> <span class="s">&quot;x&quot;</span><span class="p">,</span> <span class="m">0</span> <span class="p">},</span> <span class="p">{</span> <span class="s">&quot;y&quot;</span><span class="p">,</span> <span class="m">0</span> <span class="p">},</span> <span class="p">{</span> <span class="s">&quot;z&quot;</span><span class="p">,</span> <span class="m">0</span> <span class="p">}</span> <span class="p">}</span> <span class="p">)</span>
+    Frame   aCoordinate <span class="o">=</span> Frame<span class="o">.</span>New<span class="p">(</span> <span class="p">{</span> <span class="p">{</span> <span class="s">&quot;parentCoordinate&quot;</span><span class="p">,</span> coordinateProto <span class="p">}</span> <span class="p">},</span> \
+                <span class="p">{</span> <span class="p">{</span> <span class="s">&quot;x&quot;</span><span class="p">,</span> <span class="m">5</span> <span class="p">}</span> <span class="p">}</span> <span class="p">)</span>
+
+    echo<span class="p">(</span> coordinateProto<span class="o">.</span>x <span class="p">)</span>
+    echo<span class="p">(</span> coordinateProto<span class="o">.</span>y <span class="p">)</span>
+    echo<span class="p">(</span> coordinateProto<span class="o">.</span>z <span class="p">)</span>
+    echo<span class="p">(</span> aCoordinate<span class="o">.</span>x <span class="p">)</span>
+    aCoordinate<span class="o">.</span>x <span class="o">=</span> <span class="m">55</span>
+    echo<span class="p">(</span> aCoordinate<span class="o">.</span>x <span class="p">)</span>
+    coordinateProto<span class="o">.</span>x <span class="o">=</span> <span class="m">10</span>
+    echo<span class="p">(</span> aCoordinate<span class="o">.</span>x <span class="p">)</span>
+    coordinateProto<span class="o">.</span>y <span class="o">=</span> <span class="m">10</span>
+    echo<span class="p">(</span> aCoordinate<span class="o">.</span>y <span class="p">)</span>
+    aCoordinate<span class="o">.</span>y <span class="o">=</span> <span class="m">100</span>
+    echo<span class="p">(</span> aCoordinate<span class="o">.</span>y <span class="p">)</span>
+    echo<span class="p">(</span> coordinateProto<span class="o">.</span>zzzz <span class="p">)</span>        <span class="c">// runtime error. feature not found exception.</span>
+</pre></div>
+
+
+<p>The output from the above is:</p>
+<div class="codehilite"><pre>    <span class="m">0</span>
+    <span class="m">0</span>
+    <span class="m">0</span>
+    <span class="m">5</span>
+    <span class="m">55</span>
+    <span class="m">55</span>      <span class="c">// Changing the value of the proto slot doesn&#39;t change the child&#39;s slot</span>
+    <span class="m">10</span>      <span class="c">// Changing the value of the parent slot does change the child&#39;s inherited slot</span>
+    <span class="m">100</span> <span class="c">// Child&#39;s override hides parent&#39;s value.</span>
+</pre></div></div>
+			<h2>Class Attributes</h2>
+			<div class="ClassAttributesShort">
+				
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_frame_frametype">FrameType</a></div>
+					<div class="Description"><p>A constant indicating the datatype number of the datatype Frame.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_frame_kanywhere">kAnywhere</a></div>
+					<div class="Description"><p>Used with HasSlot to indicate that 
+    both the frame and its parents should be searched.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_frame_kframe">kFrame</a></div>
+					<div class="Description"><p>Used with HasSlot to indicate that 
+    only the frame should be searched.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_frame_kparents">kParents</a></div>
+					<div class="Description"><p>Used with HasSlot to indicate that 
+    only the frame's parents should be searched.</p></div>
+				</div>
+				
+			</div>
+
+
+			<h2>Class Methods</h2>
+			<div class="ClassMethodsShort">
+				<div class="Method">
+					<div class="Name"><a href="#cm_frame_addparent" class="IndexMethodName">AddParent</a>(
+					 Frame theFrame, Dynamic parentDefinition )
+					</div>
+					<div class="Description"><p>Adds a parent definition to a Frame</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_frame_addslot" class="IndexMethodName">AddSlot</a>(
+					 Frame theFrame, String slotName, [Dynamic initialValue] )
+					</div>
+					<div class="Description"><p>Adds a non-parent slot of the specified 
+    name to the frame, optionally providing an initial value.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_frame_hasparent" class="IndexMethodName">HasParent</a>(
+					 Frame theFrame, Dynamic parentValue )
+					</div>
+					<div class="Description"><p>Determines whether a parent with the 
+    specified value exists.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_frame_hasslot" class="IndexMethodName">HasSlot</a>(
+					 Frame theFrame, String slotName, [Integer searchOptions] )
+					</div>
+					<div class="Description"><p>Indicates whether a Frame has a slot 
+    with the specified name.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_frame_new" class="IndexMethodName">New</a>(
+					 [List parentDefs], [List instanceDefs] )
+					</div>
+					<div class="Description"><p>Creates a frame with the specified 
+    parents and slots.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_frame_parents" class="IndexMethodName">Parents</a>(
+					 Frame theFrame )
+					</div>
+					<div class="Description"><p>Returns a List of parent definitions 
+    for the specified frame.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_frame_removeparent" class="IndexMethodName">RemoveParent</a>(
+					 Frame theFrame, Dynamic parentDefinition )
+					</div>
+					<div class="Description"><p>Removes the specified parent definition 
+    from a Frame.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_frame_removeslot" class="IndexMethodName">RemoveSlot</a>(
+					 Frame theFrame, String slotName )
+					</div>
+					<div class="Description"><p>Removes a slot from a frame.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_frame_slotnames" class="IndexMethodName">SlotNames</a>(
+					 Frame theFrame )
+					</div>
+					<div class="Description"><p>Returns a List of Strings, corresponding 
+    to the names of the non-parent slots in theFrame.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_frame_slots" class="IndexMethodName">Slots</a>(
+					 Frame theFrame )
+					</div>
+					<div class="Description"><p>Returns a List of non-parent slot 
+    descriptions.</p></div>
+				</div>
+			</div>
+
+
+				<h2>Class Attributes</h2>
+				<div class="ClassAttributes">
+					
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_frame_frametype">FrameType</a></div>
+						<div class="Description"><p>A constant indicating the datatype number of the datatype Frame, such that, if Type( val ) == Frame.FrameType, then val is a Frame.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_frame_kanywhere">kAnywhere</a></div>
+						<div class="Description"><p>Used with <a class="interdoc" href="#cm_frame_hasslot">Frame.HasSlot()</a> to indicate that both 
+  the frame and its parents should be searched.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_frame_kframe">kFrame</a></div>
+						<div class="Description"><p>Used with <a class="interdoc" href="#cm_frame_hasslot">Frame.HasSlot()</a> to indicate that only 
+  the frame should be searched.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_frame_kparents">kParents</a></div>
+						<div class="Description"><p>Used with <a class="interdoc" href="#cm_frame_hasslot">Frame.HasSlot()</a> to indicate that only 
+  the frame's parents should be searched.</p></div>
+					</div>
+				
+				</div>
+
+		
+				<h2>Class Methods</h2>
+				<div class="ClassMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_frame_addparent">AddParent</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">AddParent</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Frame</span> <span class="PrototypeArgumentName">theFrame</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">parentDefinition</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Adds a parent to a frame.</p>
+<p>Note that a parent slot cannot be added if a 
+      slot with the given name is already present on the Frame.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theFrame</span><span class="description"><p>Frame to modify.</p></span></div>
+											<div class="Parameter"><span class="name">parentDefinition</span><span class="description"><p>A List (<span class="ExampleCode">{ slotName, parentValue }</span>) specifying 
+            the parent slot.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>TRUE if successful, FALSE otherwise.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Note that a parent slot cannot be added if a 
+      slot with the given name is already present on the Frame.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_frame_addslot">AddSlot</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">AddSlot</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Frame</span> <span class="PrototypeArgumentName">theFrame</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">slotName</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">initialValue</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Adds a non-parent slot of the specified name to 
+    the frame, optionally providing an initial value.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theFrame</span><span class="description"><p>Frame value to modify.</p></span></div>
+											<div class="Parameter"><span class="name">slotName</span><span class="description"><p>String name of the slot to add.</p></span></div>
+											<div class="Parameter"><span class="name">initialValue</span><span class="description"><p>Initial value for the slot.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>TRUE if the slot was added, FALSE 
+      if it failed.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Note that this function will do nothing if the slot 
+    already exists on the frame. In this case, it will return FALSE.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_frame_hasparent">HasParent</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">HasParent</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Frame</span> <span class="PrototypeArgumentName">theFrame</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">parentValue</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Determines whether a parent with the specified 
+    value exists.</p>
+<p>Note that <em>parentValue</em> 
+  is not the slot name for the parent, but is the actual associated parent 
+  value.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theFrame</span><span class="description"><p>Frame to examine.</p></span></div>
+											<div class="Parameter"><span class="name">parentValue</span><span class="description"><p>Value of parent to look for.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>TRUE if this frame has a parent 
+      slot with the specified value as its value. FALSE otherwise.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Note that <em>parentValue</em> 
+  is not the slot name for the parent, but is the actual associated parent 
+  value.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_frame_hasslot">HasSlot</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">HasSlot</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Frame</span> <span class="PrototypeArgumentName">theFrame</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">slotName</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">searchOptions</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns true if a Frame has a slot with the 
+    specified name.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theFrame</span><span class="description"><p>Frame within which to look for a slot.</p></span></div>
+											<div class="Parameter"><span class="name">slotName</span><span class="description"><p>Name of the slot for which to look.</p></span></div>
+											<div class="Parameter"><span class="name">searchOptions</span><span class="description"><p>If specified, <a class="interdoc" href="#ca_frame_kframe">Frame.kFrame</a>, <a class="interdoc" href="#ca_frame_kparents">Frame.kParents</a>, or the default <a class="interdoc" href="#ca_frame_kanywhere">Frame.kAnywhere</a>.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>TRUE if the slot was found. FALSE 
+      otherwise.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Using the above example frames, aCoordinate and coordinateProto:</p>
+<div class="codehilite"><pre>  echo<span class="p">(</span> Frame<span class="o">.</span>HasSlot<span class="p">(</span> aCoordinate<span class="p">,</span> <span class="s">&quot;z&quot;</span> <span class="p">)</span> <span class="p">)</span>
+  echo<span class="p">(</span> Frame<span class="o">.</span>HasSlot<span class="p">(</span> aCoordinate<span class="p">,</span> <span class="s">&quot;z&quot;</span><span class="p">,</span> Frame<span class="o">.</span>kFrame <span class="p">)</span> <span class="p">)</span>
+  echo<span class="p">(</span> Frame<span class="o">.</span>HasSlot<span class="p">(</span> aCoordinate<span class="p">,</span> <span class="s">&quot;x&quot;</span><span class="p">,</span> Frame<span class="o">.</span>kParents <span class="p">)</span> <span class="p">)</span>
+  echo<span class="p">(</span> Frame<span class="o">.</span>HasSlot<span class="p">(</span> aCoordinate<span class="p">,</span> <span class="s">&quot;z&quot;</span><span class="p">,</span> Frame<span class="o">.</span>kAnywhere <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output from the above is:</p>
+<div class="codehilite"><pre> true
+  false
+  true
+  true
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_frame_new">New</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Frame</span> 
+						<span class="PrototypeselfName">New</span><span class="PrototypePunctuation">(</span> <span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">List</span> <span class="PrototypeArgumentName">parentDefs</span><span class="PrototypePunctuation">]</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">List</span> <span class="PrototypeArgumentName">instanceDefs</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Create a new frame with parent slots as specified 
+    in parentDefs and with instance slots as specified in instanceDefs.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">parentDefs</span><span class="description"><p>A List of parent slot defs, each of 
+            which can consist of either a parent value or a List containing <span class="ExampleCode">{
+            parentSlotName, parentValue } </span>.</p></span></div>
+											<div class="Parameter"><span class="name">instanceDefs</span><span class="description"><p>A List of slot defs, each element of which 
+            is either a simple String slotName, or a List containing
+            <span class="ExampleCode"> { slotName, slotValue } </span>. See note below.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The newly created frame.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Note that both <em>parentDefs</em> 
+      and <em>instanceDefs</em> above can specify 
+      slot definitions as a List consisting of a slotName and a slotValue. However, 
+      both of these definition lists permit slot definitions to be specified in 
+      a simpler, defaulted form. In the case of <em>parentDefs</em>, a definition can consist 
+      of a single, non-List value. This value becomes associated with an unnamed 
+      parent slot. In the case of <em>instanceDefs</em>, a String can be specified instead 
+      of a List-based slot definition. In this case, the String will become the 
+      slot name.  See the class description for an <a href="#__new_example">example</a>.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_frame_parents">Parents</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">List</span> 
+						<span class="PrototypeselfName">Parents</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Frame</span> <span class="PrototypeArgumentName">theFrame</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Return a List of parent definitions for the specified 
+    frame.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theFrame</span><span class="description"><p>Frame to examine.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A List of parent definitions, each 
+      of which is a two-element List containing <span class="ExampleCode">{ parentSlotName, parentValue } </span>.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Using the above example frames, aCoordinate and coordinateProto:</p>
+<div class="codehilite"><pre>    echo<span class="p">(</span> Frame<span class="o">.</span>Parents<span class="p">(</span> coordinateProto <span class="p">)</span> <span class="p">)</span>
+    echo<span class="p">(</span> Frame<span class="o">.</span>Parents<span class="p">(</span> aCoordinate <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output from the above is:</p>
+<div class="codehilite"><pre>    <span class="p">{}</span>
+    <span class="p">{{</span><span class="s">&#39;parentCoordinate&#39;</span><span class="p">,</span><span class="o">&amp;lt</span><span class="p">;</span>LL<span class="o">:</span>Frame<span class="o">&amp;gt</span><span class="p">;{{}</span>x<span class="o">:</span><span class="m">10</span><span class="p">,</span>y<span class="o">:</span><span class="m">10</span><span class="p">,</span>z<span class="o">:</span><span class="m">0</span><span class="p">}</span><span class="o">&amp;lt</span><span class="p">;</span><span class="o">/</span>LL<span class="o">:</span>Frame<span class="o">&amp;gt</span><span class="p">;}}</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_frame_removeparent">RemoveParent</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">RemoveParent</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Frame</span> <span class="PrototypeArgumentName">theFrame</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">parentDefinition</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Removes the specified parent definition from a Frame. </p>
+<p>This function does not remove the actual slot 
+      definition from the Frame, only the inheritance aspect. In order to remove 
+      the slot from the Frame, you must also use 
+    <a class="interdoc" href="#cm_frame_removeslot">Frame.RemoveSlot()</a>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theFrame</span><span class="description"><p>Frame to modify.</p></span></div>
+											<div class="Parameter"><span class="name">parentDefinition</span><span class="description"><p>A List (<span class="ExampleCode">{ slotName, parentValue }</span>) specifying 
+            the parent slot.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>TRUE if successful, FALSE otherwise.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>This function does not remove the actual slot 
+      definition from the Frame, only the inheritance aspect. In order to remove 
+      the slot from the Frame, you must also use 
+    <a class="interdoc" href="#cm_frame_removeslot">Frame.RemoveSlot()</a>.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_frame_removeslot">RemoveSlot</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">RemoveSlot</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Frame</span> <span class="PrototypeArgumentName">theFrame</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">slotName</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Removes a slot from a frame.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theFrame</span><span class="description"><p>Frame from which to remove the slot.</p></span></div>
+											<div class="Parameter"><span class="name">slotName</span><span class="description"><p>Name of the slot to remove.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>TRUE if successful, FALSE otherwise.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Note that this function will remove both parent slots and regular slots. 
+      However, when a parent slot is removed with this function, the parent will 
+      still be part of the Frame's prototype inheritance. In order to remove a 
+      parent from the Frame's inheritance, <a class="interdoc" href="#cm_frame_removeparent">Frame.RemoveParent()</a> must also 
+      be used.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_frame_slotnames">SlotNames</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">List</span> 
+						<span class="PrototypeselfName">SlotNames</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Frame</span> <span class="PrototypeArgumentName">theFrame</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a List of Strings, corresponding to the 
+    names of the non-parent slots in theFrame.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theFrame</span><span class="description"><p>The frame to examine.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>See above.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Using the above example frames, aCoordinate and coordinateProto:</p>
+<div class="codehilite"><pre>  echo<span class="p">(</span> Frame<span class="o">.</span>SlotNames<span class="p">(</span> coordinateProto <span class="p">)</span> <span class="p">)</span>
+  echo<span class="p">(</span> Frame<span class="o">.</span>SlotNames<span class="p">(</span> aCoordinate <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output from the above is:</p>
+<div class="codehilite"><pre> <span class="p">{</span><span class="s">&#39;x&#39;</span><span class="p">,</span><span class="s">&#39;y&#39;</span><span class="p">,</span><span class="s">&#39;z&#39;</span><span class="p">}</span>
+  <span class="p">{</span><span class="s">&#39;x&#39;</span><span class="p">,</span><span class="s">&#39;y&#39;</span><span class="p">}</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_frame_slots">Slots</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">List</span> 
+						<span class="PrototypeselfName">Slots</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Frame</span> <span class="PrototypeArgumentName">theFrame</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a List of non-parent slot descriptions. 
+    Each descriptions consists of a two-element List containing 
+    <span class="ExampleCode">{ slotName, slotValue }</span>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theFrame</span><span class="description"><p>The frame to examine.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>See above.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Using the above example frames, aCoordinate and coordinateProto:</p>
+<div class="codehilite"><pre>  echo<span class="p">(</span> Frame<span class="o">.</span>Slots<span class="p">(</span> coordinateProto <span class="p">)</span> <span class="p">)</span>
+  echo<span class="p">(</span> Frame<span class="o">.</span>Slots<span class="p">(</span> aCoordinate <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output from the above is:</p>
+<div class="codehilite"><pre> <span class="p">{{</span><span class="s">&#39;x&#39;</span><span class="p">,</span><span class="m">10</span><span class="p">},{</span><span class="s">&#39;y&#39;</span><span class="p">,</span><span class="m">10</span><span class="p">},{</span><span class="s">&#39;z&#39;</span><span class="p">,</span><span class="m">0</span><span class="p">}}</span>
+  <span class="p">{{</span><span class="s">&#39;x&#39;</span><span class="p">,</span><span class="m">55</span><span class="p">},{</span><span class="s">&#39;y&#39;</span><span class="p">,</span><span class="m">100</span><span class="p">}}</span>  <span class="c">// New or overridden slots are displayed.</span>
+</pre></div></div>
+							</div>
+						</div>
+				</div>
+		
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2018 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+
+
+
+</div>
+	</div>						
+						
+
+</div>
+
+</body></html>

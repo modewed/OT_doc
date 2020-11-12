@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+<head>
+<title>OScript Language Reference : Parsing</title>
+<link rel="stylesheet" type="text/css" href="../ot_common_ui.css">
+<link rel="stylesheet" type="text/css" href="languageref.css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+
+<script language="JavaScript" src="../documentation.js"></script>
+
+</head>
+<body>
+<SCRIPT language=JavaScript>
+IncludeHeader( 'olang2', 'Parsing' )
+</SCRIPT>
+
+<h1>Parsing</h1>
+<h2>File</h2>
+<img src="rr-File.png" alt="Railroad diagram for file" />
+
+<p>While previously the smallest unit of code was the script, the new source format and compiler works on a basis of files. Each file contains a package declaration, and a single object definition.</p>
+
+
+<h2>Objects</h2>
+<img src="rr-ObjectDef.png" alt="Railroad diagram for object definitions" />
+
+<p>An object is a collection of features, functions and scripts. These may be defined in any order.</p>
+
+
+<h2>Features</h2>
+<img src="rr-Feature.png" alt="Railroad diagram for features" />
+
+<p>A feature defines an attribute on the object being defined. Like a variable declaration, a function definition includes a type which should be respected by any functions on the object, and by any child objects. The default value for a feature should also match its type.</p>
+
+
+<h2>Functions</h2>
+<img src="rr-Function.png" alt="Railroad diagram for function" />
+
+<p>There are a few additional restrictions on function declarations that are not present in the current compiler:</p>
+<ul>
+	<li>A return type must be specified.</li>
+	<li>A parameter list (possibly empty) must be present, with types provided for all parameters.</li>
+	<li>All default parameters must be literals or built-in constants.</li>
+</ul>
+
+<h2>Scripts</h2>
+<img src="rr-Script.png" alt="Railroad diagram for script" />
+<p>Script Body:</p>
+<img src="rr-ScriptBody.png" alt="Railroad diagram for file" />
+
+<p>A script is composed of zero or more Statements, followed by zero or more Function Definitions. If there are any Statements outside of a formal function declaration, they will be wrapped in an implicit function that takes no arguments.</p>
+
+<p>When a Script is invoked, either by another Script or by the executing environment, the first function (implicit or explicit) is called, with the parameters being passed to the Script being passed to the function.</p>
+
+<h2>Function Definition</h2>
+<img src="rr-Function.png" alt="Railroad diagram for function definitions" />
+<p>Function Arguments:</p>
+<img src="rr-FuncArgs.png" alt="Railroad diagram for function arguments" />
+<p>Function Argument</p>
+<img src="rr-FuncArg.png" alt="Railroad diagram for function argument" />
+
+
+<p>A function definition optionally specifies the return type of the function. If none is provided, &rsquo;Dynamic&lsquo; is assumed. The definition must provide a name for the function, followed by an open parenthesis, and the formal parameters to the function if any.</p>
+
+<p>Each parameter may provide a type (dynamic if omitted), and a default value.  This default value can be an arbitrary expression, which is evaluated on function entry. After a default value is provided for a parameter, all following parameters must also have default values. The parameter list may also end with an ellipsis, which indicates a variadic function. In this case, the complete list of parameters passed to the function can be accessed using the <code>Parameters()</code> built-in function.</p>
+
+<div class="legacy">
+Because OScript does not prevent variables from sharing names with types, one can easily have a function signature in a script that looks like <pre><code>Function Void foo( Integer )</code></pre>This looks like a function that takes one Integer parameter that lacks a name, but in fact is a function that takes one Dynamic parameter named Integer.</div>
+
+
+<h2>Statements</h2>
+<img src="rr-Statement.png" alt="Railroad diagram for statements" />
+
+
+<p>Functions are composed of one or more statements, which are detailed here.</p>
+
+<h3><code>goto</code> and Labels</h3>
+<img src="rr-Label.png" alt="Railroad diagram for labels" />
+<img src="rr-Goto.png" alt="Railroad diagram for goto" />
+
+<p>The <code>goto</code> command will cause program flow to jump to the specified label in the current function. Although jumping out of loops is legal, attempting to jump into a loop is illegal.</p>
+<h3><code>if</code> statements</h3>
+<img src="rr-IfBlock.png" alt="Railroad diagram for if statements" />
+
+
+<p>The <code>if</code> statement evaluates its argument. If the argument evaluates to a &lsquo;true&rsquo; value (see <a href="#types">Types</a> for information on which values are considered &lsquo;true&rsquo;), it will evaluate the following block of statements. Otherwise, it will evaluate the next <code>elseif</code> statement, if any, or the <code>else</code> block, if present and there are no remaining <code>elseif</code> blocks. An <code>elseif</code> statement similar executes its contents if its argument evaluates to true, but will only execute if the arguments of all preceding <code>if</code> and <code>elseif</code> statements evaluated to false.</p>
+
+<h3><code>switch</code> statements</h3>
+<img src="rr-Switch.png" alt="Railroad diagram for Switch statements" />
+
+<p>The <code>switch</code> statement evaluates an expression, and chooses a case block to execute as a result of the expression's value. Case blocks are considered in order, with the value compared against the sequence of expressions associated with each case. Only integers and strings may be used in a <code>case</code> sub-statement.</p>
+
+<p>If a case is matched, its contents are executed. There is no fall-through; when the end of the case statement is reached, program flow continues outside of the <code>switch</code> statement.</p>
+
+<p>If no cases are matched, and the <code>switch</code> statement has a <code>default</code> block, this block will be executed. The <code>default</code> block must be the last block in the statement.</p>
+
+<div class="warning">
+Long values will never match any cases, as cases must be constants, there are no Long literals, and no coercion is performed prior to comparison.
+</div>
+
+<h3><code>while</code> statements</h3>
+<img src="rr-While.png" alt="Railroad diagram for White loops" />
+
+
+<p>The <code>while</code> statement executes a block of code if the provided test expression evaluates to a true value. At the end of the block, the test expression is evaluated again. If it is still a true value, then the block is executed again. This process repeats until the end of the block is reached and the test expression evaluates to a false value. If the test expression is not true at the start, the block will never be executed.</p>
+
+<p>If a <code>continue</code> statement is executed while inside of a <code>while</code> loop, execution passes to the test expression evaluation at the end of the loop. If a <code>break</code> statement is used, the <code>while</code> statement is exited with no further evaluation of the test expression.</p>
+
+<h3><code>repeat</code> statements</h3>
+<img src="rr-Repeat.png" alt="Railroad diagram for Repeat loops" />
+
+
+<p>The <code>repeat</code> statement is similar to the <code>while</code> statement, except the block is executed once before the test expression is evaluated. </p>
+
+<h3><code>for</code> loops</h3>
+
+<h4>C-style <code>for</code> loops</h4>
+<img src="rr-CStyleFor.png" alt="Railroad diagram for C-Style for loops" />
+
+<p>The behaviour of this loop is similar, although not identical, to the while loop:</p>
+<code>
+<i>Init</i><br />
+while <i>Test</i><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<i>Body</i> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<i>Increment</i> <br />
+end
+</code>
+
+<p>The differences lie in the behaviour of <code>continue</code>: it will always evaluate the Increment expression before the Test, unlike in the <code>while</code>-loop above, where it would be skipped.</p>
+
+<h4>Foreach loops</h4>
+<img src="rr-Foreach.png" alt="Railroad diagram for For-Each loops" />
+
+<p>This <code>for</code> loop takes an iterable value like a List, Record, RecArray or Assoc and binds its values sequentially to the given identifier. It is equivalent to the code:</p>
+
+<code>
+Dynamic temporary = <i>Expr</i><br />
+Integer i<br />
+Integer len = length( temporary )<br />
+for ( i = 1; i &lt;= len; i += 1 )<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<i>ID</i> = temporary[ i ]<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<i>Body</i><br />
+end
+</code>
+
+<h4>Structured <code>for</code> loops</h4>
+<img src="rr-StructuredFor.png" alt="Railroad diagram for structured for loops" />
+
+<p>This <code>for</code> loop assigns a sequence of values to an variable, either ascending (uses <code>to</code>), or descending (uses <code>downto</code>). If ascending, the loop assigns the <i>begin</i> value to the variable, and increments it by the value of the <i>By</i> expression, if given, or 1 otherwise, every iteration until the value of the variable is greater than the <i>end</i> value.</p>
+
+<p>If descending, the value is decremented by the <i>By</i> expression, if given, or 1 otherwise, until the value is less than the <i>end</i> value.</p>
+
+<p>If the value of the variable is modified in the body of the loop, the new value is the one that will be incremented or decremented by the loop.</p>
+
+<div class="warning">
+If the value of the variable becomes Undefined, either because the <i>begin</i> value is Undefined, the <i>By</i> value is undefined, or an Undefined value is assigned to the variable in the body of the loop, the loop will never exit unless a non-Undefined value is later assigned to the variable.
+</div>
+
+<h4>End of Statement</h4>
+
+<p>OScript has two end-of-statement markers: a new line, or a semicolon. Either can be used in scripts or functions, which often makes writing strings to be passed to <code>Compiler.Compile()</code> easier, but only new lines can be used outside of scripts.</p>
+
+<h3>Expressions</h3>
+<img src="rr-Expression.png" alt="Railroad diagram for expressions" />
+
+
+<p>Expressions evaluate to values. They may also have side effects, in the cases of variable assignment or function execution.</p>
+<h4>XLate</h4>
+<img src="rr-XLate.png" alt="Railroad diagram for XLates" />
+
+<p>An XLate expression consists of a group name and an entry name. The XLate's value is computed at run-time, according to the language settings of Content Server. While they evaluate to strings, they are their own value. For more details, see <a href="#xlates">XLates</a> in the Types section.</p>
+
+<h4>Unary and binary expressions</h4>
+<img src="rr-UnaryExpr.png" alt="Railroad diagram for unary expressions" />
+<img src="rr-BinaryExpr.png" alt="Railroad diagram for binary expressions" />
+
+
+<p>For more information on the behaviour of the unary and binary operators, see the section on <a href="#operators">operators</a> in the Behaviour/Semantics section.</p>
+
+<h4>List literals</h4>
+<img src="rr-List.png" alt="Railroad diagram for lists" />
+
+<p>List literals create a new List value when evaluated. The expressions that make up the elements of the list are evaluated in order.</p>
+
+<h4>Assoc literals</h4>
+<img src="rr-Assoc.png" alt="Railroad diagram for assocs" />
+<p>Assoc literals create a new Assoc value when evaluated. The key/value expression pairs that make up the elements of the list are evaluated in order.</p>
+
+<h4>List comprehensions</h4>
+<img src="rr-ListComprehension.png" alt="Railroad diagram for list comprehensions" />
+<p>List comprehensions are a way of building a list from another list. See <a href="https://en.wikipedia.org/wiki/List_comprehension">this Wikipedia article</a> for examples of list comprehensions in other languages.
+
+<h4>Object names</h4>
+<img src="rr-ObjectName.png" alt="Railroad diagram for object names" />
+
+<p>The object name is resolved at run time to an object reference value, pointing to the object with the given name.</p>
+
+<h2>Scoping</h2>
+Functions and variables are limited in where they can be seen. Functions can only be seen by other functions within the same script, or by the implicit function created by having leading statements without an enclosing function.
+
+Variables can only be seen in the scope where they are declared, and any nested scopes. Each function definition is its own scope. The following also introduce new scopes:
+<ul>
+	<li>The body of an if or else statement.</li>
+	<li>The body of a loop.</li>
+	<li>Each case of a switch statement.</li>
+</ul>
+<p>If you declare a variable in a nested scope that shares the name of an already-declared variable,
+the new declaration will shadow the old variable inside of that scope: all reads
+and writes will refer to the new variable until the end of the scope where it was declared,
+or another variable declaration shadows it. This is true even if the new variable is of a different type.</p>
+
+<div class="example">
+<pre>
+Integer i = 3
+echo( i ) // Outputs 3
+if i > 2
+    String i = "2"
+    echo( i ) // Outputs 2
+end
+echo( i ) // Outputs 3
+</pre>
+</div>
+
+<script language="JavaScript">
+IncludeFooter( '' )
+</script>
+
+</body></html>

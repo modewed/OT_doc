@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+<TITLE>CreateWorkData()</TITLE>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+</HEAD>
+
+<BODY CLASS="Body" TEXT="#000000" BGCOLOR="#FFFFFF" link="#003366" alink="#3300FF" vlink="#660033" background="../images/pattern.gif">
+<script language="JavaScript">updateParentHeader( 'Code' );</script>
+<script language="JavaScript">includeContentContainer( 'wfbuilder', true );</script>
+
+<p class="body">
+
+<p class="title">CreateWorkData()</p>
+<p class="body">This code sample describes how to add the Table 
+Values data type to the work package of the specified workflow.</p>
+
+<pre class="code">
+	Function Boolean CreateWorkData( \
+		Object 		prgCtx, \
+		WAPIWORK 	work, \
+		List 		wfInfo, \
+		Dynamic 	data )
+		
+		Boolean 	success
+		Record 		r
+		
+		List 		info = { .fType, .fSubType, wfInfo[ 2 ] }
+		Object 		session = prgCtx.WSession()
+		
+		success = session.StartTrans()
+	
+		//Call the ReadyForModification() script to verify that the data
+		//type is in a format that can be saved.
+
+	if ( success )
+		data = .ReadyForModification( prgCtx, data )
+	
+		//Add the Table Values data type to the specified workflow.
+
+	success = $WFMain.WAPIPkg.AddWorkDataPackage( work, \
+				'TableValues', info )
+	
+		//Call the SaveTableValues() script to save the values that a
+		//workflow participant specifies for the workflow attribute
+		//fields on the Customer and Project pages.
+
+	if ( success )
+		success = .SaveTableValues( prgCtx, wfInfo[ 2 ], data )
+	end
+	if ( !session.EndTrans( success ) )
+		success = False
+	end
+	end
+	return( success )
+	end
+</pre>
+
+
+<script language="JavaScript">IncludeFooter();</script>
+
+</body>
+</html>

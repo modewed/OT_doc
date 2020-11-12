@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+
+<head>
+<title>OScript Language Reference : Xlates</title>
+<link rel="stylesheet" type="text/css" href="../ot_common_ui.css">
+<link rel="stylesheet" type="text/css" href="languageref.css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+</head>
+
+<body>
+<script language=JavaScript>IncludeHeader( 'olang2', 'XLates' )
+</script>
+
+<h1>Xlates</h1>
+<p>Content Server uses Xlates to facilitate the internationalization of its interface into other languages. Using Xlates, you can translate:</p>
+<ul>
+<li>User messages in scripts<br><br></li>
+<li>User messages in string features<br><br></li>
+<li>Prompts and other text on HTML pages</li>
+</ul>
+
+<p>Each OSpace has an XDB file for each language into which it is translated. For example, for the Projects OSpace, <code>project.oll</code> there is 
+a corresponding XDB file for the English language, called <code>projectUSA.xdb</code>, for French called <code>projectFRN.xdb</code>, and so on.</p>
+
+<p>An XDB file stores the information required to translate each string of user text in its OSpace and corresponding HTML files. For each string, the XDB stores:</p>
+<ul>
+<li>A key identifying the string<br><br></li>
+<li>The actual text to display, in the correct language<br><br></li>
+<li>A comment about the intention of the user text, for the benefit of translators</li>
+</ul>
+
+<p>This set of information forms an <span class="emph">Xlate</span>. XDB stands for Xlate DataBase. Xlates are organized into groups for easier management, 
+and the groups in an XDB are given names that become part of the Xlate's key.</p>
+
+<p>For a more complete discussion of internationalizing Content Server, including the format for XDB files, see the <span class="emph">Builder Developer's Guide</span>.</p>
+
+<h2>Referencing Xlate String Constants</h2>
+<p>To allow for easy internationalization, you can convert all displayable Strings in your custom OSpaces into Xlates. These are stored in your OSpace's XDB file, 
+which can be exported, translated into the destination language, and reimported into Content Server Eclipse environment.</p>
+
+<p>By referencing an Xlate instead of the string itself, you can easily create versions of Content Server for different languages without having to make modifications to your code.  
+Xlates should be used in your code instead of text, when displaying messages or prompts.</p>
+
+<p>For example, the following code contains Strings that should be changed to Xlates:</p>
+
+<div class="example">
+<pre>
+	function Assoc Execute()
+		String scriptName = request.SCRIPT_NAME
+		assoc section_1 = ._NewSection()
+		string imagePrefix = \
+		$Kernel.ModuleSubsystem.getrefitem(this).supportprefix()
+		section_1.anchorHREF = scriptname +&quot;?func=Personal.Suggestions&quot;
+		section_1.heading = &quot;Personal Suggestions Area&quot;
+		section_1.imageURL = imagePrefix +&quot;icon_suggestionbox.gif&quot;
+		section_1.imageALT = &quot;Personal Suggestions Area&quot;
+		sections.(section_1.heading) = section_1
+	end
+</pre>
+</div>
+
+<p>These Strings can be changed to the following Xlates (where the Xlates are defined in the corresponding XDB file):</p>
+
+<div class="example">
+<pre>
+	section_1.anchorHREF = scriptname +&quot;?func=Personal.Suggestions&quot;
+	section_1.heading = [Suggestions_HTMLLabel.PersonalSuggestionsArea]
+	section_1.imageURL = imagePrefix +&quot;icon_suggestionbox.gif&quot;
+	section_1.imageALT = [Suggestions_HTMLLabel.PersonalSuggestionsArea]
+</pre>
+
+<script language="JavaScript">IncludeFooter( '' )</script>
+</body>
+</html>

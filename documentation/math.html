@@ -1,0 +1,765 @@
+
+<meta charset="UTF-8">
+<html>
+<head><title>Class: Math</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../syntax.css" type="text/css">
+<link rel="stylesheet" href="builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td  align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody></table>
+
+<div id="document">
+	
+<div class="sidebar_container">
+		
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink"><a href="assoc.html">Assoc</a></div>
+				<div class="packagelink"><a href="boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="builder.html">Builder</a></div>
+				<div class="packagelink"><a href="bytes.html">Bytes</a></div>
+				<div class="packagelink"><a href="capi.html">CAPI</a></div>
+				<div class="packagelink"><a href="capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink"><a href="cachetree.html">CacheTree</a></div>
+				<div class="packagelink"><a href="compiler.html">Compiler</a></div>
+				<div class="packagelink"><a href="core.html">Core</a></div>
+				<div class="packagelink"><a href="dapi.html">DAPI</a></div>
+				<div class="packagelink"><a href="dapinode.html">DAPINODE</a></div>
+				<div class="packagelink"><a href="dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink"><a href="dapiversion.html">DAPIVERSION</a></div>
+				<div class="packagelink"><a href="domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="domcomment.html">DOMComment</a></div>
+				<div class="packagelink"><a href="domdocument.html">DOMDocument</a></div>
+				<div class="packagelink"><a href="domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink"><a href="domelement.html">DOMElement</a></div>
+				<div class="packagelink"><a href="domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink"><a href="domnamednodemap.html">DOMNamedNodeMap</a></div>
+				<div class="packagelink"><a href="domnode.html">DOMNode</a></div>
+				<div class="packagelink"><a href="domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="domtext.html">DOMText</a></div>
+				<div class="packagelink"><a href="date.html">Date</a></div>
+				<div class="packagelink"><a href="dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="env.html">Env</a></div>
+				<div class="packagelink"><a href="error.html">Error</a></div>
+				<div class="packagelink"><a href="file.html">File</a></div>
+				<div class="packagelink"><a href="filecopy.html">FileCopy</a></div>
+				<div class="packagelink"><a href="fileprefs.html">Fileprefs</a></div>
+				<div class="packagelink"><a href="frame.html">Frame</a></div>
+				<div class="packagelink"><a href="global.html">Global</a></div>
+				<div class="packagelink"><a href="integer.html">Integer</a></div>
+				<div class="packagelink"><a href="javaobject.html">JavaObject</a></div>
+				<div class="packagelink"><a href="language.html">Language</a></div>
+				<div class="packagelink"><a href="license.html">License</a></div>
+				<div class="packagelink"><a href="list.html">List</a></div>
+				<div class="packagelink"><a href="logging.html">Logging</a></div>
+				<div class="packagelink"><a href="long.html">Long</a></div>
+				<div class="packagelink"><a href="mailmessage.html">MailMessage</a></div>
+				<div class="packagelink curPage">Math</div>
+				<div class="packagelink"><a href="memcached.html">Memcached</a></div>
+				<div class="packagelink"><a href="notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="object.html">Object</a></div>
+				<div class="packagelink"><a href="pop3session.html">POP3Session</a></div>
+				<div class="packagelink"><a href="patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="patfind.html">PatFind</a></div>
+				<div class="packagelink"><a href="pattern.html">Pattern</a></div>
+				<div class="packagelink"><a href="point.html">Point</a></div>
+				<div class="packagelink"><a href="profiler.html">Profiler</a></div>
+				<div class="packagelink"><a href="real.html">Real</a></div>
+				<div class="packagelink"><a href="recarray.html">RecArray</a></div>
+				<div class="packagelink"><a href="record.html">Record</a></div>
+				<div class="packagelink"><a href="regex.html">Regex</a></div>
+				<div class="packagelink"><a href="restclient.html">RestClient</a></div>
+				<div class="packagelink"><a href="saxparser.html">SAXParser</a></div>
+				<div class="packagelink"><a href="smtpsession.html">SMTPSession</a></div>
+				<div class="packagelink"><a href="ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="script.html">Script</a></div>
+				<div class="packagelink"><a href="security.html">Security</a></div>
+				<div class="packagelink"><a href="set.html">Set</a></div>
+				<div class="packagelink"><a href="socket.html">Socket</a></div>
+				<div class="packagelink"><a href="sql.html">Sql</a></div>
+				<div class="packagelink"><a href="sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink"><a href="str.html">Str</a></div>
+				<div class="packagelink"><a href="string.html">String</a></div>
+				<div class="packagelink"><a href="system.html">System</a></div>
+				<div class="packagelink"><a href="uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="void.html">Void</a></div>
+				<div class="packagelink"><a href="wapi.html">WAPI</a></div>
+				<div class="packagelink"><a href="wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink"><a href="web.html">Web</a></div>
+				<div class="packagelink"><a href="xslprocessor.html">XSLProcessor</a></div>
+				<div class="packagelink"><a href="zip.html">Zip</a></div>
+		</div>
+</div>
+
+	<div class="content_container">
+		<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+		<h1>Class: Math</h1><div class="ClassDescription"><p>The built-in functions in the Math Package allow   mathematical operations to be performed upon integer and real number data. Note:   All integers automatically convert to Reals with no data loss. All Reals automatically   convert to Integers by being truncated.</p>
+<p>The Math Package offers the following functionality:</p>
+<ul>
+<li><a class="interdoc" href="#cm_math_floor">Floor()</a> and
+    <a class="interdoc" href="#cm_math_ceil">Ceil()</a> to calculate the nearest integers
+    not greater than or not less than a given number. </li>
+<li><a class="interdoc" href="#cm_math_round">Round()</a> to round
+    a number, <a class="interdoc" href="#cm_math_trunc">Trunc()</a> to truncate a number, or
+    <a class="interdoc" href="#cm_math_truncleft">TruncLeft()</a> to left-truncate a number.
+    <a class="interdoc" href="#cm_math_roundsignificant">RoundSignificant()</a> rounds the integer part of a number to a specified number of significant digits, 
+    <a class="interdoc" href="#cm_math_roundsignificantint">RoundSignificantInt()</a> is an alias of RoundSignificant, 
+    <a class="interdoc" href="#cm_math_roundsignificantreal">RoundSignificantReal()</a> rounds a number to a specified number of significant digits.</li>
+<li><a class="interdoc" href="#cm_math_min">Min()</a> and <a class="interdoc" href="#cm_math_max">Max()</a>
+    to return the minimum and maximum of two numbers.</li>
+<li><a class="interdoc" href="#cm_math_abs">Abs()</a> to return
+    the absolute value of a number.</li>
+<li><a class="interdoc" href="#cm_math_log">Log()</a> and
+    <a class="interdoc" href="#cm_math_log10">Log10()</a> to compute the natural and base-10 logarithm
+    of a number, <a class="interdoc" href="#cm_math_sqrt">Sqrt()</a> to calculate a square root,
+    and <a class="interdoc" href="#cm_math_power">Power()</a> to calculate an exponent
+    for a given base.</li>
+<li><a class="interdoc" href="#cm_math_random">Random()</a> to
+    generate random integers.</li>
+</ul></div>
+			<h2>Class Attributes</h2>
+			<div class="ClassAttributesShort">
+				
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_math_e_overflow">E_Overflow</a></div>
+					<div class="Description"><p>Overflow range error  -- i.e. math.power( 10, 1000 )</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_math_e_ploss">E_PLOSS</a></div>
+					<div class="Description"></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_math_e_singularity">E_Singularity</a></div>
+					<div class="Description"><p>Argument singularity -- i.e. math.power(
+    0, -2 )</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_math_e_stackfault">E_StackFault</a></div>
+					<div class="Description"><p>Floating point unit stack overflow.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_math_e_tloss">E_TLOSS</a></div>
+					<div class="Description"></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_math_e_underflow">E_Underflow</a></div>
+					<div class="Description"><p>Underflow range error -- i.e. math.power( 10, -1000 )</p></div>
+				</div>
+				
+			</div>
+
+
+			<h2>Class Methods</h2>
+			<div class="ClassMethodsShort">
+				<div class="Method">
+					<div class="Name"><a href="#cm_math_abs" class="IndexMethodName">Abs</a>(
+					 Real number )
+					</div>
+					<div class="Description"><p>Returns the absolute value.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_math_ceil" class="IndexMethodName">Ceil</a>(
+					 Real number )
+					</div>
+					<div class="Description"><p>Returns the number rounded up.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_math_floor" class="IndexMethodName">Floor</a>(
+					 Real number )
+					</div>
+					<div class="Description"><p>Returns the number rounded down.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_math_log" class="IndexMethodName">Log</a>(
+					 Real number )
+					</div>
+					<div class="Description"><p>Returns the natural logarithm.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_math_log10" class="IndexMethodName">Log10</a>(
+					 Real number )
+					</div>
+					<div class="Description"><p>Returns the base-10 logarithm.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_math_max" class="IndexMethodName">Max</a>(
+					 Real number1, Real number2 )
+					</div>
+					<div class="Description"><p>Returns the larger of the numbers.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_math_min" class="IndexMethodName">Min</a>(
+					 Real number1, Real number2 )
+					</div>
+					<div class="Description"><p>Returns the smaller of the numbers.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_math_power" class="IndexMethodName">Power</a>(
+					 Real base, Real exponent )
+					</div>
+					<div class="Description"><p>Returns the base raised to the exponent.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_math_random" class="IndexMethodName">Random</a>(
+					 Integer range, [Integer seed] )
+					</div>
+					<div class="Description"><p>Returns "random" number
+    that is greater than or equal to 0 and less than range.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_math_round" class="IndexMethodName">Round</a>(
+					 Real number )
+					</div>
+					<div class="Description"><p>Returns the number rounded to the
+    closest integer.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_math_roundsignificant" class="IndexMethodName">RoundSignificant</a>(
+					 Real number, Integer digits )
+					</div>
+					<div class="Description"><p>Returns the integer part of a number rounded to the specified
+    number of significant digits.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_math_roundsignificantint" class="IndexMethodName">RoundSignificantInt</a>(
+					 Real number, Integer digits )
+					</div>
+					<div class="Description"><p>Returns the integer part of a number rounded to the specified number of significant digits.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_math_roundsignificantreal" class="IndexMethodName">RoundSignificantReal</a>(
+					 Real number, Integer digits )
+					</div>
+					<div class="Description"><p>Returns the number rounded to the specified number of significant digits.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_math_sqrt" class="IndexMethodName">Sqrt</a>(
+					 Real number )
+					</div>
+					<div class="Description"><p>Returns the square root of the number.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_math_trunc" class="IndexMethodName">Trunc</a>(
+					 Real number )
+					</div>
+					<div class="Description"><p>Returns the number without the decimal
+    part.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_math_truncleft" class="IndexMethodName">TruncLeft</a>(
+					 Real number )
+					</div>
+					<div class="Description"><p>Returns the number without the whole
+    number part.</p></div>
+				</div>
+			</div>
+
+
+				<h2>Class Attributes</h2>
+				<div class="ClassAttributes">
+					
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_math_e_overflow">E_Overflow</a></div>
+						<div class="Description"><p><span class="Deprecated">Not used</span>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_math_e_ploss">E_PLOSS</a></div>
+						<div class="Description"><p><span class="Deprecated">Not used</span>.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_math_e_singularity">E_Singularity</a></div>
+						<div class="Description"><p>Argument singularity -- i.e. math.power(
+  0, -2 )</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_math_e_stackfault">E_StackFault</a></div>
+						<div class="Description"><p>Floating point unit stack overflow.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name"> <a name="ca_math_e_tloss">E_TLOSS</a></div>
+						<div class="Description"></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_math_e_underflow">E_Underflow</a></div>
+						<div class="Description"><p>Underflow range error -- i.e. math.power( 10, -1000 )</p></div>
+					</div>
+				
+				</div>
+
+		
+				<h2>Class Methods</h2>
+				<div class="ClassMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_math_abs">Abs</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Real</span> 
+						<span class="PrototypeselfName">Abs</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Real</span> <span class="PrototypeArgumentName">number</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the absolute value of the
+    specified number. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">number</span><span class="description"><p>An Integer or a Real to be evaluated.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The absolute value
+      of the specified number as a Real.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_math_ceil">Ceil</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Real</span> 
+						<span class="PrototypeselfName">Ceil</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Real</span> <span class="PrototypeArgumentName">number</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a Real number corresponding
+    to the smallest Integer value that is not smaller than the specified number.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">number</span><span class="description"><p>A Real number.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A Real number corresponding
+    to the smallest Integer value that is not smaller than the specified number.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is an example showing the effect of various
+    truncation-related Math functions:</p>
+<div class="codehilite"><pre><span class="kt">Real</span>    num <span class="o">=</span> <span class="m">3.14159</span>
+
+Echo<span class="p">(</span> num <span class="p">)</span>
+Echo<span class="p">(</span> Math<span class="o">.</span>Floor<span class="p">(</span> num <span class="p">)</span> <span class="p">)</span>
+Echo<span class="p">(</span> Math<span class="o">.</span>Ceil<span class="p">(</span> num <span class="p">)</span> <span class="p">)</span>
+Echo<span class="p">(</span> Math<span class="o">.</span>Round<span class="p">(</span> num <span class="p">)</span> <span class="p">)</span>
+Echo<span class="p">(</span> Math<span class="o">.</span>Trunc<span class="p">(</span> num <span class="p">)</span> <span class="p">)</span>
+Echo<span class="p">(</span> Math<span class="o">.</span>TruncLeft<span class="p">(</span> num <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre><span class="m">3.14159</span>
+<span class="m">3</span>
+<span class="m">4</span>
+<span class="m">3</span>
+<span class="m">3</span>
+<span class="m">0.14159</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_math_floor">Floor</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Real</span> 
+						<span class="PrototypeselfName">Floor</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Real</span> <span class="PrototypeArgumentName">number</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns a Real number corresponding
+    to the largest Integer value that is not larger than the specified number.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">number</span><span class="description"><p>A Real number.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A Real number corresponding
+    to the largest Integer value that is not smaller than the specified number.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>See <a class="interdoc" href="#cm_math_ceil">Ceil()</a> for an example.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_math_log">Log</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Real</span> 
+						<span class="PrototypeselfName">Log</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Real</span> <span class="PrototypeArgumentName">number</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Computes the natural logarithm of the specified number. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">number</span><span class="description"><p>Specifies an Integer or a Real which
+            should be non-zero and positive.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A Real number corresponding to the
+      natural logarithm, if number is a non-zero, positive value; Undefined otherwise.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_math_log10">Log10</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Real</span> 
+						<span class="PrototypeselfName">Log10</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Real</span> <span class="PrototypeArgumentName">number</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Computes the base-10 logarithm of
+    the specified number. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">number</span><span class="description"><p>An Integer or Real which should
+            be non-zero and positive.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A Real number corresponding to the
+      base-10 logarithm, if number is a non-zero, positive value; Undefined otherwise.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>This short example demonstrates how logarithms can
+    be used to calculate the square root of two:</p>
+<div class="codehilite"><pre>Echo<span class="p">(</span> Math<span class="o">.</span>Power<span class="p">(</span> <span class="m">10</span><span class="p">,</span> Math<span class="o">.</span>Log<span class="m">10</span><span class="p">(</span> <span class="m">2</span> <span class="p">)</span> <span class="o">/</span> <span class="m">2</span> <span class="p">)</span> <span class="p">)</span>
+Echo<span class="p">(</span> Math<span class="o">.</span>Sqrt<span class="p">(</span> <span class="m">2</span> <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output of the example is:</p>
+<div class="codehilite"><pre><span class="m">1.4142135623731</span>
+<span class="m">1.4142135623731</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_math_max">Max</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Real</span> 
+						<span class="PrototypeselfName">Max</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Real</span> <span class="PrototypeArgumentName">number1</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Real</span> <span class="PrototypeArgumentName">number2</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the larger of two given numbers. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">number1</span><span class="description"><p>An Integer or a Real which is
+            one number to be compared.</p></span></div>
+											<div class="Parameter"><span class="name">number2</span><span class="description"><p>An Integer or a Real which is
+            compared to <em>number1</em>.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The Real which is the larger value,
+      if successful; Undefined otherwise. Note: The Real value returned can be
+      converted into an Integer by storing the result in an Integer.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_math_min">Min</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Real</span> 
+						<span class="PrototypeselfName">Min</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Real</span> <span class="PrototypeArgumentName">number1</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Real</span> <span class="PrototypeArgumentName">number2</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns the smaller of two given
+    numbers. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">number1</span><span class="description"><p>An Integer or a Real which is
+            one number to be compared.</p></span></div>
+											<div class="Parameter"><span class="name">number2</span><span class="description"><p>An Integer or a Real which is
+            compared to <em>number1</em>.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A Real which is the smaller value,
+      if successful; Undefined otherwise. Note: The Real value returned can be
+      converted into an Integer by storing the result in an Integer.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_math_power">Power</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Real</span> 
+						<span class="PrototypeselfName">Power</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Real</span> <span class="PrototypeArgumentName">base</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Real</span> <span class="PrototypeArgumentName">exponent</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Raises the specified base number
+    to the specified exponent power. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">base</span><span class="description"><p>A Real or Integer.</p></span></div>
+											<div class="Parameter"><span class="name">exponent</span><span class="description"><p>A Real or Integer.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>Specifies any number, Real or Integer.
+      Note: The Real value returned can be forced into an Integer by storing the
+      result in an Integer, if needed.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>See <a class="interdoc" href="#cm_math_log10">Log10()</a> for an example.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_math_random">Random</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">Random</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">range</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">seed</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Generates and returns a pseudo-random Integer
+    within the specified range. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">range</span><span class="description"><p>A positive <a class="interdoc" href="integer.html">Integer</a> which is
+            the upper limit for the generated random number, all generated random integers will
+            be less than range.</p></span></div>
+											<div class="Parameter"><span class="name">seed</span><span class="description"><p>An optional <a class="interdoc" href="integer.html">Integer</a> indicating
+            a seed for the set of random numbers from which the returned random
+            number is selected. Defaults to a random seed if not specified.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A pseudo-random Integer in the range
+      from 0 to less than <em>range</em>.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Note: Successive execution of the Math.Random function
+      results in a pseudo-random sequence of numbers. Therefore, seed should only
+      be specified once per sequence of random numbers. Specifying the same seed
+      for successive calls to the Math.Random function always generates the same
+      set of numbers. </p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_math_round">Round</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Real</span> 
+						<span class="PrototypeselfName">Round</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Real</span> <span class="PrototypeArgumentName">number</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Rounds the specified number up or
+    down to the next closest Integer. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">number</span><span class="description"><p>A Real indicating the number
+            to round.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A Real number rounded to the next
+      closest Integer value (i.e. 1.5 -&gt; 2, 1.4 -&gt; 1).</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>See <a class="interdoc" href="#cm_math_ceil">Ceil()</a> for an example.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_math_roundsignificant">RoundSignificant</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">RoundSignificant</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Real</span> <span class="PrototypeArgumentName">number</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">digits</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Rounds the integer part of a number to the specified number of significant digits </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">number</span><span class="description"><div class="codehilite"><pre>A <span class="kt">real</span> number to round<span class="o">.</span> 
+                <span class="k">If</span> a value of zero is provided<span class="p">,</span> the <span class="k">function</span> will return MININTEGER<span class="o">.</span>
+</pre></div></span></div>
+											<div class="Parameter"><span class="name">digits</span><span class="description"><p>A positive integer indicating the number of significant digits to round to. 
+                    If a zero or negative number is provided, the function will return zero.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An integer number rounded to the number of significant digits.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><div class="codehilite"><pre>        Examples<span class="o">:</span>
+
+            Echo<span class="p">(</span> Math<span class="o">.</span>RoundSignificant<span class="p">(</span> <span class="m">0</span><span class="p">,</span> <span class="m">1</span> <span class="p">)</span> <span class="p">)</span>
+            Echo<span class="p">(</span> Math<span class="o">.</span>RoundSignificant<span class="p">(</span> <span class="m">12.3</span><span class="p">,</span> <span class="o">-</span><span class="m">1</span> <span class="p">)</span> <span class="p">)</span>
+            Echo<span class="p">(</span> Math<span class="o">.</span>RoundSignificant<span class="p">(</span> <span class="m">12.3</span><span class="p">,</span> <span class="m">0</span> <span class="p">)</span> <span class="p">)</span>
+            Echo<span class="p">(</span> Math<span class="o">.</span>RoundSignificant<span class="p">(</span> <span class="m">12.3</span><span class="p">,</span> <span class="m">1</span> <span class="p">)</span> <span class="p">)</span>
+            Echo<span class="p">(</span> Math<span class="o">.</span>RoundSignificant<span class="p">(</span> <span class="m">12.3</span><span class="p">,</span> <span class="m">2</span> <span class="p">)</span> <span class="p">)</span>
+            Echo<span class="p">(</span> Math<span class="o">.</span>RoundSignificant<span class="p">(</span> <span class="m">12.3</span><span class="p">,</span> <span class="m">3</span> <span class="p">)</span> <span class="p">)</span>
+        The outputs of the examples are<span class="o">:</span>
+
+               <span class="o">-</span><span class="m">2147483648</span>
+               <span class="m">0</span>
+               <span class="m">0</span>
+               <span class="m">10</span>
+               <span class="m">12</span>
+               <span class="m">12</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_math_roundsignificantint">RoundSignificantInt</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Integer</span> 
+						<span class="PrototypeselfName">RoundSignificantInt</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Real</span> <span class="PrototypeArgumentName">number</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">digits</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Rounds the integer part of a number to the specified number of significant digits. It is an alias of  RoundSignificant</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">number</span><span class="description"><div class="codehilite"><pre>A <span class="kt">real</span> number to round<span class="o">.</span> 
+                <span class="k">If</span> a value of zero is provided<span class="p">,</span> the <span class="k">function</span> will return MININTEGER<span class="o">.</span>
+</pre></div></span></div>
+											<div class="Parameter"><span class="name">digits</span><span class="description"><p>A positive integer indicating the number of significant digits to round to. 
+                    If a zero or negative number is provided, the function will return zero.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>An integer number rounded to the number of significant digits.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><div class="codehilite"><pre>        See <span class="p">[[</span>RoundSignificant<span class="p">()]]</span> <span class="k">for</span> examples<span class="o">.</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_math_roundsignificantreal">RoundSignificantReal</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Real</span> 
+						<span class="PrototypeselfName">RoundSignificantReal</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Real</span> <span class="PrototypeArgumentName">number</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">digits</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Rounds the number to the specified number of significant digits</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">number</span><span class="description"><div class="codehilite"><pre>A <span class="kt">real</span> number to round<span class="o">.</span> 
+                <span class="k">If</span> a value of zero is provided<span class="p">,</span> the <span class="k">function</span> will return Undefined<span class="o">.</span>
+</pre></div></span></div>
+											<div class="Parameter"><span class="name">digits</span><span class="description"><p>A positive integer indicating the number of significant digits to round to. 
+                    If a zero or negative number is provided, the function will return Undefined.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A real number rounded to the number of significant digits.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><div class="codehilite"><pre>        Examples<span class="o">:</span>
+
+            Echo<span class="p">(</span> Math<span class="o">.</span>RoundSignificantReal<span class="p">(</span> <span class="m">0</span><span class="p">,</span> <span class="m">1</span> <span class="p">)</span> <span class="p">)</span>
+            Echo<span class="p">(</span> Math<span class="o">.</span>RoundSignificantReal<span class="p">(</span> <span class="m">12.3</span><span class="p">,</span> <span class="o">-</span><span class="m">1</span> <span class="p">)</span> <span class="p">)</span>
+            Echo<span class="p">(</span> Math<span class="o">.</span>RoundSignificantReal<span class="p">(</span> <span class="m">12.3</span><span class="p">,</span> <span class="m">0</span> <span class="p">)</span> <span class="p">)</span>
+            Echo<span class="p">(</span> Math<span class="o">.</span>RoundSignificantReal<span class="p">(</span> <span class="m">12.3</span><span class="p">,</span> <span class="m">1</span> <span class="p">)</span> <span class="p">)</span>
+            Echo<span class="p">(</span> Math<span class="o">.</span>RoundSignificantReal<span class="p">(</span> <span class="m">12.3</span><span class="p">,</span> <span class="m">2</span> <span class="p">)</span> <span class="p">)</span>
+            Echo<span class="p">(</span> Math<span class="o">.</span>RoundSignificantReal<span class="p">(</span> <span class="m">12.3</span><span class="p">,</span> <span class="m">3</span> <span class="p">)</span> <span class="p">)</span>
+        The outputs of the examples are<span class="o">:</span>
+
+               Undefined
+               Undefined
+               Undefined
+               <span class="m">10</span>
+               <span class="m">12</span>
+               <span class="m">12.3</span>
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_math_sqrt">Sqrt</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Real</span> 
+						<span class="PrototypeselfName">Sqrt</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Real</span> <span class="PrototypeArgumentName">number</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Calculates the square root of the
+    specified number. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">number</span><span class="description"><p>An Integer or a Real indicating
+            the number on which to operate.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>The square root
+      of the specified number as a Real, if successful; Undefined otherwise.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>See <a class="interdoc" href="#cm_math_log10">Log10()</a> for an example.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_math_trunc">Trunc</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Real</span> 
+						<span class="PrototypeselfName">Trunc</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Real</span> <span class="PrototypeArgumentName">number</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Truncates the decimal part of a
+    Real number. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">number</span><span class="description"><p>A Real number
+            to be truncated.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A Real number whose signed numerals
+      to the left of the decimal point are the same as the specified number and
+      whose numerals to the right of the decimal point are set to zero, if successful;
+      Undefined otherwise.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>See <a class="interdoc" href="#cm_math_ceil">Ceil()</a> for an example.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_math_truncleft">TruncLeft</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Real</span> 
+						<span class="PrototypeselfName">TruncLeft</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Real</span> <span class="PrototypeArgumentName">number</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Truncates the whole number part
+    from a Real number. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">number</span><span class="description"><p>A Real number to be left-truncated.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A Real number whose sign and numerals
+      to the right of the decimal point are the same as the specified number and
+      whose numerals to the left of the decimal point are set to zero, if successful;
+      Undefined otherwise.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>See <a class="interdoc" href="#cm_math_ceil">Ceil()</a> for an example.</p></div>
+							</div>
+						</div>
+				</div>
+		
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2018 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+
+
+
+</div>
+	</div>						
+						
+
+</div>
+
+</body></html>

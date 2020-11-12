@@ -1,0 +1,581 @@
+
+<meta charset="UTF-8">
+<html>
+<head><title>Class: Compiler</title>
+<link rel="stylesheet" href="../ot_common_ui.css" type="text/css">
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+<link rel="stylesheet" href="../syntax.css" type="text/css">
+<link rel="stylesheet" href="builtins.css" type="text/css">
+<script language="JavaScript" src="../documentation.js"></script>
+<script langauge="JavaScript">
+	function togglePackage( packageName )
+	{
+		var package = document.getElementById( "package-" + packageName );
+		package.className = package.className.replace( "revealed", "placeholder" );
+		package.className = package.className.replace( "hidden", "revealed" );
+		package.className = package.className.replace( "placeholder", "hidden" );
+	}
+</script>
+</head>
+
+<body class="Body">
+
+<table class="sdk_headerbar" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+	<tr>
+	<td align="CENTER" nowrap="" valign="MIDDLE" width="55">&nbsp;<img src="../images/logo.png" style="margin-right: 10px" align="TOP" border="0" height="28" width="29"></td>
+	<td  align="LEFT" nowrap="" valign="MIDDLE"><span class="MastheadTitle1">OScript API/Built-in Package Index</span></td></tr></tbody></table>
+
+<div id="document">
+	
+<div class="sidebar_container">
+		
+		<h3 class="packageName" onClick="togglePackage(&quot;&quot;)"></h3>
+		<div class="revealed package" id="package-">
+				<div class="packagelink"><a href="assoc.html">Assoc</a></div>
+				<div class="packagelink"><a href="boolean.html">Boolean</a></div>
+				<div class="packagelink"><a href="builder.html">Builder</a></div>
+				<div class="packagelink"><a href="bytes.html">Bytes</a></div>
+				<div class="packagelink"><a href="capi.html">CAPI</a></div>
+				<div class="packagelink"><a href="capiconnect.html">CAPICONNECT</a></div>
+				<div class="packagelink"><a href="capierr.html">CAPIERR</a></div>
+				<div class="packagelink"><a href="capilog.html">CAPILOG</a></div>
+				<div class="packagelink"><a href="capilogin.html">CAPILOGIN</a></div>
+				<div class="packagelink"><a href="cachetree.html">CacheTree</a></div>
+				<div class="packagelink curPage">Compiler</div>
+				<div class="packagelink"><a href="core.html">Core</a></div>
+				<div class="packagelink"><a href="dapi.html">DAPI</a></div>
+				<div class="packagelink"><a href="dapinode.html">DAPINODE</a></div>
+				<div class="packagelink"><a href="dapisession.html">DAPISESSION</a></div>
+				<div class="packagelink"><a href="dapistream.html">DAPISTREAM</a></div>
+				<div class="packagelink"><a href="dapiversion.html">DAPIVERSION</a></div>
+				<div class="packagelink"><a href="domattr.html">DOMAttr</a></div>
+				<div class="packagelink"><a href="domcdatasection.html">DOMCDATASection</a></div>
+				<div class="packagelink"><a href="domcharacterdata.html">DOMCharacterData</a></div>
+				<div class="packagelink"><a href="domcomment.html">DOMComment</a></div>
+				<div class="packagelink"><a href="domdocument.html">DOMDocument</a></div>
+				<div class="packagelink"><a href="domdocumentfragment.html">DOMDocumentFragment</a></div>
+				<div class="packagelink"><a href="domdocumenttype.html">DOMDocumentType</a></div>
+				<div class="packagelink"><a href="domelement.html">DOMElement</a></div>
+				<div class="packagelink"><a href="domentity.html">DOMEntity</a></div>
+				<div class="packagelink"><a href="domentityreference.html">DOMEntityReference</a></div>
+				<div class="packagelink"><a href="domimplementation.html">DOMImplementation</a></div>
+				<div class="packagelink"><a href="domnamednodemap.html">DOMNamedNodeMap</a></div>
+				<div class="packagelink"><a href="domnode.html">DOMNode</a></div>
+				<div class="packagelink"><a href="domnodelist.html">DOMNodeList</a></div>
+				<div class="packagelink"><a href="domnotation.html">DOMNotation</a></div>
+				<div class="packagelink"><a href="domparser.html">DOMParser</a></div>
+				<div class="packagelink"><a href="domprocessinginstruction.html">DOMProcessingInstruction</a></div>
+				<div class="packagelink"><a href="domtext.html">DOMText</a></div>
+				<div class="packagelink"><a href="date.html">Date</a></div>
+				<div class="packagelink"><a href="dynamic.html">Dynamic</a></div>
+				<div class="packagelink"><a href="env.html">Env</a></div>
+				<div class="packagelink"><a href="error.html">Error</a></div>
+				<div class="packagelink"><a href="file.html">File</a></div>
+				<div class="packagelink"><a href="filecopy.html">FileCopy</a></div>
+				<div class="packagelink"><a href="fileprefs.html">Fileprefs</a></div>
+				<div class="packagelink"><a href="frame.html">Frame</a></div>
+				<div class="packagelink"><a href="global.html">Global</a></div>
+				<div class="packagelink"><a href="integer.html">Integer</a></div>
+				<div class="packagelink"><a href="javaobject.html">JavaObject</a></div>
+				<div class="packagelink"><a href="language.html">Language</a></div>
+				<div class="packagelink"><a href="license.html">License</a></div>
+				<div class="packagelink"><a href="list.html">List</a></div>
+				<div class="packagelink"><a href="logging.html">Logging</a></div>
+				<div class="packagelink"><a href="long.html">Long</a></div>
+				<div class="packagelink"><a href="mailmessage.html">MailMessage</a></div>
+				<div class="packagelink"><a href="math.html">Math</a></div>
+				<div class="packagelink"><a href="memcached.html">Memcached</a></div>
+				<div class="packagelink"><a href="notset.html">NotSet</a></div>
+				<div class="packagelink"><a href="otds.html">OTDS</a></div>
+				<div class="packagelink"><a href="objref.html">ObjRef</a></div>
+				<div class="packagelink"><a href="object.html">Object</a></div>
+				<div class="packagelink"><a href="pop3session.html">POP3Session</a></div>
+				<div class="packagelink"><a href="patchange.html">PatChange</a></div>
+				<div class="packagelink"><a href="patfind.html">PatFind</a></div>
+				<div class="packagelink"><a href="pattern.html">Pattern</a></div>
+				<div class="packagelink"><a href="point.html">Point</a></div>
+				<div class="packagelink"><a href="profiler.html">Profiler</a></div>
+				<div class="packagelink"><a href="real.html">Real</a></div>
+				<div class="packagelink"><a href="recarray.html">RecArray</a></div>
+				<div class="packagelink"><a href="record.html">Record</a></div>
+				<div class="packagelink"><a href="regex.html">Regex</a></div>
+				<div class="packagelink"><a href="restclient.html">RestClient</a></div>
+				<div class="packagelink"><a href="saxparser.html">SAXParser</a></div>
+				<div class="packagelink"><a href="smtpsession.html">SMTPSession</a></div>
+				<div class="packagelink"><a href="ssloptions.html">SSLOptions</a></div>
+				<div class="packagelink"><a href="script.html">Script</a></div>
+				<div class="packagelink"><a href="security.html">Security</a></div>
+				<div class="packagelink"><a href="set.html">Set</a></div>
+				<div class="packagelink"><a href="socket.html">Socket</a></div>
+				<div class="packagelink"><a href="sql.html">Sql</a></div>
+				<div class="packagelink"><a href="sqlconnection.html">SqlConnection</a></div>
+				<div class="packagelink"><a href="sqlcursor.html">SqlCursor</a></div>
+				<div class="packagelink"><a href="str.html">Str</a></div>
+				<div class="packagelink"><a href="string.html">String</a></div>
+				<div class="packagelink"><a href="system.html">System</a></div>
+				<div class="packagelink"><a href="uapi.html">UAPI</a></div>
+				<div class="packagelink"><a href="uapisession.html">UAPISESSION</a></div>
+				<div class="packagelink"><a href="uapiuser.html">UAPIUSER</a></div>
+				<div class="packagelink"><a href="void.html">Void</a></div>
+				<div class="packagelink"><a href="wapi.html">WAPI</a></div>
+				<div class="packagelink"><a href="wapimap.html">WAPIMAP</a></div>
+				<div class="packagelink"><a href="wapimaptask.html">WAPIMAPTASK</a></div>
+				<div class="packagelink"><a href="wapisession.html">WAPISESSION</a></div>
+				<div class="packagelink"><a href="wapisubwork.html">WAPISUBWORK</a></div>
+				<div class="packagelink"><a href="wapiwork.html">WAPIWORK</a></div>
+				<div class="packagelink"><a href="web.html">Web</a></div>
+				<div class="packagelink"><a href="xslprocessor.html">XSLProcessor</a></div>
+				<div class="packagelink"><a href="zip.html">Zip</a></div>
+		</div>
+</div>
+
+	<div class="content_container">
+		<div class="breadcrumb"><a class="" href="../index.html">Home</a> : OScript API/Built-in Package Index</div>
+		<h1>Class: Compiler</h1><div class="ClassDescription"><p>The Compiler package consists of functions, datatypes,    and constants that are used by Livelink itself to compile, manipulate, and examine    Script values and their corresponding OScript source code. This includes the    ability to compile OScript source into a Script value, which can then be executed,    as well as a variety of functions for internal use only (to support the Livelink    SDK).</p>
+<p>With the exception of <a class="interdoc" href="#cm_compiler_compile">Compiler.Compile()</a>,    these functions are not intended for general use by a Livelink application developer    and should only be used with extremely careful consideration, if at all. Elements    labelled <span class="InternalUseOnly">Internal Use Only</span> below may have    their interface changed without notice.</p>
+<p>A bit of background is necessary to fully understand    these functions. Compiled OScript is stored as a value of type Script. Scripts    can be executed directly, or stored in object features as methods. Typically,    Script values contain both binary code for the OScript virtual machine, as well    as the original source code that produced the compiled code. It is possible    (using <a class="interdoc" href="#cm_compiler_makescript">Compiler.MakeScript()</a>), to construct a Script that contains no binary    code. The OScript engine will try to compile this type of script "on-the-fly"    when it is executed, although this will much slower than using a precompiled    script. </p>
+<p>Breakpoints - Currently, breakpoints are stored within    the compiled script code stored within a Script value. This implies, of course,    that a Script containing no compiled code cannot store breakpoints. It should    also be noted that the current Compiler functions permit the setting of a breakpoint    only at the beginning of a Script (i.e., the first executable statement).</p>
+<p>SourceRef - Some of these functions refer to something    called a sourceRef. A SourceRef is a String value which defines where the script    source originated. This is used internally by the Livelink debugger to correspond    compiled scripts with their sources, which may be text files or OSpace object    features. By convention only, a SourceRef has the form <resource_type>:<resource_data>.    For example, the SourceRef String "file:c:\opentext\joe.lxe" has a    resource_type of file. The following SourceRef resource types should be considered    reserved: file, weblingo, object, oppfile.</p></div>
+			<h2>Class Attributes</h2>
+			<div class="ClassAttributesShort">
+				
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_compiler_e_compilationerrors">E_CompilationErrors</a></div>
+					<div class="Description"><p>Indicates errors during compilation.</p></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_compiler_klogconversioninfo">kLogConversionInfo</a></div>
+					<div class="Description"></div>
+				</div>
+				<div class="Attribute">
+					<div class="Name"><a href="#ca_compiler_kstripsource">kStripSource</a></div>
+					<div class="Description"></div>
+				</div>
+				
+			</div>
+
+
+			<h2>Class Methods</h2>
+			<div class="ClassMethodsShort">
+				<div class="Method">
+					<div class="Name"><a href="#cm_compiler_clearbreaks" class="IndexMethodName">ClearBreaks</a>(
+					 Script theScript )
+					</div>
+					<div class="Description"><p>Clears all breakpoints in the specified 
+    script.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_compiler_compile" class="IndexMethodName">Compile</a>(
+					 Dynamic sourceValue, [String sourceRef] )
+					</div>
+					<div class="Description"><p>Compiles OScript source into a Script 
+    value.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_compiler_compilegeneral" class="IndexMethodName">CompileGeneral</a>(
+					 Dynamic sourceValue, [String sourceRef], [Integer compilationFlags] )
+					</div>
+					<div class="Description"><p>Compiles OScript and returns a List 
+    of errors.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_compiler_getbreakonentry" class="IndexMethodName">GetBreakOnEntry</a>(
+					 Script theScript )
+					</div>
+					<div class="Description"><p>Returns TRUE if the given Script value 
+    contains a breakpoint on its first executable line, FALSE otherwise.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_compiler_makescript" class="IndexMethodName">MakeScript</a>(
+					 String source, [String sourceRef] )
+					</div>
+					<div class="Description"><p>Creates a Script value that contains 
+    source, but no compiled binary code.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_compiler_prototype" class="IndexMethodName">Prototype</a>(
+					 Script theScript )
+					</div>
+					<div class="Description"></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_compiler_setbreakonentry" class="IndexMethodName">SetBreakOnEntry</a>(
+					 Script theScript, Boolean setBreak )
+					</div>
+					<div class="Description"><p>Sets or clears the initial breakpoint 
+    of a script.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_compiler_source" class="IndexMethodName">Source</a>(
+					 Script theScript )
+					</div>
+					<div class="Description"><p>Extract the source code (if any) from 
+    a Script value.</p></div>
+				</div>
+				<div class="Method">
+					<div class="Name"><a href="#cm_compiler_sourceref" class="IndexMethodName">SourceRef</a>(
+					 Script theScript )
+					</div>
+					<div class="Description"><p>Extract the SourceRef (if any) from 
+    a script.</p></div>
+				</div>
+			</div>
+
+
+				<h2>Class Attributes</h2>
+				<div class="ClassAttributes">
+					
+					<div class="Attribute">
+						<div class="Name">Error <a name="ca_compiler_e_compilationerrors">E_CompilationErrors</a></div>
+						<div class="Description"><p>Indicates errors during compilation. See 
+  <a class="interdoc" href="#cm_compiler_compile">Compiler.Compile()</a> or <a class="interdoc" href="#cm_compiler_compilegeneral">Compiler.CompileGeneral()</a> 
+  for more information. </p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_compiler_klogconversioninfo">kLogConversionInfo</a></div>
+						<div class="Description"><p><span class="InternalUseOnly">Internal use 
+  only</span>. See <a class="interdoc" href="#cm_compiler_compile">Compiler.Compile()</a> or <a class="interdoc" href="#cm_compiler_compilegeneral">Compiler.CompileGeneral()</a> 
+  for more information.</p></div>
+					</div>
+					<div class="Attribute">
+						<div class="Name">Integer <a name="ca_compiler_kstripsource">kStripSource</a></div>
+						<div class="Description"><p><span class="InternalUseOnly">Internal use 
+  only</span>. See <a class="interdoc" href="#cm_compiler_compile">Compiler.Compile()</a> or <a class="interdoc" href="#cm_compiler_compilegeneral">Compiler.CompileGeneral()</a> 
+  for more information.</p></div>
+					</div>
+				
+				</div>
+
+		
+				<h2>Class Methods</h2>
+				<div class="ClassMethods">
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_compiler_clearbreaks">ClearBreaks</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Script</span> 
+						<span class="PrototypeselfName">ClearBreaks</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Script</span> <span class="PrototypeArgumentName">theScript</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Clears all breakpoints in the specified script. 
+    If the script is not yet compiled and source is available within the script, 
+    then it will be compiled. If the script contains compiled code, then any breakpoints 
+    present in the script will be removed and the script will be returned. If 
+    the script has no binary code or cannot be compiled, then Undefined will be 
+    returned. </p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theScript</span><span class="description"><p>Script value to modify.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>If successful, <em>theScript</em> will be 
+      returned. Otherwise, Undefined will be returned.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_compiler_compile">Compile</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Script</span> 
+						<span class="PrototypeselfName">Compile</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">sourceValue</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">sourceRef</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Compiles OScript source into a Script value. The 
+    source can be either a String, a Script, or a File value.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">sourceValue</span><span class="description"><p>A Script, File, or String value that 
+            contains or refers to the OScript source to compile.</p></span></div>
+											<div class="Parameter"><span class="name">sourceRef</span><span class="description"><p>Internal use only. A String which is 
+            used by LivelinkSDK to determine where the source originated.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A compiled Script value if successful, 
+      the Error value <a class="interdoc" href="#ca_compiler_e_compilationerrors">E_CompilationErrors</a> otherwise.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>If compilation errors or warnings occur, they will 
+    be displayed in the Debug Window or logfile. If only warnings are present, 
+    then a Script value will still be returned by this function, although the 
+    warnings will appear in the Debug Window or logfile. See <a class="interdoc" href="#cm_compiler_compilegeneral">Compiler.CompileGeneral()</a> 
+    for a more powerful way to detect compilation errors.</p>
+<p>Here is an example of using Compiler.Compile() to compile 
+    a simple piece of OScript:</p>
+<div class="codehilite"><pre>    <span class="kt">String</span>  mySource <span class="o">=</span> <span class="s">&quot;function void myFunc( String myParam );echo( &#39;Parameter: &#39;, myParam );end&quot;</span>
+    Script  s <span class="o">=</span> Compiler<span class="o">.</span>Compile<span class="p">(</span> mySource <span class="p">)</span>
+    s<span class="p">(</span> <span class="s">&quot;Hello World&quot;</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output from the above is:</p>
+<div class="codehilite"><pre>    Parameter<span class="o">:</span> Hello World
+</pre></div></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_compiler_compilegeneral">CompileGeneral</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">List</span> 
+						<span class="PrototypeselfName">CompileGeneral</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Dynamic</span> <span class="PrototypeArgumentName">sourceValue</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">sourceRef</span><span class="PrototypePunctuation">]</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">Integer</span> <span class="PrototypeArgumentName">compilationFlags</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Compiles OScript and returns a list of errors. 
+    This is similar to the Compiler.Compile() function, except that it will return 
+    any errors or warnings that occurred during compilation. This is primarily 
+    used by the Livelink SDK.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">sourceValue</span><span class="description"><p>A Script, File, or String value that 
+            contains or refers to the OScript source to compile.</p></span></div>
+											<div class="Parameter"><span class="name">sourceRef</span><span class="description"><p>Internal use only. A String which is 
+            used by LivelinkSDK to determine where the source originated.</p></span></div>
+											<div class="Parameter"><span class="name">compilationFlags</span><span class="description"><p>Internal use only. The following flags 
+            can be used: <a class="interdoc" href="#ca_compiler_kstripsource">Compiler.kStripSource</a> 
+            and <a class="interdoc" href="#ca_compiler_klogconversioninfo">Compiler.kLogConversionInfo</a>.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A tuple consisting of two elements: 
+      the first is either the compiled Script or the Error <a class="interdoc" href="#ca_compiler_e_compilationerrors">E_CompilationErrors</a>, 
+      the second is a possibly empty list of error message Strings. These error 
+      message Strings consist of three parts, separated by an end-of-line (ASCII 
+      10) character.The first part indicates the type or severity of error: Warning, 
+      Error, Fatal, or Info. The second part indicates the actual error text, 
+      and the third part indicates where in the source that the error occurs.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Here is an example of using Compiler.CompileGeneral() 
+      to successfully compile a simple piece of OScript:</p>
+<div class="codehilite"><pre>    <span class="kt">String</span>  mySource <span class="o">=</span> <span class="s">&quot;function void myFunc( String myParam );echo( &#39;Parameter: &#39;, myParam );end&quot;</span>
+    List    tuple <span class="o">=</span> Compiler<span class="o">.</span>CompileGeneral<span class="p">(</span> mySource <span class="p">)</span>
+    <span class="k">if</span> IsNotError<span class="p">(</span> tuple<span class="p">[</span> <span class="m">1</span> <span class="p">]</span> <span class="p">)</span>
+        tuple<span class="p">[</span> <span class="m">1</span> <span class="p">](</span> <span class="s">&quot;Hello World&quot;</span> <span class="p">)</span>
+    <span class="k">end</span>
+</pre></div>
+
+
+<p>And the output from the above is:</p>
+<div class="codehilite"><pre>    Parameter<span class="o">:</span> Hello World
+</pre></div>
+
+
+<p>The following example shows how errors can be extracted:</p>
+<div class="codehilite"><pre>    <span class="kt">String</span>  mySource <span class="o">=</span> <span class="s">&quot;function void myFunc( String myParam );echo( &#39;Parameter: &#39;, myBuggyParam );end&quot;</span>
+    List    tuple <span class="o">=</span> Compiler<span class="o">.</span>CompileGeneral<span class="p">(</span> mySource <span class="p">)</span>
+
+    <span class="k">if</span> IsError<span class="p">(</span> tuple<span class="p">[</span> <span class="m">1</span> <span class="p">]</span> <span class="p">)</span>
+        <span class="kt">String</span>  s
+        <span class="k">for</span> s <span class="o">in</span> tuple<span class="p">[</span> <span class="m">2</span> <span class="p">]</span>
+            echo<span class="p">(</span> <span class="s">&quot;Error before breakup: /&quot;</span><span class="p">,</span> s<span class="p">,</span> <span class="s">&quot;/&quot;</span> <span class="p">)</span>
+
+            List    errTuple <span class="o">=</span> Str<span class="o">.</span>Elements<span class="p">(</span> s<span class="p">,</span> Str<span class="o">.</span>Eol<span class="p">()</span> <span class="p">)</span>
+            echo<span class="p">(</span> <span class="s">&quot;...Severity: &quot;</span><span class="p">,</span> errTuple<span class="p">[</span> <span class="m">1</span> <span class="p">]</span> <span class="p">)</span>
+            echo<span class="p">(</span> <span class="s">&quot;...Text: &quot;</span><span class="p">,</span> errTuple<span class="p">[</span> <span class="m">2</span> <span class="p">]</span> <span class="p">)</span>
+            echo<span class="p">(</span> <span class="s">&quot;...Range: &quot;</span><span class="p">,</span> errTuple<span class="p">[</span> <span class="m">3</span> <span class="p">]</span> <span class="p">)</span>
+        <span class="k">end</span>
+    <span class="k">end</span>
+</pre></div>
+
+
+<p>And the output from the above is:</p>
+<div class="codehilite"><pre>    <span class="kt">Error</span> before breakup<span class="o">:</span> <span class="o">/</span><span class="kt">Error</span>
+    The name <span class="s">&#39;myBuggyParam&#39;</span> is not known at this point<span class="o">.</span> Please check your spelling <span class="o">and</span> compile again<span class="o">.</span>
+    <span class="p">[</span><span class="m">1.60</span><span class="o">:</span><span class="m">1.72</span><span class="p">]</span><span class="o">/</span>
+    <span class="o">...</span>Severity<span class="o">:</span> <span class="kt">Error</span>
+    <span class="o">...</span>Text<span class="o">:</span> The name <span class="s">&#39;myBuggyParam&#39;</span> is not known at this point<span class="o">.</span> Please check your spelling <span class="o">and</span> compile again<span class="o">.</span>
+    <span class="o">...</span>Range<span class="o">:</span> <span class="p">[</span><span class="m">1.60</span><span class="o">:</span><span class="m">1.72</span><span class="p">]</span>
+</pre></div>
+
+
+<p>Note that even a successful compilation can result 
+    in warnings, which will be returned from Compiler.CompileGeneral().</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_compiler_getbreakonentry">GetBreakOnEntry</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Boolean</span> 
+						<span class="PrototypeselfName">GetBreakOnEntry</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Script</span> <span class="PrototypeArgumentName">theScript</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Returns TRUE if the given Script value contains 
+    a breakpoint on its first executable line, FALSE otherwise.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theScript</span><span class="description"><p>Script value to examine.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>TRUE if the given Script value contains 
+      a breakpoint on its first executable line, FALSE otherwise.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Note that there is currently no scripting interface 
+    that permits setting arbitrary breakpoints within a script. Currently, only 
+    the initial executable statement of a script can be affected via <a class="interdoc" href="#cm_compiler_setbreakonentry">Compiler.SetBreakOnEntry()</a> 
+    and Compiler.GetBreakOnEntry().</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_compiler_makescript">MakeScript</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Script</span> 
+						<span class="PrototypeselfName">MakeScript</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">source</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypePunctuation">[</span><span class="PrototypeArgumentType">String</span> <span class="PrototypeArgumentName">sourceRef</span><span class="PrototypePunctuation">]</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Creates a Script value that contains source, but 
+    no compiled binary code. The script can still be executed later, although 
+    this will require it to be compiled "on-the-fly", perhaps at a substantial 
+    performance penalty.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">source</span><span class="description"><p>A String containing OScript source 
+            code.</p></span></div>
+											<div class="Parameter"><span class="name">sourceRef</span><span class="description"><p><span class="InternalUseOnly">Internal use only</span>. A String which is 
+            used by LivelinkSDK to determine where the source originated.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A Script value that contains no 
+      compiled code, but that has the specified source code within it.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_compiler_prototype">Prototype</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">List</span> 
+						<span class="PrototypeselfName">Prototype</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Script</span> <span class="PrototypeArgumentName">theScript</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p><span class="InternalUseOnly">Internal use only</span>. Describes the function prototype(s) 
+    within a compiled script by returning a list containing function names, return 
+    types, and parameter names and types.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theScript</span><span class="description"><p>A compiled Script whose function(s) 
+            are described as prototypes.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A List if successful, or Undefined 
+      otherwise. If successful, the first element is a List with two elements, 
+      the Integer type number of the value returned by the main function (for 
+      example IntegerType), and the String name of the main function. The second 
+      element is a List of Lists, where each List defines a formal parameter using 
+      two elements; the first element is the Integer data type of the parameter, 
+      and the second element is the String name of the parameter. This function 
+      returns Undefined if <em>theScript</em> is not a Script, or if theScript cannot be 
+      successfully loaded or compiled.</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>The following example illustrates the use of this function:</p>
+<div class="codehilite"><pre>    <span class="kt">String</span>  src <span class="o">=</span> <span class="s">&quot;function Integer MyFunc( String myParam1, Integer myParam2 );end&quot;</span>
+    Script  s <span class="o">=</span> Compiler<span class="o">.</span>Compile<span class="p">(</span> src <span class="p">)</span>
+    List    proto <span class="o">=</span> Compiler<span class="o">.</span>Prototype<span class="p">(</span> s <span class="p">)</span>
+    echo<span class="p">(</span> <span class="s">&quot;Compiler.Prototype() returns: &quot;</span><span class="p">,</span> proto <span class="p">)</span>
+    echo<span class="p">(</span> <span class="s">&quot;The first function is named: &quot;</span><span class="p">,</span> proto<span class="p">[</span> <span class="m">1</span> <span class="p">][</span> <span class="m">2</span> <span class="p">]</span> <span class="p">)</span>
+    echo<span class="p">(</span> <span class="s">&quot;The first function is typed: &quot;</span><span class="p">,</span> Datatypename<span class="p">(</span> proto<span class="p">[</span> <span class="m">1</span> <span class="p">][</span> <span class="m">1</span> <span class="p">]</span> <span class="p">)</span> <span class="p">)</span>
+    echo<span class="p">(</span> <span class="s">&quot;The first parameter is named: &quot;</span><span class="p">,</span> proto<span class="p">[</span> <span class="m">2</span> <span class="p">][</span> <span class="m">1</span> <span class="p">][</span> <span class="m">2</span> <span class="p">]</span> <span class="p">)</span>
+    echo<span class="p">(</span> <span class="s">&quot;The first parameter is typed: &quot;</span><span class="p">,</span> Datatypename<span class="p">(</span> proto<span class="p">[</span> <span class="m">2</span> <span class="p">][</span> <span class="m">1</span> <span class="p">][</span> <span class="m">1</span> <span class="p">]</span> <span class="p">)</span> <span class="p">)</span>
+    echo<span class="p">(</span> <span class="s">&quot;The second parameter is named: &quot;</span><span class="p">,</span> proto<span class="p">[</span> <span class="m">2</span> <span class="p">][</span> <span class="m">2</span> <span class="p">][</span> <span class="m">2</span> <span class="p">]</span> <span class="p">)</span>
+    echo<span class="p">(</span> <span class="s">&quot;The second parameter is typed: &quot;</span><span class="p">,</span> Datatypename<span class="p">(</span> proto<span class="p">[</span> <span class="m">2</span> <span class="p">][</span> <span class="m">2</span> <span class="p">][</span> <span class="m">1</span> <span class="p">]</span> <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>The output from the above is:</p>
+<div class="codehilite"><pre>    Compiler<span class="o">.</span>Prototype<span class="p">()</span> returns<span class="o">:</span> <span class="p">{{</span><span class="m">2</span><span class="p">,</span><span class="s">&#39;MyFunc&#39;</span><span class="p">},{{</span><span class="o">-</span><span class="m">1</span><span class="p">,</span><span class="s">&#39;myParam1&#39;</span><span class="p">},{</span><span class="m">2</span><span class="p">,</span><span class="s">&#39;myParam2&#39;</span><span class="p">}}}</span>
+    The first <span class="k">function</span> is named<span class="o">:</span> MyFunc
+    The first <span class="k">function</span> is typed<span class="o">:</span> <span class="kt">Integer</span>
+    The first parameter is named<span class="o">:</span> myParam<span class="m">1</span>
+    The first parameter is typed<span class="o">:</span> <span class="kt">String</span>
+    The second parameter is named<span class="o">:</span> myParam<span class="m">2</span>
+    The second parameter is typed<span class="o">:</span> <span class="kt">Integer</span>
+</pre></div>
+
+
+<p>Limitation: The Livelink 8.0 version of this function 
+    can only return information about the first entry point within a Script. A 
+    future version of Livelink will extend this function in an upward compatible 
+    fashion to return a list containing information about all of the entry points.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_compiler_setbreakonentry">SetBreakOnEntry</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">Script</span> 
+						<span class="PrototypeselfName">SetBreakOnEntry</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Script</span> <span class="PrototypeArgumentName">theScript</span><span class="PrototypePunctuation">,</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="PrototypeArgumentType">Boolean</span> <span class="PrototypeArgumentName">setBreak</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Sets or clears the initial breakpoint for a script. 
+    Given a Script value, this either sets or clears the initial breakpoint (i.e., 
+    the break-on-entry state) for the Script. The modified script is returned. 
+    See <a class="interdoc" href="#cm_compiler_getbreakonentry">GetBreakOnEntry()</a>.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theScript</span><span class="description"><p>Script value to modify</p></span></div>
+											<div class="Parameter"><span class="name">setBreak</span><span class="description"><p>TRUE means that the breakpoint will 
+            be set, FALSE means that it will be cleared</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>If successful, a script identical 
+      with theScript is returned, otherwise, Undefined is returned.</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_compiler_source">Source</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">Source</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Script</span> <span class="PrototypeArgumentName">theScript</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Extracts the source code (if any) from a Script 
+    value.</p>
+<p>Most OScript source is stored as source lines separated 
+    by newline characters (i.e., <a class="interdoc" href="str.html#cm_str_eol">Str.EOL()</a> or ASCII 
+    10).</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theScript</span><span class="description"><p>Script value to extract source from.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String containing the source code. 
+      In the event that the script was compiled without source (e.g., via 
+      <a class="interdoc" href="#ca_compiler_kstripsource">Compiler.kStripSource</a>), 
+      then this function will return the empty string ("").</p></div>
+									<h4>Example</h4>
+									<div class="Example"><p>Most OScript source is stored as source lines separated 
+    by newline characters (i.e., <a class="interdoc" href="str.html#cm_str_eol">Str.EOL()</a> or ASCII 
+    10).</p></div>
+							</div>
+						</div>
+						<div class="Method">
+							<h3 class="MethodName"><a name="cm_compiler_sourceref">SourceRef</a></h3>
+
+
+							<div class="signature"><span class="PrototypeReturnValueType">String</span> 
+						<span class="PrototypeselfName">SourceRef</span><span class="PrototypePunctuation">(</span> <span class="PrototypeArgumentType">Script</span> <span class="PrototypeArgumentName">theScript</span> <span class="PrototypePunctuation">)</span></div>
+							<div class="contents">
+								<p>Extract the SourceRef (if any) from a script. 
+    This is used internally by the Livelink SDK to synchronize information between 
+    the compiler, debugger, inspector and other SDK tools.</p>
+									<h4>Parameters</h4>
+									<div class="Parameters">
+											<div class="Parameter"><span class="name">theScript</span><span class="description"><p>Script value to extract SourceRef from.</p></span></div>
+									</div>
+								
+								<h4>Returns:</h4>
+								<div class="returnDesc"><p>A String containing the SourceRef, 
+      or the empty string ("") if there is no SourceRef.</p></div>
+							</div>
+						</div>
+				</div>
+		
+<div style="width:100%;"><p><table class="CopyrightTable" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="CopyrightCell" align="RIGHT" nowrap="">&nbsp;<a href="../copyright.html" target="_top">Copyright</a> &copy; 2018 OpenText Corporation.  All rights reserved.</td></tr></tbody></table></p>
+
+
+
+</div>
+	</div>						
+						
+
+</div>
+
+</body></html>

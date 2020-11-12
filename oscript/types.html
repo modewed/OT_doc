@@ -1,0 +1,326 @@
+<!doctype html>
+<html>
+<head>
+<title>OScript Language Reference : Parsing</title>
+<link rel="stylesheet" type="text/css" href="../ot_common_ui.css">
+<link rel="stylesheet" type="text/css" href="languageref.css">
+
+<style>
+table.types td, table.types th {
+	padding-left: 2em;
+}
+</style>
+<link rel="stylesheet" href="../ot_sdk.css" type="text/css">
+
+<script language="JavaScript" src="../documentation.js"></script>
+
+</head>
+<body>
+<SCRIPT language=JavaScript>
+IncludeHeader( 'olang2', 'Types' )
+</SCRIPT>
+
+<h1><a name="types"></a>Types</h1>
+<p>OScript has several core types, and many more types that are integrated into the implementation, but lack literals and other such niceties. In addition, by loading user-created extensions, new types can be added to the language.</p>
+
+<h2><a name="type-reference-value"></a>Reference types vs Value types</h2>
+<p>If one assigns one variable, <i>a</i>, to another, <i>b</i>, and then passes <i>a</i> to an arbitrary function <i>f</i>, the ability of the <i>f</i> to modify the value of <i>b</i> depends on the type of <i>a</i> and <i>b</i>. Most of the core types follow value-based semantics&mdash;any operation that would modify the value instead binds a new value to that variable. Some types, such as the numeric types, can't be modified at all. Others, like lists and strings, appear to be modifiable, but are value types.</p>
+
+<p>In contrast, Assocs are reference types&mdash;if two variables refer to the same Assoc, adding a key to one adds a key to both. The only guarantee one has when passing an Assoc into a function is that after the function has finished, the value will still be of the Assoc type. A string or list, on the other hand, are guaranteed to be unchanged.</p>
+
+<p>Although not a comprehensive, the following table categorizes the OScript core types:</p>
+<table class="types">
+	<tr><th>Value data type</th><th>Reference data type</th></tr>
+	<tr><td>Boolean</td><td>Assoc</td></tr>
+	<tr><td>Date</td><td>Object</td></tr>
+	<tr><td>Error</td><td>RecArray</td></tr>
+	<tr><td>Integer</td><td>Record</td></tr>
+	<tr><td>List</td><td></td></tr>
+	<tr><td>Set</td><td></td></tr>
+	<tr><td>Real</td><td></td></tr>
+	<tr><td>String</td><td></td></tr>
+	<tr><td>Undefined</td><td></td></tr>
+</table>
+
+<p>If an OScript programmer wishes to have a function which modifies a value data type that is passed in, the function must return the modified value as its result, rather than modifying the value directly. For example:</p>
+<div class="example"><code><pre>
+// example that works
+function Integer Increment( Integer inArg )
+	return inArg + 1
+end
+
+//example that does not work
+function void Increment( Integer inArg )
+	inArg += 1
+end
+</pre></code></div>
+<p>The second function will simply increment a copy of inArg and then discard it upon returning from the function.</p>
+
+<p>However, a function which modifies a reference data type that is passed in, modifies the value directly without explicitly returning the modified value as its result.</p>
+<div class="example"><code><pre>
+Assoc a
+a.joe = 'chicago'
+ModAssoc( a )
+echo( a.joe )
+
+function void ModAssoc( Assoc a )
+    a.joe = 'hong kong'
+end
+</pre></code></div>
+<p>After the ModAssoc function executes, a.joe contains the String 'hong kong'.</p>
+
+
+<h2>Numerical types</h2>
+<h3>Integers and Longs</h3>
+<p>OScript integers are 64-bit, ranging from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807. Longs, the legacy 64-bit type, have a similar range. Integers and Longs are value types.</p>
+
+<p>Zeros coerce to a Boolean value of False; all other values coerce to True.</p>
+
+<h3>Reals</h3>
+<p>Reals are stored as IEEE 754 double precision floating point values. Being immutable, Reals are value types.</p>
+
+<p>Zeros coerce to a Boolean value of False; all other values coerce to True.</p>
+
+<h2>Sequential types</h2>
+<p>These are types that can be accessed using indexes or slices (see the Behaviour section on <a href="#behaviour-indexing">indexing</a>).</p>
+
+<h3><a name="type-string"></a>Strings</h3>
+<p>OScript strings are mutable, and can be modified by assigning to indices or slices.</p>
+
+<div class="example">
+<pre>
+String s = "I like dogs"
+s[8:11] = "cats"
+s[1] = "You"
+echo(s)
+
+>>>> You like cats
+</pre>
+</div>
+
+<p>Strings are value-type objects.</p>
+
+<p>Empty strings coerce to a Boolean value of False; all others coerce to True.</p>
+
+<div class="legacy">
+Strings are reference counted objects. Mutating a string only makes a copy of the string if more than one reference is held.
+</div>
+
+<h4><a name="xlates"></a>XLates</h4>
+<p>XLates are special strings whose values are determined by what language property files Content Server has loaded at run-time. They can be treated as strings for most uses, but are their own value type, and so can be stored in variables, features and container types like Assocs. This can lead to unexpected behaviour, as their string value is evaluated every time they are referenced, leading to cases where the apparent value of the XLate has changed due to a change of locale. This can happen during the start-up of Content Server.</p>
+
+<div class="legacy">
+<p>The sort order of XLates is determined by the value of the string that they evaluate to, rather than by their group and entry name. This means that a change of locale can modify their ordering. This is particularly a concern with Assocs, which rely on their keys being in sorted order&mdash;using an XLate as a key then changing the locale can break the Assoc, rendering keys and values inaccessible.</p>
+</div>
+
+<h3>Lists</h3>
+<p>Lists are heterogeneous sequences of values. They can be modified in place similar to strings (see Type section on <a href="#type-string">strings</a>), and like strings, are value types.</p>
+
+<p>Empty lists coerce to a Boolean value of False; all others coerce to True.</p>
+
+<div class="legacy">
+<p>In Livelink 9.7.1 and earlier, Lists were implemented as linked lists, with a pointer held to the last access point. This made sequential access constant time, while also allowing multiple lists to share the same list storage. Random access was linear time, but growing the list from the beginning or end was constant time.</p>
+
+<p>In CS 10, this was changed to using a vector. Random access is constant, and growing the end of the list is amortized constant, but growing from the beginning is linear time. Like the linked list, multiple List values can share the same underlying vector, with copies being made only if more than one list is referencing the portion of the vector where a change is to be made.</p>
+</div>
+
+<h3>RecArrays</h3>
+<p>RecArrays are specialized data types designed to represent the result set of an SQL query. They contain zero or more Records (see Type section on <a href="#type-record">records</a>), each of which must have the same columns defined.</p>
+
+<p>RecArrays are reference types. However, there is no way to modify the columns associated with a RecArray without creating a new RecArray. As such, while RecArrays (and Records) passed into functions can have their contents changed, their structure will remain constant.</p>
+
+<p>While it's necessary that all Records in the RecArray have the same columns, the types of the values in each column need not be homogeneous&mdash;one Record can have an Integer in its first column, another a String.</p>
+
+<p>Since a RecArray is a collection of Records, it has the same constraint that column names must be Strings.</p>
+
+<div class="legacy">
+Attempting to reference a slice of size greater than one (e.g. <code>r[n:n]</code>) will fail with an index out of bounds error. This appears to be quite deliberate. A slice of size one will return a single Record, rather than a List or new RecArray containing the Record.
+</div>
+
+<div class="legacy">
+<p>RecArrays created using <code>RecArray.Create()</code> have no restriction on key types, allowing one to create a RecArray with Integers, Lists or even other RecArrays as column names. Records can be added to this RecArray using <code>RecArray.AddRecord()</code>, and when taken from the RecArray, still have the illegal column names.</p>
+
+<p>Calling <code>Assoc.FromRecord()</code> on one of these Records results in an Assoc with the same set of keys, but attempting to convert it back using <code>Assoc.ToRecord</code> will result with those keys being replaced with Undefineds.</p>
+</div>
+
+<h3>Bytes</h3>
+<p>Bytes are arrays of bytes. While they resemble strings in some ways, they do not support indexing, and one cannot join two Bytes with the <code>+</code> operator. Instead, they must be manipulated using the Bytes built-in.</p>
+
+<h2>Object-types</h2>
+<p>Object types are those that have fields that can be accessed using the dot operator. See Behaviour section <a href="#operator-dot">Dot</a> for more information on the behaviour of the dot operator.</p>
+
+<h3>Assocs</h3>
+<p>Assocs are associative arrays, supporting any OScript type as key or value. If a string is used as a key, it's case insensitive. If one uses an identifier as a key (e.g. <code>myAssoc.foo</code>), the identifier is interpretted as a string (e.g. <code>myAssoc.("foo")</code>.</p>
+
+<p>Attempting to access a key that an Assoc does not possess results in the default value for that Assoc being returned. One can change the default value, but the standard default is Undefined.</p>
+
+<div class="legacy">
+<p>Assocs can be indexed. The behaviour of this depends on whether the value is being read or written to.</p>
+
+<p>When read, <code>a[n]</code> will return the value associated with the <i>n</i><sup>th</sup> key of <code>a</code>, as returned by <code>Assoc.Keys()</code>.</p>
+
+<p>When written to, it is instead equivalent to <code>a.(n)</code>. In some versions of Content Server, the index is converted to a Long. This leads to extremely confusing behaviour when used with an operator like <code>+=</code>.</p>
+
+<code>
+<pre>
+Assoc a
+a.a = "foo"
+a.b = "bar"
+a.c = "quux"
+echo( a[2] ) // Outputs "bar"
+a[2] = "fred" 
+// Assoc is now A&lt;1,?,L2='Fred',
+//    'a'='foo','b'='bar','c'='quux'&gt;
+a[4] += "barney" 
+// Assoc is now A&lt;1,?,L2='Fred',L4='quuxbarney',
+//    'a'='foo','b'='bar','c'='quux'&gt;
+</pre>
+</code>
+
+
+</div>
+
+<h3>Records</h3>
+<a name="type-record"></a>
+<p>Records behave like Assocs with a fixed set of String keys. Attempting to access a key that does not exist returns an Error "An unknown feature was specified".</p>
+
+<p>Records also support accessing its elements by indexing and slices. The order of its values is determined by the order of its columns. Accessing a slice returns a list of values. One can also assign Lists to Record slices&mdash;if the assigned List is too short, the List is padded with Undefineds. If the List is too long, the unneeded entries are ignored. Like RecArrays, Records are reference types, but cannot have their column structure changed at run-time.</p>
+
+<h3>Object</h3>
+<p>Objects are the core building block of an OScript program. There are two types of objects&mdash;temporary and permanent. During the course of execution of an ordinary program, only temporary objects are likely to be created. If a permanent object is created while OSpace is unlocked, when it is closed, the object will be stored OLL.</p>
+
+<p>Attempting to accessing a non-existent value on an object will cause a run-time error.</p>
+
+<p>Unlike other types, Objects are not reference counted, making it extremely important to delete temporary Objects when one is finished with them.</p>
+
+<p>Variables of Object type can be assigned values of many other types, including Assocs. The heuristic used is that if it has methods, attributes, or supports the dot operator, then it can be assigned to a variable of type Object. Thus, assigning an Assoc is valid, but assigning a Bytes is not.</p>
+
+<div class="legacy"><h4>Objects vs. ObjRefs</h4>
+<p>The Object variable type is most frequently used to store Object values. However, it can also store other types as well: Assocs, Records, Frames, DAPINodes, and many others. The only requirement to be stored in an Object variable is that it works with the Dot operator.</p>
+<p>There is another variable type, ObjRef, which can only hold OScript Objects. In most circumstances, one should continue to declare variables as Object instead of ObjRef. The exception is if you are doing something with the value that's incompatible with any other object type (e.g. passing it to <code>OS.Children</code>).</p>
+</div>
+
+<h3>Frames</h3>
+
+<p>Frames act like light-weight, referenced counted Objects. Like Records, they have a fixed set of keys, but unlike Records, they can inherit from other Frames and any other object that supports the dot operator, including Records, Assocs or Objects. Due to being reference counted, in many circumstances it's probably better to create a Frame inheriting from an Object than a new temporary Object.</p>
+
+<p>Unlike other types, Frames support special methods, like Destructor. When a Frame's reference count drops to zero, if Destructor is a feature of the Frame, and refers to a Script value, it will be invoked with no arguments.</p>
+
+<div class="legacy">
+Features are accessed by doing a linear search of all features defined on the Frame. If the feature is not found, the search is repeated on its parent. This continues until either the feature is found, or all objects in the inheritance hierarchy have been examined in a depth-first search. As such, if a Frame has multiple parents, accessing features defined on its second parent is much more expensive than those on its first parent.
+</div>
+
+<div class="legacy">
+Never add a new reference to a Frame in its destructor. The destructor will never run again, resulting in a memory leak.
+</div>
+
+<h3>Built-ins</h3>
+<p>A built-in is a set of methods and constants assigned to a namespace. Often, the built-in shares its name with a type, and contains methods used to create and manipulate instances of that type. Other built-ins provide features such as database access.</p>
+
+<p>A built-in can be assigned to other variables, and used under its new name.</p>
+
+<div class="legacy">
+<p>Referencing the built-in as a value (assigning it, or accessing its features using an expression rather than an identifier) changes how its methods and constants are accessed. Instead of using the VM instruction to directly call a built-in method by its internal index, it instead needs to use two instructions to load constants corresponding to the class and the name of the feature to be accessed, and then a third instruction to invoke the method.</p>
+
+<p>Even worse, attempts to access constants will fail&mdash;the built-in constants are referenced at compiled time, and inserted directly. Attempting to load the constant from the built-in using the LoadFeature instruction will result in an "Unknown feature was specified" runtime error.</p>
+</div>
+
+<div class="legacy">
+<code>Assoc Assoc = Assoc</code> is, sadly, currently valid, and will even compile, although it might not do what you'd expect. By the time it evaluates the left-hand side of the expression, Assoc is already defined to be an Assoc value, rather than a built-in, and so the expression just assigns the value of the variable to itself. If, on the other hand, one referenced the Assoc built-in earlier in the same scope, the compiler will have already reserved the name Assoc to the built-in class, causing the assignment to fail. <code>Dynamic Dynamic = Dynamic</code> will succeed, but have different behaviour depending on whether or not the Dynamic class has been previously referenced in the current scope.
+</div>
+
+<h2>Miscellaneous types</h2>
+<h3>Error</h3>
+<p>An Error represents either a system-defined or user-defined Error. Errors can be used not only to indicate if an operation failed or was successful (in which case a Boolean would suffice), but also to indicate why a failure occurred. For example, if you attempt to copy a file to the desktop, the process can either succeed or fail. If it fails, it could be because the file to copy cannot be found, because the destination disk is full, because a file with that name already exists, and so on. A specific Error can be generated for each case, allowing the application designer to determine the reason the function failed.</p>
+
+<p>An Error can be thought of as containing two parts -- the Integer error identifier and the String error message. Errors are referred to in scripts by their error identifiers, but the error message can be used to provide the user with information about the type of error that occurred.</p>
+
+<p>There are two types of Errors used in OScript:</p>
+<ul>
+    <li>System-defined Errors&mdash;created by Open Text as part of Livelink, are returned when OScript built-in functions fail. Designers can examine the messages associated with these Errors, but cannot modify them or return them. For example, the <code>File.Open()</code> function returns a file reference if successful, or an Error if the file could not be opened.</li>
+
+    <li>User-defined Errors&mdash;created using the <code>Error.Define()</code> function to associate an error identifier (in the range 1024 to 2047) with an error message about the created Error.</li>
+</ul>
+
+<p>The following example illustrates the definition of user-defined Errors:</p>
+<div class="example"><code><pre>
+Error.Define( 1024, "Cannot find specified file." )
+Error.Define( 2000, "File already exists." )
+Error.Define( 2047, "Out of range." )
+</pre></code></div>
+<p>Once an Error type is defined, it exists for the remainder of the application execution. It is not disposed of when the script creating the Error completes execution.</p>
+
+<p>Values of type Error are obtained by executing the <code>Error.Get()</code> function. The following example illustrates:</p>
+
+<div class="example"><code><pre>
+function Boolean checkRange( Integer checkValue )
+	Boolean returnValue
+	Error negative = Error.Define( 2001, "Negative" )
+	if ( checkValue &lt; 0 ) 
+		// Return the negative value error.
+		returnValue = negative 
+	else if ( checkValue &gt; 1000 )
+		// Return the out of range error.
+		returnValue = Error.Get( 2047 )
+	else
+		returnValue = TRUE
+	end
+return( returnValue )
+end
+</pre></code></div>
+
+<p>Unlike most other OScript data types, any type of variable can assume an Error value. This allows you to create a variable of any type and store a valid value in it if the operation was successful, or store an Error in it if the operation failed.</p>
+<h3>Undefined</h3>
+<p>Every variable in OScript, regardless of declared type, can take on a value of type Error or Undefined. Undefined is a singleton&mdash;there is a single Undefined value, and two Undefineds always equal each other. It coerces to a Boolean value of False.</p>
+
+<p>A value of Error type has a corresponding error code associated with it, which is a numerical value. OScript provides functions to convert error codes to localized descriptive strings. Note that while any variable can hold an Error, only variables of type Error or Dynamic can be passed into functions whose signatures expect Error values. Errors coerce to a Boolean value of False.</p>
+
+<h3>Boolean</h3>
+<p>OScript has a Boolean type, which can take on the values of True or False. Almost all other types can be coerced implicitly to Booleans. Unless otherwise noted, all values of a type coerce to True.</p>
+
+<h3>Dates</h3>
+<p>A Date represents a calendar date and time (for example May 27, 1993, 1:35 am). Dates are stored in an internal, platform-independent format and should not be confused with String representations of dates. Although "11/30/82" looks like a Date, it is actually a String representation of a date and cannot be stored in a Date variable or manipulated as an OScript Date.</p>
+
+<p>Variables declared to be of type Date are initially Undefined. Dates include both the calendar date and the time, but either can be manipulated independently, if needed. Therefore, there is no such thing as a Time data type. A time is considered a special case of a Date -- one for which the day, month, and year information is ignored.</p>
+
+<p>Date values can be obtained by executing a function that returns a Date value. For more information about these built-in functions, see the function syntax in the OScript Built-In Function online help. The most common functions used to generate new Date values are the <code>Date.Now()</code> function, used to generate a Date value representing the current date and time, and the <code>Date.StringToDate()</code> function, used to generate a Date value corresponding to a String representation of a Date. The following example illustrates:</p>
+<div class="example"><code><pre>
+String stringDate = "03/23/89"
+Date nowDate = Date.Now()
+Date thenDate = Date.StringToDate( stringDate, "%m/%d/%y" )
+</pre></code></div>
+<p>In this example, the second parameter in the <code>Date.StringToDate()</code> function is a formatted String that tells the function how to interpret the supplied String. Type conversions can be performed to convert Strings to Dates (to perform Date manipulation) and to convert Dates to Strings (for display purposes) using the <code>Date.StringToDate()</code> and the <code>Date.DateToString()</code> functions.</p>
+
+<p>Arithmetic operations can be performed on Dates to obtain a Date earlier or later than the supplied Date.</p>
+
+<p>For example, you can add or subtract an Integer number of seconds to or from a Date:</p>
+<div class="example"><code><pre>
+Date rightNow, hourFromNow, tomorrow
+rightNow = Date.Now()
+hourFromNow = rightNow + ( 60 * 60 )
+tomorrow = rightNow + ( 60 * 60 * 24 )
+</pre></code></div>
+<p>Or you can use the Date.DateInteger() function and the Date.TimeInteger() function to add and subtract days from Dates:</p>
+<div class="example"><code><pre>
+Integer laterInt
+Date laterDate, today
+today = Date.Now()
+laterInt = Date.DateInteger( today ) + 10
+laterDate = Date.DateInteger(today, laterint )
+</pre></code></div>
+<p>In this example, the laterDate value is obtained by converting the Date returned by the <code>Date.Now()</code> function to an Integer, adding ten days to it, and then converting it back to a Date.</p>
+
+<h3>Files</h3>
+<p>File objects provide access to file handles. A reference to a file vs a directory is determined by the presence of the directory separator at the end of the file name.</p>
+
+<h3>Scripts</h3>
+<p>Script objects are compiled OScript code. They are often found as features on Objects, but they are possible to create at run-time using the <code>Compiler.Compile()</code> built-in.</p>
+
+<h3>Points</h3>
+<p>Points represent pairs of (x,y) coordinates. The value of each component ranges from 0 to 65,535.</p>
+<script language="JavaScript">
+IncludeFooter( '' )
+</script>
+
+</body>
+</html>
